@@ -1,0 +1,23 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/bo2/c_bo2_dragunov/~-gmtl_t6_attach_dragunov_lens_col"
+	"$bumpmap" "models/weapons/bo2/c_bo2_dragunov/mtl_t6_attach_dragunov_lens_nml"	
+	$phong "1"
+	$phongboost "10"
+	$phongfresnelranges "[0 0.1 1.0]"
+	$phongalbedotint "0"
+
+	$envmap "env_cubemap"
+	$envmaptint "[0 0.3 0.3]"
+	$normalmapalphaenvmapmask "1"
+	$envmapfresnel "1"
+
+	"Proxies"
+	{
+		"TFA_COD_Scope"
+		{
+		}
+	}
+
+	$selfillum "1"
+}

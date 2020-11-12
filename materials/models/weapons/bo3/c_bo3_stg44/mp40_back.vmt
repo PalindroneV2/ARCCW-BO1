@@ -1,0 +1,17 @@
+//BOD1
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/bo4/c_bo4_mp40/mp40_bod1_c"
+	//$color2 "[0.5 0.5 0.5]"
+	"$bumpmap" "models/weapons/bo4/c_bo4_mp40/mp40_bod1_n"
+	$phong                      		1
+	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	$envmap                    		 env_cubemap
+	$envmaptint                 		"[.01 .01 .01]"
+	$normalmapalphaenvmapmask   	1
+}

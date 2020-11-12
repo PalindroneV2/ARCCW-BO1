@@ -1,0 +1,23 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "vgui/white"
+		
+	$selfillum 1
+    $selfillummask "vgui/white"
+	$selfillumtint	"[0 1 0]"
+
+	$color2			"[0 1 0]"
+
+	Proxies
+	{
+		TFAReticuleColor
+		{
+			resultVar	$selfillumtint
+		}
+		Equals
+		{
+			srcVar1		$selfillumtint
+			resultVar	$color2
+		}
+	}
+}
