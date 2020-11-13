@@ -372,6 +372,10 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     end
 end
 
+SWEP.RejectAttachments = {
+    ["ub_bo1_foregrip_uni"] = true,
+}
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",

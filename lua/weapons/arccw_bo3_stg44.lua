@@ -267,7 +267,7 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(14, 0, 1.2),
+            vpos = Vector(12, 0, 1.2),
             vang = Angle(0, 0, 0),
             wpos = Vector(16, 0.899, -3.9),
             wang = Angle(172.5, 180, -2)
@@ -321,6 +321,7 @@ SWEP.Attachments = {
     { --10
         PrintName = "Caliber",
         Slot = "stg44_9mm_ammo",
+        DefaultAttName = "7.92mm Kurz 30rnd",
     },
     { --11
         PrintName = "Ammo Type",

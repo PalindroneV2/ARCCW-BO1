@@ -97,8 +97,7 @@ SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.5
 SWEP.SightTime = 0.3
-SWEP.VisualRecoilMult = 0
-SWEP.RecoilRise = 0
+SWEP.VisualRecoilMult = 0.25
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",

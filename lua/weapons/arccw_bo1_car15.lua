@@ -55,6 +55,7 @@ SWEP.ReducedClipSize = 20
 SWEP.Recoil = 0.5
 SWEP.RecoilSide = 0.35
 SWEP.RecoilRise = 0.75
+SWEP.VisualRecoilMult = 0.25
 
 SWEP.Delay = 60 / 900 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -98,8 +99,6 @@ SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.5
 SWEP.SightTime = 0.3
-SWEP.VisualRecoilMult = 0
-SWEP.RecoilRise = 0
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
@@ -335,7 +334,7 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(10, 0, 1.575), -- offset that the attachment will be relative to the bone
+            vpos = Vector(9, 0, 1.575), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(13.75, 1.15, -4.1),
             wang = Angle(170, -180, 0),
@@ -380,8 +379,9 @@ SWEP.Attachments = {
         Installed = "bo1_light_stock",
     }, --11
     {
-        PrintName = "Caliber",
+        PrintName = "Magazine",
         Slot = {"car15_9mm_ammo"},
+        DefaultAttName = "5,56mm NATO 30rnd",
     }, --12
     {
         PrintName = "Ammo Type",
