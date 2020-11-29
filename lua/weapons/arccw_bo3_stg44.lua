@@ -360,6 +360,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local long = wep.Attachments[3].Installed == "bo3_stg44_long"
     local papcamo = wep.Attachments[11].Installed == "ammo_papunch"
     local waw = wep.Attachments[14].Installed == "stg44_waw_sound"
+    local dods = wep.Attachments[14].Installed == "stg44_dods_sound"
 
     if sigh and !short and !carb and !long then
         vm:SetBodygroup(1, 1)
@@ -391,6 +392,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if papcamo and waw then
         return vm:SetSkin(1)
+    elseif papcamo and dods then
+        return vm:SetSkin(2)
     elseif papcamo and !waw then
         return vm:SetSkin(3)
     end

@@ -2,5 +2,5 @@
 "title" : "[ArcCW] Black Ops Pack",
 "type" : "weapon",
 "tags" : ["realism","fun"],
-"ignore" : ["*.psd", "*.vcproj", "*.svn*"]
+"ignore" : ["*.psd", "*.vcproj", "*.svn*", "*.git*", "*.md*"]
 }

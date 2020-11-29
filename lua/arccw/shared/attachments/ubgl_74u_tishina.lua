@@ -1,5 +1,5 @@
 att.PrintName = "Tishina (HE)(BO1)"
-att.Icon = Material("entities/acwatt_ubgl_74u_tishina.png")
+att.Icon = Material("entities/acwatt_ubgl_ak_gp25.png")
 att.Description = "Selectable Grenade Launcher equipped under the AK-74u's handguard. Double tap +ZOOM to equip/dequip."
 att.Desc_Pros = {
     "+ Selectable Grenade Launcher.",

@@ -23,7 +23,7 @@ end
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_m14.mdl"
-SWEP.WorldModel = "models/weapons/arccw/w_bo2_m14.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_bo1_m14.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-2.5, 4.25, -5.5),

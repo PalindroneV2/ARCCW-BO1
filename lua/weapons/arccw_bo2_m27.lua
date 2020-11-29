@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "Mk.416"
 SWEP.TrueName = "HK416"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "An improved modification of the M4 Carbine by HK."
+SWEP.Trivia_Desc = "An improved modification of the M4A1 Carbine by HK. Used by the USMC as a replacement for the M4A1 and M16A4 assault rifles and in a machine gun configuration with a heavier, longer barrel to replace the belt-fed M249 SAW."
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
 SWEP.Trivia_Calibre = "5,56x45mm NATO" --"5,45x39mm"
 SWEP.Trivia_Mechanism = "Gas-Operated"
@@ -22,12 +22,12 @@ end
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo2_m27.mdl"
-SWEP.WorldModel = "models/weapons/arccw/w_bo2_ak74u.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_bo2_m27.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1.01,
-    pos        =    Vector(-3, 3, -6),
-    ang        =    Angle(-6, -0.75, 180),
+    scale = 1.1,
+    pos        =    Vector(-4.5, 4.5, -4.9),
+    ang        =    Angle(-10, 1.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
@@ -84,9 +84,9 @@ SWEP.MagID = "ak74" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.FirstShootSound = "ArcCW_BO1.M16_Fire"
-SWEP.ShootSound = "ArcCW_BO1.M16_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
+SWEP.FirstShootSound = "ArcCW_BO2.M27_Fire"
+SWEP.ShootSound = "ArcCW_BO2.M27_Fire"
+SWEP.ShootSoundSilenced = "ArcCW_BO2.M27_Sil"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -396,7 +396,7 @@ end
 
 SWEP.Hook_GetShootSound = function(wep, sound)
     if wep.Attachments[2].Installed and wep:GetBuff_Override("Silencer") then
-        return "ArcCW_BO1.M16_Sil"
+        return "ArcCW_BO2.M27_Sil"
     end
 end
 
@@ -419,7 +419,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_Charge", t = 22 / 35}
+            {s = "ArcCW_BO2.M27_Charge", t = 22 / 35}
         },
     },
     ["fire"] = {
@@ -442,8 +442,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 21 / 35},
-            {s = "ArcCW_BO1.M16_MagIn", t = 53 / 35},
+            {s = "ArcCW_BO2.M27_MagOut", t = 21 / 35},
+            {s = "ArcCW_BO2.M27_MagIn", t = 50 / 35},
         },
     },
     ["reload_empty"] = {
@@ -456,9 +456,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 21 / 35},
-            {s = "ArcCW_BO1.M16_MagIn", t = 53 / 35},
-            {s = "ArcCW_BO1.M16_Charge", t = 65 / 35},
+            {s = "ArcCW_BO2.M27_MagOut", t = 21 / 35},
+            {s = "ArcCW_BO2.M27_MagIn", t = 50 / 35},
+            {s = "ArcCW_BO2.M27_Charge", t = 65 / 35},
             --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
         },
     },
@@ -493,7 +493,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_Charge", t = 22 / 35}
+            {s = "ArcCW_BO2.M27_Charge", t = 22 / 35}
         },
     },
     ["fire_m203"] = {
@@ -516,8 +516,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 21 / 35},
-            {s = "ArcCW_BO1.M16_MagIn", t = 53 / 35},
+            {s = "ArcCW_BO2.M27_MagOut", t = 21 / 35},
+            {s = "ArcCW_BO2.M27_MagIn", t = 50 / 35},
         },
     },
     ["reload_empty_m203"] = {
@@ -530,9 +530,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 21 / 35},
-            {s = "ArcCW_BO1.M16_MagIn", t = 53 / 35},
-            {s = "ArcCW_BO1.M16_Charge", t = 65 / 35},
+            {s = "ArcCW_BO2.M27_MagOut", t = 21 / 35},
+            {s = "ArcCW_BO2.M27_MagIn", t = 50 / 35},
+            {s = "ArcCW_BO2.M27_Charge", t = 65 / 35},
             --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
         },
     },
@@ -621,7 +621,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_Charge", t = 22 / 35}
+            {s = "ArcCW_BO2.M27_Charge", t = 22 / 35}
         },
     },
     ["fire_grip"] = {
@@ -644,8 +644,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 21 / 35},
-            {s = "ArcCW_BO1.M16_MagIn", t = 53 / 35},
+            {s = "ArcCW_BO2.M27_MagOut", t = 21 / 35},
+            {s = "ArcCW_BO2.M27_MagIn", t = 50 / 35},
         },
     },
     ["reload_empty_grip"] = {
@@ -658,9 +658,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 21 / 35},
-            {s = "ArcCW_BO1.M16_MagIn", t = 53 / 35},
-            {s = "ArcCW_BO1.M16_Charge", t = 65 / 35},
+            {s = "ArcCW_BO2.M27_MagOut", t = 21 / 35},
+            {s = "ArcCW_BO2.M27_MagIn", t = 50 / 35},
+            {s = "ArcCW_BO2.M27_Charge", t = 65 / 35},
             --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
         },
     },

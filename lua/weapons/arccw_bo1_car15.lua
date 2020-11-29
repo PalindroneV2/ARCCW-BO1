@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "Mustang Predator"
 SWEP.TrueName = "Colt Commando"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "The Colt XM177E2, also known as the CAR-15 or the Colt Commando, is a carbine variant of the M16 rifle. Created for easier transport and handling inside vehicles."
+SWEP.Trivia_Desc = "The Colt XM177E2, also known as the CAR-15, XM4, or the Colt Commando, is a carbine variant of the M16 rifle which would eventually evolve into the M4. Created for easier transport and handling inside vehicles."
 SWEP.Trivia_Manufacturer = "Mustang Firearms Ltd."
 SWEP.Trivia_Calibre = "5,56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
@@ -23,7 +23,7 @@ end
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_car15.mdl"
-SWEP.WorldModel = "models/weapons/arccw/w_m16_commando.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_bo1_car15.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-4, 3.5, -5.25),

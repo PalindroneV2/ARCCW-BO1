@@ -29,7 +29,7 @@ SWEP.WorldModelOffset = {
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale   =   1
 }
-SWEP.WorldModel = "models/weapons/arccw/w_bo2_galil.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_bo1_famas.mdl"
 SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "00000000000"

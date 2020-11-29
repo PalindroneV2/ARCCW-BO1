@@ -3,10 +3,10 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "KF7u Soviet"
+SWEP.PrintName = "KF7u Krinkov"
 SWEP.TrueName = "AKMu"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "A carbine length version of the AKM. Issued to only Soviet tank crews, special forces and support units."
+SWEP.Trivia_Desc = "A carbine length version of the AKM. Affectionally nicknamed the Krinkov, this weapon was issued to only Soviet tank crews, special forces and support units."
 SWEP.Trivia_Manufacturer = "Kalashnikov Concern"
 SWEP.Trivia_Calibre = "7,62x39mm M43" --"5,45x39mm"
 SWEP.Trivia_Mechanism = "Gas-Operated"
@@ -22,7 +22,7 @@ end
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_ak74u.mdl"
-SWEP.WorldModel = "models/weapons/arccw/w_bo2_ak74u.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_bo1_ak74u.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     scale = 1.01,
@@ -259,7 +259,7 @@ SWEP.Attachments = {
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0.5, 0, 0),
-        MergeSlots = {13}
+        MergeSlots = {13,14}
     }, --1
     {
         PrintName = "Muzzle",
@@ -367,6 +367,18 @@ SWEP.Attachments = {
         GivesFlags = {"cobrakai"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(-1, 0, 0),
+    },
+    { --15
+        Hidden = true,
+        Slot = {"bo1_pso"},
+        Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
+        Offset = {
+            vpos = Vector(0, 0, -0.3), -- 4.6 offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+        },
+        GivesFlags = {"cobrakai"},
+        CorrectivePos = Vector(0, 0, 0),
+        CorrectiveAng = Angle(2, 0, 0),
     },
 }
 

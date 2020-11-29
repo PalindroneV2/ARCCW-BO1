@@ -26,7 +26,7 @@ SWEP.WorldModelOffset = {
     ang        =    Angle(-6, -2.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
---SWEP.WorldModel = "models/weapons/arccw/w_bo1_l96a1.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_bo1_awm.mdl"
 SWEP.ViewModelFOV = 60
 
 SWEP.Damage = 95

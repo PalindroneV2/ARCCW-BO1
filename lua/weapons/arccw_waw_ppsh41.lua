@@ -22,7 +22,7 @@ end
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_waw_ppsh41.mdl"
-SWEP.WorldModel = "models/weapons/arccw/w_bo2_ak47.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_waw_ppsh41.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     scale = 1.025,

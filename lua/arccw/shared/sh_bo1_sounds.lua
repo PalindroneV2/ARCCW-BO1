@@ -629,6 +629,79 @@ sound.Add( {
     }
 } )
 
+-- M27 Main --
+
+sound.Add( {
+    name = "ArcCW_BO2.M27_Fire",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_m27/fire_m27.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO2.M27_Sil",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_m27/sil_m27.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO2.M27_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_m27/mag_in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO2.M27_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_m27/mag_out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO2.M27_Charge",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_m27/charge.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO2.M27_Back",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_m27/bolt_back.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO2.M27_Fwd",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_m27/bolt_fwd.wav",
+    }
+} )
+
 --- StG-44 ---
 
 sound.Add( {

@@ -29,7 +29,7 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo2_m1911.mdl"
-SWEP.WorldModel = "models/weapons/arccw/w_bo2_m1911.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_bo2_m1911.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-9, 3, -3.5),

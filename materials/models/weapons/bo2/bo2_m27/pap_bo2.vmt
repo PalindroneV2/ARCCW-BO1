@@ -1,16 +1,15 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\pap\pap_bo2_crystal"
-	$bumpmap	"models\weapons\pap\pap_bo2_crystal_n"
-	$selfillummask "models\weapons\pap\pap_bo2_crystal_env"
-	$selfillum 1
+	$basetexture	"models/weapons/bo1/plastic"
+	$bumpmap	"models\weapons\pap\pap_bo3_n"
+	$detail	"models\weapons\pap\pap_bo3"
 	
 	$phong                      		1
 	$phongboost                         "5"
 	$phongfresnelranges         "[0.5 2.5 2.5]"
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
-	//$detailblendmode	6
+	$detailblendmode	3
 
 	$envmap                    		 env_cubemap
 	$envmaptint                 		"[.01 .01 .01]"

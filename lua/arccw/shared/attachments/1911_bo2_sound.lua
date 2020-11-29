@@ -1,5 +1,5 @@
 att.PrintName = "BO2 Sound"
-att.Icon = Material("entities/arccw_bo2_m1911.png", "smooth mips")
+att.Icon = Material("entities/acwatt_bo2_logo.png", "smooth mips")
 att.Description = "M1911A1 sound from Black Ops 2"
 att.Desc_Pros = {
 }

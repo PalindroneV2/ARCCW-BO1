@@ -22,7 +22,7 @@ end
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_ak47.mdl"
-SWEP.WorldModel = "models/weapons/arccw/w_bo2_ak47.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_bo1_ak47.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-3, 3, -6),
@@ -185,9 +185,6 @@ SWEP.AttachmentElements = {
         ExcludeFlags = {"ammo_papunch", "papname2"}
     },
     ["74"] = {
-        VMBodygroups = {
-            {ind = 1, bg = 1},
-        },
         NamePriority = 2,
         TrueNameChange = "AK-74",
         ExcludeFlags = {"ammo_papunch", "papname1"},
@@ -206,15 +203,6 @@ SWEP.AttachmentElements = {
         TrueNameChange = "Reznov's Revenge",
         NameChange = "Reznov's Revenge",
     },
-    ["papname1"] = {
-        VMBodygroups = {
-            {ind = 1, bg = 1},
-        },
-        NamePriority = 11,
-        TrueNameChange = "Reznov's Revenge",
-        NameChange = "Reznov's Revenge",
-        RequireFlags = {"ammo_papunch", "74"}
-    },
 }
 
 SWEP.Attachments = {
@@ -232,7 +220,7 @@ SWEP.Attachments = {
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0.5, 0, 0),
-        MergeSlots = {14}
+        MergeSlots = {14, 15}
     },
     { -- 2
         PrintName = "Muzzle",
@@ -335,25 +323,44 @@ SWEP.Attachments = {
     },
     { --14
         Hidden = true,
-        Slot = "bo1_cobra",
+        Slot = {"bo1_cobra"},
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(0, 0, 0), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(5.5, 1.45, -5.9),
-            wang = Angle(172.5, 179, -5)
         },
         GivesFlags = {"cobrakai"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(-1, 0, 0),
+    },
+    { --15
+        Hidden = true,
+        Slot = {"bo1_pso"},
+        Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
+        Offset = {
+            vpos = Vector(0, 0, -0.6), -- 4.6 offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+        },
+        GivesFlags = {"cobrakai"},
+        CorrectivePos = Vector(0, 0, 0),
+        CorrectiveAng = Angle(2, 0, 0),
     },
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[11].Installed == "ammo_papunch"
+    local mag = wep.Attachments[9].Installed == "ammo_ak_74"
 
-    if papcamo then return vm:SetSkin(3) end
+    if papcamo and !mag then
+        vm:SetSkin(3)
+        vm:SetBodygroup(1, 0)
+    elseif papcamo and mag then
+        vm:SetSkin(3)
+        vm:SetBodygroup(1, 1)
+    elseif !papcamo and mag then
+        vm:SetBodygroup(1, 1)
+    end
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)

@@ -50,10 +50,6 @@ SWEP.Primary.ClipSize = 20 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 30
 SWEP.ReducedClipSize = 10
 
-SWEP.Recoil = 1.5
-SWEP.RecoilSide = 1
-SWEP.RecoilRise = 1
-
 SWEP.Delay = 60 / 700-- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
@@ -93,6 +89,9 @@ SWEP.ShellScale = 1.5
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
+SWEP.Recoil = 1.5
+SWEP.RecoilSide = 1
+SWEP.RecoilRise = 1
 SWEP.SpeedMult = 0.85
 SWEP.SightedSpeedMult = 0.5
 SWEP.SightTime = 0.3
