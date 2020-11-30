@@ -1,6 +1,6 @@
 att.PrintName = "Suppressor (BO1)"
 att.Icon = Material("entities/acwatt_supp_bo1_supp.png")
-att.Description = "Suppressor for every weapon."
+att.Description = "Suppressor for every weapon. Lighteight can cools and disperses gases leaving the barrel, muffling the firearm's audible report but slowing down muzzle velocity."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

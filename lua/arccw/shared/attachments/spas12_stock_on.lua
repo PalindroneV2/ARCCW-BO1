@@ -1,6 +1,7 @@
 att.PrintName = "SPAS-12 Stock Folded"
 att.Icon = Material("entities/acwatt_spas12_stock.png")
-att.Description = "Folding the SPAS-12's stock proves to grant improved recoil control at the cost of maneuverability on the move."
+att.Description = "Folding the SPAS-12's stock grants improved maneuverability on the move at the cost of recoil control."
+
 att.Desc_Pros = {
     "Allows the Optic attachment slot."
 }

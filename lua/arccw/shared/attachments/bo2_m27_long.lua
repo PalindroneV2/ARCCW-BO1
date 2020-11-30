@@ -1,6 +1,6 @@
 att.PrintName = "M27 IAR"
 att.Icon = Material("entities/acwatt_m16a2_hg.png")
-att.Description = "infantry Automatic Rifle version."
+att.Description = "Longer, heavier barel and extended handguard increase range and reduce imprecision as well as recoil, at the cost of sight time."
 
 att.SortOrder = 100
 att.Free = true

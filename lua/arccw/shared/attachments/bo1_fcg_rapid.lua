@@ -1,6 +1,6 @@
 att.PrintName = "Rapid Fire"
 att.Icon = Material("entities/acwatt_bo1_fcg_rapid.png")
-att.Description = "Rate of Fire increase for automatic weapons."
+att.Description = "Modified trigger mechanism and sear increase overall rate of fire."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

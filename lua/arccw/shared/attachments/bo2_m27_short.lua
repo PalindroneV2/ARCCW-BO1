@@ -1,6 +1,6 @@
 att.PrintName = "HK416C"
 att.Icon = Material("entities/acwatt_m16a2_hg.png")
-att.Description = "Compact barrel version."
+att.Description = "Lightweight, 11.5 inch, pencil-profile barrel reduces sight time at the cost of reduced range, stronger recoil, and increased imprecision."
 
 att.SortOrder = 99
 att.Free = true

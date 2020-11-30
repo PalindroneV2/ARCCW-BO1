@@ -1,6 +1,6 @@
-att.PrintName = "PKA (4x)"
+att.PrintName = "PK-AV (4x)"
 att.Icon = Material("entities/acwatt_optic_bo1_acog.png", "mips smooth")
-att.Description = "Scope designed for Soviet rifles. Magnification of 4-6x"
+att.Description = "Scope designed for Soviet rifles. Magnification of 4x"
 
 att.SortOrder = 150
 
@@ -39,9 +39,7 @@ att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo1_pka_hsp.mdl"
 att.Colorable = true
 
-att.HolosightMagnification = 3
+att.HolosightMagnification = 4
 att.HolosightBlackbox = true
-
-att.HolosightMagnification = 3
 
 att.Mult_SightTime = 1.1
