@@ -1,0 +1,6 @@
+semantic,image_name
+unk_semantic_0x34ECCCB3,~~-gmtl_t6_wpn_ar_sa58_spc-rg~275f5de4
+normalMap,mtl_t6_wpn_ar_sa58_nml
+unk_semantic_0x6001F931,~mtl_t6_wpn_ar_sa58_ao-l&mtl_~e8c5fa26
+colorMap,~-gmtl_t6_wpn_ar_sa58_col
+unk_semantic_0xBDBA9390,camo_off_solid

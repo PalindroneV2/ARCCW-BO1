@@ -1,0 +1,5 @@
+semantic,image_name
+unk_semantic_0x6D8BC75E,player_emblem_nor
+colorMap,emblem_clear
+unk_semantic_0xD28C20CC,~-gplayer_emblem_spec_rough
+unk_semantic_0xD29BFA97,sw_radiant_default

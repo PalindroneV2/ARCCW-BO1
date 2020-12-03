@@ -1,0 +1,4 @@
+semantic,image_name
+unk_semantic_0x8C297E80,~~-gmtl_t6_attach_tritium_wht~74df00e5
+Normal_Map,mtl_t6_attach_tritium_wht_nml
+Color_Map,~-gmtl_t6_attach_tritium_wht_col

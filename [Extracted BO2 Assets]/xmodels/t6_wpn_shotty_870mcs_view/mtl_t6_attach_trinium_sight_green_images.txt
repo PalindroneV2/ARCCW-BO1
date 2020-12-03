@@ -1,0 +1,2 @@
+semantic,image_name
+colorMap,~-gmtl_t6_attach_trinium_sight_green

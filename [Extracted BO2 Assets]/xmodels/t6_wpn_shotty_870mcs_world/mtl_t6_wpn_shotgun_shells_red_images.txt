@@ -1,0 +1,6 @@
+semantic,image_name
+unk_semantic_0x34ECCCB3,~~-gshells_red_sc-rgb&~-rshel~317193ae
+normalMap,shells_n
+unk_semantic_0x6001F931,~shells_ao-ll&$white-ll
+colorMap,~-gshells_red_c
+unk_semantic_0xBDBA9390,weapon_camo_neutral

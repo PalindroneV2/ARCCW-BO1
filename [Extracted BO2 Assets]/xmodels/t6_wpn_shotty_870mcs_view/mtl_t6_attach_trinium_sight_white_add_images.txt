@@ -1,0 +1,3 @@
+semantic,image_name
+normalMap,mtl_t6_attach_trinium_sight_nml
+colorMap,~-gmtl_t6_attach_trinium_sigh~64e243d6

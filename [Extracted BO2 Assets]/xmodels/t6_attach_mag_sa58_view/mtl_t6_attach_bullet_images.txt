@@ -1,0 +1,4 @@
+semantic,image_name
+unk_semantic_0x34ECCCB3,~~-gmtl_t6_attach_bullet_spc-~81d1624d
+normalMap,mtl_t6_attach_bullet_nml
+colorMap,~-gmtl_t6_attach_bullet_col

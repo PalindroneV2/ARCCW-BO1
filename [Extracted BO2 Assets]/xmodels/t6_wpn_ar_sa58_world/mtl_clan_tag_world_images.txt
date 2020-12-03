@@ -1,0 +1,4 @@
+semantic,image_name
+normalMap,clan_font_n
+unk_semantic_0x6D8BC75E,detail_noise_tight
+colorMap,~-gclan_font_c

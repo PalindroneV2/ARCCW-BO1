@@ -1,0 +1,3 @@
+semantic,image_name
+Color_Map,mtl_t6_attach_tritium_red_glo
+unk_semantic_0xD29BFA97,sw_radiant_default
