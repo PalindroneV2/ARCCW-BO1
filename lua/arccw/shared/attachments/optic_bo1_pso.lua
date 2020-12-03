@@ -1,6 +1,6 @@
 att.PrintName = "SVD PSO1 (4-6x)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
-att.Description = "Scope designed for the Dragunov SVD-63. Magnification of 4-6x"
+att.Description = "Scope designed for the Dragunov SVD-63. Mounts to an AK-pattern side rail. Comes with a fixed magnification level of 6x for use at medium-far to long ranges."
 
 att.SortOrder = 150
 

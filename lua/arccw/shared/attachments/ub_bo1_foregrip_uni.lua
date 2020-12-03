@@ -1,6 +1,6 @@
 att.PrintName = "Foregrip (BO1)"
 att.Icon = Material("entities/acwatt_bo1_foregrip.png")
-att.Description = "Vertical foregrip that goes under the weapon's handguard."
+att.Description = "Weighted vertical foregrip mounted under the weapon's handguard sacrifices movement speed and hipfire spread for quicker sight times and improved recoil control."
 
 att.SortOrder = 98
 

@@ -1,6 +1,6 @@
 att.PrintName = "SUSAT (BO1)"
 att.Icon = Material("entities/acwatt_optic_bo1_acog.png", "mips smooth")
-att.Description = "Black Ops 1 SUSAT Scope. Medium range combat scope for improved precision at longer ranges and an alternate sight on top."
+att.Description = "Black Ops 1 SUSAT scope. Medium range combat scope produced in the UK for improved precision at medium ranges. Includes optional integrated iron sights on top."
 
 att.SortOrder = 111
 

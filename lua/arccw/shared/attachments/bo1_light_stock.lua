@@ -1,6 +1,6 @@
 att.PrintName = "Light Stock"
 att.Icon = Material("entities/acwatt_car15_stock.png")
-att.Description = "Lightweight stock which provides a quicker sight time."
+att.Description = "Lightweight stock provides a quicker sight time."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

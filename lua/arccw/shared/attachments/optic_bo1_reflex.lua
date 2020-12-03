@@ -1,6 +1,6 @@
-att.PrintName = "Aimpoint Mark II (BO1)"
+att.PrintName = "Reflex Sight (BO1)"
 att.Icon = Material("entities/acwatt_optic_bo1_reflex.png", "mips smooth")
-att.Description = "Black Ops 1 Reflex Sight. Small, tube-based optic. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons."
+att.Description = "Black Ops 1 reflex sight. Small, tube-based optic. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons."
 
 att.SortOrder = 114
 

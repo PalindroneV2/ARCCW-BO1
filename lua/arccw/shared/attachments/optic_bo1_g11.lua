@@ -1,6 +1,6 @@
 att.PrintName = "G11 Scope (BO1)"
 att.Icon = Material("entities/acwatt_optic_bo1_acog.png", "mips smooth")
-att.Description = "Black Ops 1 G11 Scope. Medium range combat scope for improved precision at longer ranges."
+att.Description = "Black Ops 1 G11 scope. Medium range combat scope for improved precision at longer ranges."
 
 att.SortOrder = 110
 

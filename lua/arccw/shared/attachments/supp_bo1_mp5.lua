@@ -1,6 +1,6 @@
 att.PrintName = "MP5SD Suppressor"
 att.Icon = Material("entities/acwatt_supp_bo1_supp.png")
-att.Description = "Integrated Suppressor for the MP5."
+att.Description = "Integrated suppressor for the MP5."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

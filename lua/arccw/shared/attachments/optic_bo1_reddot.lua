@@ -1,6 +1,6 @@
-att.PrintName = "Elbit Falcon (BO1)"
+att.PrintName = "Red Dot Sight (BO1)"
 att.Icon = Material("entities/acwatt_optic_bo1_reddot.png", "mips smooth")
-att.Description = "Black Ops 1 Red Dot Sight. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons."
+att.Description = "Black Ops 1 red dot sight. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons."
 
 att.SortOrder = 115
 

@@ -1,6 +1,6 @@
 att.PrintName = "Swarovski (BO1)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
-att.Description = "Medium range scope for the AUG A1. Magnification of 2.5x"
+att.Description = "Medium range scope for the AUG A1. Has a magnification level of 2.5x and a simple, circular reticle."
 
 att.SortOrder = 150
 
@@ -38,5 +38,6 @@ att.Colorable = true
 
 att.HolosightBlackbox = true
 
-att.HolosightMagnification = 2.5
+att.HolosightMagnification = 3
+
 att.Mult_SightTime = 1.1

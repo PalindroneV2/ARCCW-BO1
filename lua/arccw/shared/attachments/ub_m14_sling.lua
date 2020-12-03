@@ -1,6 +1,6 @@
 att.PrintName = "Sling (BO1)"
 att.Icon = Material("entities/acwatt_bo1_foregrip.png")
-att.Description = "Sling attachment increases sight time."
+att.Description = "Sling attachment more evenly distributes the firearm's weight to increase handling speeds."
 
 att.SortOrder = 101
 

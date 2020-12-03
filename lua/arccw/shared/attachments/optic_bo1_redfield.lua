@@ -1,6 +1,6 @@
 att.PrintName = "AWM Redfield (12x)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
-att.Description = "High Power Scope for the L115A1 AWM. Magnification of 4-8x"
+att.Description = "High-powered riflescope for the L115A1 AWM. Comes with a magnification level of 12x for use at long to very distant ranges."
 
 att.SortOrder = 150
 
