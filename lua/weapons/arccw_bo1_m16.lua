@@ -365,9 +365,9 @@ SWEP.Hook_NameChange = function(wep, name)
     local a4 = wep.Attachments[4].Installed == "m16_hand_a4"
     local tube = wep.Attachments[7].Installed == "ubgl_m16_m203"
 
-    if !pap and !tube and !irons and !flat and a2 and s13 then -- M16A2
+    if !pap and !tube and !irons and !flat and (a2 or a4) and s13 then -- M16A2
         return "Colt M16A2" --BURST
-    elseif !pap and !tube and !irons and !flat and a2 and !s13 then -- M16A2 E3
+    elseif !pap and !tube and !irons and !flat and (a2 or a4) and !s13 then -- M16A2 E3
         return "Colt M16A2-E3" --AUTO
     elseif !pap and !tube and (irons or flat) and s13 then -- M16A2
         return "Colt M16A4" --BURST
