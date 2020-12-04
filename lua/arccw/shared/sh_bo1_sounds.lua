@@ -1167,6 +1167,74 @@ sound.Add({
     sound = "weapons/arccw/bo1_l96/bolt_down.wav"
 })
 
+-- AWSM --
+
+sound.Add({
+    name = "ArcCW_BO1.M60_Fire",
+    channel = CHAN_WEAPON,
+    level = 100,
+    sound = {
+        "weapons/arccw/bo1_m60/fire1.wav",
+        "weapons/arccw/bo1_m60/fire2.wav",
+        "weapons/arccw/bo1_m60/fire3.wav",
+        "weapons/arccw/bo1_m60/fire4.wav"
+    }
+})
+sound.Add({
+    name = "ArcCW_BO1.M60_BoxOff",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/bo1_m60/box_off.wav"
+})
+sound.Add({
+    name = "ArcCW_BO1.M60_BoxOn",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/bo1_m60/box_on.wav"
+})
+sound.Add({
+    name = "ArcCW_BO1.M60_Open",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/bo1_m60/open.wav"
+})
+sound.Add({
+    name = "ArcCW_BO1.M60_Close",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/bo1_m60/close.wav"
+})
+sound.Add({
+    name = "ArcCW_BO1.M60_Charge",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/bo1_m60/charge.wav"
+})
+sound.Add({
+    name = "ArcCW_BO1.M60_Bonk",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/bo1_m60/bonk2.wav"
+})
+sound.Add({
+    name = "ArcCW_BO1.M60_BeltPlace",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/bo1_m60/place_belt.wav"
+})
+sound.Add({
+    name = "ArcCW_BO1.M60_BeltPull",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/bo1_m60/pull_belt.wav"
+})
+sound.Add({
+    name = "ArcCW_BO1.M60_Futz",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/bo1_m60/futz.wav"
+})
+
 -- M1911 BO1 --
 
 sound.Add( {

@@ -404,21 +404,11 @@ SWEP.Animations = {
         Time = 7 / 30,
         ShellEjectAt = 0,
     },
-    /*["fire_empty"] = {
-        Source = "fire_last",
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },*/
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
         ShellEjectAt = 0,
     },
-    /*["fire_iron_empty"] = {
-        Source = "fire_last",
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },*/
     ["reload"] = {
         Source = "reload",
         Time = 2.5,
@@ -482,24 +472,14 @@ SWEP.Animations = {
     },
     ["fire_grip"] = {
         Source = {"fire_grip"},
-        Time = 0.5,
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
-    /*["fire_empty_grip"] = {
-        Source = {"fire_last_grip"},
-        Time = 0.5,
-        ShellEjectAt = 0,
-    },*/
     ["fire_iron_grip"] = {
         Source = {"fire_ads_grip"},
-        Time = 0.5,
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
-    /*["fire_iron_empty_grip"] = {
-        Source = {"fire_last_grip"},
-        Time = 0.5,
-        ShellEjectAt = 0,
-    },*/
     ["reload_grip"] = {
         Source = "reload_grip",
         Time = 2.5,
@@ -563,24 +543,14 @@ SWEP.Animations = {
     },
     ["fire_gl"] = {
         Source = {"fire_gl"},
-        Time = 0.5,
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
-    /*["fire_empty_gl"] = {
-        Source = {"fire_last_gl"},
-        Time = 0.5,
-        ShellEjectAt = 0,
-    },*/
     ["fire_iron_gl"] = {
         Source = {"fire_ads_gl"},
-        Time = 0.5,
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
-    /*["fire_iron_empty_gl"] = {
-        Source = {"fire_last_gl"},
-        Time = 0.5,
-        ShellEjectAt = 0,
-    },*/
     ["reload_gl"] = {
         Source = "reload_gl",
         Time = 2.5,
@@ -644,24 +614,14 @@ SWEP.Animations = {
     },
     ["fire_mk"] = {
         Source = {"fire_mk"},
-        Time = 0.5,
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
-    /*["fire_empty_mk"] = {
-        Source = {"fire_mk_last"},
-        Time = 0.5,
-        ShellEjectAt = 0,
-    },*/
     ["fire_iron_mk"] = {
         Source = {"fire_ads_mk"},
-        Time = 0.5,
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
-    /*["fire_iron_empty_mk"] = {
-        Source = {"fire_last_mk"},
-        Time = 0.5,
-        ShellEjectAt = 0,
-    },*/
     ["reload_mk"] = {
         Source = "reload_mk",
         Time = 2.5,

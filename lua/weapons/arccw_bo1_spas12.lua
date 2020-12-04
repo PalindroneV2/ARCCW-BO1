@@ -9,7 +9,7 @@ SWEP.Trivia_Class = "Combat Shotgun"
 SWEP.Trivia_Desc = "12 gauge dual mode combat shotgun designed to function primarily in semi-automatic mode, with the pump-action mode used for low-pressure ammunition such as bean bags."
 SWEP.Trivia_Manufacturer = "Franchi"
 SWEP.Trivia_Calibre = "12 Gauge"
-SWEP.Trivia_Mechanism = "Pump-Action"
+SWEP.Trivia_Mechanism = "Semi-Automatic"
 SWEP.Trivia_Country = "Italy"
 SWEP.Trivia_Year = 1979
 
@@ -32,8 +32,8 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "001000000"
 
-SWEP.Damage = 10
-SWEP.DamageMin = 5 -- damage done at maximum range
+SWEP.Damage = 15
+SWEP.DamageMin = 10 -- damage done at maximum range
 SWEP.Range = 45 -- in METRES
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
@@ -267,16 +267,16 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Animations = {
+    ["idle"] = {
+        Source = "idle",
+        Time = 1 / 35,
+    },
     ["draw"] = {
         Source = "draw",
         Time = 1,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
-        SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 17 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 23 / 30}
-        },
     },
     ["ready"] = {
         Source = "first_draw",

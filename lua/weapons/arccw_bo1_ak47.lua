@@ -181,12 +181,10 @@ SWEP.AttachmentElements = {
             {ind = 5, bg = 1},
         },
         NamePriority = 1,
-        TrueNameChange = "AKS-47",
         ExcludeFlags = {"ammo_papunch", "papname2"}
     },
     ["74"] = {
         NamePriority = 2,
-        TrueNameChange = "AK-74",
         ExcludeFlags = {"ammo_papunch", "papname1"},
     },
     ["aks"] = {
@@ -194,14 +192,11 @@ SWEP.AttachmentElements = {
             {ind = 5, bg = 1},
         },
         NamePriority = 3,
-        TrueNameChange = "AKS-74",
         RequireFlags = {"74", "light_stock"},
         ExcludeFlags = {"ammo_papunch", "papname2"}
     },
     ["ammo_papunch"] = {
         NamePriority = 10,
-        TrueNameChange = "Reznov's Revenge",
-        NameChange = "Reznov's Revenge",
     },
 }
 
@@ -346,6 +341,37 @@ SWEP.Attachments = {
         CorrectiveAng = Angle(2, 0, 0),
     },
 }
+
+SWEP.Hook_NameChange = function(wep, name)
+    local pap = wep.Attachments[11].Installed == "ammo_papunch"
+    local ak74 = wep.Attachments[9].Installed == "ammo_ak_74"
+    local solid = wep.Attachments[8].Installed == "bo1_solid_stock"
+    local light = wep.Attachments[8].Installed == "bo1_light_stock"
+
+    if !pap and !ak74 and !light and solid then
+        return "AK-47"
+    elseif !pap and !ak74 and light and !solid then
+        return "AKS-47"
+    elseif !pap and ak74 and !light and !solid then
+        return "AK-74"
+    elseif !pap and ak74 and !light and solid then
+        return "AK-74"
+    elseif !pap and ak74 and light and !solid then
+        return "AKS-74"
+    elseif pap and !ak74 and !light and !solid then --AK-47 PAP NO STOCK
+        return "Reznov's Revenge"
+    elseif pap and ak74 and !light and !solid then -- AK-74 PAP NO STOCK
+        return "Reznov's Revenge"
+    elseif pap and !ak74 and !light and solid then -- AK-47 PAP STOCK
+        return "Reznov's Revenge"
+    elseif pap and !ak74 and light and !solid then -- AKS-47 PAP
+        return "Reznov's Revenge"
+    elseif pap and ak74 and !light and solid then -- AK-74 PAP STOCK
+        return "Reznov's Revenge"
+    elseif pap and ak74 and light and !solid then -- AKS-74 PAP
+        return "Reznov's Revenge"
+    end
+end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm

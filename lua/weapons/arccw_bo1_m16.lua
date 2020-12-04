@@ -150,28 +150,13 @@ SWEP.AttachmentElements = {
     ["heat"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
     },
-    ["fcg_semi"] = {
-        ExcludeFlags = {"ammo_papunch"},
-        TrueNameChange = "Colt AR-15",
-        NameChange = "Mustang Patriot SDR",
-    },
-    ["fcg_s1"] = {
-        ExcludeFlags = {"ammo_papunch"},
-        TrueNameChange = "Colt AR-15",
-        NameChange = "Mustang Patriot SDR",
-    },
-    ["m16_hand_a2"] = {
-        ExcludeFlags = {"fcg_s1", "fcg_semi", "ammo_papunch"},
-        TrueNameChange = "Colt M16A2",
-        NameChange = "Mustang Mk.15A2",
-    },
     ["flattop"] = {
         VMBodygroups = {
             {ind = 2, bg = 2},
         },
         AttPosMods = {
             [2] = {
-                vpos = Vector(1.75, 0, 3.625),
+                vpos = Vector(3, 0.025, 3.6),
             },
         },
         Override_IronSightStruct = {
@@ -187,7 +172,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [2] = {
-                vpos = Vector(1.75, 0, 3.625),
+                vpos = Vector(3, 0.025, 3.6),
             }
         },
         Override_IronSightStruct = {
@@ -195,23 +180,6 @@ SWEP.AttachmentElements = {
             Ang = Angle(0, 0, 0),
             Magnification = 1,
         },
-    },
-    ["name_a4"] = {
-        TrueNameChange = "Colt M16A4",
-        NameChange = "Mustang Mk.15A4",
-        ExcludeFlags = {"papname1", "fcg_s1", "fcg_semi"}
-    },
-    ["papname1"] = {
-        RequireFlags = {"bo1_m203"},
-        NamePriority = 11,
-        TrueNameChange = "Skullcrusher",
-        NameChange = "Skullcrusher",
-    },
-    ["papname2"] = {
-        NamePriority = 10,
-        TrueNameChange = "Skullpiercer",
-        NameChange = "Skullpiercer",
-        ExcludeFlags = {"bo1_m203"},
     },
     ["bo1_m203"] = {
         VMBodygroups = {
@@ -231,7 +199,7 @@ SWEP.AttachmentElements = {
                 Bone = "tag_weapon",
                 Scale = Vector(0.35, 0.35, 0.375),
                 Offset = {
-                    pos = Vector(3.5, 0.35, 3.65),
+                    pos = Vector(3.5, 0.3, 3.65),
                     ang = Angle(0, 90, 0),
                 }
             }
@@ -263,7 +231,7 @@ SWEP.AttachmentElements = {
 SWEP.Attachments = {
     { --1
         PrintName = "Upper Receiver",
-        DefaultAttName = "A1/A2 Upper",
+        DefaultAttName = "A1 Upper",
         Slot = "bo1_flattop",
         FreeSlot = true,
     },
@@ -273,7 +241,7 @@ SWEP.Attachments = {
         Slot = "optic", -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(2.75, 0, 4.775), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(3.5, 0.025, 4.8), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(5.5, 1.4, -6.25),
             wang = Angle(175, 180, -2.5)
@@ -387,10 +355,52 @@ SWEP.Attachments = {
         FreeSlot = true,
     },
 }
+
+SWEP.Hook_NameChange = function(wep, name)
+    local pap = wep.Attachments[11].Installed == "ammo_papunch"
+    local s13 = wep.Attachments[10].Installed == "bo1_fcg_s13"
+    local irons = wep.Attachments[14].Installed
+    local flat = wep.Attachments[1].Installed
+    local a2 = wep.Attachments[4].Installed == "m16_hand_a2"
+    local a4 = wep.Attachments[4].Installed == "m16_hand_a4"
+    local tube = wep.Attachments[7].Installed == "ubgl_m16_m203"
+
+    if !pap and !tube and !irons and !flat and a2 and s13 then -- M16A2
+        return "Colt M16A2" --BURST
+    elseif !pap and !tube and !irons and !flat and a2 and !s13 then -- M16A2 E3
+        return "Colt M16A2-E3" --AUTO
+    elseif !pap and !tube and (irons or flat) and s13 then -- M16A2
+        return "Colt M16A4" --BURST
+    elseif !pap and !tube and (irons or flat) and !s13 then -- M16A2
+        return "Colt M16A3" --AUTO
+    elseif !pap and tube and !irons and !flat and a2 and s13 then -- M16A2
+        return "Colt M16A2" --BURST
+    elseif !pap and tube and !irons and !flat and a2 and !s13 then -- M16A2 E3
+        return "Colt M16A2-E3" --AUTO
+    elseif !pap and tube and (irons or flat) and s13 then -- M16A2
+        return "Colt M16A4" --BURST
+    elseif !pap and tube and (irons or flat) and !s13 then -- M16A2
+        return "Colt M16A3" --AUTO
+    elseif pap and !tube and !(a2 or a4) then -- M16A1 PAP NO TUBE
+        return "Skullpiercer"
+    elseif pap and !tube and a2 then -- M16A2 PAP NO TUBE
+        return "Skullsplitter"
+    elseif pap and !tube and a4 then -- M16A1 PAP TUBE
+        return "Skulleater" --AUTO
+    elseif pap and tube and !(a2 or a4) then -- M16A1 PAP TUBE
+        return "Skullcrusher" --AUTO
+    elseif pap and tube and a2 then -- M16A2
+        return "Skullsmasher" --AUTO
+    elseif pap and tube and a4 then -- M16A2
+        return "Skullreaper" --AUTO
+    end
+end
+
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local tube = wep.Attachments[7].Installed == "ubgl_m16_m203"
     local a2 = wep.Attachments[4].Installed == "m16_hand_a2"
+    local a4 = wep.Attachments[4].Installed == "m16_hand_a4"
     local heat = wep.Attachments[4].Installed == "m16_hand_heat"
     local papcamo = wep.Attachments[11].Installed == "ammo_papunch"
     local Wood = wep.Attachments[15].Installed == "bo1_ar15_wood"
@@ -398,21 +408,28 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     if tube and a2 then
         vm:SetBodygroup(4, 1)
         vm:SetBodygroup(6, 1)
+    elseif tube and a4 then
+        vm:SetBodygroup(4, 3)
+        vm:SetBodygroup(5, 4)
+        vm:SetBodygroup(6, 1)
     elseif tube and heat then
         vm:SetBodygroup(4, 1)
         vm:SetBodygroup(6, 0)
     elseif a2 then
         vm:SetBodygroup(4, 2)
         vm:SetBodygroup(6, 1)
+    elseif a4 then
+        vm:SetBodygroup(4, 3)
+        vm:SetBodygroup(6, 1)
     elseif heat then
         vm:SetBodygroup(4, 1)
         vm:SetBodygroup(6, 0)
-    elseif not tube and not a2 then vm:SetBodygroup(4, 0)
-    elseif not tube and not heat then vm:SetBodygroup(4, 0)
+    elseif !tube and !a2 then vm:SetBodygroup(4, 0)
+    elseif !tube and !heat then vm:SetBodygroup(4, 0)
     end
 
-    if papcamo and not Wood then return vm:SetSkin(2)
-    elseif not papcamo and Wood then return vm:SetSkin(4)
+    if papcamo and !Wood then return vm:SetSkin(2)
+    elseif !papcamo and Wood then return vm:SetSkin(4)
     elseif papcamo and Wood then return vm:SetSkin(6) end
 end
 

@@ -113,8 +113,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.913, -4, 1),
-    Ang = Angle(0 ,0 ,0),
+    Pos = Vector(-3.175, -3, 1.05),
+    Ang = Angle(-0.01, 0.05, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -145,26 +145,48 @@ SWEP.BarrelLength = 25
 
 SWEP.ExtraSightDist = 5
 
-SWEP.DefaultBodygroups = "000020"
+SWEP.DefaultBodygroups = "000000"
 
 SWEP.AttachmentElements = {
     ["light_stock"] = {
         VMBodygroups = {
-            {ind = 4, bg = 0},
+            {ind = 4, bg = 1},
         },
     },
     ["solid_stock"] = {
         VMBodygroups = {
-            {ind = 4, bg = 1},
+            {ind = 4, bg = 2},
         },
+    },
+    ["solider_stock"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 3},
+        },
+        /*ExcludeFlags = {"ammo_papunch"},
+        NamePriority = 6,
+        TrueNameChange = "HK MP5A2",
+        NameChange = "Nimrod 9mm Army",*/
     },
     ["mp5sd"] = {
         VMBodygroups = {
             {ind = 2, bg = 1},
             {ind = 5, bg = 1},
         },
+        /*ExcludeFlags = {"ammo_papunch"},
+        NamePriority = 7,
         TrueNameChange = "HK MP5SD3",
-        NameChange = "Nimrod 9mm Covert",
+        NameChange = "Nimrod 9mm Covert",*/
+    },
+    ["mp5sd2"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 1},
+            {ind = 5, bg = 1},
+        },
+        RequireFlags = {"mp5sd", "mp5a2"},
+        /*ExcludeFlags = {"ammo_papunch"},
+        NamePriority = 8,
+        TrueNameChange = "HK MP5SD2",
+        NameChange = "Nimrod 9mm Covert",*/
     },
     ["sdhg"] = {
         VMBodygroups = {
@@ -181,17 +203,6 @@ SWEP.AttachmentElements = {
             {ind = 3, bg = 1},
         },
     },
-    ["fcg_s1"] = {
-        ExcludeFlags = {"ammo_papunch"},
-        TrueNameChange = "HK SP5",
-        NameChange = "Nimrod-C 9mm",
-    },
-    ["ammo_papunch"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
-        NamePriority = 10,
-        TrueNameChange = "MP115 Kollider",
-        NameChange = "MP115 Kollider",
-    },
 }
 
 SWEP.Attachments = {
@@ -201,7 +212,7 @@ SWEP.Attachments = {
         Slot = "optic", -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(-3.5, 0, 3.125), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(-3.5, 0, 3.35), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(5.5, 1.2, -7.5),
             wang = Angle(172.5, 181.75, 0)
@@ -220,7 +231,7 @@ SWEP.Attachments = {
         Slot = "muzzle",
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(9.5, 0, 0.9), -- offset that the attachment will be relative to the bone
+            vpos = Vector(10, 0, 1), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
         MergeSlots = {4}
@@ -228,7 +239,6 @@ SWEP.Attachments = {
     { --4
         Hidden = true,
         Slot = "mp5_bo2_supp",
-        InstalledEles = {"mp5sd"},
     },
     { --5
         PrintName = "Underbarrel",
@@ -269,7 +279,7 @@ SWEP.Attachments = {
     },
     { --8
         PrintName = "Stock",
-        Slot = {"bo1_stock"},
+        Slot = {"bo1_stock", "bo1_mp5stock"},
         DefaultAttName = "No Stock",
         InstalledEles = "bo1_light_stock",
     },
@@ -315,6 +325,28 @@ SWEP.Attachments = {
         },
     },*/
 }
+
+SWEP.Hook_NameChange = function(wep, name)
+    local pap = wep.Attachments[11].Installed == "ammo_papunch"
+    local mp5a2 = wep.Attachments[8].Installed == "bo1_solider_stock"
+    local mp5sd = wep.Attachments[4].Installed == "supp_bo1_mp5"
+
+    if !pap and !mp5a2 and mp5sd then
+        return "HK MP5SD3"
+    elseif !pap and mp5a2 and mp5sd then
+        return "HK MP5SD2"
+    elseif !pap and mp5a2 and !mp5sd then
+        return "HK MP5A2"
+    elseif pap and mp5a2 and mp5sd then
+        return "MP115 Kollider"
+    elseif pap and !mp5a2 and !mp5sd then
+        return "MP115 Kollider"
+    elseif pap and !mp5a2 and mp5sd then
+        return "MP115 Kollider"
+    elseif pap and mp5a2 and !mp5sd then
+        return "MP115 Kollider"
+    end
+end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
@@ -523,7 +555,7 @@ SWEP.Animations = {
         Time = 3 / 30,
     },
     ["draw_stock_sil"] = {
-        Source = "first_draw_stock_sil",
+        Source = "first_draw_sil_stock",
         Time = 1,
         LHIK = true,
         LHIKIn = 0.25,
@@ -533,7 +565,7 @@ SWEP.Animations = {
         },
     },
     ["ready_stock_sil"] = {
-        Source = "first_draw_stock_sil",
+        Source = "first_draw_sil_stock",
         Time = 1.5,
         LHIK = true,
         LHIKIn = 0.25,
@@ -598,7 +630,7 @@ SWEP.Animations = {
     -- QUICK RELOADS--
 
     ["reload_quick"] = {
-        Source = "reload_dualmag_fast",
+        Source = "reload_fast",
         Time = 70 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,
@@ -612,7 +644,7 @@ SWEP.Animations = {
         },
     },
     ["reload_empty_quick"] = {
-        Source = "reload_dualmag_fast_empty",
+        Source = "reload_empty_fast",
         Time = 91 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,
@@ -653,7 +685,7 @@ SWEP.Animations = {
     },
 
     ["reload_stock_quick"] = {
-        Source = "reload_dualmag_fast",
+        Source = "reload_fast",
         Time = 70 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,
@@ -667,7 +699,7 @@ SWEP.Animations = {
         },
     },
     ["reload_empty_stock_quick"] = {
-        Source = "reload_dualmag_fast_empty",
+        Source = "reload_empty_fast",
         Time = 91 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,
@@ -720,7 +752,7 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["reload_sil_quick"] = {
-        Source = "reload_dualmag_fast_sil",
+        Source = "reload_sil_fast",
         Time = 70 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,
@@ -734,7 +766,7 @@ SWEP.Animations = {
         },
     },
     ["reload_empty_sil_quick"] = {
-        Source = "reload_dualmag_fast_empty_sil",
+        Source = "reload_empty_sil_fast",
         Time = 91 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,
@@ -768,7 +800,7 @@ SWEP.Animations = {
         Time = 3 / 30,
     },
     ["draw_stock_sil_quick"] = {
-        Source = "first_draw_stock_sil",
+        Source = "first_draw_sil_stock",
         Time = 1,
         LHIK = true,
         LHIKIn = 0.25,
@@ -778,7 +810,7 @@ SWEP.Animations = {
         },
     },
     ["ready_stock_sil_quick"] = {
-        Source = "first_draw_stock_sil",
+        Source = "first_draw_sil_stock",
         Time = 1.5,
         LHIK = true,
         LHIKIn = 0.25,
@@ -798,7 +830,7 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["reload_stock_sil_quick"] = {
-        Source = "reload_dualmag_fast_sil",
+        Source = "reload_sil_fast",
         Time = 70 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,
@@ -812,7 +844,7 @@ SWEP.Animations = {
         },
     },
     ["reload_empty_stock_sil_quick"] = {
-        Source = "reload_dualmag_fast_empty_sil",
+        Source = "reload_empty_sil_fast",
         Time = 91 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,

@@ -8,6 +8,8 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = "mp5_bo2_supp"
 
+att.GivesFlags = {"mp5sd", "mp5sd2"}
+
 att.SortOrder = 151
 
 att.Model = ""

@@ -18,13 +18,13 @@ att.GivesFlags = {"susat_norail"}
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.04, 10, -2),
+        Pos = Vector(0, 10, -2),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         IgnoreExtra = true
     },
     {
-        Pos = Vector(-0.025, 5, -2.9),
+        Pos = Vector(0, 5, -2.9),
         Ang = Angle(0.774, 0, 0),
         Magnification = 1.1,
         HolosightData = {

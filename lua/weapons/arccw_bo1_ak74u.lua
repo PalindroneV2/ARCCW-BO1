@@ -168,49 +168,6 @@ SWEP.AttachmentElements = {
             {ind = 4, bg = 1},
         },
     },
-    ["light_stock"] = {
-        NamePriority = 1,
-        TrueNameChange = "AKMSu",
-        ExcludeFlags = {"ammo_papunch", "papname2"}
-    },
-    ["74"] = {
-        NamePriority = 2,
-        TrueNameChange = "AK-74u",
-        ExcludeFlags = {"ammo_papunch", "papname1"},
-    },
-    ["aks"] = {
-        NamePriority = 3,
-        TrueNameChange = "AKS-74u",
-        RequireFlags = {"74", "light_stock"},
-        ExcludeFlags = {"ammo_papunch", "papname2"}
-    },
-    ["ammo_papunch"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
-        NamePriority = 4,
-        TrueNameChange = "AKMfu2",
-        NameChange = "AKMfu2",
-        ExcludeFlags = {"74ammo"},
-    },
-    ["papname1"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
-        NamePriority = 5,
-        TrueNameChange = "AKMSfu2",
-        NameChange = "AKMSfu2",
-        RequireFlags = {"papname1", "light_stock"},
-        ExcludeFlags = {"74ammo"},
-    },
-    ["papname2"] = {
-        NamePriority = 6,
-        TrueNameChange = "AK-74fu2",
-        NameChange = "AK-74fu2",
-        RequireFlags = {"74ammo"},
-    },
-    ["papname3"] = {
-        NamePriority = 7,
-        TrueNameChange = "AKS-74fu2",
-        NameChange = "AKS-74fu2",
-        RequireFlags = {"74ammo", "light_stock"},
-    },
 }
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
@@ -381,6 +338,37 @@ SWEP.Attachments = {
         CorrectiveAng = Angle(2, 0, 0),
     },
 }
+
+SWEP.Hook_NameChange = function(wep, name)
+    local pap = wep.Attachments[10].Installed == "ammo_papunch"
+    local ak74 = wep.Attachments[8].Installed == "ammo_ak_74"
+    local light = wep.Attachments[7].Installed == "bo1_light_stock"
+    local solid = wep.Attachments[7].Installed == "bo1_solid_stock"
+
+    if !pap and !ak74 and !light and solid then
+        return "AKMu"
+    elseif !pap and !ak74 and light and !solid then
+        return "AKMSu"
+    elseif !pap and ak74 and !light and !solid then
+        return "AK-74u"
+    elseif !pap and ak74 and !light and solid then
+        return "AK-74u"
+    elseif !pap and ak74 and light and !solid then
+        return "AKS-74u"
+    elseif pap and !ak74 and !light and !solid then --AK-47 PAP NO STOCK
+        return "AKMfu2"
+    elseif pap and ak74 and !light and !solid then -- AK-74 PAP NO STOCK
+        return "AK-74fu2"
+    elseif pap and !ak74 and !light and solid then -- AK-47 PAP STOCK
+        return "AKMfu2"
+    elseif pap and !ak74 and light and !solid then -- AKS-47 PAP
+        return "AKMSfu2"
+    elseif pap and ak74 and !light and solid then -- AK-74 PAP STOCK
+        return "AK-74fu2"
+    elseif pap and ak74 and light and !solid then -- AKS-74 PAP
+        return "AKS-74fu2"
+    end
+end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm

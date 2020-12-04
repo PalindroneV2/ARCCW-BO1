@@ -164,22 +164,6 @@ SWEP.AttachmentElements = {
             {ind = 5, bg = 2}
         },
     },
-    ["papname1"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
-        TrueNameChange = "Predator",
-        NameChange = "Yautja",
-        NamePriority = 100,
-    },
-    ["fcg_semi"] = {
-        ExcludeFlags = {"papname1"},
-        TrueNameChange = "Colt AR-15 Carbine",
-        NameChange = "Mustang Patriot SDR",
-    },
-    ["fcg_s1"] = {
-        ExcludeFlags = {"papname1"},
-        TrueNameChange = "Colt AR-15 Carbine",
-        NameChange = "Mustang Patriot SDR",
-    },
     ["mount"] = {
         VMElements = {
             {
@@ -210,7 +194,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [2] = {
-                vpos = Vector(2.25, 0, 3.625),
+                vpos = Vector(3, 0, 3.625),
             }
         },
         Override_IronSightStruct = {
@@ -226,7 +210,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [2] = {
-                vpos = Vector(2.25, 0, 3.625),
+                vpos = Vector(3, 0, 3.625),
             }
         },
         Override_IronSightStruct = {
@@ -240,6 +224,11 @@ SWEP.AttachmentElements = {
             {ind = 4, bg = 1},
         },
     },
+    ["ris_hand"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 3},
+        },
+    },
     ["light_stock"] = {
         VMBodygroups = {
             {ind = 6, bg = 0},
@@ -250,35 +239,17 @@ SWEP.AttachmentElements = {
             {ind = 6, bg = 1},
         },
     },
-    ["m607"] = {
-        TrueNameChange = "Colt M607",
-        NameChange = "Mustang X-607",
-        NamePriority = 98,
-        ExcludeFlags = {"papname1", "name_a4", "fcg_semi", "fcg_s1", "m635"},
-    },
-    ["m635"] = {
-        TrueNameChange = "Colt M635",
-        NameChange = "Mustang 9mm Carbine",
-        NamePriority = 98,
-        ExcludeFlags = {"papname1", "name_a4", "fcg_semi", "fcg_s1"},
-    },
     ["heat_hand"] = {
         VMBodygroups = {
             {ind = 4, bg = 2}
         },
-    },
-    ["name_a4"] = {
-        TrueNameChange = "Colt M4 Carbine",
-        NameChange = "Mustang Mk.4 Carbine",
-        NamePriority = 99,
-        ExcludeFlags = {"papname1", "fcg_semi", "fcg_s1"},
     },
 }
 
 SWEP.Attachments = {
     {
         PrintName = "Upper Receiver",
-        DefaultAttName = "A1/A2 Upper",
+        DefaultAttName = "A1 Upper",
         Slot = "bo1_flattop",
         FreeSlot = true,
     }, --1
@@ -288,7 +259,7 @@ SWEP.Attachments = {
         Slot = "optic", -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(2.25, 0, 4.775), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(3.5, 0, 4.85), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(5.5, 0.85, -6.5),
             wang = Angle(172.5, 181.75, 0)
@@ -311,7 +282,7 @@ SWEP.Attachments = {
     }, --3
     {
         PrintName = "Handguard",
-        DefaultAttName = "Commando Handguard",
+        DefaultAttName = "XM177E2 Handguard",
         Slot = "car15_hand",
         FreeSlot = true,
     }, --4
@@ -419,6 +390,81 @@ SWEP.Attachments = {
         FreeSlot = true,
     }, --18
 }
+
+SWEP.Hook_NameChange = function(wep, name)
+    local pap = wep.Attachments[13].Installed == "ammo_papunch"
+    local m635 = wep.Attachments[12].Installed == "ammo_car15_9mm"
+    local s13 = wep.Attachments[10].Installed == "bo1_fcg_s13"
+    local irons = wep.Attachments[16].Installed
+    local flat = wep.Attachments[1].Installed
+    local m607 = wep.Attachments[4].Installed == "car15_hand_a1"
+
+    if pap and !irons and !flat and !m635 and !m607 then -- PAP
+        return "Predator"
+    elseif pap and irons and !flat and !m635 and !m607 then -- PAP M4 IRONS
+        return "Predator"
+    elseif pap and !irons and flat and !m635 and !m607 then -- PAP M4 FLAT
+        return "Predator"
+    elseif pap and !irons and !flat and m635 and !m607 then -- PAP M635
+        return "Predator"
+    elseif pap and !irons and !flat and !m635 and m607 then -- PAP M607
+        return "Predator"
+    elseif pap and irons and !flat and m635 and !m607 then -- PAP M4 9MM IRONS
+        return "Predator"
+    elseif pap and irons and !flat and !m635 and m607 then -- PAP M607 IRONS
+        return "Predator"
+    elseif pap and !irons and flat and m635 and !m607 then -- PAP M4 9MM FLAT
+        return "Predator"
+    elseif pap and !irons and flat and !m635 and m607 then -- PAP M607 FLAT
+        return "Predator"
+    elseif !pap and irons and !flat and !m635 and !m607 and !s13 then -- M4A1 IRONS
+        return "Colt M4A1 Carbine"
+    elseif !pap and !irons and flat and !m635 and !m607 and !s13 then -- M4A1 FLAT
+        return "Colt M4A1 Carbine"
+    elseif !pap and irons and !flat and !m635 and !m607 and s13 then -- M4 IRONS
+        return "Colt M4 Carbine"
+    elseif !pap and !irons and flat and !m635 and !m607 and s13 then -- M4 FLAT
+        return "Colt M4 Carbine"
+    elseif !pap and irons and !flat and !m635 and m607 and s13 then -- M4 607 IRONS
+        return "Colt M4 Carbine" --BST
+    elseif !pap and irons and !flat and !m635 and m607 and !s13 then -- M4A1 607 FLAT
+        return "Colt M4A1 Carbine" --AUTO
+    elseif !pap and !irons and flat and !m635 and m607 and s13 then -- M4 607 IRONS
+        return "Colt M4 Carbine" --BST
+    elseif !pap and !irons and flat and !m635 and m607 and !s13 then -- M4A1 607 FLAT
+        return "Colt M4A1 Carbine" --AUTO
+    elseif !pap and irons and !flat and m635 and !m607 and s13 then -- M4A1 9mm IRONS
+        return "Colt 9mm SMG" --AUTO
+    elseif !pap and !irons and flat and m635 and !m607 and s13 then -- M4A1 9mm FLAT
+        return "Colt 9mm SMG" --AUTO
+    elseif !pap and irons and !flat and m635 and !m607 and !s13 then -- M4 9mm IRONS
+        return "Colt 9mm SMG" --BST
+    elseif !pap and !irons and flat and m635 and !m607 and !s13 then -- M4 9mm FLAT
+        return "Colt 9mm SMG" --BST
+    elseif !pap and irons and !flat and m635 and m607 and s13 then -- M4A1 9mm IRONS M607
+        return "Colt 9mm SMG" --AUTO
+    elseif !pap and !irons and flat and m635 and m607 and s13 then -- M4A1 9mm FLAT M607
+        return "Colt 9mm SMG" --AUTO
+    elseif !pap and irons and !flat and m635 and m607 and !s13 then -- M4 9mm IRONS M607
+        return "Colt 9mm SMG" --BST
+    elseif !pap and !irons and flat and m635 and m607 and !s13 then -- M4 9mm FLAT M607
+        return "Colt 9mm SMG" --BST
+    elseif !pap and !irons and !flat and m635 and !m607 and s13 then -- M635 IRONS
+        return "Colt M635"
+    elseif !pap and !irons and !flat and m635 and !m607 and !s13 then -- M635 FLAT
+        return "Colt M635"
+    elseif !pap and !irons and !flat and m635 and m607 and s13 then -- M607 9MM IRONS
+        return "Colt M635" --BST
+    elseif !pap and !irons and !flat and m635 and m607 and !s13 then -- M607 9MM FLAT
+        return "Colt M635" --AUTO
+    elseif !pap and !irons and !flat and !m635 and m607 and s13 then -- M607 IRONS
+        return "Colt M607" --BST
+    elseif !pap and !irons and !flat and !m635 and m607 and !s13 then -- M607 FLAT
+        return "Colt M607" --AUTO
+    elseif !pap and !irons and !flat and !m635 and !m607 and s13 then -- M607 IRONS
+        return "Colt XM4" --BST
+    end
+end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm

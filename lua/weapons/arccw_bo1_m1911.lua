@@ -144,7 +144,7 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
         --VMMaterial = "models/weapons/pap/pap_blue_burn",
-        TrueNameChange = "Stallion M19115",
+        TrueNameChange = "Pain",
         NameChange = "Overlord M115",
     },
     ["ammo_1911_pap"] = {

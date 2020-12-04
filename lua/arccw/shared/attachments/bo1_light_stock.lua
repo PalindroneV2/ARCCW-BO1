@@ -16,4 +16,4 @@ att.Mult_MoveDispersion = 1.1
 att.Mult_SightTime = 0.75
 att.Mult_SightedSpeedMult = 1.2
 
-att.GivesFlags = {"light_stock", "aks"}
+att.GivesFlags = {"light_stock", "aks", "stockblock"}
