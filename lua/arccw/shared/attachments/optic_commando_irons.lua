@@ -1,4 +1,4 @@
-att.PrintName = "Troy Flip-Up Irons"
+att.PrintName = "Troy Battle Sights"
 att.Icon = Material("entities/acwatt_optic_bo1_irons.png")
 att.Description = "You will aim with sights of iron, and you will like it."
 

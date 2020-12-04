@@ -162,36 +162,41 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 4, bg = 3},
         },
-        /*ExcludeFlags = {"ammo_papunch"},
-        NamePriority = 6,
-        TrueNameChange = "HK MP5A2",
-        NameChange = "Nimrod 9mm Army",*/
     },
     ["mp5sd"] = {
         VMBodygroups = {
             {ind = 2, bg = 1},
             {ind = 5, bg = 1},
         },
-        /*ExcludeFlags = {"ammo_papunch"},
-        NamePriority = 7,
-        TrueNameChange = "HK MP5SD3",
-        NameChange = "Nimrod 9mm Covert",*/
-    },
-    ["mp5sd2"] = {
-        VMBodygroups = {
-            {ind = 2, bg = 1},
-            {ind = 5, bg = 1},
+        AttPosMods = {
+            [6] = {
+                vpos = Vector(5, 0, 0.15),
+            }
         },
-        RequireFlags = {"mp5sd", "mp5a2"},
-        /*ExcludeFlags = {"ammo_papunch"},
-        NamePriority = 8,
-        TrueNameChange = "HK MP5SD2",
-        NameChange = "Nimrod 9mm Covert",*/
     },
     ["sdhg"] = {
         VMBodygroups = {
             {ind = 2, bg = 1},
         },
+        AttPosMods = {
+            [6] = {
+                vpos = Vector(5, 0, 0.15),
+            }
+        },
+    },
+    ["ubrail"] = {
+        VMElements = {
+            {
+                Model = "models/weapons/arccw/item/bo1_ak_rail.mdl",
+                Bone = "tag_weapon",
+                Scale = Vector(0.35, 0.50, 0.75),
+                Offset = {
+                    pos = Vector(5, 0.3, 2.25),
+                    ang = Angle(0, 90, 180),
+                }
+            }
+        },
+        ExcludeFlags = {"sdhg", "mp5sd"},
     },
     ["bo1_mag"] = {
         VMBodygroups = {
@@ -259,11 +264,12 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(6.5, 0, 0.5), -- offset that the attachment will be relative to the bone
+            vpos = Vector(6, 0, 0.3), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(15, 1.15, -5.5),
             wang = Angle(170, -180, 0),
         },
+        InstalledEles = {"ubrail"},
     },
     { --7
         PrintName = "Tactical",

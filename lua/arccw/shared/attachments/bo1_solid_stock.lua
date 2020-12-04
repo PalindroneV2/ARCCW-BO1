@@ -1,6 +1,6 @@
 att.PrintName = "Solid Stock"
 att.Icon = Material("entities/acwatt_m16_stock.png")
-att.Description = "Sturdy, solid stock provides better recoil control at the cost of maneuverability."
+att.Description = "A sturdy solid stock that provides better recoil control at the cost of maneuverability."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
