@@ -1,8 +1,8 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/bo2/c_bo2_mp5/bullet_c"
+	"$basetexture" "models/weapons/bo2/bo2_mp5/bullet_c"
 	$blendtintbybasealpha  "1"
-	"$bumpmap" "models/weapons/bo2/c_bo2_mp5/bullet_n"
+	"$bumpmap" "models/weapons/bo2/bo2_mp5/bullet_n"
 	$phong                      		1
 	$phongexponent                      "20"
 	$phongboost                         "1"
