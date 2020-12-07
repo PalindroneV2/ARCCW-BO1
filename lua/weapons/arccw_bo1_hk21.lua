@@ -272,6 +272,7 @@ SWEP.Attachments = {
     {
         PrintName = "Magazine",
         Slot = {"bo1_hk21_ammo"},
+        DefaultAttName = "HK 7.62mm 80rnd Drum"
     }, --9
     {
         PrintName = "Ammo Type",
@@ -338,6 +339,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
+    local small = wep.Attachments[9].Installed == "bo1_ammo_hk21_30rnd"
+
+    if small then
+        return anim .. "_small"
+    end
 end
 
 SWEP.Hook_GetShootSound = function(wep, sound)
@@ -404,15 +410,15 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.G3_Charge", t = 21 / 35},
-            {s = "ArcCW_BO1.G3_Out", t = 42 / 35},
-            {s = "ArcCW_BO1.G3_Futz", t = 77 / 35},
-            {s = "ArcCW_BO1.G3_In", t = 87 / 35},
-            {s = "ArcCW_BO1.G3_Charge", t = 110 / 35},
+            {s = "ArcCW_BO1.G3_Out", t = 27 / 35},
+            {s = "ArcCW_BO1.G3_Futz", t = 97 / 35},
+            {s = "ArcCW_BO1.G3_In", t = 107 / 35},
+            {s = "ArcCW_BO1.M60_Bonk", t = 120 / 35},
+            {s = "ArcCW_BO1.G3_Charge", t = 148 / 35},
         },
     },
     ["reload_small"] = {
-        Source = "reload",
+        Source = "reload_small",
         Time = 135 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
@@ -421,13 +427,13 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.G3_Out", t = 15 / 35},
-            {s = "ArcCW_BO1.G3_Futz", t = 50 / 35},
-            {s = "ArcCW_BO1.G3_In", t = 60 / 35}
+            {s = "ArcCW_BO1.G3_Out", t = 27 / 35},
+            {s = "ArcCW_BO1.G3_Futz", t = 100 / 35},
+            {s = "ArcCW_BO1.G3_In", t = 108 / 35}
         },
     },
     ["reload_empty_small"] = {
-        Source = "reload_empty",
+        Source = "reload_empty_small",
         Time = 180 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
@@ -436,43 +442,10 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.G3_Charge", t = 21 / 35},
-            {s = "ArcCW_BO1.G3_Out", t = 42 / 35},
-            {s = "ArcCW_BO1.G3_Futz", t = 77 / 35},
-            {s = "ArcCW_BO1.G3_In", t = 87 / 35},
-            {s = "ArcCW_BO1.G3_Charge", t = 110 / 35},
-        },
-    },
-    ["reload_small"] = {
-        Source = "reload_small",
-        Time = 95 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 37,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-        SoundTable = {
-            {s = "ArcCW_BO1.G3_Out", t = 15 / 35},
-            {s = "ArcCW_BO1.G3_Futz", t = 50 / 35},
-            {s = "ArcCW_BO1.G3_In", t = 60 / 35}
-        },
-    },
-    ["reload_empty_small"] = {
-        Source = "reload_empty_small",
-        Time = 140 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 37,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-        SoundTable = {
-            {s = "ArcCW_BO1.G3_Charge", t = 21 / 35},
-            {s = "ArcCW_BO1.G3_Out", t = 42 / 35},
-            {s = "ArcCW_BO1.G3_Futz", t = 77 / 35},
-            {s = "ArcCW_BO1.G3_In", t = 87 / 35},
-            {s = "ArcCW_BO1.G3_Charge", t = 110 / 35},
+            {s = "ArcCW_BO1.G3_Out", t = 27 / 35},
+            {s = "ArcCW_BO1.G3_Futz", t = 100 / 35},
+            {s = "ArcCW_BO1.G3_In", t = 108 / 35},
+            {s = "ArcCW_BO1.G3_Charge", t = 147 / 35},
         },
     },
     ["enter_sprint"] = {
