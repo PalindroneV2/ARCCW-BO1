@@ -4,12 +4,8 @@
 	$blendtintbybasealpha  "1"
 	"$bumpmap" "models/weapons/bo3/c_bo3_1911/base/bullet/bullet_n"
 	$phong "1"
-	$phongboost "16"
-	$phongfresnelranges "[0 0.1 1.0]"
+	$phongboost "0.5"
+	$phongexponent  "20"
+	$phongfresnelranges "[.1 .5 1]"
 	$phongalbedotint "0"
-
-	$envmap "env_cubemap"
-	$envmaptint "[0.3 0.3 0.3]"
-	$normalmapalphaenvmapmask "1"
-	$envmapfresnel "1"
 }

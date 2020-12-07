@@ -11,7 +11,7 @@ SWEP.Trivia_Manufacturer = "Mustang Firearms Ltd."
 SWEP.Trivia_Calibre = "5,56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "United States of America"
-SWEP.Trivia_Year = 1964
+SWEP.Trivia_Year = 1959
 
 SWEP.Slot = 2
 
@@ -350,9 +350,11 @@ SWEP.Attachments = {
         FreeSlot = true,
     },
     { --15
-        PrintName = "Furniture",
-        Slot = "bo1_ar15_wood",
+        PrintName = "Cosmetic",
+        Slot = "bo1_cosmetic",
+        DefaultAttName = "Black Polymer",
         FreeSlot = true,
+        GivesFlags = {"bo1_black"}
     },
 }
 
@@ -403,7 +405,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local a4 = wep.Attachments[4].Installed == "m16_hand_a4"
     local heat = wep.Attachments[4].Installed == "m16_hand_heat"
     local papcamo = wep.Attachments[11].Installed == "ammo_papunch"
-    local Wood = wep.Attachments[15].Installed == "bo1_ar15_wood"
+    local Wood = wep.Attachments[15].Installed == "bo1_cosmetic_wood"
+    local Tan = wep.Attachments[15].Installed == "bo1_cosmetic_tan"
+    local Green = wep.Attachments[15].Installed == "bo1_cosmetic_odgreen"
 
     if tube and a2 then
         vm:SetBodygroup(4, 1)
@@ -430,7 +434,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if papcamo and !Wood then return vm:SetSkin(2)
     elseif !papcamo and Wood then return vm:SetSkin(4)
-    elseif papcamo and Wood then return vm:SetSkin(6) end
+    elseif papcamo and Wood then return vm:SetSkin(6)
+    elseif !papcamo and Tan then return vm:SetSkin(8)
+    elseif papcamo and Tan then return vm:SetSkin(10)
+    elseif !papcamo and Green then return vm:SetSkin(12)
+    elseif papcamo and Green then return vm:SetSkin(14) end
 end
 
 

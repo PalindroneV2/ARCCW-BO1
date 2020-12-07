@@ -19,7 +19,7 @@ att.OffsetAng = Angle(0, 0, 0)
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 9, -0.975),
+        Pos = Vector(0, 8, -1),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         IgnoreExtra = true
@@ -29,7 +29,7 @@ att.AdditionalSights = {
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/bo1_acog_cross.png", "mips smooth")
 att.HolosightNoFlare = true
-att.HolosightSize = 10
+att.HolosightSize = 12
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo2_acog_hsp.mdl"
 att.Colorable = true

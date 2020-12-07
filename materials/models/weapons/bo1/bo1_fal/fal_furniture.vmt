@@ -10,7 +10,7 @@ VertexlitGeneric
 	$phongfresnelranges         "[0 .1 0.5]"
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
-	//$detailblendmode		0
-	$detailblendfactor 2
+	$detailblendmode		4
+	//$detailblendfactor 2
 
 }

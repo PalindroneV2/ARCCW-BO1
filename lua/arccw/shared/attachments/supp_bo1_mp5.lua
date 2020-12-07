@@ -1,4 +1,4 @@
-att.PrintName = "MP5SD Suppressor"
+att.PrintName = "MP5SD Barrel"
 att.Icon = Material("entities/acwatt_supp_bo1_supp.png")
 att.Description = "Integrated Suppressor for the MP5."
 att.Desc_Pros = {
@@ -6,13 +6,13 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = "mp5_bo2_supp"
+att.Slot = "bo1_mp5_barrel"
 
-att.GivesFlags = {"mp5sd", "mp5sd2"}
+att.GivesFlags = {"mp5sd", "mp5sd2", "mp5sd3"}
 
-att.SortOrder = 151
+att.SortOrder = 99
 
-att.Model = ""
+att.Model = "models/weapons/arccw/atts/bo1_suppressor.mdl"
 
 att.Silencer = true
 att.Override_MuzzleEffect = "muzzleflash_suppressed"

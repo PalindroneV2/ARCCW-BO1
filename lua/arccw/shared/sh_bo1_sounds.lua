@@ -1085,6 +1085,60 @@ sound.Add( {
     }
 } )
 
+--- FAL Main ---
+
+sound.Add( {
+    name = "ArcCW_BO1.G3_Fire",
+    channel = CHAN_WEAPON,
+    volume = 0.25,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_psg1/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.G3_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_psg1/mag_in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.G3_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_psg1/mag_out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.G3_Charge",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_psg1/charge.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.G3_Futz",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_psg1/futz.wav",
+    }
+} )
+
+
 -- Dragunov --
 
 sound.Add({

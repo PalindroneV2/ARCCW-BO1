@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "Mustang Predator"
 SWEP.TrueName = "Colt Commando"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "The Colt XM177E2, also known as the CAR-15, XM4, or the Colt Commando, is a carbine variant of the M16 rifle which would eventually evolve into the M4. Created for easier transport and handling inside vehicles."
+SWEP.Trivia_Desc = "The Colt Commando is a name for a family of carbine variants of the M16 rifle which would eventually evolve into the M4. Created for spec-ops unit MACV-SOG."
 SWEP.Trivia_Manufacturer = "Mustang Firearms Ltd."
 SWEP.Trivia_Calibre = "5,56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
@@ -385,9 +385,11 @@ SWEP.Attachments = {
         FreeSlot = true,
     }, --17
     {
-        PrintName = "Furniture",
-        Slot = "bo1_ar15_wood",
+        PrintName = "Cosmetic",
+        Slot = "bo1_cosmetic",
+        DefaultAttName = "Black Polymer",
         FreeSlot = true,
+        GivesFlags = "bo1_black"
     }, --18
 }
 
@@ -472,7 +474,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local papcamo = wep.Attachments[13].Installed == "ammo_papunch"
     local Irons = wep.Attachments[16].Installed
     local Sling = wep.Attachments[17].Installed
-    local Wood = wep.Attachments[18].Installed == "bo1_ar15_wood"
+    local Wood = wep.Attachments[18].Installed == "bo1_cosmetic_wood"
+    local Tan = wep.Attachments[18].Installed == "bo1_cosmetic_tan"
+    local Green = wep.Attachments[18].Installed == "bo1_cosmetic_odgreen"
 
     if Irons and Sling then vm:SetBodygroup(3, 2)
     elseif Flat and Sling then vm:SetBodygroup(3, 2)
@@ -481,7 +485,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if papcamo and !Wood then return vm:SetSkin(2)
     elseif !papcamo and Wood then return vm:SetSkin(4)
-    elseif papcamo and Wood then return vm:SetSkin(6) end
+    elseif papcamo and Wood then return vm:SetSkin(6)
+    elseif !papcamo and Tan then return vm:SetSkin(8)
+    elseif papcamo and Tan then return vm:SetSkin(10)
+    elseif !papcamo and Green then return vm:SetSkin(12)
+    elseif papcamo and Green then return vm:SetSkin(14) end
 end
 
 SWEP.Hook_GetShootSound = function(wep, sound)

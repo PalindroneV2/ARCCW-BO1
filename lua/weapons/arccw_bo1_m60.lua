@@ -9,11 +9,11 @@ SWEP.Trivia_Class = "Light Machine Gun"
 SWEP.Trivia_Desc = "The U.S. Military's standard general purpose machine gun adopted in 1957. Nicknamed the Pig due to it's huge size and appetite for ammo."
 SWEP.Trivia_Manufacturer = "Pigglins Defense"
 SWEP.Trivia_Calibre = "7,62x51mm NATO"
-SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
+SWEP.Trivia_Mechanism = "Short-stroke gas piston"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1957
 
-SWEP.Slot = 2
+SWEP.Slot = 3
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName

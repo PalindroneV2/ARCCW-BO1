@@ -132,7 +132,7 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 SWEP.BarrelLength = 50
 
 SWEP.AttachmentElements = {
-    ["l96_bipod_att"] = {
+    ["bo1_bipod"] = {
         VMBodygroups = {
             {ind = 2, bg = 1}
         }
@@ -233,9 +233,8 @@ SWEP.Attachments = {
     },
     { --6
         Hidden = true,
-        Slot = {"l96_bipod"},
-        InstalledEles = {"l96_bipod_att"},
-        Installed = "l96_bo1_bipod"
+        Slot = {"bo1_bipod"},
+        Installed = "bo1_bipod_integral"
     },
     { --7
         PrintName = "Tactical",

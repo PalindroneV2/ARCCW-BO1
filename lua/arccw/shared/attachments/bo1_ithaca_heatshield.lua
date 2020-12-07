@@ -13,7 +13,8 @@ att.Slot = "ithaca_barrel"
 att.Mult_CycleTime = 0.95
 att.Mult_Recoil = 0.95
 att.Mult_RecoilSide = 0.95
-att.Mult_SpeedMult = 1.05
-att.Mult_SightedSpeedMult = 1.05
+att.Mult_SpeedMult = 0.95
+att.Mult_SightedSpeedMult = 0.95
+att.Mult_SightTime = 1.05
 
 att.GivesFlags = {"ithaca_heat"}

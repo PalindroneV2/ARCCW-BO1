@@ -79,7 +79,7 @@ SWEP.HipDispersion = 550 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
-SWEP.MagID = "ak74" -- the magazine pool this gun draws from
+SWEP.MagID = "mp5" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
@@ -203,9 +203,31 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 1},
         },
     },
-    ["mount"] = {
+    ["mp5_10mm"] = {
         VMBodygroups = {
-            {ind = 3, bg = 1},
+            {ind = 1, bg = 2},
+        },
+    },
+    ["mp5k"] = {
+        Override_IronSightStruct = {
+            Pos = Vector(-3.175, -2, 0.85),
+            Ang = Angle(0.3, 0.1, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
+        },
+        AttPosMods = {
+            [1] = {
+                vpos = Vector(-3, 0, 3.15),
+            },
+            [3] = {
+                vpos = Vector(6.5, 0, 0.9),
+            },
+            [6] = {
+                vpos = Vector(2, 0.75, 1)
+            },
+            [12] = {
+                vpos = Vector(-2.5, -0.65, 1),
+            },
         },
     },
 }
@@ -222,13 +244,14 @@ SWEP.Attachments = {
             wpos = Vector(5.5, 1.2, -7.5),
             wang = Angle(172.5, 181.75, 0)
         },
-        InstalledEles = {"mount"},
+        GivesFlags = {"mount", "mp5k_mount"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0.5, 0, 0),
     },
     { --2
-        PrintName = "Handguard",
-        Slot = "bo1_mp5_hg"
+        PrintName = "Barrel",
+        Slot = "bo1_mp5_barrel",
+        DefaultAttName = "MP5A3 Barrel"
     },
     { --3
         PrintName = "Muzzle",
@@ -239,13 +262,9 @@ SWEP.Attachments = {
             vpos = Vector(10, 0, 1), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
-        MergeSlots = {4}
+        ExcludeFlags = {"mp5sd3"}
     },
     { --4
-        Hidden = true,
-        Slot = "mp5_bo2_supp",
-    },
-    { --5
         PrintName = "Underbarrel",
         Slot = {"ubgl"},
         Bone = "tag_weapon",
@@ -257,9 +276,10 @@ SWEP.Attachments = {
             wpos = Vector(12, 0.8, -4.5),
             wang = Angle(172.5, -180, 0),
         },
-        MergeSlots = {6} -- Slot 13 also goes in here. Whenever that is fixed.
+        ExcludeFlags = {"mp5k"},
+        MergeSlots = {5} -- Slot 13 also goes in here. Whenever that is fixed.
     },
-    { --6
+    { --5
         Hidden = true,
         Slot = {"foregrip"},
         Bone = "tag_weapon",
@@ -271,7 +291,7 @@ SWEP.Attachments = {
         },
         InstalledEles = {"ubrail"},
     },
-    { --7
+    { --6
         PrintName = "Tactical",
         Slot = "tac",
         VMScale = Vector(0.75, 0.75, 0.75),
@@ -283,29 +303,29 @@ SWEP.Attachments = {
             wang = Angle(-7.5, 0, 85)
         },
     },
-    { --8
+    { --7
         PrintName = "Stock",
         Slot = {"bo1_stock", "bo1_mp5stock"},
         DefaultAttName = "No Stock",
         InstalledEles = "bo1_light_stock",
     },
-    { --9
+    { --8
         PrintName = "Magazine",
-        Slot = {"bo1_mag"}
+        Slot = {"bo1_mag", "bo1_mag_mp5"}
     },
-    { --10
+    { --9
         PrintName = "FCG",
         Slot = {"bo1_fcg"}
     },
-    { --11
+    { --10
         PrintName = "Ammo Type",
         Slot = {"ammo_pap"}
     },
-    { --12
+    { --11
         PrintName = "Perk",
         Slot = "bo1_perk"
     },
-    { --13
+    { --12
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
@@ -317,7 +337,7 @@ SWEP.Attachments = {
             wang = Angle(-175, -175, 0)
         },
     },
-    /*{ --14
+    /*{ --13
         Hidden = true,
         Slot = {"ubgl_bo1"},
         Bone = "tag_weapon",
@@ -333,9 +353,10 @@ SWEP.Attachments = {
 }
 
 SWEP.Hook_NameChange = function(wep, name)
-    local pap = wep.Attachments[11].Installed == "ammo_papunch"
-    local mp5a2 = wep.Attachments[8].Installed == "bo1_solider_stock"
-    local mp5sd = wep.Attachments[4].Installed == "supp_bo1_mp5"
+    local pap = wep.Attachments[10].Installed == "ammo_papunch"
+    local mp5a2 = wep.Attachments[7].Installed == "bo1_solider_stock"
+    local mp5sd = wep.Attachments[2].Installed == "supp_bo1_mp5"
+    local mp5k = wep.Attachments[2].Installed == "bo1_mp5_mp5k"
 
     if !pap and !mp5a2 and mp5sd then
         return "HK MP5SD3"
@@ -351,12 +372,67 @@ SWEP.Hook_NameChange = function(wep, name)
         return "MP115 Kollider"
     elseif pap and mp5a2 and !mp5sd then
         return "MP115 Kollider"
+    elseif !pap and mp5k and !mp5a2 then
+        return "HK MP5K"
+    elseif !pap and mp5k and mp5a2 then
+        return "HK MP5K"
+    elseif pap and mp5k then
+        return "MP115 Kollider"
     end
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[11].Installed == "ammo_papunch"
+    local papcamo = wep.Attachments[10].Installed == "ammo_papunch"
+    local mp5k = wep.Attachments[2].Installed == "bo1_mp5_mp5k"
+    local stock1 = wep.Attachments[7].Installed == "bo1_light_stock"
+    local stock2 = wep.Attachments[7].Installed == "bo1_solid_stock"
+    local stock3 = wep.Attachments[7].Installed == "bo1_solider_stock"
+    local optic = wep.Attachments[1].Installed
+
+    if mp5k and !optic and !stock1 and !stock2 and !stock3 then
+        vm:SetBodygroup(0, 1)
+        vm:SetBodygroup(1, 2)
+        vm:SetBodygroup(3, 2)
+        vm:SetBodygroup(4, 4)
+    elseif mp5k and !optic and stock1 and !stock2 and !stock3 then
+        vm:SetBodygroup(0, 1)
+        vm:SetBodygroup(1, 2)
+        vm:SetBodygroup(3, 2)
+        vm:SetBodygroup(4, 5)
+    elseif mp5k and !optic and stock2 and !stock1 and !stock3 then
+        vm:SetBodygroup(0, 1)
+        vm:SetBodygroup(1, 2)
+        vm:SetBodygroup(3, 2)
+        vm:SetBodygroup(4, 6)
+    elseif mp5k and !optic and stock3 and !stock2 and !stock1 then
+        vm:SetBodygroup(0, 1)
+        vm:SetBodygroup(1, 2)
+        vm:SetBodygroup(3, 2)
+        vm:SetBodygroup(4, 7)
+    elseif mp5k and optic and !stock1 and !stock2 and !stock3 then
+        vm:SetBodygroup(0, 1)
+        vm:SetBodygroup(1, 2)
+        vm:SetBodygroup(3, 3)
+        vm:SetBodygroup(4, 4)
+    elseif mp5k and optic and stock1 and !stock2 and !stock3 then
+        vm:SetBodygroup(0, 1)
+        vm:SetBodygroup(1, 2)
+        vm:SetBodygroup(3, 3)
+        vm:SetBodygroup(4, 5)
+    elseif mp5k and optic and stock2 and !stock1 and !stock3 then
+        vm:SetBodygroup(0, 1)
+        vm:SetBodygroup(1, 2)
+        vm:SetBodygroup(3, 3)
+        vm:SetBodygroup(4, 6)
+    elseif mp5k and optic and stock3 and !stock2 and !stock1 then
+        vm:SetBodygroup(0, 1)
+        vm:SetBodygroup(1, 2)
+        vm:SetBodygroup(3, 3)
+        vm:SetBodygroup(4, 7)
+    elseif !mp5k and optic then
+        vm:SetBodygroup(3, 1)
+    end
 
     if papcamo then
         return vm:SetSkin(2)
@@ -364,24 +440,27 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local sil = wep.Attachments[2].Installed == "bo1_mp5_sdhg" or wep.Attachments[4].Installed == "supp_bo1_mp5"
-    local stock = wep.Attachments[8].Installed == "bo1_solid_stock"
-    local dual = wep.Attachments[9].Installed == "ammo_dualmag"
+    local sil = wep.Attachments[2].Installed == ("supp_bo1_mp5" or "bo1_mp5_sdhg")
+    local stock = wep.Attachments[7].Installed == "bo1_solid_stock"
+    local dual = wep.Attachments[8].Installed == "ammo_dualmag"
+    local mp5k = wep.Attachments[2].Installed == "bo1_mp5_mp5k"
 
-    if sil and !stock and !dual then
+    if sil and !stock and !dual and !mp5k then
         return anim .. "_sil"
-    elseif !sil and stock and !dual then
+    elseif !sil and stock and !dual and !mp5k then
         return anim .. "_stock"
-    elseif sil and stock and !dual then
+    elseif sil and stock and !dual and !mp5k then
         return anim .. "_stock_sil"
-    elseif !sil and !stock and dual then
+    elseif !sil and !stock and dual and !mp5k then
         return anim .. "_quick"
-     elseif !sil and stock and dual then
+     elseif !sil and stock and dual and !mp5k then
         return anim .. "_stock_quick"
-    elseif sil and !stock and dual then
+    elseif sil and !stock and dual and !mp5k then
         return anim .. "_sil_quick"
-    elseif sil and stock and dual then
+    elseif sil and stock and dual and !mp5k then
         return anim .. "_stock_sil_quick"
+    elseif mp5k and (stock or !stock) and (dual or !dual) then
+        return anim .. "_grip"
     end
 end
 
@@ -392,7 +471,7 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 0.5,
+        Time = 30 / 30,
         LHIK = true,
         LHIKIn = 0.25,
         LHIKOut = 0.25,
@@ -488,7 +567,7 @@ SWEP.Animations = {
     },
     ["draw_sil"] = {
         Source = "draw_sil",
-        Time = 0.5,
+        Time = 1,
         LHIK = true,
         LHIKIn = 0.25,
         LHIKOut = 0.25,
@@ -500,7 +579,7 @@ SWEP.Animations = {
         LHIKIn = 0.25,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.MP5_Charge", t = 19 / 30}
+            {s = "ArcCW_BO1.MP5_BoltFwd", t = 19 / 30}
         },
     },
     ["fire_sil"] = {
@@ -567,7 +646,7 @@ SWEP.Animations = {
         LHIKIn = 0.25,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.MP5_Charge", t = 15 / 30}
+            {s = "ArcCW_BO1.MP5_BoltFwd", t = 15 / 30}
         },
     },
     ["ready_stock_sil"] = {
@@ -577,7 +656,7 @@ SWEP.Animations = {
         LHIKIn = 0.25,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.MP5_Charge", t = 19 / 30}
+            {s = "ArcCW_BO1.MP5_BoltFwd", t = 19 / 30}
         },
     },
     ["fire_stock_sil"] = {
@@ -875,6 +954,92 @@ SWEP.Animations = {
     },
     ["exit_sprint_stock_sil_quick"] = {
         Source = "sprint_out_sil",
+        Time = 10 / 30
+    },
+
+    -- MP5K --
+
+    ["idle_grip"] = {
+        Source = "idle_grip",
+        Time = 3 / 30,
+    },
+    ["draw_grip"] = {
+        Source = "draw_grip",
+        Time = 30 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
+    },
+    ["draw_stock"] = {
+        Source = "first_draw_stock",
+        Time = 30 / 30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.25,
+        SoundTable = {
+            {s = "ArcCW_BO1.MP5_BoltFwd", t = 15 / 30},
+        },
+    },
+    ["ready_grip"] = {
+        Source = "first_draw_grip",
+        Time = 40 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
+        SoundTable = {
+            {s = "ArcCW_BO1.MP5_BoltFwd", t = 15 / 30},
+        },
+    },
+    ["fire_grip"] = {
+        Source = {"fire_grip"},
+        Time = 7 / 30,
+        ShellEjectAt = 0,
+    },
+    ["fire_iron_grip"] = {
+        Source = {"fire_ads_grip"},
+        Time = 7 / 30,
+        ShellEjectAt = 0,
+    },
+    ["reload_grip"] = {
+        Source = "reload_grip",
+        Time = 77 / 35,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Framerate = 30,
+        Checkpoints = {28, 38, 69},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+        SoundTable = {
+            {s = "ArcCW_BO1.MP5_MagOut", t = 16 / 35},
+            {s = "ArcCW_BO1.MP5_MagIn", t = 47 / 35}
+        },
+    },
+    ["reload_empty_grip"] = {
+        Source = "reload_empty_grip",
+        Time = 93 / 35,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Framerate = 30,
+        Checkpoints = {28, 38, 69},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+        SoundTable = {
+            {s = "ArcCW_BO1.MP5_BoltBack", t = 8 / 35},
+            {s = "ArcCW_BO1.MP5_MagOut", t = 28 / 35},
+            {s = "ArcCW_BO1.MP5_MagIn", t = 61 / 35},
+            {s = "ArcCW_BO1.MP5_BoltFwd", t = 72 / 35},
+        },
+    },
+    ["enter_sprint_grip"] = {
+        Source = "sprint_in_grip",
+        Time = 10 / 30
+    },
+    ["idle_sprint_grip"] = {
+        Source = "sprint_loop_grip",
+        Time = 30 / 40
+    },
+    ["exit_sprint_grip"] = {
+        Source = "sprint_out_grip",
         Time = 10 / 30
     },
 }

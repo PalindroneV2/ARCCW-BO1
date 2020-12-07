@@ -8,5 +8,7 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = {"bo1_mag"}
 
+att.ExcludeFlags = {"mp5k"}
+
 att.SortOrder = 100
 att.Mult_ReloadTime = 0.75

@@ -6,7 +6,7 @@
 	$phong                      		1
 	$phongexponent                      "20"
 	$phongboost                         "1"
-	$phongfresnelranges         "[0.5 2.5 2.5]"
+	$phongfresnelranges         "[.1 .5 .5]"
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
 

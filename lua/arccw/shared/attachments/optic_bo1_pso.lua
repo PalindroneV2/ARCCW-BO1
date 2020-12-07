@@ -1,4 +1,4 @@
-att.PrintName = "SVD PSO1 (4-6x)"
+att.PrintName = "PSO-1 (BO1)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
 att.Description = "Scope designed for the Dragunov SVD-63. Magnification of 4-6x"
 
@@ -19,12 +19,11 @@ att.DroppedModel = "models/weapons/arccw/atts/bo1_pso.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0.425, 10, -4.75),
+        Pos = Vector(0.425, 8, -4.75),
         Ang = Angle(0, 0, 0),
         Magnification = 1.5,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
-        ZoomLevels = 1,
-        ZoomSound = "weapons/arccw/fiveseven/fiveseven_slideback.wav",
+        ZoomLevels = 2,
         IgnoreExtra = true
     }
 }
@@ -34,14 +33,14 @@ att.ScopeGlint = false
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/mw2r_dragunov.png")
 att.HolosightNoFlare = true
-att.HolosightSize = 40
+att.HolosightSize = 14
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo1_pso_hsp.mdl"
 att.Colorable = true
 
-att.HolosightMagnification = 6
 att.HolosightBlackbox = true
-
-att.HolosightConstDist = 64
+att.HolosightMagnification = 6
+att.HolosightMagnificationMin = 4
+att.HolosightMagnificationMax = 6
 
 att.Mult_SightTime = 1.125
