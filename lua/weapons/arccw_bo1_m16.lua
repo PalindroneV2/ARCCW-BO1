@@ -405,6 +405,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local a4 = wep.Attachments[4].Installed == "m16_hand_a4"
     local heat = wep.Attachments[4].Installed == "m16_hand_heat"
     local papcamo = wep.Attachments[11].Installed == "ammo_papunch"
+    local camo = wep.Attachments[15].Installed
     local Wood = wep.Attachments[15].Installed == "bo1_cosmetic_wood"
     local Tan = wep.Attachments[15].Installed == "bo1_cosmetic_tan"
     local Green = wep.Attachments[15].Installed == "bo1_cosmetic_odgreen"
@@ -432,13 +433,21 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif !tube and !heat then vm:SetBodygroup(4, 0)
     end
 
-    if papcamo and !Wood then return vm:SetSkin(2)
-    elseif !papcamo and Wood then return vm:SetSkin(4)
-    elseif papcamo and Wood then return vm:SetSkin(6)
-    elseif !papcamo and Tan then return vm:SetSkin(8)
-    elseif papcamo and Tan then return vm:SetSkin(10)
-    elseif !papcamo and Green then return vm:SetSkin(12)
-    elseif papcamo and Green then return vm:SetSkin(14) end
+    if papcamo and !camo then
+        vm:SetSkin(2)
+    elseif !papcamo and Wood then
+        vm:SetSkin(4)
+    elseif papcamo and Wood then
+        vm:SetSkin(6)
+    elseif !papcamo and Tan then
+        vm:SetSkin(8)
+    elseif papcamo and Tan then
+        vm:SetSkin(10)
+    elseif !papcamo and Green then
+        vm:SetSkin(12)
+    elseif papcamo and Green then
+        vm:SetSkin(14)
+    end
 end
 
 

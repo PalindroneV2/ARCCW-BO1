@@ -10,7 +10,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.Slot = "bo1_mp5_barrel"
-att.GivesFlags = {"mp5k", "mp5k_rail"}
+att.GivesFlags = {"mp5k", "mp5k_rail", "mp5kk"}
 
 att.AutoStats = true
 

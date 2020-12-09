@@ -23,6 +23,8 @@ att.Override_MuzzleEffect = "muzzleflash_suppressed"
 att.Override_ShootEntity = "arccw_m203_he_bo1"
 att.Mult_MuzzleVelocity = 100000
 
+att.Override_MuzzleEffect = "pap_muzzle_big"
+
 att.Hook_FireBullets = function(wep, data)
   wep:EmitSound("PAP_Effect")
 end

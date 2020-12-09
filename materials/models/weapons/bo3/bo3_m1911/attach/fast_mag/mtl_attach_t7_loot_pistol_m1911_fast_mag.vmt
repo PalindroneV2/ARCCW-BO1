@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/bo3/c_bo3_1911/attach/fast_mag/fastmag_c"
+	$color2 "[0 0 0]"
+	$blendtintbybasealpha  "1"
+	"$bumpmap" "models/weapons/bo3/c_bo3_1911/attach/fast_mag/fastmag_n"
+	$phongexponenttexture "models/weapons/bo3/c_bo3_1911/attach/fast_mag/fastmag_c"
+	$phong "1"
+	$phongboost "5"
+	$phongfresnelranges "[0 0.1 1.0]"
+	$phongalbedotint "0"
+
+	$envmap "env_cubemap"
+	$envmaptint "[0.3 0.3 0.3]"
+	$normalmapalphaenvmapmask "1"
+	$envmapfresnel "1"
+}

@@ -276,7 +276,7 @@ SWEP.Attachments = {
             wpos = Vector(12, 0.8, -4.5),
             wang = Angle(172.5, -180, 0),
         },
-        ExcludeFlags = {"mp5k"},
+        ExcludeFlags = {"mp5kk"},
         MergeSlots = {5} -- Slot 13 also goes in here. Whenever that is fixed.
     },
     { --5

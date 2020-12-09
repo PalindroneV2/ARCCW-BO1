@@ -389,7 +389,7 @@ SWEP.Attachments = {
         Slot = "bo1_cosmetic",
         DefaultAttName = "Black Polymer",
         FreeSlot = true,
-        GivesFlags = "bo1_black"
+        GivesFlags = {"bo1_black"}
     }, --18
 }
 
@@ -474,6 +474,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local papcamo = wep.Attachments[13].Installed == "ammo_papunch"
     local Irons = wep.Attachments[16].Installed
     local Sling = wep.Attachments[17].Installed
+    local camo = wep.Attachments[18].Installed
     local Wood = wep.Attachments[18].Installed == "bo1_cosmetic_wood"
     local Tan = wep.Attachments[18].Installed == "bo1_cosmetic_tan"
     local Green = wep.Attachments[18].Installed == "bo1_cosmetic_odgreen"
@@ -483,13 +484,21 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif Sling then vm:SetBodygroup(3, 1)
     end
 
-    if papcamo and !Wood then return vm:SetSkin(2)
-    elseif !papcamo and Wood then return vm:SetSkin(4)
-    elseif papcamo and Wood then return vm:SetSkin(6)
-    elseif !papcamo and Tan then return vm:SetSkin(8)
-    elseif papcamo and Tan then return vm:SetSkin(10)
-    elseif !papcamo and Green then return vm:SetSkin(12)
-    elseif papcamo and Green then return vm:SetSkin(14) end
+    if papcamo and !camo then
+        vm:SetSkin(2)
+    elseif !papcamo and Wood then
+        vm:SetSkin(4)
+    elseif papcamo and Wood then
+        vm:SetSkin(6)
+    elseif !papcamo and Tan then
+        vm:SetSkin(8)
+    elseif papcamo and Tan then
+        vm:SetSkin(10)
+    elseif !papcamo and Green then
+        vm:SetSkin(12)
+    elseif papcamo and Green then
+        vm:SetSkin(14)
+    end
 end
 
 SWEP.Hook_GetShootSound = function(wep, sound)

@@ -1656,6 +1656,63 @@ sound.Add( {
     }
 } )
 
+-- RAYGUN --
+
+sound.Add({
+    name = "ArcCW_BO1.RayGun_Fire",
+    channel = CHAN_WEAPON + 5,
+    level = 80,
+    sound = "weapons/arccw/bo1_raygun/fire.wav"
+})
+sound.Add({
+    name = "ArcCW_BO1.RayGun_In",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/bo1_raygun/in.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.RayGun_Out",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/bo1_raygun/out.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.RayGun_Open",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/bo1_raygun/open.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.RayGun_Close",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/bo1_raygun/close.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.RayGun_Obtain",
+    channel = CHAN_ITEM + 115,
+    level = 70,
+    sound = "weapons/arccw/bo1_raygun/obtain.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.RayGun_Splash",
+    channel = CHAN_ITEM + 115,
+    level = 70,
+    sound = "weapons/arccw/bo1_raygun/splash.wav"
+})
+sound.Add({
+    name = "ArcCW_BO1.RayGun_Splash",
+    channel = CHAN_ITEM + 115,
+    volume = 0.5,
+    level = 70,
+    sound = "weapons/arccw/bo1_raygun/splash.wav"
+})
+
 -- PAP EFFECT --
 
 sound.Add( {

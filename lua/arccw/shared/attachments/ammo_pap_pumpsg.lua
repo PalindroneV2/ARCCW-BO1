@@ -19,7 +19,7 @@ att.Mult_Damage = 2.5
 att.Mult_DamageMin = 2.5
 att.Mult_Penetration = 2.5
 
-att.Override_MuzzleEffect = "muzzleflash_suppressed"
+att.Override_MuzzleEffect = "pap_muzzle"
 
 att.Hook_FireBullets = function(wep, data)
   wep:EmitSound("PAP_Effect")

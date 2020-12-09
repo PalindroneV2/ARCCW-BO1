@@ -2,7 +2,7 @@
 {
 	"$basetexture" "models/weapons/bo2/bo2_m27/tritium_c"
 	$blendtintbybasealpha  "1"
-	"$basetexture" "models/weapons/bo2/bo2_m27/tritium_n"
+	"$bumpmap" "models/weapons/bo2/bo2_m27/tritium_n"
 	$selfillum 1
 	$phong                      		1
 	$phongexponent                      "20"

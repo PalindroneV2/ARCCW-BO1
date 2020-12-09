@@ -1,8 +1,8 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/bo2/c_bo2_m1911/1911_mp_c"
-	"$bumpmap" "models/weapons/bo2/c_bo2_m1911/1911_mp_n"
-	$phongexponenttexture "models/weapons/bo2/c_bo2_m1911/1911_mp_s"
+	"$basetexture" "models/weapons/bo1/bo1_m1911/1911_mp_c"
+	"$bumpmap" "models/weapons/bo1/bo1_m1911/1911_mp_n"
+	$phongexponenttexture "models/weapons/bo1/bo1_m1911/1911_mp_s"
 	
 	$phong "1"
 	$phongexponent	"20"

@@ -4,19 +4,22 @@
 	$blendtintbybasealpha  "1"
 	"$bumpmap" "models/weapons/bo1/plastic"
 	
-	$phong                      		1
-	$phongexponent                      "20"
-	$phongboost                         "11"
-	$phongfresnelranges         "[1 2.5 2.5]"
-	$phongalbedotint             "1"
-	$normalmapalphaphongmask    	1
-	
-	$detail		"models\weapons\bo1\gold"
-	$phongexponenttexture	"models\weapons\bo1\gold_s"
+	$detail		"models\weapons\bo1\gold_c"
+	$envmapmask	"models\weapons\bo1\gold_s"
 	$detailblendmode		3
 	$detailblendfactor 1
 	
-	$envmap                    		 env_cubemap
-	$envmaptint                 		"[1]"
-	$normalmapalphaenvmapmask   	1
+	$phong "1"
+	$phongexponent	"15"
+	$phongboost "2.5"
+	$phongfresnelranges "[0.5 2.5 2.5]"
+	$phongtint "[1 .65 .2]"
+	$phongalbedotint "1"
+	$blendtintbybasealpha  "1"
+	$normalmapalphaenvmapmask "1"
+	
+	$envmap "env_cubemap"
+	$envmaptint "[1 .75 .25]"
+	$envmapfresnel "[1 1 1]"
 }
+// CREDIT TO GAMER BARNEY 

@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/bo3/c_bo3_1911/base/bullet/bullet_c"
+	$blendtintbybasealpha  "1"
+	"$bumpmap" "models/weapons/bo3/c_bo3_1911/base/bullet/bullet_n"
+	$phong "1"
+	$phongboost "0.5"
+	$phongexponent  "20"
+	$phongfresnelranges "[.1 .5 1]"
+	$phongalbedotint "0"
+}

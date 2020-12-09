@@ -28,8 +28,8 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_bo2_m1911.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_bo2_m1911.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_bo1_m1911.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_bo1_m1911.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-9, 3, -3.5),
@@ -97,7 +97,7 @@ SWEP.ShellScale = 1.5
 SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
-SWEP.CaseEffectAttachment = 3 -- which attachment to put the case effect on
+SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
 SWEP.SightTime = 0.175
 
@@ -117,9 +117,10 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.331, 2, 0.7),
-    Ang = Angle(-0.02, -0.1, 0),
+    Pos = Vector(-2.55, -2, 1),
+    Ang = Angle(0.125, -0.125, 0),
     Magnification = 1.1,
+    CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
@@ -129,10 +130,10 @@ SWEP.HoldtypeSights = "revolver"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.ActivePos = Vector(1, 4.25, 0.5)
+SWEP.ActivePos = Vector(1, 3, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(0, 4.25, 0)
+SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(0, -4, -5)
@@ -154,42 +155,67 @@ SWEP.AttachmentElements = {
     },
     ["m1911_spframe"] = {
         VMBodygroups = {
-            {ind = 0, bg = 5},
+            {ind = 0, bg = 2},
+            {ind = 3, bg = 0},
         }
     },
     ["m1911_spslide"] = {
         VMBodygroups = {
-            {ind = 1, bg = 5},
+            {ind = 1, bg = 2},
         }
     },
     ["m1911_hammer"] = {
         VMBodygroups = {
-            {ind = 0, bg = 2},
+            {ind = 0, bg = 0},
+            {ind = 3, bg = 1},
         },
     },
     ["m1911_novak"] = {
         VMBodygroups = {
-            {ind = 1, bg = 2},
+            {ind = 1, bg = 0},
+            {ind = 2, bg = 1},
         },
         Override_IronSightStruct = {
-            Pos = Vector(-2.331, 2, 0.55),
-            Ang = Angle(0.65, -0.1, 0),
+            Pos = Vector(-2.5225, -4, 0.9),
+            Ang = Angle(0.4, -0.1, 0),
             Magnification = 1.1,
+            CrosshairInSights = false,
         }
     },
     ["m1911_hdframe"] = {
         VMBodygroups = {
-            {ind = 0, bg = 4},
+            {ind = 0, bg = 3},
+            {ind = 3, bg = 1},
         },
     },
     ["m1911_hdslide"] = {
         VMBodygroups = {
-            {ind = 1, bg = 4},
+            {ind = 1, bg = 3},
+            {ind = 2, bg = 2},
         },
         Override_IronSightStruct = {
-            Pos = Vector(-2.4, 2, 0.55),
-            Ang = Angle(0.65, -0.1, 0),
+            Pos = Vector(-2.5225, -4, 0.9),
+            Ang = Angle(0.4, -0.1, 0),
             Magnification = 1.1,
+            CrosshairInSights = false,
+        }
+    },
+    ["m1911_hdframen"] = {
+        VMBodygroups = {
+            {ind = 0, bg = 4},
+            {ind = 3, bg = 1},
+        },
+    },
+    ["m1911_hdsliden"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 4},
+            {ind = 2, bg = 2},
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-2.5225, -4, 0.9),
+            Ang = Angle(0.4, -0.1, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
         }
     },
     ["m1911_shiny"] = {
@@ -204,22 +230,98 @@ SWEP.AttachmentElements = {
     },
     ["m1911_shframe"] = {
         VMBodygroups = {
-            {ind = 0, bg = 3},
+            {ind = 0, bg = 1},
+            {ind = 3, bg = 1},
         },
     },
     ["m1911_shnovak"] = {
         VMBodygroups = {
-            {ind = 1, bg = 3},
+            {ind = 1, bg = 1},
+            {ind = 2, bg = 1},
         },
         Override_IronSightStruct = {
-            Pos = Vector(-2.331, 2, 0.55),
-            Ang = Angle(0.65, -0.1, 0),
+            Pos = Vector(-2.5225, -4, 0.9),
+            Ang = Angle(0.4, -0.1, 0),
             Magnification = 1.1,
+            CrosshairInSights = false,
         }
     },
-    ["m1911_comp"] = {
+    ["short_slide"] = {
         VMBodygroups = {
-            {ind = 2, bg = 1},
+            {ind = 1, bg = 5},
+            {ind = 2, bg = 3},
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(4.5, 0.1, 1.05),
+            }
+        },
+    },
+    ["short_shslide"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 6},
+            {ind = 2, bg = 3},
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(4.5, 0.1, 1.05),
+            }
+        },
+    },
+    ["short_spslide"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 7},
+            {ind = 2, bg = 3},
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(4.5, 0.1, 1.05),
+            }
+        },
+    },
+    ["short_hdslide"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 8},
+            {ind = 2, bg = 4},
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-2.5225, -4, 0.9),
+            Ang = Angle(0.4, -0.1, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(4.5, 0.1, 1.05),
+            }
+        },
+    },
+    ["short_hdsliden"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 9},
+            {ind = 2, bg = 4},
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-2.5225, -4, 0.9),
+            Ang = Angle(0.4, -0.1, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(4.5, 0.1, 1.05),
+            }
+        },
+    },
+    ["hardballer"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 10},
+            {ind = 2, bg = 5},
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(8, 0.1, 1.05),
+            }
         },
     },
     /*["akimboflag"] = {
@@ -256,7 +358,7 @@ SWEP.Attachments = {
         WMScale = Vector(1, 0.75, 0.75),
         Bone = "tag_Weapon",
         Offset = {
-            vpos = Vector(6.5, 0, 1.15),
+            vpos = Vector(5.6, 0.1, 1.05),
             vang = Angle(0, 0, 0),
         },
         MergeSlots = {10},
@@ -266,7 +368,7 @@ SWEP.Attachments = {
         Slot = {"foregrip_pistol", "style_pistol"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(2.5, 0, -0.3),
+            vpos = Vector(2.5, 0.1, -0.3),
             vang = Angle(0, 0, 0),
             wpos = Vector(7.238, 1.9, -2.622),
             wang = Angle(90, 0, 0)
@@ -296,8 +398,9 @@ SWEP.Attachments = {
         PrintName = "Charms",
         Slot = "charm",
         Bone = "j_bolt",
+        VMScale = Vector(0.55, 0.55, 0.55),
         Offset = {
-            vpos = Vector(5, -0.4, -0.6),
+            vpos = Vector(5, -0.3, -0.85),
             vang = Angle(0, 0, 0),
             wpos = Vector(8.5, 2.5, -4),
             wang = Angle(-5, -2, 177.5)
@@ -324,6 +427,32 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local papcamo = wep.Attachments[6].Installed == "ammo_papunch"
     local papcamo2 = wep.Attachments[6].Installed == "ammo_1911_pap"
     local bo2sound = wep.Attachments[9].Installed == "1911_bo2_sound"
+    local comp = wep.Attachments[10].Installed == "1911_bo3_comp"
+    local barrel = wep.Attachments[1].Installed
+    /*"1911_bo1_hdslide_nickel_short"
+    "1911_bo1_hdslide_short"
+    "1911_bo1_shslide_short"
+    "1911_bo1_slide_short"
+    "1911_bo1_spslide_short"
+    "1911_bo1_slide_hardballer"*/
+
+    local length
+        if barrel == "1911_bo1_hdslide_nickel_short" then length = 1
+        elseif barrel == "1911_bo1_hdslide_short" then length = 1
+        elseif barrel == "1911_bo1_shslide_short" then length = 1
+        elseif barrel == "1911_bo1_slide_short" then length = 1
+        elseif barrel == "1911_bo1_spslide_short" then length = 1
+        elseif barrel == "1911_bo1_slide_hardballer" then length = 2
+        else length = 0
+    end
+
+    if comp and (length == 0) then
+        vm:SetBodygroup(4, 1)
+    elseif comp and (length == 1) then
+        vm:SetBodygroup(4, 2)
+    elseif comp and (length == 2) then
+        vm:SetBodygroup(4, 3)
+    end
 
     if papcamo then
         return vm:SetSkin(3)
@@ -379,9 +508,16 @@ SWEP.Hook_TranslateAnimation = function(wep, anim, data)
 end
 
 SWEP.Animations = {
-    ["idle"] = false,
+    ["idle"] = {
+        Source = "idle",
+        Time = 1 / 30,
+    },
+    ["idle_empty"] = {
+        Source = "idle_empty",
+        Time = 1 / 30,
+    },
     ["draw_empty"] = {
-        Source = "draw empty",
+        Source = "draw_empty",
         Time = 0.5,
     },
     ["draw"] = {
@@ -405,23 +541,23 @@ SWEP.Animations = {
         }
     },
     ["fire"] = {
-        Source = {"shoot"},
-        Time = 0.5,
+        Source = {"fire"},
+        Time = 8 / 30,
         ShellEjectAt = 0,
     },
     ["fire_empty"] = {
-        Source = "Fire_last",
-        Time = 0.5,
+        Source = "fire_last",
+        Time = 8 / 30,
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
-        Source = "shoot1",
-        Time = 0.5,
+        Source = "fire_ads",
+        Time = 8 / 30,
         ShellEjectAt = 0,
     },
     ["fire_iron_empty"] = {
-        Source = "Fire_last",
-        Time = 0.5,
+        Source = "fire_last",
+        Time = 8 / 30,
         ShellEjectAt = 0,
     },
     ["reload"] = {
@@ -437,7 +573,7 @@ SWEP.Animations = {
         },
     },
     ["reload_empty"] = {
-        Source = "reload empty",
+        Source = "reload_empty",
         Time = 2,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
@@ -462,7 +598,7 @@ SWEP.Animations = {
         },
     },
     ["reload_empty_bo2"] = {
-        Source = "reload empty",
+        Source = "reload_empty",
         Time = 2,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
@@ -475,27 +611,27 @@ SWEP.Animations = {
         },
     },
     ["enter_sprint"] = {
-        Source = "Idle_to_sprint",
+        Source = "sprint_in",
         Time = 10 / 30
     },
     ["idle_sprint"] = {
-        Source = "Sprint_",
+        Source = "sprint_loop",
         Time = 30 / 40
     },
     ["exit_sprint"] = {
-        Source = "Sprint_to_Idle",
+        Source = "sprint_out",
         Time = 10 / 30
     },
     ["enter_sprint_empty"] = {
-        Source = "Idle_to_sprint_Empty",
+        Source = "sprint_in_empty",
         Time = 10 / 30
     },
     ["idle_sprint_empty"] = {
-        Source = "Sprint_Empty",
+        Source = "sprint_loop_empty",
         Time = 30 / 40
     },
     ["exit_sprint_empty"] = {
-        Source = "Sprint_to_Idle_Empty",
+        Source = "sprint_out_empty",
         Time = 10 / 30
     },
     --1911 akimbo--

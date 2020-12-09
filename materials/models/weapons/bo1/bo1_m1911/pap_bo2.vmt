@@ -1,0 +1,17 @@
+VertexlitGeneric
+{
+	"$basetexture" "models/weapons/bo2/c_bo2_m1911/1911_mp_c"
+	$detail	"models\weapons\pap\pap_bo2_crystal"
+	$bumpmap	"models/weapons/bo2/c_bo2_m1911/1911_n"
+	$selfillummask "models\weapons\pap\pap_bo2_crystal_env"
+	$selfillum 1
+	
+	$phong                      		1
+	$phongboost                         "5"
+	$phongexponent						"40"
+	$phongfresnelranges         "[.1 .5 1]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+	$detailblendmode	2
+	$detailscale 0.8
+}
