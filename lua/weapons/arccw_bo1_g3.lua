@@ -332,6 +332,7 @@ SWEP.Hook_NameChange = function(wep, name)
     local stock = wep.Attachments[8].Installed == "bo1_solider_stock"
     local hk33 = wep.Attachments[10].Installed == "bo1_ammo_g3_556"
     local psg1 = wep.Attachments[2].Installed == "bo1_barrel_g3_psg1"
+    local hk53 = wep.Attachments[2].Installed == "bo1_barrel_g3_hk53"
 
     if !pap and !stock and !hk33 and psg1 then
         return "HK PSG-1"
@@ -343,10 +344,14 @@ SWEP.Hook_NameChange = function(wep, name)
         return "HK33A2"
     elseif !pap and !stock and hk33 and psg1 then
         return "HK33A3"
-    elseif !pap and stock and hk33 and !psg1 then
+    elseif !pap and stock and hk33 and !psg1 and !hk53 then
         return "HK33A2"
-    elseif !pap and !stock and hk33 and !psg1 then
+    elseif !pap and !stock and hk33 and !psg1 and !hk53 then
         return "HK33A3"
+    elseif !pap and stock and hk33 and hk53 then
+        return "HK53"
+    elseif !pap and !stock and hk33 and hk53 then
+        return "HK53"
     elseif pap and !stock and !hk33 and psg1 then
         return "HK P115 Perforator"
     elseif pap and stock and !hk33 and psg1 then
@@ -375,32 +380,48 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local stock = wep.Attachments[8].Installed == "bo1_solider_stock"
     local psg1 = wep.Attachments[2].Installed == "bo1_barrel_g3_psg1"
     local hk33 = wep.Attachments[2].Installed == "bo1_barrel_g3_hk33"
+    local hk53 = wep.Attachments[2].Installed == "bo1_barrel_g3_hk53"
     local scope = wep.Attachments[1].Installed == "optic_bo1_psg1"
 
-    if psg1 and !hk33 and stock then
+    if psg1 and !hk33 and !hk53 and stock then
         vm:SetBodygroup(0, 1)
         vm:SetBodygroup(2, 1)
         vm:SetBodygroup(4, 4)
-    elseif psg1 and !hk33 and !stock then
+        vm:SetBodygroup(5, 1)
+    elseif psg1 and !hk33 and !hk53 and !stock then
         vm:SetBodygroup(0, 1)
         vm:SetBodygroup(2, 1)
-    elseif !psg1 and !hk33 and stock then
+        vm:SetBodygroup(5, 1)
+    elseif !psg1 and !hk33 and !hk53 and stock then
         vm:SetBodygroup(0, 0)
         vm:SetBodygroup(2, 0)
         vm:SetBodygroup(4, 3)
-    elseif !psg1 and !hk33 and !stock then
+        vm:SetBodygroup(5, 0)
+    elseif !psg1 and !hk33 and !hk53 and !stock then
         vm:SetBodygroup(0, 0)
         vm:SetBodygroup(2, 0)
-    elseif !psg1 and hk33 and !stock then
+        vm:SetBodygroup(5, 0)
+    elseif !psg1 and hk33 and !hk53 and !stock then
         vm:SetBodygroup(0, 2)
         vm:SetBodygroup(2, 2)
-    elseif !psg1 and hk33 and stock then
+        vm:SetBodygroup(5, 2)
+    elseif !psg1 and hk33 and !hk53 and stock then
         vm:SetBodygroup(0, 2)
         vm:SetBodygroup(2, 2)
         vm:SetBodygroup(4, 3)
+        vm:SetBodygroup(5, 2)
+    elseif !psg1 and !hk33 and hk53 and !stock then
+        vm:SetBodygroup(0, 3)
+        vm:SetBodygroup(2, 3)
+        vm:SetBodygroup(5, 3)
+    elseif !psg1 and !hk33 and hk53 and stock then
+        vm:SetBodygroup(0, 3)
+        vm:SetBodygroup(2, 3)
+        vm:SetBodygroup(4, 3)
+        vm:SetBodygroup(5, 3)
     end
 
-    if scope then vm:SetBodygroup(2, 3) end
+    if scope then vm:SetBodygroup(2, 4) end
 
     if papcamo then
         return vm:SetSkin(2)
