@@ -222,9 +222,16 @@ SWEP.Hook_TranslateAnimation = function(wep, anim, data)
 end
 
 SWEP.Animations = {
-    ["idle"] = false,
+    ["idle"] = {
+        Source = "idle",
+        Time = 1 / 30,
+    },
+    ["idle_empty"] = {
+        Source = "idle_empty",
+        Time = 1 / 30,
+    },
     ["draw_empty"] = {
-        Source = "draw empty",
+        Source = "draw_empty",
         Time = 0.5,
     },
     ["draw"] = {
@@ -240,23 +247,23 @@ SWEP.Animations = {
         }
     },
     ["fire"] = {
-        Source = {"shoot"},
-        Time = 0.5,
+        Source = {"fire"},
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
     ["fire_empty"] = {
-        Source = "Fire_last",
-        Time = 0.5,
+        Source = "fire_last",
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
-        Source = "shoot1",
-        Time = 0.5,
+        Source = "fire_ads",
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
     ["fire_iron_empty"] = {
-        Source = "Fire_last",
-        Time = 0.5,
+        Source = "fire_last",
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
     ["reload"] = {
@@ -272,7 +279,7 @@ SWEP.Animations = {
         },
     },
     ["reload_empty"] = {
-        Source = "reload empty",
+        Source = "reload_empty",
         Time = 2,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
@@ -285,27 +292,27 @@ SWEP.Animations = {
         },
     },
     ["enter_sprint"] = {
-        Source = "Idle_to_sprint",
+        Source = "sprint_in",
         Time = 10 / 30
     },
     ["idle_sprint"] = {
-        Source = "Sprint_",
+        Source = "sprint_loop",
         Time = 30 / 40
     },
     ["exit_sprint"] = {
-        Source = "Sprint_to_Idle",
+        Source = "sprint_out",
         Time = 10 / 30
     },
     ["enter_sprint_empty"] = {
-        Source = "Idle_to_sprint_Empty",
+        Source = "sprint_in",
         Time = 10 / 30
     },
     ["idle_sprint_empty"] = {
-        Source = "Sprint_Empty",
+        Source = "sprint_loop",
         Time = 30 / 40
     },
     ["exit_sprint_empty"] = {
-        Source = "Sprint_to_Idle_Empty",
+        Source = "sprint_out",
         Time = 10 / 30
     },
 }
