@@ -231,7 +231,7 @@ SWEP.Animations = {
         Time = 1 / 30,
     },
     ["draw_empty"] = {
-        Source = "draw empty",
+        Source = "draw_empty",
         Time = 0.5,
     },
     ["draw"] = {
