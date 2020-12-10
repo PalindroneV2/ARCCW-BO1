@@ -19,8 +19,8 @@ att.Mult_Penetration = 2.5
 
 att.Mult_AccuracyMOA = 50
 att.Mult_HipDispersion = 2
-att.Override_MuzzleEffect = "muzzleflash_suppressed"
-att.Override_ShootEntity = "arccw_m203_he_bo1"
+att.Override_MuzzleEffect = "pap_heavy_flame"
+att.Override_ShootEntity = "arccw_bo1_mustangsally"
 att.Mult_MuzzleVelocity = 100000
 
 att.Override_MuzzleEffect = "pap_muzzle_big"

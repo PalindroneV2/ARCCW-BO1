@@ -8,6 +8,7 @@ att.Desc_Cons = {
 }
 att.AutoStats = true
 att.Slot = {"ammo_raygun_pap"}
+att.GivesFlags = {"papraygun"}
 
 att.MagExtender = true
 

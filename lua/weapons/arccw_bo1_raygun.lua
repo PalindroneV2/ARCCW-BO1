@@ -130,20 +130,20 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 SWEP.ActivePos = Vector(0, -2, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(3, -3, -3)
-SWEP.SprintAng = Angle(6, 0, 5)
+SWEP.SprintPos = Vector(0, -2, -6)
+SWEP.SprintAng = Angle(5, 0, 0)
 
 SWEP.CustomizePos = Vector(10, -8, -1)
 SWEP.CustomizeAng = Angle(15, 40, 0)
 
-SWEP.HolsterPos = Vector(0, -4, -5)
-SWEP.HolsterAng = Angle(37.5, 0, 0)
+SWEP.HolsterPos = Vector(0, -1, 1)
+SWEP.HolsterAng = Angle(-15, 23, 0)
 
 SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
 SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.AttachmentElements = {
-    ["papname1"] = {
+    ["papraygun"] = {
         NamePriority = 10,
         TrueNameChange = "Porter's X2 Ray Gun",
         NameChange = "RM-1HRG EX2",
