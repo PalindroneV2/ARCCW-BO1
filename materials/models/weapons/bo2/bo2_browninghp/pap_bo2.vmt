@@ -1,9 +1,9 @@
 VertexlitGeneric
 {
 	$detail	"models\weapons\pap\pap_bo2_crystal"
-	$basetexture "models/weapons/bo2/c_bo2_browninghp/bhp_c"
+	$basetexture "models/weapons/bo2/bo2_browninghp/bhp_c"
 	$blendtintbybasealpha  "1"
-	$bumpmap "models/weapons/bo2/c_bo2_browninghp/bhp_n"
+	$bumpmap "models/weapons/bo2/bo2_browninghp/bhp_n"
 	$selfillummask "models\weapons\pap\pap_bo2_crystal_env"
 	$selfillum 1
 	

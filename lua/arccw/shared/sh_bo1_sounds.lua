@@ -1695,7 +1695,7 @@ sound.Add({
 sound.Add({
     name = "ArcCW_BO1.RayGun_Obtain",
     channel = CHAN_ITEM + 115,
-    level = 70,
+    level = 100,
     sound = "weapons/arccw/bo1_raygun/obtain.wav"
 })
 
@@ -1705,12 +1705,68 @@ sound.Add({
     level = 70,
     sound = "weapons/arccw/bo1_raygun/splash.wav"
 })
+
+-- WUNDERWAFFE DG2 --
+
 sound.Add({
-    name = "ArcCW_BO1.RayGun_Splash",
-    channel = CHAN_ITEM + 115,
-    volume = 0.5,
+    name = "ArcCW_BO1.DG2_Fire",
+    channel = CHAN_WEAPON + 5,
+    level = 80,
+    sound = "weapons/arccw/waw_dg2/fire.wav"
+})
+sound.Add({
+    name = "ArcCW_BO1.DG2_Last",
+    channel = CHAN_WEAPON + 5,
+    level = 80,
+    sound = "weapons/arccw/waw_dg2/last.wav"
+})
+sound.Add({
+    name = "ArcCW_BO1.DG2_In",
+    channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/bo1_raygun/splash.wav"
+    sound = "weapons/arccw/waw_dg2/in.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.DG2_Out",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/waw_dg2/out.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.DG2_Back",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/waw_dg2/bback.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.DG2_Fwd",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/waw_dg2/bfwd.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.DG2_On",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/waw_dg2/on.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.DG2_Off",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/waw_dg2/off.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.DG2_Impact",
+    channel = CHAN_ITEM + 115,
+    level = 70,
+    sound = "weapons/arccw/waw_dg2/splash.wav"
 })
 
 -- PAP EFFECT --

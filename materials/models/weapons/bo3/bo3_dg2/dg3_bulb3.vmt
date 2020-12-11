@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	$model 1
+	"$basetexture" "models/weapons/bo3/bo3_dg2/dg2_glass_e_pap"
+	"$bumpmap" "models/weapons/bo3/bo3_dg2/dg2_glass_n"
+}
+

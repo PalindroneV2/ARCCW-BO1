@@ -10,6 +10,9 @@ PrecacheParticleSystem("pap_muzzle_big")
 PrecacheParticleSystem("pap_muzzle_sparks")
 PrecacheParticleSystem("pap_trail")
 
+PrecacheParticleSystem("vortigaunt_beam_charge")
+PrecacheParticleSystem("vortigaunt_glow_charge_cp1")
+
 PrecacheParticleSystem("raygun_splash")
 PrecacheParticleSystem("raygun_splash_parts")
 PrecacheParticleSystem("raygun_splash_pap")

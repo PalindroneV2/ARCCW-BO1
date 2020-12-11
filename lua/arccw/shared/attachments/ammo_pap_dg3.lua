@@ -1,20 +1,20 @@
 att.PrintName = "Pack-A-Punched"
 att.Icon = Material("entities/acwatt_ammo_papunch.png")
-att.Description = "Ray Gun now fires even more powerful balls of plasma.."
+att.Description = "Even more powerful bolts of electricity."
 att.Desc_Pros = {
     "+ Extended Magazine."
 }
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = {"ammo_raygun_pap"}
-att.GivesFlags = {"papraygun"}
+att.Slot = {"ammo_dg2_pap"}
+att.GivesFlags = {"dg2pap"}
 
 att.MagExtender = true
 
 att.SortOrder = 100
-att.Override_ShootEntity = "arccw_bo1_raygun_pap"
-att.Override_MuzzleEffect = "raygun_flash_pap"
+att.Override_ShootEntity = "arccw_bo1_dg2_bolt_pap"
+--att.Override_MuzzleEffect = "raygun_flash_pap"
 --att.Override_Tracer = "bo1_raygun_tracer_pap"
 
 att.Hook_FireBullets = function(wep, data)

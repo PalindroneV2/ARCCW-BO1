@@ -1,8 +1,8 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/bo2/c_bo2_makarov/pm_c"
+	"$basetexture" "models/weapons/bo1/bo1_makarov/pm_c"
 	$blendtintbybasealpha  "1"
-	"$bumpmap" "models/weapons/bo2/c_bo2_makarov/pm_n"
+	"$bumpmap" "models/weapons/bo1/bo1_makarov/pm_n"
 	$phong                      		1
 	$phongexponent                      "20"
 	$phongboost                         "0.5"

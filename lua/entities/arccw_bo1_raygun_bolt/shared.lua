@@ -33,7 +33,7 @@ if SERVER then
             self:GetPhysicsObject():Wake()
         end
 
-        util.SpriteTrail(self, 0, Color( 66 , 255 , 0 ), false, 3, 6, 0.5, 1, "effects/laser1.vmt")
+        util.SpriteTrail(self, 0, Color( 66 , 255 , 0 ), false, 3, 6, 0.1, 1, "effects/laser1.vmt")
 
         timer.Simple(0.1, function()
             if !IsValid(self) then return end
