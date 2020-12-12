@@ -711,10 +711,10 @@ sound.Add( {
     level = 100,
     pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo3_stg44/stg44_fire1.wav",
-        "weapons/arccw/bo3_stg44/stg44_fire2.wav",
-        "weapons/arccw/bo3_stg44/stg44_fire3.wav",
-        "weapons/arccw/bo3_stg44/stg44_fire4.wav",
+        "weapons/arccw/bopack_stg44/stg44_fire1.wav",
+        "weapons/arccw/bopack_stg44/stg44_fire2.wav",
+        "weapons/arccw/bopack_stg44/stg44_fire3.wav",
+        "weapons/arccw/bopack_stg44/stg44_fire4.wav",
     }
 } )
 sound.Add( {
@@ -724,7 +724,7 @@ sound.Add( {
     level = 100,
     pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bo3_stg44/stg44_dod_fire.wav",
+        "^weapons/arccw/bopack_stg44/stg44_dod_fire.wav",
     }
 } )
 sound.Add( {
@@ -734,7 +734,7 @@ sound.Add( {
     level = 100,
     pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo3_stg44/stg44_waw_fire.wav",
+        "weapons/arccw/bopack_stg44/stg44_waw_fire.wav",
     }
 } )
 sound.Add( {
@@ -744,7 +744,7 @@ sound.Add( {
     level = 100,
     pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo3_stg44/fly_galil_mag_out.wav",
+        "weapons/arccw/bopack_stg44/fly_galil_mag_out.wav",
     }
 } )
 sound.Add( {
@@ -754,7 +754,7 @@ sound.Add( {
     level = 100,
     pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo3_stg44/fly_galil_mag_in.wav",
+        "weapons/arccw/bopack_stg44/fly_galil_mag_in.wav",
     }
 } )
 sound.Add( {
@@ -764,7 +764,7 @@ sound.Add( {
     level = 100,
     pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo3_stg44/fly_galil_bolt_back.wav",
+        "weapons/arccw/bopack_stg44/fly_galil_bolt_back.wav",
     }
 } )
 sound.Add( {
@@ -774,7 +774,7 @@ sound.Add( {
     level = 100,
     pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo3_stg44/fly_galil_bolt_release.wav",
+        "weapons/arccw/bopack_stg44/fly_galil_bolt_release.wav",
     }
 } )
 
