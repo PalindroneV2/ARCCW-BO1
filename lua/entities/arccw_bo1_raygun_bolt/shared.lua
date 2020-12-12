@@ -52,7 +52,7 @@ if SERVER then
         EffectData():SetNormal(data.HitNormal)
         ParticleEffect("raygun_splash", self:GetPos(), Angle(0,0,0))
         self:EmitSound("ArcCW_BO1.RayGun_Splash")
-        ParticleEffect("raygun_splash_parts", self:GetPos(), Angle(0,0,0))
+        --ParticleEffect("raygun_splash_parts", self:GetPos(), Angle(0,0,0))
         self:Remove()
 
     end

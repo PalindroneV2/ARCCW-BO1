@@ -35,7 +35,7 @@ if SERVER then
             self:GetPhysicsObject():Wake()
         end
 
-        util.SpriteTrail(self, 0, Color(255 , 30 , 150), true, 5, 10, 0.5, 0.1, "particles/bo1/dg2.vmt")
+        util.SpriteTrail(self, 0, Color(255 , 30 , 150), true, 30, 60, 1, 0.01, "particles/bo1/bolt.vmt")
 
         timer.Simple(0.1, function()
             if !IsValid(self) then return end

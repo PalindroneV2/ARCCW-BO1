@@ -87,7 +87,7 @@ SWEP.ShootSound = "ArcCW_BO1.DG2_Fire"
 --SWEPHook_PostFireBullets = function(wep)
 --end
 
-SWEP.MuzzleEffect = "tesla_mflash"
+SWEP.MuzzleEffect = "dg2_flash"
 SWEP.GMMuzzleEffect = false
 SWEP.ShellModel = ""
 SWEP.ShellScale = 1.5
@@ -182,7 +182,7 @@ SWEP.Attachments = {
         Slot = "charm",
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(-0.5, -1.6, 1.9),
+            vpos = Vector(21, -1.6, 2.5),
             vang = Angle(0, 0, 0),
             wpos = Vector(7.25, 2.5, -3.8),
             wang = Angle(-5, -2, 177.5)

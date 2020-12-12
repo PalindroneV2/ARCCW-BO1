@@ -14,7 +14,7 @@ att.MagExtender = true
 
 att.SortOrder = 100
 att.Override_ShootEntity = "arccw_bo1_dg2_bolt_pap"
---att.Override_MuzzleEffect = "raygun_flash_pap"
+att.Override_MuzzleEffect = "dg3_flash"
 --att.Override_Tracer = "bo1_raygun_tracer_pap"
 
 att.Hook_FireBullets = function(wep, data)
