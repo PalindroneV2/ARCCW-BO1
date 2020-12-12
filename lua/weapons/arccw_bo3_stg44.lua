@@ -23,7 +23,7 @@ end
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo3_stg44_v2.mdl"
-SWEP.WorldModel = "models/weapons/arccw/w_bo3_stg44_v2.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_bo3_stg44_v2.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-12, 4.25, -4.75),
@@ -111,9 +111,10 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector (-3.10, -8, -0.725),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector (-3.05, -8, -0.75),
+    Ang = Angle(0.5, 0.05, 0),
     Magnification = 1.1,
+    CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
