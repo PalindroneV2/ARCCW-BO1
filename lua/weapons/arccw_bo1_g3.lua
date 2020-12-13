@@ -75,8 +75,8 @@ SWEP.MagID = "fnfal" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.FirstShootSound = "ArcCW_BO1.G3_Fire"
-SWEP.ShootSound = "ArcCW_BO1.G3_Fire"
+SWEP.FirstShootSound = "ArcCW_BO1.HK21_Fire"
+SWEP.ShootSound = "ArcCW_BO1.HK21_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
@@ -161,7 +161,8 @@ SWEP.AttachmentElements = {
     },
     ["rail"] = {
         VMBodygroups = {
-            {ind = 3, bg = 1}
+            --{ind = 2, bg = 4},
+            {ind = 3, bg = 1},
         },
         ExcludeFlags = {"no_rail"},
     },
@@ -394,7 +395,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local psg1 = wep.Attachments[2].Installed == "bo1_barrel_g3_psg1"
     local hk33 = wep.Attachments[2].Installed == "bo1_barrel_g3_hk33"
     local hk53 = wep.Attachments[2].Installed == "bo1_barrel_g3_hk53"
-    local scope = wep.Attachments[1].Installed == "optic_bo1_psg1"
+    local scope = wep.Attachments[1].Installed
 
     if psg1 and !hk33 and !hk53 and stock then
         vm:SetBodygroup(0, 1)

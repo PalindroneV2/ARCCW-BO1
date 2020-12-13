@@ -1085,12 +1085,12 @@ sound.Add( {
     }
 } )
 
---- FAL Main ---
+--- G3 Main ---
 
 sound.Add( {
     name = "ArcCW_BO1.G3_Fire",
     channel = CHAN_WEAPON,
-    volume = 0.25,
+    volume = 1.0,
     level = 100,
     pitch = {95, 110},
     sound = {
@@ -1135,6 +1135,62 @@ sound.Add( {
     pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_psg1/futz.wav",
+    }
+} )
+
+--- HK21 Main ---
+
+sound.Add( {
+    name = "ArcCW_BO1.HK21_Fire",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_hk21/fire1.wav",
+        "weapons/arccw/bo1_hk21/fire2.wav",
+        "weapons/arccw/bo1_hk21/fire3.wav",
+        "weapons/arccw/bo1_hk21/fire4.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.HK21_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_hk21/mag_in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.HK21_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_hk21/mag_out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.HK21_Pull",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_hk21/pull.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.HK21_Release",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_hk21/release.wav",
     }
 } )
 
@@ -1226,7 +1282,9 @@ sound.Add({
 sound.Add({
     name = "ArcCW_BO1.M60_Fire",
     channel = CHAN_WEAPON,
+    volume = 1.0,
     level = 100,
+    pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m60/fire1.wav",
         "weapons/arccw/bo1_m60/fire2.wav",
@@ -1661,7 +1719,9 @@ sound.Add( {
 sound.Add({
     name = "ArcCW_BO1.RayGun_Fire",
     channel = CHAN_WEAPON + 5,
-    level = 80,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
     sound = "weapons/arccw/bo1_raygun/fire.wav"
 })
 sound.Add({
@@ -1711,7 +1771,9 @@ sound.Add({
 sound.Add({
     name = "ArcCW_BO1.DG2_Fire",
     channel = CHAN_WEAPON + 5,
-    level = 80,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
     sound = "weapons/arccw/waw_dg2/fire.wav"
 })
 sound.Add({

@@ -75,8 +75,8 @@ SWEP.MagID = "fnfal" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.FirstShootSound = "ArcCW_BO1.G3_Fire"
-SWEP.ShootSound = "ArcCW_BO1.G3_Fire"
+SWEP.FirstShootSound = "ArcCW_BO1.HK21_Fire"
+SWEP.ShootSound = "ArcCW_BO1.HK21_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
@@ -371,7 +371,8 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.G3_Charge", t = 47 / 30},
+            {s = "ArcCW_BO1.HK21_Pull", t = 47 / 30},
+            {s = "ArcCW_BO1.HK21_Release", t = 52 / 30},
         },
     },
     ["fire"] = {
@@ -414,7 +415,8 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.G3_Futz", t = 97 / 35},
             {s = "ArcCW_BO1.G3_In", t = 107 / 35},
             {s = "ArcCW_BO1.M60_Bonk", t = 120 / 35},
-            {s = "ArcCW_BO1.G3_Charge", t = 148 / 35},
+            {s = "ArcCW_BO1.HK21_Pull", t = 152 / 35},
+            {s = "ArcCW_BO1.HK21_Release", t = 157 / 35},
         },
     },
     ["reload_small"] = {
@@ -445,7 +447,8 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.G3_Out", t = 27 / 35},
             {s = "ArcCW_BO1.G3_Futz", t = 100 / 35},
             {s = "ArcCW_BO1.G3_In", t = 108 / 35},
-            {s = "ArcCW_BO1.G3_Charge", t = 147 / 35},
+            {s = "ArcCW_BO1.HK21_Pull", t = 145 / 35},
+            {s = "ArcCW_BO1.HK21_Pull", t = 150 / 35},
         },
     },
     ["enter_sprint"] = {
