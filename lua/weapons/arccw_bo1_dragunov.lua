@@ -21,6 +21,13 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_svd.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_svd.mdl"
+SWEP.MirrorVMWM = true
+SWEP.WorldModelOffset = {
+    scale = 1.025,
+    pos        =    Vector(-4, 4, -6.5),
+    ang        =    Angle(-6, -1.25, 180),
+    bone    =    "ValveBiped.Bip01_R_Hand",
+}
 SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "00000000000"
@@ -168,8 +175,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(4, 0, 3.8),
             vang = Angle(0, 0, 0),
-            wpos = Vector(7.5, 0.5, -6.5),
-            wang = Angle(167.5, 180, 0)
         },
         InstalledEles = {"rail"},
         MergeSlots = {2,11},
@@ -195,8 +200,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(33.5, 0, 1.6),
             vang = Angle(0, 0, 90),
-            wpos = Vector(34.75, 1, -10.25),
-            wang = Angle(-12, 0, 180)
         },
     },
     {
@@ -206,8 +209,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(16, 0, 1.25),
             vang = Angle(0, 0, 0),
-            wpos = Vector(20, 0.602, -6.5),
-            wang = Angle(-15, 0, 180)
         },
         MergeSlots = {5},
     },
@@ -218,8 +219,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(21, 0, 1.75),
             vang = Angle(0, 0, 0),
-            wpos = Vector(25, 0.602, -7.75),
-            wang = Angle(-15, 0, 180)
         },
     },
     { --6
@@ -229,8 +228,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(20, -0.5, 2.25),
             vang = Angle(0, 0, 90),
-            wpos = Vector(22, 1.2, -8.4),
-            wang = Angle(-12, 0, -90)
         },
     },
     { --7
@@ -255,8 +252,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(6.5, -0.5, 1.5),
             vang = Angle(0, 0, 0),
-            wpos = Vector(10.25, 1, -4.75),
-            wang = Angle(-12, 0, -180)
         },
     },
     { --11

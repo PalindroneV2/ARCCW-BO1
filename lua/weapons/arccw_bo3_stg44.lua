@@ -151,7 +151,7 @@ SWEP.AttachmentElements = {
                 Bone = "tag_weapon",
                 Scale = Vector(0.375, 0.375, 0.375),
                 Offset = {
-                    pos = Vector(0, 0.51, 2.7),
+                    pos = Vector(0, 0.51, 2.5),
                     ang = Angle(0, 90, 0),
                 }
             },

@@ -11,6 +11,8 @@ PrecacheParticleSystem("pap_trail")
 PrecacheParticleSystem("vortigaunt_beam_charge")
 PrecacheParticleSystem("dg2_flash")
 PrecacheParticleSystem("dg3_flash")
+PrecacheParticleSystem("megatron_flash")
+PrecacheParticleSystem("pap_flash")
 
 PrecacheParticleSystem("raygun_splash")
 PrecacheParticleSystem("raygun_splash_pap")

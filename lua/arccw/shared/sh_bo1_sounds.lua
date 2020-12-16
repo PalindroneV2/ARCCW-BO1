@@ -1841,3 +1841,11 @@ sound.Add( {
     pitch = {95, 110},
     sound = {"weapons/arccw/pap/pap_fire.wav"}
 } )
+sound.Add({
+    name = "ArcCW_WAW.P38_Fusion",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = "weapons/arccw/pap/fusion.wav"
+})

@@ -1,6 +1,20 @@
 {
-"title" : "[ArcCW] Black Ops Pack",
-"type" : "weapon",
-"tags" : ["realism","fun"],
-"ignore" : ["*.psd", "*.vcproj", "*.svn*", ".git*", "*.md"]
+    "title" : "ArcCW BO1",
+    "type" : "weapon",
+    "tags" : ["realism","roleplay"],
+	"ignore":
+	[
+		"*.cmd",
+		"*.ini",
+		"*.lnk",
+		"*.url",
+		"*.psd",
+        "*.bat",
+        ".git/*",
+        ".gitignore",
+        ".gitattributes",
+        "*.code-workspace",
+        "LICENSE",
+        "readme.md"
+	]
 }

@@ -89,8 +89,8 @@ SWEP.ShootSound = "ArcCW_BO1.G11_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.AUG_Sil"
 
 SWEP.MuzzleEffect = "muzzleflash_1"
-SWEP.ShellModel = "models/shells/shell_762nato.mdl"
-SWEP.ShellScale = 1.25
+//SWEP.ShellModel = "models/shells/shell_762nato.mdl"
+SWEP.ShellScale = 0.0000001
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
@@ -340,12 +340,10 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
     },
     ["reload"] = {
         Source = "reload",
