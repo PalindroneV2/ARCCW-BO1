@@ -629,6 +629,68 @@ sound.Add( {
     }
 } )
 
+--- Thompson Main ---
+
+sound.Add( {
+    name = "ArcCW_WAW.Garand_Fire",
+    channel = CHAN_WEAPON + 1,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_garand/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Garand_In",
+    channel = CHAN_ITEM + 1,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_garand/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Garand_Out",
+    channel = CHAN_ITEM + 2,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_garand/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Garand_Close",
+    channel = CHAN_ITEM + 3,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_garand/close.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Garand_Pull",
+    channel = CHAN_ITEM + 4,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/waw_garand/pull.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Garand_Ping",
+    channel = CHAN_ITEM + 15,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_garand/ping.wav",
+    }
+} )
+
 -- M27 Main --
 
 sound.Add( {
@@ -962,6 +1024,49 @@ sound.Add( {
     pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_mp40/charge.wav",
+    }
+} )
+
+--- Thompson Main ---
+
+sound.Add( {
+    name = "ArcCW_WAW.Thompson_Fire",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_thompson/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Thompson_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_thompson/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Thompson_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_thompson/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Thompson_Bolt",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_thompson/charge.wav",
     }
 } )
 
@@ -1439,11 +1544,42 @@ sound.Add({
     sound = "weapons/arccw/bo2_m1911/slideback.wav"
 })
 
+-- P38 MAIN ---
+
 sound.Add({
-    name = "ArcCW_BO2.M1911_SlideFwd",
+    name = "ArcCW_WAW.P38_Fire",
+    channel = CHAN_WEAPON,
+    level = 100,
+    sound = "weapons/arccw/waw_p38/fire.wav"
+})
+sound.Add({
+    name = "ArcCW_WAW.P38_In",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/bo2_m1911/slide.wav"
+    sound = "weapons/arccw/waw_p38/in.wav"
+})
+
+sound.Add({
+    name = "ArcCW_WAW.P38_Out",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/waw_p38/out.wav"
+})
+
+sound.Add({
+    name = "ArcCW_WAW.P38_Slide",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/waw_p38/slide.wav"
+})
+
+sound.Add({
+    name = "ArcCW_WAW.P38_Fusion",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = "weapons/arccw/pap/fusion.wav"
 })
 
 -- Makarov BO1 --
@@ -1841,11 +1977,3 @@ sound.Add( {
     pitch = {95, 110},
     sound = {"weapons/arccw/pap/pap_fire.wav"}
 } )
-sound.Add({
-    name = "ArcCW_WAW.P38_Fusion",
-    channel = CHAN_WEAPON + 5,
-    volume = 1.0,
-    level = 100,
-    pitch = {95, 110},
-    sound = "weapons/arccw/pap/fusion.wav"
-})

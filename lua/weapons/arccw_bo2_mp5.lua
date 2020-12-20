@@ -47,7 +47,7 @@ SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 45
+SWEP.ExtendedClipSize = 50
 SWEP.ReducedClipSize = 20
 
 SWEP.Recoil = 0.5
@@ -132,7 +132,7 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(13, 3, -4.5)
+SWEP.CustomizePos = Vector(13, 3, -2)
 SWEP.CustomizeAng = Angle(15, 40, 0)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
@@ -440,7 +440,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local sil = wep.Attachments[2].Installed == ("supp_bo1_mp5" or "bo1_mp5_sdhg")
+    local sil0 = wep.Attachments[2].Installed == "supp_bo1_mp5"
+    local sil1 = wep.Attachments[2].Installed == "bo1_mp5_sdhg"
+    local sil = sil0 or sil1
     local stock = wep.Attachments[7].Installed == "bo1_solid_stock"
     local dual = wep.Attachments[8].Installed == "ammo_dualmag"
     local mp5k = wep.Attachments[2].Installed == "bo1_mp5_mp5k"
@@ -461,6 +463,15 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
         return anim .. "_stock_sil_quick"
     elseif mp5k and (stock or !stock) and (dual or !dual) then
         return anim .. "_grip"
+    end
+end
+
+SWEP.Hook_GetCapacity = function(wep, cap)
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local mm10 = wep.Attachments[8].Installed == "ammo_bo1_mp5_10mm"
+
+    if pap and mm10 then
+        return 40
     end
 end
 

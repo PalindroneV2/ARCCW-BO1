@@ -354,6 +354,15 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 end
 
+SWEP.Hook_GetCapacity = function(wep, cap)
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local mp = wep.Attachments[10].Installed == "ammo_stg44_9mm"
+
+    if pap and mp then
+        return 64
+    end
+end
+
 SWEP.Hook_GetShootSound = function(wep, sound)
     if wep.Attachments[2].Installed and wep:GetBuff_Override("Silencer") then
         return "ArcCW_BO1.M16_Sil"

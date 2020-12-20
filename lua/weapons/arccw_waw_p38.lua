@@ -88,7 +88,7 @@ SWEP.MagID = "bhp" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO2.BHP_Fire"
+SWEP.ShootSound = "ArcCW_WAW.P38_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.M1911_Sil"
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"
@@ -173,7 +173,7 @@ SWEP.Attachments = {
         Slot = "bo1_lp_optic",
         Bone = "j_bolt",
         Offset = {
-            vpos = Vector(0.5, 0.115, 0),
+            vpos = Vector(0.5, 0.1, 0),
             vang = Angle(0, 0, 0),
         },
         CorrectivePos = Vector(0, 0, 0),
@@ -292,8 +292,8 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 1,
         SoundTable = {
-            {s = "ArcCW_BO2.M1911_SlideBack", t = 0.2},
-            {s = "ArcCW_BO2.M1911_SlideFwd", t = 0.8}
+            {s = "ArcCW_WAW.P38_Slide", t = 0.2},
+            {s = "ArcCW_WAW.P38_Slide", t = 0.8}
         }
     },
     ["fire"] = {
@@ -324,8 +324,8 @@ SWEP.Animations = {
         LHIKIn = 1,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO2.M1911_MagOut", t = 0.25},
-            {s = "ArcCW_BO2.M1911_MagIn", t = 1}
+            {s = "ArcCW_WAW.P38_Out", t = 0.25},
+            {s = "ArcCW_WAW.P38_In", t = 1}
         },
     },
     ["reload_empty"] = {
@@ -336,9 +336,9 @@ SWEP.Animations = {
         LHIKIn = 1,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO2.M1911_MagOut", t = 0.25},
-            {s = "ArcCW_BO2.M1911_MagIn", t = 1},
-            {s = "ArcCW_BO2.M1911_SlideFwd", t = 1.5}
+            {s = "ArcCW_WAW.P38_Out", t = 0.25},
+            {s = "ArcCW_WAW.P38_In", t = 1},
+            {s = "ArcCW_WAW.P38_Slide", t = 1.5}
         },
     },
     ["enter_sprint"] = {

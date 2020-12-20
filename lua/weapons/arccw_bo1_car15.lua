@@ -507,6 +507,15 @@ SWEP.Hook_GetShootSound = function(wep, sound)
     end
 end
 
+SWEP.Hook_GetCapacity = function(wep, cap)
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local m635 = wep.Attachments[12].Installed == "ammo_car15_9mm"
+
+    if pap and m635 then
+        return 50
+    end
+end
+
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     local attached = wep.Attachments[7].Installed
 

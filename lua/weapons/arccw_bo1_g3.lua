@@ -465,6 +465,18 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     end
 end
 
+SWEP.Hook_GetCapacity = function(wep, cap)
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local hk33 = wep.Attachments[10].Installed == "bo1_ammo_g3_556"
+    local shortmag = wep.Attachments[10].Installed == "bo1_ammo_g3_psg1"
+
+    if pap and hk33 then
+        return 45
+    elseif pap and shortmag then
+        return 20
+    end
+end
+
 SWEP.Hook_GetShootSound = function(wep, sound)
     if wep.Attachments[3].Installed and wep:GetBuff_Override("Silencer") then
         return "ArcCW_BO1.FAL_Sil"

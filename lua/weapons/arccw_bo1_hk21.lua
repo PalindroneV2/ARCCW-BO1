@@ -46,7 +46,7 @@ SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 80 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 125
+SWEP.ExtendedClipSize = 160
 
 SWEP.Delay = 60 / 900-- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -343,6 +343,15 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
 
     if small then
         return anim .. "_small"
+    end
+end
+
+SWEP.Hook_GetCapacity = function(wep, cap)
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local small = wep.Attachments[9].Installed == "bo1_ammo_hk21_30rnd"
+
+    if pap and small then
+        return 125
     end
 end
 

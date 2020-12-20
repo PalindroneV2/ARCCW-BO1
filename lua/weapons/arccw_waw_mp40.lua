@@ -145,8 +145,8 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
         --VMMaterial = "models/weapons/pap/pap_blue_burn",
-        TrueNameChange = "The Reaper",
-        NameChange = "The Reaper",
+        TrueNameChange = "The Afterburner",
+        NameChange = "The Afterburner",
     },
     ["mount"] = {
         VMBodygroups = {
@@ -158,7 +158,7 @@ SWEP.AttachmentElements = {
                 Bone = "tag_weapon",
                 Scale = Vector(0.375, 0.375, 0.375),
                 Offset = {
-                    pos = Vector(0, -0.2, 0.75),
+                    pos = Vector(0, -0.175, 0.75),
                     ang = Angle(0, 90, 0),
                 }
             },
@@ -167,33 +167,29 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.Attachments = {
-    /*{
+    {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = "optic", -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(0, -0.5, 1.75), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(0, -0.5, 1.95), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(10, 1.4, -5.5),
-            wang = Angle(176, 185, 0)
         },
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(1.5, 0, 0),
-    },*/ --1
-    /*{
+        CorrectiveAng = Angle(-1.5, 0, 0),
+    }, --1
+    {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = "muzzle",
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(15.5, 0, 1.35), -- offset that the attachment will be relative to the bone
+            vpos = Vector(14.5, -0.5, 0.8), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(25.4, 2.5, -5.75),
-            wang = Angle(176, 185, 90)
         },
-    },*/ --2
+    }, --2
     {
         PrintName = "Tactical",
         Slot = "bo1_tacslot",
@@ -202,8 +198,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(6, 0.45, 1.25), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, -90),
-            wpos = Vector(16, 1.4, -5.3),
-            wang = Angle(-4, 0, 85)
         },
     }, --3 --1
     { --4 --2
@@ -218,23 +212,21 @@ SWEP.Attachments = {
         PrintName = "Perk",
         Slot = {"bo1_perk"}
     }, --6 --4
-    /*{
+    {
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(-2.5, -0.85, 0.5),
+            vpos = Vector(-2.5, -1.3, 0),
             vang = Angle(0, 0, 0),
-            wpos = Vector(5.25, 2, -3.9),
-            wang = Angle(-175, -175, 0)
         },
-    },*/ --6
+    }, --7
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[3].Installed == "ammo_papunch" --5
+    local papcamo = wep.Attachments[5].Installed == "ammo_papunch" --5
 
     if papcamo then
         return vm:SetSkin(1)
@@ -260,7 +252,7 @@ SWEP.Animations = {
         Source = "draw",
         Time = 0.5,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.25,
         LHIKOut = 0.25,
     },
     ["draw_empty"] = {
