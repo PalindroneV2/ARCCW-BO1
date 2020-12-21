@@ -144,7 +144,6 @@ SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
         TrueNameChange = "Gibs-O-Matic",
         NameChange = "Gibs-O-Matic",
     },
@@ -170,7 +169,7 @@ SWEP.AttachmentElements = {
                 Bone = "tag_weapon",
                 Scale = Vector(0.375, 0.375, 0.375),
                 Offset = {
-                    pos = Vector(0, 0.275, 1.5),
+                    pos = Vector(0, 0.275, 1.6),
                     ang = Angle(0, 90, 0),
                 }
             },
@@ -189,12 +188,12 @@ SWEP.Attachments = {
         Slot = "optic", -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(0, -0.05, 2.5), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(0, -0.05, 2.75), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(3, -0.3, 0),
+        CorrectiveAng = Angle(3.5, -0.3, 0),
     }, --1
     {
         PrintName = "Muzzle",
