@@ -10,8 +10,7 @@ ENT.AdminSpawnable = false
 ENT.Damage = 999999
 ENT.Radius = 150
 ENT.Ticks = 0
---ENT.TrailPCF = "tesla_beam_child1"
---ENT.CollidePCF = "tesla_impact"
+ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 
 if SERVER then
 

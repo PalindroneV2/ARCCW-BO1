@@ -12,6 +12,7 @@ AddCSLuaFile()
 ENT.Model = "models/weapons/arccw/item/bo1_40mm.mdl"
 ENT.Ticks = 0
 ENT.FuseTime = 10
+ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 
 if SERVER then
 

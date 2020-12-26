@@ -1,12 +1,15 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\waw\waw_p38\megatron"
-	$bumpmap	"models\weapons\waw\waw_p38\p38_n"
-	
+	$basetexture	"models\weapons\bo1\bo1_stoner\stoner"
+	//$color2 "[0.75 0.75 0.75]"
+	$bumpmap	"models\weapons\bo1\bo1_stoner\stoner_n"
+	$blendtintbybasealpha  "1"
+
 	$phong                      		1
 	$phongexponent                      "20"
 	$phongboost                         "0.5"
 	$phongfresnelranges         "[0.1 0.5 0.5]"
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
+
 }

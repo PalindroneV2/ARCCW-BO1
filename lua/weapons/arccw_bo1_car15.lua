@@ -144,7 +144,7 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["reducedmag"] = {
+    ["20_mag"] = {
         VMBodygroups = {
             {ind = 1, bg = 1}
         },
@@ -351,7 +351,7 @@ SWEP.Attachments = {
     }, --11
     {
         PrintName = "Magazine",
-        Slot = {"car15_9mm_ammo"},
+        Slot = {"car15_9mm_ammo", "bo1_ar15_mag"},
         DefaultAttName = "5,56mm NATO 30rnd",
     }, --12
     {
@@ -510,9 +510,12 @@ end
 SWEP.Hook_GetCapacity = function(wep, cap)
     local pap = wep:GetBuff_Override("PackAPunch")
     local m635 = wep.Attachments[12].Installed == "ammo_car15_9mm"
+    local mag20 = wep.Attachments[12].Installed == "ammo_bo1_ar15_20"
 
     if pap and m635 then
         return 50
+    elseif pap and mag20 then
+        return 35
     end
 end
 

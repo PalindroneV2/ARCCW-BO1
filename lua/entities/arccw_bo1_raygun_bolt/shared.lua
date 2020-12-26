@@ -10,6 +10,7 @@ ENT.AdminSpawnable = false
 ENT.Damage = 1500
 ENT.Radius = 150
 ENT.Ticks = 0
+ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 
 if SERVER then
 

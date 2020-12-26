@@ -144,7 +144,7 @@ SWEP.ExtraSightDist = 5
 SWEP.DefaultBodygroups = "0002000"
 
 SWEP.AttachmentElements = {
-    ["reducedmag"] = {
+    ["20_mag"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
     },
     ["heat"] = {
@@ -249,7 +249,7 @@ SWEP.Attachments = {
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0.5, 0, 0),
-        MergeSlots = {14},
+        MergeSlots = {15},
     },
     { --3
         PrintName = "Muzzle",
@@ -324,15 +324,20 @@ SWEP.Attachments = {
         Slot = {"fcg_m16a2", "bo1_fcg"},
         DefaultAttName = "Standard FCG"
     },
-    { --11
+    {
+        PrintName = "Magazine",
+        Slot = {"bo1_ar15_mag"},
+        DefaultAttName = "5,56mm NATO 30rnd",
+    }, --11
+    { --12
         PrintName = "Ammo Type",
         Slot = {"ammo_pap"}
     },
-    { --12
+    { --13
         PrintName = "Perk",
         Slot = {"bo1_perk"}
     },
-    { --13
+    { --14
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
@@ -344,12 +349,12 @@ SWEP.Attachments = {
             wang = Angle(-175, -175, 0)
         },
     },
-    { --14
+    { --15
         Hidden = true,
         Slot = "car15_irons",
         FreeSlot = true,
     },
-    { --15
+    { --16
         PrintName = "Cosmetic",
         Slot = "bo1_cosmetic",
         DefaultAttName = "Black Polymer",
@@ -359,9 +364,9 @@ SWEP.Attachments = {
 }
 
 SWEP.Hook_NameChange = function(wep, name)
-    local pap = wep.Attachments[11].Installed == "ammo_papunch"
+    local pap = wep.Attachments[12].Installed == "ammo_papunch"
     local s13 = wep.Attachments[10].Installed == "bo1_fcg_s13"
-    local irons = wep.Attachments[14].Installed
+    local irons = wep.Attachments[15].Installed
     local flat = wep.Attachments[1].Installed
     local a2 = wep.Attachments[4].Installed == "m16_hand_a2"
     local a4 = wep.Attachments[4].Installed == "m16_hand_a4"
@@ -404,11 +409,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local a2 = wep.Attachments[4].Installed == "m16_hand_a2"
     local a4 = wep.Attachments[4].Installed == "m16_hand_a4"
     local heat = wep.Attachments[4].Installed == "m16_hand_heat"
-    local papcamo = wep.Attachments[11].Installed == "ammo_papunch"
-    local camo = wep.Attachments[15].Installed
-    local Wood = wep.Attachments[15].Installed == "bo1_cosmetic_wood"
-    local Tan = wep.Attachments[15].Installed == "bo1_cosmetic_tan"
-    local Green = wep.Attachments[15].Installed == "bo1_cosmetic_odgreen"
+    local papcamo = wep.Attachments[12].Installed == "ammo_papunch"
+    local camo = wep.Attachments[16].Installed
+    local Wood = wep.Attachments[16].Installed == "bo1_cosmetic_wood"
+    local Tan = wep.Attachments[16].Installed == "bo1_cosmetic_tan"
+    local Green = wep.Attachments[16].Installed == "bo1_cosmetic_odgreen"
 
     if tube and a2 then
         vm:SetBodygroup(4, 1)
@@ -481,6 +486,15 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
         return anim .. "_mksetup"
     elseif attthing == 2 then
         return anim .. "_mk"
+    end
+end
+
+SWEP.Hook_GetCapacity = function(wep, cap)
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local mag20 = wep.Attachments[11].Installed == "ammo_bo1_ar15_20"
+
+    if pap and mag20 then
+        return 35
     end
 end
 
