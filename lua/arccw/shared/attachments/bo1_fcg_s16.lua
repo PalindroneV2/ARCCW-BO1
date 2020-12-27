@@ -11,7 +11,7 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = "fcg_m16a2"
 att.RequireFlags = {"papname1"}
-att.SortOrder = 101
+att.SortOrder = 105
 
 att.Override_Firemodes = {
     {

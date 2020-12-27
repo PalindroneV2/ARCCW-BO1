@@ -8,7 +8,7 @@ SWEP.TrueName = "PPSh-41"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "Russian submachine gun with an obscene rate of fire and a drum magazine."
 SWEP.Trivia_Manufacturer = "Numerous"
-SWEP.Trivia_Calibre = "7.62x25 Tokarev"
+SWEP.Trivia_Calibre = "7.62x25mm Tokarev"
 SWEP.Trivia_Mechanism = "Straight Blowback"
 SWEP.Trivia_Country = "USSR"
 SWEP.Trivia_Year = 1941
@@ -111,8 +111,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(0.95, 8.5, 1.35),
-    Ang = Angle(-0.475, -0.5, 0),
+    Pos = Vector(0.95, -5.5, 1.35),
+    Ang = Angle(-0.475, -0.1, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -124,13 +124,13 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
-SWEP.ActivePos = Vector(4, 12.5, 0)
+SWEP.ActivePos = Vector(4, -2, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(10, 9, -2)
+SWEP.SprintPos = Vector(10, -2, -2)
 SWEP.SprintAng = Angle(-7.036, 45.016, 0)
 
-SWEP.CustomizePos = Vector(17, 12.5, -4.5)
+SWEP.CustomizePos = Vector(16, -2, -4.5)
 SWEP.CustomizeAng = Angle(15, 40, 0)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
