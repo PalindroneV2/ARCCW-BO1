@@ -37,6 +37,53 @@ local function Ammo(wep)
 	return wep.Owner:GetAmmoCount("buckshot")
 end
 
+att.Hook_ShouldNotSight = function(wep)
+	if wep:GetInUBGL() then return true end
+end
+
+att.UBGL_NPCFire = function(wep, ubgl)
+	if att.Reloading then
+		Masterkey_ReloadFinish(wep)
+		return
+	end
+	if att.NeedPump then return end
+	if wep:Clip2() <= 0 then return end
+
+	wep:PlayAnimation("fire_mksetup")
+
+	--wep:FireRocket("arccw_gl_he_mw2", 30000)
+	wep.Owner:FireBullets({
+		Src = wep.Owner:EyePos(),
+		Num = 6,
+		Damage = 25,
+		Force = 2,
+		Attacker = wep.Owner,
+		Dir = wep.Owner:EyeAngles():Forward(),
+		Spread = Vector(0.1, 0.1, 0),
+		Callback = function(_, tr, dmg)
+			local dist = (tr.HitPos - tr.StartPos):Length() * ArcCW.HUToM
+
+			local dmgmax = 25
+			local dmgmin = 0
+
+			local delta = dist / 1750 * 0.025
+
+			delta = math.Clamp(delta, 0, 1)
+
+			local amt = Lerp(delta, dmgmax, dmgmin)
+
+			dmg:SetDamage(amt)
+		end
+	})
+
+	wep:EmitSound("ArcCW_BO1.MK_Fire", 100)
+
+	wep:SetClip2(wep:Clip2() - 1)
+
+	wep:DoEffects()
+	att.NeedPump = true
+end
+
 att.UBGL_Fire = function(wep, ubgl)
 	if att.Reloading then
 		Masterkey_ReloadFinish(wep)

@@ -1866,6 +1866,49 @@ sound.Add( {
     }
 } )
 
+-- WAW RIFLE GRENADE --
+
+sound.Add( {
+    name = "ArcCW_WAW.RGren_Click",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_rifgren/click.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.RGren_Futz",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_rifgren/futz.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.RGren_Load",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_rifgren/load.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.RGren_Remove",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_rifgren/remove.wav",
+    }
+} )
+
 -- RAYGUN --
 
 sound.Add({

@@ -29,6 +29,24 @@ local function Ammo(wep)
     return wep.Owner:GetAmmoCount("smg1_grenade")
 end
 
+att.Hook_ShouldNotSight = function(wep)
+    if wep:GetInUBGL() then return true end
+end
+
+att.UBGL_NPCFire = function(wep, ubgl)
+    if wep:Clip2() <= 0 then return end
+
+    wep:PlayAnimation("fire_glsetup")
+
+    wep:FireRocket("arccw_tishina_he_bo1", 30000)
+
+    wep:EmitSound("ArcCW_BO1.M203_Fire", 100)
+
+    wep:SetClip2(wep:Clip2() - 1)
+
+    wep:DoEffects()
+end
+
 att.UBGL_Fire = function(wep, ubgl)
     if wep:Clip2() <= 0 then return end
 

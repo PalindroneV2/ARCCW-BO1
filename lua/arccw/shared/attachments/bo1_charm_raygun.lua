@@ -14,7 +14,7 @@ att.Free = true
 att.Model = "models/weapons/arccw/atts/charmbase.mdl"
 
 att.DroppedModel = "models/weapons/arccw/c_bo1_raygun.mdl"
-att.AttachSound = "ArcCW_BO1.RayGun_Obtain"
+att.AttachSound = "weapons/arccw/bo1_raygun/obtain.wav"
 
 att.Charm = true
 att.CharmModel = "models/weapons/arccw/c_bo1_raygun.mdl"

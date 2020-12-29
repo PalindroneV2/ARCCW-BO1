@@ -138,12 +138,6 @@ SWEP.BarrelLength = 30
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["papname1"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
-        NamePriority = 10,
-        TrueNameChange = "M-1000",
-        NameChange = "M-1000",
-    },
     ["mount"] = {
         VMElements = {
             {
@@ -157,6 +151,11 @@ SWEP.AttachmentElements = {
             },
         },
     },
+    ["waw_rifgren"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 1}
+        }
+    }
 }
 
 SWEP.Attachments = {
@@ -178,7 +177,7 @@ SWEP.Attachments = {
     { --2
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = "muzzle",
+        Slot = {"muzzle", "waw_rifgren"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(26.1, 0, 1.5), -- offset that the attachment will be relative to the bone
@@ -239,6 +238,17 @@ SWEP.Attachments = {
     }, --8
 }
 
+SWEP.Hook_NameChange = function(wep, name)
+    local pap = wep.Attachments[6].Installed == "ammo_papunch"
+    local tube = wep.Attachments[2].Installed == "muzz_waw_rifgren"
+
+    if pap and tube then
+        return "M1000 Imploder"
+    elseif pap and !tube then
+        return "M1000"
+    end
+end
+
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[6].Installed == "ammo_papunch"
@@ -247,10 +257,10 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local attached = wep.Attachments[6].Installed
+    /*local attached = wep.Attachments[2].Installed
 
     local attthing
-        if attached == "muzz_waw_launcher" then attthing = 1
+        if attached == "muzz_waw_rifgren" then attthing = 1
     end
 
     if anim == "enter_ubgl" then
@@ -261,15 +271,18 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
         if attthing == 1 then
             return "out_glsetup"
         end
-    end
-
-    if attthing == 1 and wep:GetInUBGL() then
-        return anim .. "_glsetup"
-    end
+    end*/
 
     if wep:Clip1() == 0 then
         return anim .. "_empty"
     end
+
+    /*if wep:Clip2() == 0 and attthing == 1 and wep:GetInUBGL() then
+        return anim .. "_glsetup_empty"
+    elseif wep:Clip2() != 0 and attthing == 1 and wep:GetInUBGL() then
+        return anim .. "_glsetup"
+    end*/
+
 end
 
 SWEP.Animations = {
@@ -357,7 +370,7 @@ SWEP.Animations = {
             {s = "ArcCW_WAW.Garand_Close", t = 33 / 30},
         },
     },
-    ["enter_sprint"] = {
+    /*["enter_sprint"] = {
         Source = "idle",
         Time = 10 / 30
     },
@@ -380,5 +393,82 @@ SWEP.Animations = {
     ["exit_sprint_empty"] = {
         Source = "idle_empty",
         Time = 10 / 30
+    },*/
+
+    -- M7 GRENADE LAUNCHER --
+    ["idle_ubgl"] = {
+        Source = "idle_glsetup",
+        Time = 1 / 30,
     },
+    ["idle_ubgl_empty"] = {
+        Source = "idle_glsetup_empty",
+        Time = 1 / 30,
+    },
+    ["enter_ubgl"] = {
+        Source = "glsetup_in",
+        Time = 80 / 30,
+        SoundTable = {
+            {s = "ArcCW_WAW.RGren_Futz", t = 34 / 30},
+            {s = "ArcCW_WAW.RGren_Load", t = 40 / 30},
+            {s = "ArcCW_WAW.RGren_Click", t = 41 / 30},
+        }
+    },
+    ["exit_ubgl"] = {
+        Source = "glsetup_out",
+        Time = 90 / 40,
+        SoundTable = {
+            {s = "ArcCW_WAW.RGren_Click", t = 24 / 40},
+            {s = "ArcCW_WAW.RGren_Remove", t = 36 / 40},
+            {s = "ArcCW_WAW.RGren_Futz", t = 38 / 40},
+        }
+    },
+    ["enter_ubgl_empty"] = {
+        Source = "glsetup_in_empty",
+        Time = 19 / 30,
+    },
+    ["exit_ubgl_empty"] = {
+        Source = "glsetup_out_empty",
+        Time = 10 / 30,
+    },
+    ["fire_ubgl"] = {
+        Source = "fire_glsetup",
+        Time = 7 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
+        TPAnimStartTime = 0,
+    },
+    ["reload_ubgl"] = {
+        Source = "reload_glsetup",
+        Time = 64 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnimStartTime = 0.1,
+        SoundTable = {
+            {s = "ArcCW_WAW.RGren_Futz", t = 16 / 30},
+            {s = "ArcCW_WAW.RGren_Load", t = 19 / 30},
+            {s = "ArcCW_WAW.RGren_Click", t = 24 / 30},
+        }
+    },
+    /*["enter_sprint_glsetup"] = {
+        Source = "idle_glsetup",
+        Time = 10 / 30
+    },
+    ["idle_sprint_glsetup"] = {
+        Source = "idle_glsetup",
+        Time = 30 / 40
+    },
+    ["exit_sprint_glsetup"] = {
+        Source = "idle_glsetup",
+        Time = 10 / 30
+    },
+    ["enter_sprint_empty"] = {
+        Source = "idle_empty",
+        Time = 10 / 30
+    },
+    ["idle_sprint_empty"] = {
+        Source = "idle_empty",
+        Time = 30 / 40
+    },
+    ["exit_sprint_empty"] = {
+        Source = "idle_empty",
+        Time = 10 / 30
+    },*/
 }
