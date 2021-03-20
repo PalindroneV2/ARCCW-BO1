@@ -95,6 +95,8 @@ SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
+SWEP.ProceduralViewBobAttachment = 3
+SWEP.CamAttachment = 3
 
 SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.5
@@ -248,11 +250,11 @@ end
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 0,
+        Time = 1 / 30,
     },
     ["idle_empty"] = {
         Source = "idle_empty",
-        Time = 0,
+        Time = 1 / 30,
     },
     ["draw"] = {
         Source = "draw",
@@ -280,22 +282,22 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 0.5,
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
         Source = {"fire"},
-        Time = 0.5,
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
     ["fire_empty"] = {
         Source = {"fire_last"},
-        Time = 0.5,
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
     ["fire_iron_empty"] = {
         Source = {"fire_last"},
-        Time = 0.5,
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
     ["reload"] = {

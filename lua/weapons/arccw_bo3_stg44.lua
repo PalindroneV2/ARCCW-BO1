@@ -95,6 +95,8 @@ SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
+SWEP.ProceduralViewBobAttachment = 3
+SWEP.CamAttachment = 3
 
 SWEP.SpeedMult = 0.94
 SWEP.SightedSpeedMult = 0.5
@@ -211,7 +213,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         VMScale = Vector(1.25, 1.25, 1.25),
         Offset = {
-            vpos = Vector(0, 0.21, 3.85), -- offset that the attachment will be relative to the bone
+            vpos = Vector(0, 0.21, 3.6), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(6.5, 1.2, -5.6),
             wang = Angle(172.5, -180, -2),

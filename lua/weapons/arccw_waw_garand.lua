@@ -88,6 +88,8 @@ SWEP.ShellScale = 1.5
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
+SWEP.ProceduralViewBobAttachment = 3
+SWEP.CamAttachment = 3
 
 SWEP.SpeedMult = 0.85
 SWEP.SightedSpeedMult = 0.5

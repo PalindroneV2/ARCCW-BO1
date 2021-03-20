@@ -98,6 +98,8 @@ SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
+SWEP.ProceduralViewBobAttachment = 4
+SWEP.CamAttachment = 4
 
 SWEP.SightTime = 0.175
 

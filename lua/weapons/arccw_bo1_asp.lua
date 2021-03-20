@@ -95,6 +95,8 @@ SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
+SWEP.ProceduralViewBobAttachment = 3
+SWEP.CamAttachment = 3
 
 SWEP.SightTime = 0.175
 
@@ -180,16 +182,16 @@ SWEP.AttachmentElements = {
     },
     ["papname2"] = {
         NamePriority = 4,
-        TrueNameChange = "M115 Snake Eater",
-        NameChange = "M115 Snake Eater",
+        TrueNameChange = "M115 STFU",
+        NameChange = "M115 STFU",
         VMSkin = 5,
         RequireFlags = {"m39"},
         ExcludeFlags = {"hush_puppy"}
     },
     ["papname3"] = {
         NamePriority = 5,
-        TrueNameChange = "Mk 115 SFTU",
-        NameChange = "Mk 115 STFU",
+        TrueNameChange = "Mk 115 Snake Eater",
+        NameChange = "Mk 115 Snake Eater",
         VMSkin = 6,
         RequireFlags = {"hush_puppy"},
         ExcludeFlags = {"m39"}

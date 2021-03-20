@@ -28,8 +28,8 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_bo2_browninghp.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_bo2_browninghp.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_bo2_bhp.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_bo2_bhp.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-9, 3, -3.5),
@@ -97,7 +97,9 @@ SWEP.ShellScale = 1.5
 SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
-SWEP.CaseEffectAttachment = 3 -- which attachment to put the case effect on
+SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
+SWEP.ProceduralViewBobAttachment = 3
+SWEP.CamAttachment = 3
 
 SWEP.SightTime = 0.175
 

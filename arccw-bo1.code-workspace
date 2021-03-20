@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "..\\[arccw]_bo1_extras"
 		}
 	],
 	"settings": {}

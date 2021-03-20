@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Polizei"
+SWEP.PrintName = "LC-10"
 SWEP.TrueName = "MPL"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "A submachinegun adopted by West Germany during the 1960s."
@@ -79,7 +79,7 @@ SWEP.HipDispersion = 550 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
-SWEP.MagID = "ak74" -- the magazine pool this gun draws from
+SWEP.MagID = "mpl" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
@@ -95,6 +95,8 @@ SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
+SWEP.ProceduralViewBobAttachment = 4
+SWEP.CamAttachment = 4
 
 SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.5
@@ -151,21 +153,24 @@ SWEP.AttachmentElements = {
             {ind = 3, bg = 1},
         },
     },
+    ["solid_stock"] = {
+        VMBodygroups = {
+            {ind = 3, bg = 2},
+        },
+    },
     ["mount"] = {
         VMBodygroups = {
             {ind = 2, bg = 1},
         },
     },
     ["ammo_papunch"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
         NamePriority = 10,
         TrueNameChange = "MPL-LF",
-        NameChange = "Bundeswehr",
+        NameChange = "LC115 Hawkeye",
     },
 }
 
 SWEP.RejectAttachments = {
-    ["bo1_solid_stock"] = true,
 }
 
 SWEP.Attachments = {
@@ -230,7 +235,7 @@ SWEP.Attachments = {
     },
     { --7
         PrintName = "FCG",
-        Slot = {"bo1_fcg"}
+        Slot = {"bo1_fcg", "bo1_fcg_lc10"}
     },
     { --8
         PrintName = "Ammo Type",
@@ -258,10 +263,18 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[8].Installed == "ammo_papunch"
     local dualmag = wep.Attachments[6].Installed == "ammo_dualmag"
+    local lc10 = wep.Attachments[7].Installed == "bo1_fcg_rapid_lc10"
+    local wire = wep.Attachments[5].Installed == "bo1_light_stock"
 
     if dualmag then vm:SetBodygroup(1, 1) end
 
-    if papcamo then
+    if lc10 then vm:SetBodygroup(0, 1) end
+
+    if lc10 and wire then vm:SetBodygroup(3, 3) end
+
+    if papcamo and !lc10 then
+        return vm:SetSkin(1)
+    elseif papcamo and lc10 then
         return vm:SetSkin(2)
     end
 end

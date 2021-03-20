@@ -25,9 +25,9 @@ SWEP.ViewModel = "models/weapons/arccw/c_bo1_spectre.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_spectre.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 0.9,
-    pos        =    Vector(-9, 5, -6),
-    ang        =    Angle(-6, -1, 180),
+    scale = 1.1,
+    pos        =    Vector(-6.5, 4, -4.75),
+    ang        =    Angle(-10, -1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
@@ -95,6 +95,8 @@ SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
+SWEP.ProceduralViewBobAttachment = 4
+SWEP.CamAttachment = 4
 
 SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.5

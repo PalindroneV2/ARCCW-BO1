@@ -22,10 +22,10 @@ SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_chinalake.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(0, 3, -6),
-    ang        =    Angle(-6, 0, 180),
+    pos        =    Vector(2, 5, -6),
+    ang        =    Angle(-16, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   1
+    scale   =  0.8
 }
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_chinalake.mdl"
 SWEP.ViewModelFOV = 60
@@ -91,6 +91,8 @@ SWEP.ShellScale = 1.5
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
+SWEP.ProceduralViewBobAttachment = 4
+SWEP.CamAttachment = 4
 
 SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.75
