@@ -8,7 +8,7 @@ SWEP.TrueName = "Ithaca 37 Stakeout"
 SWEP.Trivia_Class = "Shotgun"
 SWEP.Trivia_Desc = "12 gauge pump-action shotgun initially designed for sporting use later adopted by the US Military and used throughout WW2, Korea and especially Vietnam. Also used by a large number of police forces across the US."
 SWEP.Trivia_Manufacturer = "Ithaca"
-SWEP.Trivia_Calibre = "12 Gauge"
+SWEP.Trivia_Calibre = "12x70mm"
 SWEP.Trivia_Mechanism = "Pump-Action"
 SWEP.Trivia_Country = "Italy"
 SWEP.Trivia_Year = 1937
@@ -42,7 +42,7 @@ SWEP.MuzzleVelocity = 150 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
-SWEP.TracerCol = Color(255, 25, 25)
+SWEP.TracerCol = Color(255, 175, 25)
 SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.

@@ -8,7 +8,7 @@ SWEP.TrueName = "HK416"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "An improved modification of the M4A1 Carbine by HK. Used by the USMC as a replacement for the M4A1 and M16A4 assault rifles and in a machine gun configuration with a heavier, longer barrel to replace the belt-fed M249 SAW."
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
-SWEP.Trivia_Calibre = "5,56x45mm NATO" --"5,45x39mm"
+SWEP.Trivia_Calibre = "5.56x45mm NATO" --"5,45x39mm"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "Germany"
 SWEP.Trivia_Year = 2004
@@ -444,8 +444,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.M27_MagOut", t = 21 / 35},
-            {s = "ArcCW_BO2.M27_MagIn", t = 50 / 35},
+            {s = "ArcCW_BO2.M27_MagOut", t = 11 / 35},
+            {s = "ArcCW_BO2.M27_MagIn", t = 40 / 35},
         },
     },
     ["reload_empty"] = {
@@ -458,9 +458,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.M27_MagOut", t = 21 / 35},
-            {s = "ArcCW_BO2.M27_MagIn", t = 50 / 35},
-            {s = "ArcCW_BO2.M27_Charge", t = 65 / 35},
+            {s = "ArcCW_BO2.M27_MagOut", t = 11 / 35},
+            {s = "ArcCW_BO2.M27_MagIn", t = 40 / 35},
+            {s = "ArcCW_BO2.M27_Charge", t = 55 / 35},
             --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
         },
     },
@@ -518,8 +518,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.M27_MagOut", t = 21 / 35},
-            {s = "ArcCW_BO2.M27_MagIn", t = 50 / 35},
+            {s = "ArcCW_BO2.M27_MagOut", t = 11 / 35},
+            {s = "ArcCW_BO2.M27_MagIn", t = 40 / 35},
         },
     },
     ["reload_empty_m203"] = {
@@ -532,9 +532,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.M27_MagOut", t = 21 / 35},
-            {s = "ArcCW_BO2.M27_MagIn", t = 50 / 35},
-            {s = "ArcCW_BO2.M27_Charge", t = 65 / 35},
+            {s = "ArcCW_BO2.M27_MagOut", t = 11 / 35},
+            {s = "ArcCW_BO2.M27_MagIn", t = 40 / 35},
+            {s = "ArcCW_BO2.M27_Charge", t = 55 / 35},
             --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
         },
     },
@@ -646,8 +646,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.M27_MagOut", t = 21 / 35},
-            {s = "ArcCW_BO2.M27_MagIn", t = 50 / 35},
+            {s = "ArcCW_BO2.M27_MagOut", t = 11 / 35},
+            {s = "ArcCW_BO2.M27_MagIn", t = 40 / 35},
         },
     },
     ["reload_empty_grip"] = {
@@ -660,9 +660,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.M27_MagOut", t = 21 / 35},
-            {s = "ArcCW_BO2.M27_MagIn", t = 50 / 35},
-            {s = "ArcCW_BO2.M27_Charge", t = 65 / 35},
+            {s = "ArcCW_BO2.M27_MagOut", t = 11 / 35},
+            {s = "ArcCW_BO2.M27_MagIn", t = 40 / 35},
+            {s = "ArcCW_BO2.M27_Charge", t = 55 / 35},
             --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
         },
     },

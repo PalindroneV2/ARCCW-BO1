@@ -8,7 +8,7 @@ SWEP.TrueName = "Colt M16A1"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "After the failure of the M14 rifle, the United States Military finally decided to adopt a rifle using intermediate rounds. The AR-15 platform was adopted as the next standard infantry rifle for the US Military."
 SWEP.Trivia_Manufacturer = "Mustang Firearms Ltd."
-SWEP.Trivia_Calibre = "5,56x45mm NATO"
+SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "United States of America"
 SWEP.Trivia_Year = 1959
@@ -84,6 +84,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 SWEP.FirstShootSound = "ArcCW_BO1.M16_Fire"
 SWEP.ShootSound = "ArcCW_BO1.M16_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
+SWEP.DistantShootSound = "weapons/arccw/bo1_m16/ringoff_f.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"

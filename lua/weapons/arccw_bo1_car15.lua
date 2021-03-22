@@ -8,7 +8,7 @@ SWEP.TrueName = "Colt Commando"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "The Colt Commando is a name for a family of carbine variants of the M16 rifle which would eventually evolve into the M4. Created for spec-ops unit MACV-SOG."
 SWEP.Trivia_Manufacturer = "Mustang Firearms Ltd."
-SWEP.Trivia_Calibre = "5,56x45mm NATO"
+SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "United States of America"
 SWEP.Trivia_Year = 1964
@@ -87,6 +87,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 SWEP.FirstShootSound = "ArcCW_BO1.M16_Fire"
 SWEP.ShootSound = "ArcCW_BO1.M16_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
+SWEP.DistantShootSound = "weapons/arccw/bo1_m16/ringoff_f.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -596,7 +597,7 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 0.5},
+            {s = "ArcCW_BO1.M16_MagOut", t = 0.15},
             {s = "ArcCW_BO1.M16_MagIn", t = 1.25}
         },
     },
@@ -610,7 +611,7 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 0.5},
+            {s = "ArcCW_BO1.M16_MagOut", t = 0.15},
             {s = "ArcCW_BO1.M16_MagIn", t = 1.25},
             {s = "ArcCW_BO1.M16_Button", t = 1.75}
         },

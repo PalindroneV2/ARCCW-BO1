@@ -1,7 +1,7 @@
 "VertexLitGeneric"
 {
 	$basetexture	"models\weapons\bo1\bo1_acogs\longscope_lens_c"
-//	"$translucent" "1"
+//	"$translucent" "0"
 	$bumpmap	"models\weapons\bo1\bo1_acogs\acog_lens_n"
 	
 	"$envmap" "env_cubemap"

@@ -8,7 +8,7 @@ SWEP.TrueName = "Stoner 63"
 SWEP.Trivia_Class = "Light Machine Gun"
 SWEP.Trivia_Desc = "Versatile modular weapon system to server purposes as assault rifle, light machine gun, carbine, etc. Designed by Eugene Stoner who had previously deisgned the AR-15 rifle."
 SWEP.Trivia_Manufacturer = "Knight's Armament Company"
-SWEP.Trivia_Calibre = "5,56x45mm NATO"
+SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1963
@@ -77,6 +77,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_BO1.Stoner_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
+SWEP.DistantShootSound = "weapons/arccw/bo1_m16/ringoff_f.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
