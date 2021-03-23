@@ -2,7 +2,7 @@
 {
 	"$basetexture" "models/weapons/bo1/bo1_mk/mk_c"
 	//$color2 "[0.5 0.5 0.5]"
-	$blendtintbybasealpha  "1"
+	$blendtintbybasealpha  1
 	"$bumpmap" "models/weapons/bo1/bo1_mk/mk_n"
 
 	$phong                      		1

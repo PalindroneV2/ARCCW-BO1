@@ -11,7 +11,7 @@ SWEP.Trivia_Desc = "American revolver used by the US Army during the Civil War a
 SWEP.Trivia_Manufacturer = "Remington"
 SWEP.Trivia_Calibre = ".44 Percussion"
 SWEP.Trivia_Mechanism = "SA/DA"
-SWEP.Trivia_Country = "USSR"
+SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1858
 SWEP.Slot = 1
 
@@ -98,7 +98,7 @@ SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 3 -- which attachment to put the case effect on
-SWEP.ProceduralViewBobAttachment = 2
+SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 2
 
 SWEP.SightTime = 0.175

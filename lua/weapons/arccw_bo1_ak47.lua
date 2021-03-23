@@ -94,7 +94,7 @@ SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
-SWEP.ProceduralViewBobAttachment = 4
+SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 4
 
 SWEP.SpeedMult = 0.95
@@ -113,7 +113,7 @@ SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
     Pos = Vector(-2.55, -2, 0.65),
-    Ang = Angle(0.3, 0, 0),
+    Ang = Angle(0.3, 0.025, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight

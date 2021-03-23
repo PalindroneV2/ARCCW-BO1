@@ -95,7 +95,7 @@ SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
-SWEP.ProceduralViewBobAttachment = 4
+SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 4
 
 SWEP.SpeedMult = 0.95
@@ -115,8 +115,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.52, -3.5, 1.05),
-    Ang = Angle(-0.15, 0, 0.15),
+    Pos = Vector(-2.555, -3, 1.05),
+    Ang = Angle(-0.15, -0.05, 0.15),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -218,7 +218,7 @@ SWEP.Attachments = {
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0.5, 0, 0),
-        MergeSlots = {13,14}
+        MergeSlots = {14, 15}
     }, --1
     {
         PrintName = "Muzzle",
@@ -302,6 +302,11 @@ SWEP.Attachments = {
         Slot = {"bo1_perk"}
     }, --11
     {
+        PrintName = "Furniture",
+        DefaultAttName = "Standard Wood",
+        Slot = {"bo1_cosmetic_ak"},
+    }, --12
+    {
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
@@ -312,8 +317,8 @@ SWEP.Attachments = {
             wpos = Vector(5.25, 1.5, -3.25),
             wang = Angle(-175, -175, 0)
         },
-    }, --12
-    { --13
+    }, --13
+    { --14
         Hidden = true,
         Slot = "bo1_cobra",
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
@@ -378,6 +383,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local bake = wep.Attachments[8].Installed == "ammo_ak_74"
     local light = wep.Attachments[7].Installed == "bo1_light_stock"
     local solid = wep.Attachments[7].Installed == "bo1_solid_stock"
+    local black = wep.Attachments[12].Installed == "bo1_cosmetic_ak_plastic"
 
     if bake then vm:SetBodygroup(1, 1) end
 
@@ -388,7 +394,13 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     else vm:SetBodygroup(5, 0)
     end
 
-    if papcamo then return vm:SetSkin(2) end
+    if black and !papcamo then
+        return vm:SetSkin(1)
+    elseif !black and papcamo then
+        return vm:SetSkin(2)
+    elseif black and papcamo then
+        return vm:SetSkin(2)
+    end
 end
 
 SWEP.Hook_GetShootSound = function(wep, sound)

@@ -4,7 +4,7 @@
     $bumpmap   "models/weapons/bo1/bo1_l96/awm_n"
 	$detail "models/weapons/bo1/l96_od"
 	$detailblendmode 2
-	$detailblendfactor 0.5
+	$detailblendfactor 0.25
     
 	$phong                      		1
 	$phongexponent                      "20"

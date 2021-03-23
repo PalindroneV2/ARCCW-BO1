@@ -86,7 +86,7 @@ SWEP.ShellScale = 1.4
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
-SWEP.ProceduralViewBobAttachment = 4
+SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 4
 
 SWEP.Recoil = 0.8
@@ -280,7 +280,7 @@ SWEP.Hook_NameChange = function(wep, name)
     local pap = wep.Attachments[10].Installed == "ammo_papunch"
 
     if pap then
-        return "Rockstar 69"
+        return "Psychotropic Thunder"
     end
 end
 

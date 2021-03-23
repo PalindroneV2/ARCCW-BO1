@@ -95,7 +95,7 @@ SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
-SWEP.ProceduralViewBobAttachment = 4
+SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 4
 
 SWEP.SpeedMult = 0.95
@@ -364,16 +364,16 @@ SWEP.Hook_NameChange = function(wep, name)
         return "HK MP5SD3"
     elseif !pap and mp5a2 and mp5sd then
         return "HK MP5SD2"
-    elseif !pap and mp5a2 and !mp5sd then
+    elseif !pap and mp5a2 and !mp5sd and !mp5k then
         return "HK MP5A2"
     elseif pap and mp5a2 and mp5sd then
-        return "MP115 Kollider"
+        return "MP115 Semiramis"
     elseif pap and !mp5a2 and !mp5sd then
-        return "MP115 Kollider"
+        return "MP115 Nimrod"
     elseif pap and !mp5a2 and mp5sd then
-        return "MP115 Kollider"
+        return "MP115 Semiramis"
     elseif pap and mp5a2 and !mp5sd then
-        return "MP115 Kollider"
+        return "MP115 Nimrod"
     elseif !pap and mp5k and !mp5a2 then
         return "HK MP5K"
     elseif !pap and mp5k and mp5a2 then

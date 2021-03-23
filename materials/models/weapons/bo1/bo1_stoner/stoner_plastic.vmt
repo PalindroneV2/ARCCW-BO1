@@ -4,6 +4,9 @@ VertexlitGeneric
 	//$color2 "[0.75 0.75 0.75]"
 	$bumpmap	"models\weapons\bo1\bo1_stoner\stoner_n"
 	$blendtintbybasealpha  "1"
+	//$detail "models\weapons\bo1\ak_wood"
+	//$detailblendmode 3
+	//$detailblendfactor 1
 
 	$phong                      		1
 	$phongexponent                      "20"

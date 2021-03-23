@@ -98,7 +98,7 @@ SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
-SWEP.ProceduralViewBobAttachment = 3
+SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 3
 
 SWEP.SightTime = 0.175
@@ -119,10 +119,11 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.25,2,0.73),
-    Ang = Angle(0, -0.115, 0),
+    Pos = Vector(-2.35, 3, 0.73),
+    Ang = Angle(0, -0.075, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
+    CrosshairInSights = false,
 }
 
 SWEP.HoldtypeHolstered = "normal"

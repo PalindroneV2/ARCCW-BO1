@@ -2,7 +2,7 @@ att.PrintName = "HK53 Barrel"
 att.Icon = Material("entities/acwatt_m16a2_hg.png")
 att.Description = "Even lighter 8.3 inch inch barrel reduces sight time at the cost of reduced range, stronger recoil, and increased imprecision."
 
-att.SortOrder = 98
+att.SortOrder = 105
 
 att.Free = true
 att.AutoStats = true

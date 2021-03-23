@@ -5,7 +5,6 @@ VertexlitGeneric
 	$bumpmap	"models\weapons\bo1\bo1_m16\m16_n"
 	$blendtintbybasealpha  "1"
 
-
 	$phong                      		1
 	$phongexponent                      "20"
 	$phongboost                         "0.5"

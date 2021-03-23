@@ -95,7 +95,7 @@ SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
-SWEP.ProceduralViewBobAttachment = 3
+SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 3
 
 SWEP.SightTime = 0.175
@@ -116,7 +116,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.05, -2, 1.85),
+    Pos = Vector(-3.05, 3, 1.825),
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
@@ -154,7 +154,7 @@ SWEP.AttachmentElements = {
         },
         VMSkin = 4,
         Override_IronSightStruct = {
-            Pos = Vector(-3.045, -2, 1.6),
+            Pos = Vector(-3.045, 3, 1.5),
             Ang = Angle(1.35, 0.1, 0),
             Magnification = 1.1,
             CrosshairInSights = false,
@@ -169,8 +169,8 @@ SWEP.AttachmentElements = {
         },
         VMSkin = 4,
         Override_IronSightStruct = {
-            Pos = Vector(-3, -2, 1.5),
-            Ang = Angle(1.2, 0.25, 0),
+            Pos = Vector(-2.965, 3, 1.5),
+            Ang = Angle(0.9, 0.3, 0),
             Magnification = 1.1,
             CrosshairInSights = false,
         },

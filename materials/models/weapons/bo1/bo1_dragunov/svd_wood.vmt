@@ -5,7 +5,7 @@
 	"$bumpmap" "models/weapons/bo1/bo1_dragunov/svd_n"
 	$detail "models\weapons\bo1\bo1_ak47\ak_wood"
 	$detailblendmode		4
-	$detailblendfactor 2
+	$detailblendfactor	2
 	
 	$phong                      		1
 	$phongexponent                      "20"

@@ -1,16 +1,17 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\bo1\bo1_ak74u\ak74u_c"
-	//$color2 "[2 2 2]"
-	$bumpmap	"models\weapons\bo1\bo1_ak74u\ak74u_n"
-	$detail		"models\weapons\bo1\bo1_ak47\ak_wood"
+	$basetexture	"models\weapons\bo1\bo1_ak47\ak47_c"
+	//$color2 "[0.85 0.85 0.85]"
+	$bumpmap	"models\weapons\bo1\bo1_ak47\ak47_n"
+	$detail "models\weapons\bo1\bo1_ak47\ak_wood"
+	$detailblendmode 2
+	$detailblendfactor 0.25
 
 	$phong                      		1
 	$phongexponent                      "20"
 	$phongboost                         "0.5"
 	$phongfresnelranges         "[0 .1 0.5]"
 	$phongalbedotint             "1"
-	$detailblendmode		3
+	$detailblendmode		4
 	//$detailblendfactor 1
-
 }

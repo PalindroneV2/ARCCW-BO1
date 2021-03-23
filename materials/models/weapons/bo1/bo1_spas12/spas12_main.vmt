@@ -3,7 +3,7 @@ VertexlitGeneric
 	$basetexture	"models\weapons\bo1\bo1_spas12\spas_c"
 	//$color2 "[0.75 0.75 0.75]"
 	$bumpmap	"models\weapons\bo1\bo1_spas12\spas_n"
-
+	
 	$phong                      		1
 	$phongexponent                      "20"
 	$phongboost                         "0.5"
