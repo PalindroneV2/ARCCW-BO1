@@ -25,8 +25,8 @@ SWEP.ViewModel = "models/weapons/arccw/c_waw_mg42.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_waw_mg42.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1.025,
-    pos        =    Vector(-8, 0, -4.75),
+    scale = 1,
+    pos        =    Vector(-17.5, 1, -10.5),
     ang        =    Angle(-7, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -123,8 +123,8 @@ SWEP.IronSightStruct = {
 }
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "rpg"
-SWEP.HoldtypeSights = "rpg"
+SWEP.HoldtypeActive = "ar2"
+SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
