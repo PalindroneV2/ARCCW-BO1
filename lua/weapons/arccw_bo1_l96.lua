@@ -125,7 +125,7 @@ SWEP.SprintAng = Angle(-15, 30.016, 0)
 SWEP.HolsterPos = Vector(0.532, -6, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
 
-SWEP.CustomizePos = Vector(15, 0, -5)
+SWEP.CustomizePos = Vector(15, 3, -5)
 SWEP.CustomizeAng = Angle(15, 40, 0)
 
 SWEP.BarrelOffsetSighted = Vector(0, 0, -1)

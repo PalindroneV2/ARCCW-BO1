@@ -114,7 +114,7 @@ SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
     Pos = Vector (-3.05, -8, -0.75),
-    Ang = Angle(0.5, 0.05, 0),
+    Ang = Angle(0.4, -0.05, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -158,22 +158,6 @@ SWEP.AttachmentElements = {
                 }
             },
         },
-    },
-    ["stg44_carb"] = {
-        AttPosMods = {
-            [2] = {
-                vpos = Vector (17, 0, 1.8),
-            }
-        },
-        TrueNameChange = "StG-44C",
-        NameChange = "MKb-44C",
-        NamePriority = 3,
-    },
-    ["mp44c"] = {
-        TrueNameChange = "MP-44/9C",
-        NameChange = "VP-44/9C",
-        NamePriority = 6,
-        RequireFlags = {"stg44_carb", "9mm_mag"},
     },
     ["light_stock"] = {
         VMBodygroups = {
@@ -232,6 +216,7 @@ SWEP.Attachments = {
             vpos = Vector(22, 0, 1.8),
             vang = Angle(0, 0, 0),
         },
+        ExcludeFlags = {"sd_nomuzz"},
     },
     { --3
         PrintName = "Barrel",
@@ -328,22 +313,61 @@ SWEP.Attachments = {
     },
 }
 
+SWEP.Hook_NameChange = function(wep, name)
+    local pap = wep.Attachments[11].Installed == "ammo_papunch"
+    local mp44 = wep.Attachments[10].Installed == "ammo_stg44_9mm"
+
+    local length = wep.Attachments[3].Installed
+    local barrel = 0
+    if length == "bo3_stg44_carb" then barrel = 1
+    elseif length == "bo3_stg44_sdhg" then barrel = 0
+    elseif length == "bo3_stg44_supp" then barrel = 2
+    end
+
+    if barrel == 1 and !mp44 and !pap then
+        return "StG-44C"
+    elseif barrel == 1 and mp44 and !pap then
+        return "MP-44C/9"
+    elseif barrel == 2 and !mp44 and !pap then
+        return "StG-44SD"
+    elseif barrel == 2 and mp44 and !pap then
+        return "MP-44SD/9"
+    elseif pap then
+        return "Spatz-447+"
+    end
+end
+
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local sigh = wep.Attachments[1].Installed
     local carb = wep.Attachments[3].Installed == "bo3_stg44_carb"
+    local supp = wep.Attachments[3].Installed == "bo3_stg44_supp"
+    local sdhg = wep.Attachments[3].Installed == "bo3_stg44_sdhg"
+    local barr = carb or supp or sdhg
     local papcamo = wep.Attachments[11].Installed == "ammo_papunch"
     local waw = wep.Attachments[14].Installed == "stg44_waw_sound"
     local dods = wep.Attachments[14].Installed == "stg44_dods_sound"
 
-    if !sigh and carb then
+    if sigh and !barr then
+        vm:SetBodygroup(4, 0)
+        vm:SetBodygroup(2, 3)
+    elseif !sigh and carb then
         vm:SetBodygroup(4, 1)
         vm:SetBodygroup(2, 1)
     elseif sigh and carb then
         vm:SetBodygroup(4, 1)
+        vm:SetBodygroup(2, 3)
+    elseif sigh and sdhg then
+        vm:SetBodygroup(4, 2)
+        vm:SetBodygroup(2, 3)
+    elseif !sigh and sdhg then
+        vm:SetBodygroup(4, 2)
         vm:SetBodygroup(2, 2)
-    elseif sigh and !carb then
-        vm:SetBodygroup(4, 0)
+    elseif sigh and supp then
+        vm:SetBodygroup(4, 3)
+        vm:SetBodygroup(2, 3)
+    elseif !sigh and supp then
+        vm:SetBodygroup(4, 3)
         vm:SetBodygroup(2, 2)
     end
 
@@ -367,6 +391,8 @@ end
 
 SWEP.Hook_GetShootSound = function(wep, sound)
     if wep.Attachments[2].Installed and wep:GetBuff_Override("Silencer") then
+        return "ArcCW_BO1.M16_Sil"
+    elseif wep.Attachments[3].Installed and wep:GetBuff_Override("Silencer") then
         return "ArcCW_BO1.M16_Sil"
     end
 end

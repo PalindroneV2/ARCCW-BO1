@@ -1,8 +1,8 @@
-att.PrintName = "STG-44C"
+att.PrintName = "StG-44C Barrel"
 att.Icon = Material("entities/acwatt_m16a2_hg.png")
-att.Description = "Shorter STG-44 variant."
+att.Description = "Shorter STG-44 barrel."
 
-att.SortOrder = 98
+att.SortOrder = 100
 att.Free = true
 att.AutoStats = true
 

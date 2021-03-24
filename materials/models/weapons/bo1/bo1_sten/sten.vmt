@@ -1,8 +1,9 @@
-"VertexlitGeneric"
+VertexlitGeneric
 {
-	"$basetexture" "models/weapons/bo2/bo2_browninghp/bhp_c"
+	$basetexture	"models\weapons\bo1\bo1_sten\sten_c"
+	//$color2 "[0.75 0.75 0.75]"
+	$bumpmap	"models\weapons\bo1\bo1_sten\sten_n"
 	$blendtintbybasealpha  "1"
-	"$bumpmap" "models/weapons/bo2/bo2_browninghp/bhp_n"
 
 	$phong                      		1
 	$phongexponent                      "20"
@@ -10,4 +11,5 @@
 	$phongfresnelranges         "[0.1 0.5 0.5]"
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
+
 }
