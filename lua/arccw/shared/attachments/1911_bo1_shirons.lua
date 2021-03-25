@@ -14,3 +14,5 @@ att.Desc_Cons = {
 }
 att.Slot = "m1911_irons"
 att.ActivateElements = {"m1911_shnovak"}
+
+att.ColtNickel = true

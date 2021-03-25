@@ -9,6 +9,8 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = {"ammo_pap"}
 
+att.PackAPunch = true
+
 att.MagExtender = true
 att.ActivateElements = {"extendedmag"}
 

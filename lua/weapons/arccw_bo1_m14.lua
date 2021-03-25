@@ -385,9 +385,16 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 0.5,
+        Time = 1,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
+    ["holster"] = {
+        Source = "holster",
+        Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.2,
         LHIKOut = 0.25,
     },
     ["ready"] = {
@@ -462,7 +469,17 @@ SWEP.Animations = {
     },
     ["draw_grip"] = {
         Source = "pullout_grip",
-        Time = 0.5,
+        Time = 1,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
+    ["holster_grip"] = {
+        Source = "holster_grip",
+        Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
     },
     ["ready_grip"] = {
         Source = "first_draw_grip",
@@ -533,7 +550,17 @@ SWEP.Animations = {
     },
     ["draw_gl"] = {
         Source = "draw_gl",
-        Time = 0.5,
+        Time = 1,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
+    ["holster_gl"] = {
+        Source = "holster_gl",
+        Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
     },
     ["ready_gl"] = {
         Source = "first_draw_gl",
@@ -604,7 +631,17 @@ SWEP.Animations = {
     },
     ["draw_mk"] = {
         Source = "draw_mk",
-        Time = 0.5,
+        Time = 1,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
+    ["holster_mk"] = {
+        Source = "holster_mk",
+        Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
     },
     ["ready_mk"] = {
         Source = "first_draw_mk",

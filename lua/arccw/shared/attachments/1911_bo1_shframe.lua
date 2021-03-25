@@ -16,3 +16,5 @@ att.Slot = "m1911_frame"
 att.Free = true
 
 att.ActivateElements = {"m1911_shframe"}
+
+att.ColtNickel = true

@@ -23,6 +23,8 @@ att.Override_Firemodes = {
   },
 }
 
+att.PackAPunch = true
+
 att.MagExtender = true
 att.ActivateElements = {"extendedmag"}
 att.GivesFlags = {"spas12_pap"}

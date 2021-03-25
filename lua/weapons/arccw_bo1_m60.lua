@@ -300,10 +300,23 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 41 / 30,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,s
+    },
+    ["holster"] = {
+        Source = "holster",
+        Time = 41 / 30,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
     },
     ["ready"] = {
         Source = "first_draw",
         Time = 41 / 30,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
     },
     ["fire"] = {
         Source = {"fire"},
@@ -330,8 +343,8 @@ SWEP.Animations = {
         Framerate = 37,
         Checkpoints = {28, 38, 69},
         LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO1.M60_Charge", t = 17 / 35},
             {s = "ArcCW_BO1.M60_Charge", t = 20 / 35},
@@ -389,10 +402,23 @@ SWEP.Animations = {
     ["draw_grip"] = {
         Source = "draw_grip",
         Time = 41 / 30,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+    },
+    ["holster_grip"] = {
+        Source = "holster_grip",
+        Time = 30 / 30,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
     },
     ["ready_grip"] = {
         Source = "draw_grip",
         Time = 41 / 30,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
     },
     ["fire_grip"] = {
         Source = {"fire_grip"},

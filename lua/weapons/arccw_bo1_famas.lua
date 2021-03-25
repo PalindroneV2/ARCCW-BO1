@@ -332,16 +332,23 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 0.5,
+        Time = 1,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
+    ["holster"] = {
+        Source = "holster",
+        Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.2,
         LHIKOut = 0.25,
     },
     ["ready"] = {
         Source = "first_draw",
         Time = 1.5,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
             {s = "ArcCW_BO1.FAMAS_Back", t = 22 / 35},
@@ -409,9 +416,16 @@ SWEP.Animations = {
     },
     ["draw_m203"] = {
         Source = "draw_gl",
-        Time = 0.5,
+        Time = 1,
         LHIK = true,
         LHIKIn = 0,
+        LHIKOut = 0.25,
+    },
+    ["holster_m203"] = {
+        Source = "holster_gl",
+        Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.2,
         LHIKOut = 0.25,
     },
     ["ready_m203"] = {
@@ -539,9 +553,16 @@ SWEP.Animations = {
     },
     ["draw_mk"] = {
         Source = "draw_mk",
-        Time = 0.5,
+        Time = 1,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
+    ["holster_mk"] = {
+        Source = "holster_mk",
+        Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.2,
         LHIKOut = 0.25,
     },
     ["ready_mk"] = {

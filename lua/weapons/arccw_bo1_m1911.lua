@@ -122,7 +122,7 @@ SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
     Pos = Vector(-2.575, 3, 1),
-    Ang = Angle(0.125, -0.15, 0),
+    Ang = Angle(0.125, -0.2, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -328,15 +328,6 @@ SWEP.AttachmentElements = {
             }
         },
     },
-    /*["akimboflag"] = {
-        VMOverride = "models/weapons/arccw/c_bo1_1911.mdl",
-        VMBodygroups = {
-            {ind = 0, bg = 1},
-            {ind = 1, bg = 1},
-            {ind = 2, bg = 0},
-            {ind = 3, bg = 2},
-        },
-    },*/
 }
 
 SWEP.ExtraSightDist = 2
@@ -430,6 +421,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[6].Installed == "ammo_papunch"
     local papcamo2 = wep.Attachments[6].Installed == "ammo_1911_pap"
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local nick = wep:GetBuff_Override("ColtNickel")
     local bo2sound = wep.Attachments[9].Installed == "1911_bo2_sound"
     local comp = wep.Attachments[10].Installed == "1911_bo3_comp"
     local barrel = wep.Attachments[1].Installed
@@ -458,12 +451,16 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(4, 3)
     end
 
-    if papcamo then
-        return vm:SetSkin(1)
-    elseif papcamo2 and !bo2sound then
-        return vm:SetSkin(1)
-    elseif papcamo2 and bo2sound then
+    if papcamo and !bo2sound and !nick then
         return vm:SetSkin(2)
+    elseif papcamo and bo2sound and !nick then
+        return vm:SetSkin(2)
+    elseif papcamo2 and !bo2sound and !nick then
+        return vm:SetSkin(1)
+    elseif papcamo2 and bo2sound and !nick then
+        return vm:SetSkin(1)
+    elseif pap and nick then
+        return vm:SetSkin(3)
     end
 end
 
@@ -490,18 +487,44 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
         Time = 1 / 30,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
     },
     ["idle_empty"] = {
         Source = "idle_empty",
         Time = 1 / 30,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 0.5,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
     },
     ["draw"] = {
         Source = "draw",
         Time = 0.5,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
+    ["holster"] = {
+        Source = "holster",
+        Time = 0.5,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
+    ["holster_empty"] = {
+        Source = "holster_empty",
+        Time = 0.5,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
     },
     ["ready"] = {
         Source = "first_draw",

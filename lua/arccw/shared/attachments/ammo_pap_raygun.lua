@@ -10,6 +10,8 @@ att.AutoStats = true
 att.Slot = {"ammo_raygun_pap"}
 att.GivesFlags = {"papraygun"}
 
+att.PackAPunch = true
+
 att.MagExtender = true
 
 att.SortOrder = 100

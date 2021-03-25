@@ -16,3 +16,5 @@ att.Desc_Cons = {
 }
 att.Slot = "m1911_frame"
 att.ActivateElements = {"m1911_hdframen"}
+
+att.ColtNickel = true

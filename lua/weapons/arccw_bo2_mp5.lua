@@ -489,9 +489,16 @@ SWEP.Animations = {
         LHIKIn = 0.25,
         LHIKOut = 0.25,
     },
+    ["holster"] = {
+        Source = "holster",
+        Time = 30 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
+    },
     ["draw_stock"] = {
         Source = "first_draw_stock",
-        Time = 30 / 30,
+        Time = 15 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
@@ -580,7 +587,14 @@ SWEP.Animations = {
     },
     ["draw_sil"] = {
         Source = "draw_sil",
-        Time = 1,
+        Time = 15 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
+    },
+    ["holster_sil"] = {
+        Source = "holster_sil",
+        Time = 15 / 30,
         LHIK = true,
         LHIKIn = 0.25,
         LHIKOut = 0.25,
@@ -654,13 +668,20 @@ SWEP.Animations = {
     },
     ["draw_stock_sil"] = {
         Source = "first_draw_sil_stock",
-        Time = 1,
+        Time = 15 / 30,
         LHIK = true,
         LHIKIn = 0.25,
         LHIKOut = 0.25,
         SoundTable = {
             {s = "ArcCW_BO1.MP5_BoltFwd", t = 15 / 30}
         },
+    },
+    ["holster_stock_sil"] = {
+        Source = "holster_sil",
+        Time = 30 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
     },
     ["ready_stock_sil"] = {
         Source = "first_draw_sil_stock",
@@ -819,9 +840,9 @@ SWEP.Animations = {
         Source = "idle_sil",
         Time = 3 / 30,
     },
-    ["draw_sil"] = {
-        Source = "first_draw_sil_quick",
-        Time = 1,
+    ["draw_sil_quick"] = {
+        Source = "draw_sil",
+        Time = 15 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
@@ -829,8 +850,15 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.MP5_BoltFwd", t = 15 / 30}
         },
     },
-    ["ready_sil"] = {
-        Source = "first_draw_sil_quick",
+    ["holster_sil_quick"] = {
+        Source = "holster_sil",
+        Time = 15 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
+    },
+    ["ready_sil_quick"] = {
+        Source = "first_draw_sil",
         Time = 1.5,
         LHIK = true,
         LHIKIn = 0,
@@ -899,6 +927,16 @@ SWEP.Animations = {
     },
     ["draw_stock_sil_quick"] = {
         Source = "first_draw_sil_stock",
+        Time = 1,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
+        SoundTable = {
+            {s = "ArcCW_BO1.MP5_BoltFwd", t = 15 / 30},
+        },
+    },
+    ["holster_stock_sil_quick"] = {
+        Source = "holster_sil",
         Time = 1,
         LHIK = true,
         LHIKIn = 0.25,
@@ -978,7 +1016,14 @@ SWEP.Animations = {
     },
     ["draw_grip"] = {
         Source = "draw_grip",
-        Time = 30 / 30,
+        Time = 15 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
+    },
+    ["holster_grip"] = {
+        Source = "holster_grip",
+        Time = 15 / 30,
         LHIK = true,
         LHIKIn = 0.25,
         LHIKOut = 0.25,

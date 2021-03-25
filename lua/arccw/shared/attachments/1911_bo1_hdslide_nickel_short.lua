@@ -14,3 +14,5 @@ att.Desc_Cons = {
 }
 att.Slot = "m1911_irons"
 att.ActivateElements = {"short_hdsliden"}
+
+att.ColtNickel = true

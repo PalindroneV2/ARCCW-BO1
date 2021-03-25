@@ -261,6 +261,13 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.MK_Fwd", t = 23 / 30}
         },
     },
+    ["holster"] = {
+        Source = "holster",
+        Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
     ["ready"] = {
         Source = "first_draw",
         Time = 1,

@@ -301,17 +301,24 @@ SWEP.Animations = {
         Source = "draw",
         Time = 0.5,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
             {s = "ArcCW_BO1.MPL_Futz", t = 1 / 30},
         },
     },
+    ["holster"] = {
+        Source = "holster",
+        Time = 0.5,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
     ["draw_grip"] = {
         Source = "first_draw_grip",
         Time = 1,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
             {s = "ArcCW_BO1.MPL_Futz", t = 15 / 30},
@@ -319,19 +326,19 @@ SWEP.Animations = {
     },
     ["draw_grip_quick"] = {
         Source = "first_draw_grip",
-        Time = 1,
+        Time = 1.5,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.MPL_Futz", t = 15 / 30},
+            {s = "ArcCW_BO1.MPL_Futz", t = 30 / 30},
         },
     },
     ["ready"] = {
         Source = "first_draw",
         Time = 40 / 30,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
             {s = "ArcCW_BO1.MPL_BoltBack", t = 10 / 30},
@@ -340,20 +347,22 @@ SWEP.Animations = {
     },
     ["ready_grip"] = {
         Source = "first_draw_grip",
-        Time = 40 / 30,
+        Time = 45 / 30,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
+            {s = "ArcCW_BO1.MPL_Futz", t = 30 / 30},
         },
     },
     ["ready_grip_quick"] = {
         Source = "first_draw_grip",
         Time = 40 / 30,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
+            {s = "ArcCW_BO1.MPL_Futz", t = 30 / 30},
         },
     },
     ["fire"] = {

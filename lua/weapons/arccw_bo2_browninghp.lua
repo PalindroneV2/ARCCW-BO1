@@ -241,6 +241,14 @@ SWEP.Animations = {
         Source = "draw",
         Time = 0.5,
     },
+    ["holster"] = {
+        Source = "holster",
+        Time = 0.5,
+    },
+    ["holster_empty"] = {
+        Source = "holster_empty",
+        Time = 0.5,
+    },
     ["ready"] = {
         Source = "first_draw",
         Time = 1,

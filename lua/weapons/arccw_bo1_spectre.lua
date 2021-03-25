@@ -292,6 +292,13 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.MPL_Futz", t = 1 / 30},
         },
     },
+    ["holster"] = {
+        Source = "holster",
+        Time = 0.5,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
     ["draw_stock"] = {
         Source = "first_draw_stock",
         Time = 1,
@@ -302,6 +309,13 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.MPL_Futz", t = 15 / 30},
         },
     },
+    ["holster_stock"] = {
+        Source = "holster",
+        Time = 0.5,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
     ["draw_stock_ext"] = {
         Source = "first_draw_stock",
         Time = 1,
@@ -311,6 +325,13 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO1.MPL_Futz", t = 15 / 30},
         },
+    },
+    ["holster_stock_ext"] = {
+        Source = "holster",
+        Time = 0.5,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
     },
     ["ready"] = {
         Source = "first_draw",
@@ -379,20 +400,6 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.MPL_MagIn", t = 51 / 30}
         },
     },
-    ["reload_ext"] = {
-        Source = "reload_ext",
-        Time = 80 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 35,
-        Checkpoints = {16, 57},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-        SoundTable = {
-            {s = "ArcCW_BO1.MPL_MagOut", t = 16 / 30},
-            {s = "ArcCW_BO1.MPL_MagIn", t = 51 / 30}
-        },
-    },
     ["reload_stock_ext"] = {
         Source = "reload_ext",
         Time = 80 / 35,
@@ -409,22 +416,6 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 108 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 35,
-        Checkpoints = {16, 57, 77},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-        SoundTable = {
-            {s = "ArcCW_BO1.MPL_MagOut", t = 16 / 35},
-            {s = "ArcCW_BO1.MPL_MagIn", t = 51 / 35},
-            {s = "ArcCW_BO1.MPL_BoltBack", t = 74 / 35},
-            {s = "ArcCW_BO1.MPL_BoltFwd", t = 80 / 35},
-        },
-    },
-    ["reload_empty_ext"] = {
-        Source = "reload_empty_ext",
         Time = 108 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 35,

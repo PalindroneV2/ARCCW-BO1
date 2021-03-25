@@ -12,6 +12,8 @@ att.Slot = {"ammo_1911_pap"}
 att.MagReducer = true
 att.ActivateElements = {"reducedmag"}
 
+att.PackAPunch = true
+
 att.SortOrder = 101
 att.Mult_Damage = 2.5
 att.Mult_DamageMin = 2.5

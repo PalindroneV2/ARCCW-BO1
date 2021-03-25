@@ -282,13 +282,33 @@ SWEP.Animations = {
         Source = "idle_empty",
         Time = 1 / 30,
     },
+    ["draw"] = {
+        Source = "draw",
+        Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
+    },
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 0.5,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
     },
-    ["draw"] = {
-        Source = "draw",
+    ["holster"] = {
+        Source = "holster",
         Time = 0.5,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
+    },
+    ["holster_empty"] = {
+        Source = "holster_empty",
+        Time = 0.5,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
     },
     ["ready"] = {
         Source = "first_draw",

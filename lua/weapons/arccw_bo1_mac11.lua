@@ -285,6 +285,13 @@ SWEP.Animations = {
         Source = "idle_stock",
         Time = 3 / 30,
     },
+    ["holster"] = {
+        Source = "holster",
+        Time = 0.5,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
     ["draw"] = {
         Source = "draw",
         Time = 0.5,

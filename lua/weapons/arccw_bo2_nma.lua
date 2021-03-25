@@ -203,10 +203,20 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Animations = {
-    ["idle"] = false,
+    ["idle"] = {
+        Source = "idle",
+        Time = 1 / 30,
+    },
     ["draw"] = {
         Source = "draw",
         Time = 30 / 30,
+    },
+    ["holster"] = {
+        Source = "holster",
+        Time = 24 / 30,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
     },
     ["ready"] = {
         Source = "first_draw",

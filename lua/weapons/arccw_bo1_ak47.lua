@@ -437,9 +437,16 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 0.5,
+        Time = 1,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
+    ["holster"] = {
+        Source = "holster",
+        Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.2,
         LHIKOut = 0.25,
     },
     ["ready"] = {
@@ -513,9 +520,16 @@ SWEP.Animations = {
     },
     ["draw_m203"] = {
         Source = "draw_gl",
-        Time = 0.5,
+        Time = 1,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
+    ["holster_m203"] = {
+        Source = "holster_m203",
+        Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.2,
         LHIKOut = 0.25,
     },
     ["ready_m203"] = {
@@ -641,9 +655,16 @@ SWEP.Animations = {
     },
     ["draw_mk"] = {
         Source = "draw_mk",
-        Time = 0.5,
+        Time = 1,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
+    ["holster_mk"] = {
+        Source = "holster_mk",
+        Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.2,
         LHIKOut = 0.25,
     },
     ["ready_mk"] = {

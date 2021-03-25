@@ -15,3 +15,5 @@ att.Slot = "m1911_irons"
 att.Free = true
 
 att.ActivateElements = {"m1911_shslide"}
+
+att.ColtNickel = true
