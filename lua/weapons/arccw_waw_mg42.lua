@@ -86,9 +86,10 @@ SWEP.MagID = "mg42" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.FirstShootSound = "ArcCW_BO1.HK21_Fire"
-SWEP.ShootSound = "ArcCW_BO1.HK21_Fire"
+SWEP.FirstShootSound = "ArcCW_WAW.MG42_Fire"
+SWEP.ShootSound = "ArcCW_WAW.MG42_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
+SWEP.DistantShootSound = "weapons/arccw/waw_dist/waw_mg.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_smg"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"

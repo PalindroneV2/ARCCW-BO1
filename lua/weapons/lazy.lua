@@ -1,0 +1,2 @@
+-- {"weapons/arccw/bo1_generic_sniper/ringoff/1/ring_00.wav", "weapons/arccw/bo1_generic_sniper/ringoff/1/ring_01.wav", "weapons/arccw/bo1_generic_sniper/ringoff/1/ring_02.wav", "weapons/arccw/bo1_generic_sniper/ringoff/2/ring_00.wav", "weapons/arccw/bo1_generic_sniper/ringoff/2/ring_01.wav", "weapons/arccw/bo1_generic_sniper/ringoff/2/ring_02.wav"}
+-- leave this here for now until i can find any gun that uses these particular sounds, too lazy to rewrite this later

@@ -1909,6 +1909,59 @@ sound.Add( {
     }
 } )
 
+--- MG42 Main ---
+
+sound.Add( {
+    name = "ArcCW_WAW.MG42_Fire",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_mg42/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.MG42_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_mg42/mag_in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.MG42_MagTap",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_mg42/mag_tap.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.MG42_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_mg42/mag_out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.MG42_Bolt",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_mg42/bolt_fwd.wav",
+    }
+} )
+
 -- RAYGUN --
 
 sound.Add({

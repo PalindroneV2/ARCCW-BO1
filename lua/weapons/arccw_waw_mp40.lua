@@ -86,6 +86,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 SWEP.FirstShootSound = "ArcCW_WAW.MP40_Fire"
 SWEP.ShootSound = "ArcCW_WAW.MP40_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.M1911_Sil"
+SWEP.DistantShootSound = "weapons/arccw/waw_dist/waw_9mm.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_smg"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
@@ -304,7 +305,7 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_WAW.MP40_MagOut", t = 19 / 30},
+            {s = "ArcCW_WAW.MP40_MagOut", t = 18 / 30},
             {s = "ArcCW_WAW.MP40_MagIn", t = 61 / 30}
         },
     },
@@ -318,9 +319,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_WAW.MP40_MagOut", t = 19 / 35},
-            {s = "ArcCW_WAW.MP40_MagIn", t = 61 / 35},
-            {s = "ArcCW_WAW.MP40_Bolt", t = 82 / 35},
+            {s = "ArcCW_WAW.MP40_MagOut", t = 18 / 30},
+            {s = "ArcCW_WAW.MP40_MagIn", t = 61 / 30},
+            {s = "ArcCW_WAW.MP40_Bolt", t = 80 / 30},
         },
     },
     /*

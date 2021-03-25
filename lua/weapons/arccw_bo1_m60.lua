@@ -86,6 +86,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 SWEP.FirstShootSound = "ArcCW_BO1.M60_Fire"
 SWEP.ShootSound = "ArcCW_BO1.M60_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
+SWEP.DistantShootSound = nil
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -308,11 +309,19 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 7 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            { s = "weapons/arccw/bo1_m60/lfe_00.wav", t = 0 },
+            { s = "weapons/arccw/bo1_m60/act_00.wav", t = 0 },
+        }
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            { s = "weapons/arccw/bo1_m60/lfe_00.wav", t = 0 },
+            { s = "weapons/arccw/bo1_m60/act_00.wav", t = 0 },
+        }
     },
     ["reload"] = {
         Source = "reload",
@@ -389,11 +398,13 @@ SWEP.Animations = {
         Source = {"fire_grip"},
         Time = 9 / 30,
         ShellEjectAt = 0,
+        SoundTable = {{ s = "weapons/arccw/bo1_m60/lfe_00.wav", t = 0 }},
     },
     ["fire_iron_grip"] = {
         Source = {"fire_ads_grip"},
         Time = 9 / 30,
         ShellEjectAt = 0,
+        SoundTable = {{ s = "weapons/arccw/bo1_m60/lfe_00.wav", t = 0 }},
     },
     ["reload_grip"] = {
         Source = "reload_grip",
