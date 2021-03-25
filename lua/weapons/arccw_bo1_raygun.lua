@@ -237,8 +237,8 @@ SWEP.Animations = {
         Time = 120 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
-        LHIKIn = 1,
-        LHIKOut = 0.75,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO1.RayGun_Open", t = 11 / 30},
             {s = "ArcCW_BO1.RayGun_Out", t = 38 / 30},
@@ -251,8 +251,8 @@ SWEP.Animations = {
         Time = 120 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
-        LHIKIn = 1,
-        LHIKOut = 0.75,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO1.RayGun_Open", t = 11 / 30},
             {s = "ArcCW_BO1.RayGun_Out", t = 38 / 30},

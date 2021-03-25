@@ -265,14 +265,17 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 end
 
-SWEP.Hook_TranslateAnimation = function(wep, anim, data)
+/*SWEP.Hook_TranslateAnimation = function(wep, anim, data)
     if wep:Clip1() == 0 then
         return anim .. "_empty"
     end
-end
+end*/
 
 SWEP.Animations = {
-    ["idle"] = false,
+    ["idle"] = {
+        Source = "idle",
+        Time = 1 / 30,
+    },
     ["draw"] = {
         Source = "draw",
         Time = 0.5,

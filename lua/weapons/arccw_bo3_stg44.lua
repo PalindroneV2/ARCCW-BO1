@@ -408,19 +408,25 @@ SWEP.Hook_GetShootSound = function(wep, sound)
 end
 
 SWEP.Animations = {
-    ["idle"] = false,
+    ["idle"] = {
+        Source = "idle",
+        Time = 1 / 30,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+    },
     ["draw"] = {
         Source = "draw",
         Time = 0.7,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
         LHIKOut = 0.2,
     },
     ["ready"] = {
         Source = "first_draw",
         Time = 1.5,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO3.STG44_BoltBack", t = 0.1},

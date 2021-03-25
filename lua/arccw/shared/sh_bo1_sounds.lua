@@ -1560,6 +1560,13 @@ sound.Add({
     sound = "weapons/arccw/bo2_m1911/slideback.wav"
 })
 
+sound.Add({
+    name = "ArcCW_BO2.M1911_SlideFwd",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/bo2_m1911/slidefwd.wav"
+})
+
 -- P38 MAIN ---
 
 sound.Add({
