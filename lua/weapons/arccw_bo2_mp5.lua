@@ -668,12 +668,12 @@ SWEP.Animations = {
     },
     ["draw_stock_sil"] = {
         Source = "first_draw_sil_stock",
-        Time = 15 / 30,
+        Time = 30 / 30,
         LHIK = true,
         LHIKIn = 0.25,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.MP5_BoltFwd", t = 15 / 30}
+            {s = "ArcCW_BO1.MP5_BoltFwd", t = 12 / 30}
         },
     },
     ["holster_stock_sil"] = {
@@ -1032,7 +1032,7 @@ SWEP.Animations = {
         Source = "first_draw_stock",
         Time = 30 / 30,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
             {s = "ArcCW_BO1.MP5_BoltFwd", t = 15 / 30},
