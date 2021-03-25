@@ -246,7 +246,7 @@ SWEP.Animations = {
         Time = 1,
         SoundTable = {
             {s = "ArcCW_BO2.M1911_SlideBack", t = 0.2},
-            {s = "ArcCW_BO2.M1911_SlideFwd", t = 0.8}
+            {s = "ArcCW_BO2.M1911_SlideFwd", t = 0.7}
         }
     },
     ["fire"] = {

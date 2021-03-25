@@ -484,31 +484,6 @@ SWEP.Hook_TranslateAnimation = function(wep, anim, data)
     elseif eclip and !bo2 then
         return anim .. "_empty"
     end
-
-    /*if anim == "fire" and akimbo and wep.counter == 1 then
-        wep.counter = 0
-        wep.MuzzleEffectAttachment = 1
-        wep.CaseEffectAttachment = 2
-        return anim .. "_right"
-    end
-    if anim == "fire" and akimbo and wep.counter == 0 then
-        wep.counter = 1
-        wep.MuzzleEffectAttachment = 3
-        wep.CaseEffectAttachment = 4
-        return anim .. "_left"
-    end
-    if anim == "fire_iron" and akimbo and wep.counter == 1 then
-        wep.counter = 0
-        wep.MuzzleEffectAttachment = 1
-        wep.CaseEffectAttachment = 2
-        return anim .. "_right"
-    end
-    if anim == "fire_iron" and akimbo and wep.counter == 0 then
-        wep.counter = 1
-        wep.MuzzleEffectAttachment = 1
-        wep.CaseEffectAttachment = 2
-        return anim .. "_left"
-    end*/
 end
 
 SWEP.Animations = {
