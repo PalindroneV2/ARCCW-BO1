@@ -124,7 +124,7 @@ SWEP.IronSightStruct = {
     Pos = Vector(-2.575, 3, 1),
     Ang = Angle(0.125, -0.15, 0),
     Magnification = 1.1,
-    CrosshairInSights = true,
+    CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
@@ -459,7 +459,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     if papcamo then
-        return vm:SetSkin(3)
+        return vm:SetSkin(1)
     elseif papcamo2 and !bo2sound then
         return vm:SetSkin(1)
     elseif papcamo2 and bo2sound then
@@ -547,30 +547,30 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
         Time = 8 / 30,
-        ShellEjectAt = 0,
+        ShellEjectAt = 1 / 30,
     },
     ["fire_empty"] = {
         Source = "fire_last",
         Time = 8 / 30,
-        ShellEjectAt = 0,
+        ShellEjectAt = 1 / 30,
     },
     ["fire_iron"] = {
         Source = "fire_ads",
         Time = 8 / 30,
-        ShellEjectAt = 0,
+        ShellEjectAt = 1 / 30,
     },
     ["fire_iron_empty"] = {
         Source = "fire_last",
         Time = 8 / 30,
-        ShellEjectAt = 0,
+        ShellEjectAt = 1 / 30,
     },
     ["reload"] = {
         Source = "reload",
         Time = 1.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
-        LHIKIn = 1,
-        LHIKOut = 0.75,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO1.M1911_Out", t = 0.25},
             {s = "ArcCW_BO1.M1911_In", t = 1}
@@ -581,8 +581,8 @@ SWEP.Animations = {
         Time = 2,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
-        LHIKIn = 1,
-        LHIKOut = 0.75,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO1.M1911_Out", t = 0.25},
             {s = "ArcCW_BO1.M1911_In", t = 1},
@@ -594,8 +594,8 @@ SWEP.Animations = {
         Time = 1.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
-        LHIKIn = 1,
-        LHIKOut = 0.75,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO2.M1911_MagOut", t = 0.25},
             {s = "ArcCW_BO2.M1911_MagIn", t = 1}
@@ -606,8 +606,8 @@ SWEP.Animations = {
         Time = 2,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
-        LHIKIn = 1,
-        LHIKOut = 0.75,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO2.M1911_MagOut", t = 0.25},
             {s = "ArcCW_BO2.M1911_MagIn", t = 1},
@@ -638,104 +638,4 @@ SWEP.Animations = {
         Source = "sprint_out_empty",
         Time = 10 / 30
     },
-    --1911 akimbo--
-    /*
-    ["idle_akimbo"] = {
-        Source = "idle_dw_both",
-        Time = 0.5,
-    },
-    ["idle_empty_akimbo"] = {
-        Source = "idle_empty_dw",
-        Time = 0.5,
-    },
-    ["draw_akimbo"] = {
-        Source = "draw_dw_both",
-        Time = 0.5,
-    },
-    ["ready_akimbo"] = {
-        Source = "first_draw_both",
-        Time = 1,
-        SoundTable = {
-            {s = "ArcCW_BO1.M1911_Slide_Back", t = 0.2},
-            {s = "ArcCW_BO1.M1911_Slide_Fwd", t = 0.8}
-        }
-    },
-    ["fire_right"] = {
-        Source = {"fire_right"},
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_left"] = {
-        Source = {"fire_left"},
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_akimbo"] = {
-        Source = {"fire_both"},
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_empty_akimbo"] = {
-        Source = "fire_empty_both",
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_iron_akimbo"] = {
-        Source = "fire_both",
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_iron_left"] = {
-        Source = "fire_left",
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_iron_right"] = {
-        Source = "fire_right",
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_iron_empty_akimbo"] = {
-        Source = "fire_empty_both",
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },
-    ["reload_akimbo"] = {
-        Source = "reload_both",
-        Time = 1.5,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        LHIK = true,
-        LHIKIn = 1,
-        LHIKOut = 0.75,
-        SoundTable = {
-            {s = "ArcCW_BO1.M1911_Out", t = 0.25},
-            {s = "ArcCW_BO1.M1911_In", t = 1}
-        },
-    },
-    ["reload_empty_akimbo"] = {
-        Source = "reload_empty_both",
-        Time = 2,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        LHIK = true,
-        LHIKIn = 1,
-        LHIKOut = 0.75,
-        SoundTable = {
-            {s = "ArcCW_BO1.M1911_Out", t = 0.25},
-            {s = "ArcCW_BO1.M1911_In", t = 1},
-            {s = "ArcCW_BO1.M1911_Slide_Fwd", t = 1.5}
-        },
-    },
-    ["enter_sprint_akimbo"] = {
-        Source = "sprint_in",
-        Time = 10 / 30
-    },
-    ["idle_sprint_akimbo"] = {
-        Source = "sprint_loop_dw_both",
-        Time = 30 / 40
-    },
-    ["exit_sprint_akimbo"] = {
-        Source = "sprint_out",
-        Time = 10 / 30
-    },
-    */
 }

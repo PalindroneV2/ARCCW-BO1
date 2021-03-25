@@ -159,6 +159,16 @@ SWEP.AttachmentElements = {
             },
         },
     },
+    ["stg44_carb"] = {
+        AttPosMods = {
+            [2] = {
+                vpos = Vector(18, 0, 1.8),
+            },
+            [4] = {
+                vpos = Vector(10, 0, 1.2),
+            },
+        },
+    },
     ["light_stock"] = {
         VMBodygroups = {
             {ind = 3, bg = 1},
