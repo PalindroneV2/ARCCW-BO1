@@ -1761,7 +1761,7 @@ sound.Add({
     level = 70,
     sound = {
         "weapons/arccw/bo1_python/bullet1.wav",
-        "weapons/arccw/bo1_python/bullet2.wav",
+        --"weapons/arccw/bo1_python/bullet2.wav",
     }
 })
 

@@ -3,16 +3,16 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Army Sixer"
-SWEP.TrueName = "New Model Army"
+SWEP.PrintName = "Magnum Revolver"
+SWEP.TrueName = "Colt Python"
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = "American revolver used by the US Army during the Civil War and the times of the old West."
-SWEP.Trivia_Manufacturer = "Remington"
-SWEP.Trivia_Calibre = ".44 Percussion"
+SWEP.Trivia_Desc = "American revolver regarded as one of the finest of its kind. The bore gets tighter towards the end, aiding in accuracy."
+SWEP.Trivia_Manufacturer = "Colt"
+SWEP.Trivia_Calibre = ".357 Magnum"
 SWEP.Trivia_Mechanism = "SA/DA"
 SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 1858
+SWEP.Trivia_Year = 1955
 SWEP.Slot = 1
 
 if GetConVar("arccw_truenames"):GetBool() then
@@ -26,20 +26,20 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_bo2_nma.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_bo2_nma.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_bo1_python.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_bo1_python.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-9.5, 4.5, -5.5),
-    ang        =    Angle(-6, -5, 180),
+    pos        =    Vector(-8.5, 4, -4),
+    ang        =    Angle(-10, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale = 0.9
+    scale = 1
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 55
+SWEP.Damage = 60
 SWEP.DamageMin = 16 -- damage done at maximum range
-SWEP.Range = 40 -- in METRES
+SWEP.Range = 75 -- in METRES
 SWEP.Penetration = 2
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -82,8 +82,8 @@ SWEP.MoveDispersion = 130
 
 SWEP.ShootWhileSprint = false
 
-SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
-SWEP.MagID = "makarov" -- the magazine pool this gun draws from
+SWEP.Primary.Ammo = "357" -- what ammo type the gun uses
+SWEP.MagID = "coltpython" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
@@ -119,10 +119,13 @@ SWEP.ProceduralIronFire = false
 
 SWEP.CaseBones = {}
 
+SWEP.ShotgunReload = true
+
 SWEP.IronSightStruct = {
-    Pos = Vector(-4.175, 0, 0.666),
-    Ang = Angle(0.115, 0, 0),
+    Pos = Vector(-2.175, 3, 0.9),
+    Ang = Angle(-0.5, -0.05, 0),
     Magnification = 1.1,
+    CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
@@ -150,9 +153,24 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
         NamePriority = 10,
-        TrueNameChange = "Sassafras ",
-        NameChange = "Sassafras ",
+        TrueNameChange = "Cobra ",
+        NameChange = "Magma Revolt",
     },
+    ["python_snub"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 1}
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(4.5, 0, 1.5),
+            }
+        },
+    },
+    ["bo1_speedloader"] = {
+        VMBodygroups = {
+            {ind = 3, bg = 1}
+        }
+    }
 }
 
 SWEP.ExtraSightDist = 2
@@ -162,17 +180,37 @@ SWEP.RejectAttachments = {
 
 SWEP.Attachments = {
     { --1
+        PrintName = "Optic",
+        Slot = {"optic", "optic_lp"},
+        Bone = "tag_weapon",
+        VMScale = Vector(1, 1, 1),
+        WMScale = Vector(1, 1, 1),
+        Offset = {
+            vpos = Vector(6, 0, 2.85),
+            vang = Angle(0, 0, 0),
+            wpos = Vector(7.9, 2, -3.2),
+            wang = Angle(-5, -2, 177.5)
+        },
+        ExcludeFlags = {"python_snub"}
+    },
+    {
+        PrintName = "Barrel",
+        Slot = "bo1_python_barrel",
+    },
+    { --1
         PrintName = "Tactical",
         Slot = "tac_pistol",
         Bone = "tag_weapon",
         VMScale = Vector(1, 1, 1),
         WMScale = Vector(1, 1, 1),
         Offset = {
-            vpos = Vector(3.5, 0, 0.25),
+            vpos = Vector(8, 0, 1.5),
             vang = Angle(0, 0, 0),
-            wpos = Vector(7.9, 2, -3.2),
-            wang = Angle(-5, -2, 177.5)
         },
+    },
+    {
+        PrintName = "Cylinder",
+        Slot = "bo1_cylinder"
     },
     { --2
         PrintName = "Ammo Type",
@@ -190,15 +228,19 @@ SWEP.Attachments = {
             vpos = Vector(-3.5, -0.5, -1.25),
             vang = Angle(0, 0, 0),
         },
+        ExcludeFlags = {"python_snub"}
     },
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[2].Installed == "ammo_papunch"
+    local papcamo = wep.Attachments[5].Installed == "ammo_papunch"
+    local snub = wep.Attachments[2].Installed == "bo1_barrel_python_snub"
 
-    if papcamo then
+    if papcamo and !snub then
         return vm:SetSkin(2)
+    elseif papcamo and snub then
+        return vm:SetSkin(3)
     end
 end
 
@@ -220,10 +262,10 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 27 / 30,
+        Time = 60 / 30,
         SoundTable = {
-            {s = "ArcCW_BO1.Makarov_Slide_Back", t = 16 / 30},
-            {s = "ArcCW_BO1.Makarov_Slide_Fwd", t = 21 / 30}
+            {s = "ArcCW_BO1.Python_Spin", t = 16 / 30},
+            {s = "ArcCW_BO1.Python_Close", t = 40 / 30},
         }
     },
     ["fire"] = {
@@ -234,18 +276,75 @@ SWEP.Animations = {
         Source = "fire_ads",
         Time = 12 / 35,
     },
+    ["sgreload_start"] = {
+        Source = "reload_in",
+        Time = 52 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+        SoundTable = {
+            {s = "ArcCW_BO1.Python_Open", t = 20 / 35},
+            {s = "ArcCW_BO1.Python_Empty", t = 26 / 35},
+        },
+    },
+    ["sgreload_start_empty"] = {
+        Source = "reload_in2",
+        Time = 67 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+        SoundTable = {
+            {s = "ArcCW_BO1.Python_Open", t = 20 / 35},
+            {s = "ArcCW_BO1.Python_Empty", t = 26 / 35},
+            {s = "ArcCW_BO1.Python_Bullet", t = 64 / 30},
+        },
+    },
+    ["sgreload_insert"] = {
+        Source = "reload_loop",
+        Time = 16 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
+        TPAnimStartTime = 0.3,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+        SoundTable = {
+            {s = "ArcCW_BO1.Python_Bullet", t = 13 / 30},
+        },
+    },
+    ["sgreload_finish"] = {
+        Source = "reload_out_snap",
+        Time = 33 / 30,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+        SoundTable = {
+            {s = "ArcCW_BO1.Python_Close", t = 8 / 30},
+        },
+    },
+    ["sgreload_finish_empty"] = {
+        Source = "reload_out_snap",
+        Time = 33 / 30,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+        SoundTable = {
+            {s = "ArcCW_BO1.Python_Close", t = 8 / 30},
+        },
+    },
     ["reload"] = {
         Source = "reload",
         Time = 100 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
         LHIK = true,
-        LHIKIn = 1,
-        LHIKOut = 0.75,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.Makarov_Slide_Fwd", t = 17 / 35},
-            {s = "ArcCW_BO1.Makarov_Out", t = 38 / 35},
-            {s = "ArcCW_BO1.Makarov_In", t = 68 / 35},
-            {s = "ArcCW_BO2.M1911_SlideFwd", t = 83 / 35},
+            {s = "ArcCW_BO1.Python_Open", t = 17 / 35},
+            {s = "ArcCW_BO1.Python_Empty", t = 38 / 35},
+            {s = "ArcCW_BO1.Python_Load", t = 68 / 35},
+            {s = "ArcCW_BO1.Python_Close", t = 83 / 35},
         },
     },
     ["reload_empty"] = {
@@ -253,25 +352,25 @@ SWEP.Animations = {
         Time = 100 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
         LHIK = true,
-        LHIKIn = 1,
-        LHIKOut = 0.75,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.Makarov_Slide_Fwd", t = 17 / 35},
-            {s = "ArcCW_BO1.Makarov_Out", t = 38 / 35},
-            {s = "ArcCW_BO1.Makarov_In", t = 68 / 35},
-            {s = "ArcCW_BO2.M1911_SlideFwd", t = 83 / 35},
+            {s = "ArcCW_BO1.Python_Open", t = 17 / 35},
+            {s = "ArcCW_BO1.Python_Empty", t = 38 / 35},
+            {s = "ArcCW_BO1.Python_Load", t = 68 / 35},
+            {s = "ArcCW_BO1.Python_Close", t = 83 / 35},
         },
     },
     ["enter_sprint"] = {
-        Source = "sprint_in",
-        Time = 10 / 30
+        Source = "idle",
+        Time = 3 / 30
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 30 / 40
+        Time = 30 / 30
     },
     ["exit_sprint"] = {
-        Source = "sprint_out",
-        Time = 10 / 30
+        Source = "idle",
+        Time = 3 / 30
     },
 }
