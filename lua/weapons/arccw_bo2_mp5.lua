@@ -100,7 +100,7 @@ SWEP.CamAttachment = 4
 
 SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.3
+SWEP.SightTime = 0.2
 SWEP.VisualRecoilMult = 0
 SWEP.RecoilRise = 0
 
