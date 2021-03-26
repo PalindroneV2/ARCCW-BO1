@@ -53,7 +53,7 @@ SWEP.ExtendedClipSize = 250
 
 SWEP.Recoil = 1.25
 SWEP.RecoilSide = 0.75
-SWEP.RecoilRise = 0.75
+SWEP.RecoilRise = 1
 SWEP.SpeedMult = 0.70
 SWEP.SightedSpeedMult = 0.5
 SWEP.SightTime = 0.3
@@ -129,7 +129,8 @@ SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
-SWEP.ActivePos = Vector(4, -2, 1)
+SWEP.ActivePos = Vector(5, -10, 3)
+--SWEP.ActivePos = Vector(5, -8, 2)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.InBipodPos = Vector(0, 0, -4)
@@ -362,6 +363,11 @@ SWEP.Animations = {
             {s = "ArcCW_WAW.PPSh_MagIn", t = 57 / 35},
             {s = "ArcCW_WAW.PPSh_Bolt", t = 110 / 35},
         },
+        /*SoundTable = {
+            {s = "ArcCW_WAW.MG42_MagOut", t = 20 / 35},
+            {s = "ArcCW_WAW.MG42_MagIn", t = 57 / 35},
+            {s = "ArcCW_WAW.MG42_Bolt", t = 110 / 35},
+        },*/
     },
     ["reload_empty"] = {
         Source = "reload",
@@ -378,18 +384,4 @@ SWEP.Animations = {
             {s = "ArcCW_WAW.PPSh_Bolt", t = 110 / 35},
         },
     },
-    /*
-    ["enter_sprint"] = {
-        Source = "Idle_to_sprint",
-        Time = 10 / 30
-    },
-    ["idle_sprint"] = {
-        Source = "Sprint_",
-        Time = 30 / 40
-    },
-    ["exit_sprint"] = {
-        Source = "Sprint_to_Idle",
-        Time = 10 / 30
-    },
-    */
 }

@@ -126,7 +126,7 @@ SWEP.HoldtypeSights = "smg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
-SWEP.ActivePos = Vector(3, 0, -1)
+SWEP.ActivePos = Vector(2, -2, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.SprintPos = Vector(6, 0, -2)
