@@ -381,7 +381,7 @@ SWEP.RejectAttachments = {
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw"] = {
         Source = "draw",
@@ -465,7 +465,7 @@ SWEP.Animations = {
 
     ["idle_grip"] = {
         Source = "idle_grip",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw_grip"] = {
         Source = "pullout_grip",
@@ -546,7 +546,7 @@ SWEP.Animations = {
 
     ["idle_gl"] = {
         Source = "idle_gl",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw_gl"] = {
         Source = "draw_gl",
@@ -627,7 +627,7 @@ SWEP.Animations = {
 
     ["idle_mk"] = {
         Source = "idle_mk",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw_mk"] = {
         Source = "draw_mk",
@@ -716,7 +716,7 @@ SWEP.Animations = {
     },
     ["idle_glsetup"] = {
         Source = "idle_glsetup",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["in_glsetup"] = {
         Source = "glsetup_in",
@@ -760,7 +760,7 @@ SWEP.Animations = {
 
     ["idle_mksetup"] = {
         Source = "idle_mksetup",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["in_mksetup"] = {
         Source = "mksetup_in",

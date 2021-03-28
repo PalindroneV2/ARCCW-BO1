@@ -295,7 +295,7 @@ SWEP.RejectAttachments = {
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw"] = {
         Source = "draw",
@@ -397,7 +397,7 @@ SWEP.Animations = {
 
     ["idle_grip"] = {
         Source = "idle_grip",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw_grip"] = {
         Source = "draw_grip",

@@ -294,7 +294,7 @@ end
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw"] = {
         Source = "draw",

@@ -365,7 +365,7 @@ end
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw"] = {
         Source = "draw",
@@ -448,7 +448,7 @@ SWEP.Animations = {
 
     ["idle_m203"] = {
         Source = "idle_gl",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw_m203"] = {
         Source = "draw_gl",
@@ -539,7 +539,7 @@ SWEP.Animations = {
     },
     ["idle_glsetup"] = {
         Source = "idle_glsetup",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["in_glsetup"] = {
         Source = "glsetup_in",
@@ -583,7 +583,7 @@ SWEP.Animations = {
 
     ["idle_mk"] = {
         Source = "idle_mk",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw_mk"] = {
         Source = "draw_mk",
@@ -666,7 +666,7 @@ SWEP.Animations = {
 
     ["idle_mksetup"] = {
         Source = "idle_mksetup",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["in_mksetup"] = {
         Source = "mksetup_in",

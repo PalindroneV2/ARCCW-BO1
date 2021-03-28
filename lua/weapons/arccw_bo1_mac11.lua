@@ -275,15 +275,15 @@ end
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle_normal",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["idle_stock"] = {
         Source = "idle_stock",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["idle_stock_ext"] = {
         Source = "idle_stock",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["holster"] = {
         Source = "holster",

@@ -411,9 +411,6 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
         Time = 1 / 30,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
     },
     ["draw"] = {
         Source = "draw",

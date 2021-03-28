@@ -488,7 +488,7 @@ end
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw"] = {
         Source = "draw",
@@ -591,7 +591,7 @@ SWEP.Animations = {
 
     ["idle_sil"] = {
         Source = "idle_sil",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw_sil"] = {
         Source = "draw_sil",
@@ -672,7 +672,7 @@ SWEP.Animations = {
     --MP5 STOCK SIL--
     ["idle_stock_sil"] = {
         Source = "idle_sil",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw_stock_sil"] = {
         Source = "first_draw_sil_stock",
@@ -846,7 +846,7 @@ SWEP.Animations = {
 
     ["idle_sil_quick"] = {
         Source = "idle_sil",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw_sil_quick"] = {
         Source = "draw_sil",
@@ -931,7 +931,7 @@ SWEP.Animations = {
     --MP5 STOCK SIL QUICK--
     ["idle_stock_sil_quick"] = {
         Source = "idle_sil",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw_stock_sil_quick"] = {
         Source = "first_draw_sil_stock",
@@ -1020,7 +1020,7 @@ SWEP.Animations = {
 
     ["idle_grip"] = {
         Source = "idle_grip",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw_grip"] = {
         Source = "draw_grip",
@@ -1113,7 +1113,7 @@ SWEP.Animations = {
 
     ["idle_gl"] = {
         Source = "idle_gl",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw_gl"] = {
         Source = "draw_gl",
@@ -1194,7 +1194,7 @@ SWEP.Animations = {
     --MP5 STOCK GL--
     ["idle_stock_gl"] = {
         Source = "idle_gl",
-        Time = 3 / 30,
+        Time = 1 / 30,
     },
     ["draw_stock_gl"] = {
         Source = "first_draw_gl_stock",
