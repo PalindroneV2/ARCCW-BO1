@@ -160,6 +160,11 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 1},
         },
     },
+    ["cobrakai"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 2},
+        },
+    },
     ["light_stock"] = {
         VMBodygroups = {
             {ind = 3, bg = 1},
@@ -192,6 +197,7 @@ SWEP.Attachments = {
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0.5, 0, 0),
+        MergeSlots = {13,14}
     }, --1
     {
         PrintName = "Muzzle",
@@ -240,7 +246,7 @@ SWEP.Attachments = {
             wpos = Vector(18, 0.8, -3.95),
             wang = Angle(175, -180.5, -5),
         },
-    },
+    }, -- 5
     {
         Hidden = true,
         Slot = {"bo1_gp25", "bo1_mk"},
@@ -274,7 +280,7 @@ SWEP.Attachments = {
     {
         PrintName = "Perk",
         Slot = {"bo1_perk"},
-    },
+    }, --11
     {
         PrintName = "Charm",
         Slot = "charm",
@@ -286,6 +292,30 @@ SWEP.Attachments = {
             wpos = Vector(5.25, 1.5, -3.25),
             wang = Angle(-175, -175, 0)
         },
+    }, --12
+    { --13
+        Hidden = true,
+        Slot = "bo1_cobra",
+        Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
+        Offset = {
+            vpos = Vector(1, 0, 2.5), -- 4.6 offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+        },
+        GivesFlags = {"cobrakai"},
+        CorrectivePos = Vector(0, 0, 0),
+        CorrectiveAng = Angle(-1, 0, 0),
+    },
+    { --14
+        Hidden = true,
+        Slot = {"bo1_pso"},
+        Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
+        Offset = {
+            vpos = Vector(1, 0, 2.5), -- 4.6 offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+        },
+        GivesFlags = {"cobrakai"},
+        CorrectivePos = Vector(0, 0, 0),
+        CorrectiveAng = Angle(1.25, 0, 0),
     },
 }
 

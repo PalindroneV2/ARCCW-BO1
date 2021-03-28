@@ -19,7 +19,7 @@ att.DroppedModel = "models/weapons/arccw/atts/bo1_pso.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0.425, 8, -4.75),
+        Pos = Vector(0, 12.5, -1.375),
         Ang = Angle(0, 0, 0),
         Magnification = 1.5,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
@@ -33,7 +33,7 @@ att.ScopeGlint = false
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/mw2r_dragunov.png")
 att.HolosightNoFlare = true
-att.HolosightSize = 14
+att.HolosightSize = 15
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo1_pso_hsp.mdl"
 att.Colorable = true

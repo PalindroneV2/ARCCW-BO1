@@ -323,7 +323,7 @@ SWEP.Attachments = {
         Slot = {"bo1_cobra"},
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(0, 0, 0), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(2, 0, 2.5), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
         GivesFlags = {"cobrakai"},
@@ -335,7 +335,7 @@ SWEP.Attachments = {
         Slot = {"bo1_pso"},
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(0, 0, -0.6), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(2, 0, 2.5), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
         GivesFlags = {"cobrakai"},

@@ -187,11 +187,11 @@ SWEP.Attachments = {
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         VMScale = Vector (1, 1, 1),
         Offset = {
-            vpos = Vector(0, 0, 0),
+            vpos = Vector(3, 0, 3.05),
             vang = Angle(0, 0, 0),
         },
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(2, 0, 0),
+        CorrectiveAng = Angle(1.2, 0, 0),
         Installed = "optic_bo1_pso",
     },
     {
@@ -261,12 +261,12 @@ SWEP.Attachments = {
         Slot = {"bo1_cobra"},
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(3, 0, 0.5), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(3, 0, 3.05), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
         GivesFlags = {"cobrakai"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0, 0, 0),
+        CorrectiveAng = Angle(-1, 0, 0),
     },
 }
 
