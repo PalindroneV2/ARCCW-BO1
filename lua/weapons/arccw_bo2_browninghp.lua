@@ -76,7 +76,7 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_pistol"
 SWEP.NPCWeight = 60
 
-SWEP.AccuracyMOA = 13 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 3.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 250 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
@@ -151,6 +151,12 @@ SWEP.AttachmentElements = {
         TrueNameChange = "Moses Unlimited",
         NameChange = "Moses Unlimited",
     },
+    ["maria"] = {
+        NamePriority = 5,
+        TrueNameChange = "Maria",
+        NameChange = "Maria",
+        VMSkin = 1
+    }
 }
 
 SWEP.ExtraSightDist = 2
@@ -196,7 +202,11 @@ SWEP.Attachments = {
         PrintName = "Perk",
         Slot = "bo1_perk"
     },
-    { --6
+    {
+        PrintName = "Cosmetic",
+        Slot = "bo2_bhp_cosmetic"
+    },--6
+    { --7
         PrintName = "Charms",
         Slot = "charm",
         Bone = "j_bolt",
@@ -212,9 +222,29 @@ SWEP.Attachments = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[4].Installed == "ammo_papunch"
+    local maria = wep:GetBuff_Override("FNV_Unique")
 
-    if papcamo then
+    if papcamo and !maria then
         return vm:SetSkin(3)
+    elseif papcamo and maria then
+        return vm:SetSkin(1)
+    end
+end
+
+SWEP.Hook_NameChange = function(wep, data)
+    local papcamo = wep.Attachments[4].Installed == "ammo_papunch"
+    local maria = wep:GetBuff_Override("FNV_Unique")
+
+    if maria and papcamo then
+        return "Santa Maria"
+    end
+
+    local default = "Another semi-automatic pistol designed by the legendary gunsmith, John Moses Browning. This 9mm pistol innovated with the use of double stack magazines which inspired many future handguns' designs."
+
+    if maria and (!papcamo or papcamo) then
+        wep.Trivia_Desc = "A special engraved 9mm Pistol that once belonged to a man wearing a checkered suit. The Virgin Mary is engraved on the grips."
+    else
+        wep.Trivia_Desc = default
     end
 end
 

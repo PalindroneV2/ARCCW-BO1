@@ -16,4 +16,4 @@ att.GivesFlags = {"stg44_carb"}
 att.Mult_Range = 0.75
 att.Mult_Recoil = 1.25
 att.Mult_SightTime = 0.8
-att.Mult_AccuracyMOA = 1.5
+att.Mult_AccuracyMOA = 1.1

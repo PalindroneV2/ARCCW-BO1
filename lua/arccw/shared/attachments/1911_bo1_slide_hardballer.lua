@@ -17,3 +17,10 @@ att.Free = true
 att.ActivateElements = {"hardballer"}
 
 att.ColtNickel = true
+
+att.AutoStats = true
+att.Mult_Range = 1.25
+att.Mult_Recoil = 0.975
+att.Mult_RecoilSide = 0.975
+att.Mult_SightTime = 1.05
+att.Mult_AccuracyMOA = 0.9

@@ -49,14 +49,14 @@ SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 75 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 250
+SWEP.ExtendedClipSize = 150
 
 SWEP.Recoil = 1.25
 SWEP.RecoilSide = 0.75
 SWEP.RecoilRise = 0.75
 SWEP.SpeedMult = 0.70
 SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.3
+SWEP.SightTime = 0.4
 SWEP.VisualRecoilMult = 0
 
 SWEP.Delay = 60 / 1200 -- 60 / RPM.
@@ -76,7 +76,7 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_ar2"
 SWEP.NPCWeight = 165
 
-SWEP.AccuracyMOA = 6 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 3.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 900 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 350
 
@@ -91,10 +91,10 @@ SWEP.ShootSound = "ArcCW_WAW.MG42_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
 SWEP.DistantShootSound = "weapons/arccw/waw_dist/waw_mg.wav"
 
-SWEP.MuzzleEffect = "muzzleflash_smg"
-SWEP.ShellModel = "models/shells/shell_9mm.mdl"
-SWEP.ShellScale = 1.25
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
+SWEP.MuzzleEffect = "muzzleflash_4"
+SWEP.ShellModel = "models/shells/shell_556.mdl"
+SWEP.ShellPitch = 90
+SWEP.ShellScale = 1.5
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
@@ -194,7 +194,7 @@ SWEP.Attachments = {
         },
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(1.5, 0, 0),
+        CorrectiveAng = Angle(0.35, 0, 0),
     }, --1
     {
         PrintName = "Muzzle",

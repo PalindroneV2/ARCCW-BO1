@@ -53,6 +53,7 @@ SWEP.ExtendedClipSize = 20
 SWEP.Recoil = 1
 SWEP.RecoilSide = 0.75
 SWEP.RecoilRise = 0.75
+SWEP.VisualRecoilMult = 0
 
 SWEP.Delay = 60 / 750-- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -68,12 +69,12 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_ar2"
 SWEP.NPCWeight = 165
 
-SWEP.AccuracyMOA = 8 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 1.75 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 200
 
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
-SWEP.MagID = "fnfal" -- the magazine pool this gun draws from
+SWEP.MagID = "m1garand" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
@@ -95,7 +96,6 @@ SWEP.CamAttachment = 3
 SWEP.SpeedMult = 0.85
 SWEP.SightedSpeedMult = 0.5
 SWEP.SightTime = 0.3
-SWEP.VisualRecoilMult = 0
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
@@ -423,14 +423,23 @@ SWEP.Animations = {
     ["idle_ubgl"] = {
         Source = "idle_glsetup",
         Time = 1 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
     },
     ["idle_ubgl_empty"] = {
         Source = "idle_glsetup_empty",
         Time = 1 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
     },
     ["enter_ubgl"] = {
         Source = "glsetup_in",
         Time = 80 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
         SoundTable = {
             {s = "ArcCW_WAW.RGren_Futz", t = 34 / 30},
             {s = "ArcCW_WAW.RGren_Load", t = 40 / 30},
@@ -440,6 +449,9 @@ SWEP.Animations = {
     ["exit_ubgl"] = {
         Source = "glsetup_out",
         Time = 90 / 40,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
         SoundTable = {
             {s = "ArcCW_WAW.RGren_Click", t = 24 / 40},
             {s = "ArcCW_WAW.RGren_Remove", t = 36 / 40},
@@ -449,14 +461,23 @@ SWEP.Animations = {
     ["enter_ubgl_empty"] = {
         Source = "glsetup_in_empty",
         Time = 19 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
     },
     ["exit_ubgl_empty"] = {
         Source = "glsetup_out_empty",
         Time = 10 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
     },
     ["fire_ubgl"] = {
         Source = "fire_glsetup",
         Time = 7 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
         TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
         TPAnimStartTime = 0,
     },
@@ -465,6 +486,9 @@ SWEP.Animations = {
         Time = 64 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.1,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
         SoundTable = {
             {s = "ArcCW_WAW.RGren_Futz", t = 16 / 30},
             {s = "ArcCW_WAW.RGren_Load", t = 19 / 30},

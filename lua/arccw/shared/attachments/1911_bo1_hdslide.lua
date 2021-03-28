@@ -14,3 +14,6 @@ att.Desc_Cons = {
 }
 att.Slot = "m1911_irons"
 att.ActivateElements = {"m1911_hdslide"}
+
+att.AutoStats = true
+att.Mult_AccuracyMOA = 0.95

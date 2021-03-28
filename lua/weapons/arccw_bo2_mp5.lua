@@ -74,7 +74,7 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_ar2"
 SWEP.NPCWeight = 165
 
-SWEP.AccuracyMOA = 10 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 2.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 550 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
@@ -115,8 +115,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.175, -3, 1.05),
-    Ang = Angle(-0.01, 0.05, 0),
+    Pos = Vector(-3.19, -3, 1),
+    Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -147,7 +147,7 @@ SWEP.BarrelLength = 25
 
 SWEP.ExtraSightDist = 5
 
-SWEP.DefaultBodygroups = "000000"
+SWEP.DefaultBodygroups = "0000000"
 
 SWEP.AttachmentElements = {
     ["light_stock"] = {
@@ -203,6 +203,17 @@ SWEP.AttachmentElements = {
     ["bo1_mag"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
+        },
+    },
+    ["bo1_m203"] = {
+        VMBodygroups = {
+            {ind = 6, bg = 1},
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-3.13, -3, 1),
+            Ang = Angle(0, 0, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
         },
     },
     ["mp5_10mm"] = {
@@ -279,7 +290,7 @@ SWEP.Attachments = {
             wang = Angle(172.5, -180, 0),
         },
         ExcludeFlags = {"mp5kk"},
-        MergeSlots = {5} -- Slot 13 also goes in here. Whenever that is fixed.
+        MergeSlots = {5, 13} -- Slot 13 also goes in here. Whenever that is fixed.
     },
     { --5
         Hidden = true,
@@ -339,19 +350,11 @@ SWEP.Attachments = {
             wang = Angle(-175, -175, 0)
         },
     },
-    /*{ --13
+    { --13
         Hidden = true,
-        Slot = {"ubgl_bo1"},
-        Bone = "tag_weapon",
-        VMScale = Vector(1, 1, 1),
-        WMScale = Vector(1, 1, 1),
-        Offset = {
-            vpos = Vector(-12, -3, 4), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 0),
-            wpos = Vector(12, 0.8, -4.5),
-            wang = Angle(172.5, -180, 0),
-        },
-    },*/
+        Slot = {"bo1_m203"},
+        RequireFlags = {"ubgls_on"}
+    },
 }
 
 SWEP.Hook_NameChange = function(wep, name)
@@ -448,22 +451,27 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     local stock = wep.Attachments[7].Installed == "bo1_solid_stock"
     local dual = wep.Attachments[8].Installed == "ammo_dualmag"
     local mp5k = wep.Attachments[2].Installed == "bo1_mp5_mp5k"
+    local tube = wep.Attachments[13].Installed == "ubgl_m16_m203"
 
-    if sil and !stock and !dual and !mp5k then
+    if sil and !tube and !stock and !dual and !mp5k then
         return anim .. "_sil"
-    elseif !sil and stock and !dual and !mp5k then
+    elseif tube and (sil or !sil) and !stock and !dual and !mp5k then
+        return anim .. "_gl"
+    elseif !sil and !tube and stock and !dual and !mp5k then
         return anim .. "_stock"
-    elseif sil and stock and !dual and !mp5k then
+    elseif sil and !tube and stock and !dual and !mp5k then
         return anim .. "_stock_sil"
-    elseif !sil and !stock and dual and !mp5k then
+    elseif (sil or !sil) and tube and stock and !dual and !mp5k then
+        return anim .. "_stock_gl"
+    elseif !sil and !tube and !stock and dual and !mp5k then
         return anim .. "_quick"
-     elseif !sil and stock and dual and !mp5k then
+     elseif !sil and !tube and stock and dual and !mp5k then
         return anim .. "_stock_quick"
-    elseif sil and !stock and dual and !mp5k then
+    elseif sil and !tube and !stock and dual and !mp5k then
         return anim .. "_sil_quick"
-    elseif sil and stock and dual and !mp5k then
+    elseif sil and !tube and stock and dual and !mp5k then
         return anim .. "_stock_sil_quick"
-    elseif mp5k and (stock or !stock) and (dual or !dual) then
+    elseif mp5k and !tube and (stock or !stock) and (dual or !dual) then
         return anim .. "_grip"
     end
 end
@@ -1098,6 +1106,173 @@ SWEP.Animations = {
     },
     ["exit_sprint_grip"] = {
         Source = "sprint_out_grip",
+        Time = 10 / 30
+    },
+
+    --MP5 GL--
+
+    ["idle_gl"] = {
+        Source = "idle_gl",
+        Time = 3 / 30,
+    },
+    ["draw_gl"] = {
+        Source = "draw_gl",
+        Time = 15 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
+    },
+    ["holster_gl"] = {
+        Source = "holster_gl",
+        Time = 15 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
+    },
+    ["ready_gl"] = {
+        Source = "first_draw_gl",
+        Time = 1,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
+        SoundTable = {
+            {s = "ArcCW_BO1.MP5_BoltFwd", t = 19 / 30}
+        },
+    },
+    ["fire_gl"] = {
+        Source = {"fire_gl"},
+        Time = 7 / 30,
+        ShellEjectAt = 0,
+    },
+    ["fire_iron_gl"] = {
+        Source = {"fire_ads_gl"},
+        Time = 7 / 30,
+        ShellEjectAt = 0,
+    },
+    ["reload_gl"] = {
+        Source = "reload_gl",
+        Time = 77 / 35,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Framerate = 30,
+        Checkpoints = {28, 38, 69},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+        SoundTable = {
+            {s = "ArcCW_BO1.MP5_MagOut", t = 16 / 35},
+            {s = "ArcCW_BO1.MP5_MagIn", t = 47 / 35}
+        },
+    },
+    ["reload_empty_gl"] = {
+        Source = "reload_empty_gl",
+        Time = 93 / 35,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Framerate = 30,
+        Checkpoints = {28, 38, 69},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+        SoundTable = {
+            {s = "ArcCW_BO1.MP5_MagOut", t = 16 / 35},
+            {s = "ArcCW_BO1.MP5_MagIn", t = 47 / 35},
+            {s = "ArcCW_BO1.MP5_BoltBack", t = 67 / 35},
+            {s = "ArcCW_BO1.MP5_BoltFwd", t = 73 / 35},
+        },
+    },
+    ["enter_sprint_gl"] = {
+        Source = "sprint_in_gl",
+        Time = 10 / 30
+    },
+    ["idle_sprint_gl"] = {
+        Source = "sprint_loop_gl",
+        Time = 30 / 40
+    },
+    ["exit_sprint_gl"] = {
+        Source = "sprint_out_gl",
+        Time = 10 / 30
+    },
+    --MP5 STOCK GL--
+    ["idle_stock_gl"] = {
+        Source = "idle_gl",
+        Time = 3 / 30,
+    },
+    ["draw_stock_gl"] = {
+        Source = "first_draw_gl_stock",
+        Time = 30 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
+        SoundTable = {
+            {s = "ArcCW_BO1.MP5_BoltFwd", t = 12 / 30}
+        },
+    },
+    ["holster_stock_gl"] = {
+        Source = "holster_gl",
+        Time = 30 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
+    },
+    ["ready_stock_gl"] = {
+        Source = "first_draw_gl_stock",
+        Time = 1.5,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
+        SoundTable = {
+            {s = "ArcCW_BO1.MP5_BoltFwd", t = 19 / 30}
+        },
+    },
+    ["fire_stock_gl"] = {
+        Source = {"fire_gl"},
+        Time = 7 / 30,
+        ShellEjectAt = 0,
+    },
+    ["fire_iron_stock_gl"] = {
+        Source = {"fire_ads_gl"},
+        Time = 7 / 30,
+        ShellEjectAt = 0,
+    },
+    ["reload_stock_gl"] = {
+        Source = "reload_gl",
+        Time = 77 / 35,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Framerate = 30,
+        Checkpoints = {28, 38, 69},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+        SoundTable = {
+            {s = "ArcCW_BO1.MP5_MagOut", t = 16 / 35},
+            {s = "ArcCW_BO1.MP5_MagIn", t = 47 / 35}
+        },
+    },
+    ["reload_empty_stock_gl"] = {
+        Source = "reload_empty_gl",
+        Time = 93 / 35,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Framerate = 30,
+        Checkpoints = {28, 38, 69},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+        SoundTable = {
+            {s = "ArcCW_BO1.MP5_MagOut", t = 16 / 35},
+            {s = "ArcCW_BO1.MP5_MagIn", t = 47 / 35},
+            {s = "ArcCW_BO1.MP5_BoltBack", t = 67 / 35},
+            {s = "ArcCW_BO1.MP5_BoltFwd", t = 73 / 35},
+        },
+    },
+    ["enter_sprint_stock_gl"] = {
+        Source = "sprint_in_gl",
+        Time = 10 / 30
+    },
+    ["idle_sprint_stock_gl"] = {
+        Source = "sprint_loop_gl",
+        Time = 30 / 40
+    },
+    ["exit_sprint_stock_gl"] = {
+        Source = "sprint_out_gl",
         Time = 10 / 30
     },
 }

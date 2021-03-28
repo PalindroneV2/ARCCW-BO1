@@ -15,5 +15,6 @@ att.SortOrder = 98
 
 att.Mult_Penetration = 1.15
 att.Mult_Range = 1.50
+att.Mult_AccuracyMOA = 0.95
 att.Mult_ReloadTime = 0.875
 att.Override_ClipSize = 10

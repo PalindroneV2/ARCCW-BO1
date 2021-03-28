@@ -16,4 +16,4 @@ att.GivesFlags = {"m27iar"}
 att.Mult_Range = 1.5
 att.Mult_Recoil = 0.975
 att.Mult_SightTime = 1.15
-att.Mult_AccuracyMOA = 0.75
+att.Mult_AccuracyMOA = 0.85

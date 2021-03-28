@@ -18,9 +18,9 @@ att.Mult_SightedSpeedMult = 0.8
 
 att.Add_BarrelLength = 1
 
-att.Mult_AccuracyMOA = 0.4
-att.Mult_Recoil = 0.6
-att.Mult_RecoilSide = 0.4
+att.Mult_AccuracyMOA = 0.85
+att.Mult_Recoil = 0.7
+att.Mult_RecoilSide = 0.7
 att.Mult_RecoilRise = 0.7
 
 att.SortOrder = 149

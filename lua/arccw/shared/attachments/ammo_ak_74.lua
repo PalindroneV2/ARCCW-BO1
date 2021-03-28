@@ -19,6 +19,7 @@ att.Mult_DamageMin = 0.85
 att.Mult_Penetration = 1.1
 att.Mult_Recoil = 0.75
 att.Mult_RecoilSide = 0.75
+att.Mult_AccuracyMOA = 0.75
 att.Mult_VisualRecoilMult = 0.75
 att.Override_Ammo = "smg1"
 

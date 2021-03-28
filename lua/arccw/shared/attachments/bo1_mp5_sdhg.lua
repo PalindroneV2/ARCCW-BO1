@@ -12,4 +12,4 @@ att.Desc_Cons = {
     "- Aesthetics provide no real performance upgrades."
 }
 att.Slot = "bo1_mp5_barrel"
-att.GivesFlags = {"sdhg"}
+att.GivesFlags = {"sdhg", "ubgls_on"}

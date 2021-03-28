@@ -1,9 +1,8 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/bo2/bo2_browninghp/bhp_c"
+	"$basetexture" "models/weapons/bo2/bo2_browninghp/maria_c"
 	$blendtintbybasealpha  "1"
 	"$bumpmap" "models/weapons/bo2/bo2_browninghp/bhp_n"
-
 	$phong                      		1
 	$phongexponent                      "20"
 	$phongboost                         "0.5"

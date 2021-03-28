@@ -8,7 +8,7 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = "bo1_mp5_barrel"
 
-att.GivesFlags = {"mp5sd", "mp5sd2", "mp5sd3"}
+att.GivesFlags = {"mp5sd", "mp5sd2", "mp5sd3", "ubgls_on"}
 
 att.SortOrder = 99
 

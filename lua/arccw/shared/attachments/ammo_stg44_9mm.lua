@@ -20,6 +20,7 @@ att.Mult_Penetration = 0.75
 att.Mult_Recoil = 0.5
 att.Mult_RecoilSide = 0.5
 att.Mult_VisualRecoilMult = 0.5
+att.Mult_AccuracyMOA = 1.25
 att.Override_ClipSize = 32
 att.Override_Ammo = "pistol"
 

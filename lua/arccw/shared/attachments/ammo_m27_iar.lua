@@ -15,5 +15,4 @@ att.SortOrder = 98
 
 att.Override_ClipSize = 60
 att.Mult_ReloadTime = 1.5
-
-att.Override_MuzzleEffect = "muzzleflash_smg"
+att.Mult_SightTime = 1.5

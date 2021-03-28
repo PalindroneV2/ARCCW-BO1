@@ -20,4 +20,4 @@ att.Mult_RecoilSide = 1.3
 att.Mult_SpeedMult = 1.10
 att.Mult_SightedSpeedMult = 1.15
 att.Mult_SightTime = 0.75
-att.Mult_AccuracyMOA = 1.35
+att.Mult_AccuracyMOA = 1.2

@@ -17,7 +17,7 @@ att.Mult_Range = 1.5
 att.Mult_Recoil = 0.95
 att.Mult_RecoilSide = 0.95
 att.Mult_SightTime = 1.15
-att.Mult_AccuracyMOA = 0.75
+att.Mult_AccuracyMOA = 0.5
 
 att.Hook_GetShootSound = function(wep, sound)
   return "ArcCW_BO1.G3_Fire"
