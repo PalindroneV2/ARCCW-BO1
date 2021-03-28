@@ -290,7 +290,7 @@ SWEP.Attachments = {
             wang = Angle(172.5, -180, 0),
         },
         ExcludeFlags = {"mp5kk"},
-        MergeSlots = {5, 13} -- Slot 13 also goes in here. Whenever that is fixed.
+        MergeSlots = {5} -- Slot 13 also goes in here. Whenever that is fixed.
     },
     { --5
         Hidden = true,
@@ -350,11 +350,11 @@ SWEP.Attachments = {
             wang = Angle(-175, -175, 0)
         },
     },
-    { --13
+    /*{ --13
         Hidden = true,
         Slot = {"bo1_m203"},
         RequireFlags = {"ubgls_on"}
-    },
+    },*/
 }
 
 SWEP.Hook_NameChange = function(wep, name)
@@ -451,7 +451,7 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     local stock = wep.Attachments[7].Installed == "bo1_solid_stock"
     local dual = wep.Attachments[8].Installed == "ammo_dualmag"
     local mp5k = wep.Attachments[2].Installed == "bo1_mp5_mp5k"
-    local tube = wep.Attachments[13].Installed == "ubgl_m16_m203"
+    --local tube = wep.Attachments[13].Installed == "ubgl_m16_m203"
 
     if sil and !tube and !stock and !dual and !mp5k then
         return anim .. "_sil"
