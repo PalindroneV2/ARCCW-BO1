@@ -12,3 +12,4 @@ att.Mult_ReloadTime = 0.5
 att.Mult_DrawTime = 0.95
 att.Mult_SightTime = 0.95
 
+att.AttachSound = "weapons/arccw/bo1_perks/perk_speed.wav"

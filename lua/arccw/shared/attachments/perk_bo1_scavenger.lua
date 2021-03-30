@@ -35,3 +35,5 @@ att.Hook_BulletHit = function(wep, data)
         end
     end
 end
+
+att.AttachSound = "weapons/arccw/bo1_perks/perk_vulture.wav"

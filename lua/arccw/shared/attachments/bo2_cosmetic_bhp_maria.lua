@@ -17,3 +17,8 @@ att.Free = true
 att.ActivateElements = {"maria"}
 
 att.FNV_Unique = true
+att.AttachSound = "weapons/arccw/fnv_ee/fnv_ww.ogg"
+
+att.Hook_GetShootSound = function(wep, sound)
+    return "ArcCW_BO2.FNV_9mm_Fire"
+end

@@ -2096,3 +2096,62 @@ sound.Add( {
     pitch = {95, 110},
     sound = {"weapons/arccw/pap/pap_fire.wav"}
 } )
+
+-- BO1 EE SOUND --
+
+sound.Add({
+    name = "ArcCW_BO1.Spawn_Riff",
+    channel = CHAN_ITEM + 115,
+    level = 100,
+    sound = "weapons/arccw/bo1_m16/bo_spawn.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.Perk_StaminUp",
+    channel = CHAN_ITEM + 115,
+    level = 100,
+    sound = "weapons/arccw/bo1_perks/perk_stamina.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.Perk_VultureAid",
+    channel = CHAN_ITEM + 115,
+    level = 100,
+    sound = "weapons/arccw/bo1_perks/perk_vulture.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.Perk_SpeedCola",
+    channel = CHAN_ITEM + 115,
+    level = 100,
+    sound = "weapons/arccw/bo1_perks/perk_speed.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.Perk_DoubleTap",
+    channel = CHAN_ITEM + 115,
+    level = 100,
+    sound = "weapons/arccw/bo1_perks/perk_tap.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.Perk_Deadshot",
+    channel = CHAN_ITEM + 115,
+    level = 100,
+    sound = "weapons/arccw/bo1_perks/perk_deadshot.wav"
+})
+
+-- FNV EE --
+
+sound.Add({
+    name = "ArcCW_BO2.FNV_EE",
+    channel = CHAN_ITEM + 115,
+    level = 100,
+    sound = "weapons/arccw/fnv_ee/fnv_ww.ogg"
+})
+sound.Add({
+    name = "ArcCW_BO2.FNV_9mm_Fire",
+    channel = CHAN_ITEM + 115,
+    level = 100,
+    sound = "weapons/arccw/fnv_ee/fnv_9mm_fire.ogg"
+})

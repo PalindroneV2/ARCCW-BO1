@@ -17,3 +17,5 @@ att.Mult_DamageMin = 2
 att.Hook_Compatible = function(wep)
     if !wep:GetIsShotgun() then return false end
 end
+
+att.AttachSound = "weapons/arccw/bo1_perks/perk_tap.wav"

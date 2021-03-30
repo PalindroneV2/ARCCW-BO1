@@ -19,7 +19,7 @@ att.Mult_Damage = 2.5
 att.Mult_DamageMin = 2.5
 att.Mult_Penetration = 2.5
 
-att.Mult_AccuracyMOA = 50
+att.Mult_AccuracyMOA = 12.5
 att.Mult_HipDispersion = 2
 att.Override_MuzzleEffect = "pap_heavy_flame"
 att.Override_ShootEntity = "arccw_bo1_mustangsally"

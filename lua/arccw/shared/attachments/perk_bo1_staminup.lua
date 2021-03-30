@@ -10,3 +10,5 @@ att.Slot = {"bo1_perk"}
 
 att.Mult_SpeedMult = 10.35
 att.Mult_SightedSpeedMult = 10.35
+
+att.AttachSound = "weapons/arccw/bo1_perks/perk_stamina.wav"

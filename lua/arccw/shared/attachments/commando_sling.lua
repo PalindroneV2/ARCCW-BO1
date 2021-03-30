@@ -12,3 +12,5 @@ att.Desc_Cons = {
     "- Aesthetics provide no real performance upgrades."
 }
 att.Slot = "car15_sling"
+
+att.AttachSound = "weapons/arccw/bo1_m16/bo_spawn.wav"
