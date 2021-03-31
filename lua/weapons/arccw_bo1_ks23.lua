@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Kartoshka"
-SWEP.TrueName = "KS-23"
+SWEP.PrintName = "KS-23"
 SWEP.Trivia_Class = "Shotgun"
 SWEP.Trivia_Desc = "Soviet pump-action shotgun designed to be fitted with 23mm barrels originally for aircraft guns that were rejected due to manufacturing flaws."
 SWEP.Trivia_Manufacturer = "Ithaca"
@@ -14,8 +13,6 @@ SWEP.Trivia_Country = "USSR"
 SWEP.Trivia_Year = 1971
 
 SWEP.Slot = 3
-
-if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 
 SWEP.UseHands = true
 
@@ -140,8 +137,7 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 SWEP.AttachmentElements = {
     ["papname1"] = {
         NamePriority = 10,
-        TrueNameChange = "Gaubitsa",
-        NameChange = "Otklonit'",
+        NameChange = "Gaubitsa",
     },
     ["solid_stock"] = {
         VMBodygroups = {

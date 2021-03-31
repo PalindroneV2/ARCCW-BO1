@@ -3,9 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Magnum Revolver"
-SWEP.TrueName = "Colt Python"
 
+SWEP.PrintName = "Colt Python"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "American revolver regarded as one of the finest of its kind. The bore gets tighter towards the end, aiding in accuracy."
 SWEP.Trivia_Manufacturer = "Colt"
@@ -14,15 +13,6 @@ SWEP.Trivia_Mechanism = "SA/DA"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1955
 SWEP.Slot = 1
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
-
-
-SWEP.Slot = 1
-
-if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 
 SWEP.UseHands = true
 
@@ -153,8 +143,7 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
         NamePriority = 10,
-        TrueNameChange = "Cobra ",
-        NameChange = "Magma Revolt",
+        NameChange = "Cobra ",
     },
     ["python_snub"] = {
         VMBodygroups = {
@@ -186,7 +175,7 @@ SWEP.Attachments = {
         VMScale = Vector(1, 1, 1),
         WMScale = Vector(1, 1, 1),
         Offset = {
-            vpos = Vector(6, 0, 2.85),
+            vpos = Vector(6, -0.025, 2.85),
             vang = Angle(0, 0, 0),
             wpos = Vector(7.9, 2, -3.2),
             wang = Angle(-5, -2, 177.5)

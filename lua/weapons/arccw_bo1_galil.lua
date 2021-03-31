@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "IDF Defender"
-SWEP.TrueName = "IMI Galil ARM"
+SWEP.PrintName = "IMI Galil ARM"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "An israeli assault rifle inspired by the AK/Valmet platform firing the 5,56mm NATO round."
 SWEP.Trivia_Manufacturer = "IMI"
@@ -14,10 +13,6 @@ SWEP.Trivia_Country = "Israel"
 SWEP.Trivia_Year = 1972
 
 SWEP.Slot = 2
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
 
 SWEP.UseHands = true
 
@@ -177,7 +172,6 @@ SWEP.AttachmentElements = {
     },
     ["ammo_papunch"] = {
         NamePriority = 10,
-        TrueNameChange = "Lamentation",
         NameChange = "Lamentation",
     },
 }

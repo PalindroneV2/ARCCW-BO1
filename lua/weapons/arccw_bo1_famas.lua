@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FFAR"
-SWEP.TrueName = "FAMAS Valorisé"
+SWEP.PrintName = "FAMAS Valorisé"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "A french assault rifle firing the 5,56mm NATO round Using a bullpup configuration to keep it a compact size."
 SWEP.Trivia_Manufacturer = "GIAT Industries"
@@ -14,10 +13,6 @@ SWEP.Trivia_Country = "France"
 SWEP.Trivia_Year = 1978
 
 SWEP.Slot = 2
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
 
 SWEP.UseHands = true
 
@@ -146,11 +141,6 @@ SWEP.BarrelLength = 20
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    /*["extendedmag"] = {
-        VMBodygroups = {
-            {ind = 1, bg = 1}
-        },
-    },*/
     ["bo1_m203"] = {
         VMBodygroups = {
             {ind = 4, bg = 1},
@@ -167,10 +157,8 @@ SWEP.AttachmentElements = {
         },
     },
     ["ammo_papunch"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
         NamePriority = 10,
-        TrueNameChange = "G16-GL35",
-        NameChange = "FFORMLESS FFEARR",
+        NameChange = "G16-GL35",
     },
 }
 

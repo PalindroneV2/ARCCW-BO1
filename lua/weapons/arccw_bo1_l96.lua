@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "AW-96 Magnum"
-SWEP.TrueName = "L115A1"
+SWEP.PrintName = "L115A1"
 SWEP.Trivia_Class = "Sniper Rifle"
 SWEP.Trivia_Desc = "A high-caliber sniper rifle designed for cold-weather police and military units. Known for holding the record of the longest range sniper shot in history."
 SWEP.Trivia_Manufacturer = "Accuracy International"
@@ -14,10 +13,6 @@ SWEP.Trivia_Country = "United Kingdom"
 SWEP.Trivia_Year = 1995
 
 SWEP.Slot = 3
-
-if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
-
-SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_awm.mdl"
 SWEP.MirrorVMWM = true
@@ -146,9 +141,7 @@ SWEP.AttachmentElements = {
         },
     },
     ["ammo_papunch"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
         NamePriority = 10,
-        TrueNameChange = "L115 Isolator",
         NameChange = "L115 Isolator",
     },
     ["mount"] = {

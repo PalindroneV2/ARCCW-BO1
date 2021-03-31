@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "BWP"
-SWEP.TrueName = "AUG"
+SWEP.PrintName = "AUG"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "An austrian assault rifle firing the 5,56mm NATO round Using a bullpup configuration to keep it a compact size. It usually comes with a unique integrated scope."
 SWEP.Trivia_Manufacturer = "Steyr"
@@ -14,10 +13,6 @@ SWEP.Trivia_Country = "Austria"
 SWEP.Trivia_Year = 1977
 
 SWEP.Slot = 2
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
 
 SWEP.UseHands = true
 
@@ -147,11 +142,6 @@ SWEP.BarrelLength = 20
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    /*["extendedmag"] = {
-        VMBodygroups = {
-            {ind = 1, bg = 1}
-        },
-    },*/
     ["bo1_m203"] = {
         VMBodygroups = {
             {ind = 4, bg = 1},
@@ -181,9 +171,7 @@ SWEP.AttachmentElements = {
         },
     },
     ["ammo_papunch"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
         NamePriority = 10,
-        TrueNameChange = "AUG-5OM3",
         NameChange = "AUG-5OM3",
     },
 }
@@ -195,7 +183,7 @@ SWEP.Attachments = {
         Slot = "optic", -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(2.75, -0.05, 5), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(2.75, -0.025, 4.95), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(7, 1.25, -5.75),
             wang = Angle(175, 179, -5)

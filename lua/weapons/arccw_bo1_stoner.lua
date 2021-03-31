@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "KAC M63"
-SWEP.TrueName = "Stoner 63"
+SWEP.PrintName = "Stoner 63"
 SWEP.Trivia_Class = "Light Machine Gun"
 SWEP.Trivia_Desc = "Versatile modular weapon system to server purposes as assault rifle, light machine gun, carbine, etc. Designed by Eugene Stoner who had previously deisgned the AR-15 rifle."
 SWEP.Trivia_Manufacturer = "Knight's Armament Company"
@@ -14,10 +13,6 @@ SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1963
 
 SWEP.Slot = 3
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
 
 SWEP.UseHands = true
 

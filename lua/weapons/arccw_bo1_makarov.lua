@@ -3,9 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "PM(t) Klassika"
-SWEP.TrueName = "Makarov PM"
 
+SWEP.PrintName = "Makarov PM"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "A soviet pistol designed shortly after World War II, standard for all branches of police and military, still used by the Russian Armed Forces to this day."
 SWEP.Trivia_Manufacturer = "Izhevsk"
@@ -14,15 +13,6 @@ SWEP.Trivia_Mechanism = "Blowback"
 SWEP.Trivia_Country = "USSR"
 SWEP.Trivia_Year = 1949
 SWEP.Slot = 1
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
-
-
-SWEP.Slot = 1
-
-if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 
 SWEP.UseHands = true
 
@@ -152,7 +142,6 @@ SWEP.AttachmentElements = {
     },
     ["ammo_papunch"] = {
         NamePriority = 10,
-        TrueNameChange = "Sergei's Sidekick",
         NameChange = "Sergei's Sidekick",
     },
 }

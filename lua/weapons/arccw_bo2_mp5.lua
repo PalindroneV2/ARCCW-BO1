@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Nimrod 9mm"
-SWEP.TrueName = "HK MP5A3"
+SWEP.PrintName = "HK MP5A3"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "A submachinegun derivative of the G3 design chambered in 9mm. Known for its use by the British SAS."
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
@@ -14,10 +13,6 @@ SWEP.Trivia_Country = "Germany"
 SWEP.Trivia_Year = 1964
 
 SWEP.Slot = 2
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
 
 SWEP.UseHands = true
 
@@ -32,8 +27,8 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 25
-SWEP.DamageMin = 15 -- damage done at maximum range
+SWEP.Damage = 27
+SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.Range = 80 -- in METRES
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
@@ -371,7 +366,7 @@ SWEP.Hook_NameChange = function(wep, name)
         return "HK MP5A2"
     elseif pap and mp5a2 and mp5sd then
         return "MP115 Semiramis"
-    elseif pap and !mp5a2 and !mp5sd then
+    elseif pap and !mp5a2 and !mp5sd and !mp5k then
         return "MP115 Nimrod"
     elseif pap and !mp5a2 and mp5sd then
         return "MP115 Semiramis"
@@ -381,7 +376,7 @@ SWEP.Hook_NameChange = function(wep, name)
         return "HK MP5K"
     elseif !pap and mp5k and mp5a2 then
         return "HK MP5K"
-    elseif pap and mp5k then
+    elseif pap and mp5k and (mp5a2 or !mp5a2) then
         return "MP115 Kollider"
     end
 end

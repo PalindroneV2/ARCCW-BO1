@@ -3,22 +3,16 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FDF RAFW"
-SWEP.TrueName = "FN FAL"
+SWEP.PrintName = "FN FAL"
 SWEP.Trivia_Class = "Battle Rifle"
 SWEP.Trivia_Desc = "A light automatic rifle chambered in 7.62x51mm NATO. Designed during peace times and intended to be NATO's standard issue rifle by FN, was denied by the United States in favor of the M14 rifle. While a very precise and capable weapon on semi, firing it in full-auto would be very difficult."
-SWEP.Trivia_Manufacturer = "FDF Nivelle"
+SWEP.Trivia_Manufacturer = "FN Herstal"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Short-stroke gas piston"
 SWEP.Trivia_Country = "Belgium"
 SWEP.Trivia_Year = 1953
 
 SWEP.Slot = 2
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "FN Herstal"
-end
 
 SWEP.UseHands = true
 
@@ -175,8 +169,7 @@ SWEP.AttachmentElements = {
             {ind = 4, bg = 2},
         },
         NamePriority = 5,
-        TrueNameChange = "FN FAL Para",
-        NameChange = "FDF RAFW Para",
+        NameChange = "FN FAL Para",
         ExcludeFlags = {"ammo_papunch"},
     },
     ["fal_rail"] = {
@@ -188,11 +181,8 @@ SWEP.AttachmentElements = {
         },
     },
     ["ammo_papunch"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
-        --WMMaterial = "models/weapons/pap/pap_blue_burn",
         NamePriority = 10,
-        TrueNameChange = "EPC WN",
-        NameChange = "RAWR XD",
+        NameChange = "EPC WN",
     },
 }
 

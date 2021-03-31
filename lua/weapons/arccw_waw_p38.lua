@@ -3,9 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "MFU-38"
-SWEP.TrueName = "Walther P38"
-
+SWEP.PrintName = "Walther P38"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "9mm german pistol. Replaced the Luger P08 as the standard issue for german officers during WW2 and like it was an item sought after by allied soldiers as war souvenirs."
 SWEP.Trivia_Manufacturer = "Walther GMBH"
@@ -15,16 +13,6 @@ SWEP.Trivia_Country = "Nazi Germany"
 SWEP.Trivia_Year = 1938
 
 SWEP.Slot = 1
-
--- This is what governs the True Name feature. You can do extra stuff here such as changing a fictonal manufacturer to a real one!
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
-
-
-SWEP.Slot = 1
-
-if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 
 SWEP.UseHands = true
 

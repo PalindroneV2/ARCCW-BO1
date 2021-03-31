@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "S-Ravage"
-SWEP.TrueName = "SPAS-12"
+SWEP.PrintName = "SPAS-12"
 SWEP.Trivia_Class = "Combat Shotgun"
 SWEP.Trivia_Desc = "12 gauge dual mode combat shotgun designed to function primarily in semi-automatic mode, with the pump-action mode used for low-pressure ammunition such as bean bags."
 SWEP.Trivia_Manufacturer = "Franchi"
@@ -14,8 +13,6 @@ SWEP.Trivia_Country = "Italy"
 SWEP.Trivia_Year = 1979
 
 SWEP.Slot = 3
-
-if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 
 SWEP.UseHands = true
 
@@ -140,8 +137,7 @@ SWEP.AttachmentElements = {
     ["spas12_pap"] = {
         --VMMaterial = "models/weapons/pap/pap_blue_burn",
         NamePriority = 10,
-        TrueNameChange = "SPAZ-24",
-        NameChange = "Gremlin",
+        NameChange = "SPAZ-24",
     },
     ["spas_stockon"] = {
         VMBodygroups = {

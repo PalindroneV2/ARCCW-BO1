@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Papasha"
-SWEP.TrueName = "PPSh-41"
+SWEP.PrintName = "PPSh-41"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "Russian submachine gun with an obscene rate of fire and a drum magazine."
 SWEP.Trivia_Manufacturer = "Numerous"
@@ -14,10 +13,6 @@ SWEP.Trivia_Country = "USSR"
 SWEP.Trivia_Year = 1941
 
 SWEP.Slot = 2
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
 
 SWEP.UseHands = true
 
@@ -34,8 +29,8 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "000000"
 
-SWEP.Damage = 20
-SWEP.DamageMin = 15 -- damage done at maximum range
+SWEP.Damage = 23
+SWEP.DamageMin = 18 -- damage done at maximum range
 SWEP.Range = 80 -- in METRES
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET

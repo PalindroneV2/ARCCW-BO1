@@ -3,9 +3,7 @@ SWEP.Spawnable = false -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Blitzgerät-02"
-SWEP.TrueName = "Wunderwaffe DG-2"
-
+SWEP.PrintName = "Wunderwaffe DG-2"
 SWEP.Trivia_Class = "Wonder Weapon"
 SWEP.Trivia_Desc = "An experimental Nazi Wonder Weapon. Fires bolts of lightning that chain up with enemies in the vecinity of its target area. Careful not to kill yourself with it."
 SWEP.Trivia_Manufacturer = "Group 935"
@@ -15,10 +13,6 @@ SWEP.Trivia_Country = "Nazi Germany"
 SWEP.Trivia_Year = 1943
 
 SWEP.Slot = 1
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
 
 SWEP.UseHands = true
 

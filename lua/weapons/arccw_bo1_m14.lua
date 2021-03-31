@@ -3,22 +3,16 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "GWBM-14"
-SWEP.TrueName = "M14"
+SWEP.PrintName = "M14"
 SWEP.Trivia_Class = "Battle Rifle"
 SWEP.Trivia_Desc = "A traditional battle rifle designed by the United States for its military. Based on the M1 Garand, the M14 now uses detachable 20 round box magazines. Was soon replaced by the M16 rifle which offered much better performance in full-auto and was much lighter."
-SWEP.Trivia_Manufacturer = "Simpson's Firearms Ltd."
+SWEP.Trivia_Manufacturer = "Springfield Armory"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1959
 
 SWEP.Slot = 2
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Springfield Armory"
-end
 
 SWEP.UseHands = true
 
@@ -143,8 +137,6 @@ SWEP.BarrelLength = 30
 
 SWEP.ExtraSightDist = 5
 
---SWEP.DefaultPoseParams = {["idle"] = 0.5}
-
 SWEP.AttachmentElements = {
     ["bo1_sling"] = {
         VMBodygroups = {
@@ -187,9 +179,7 @@ SWEP.AttachmentElements = {
         },
     },
     ["papname1"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
         NamePriority = 10,
-        TrueNameChange = "Mnesia",
         NameChange = "Mnesia",
     },
 }

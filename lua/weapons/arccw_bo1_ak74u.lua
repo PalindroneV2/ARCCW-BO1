@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "KF7u Krinkov"
-SWEP.TrueName = "AKMu"
+SWEP.PrintName = "AKMu"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "A carbine length version of the AKM. Affectionally nicknamed the Krinkov, this weapon was issued to only Soviet tank crews, special forces and support units."
 SWEP.Trivia_Manufacturer = "Kalashnikov Concern"
@@ -14,10 +13,6 @@ SWEP.Trivia_Country = "USSR"
 SWEP.Trivia_Year = 1979
 
 SWEP.Slot = 2
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
 
 SWEP.UseHands = true
 

@@ -3,9 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Plastic Pistol"
-SWEP.TrueName = "ASP Pistol"
 
+SWEP.PrintName = "ASP Pistol"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "A compact american pistol with translucent parts that allow the user to see how many rounds remain in the magazine."
 SWEP.Trivia_Manufacturer = "ASP"
@@ -14,15 +13,6 @@ SWEP.Trivia_Mechanism = "Blowback"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1949
 SWEP.Slot = 1
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
-
-
-SWEP.Slot = 1
-
-if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 
 SWEP.UseHands = true
 
@@ -147,7 +137,6 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 SWEP.AttachmentElements = {
     ["m39"] = {
         NamePriority = 1,
-        TrueNameChange = "S&W M39",
         NameChange = "S&W M39",
         VMBodygroups = {
             {ind = 1, bg = 1}
@@ -162,7 +151,6 @@ SWEP.AttachmentElements = {
     },
     ["hush_puppy"] = {
         NamePriority = 2,
-        TrueNameChange = "Mk 22 Mod 0",
         NameChange = "Mk 22 Mod 0",
         VMBodygroups = {
             {ind = 1, bg = 2}
@@ -177,12 +165,10 @@ SWEP.AttachmentElements = {
     },
     ["papname1"] = {
         NamePriority = 3,
-        TrueNameChange = "Atom Spliting Proton",
         NameChange = "Atom Spliting Proton",
     },
     ["papname2"] = {
         NamePriority = 4,
-        TrueNameChange = "M115 STFU",
         NameChange = "M115 STFU",
         VMSkin = 5,
         RequireFlags = {"m39"},
@@ -190,7 +176,6 @@ SWEP.AttachmentElements = {
     },
     ["papname3"] = {
         NamePriority = 5,
-        TrueNameChange = "Mk 115 Snake Eater",
         NameChange = "Mk 115 Snake Eater",
         VMSkin = 6,
         RequireFlags = {"hush_puppy"},

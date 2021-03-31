@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "X-68 ACR"
-SWEP.TrueName = "HK G11"
+SWEP.PrintName = "HK G11"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "Experimental german assault rifle for special operations which fired caseless rounds. Reseaarch into the weapons system was dropped in 1990 in favor fo the more conventional G36 rifle."
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
@@ -14,10 +13,6 @@ SWEP.Trivia_Country = "Germany"
 SWEP.Trivia_Year = 1968
 
 SWEP.Slot = 2
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
 
 SWEP.UseHands = true
 
@@ -156,9 +151,7 @@ SWEP.AttachmentElements = {
         },
     },
     ["ammo_papunch"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
         NamePriority = 10,
-        TrueNameChange = "G115 Generator",
         NameChange = "G115 Generator",
     },
 }

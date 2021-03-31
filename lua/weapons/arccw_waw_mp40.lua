@@ -4,7 +4,6 @@ SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "MP40"
-SWEP.TrueName = "MP40"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "German submachine gun in 9mm. The weight and slower rate of fire allow for a weapon with very little recoil"
 SWEP.Trivia_Manufacturer = "Erma Werke"
@@ -14,10 +13,6 @@ SWEP.Trivia_Country = "Nazi Germany"
 SWEP.Trivia_Year = 1940
 
 SWEP.Slot = 2
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
 
 SWEP.UseHands = true
 
@@ -34,8 +29,8 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "000000"
 
-SWEP.Damage = 24
-SWEP.DamageMin = 15 -- damage done at maximum range
+SWEP.Damage = 30
+SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.Range = 80 -- in METRES
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET

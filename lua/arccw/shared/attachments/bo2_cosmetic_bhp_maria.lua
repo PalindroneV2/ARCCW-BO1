@@ -1,5 +1,5 @@
 att.PrintName = "Maria"
-att.Icon = Material("entities/acwatt_1911_shiny2.png", "smooth mips")
+att.Icon = Material("entities/acwatt_bo2_cosmetic_bhp_maria.png", "smooth mips")
 att.Description = "Special engraved High-Power that once belonged to a man with a checkered suit."
 
 att.Desc_Pros = {

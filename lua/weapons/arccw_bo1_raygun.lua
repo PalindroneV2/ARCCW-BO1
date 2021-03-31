@@ -3,9 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "RM-1HRG"
-SWEP.TrueName = "Ray Gun"
-
+SWEP.PrintName = "Ray Gun"
 SWEP.Trivia_Class = "Wonder Weapon"
 SWEP.Trivia_Desc = "An experimental Nazi Wonder Weapon. Fires green bolts of plasma which explode on impact. Careful not to kill yourself with it."
 SWEP.Trivia_Manufacturer = "Group 935"

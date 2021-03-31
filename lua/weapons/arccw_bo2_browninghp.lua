@@ -3,9 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FNP-35"
-SWEP.TrueName = "Browning HP"
 
+SWEP.PrintName = "Browning HP"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "Another semi-automatic pistol designed by the legendary gunsmith, John Moses Browning. This 9mm pistol innovated with the use of double stack magazines which inspired many future handguns' designs."
 SWEP.Trivia_Manufacturer = "FN Herstal"
@@ -15,16 +14,6 @@ SWEP.Trivia_Country = "Belgium"
 SWEP.Trivia_Year = 1935
 
 SWEP.Slot = 1
-
--- This is what governs the True Name feature. You can do extra stuff here such as changing a fictonal manufacturer to a real one!
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
-
-
-SWEP.Slot = 1
-
-if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 
 SWEP.UseHands = true
 
@@ -148,12 +137,10 @@ SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
         --VMMaterial = "models/weapons/pap/pap_blue_burn",
         NamePriority = 10,
-        TrueNameChange = "Moses Unlimited",
         NameChange = "Moses Unlimited",
     },
     ["maria"] = {
         NamePriority = 5,
-        TrueNameChange = "Maria",
         NameChange = "Maria",
         VMSkin = 1
     }

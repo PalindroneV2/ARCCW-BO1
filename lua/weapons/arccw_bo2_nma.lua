@@ -3,9 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Army Sixer"
-SWEP.TrueName = "New Model Army"
 
+SWEP.PrintName = "New Model Army"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "American revolver used by the US Army during the Civil War and the times of the old West."
 SWEP.Trivia_Manufacturer = "Remington"
@@ -14,15 +13,6 @@ SWEP.Trivia_Mechanism = "SA/DA"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1858
 SWEP.Slot = 1
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
-
-
-SWEP.Slot = 1
-
-if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 
 SWEP.UseHands = true
 

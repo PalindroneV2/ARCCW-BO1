@@ -3,24 +3,16 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Pigglins RPF-60"
-SWEP.TrueName = "M60"
+SWEP.PrintName = "M60"
 SWEP.Trivia_Class = "Light Machine Gun"
 SWEP.Trivia_Desc = "The U.S. Military's standard general purpose machine gun adopted in 1957. Nicknamed the Pig due to it's huge size and appetite for ammo."
-SWEP.Trivia_Manufacturer = "Pigglins Defense"
+SWEP.Trivia_Manufacturer = "U.S. Ordnance"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Short-stroke gas piston"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1957
 
 SWEP.Slot = 3
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "U.S. Ordnance"
-end
-
-SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_m60.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_m60.mdl"
@@ -171,8 +163,7 @@ SWEP.AttachmentElements = {
     },
     ["papname1"] = {
         NamePriority = 10,
-        TrueNameChange = "Gannon",
-        NameChange = "Gannon",
+        NameChange = "Slow Burn",
     },
 }
 

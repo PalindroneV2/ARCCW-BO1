@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "LC-10"
-SWEP.TrueName = "MPL"
+SWEP.PrintName = "MPL"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "A submachinegun adopted by West Germany during the 1960s."
 SWEP.Trivia_Manufacturer = "Walther GmbH"
@@ -14,10 +13,6 @@ SWEP.Trivia_Country = "West Germany"
 SWEP.Trivia_Year = 1963
 
 SWEP.Slot = 2
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
 
 SWEP.UseHands = true
 
@@ -32,9 +27,9 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 25
-SWEP.DamageMin = 15 -- damage done at maximum range
-SWEP.Range = 80 -- in METRES
+SWEP.Damage = 28
+SWEP.DamageMin = 22 -- damage done at maximum range
+SWEP.Range = 90 -- in METRES
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -165,8 +160,7 @@ SWEP.AttachmentElements = {
     },
     ["ammo_papunch"] = {
         NamePriority = 10,
-        TrueNameChange = "MPL-LF",
-        NameChange = "LC115 Hawkeye",
+        NameChange = "MPL-LF",
     },
 }
 

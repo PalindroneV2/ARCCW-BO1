@@ -3,9 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Mustang P11"
-SWEP.TrueName = "Colt M1911A1"
 
+SWEP.PrintName = "Colt M1911A1"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "One of the first semi-automatic pistols, this design is a staple and has been in service with military, police and civilians for over 100 years. For John made the 1911, and lo all of his weapons, from the designs which I, the Lord, gave him upon the mountain."
 SWEP.Trivia_Manufacturer = "Colt"
@@ -15,16 +14,6 @@ SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1911
 
 SWEP.Slot = 1
-
--- This is what governs the True Name feature. You can do extra stuff here such as changing a fictonal manufacturer to a real one!
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
-
-
-SWEP.Slot = 1
-
-if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 
 SWEP.UseHands = true
 
@@ -147,13 +136,9 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
-        TrueNameChange = "Pain",
-        NameChange = "Overlord M115",
+        NameChange = "Pain",
     },
     ["ammo_1911_pap"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
-        TrueNameChange = "C-3000 B1AT-CH35",
         NameChange = "C-3000 B1AT-CH35",
     },
     ["m1911_spframe"] = {

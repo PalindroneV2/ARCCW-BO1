@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Nimrod 7.62mm Combat"
-SWEP.TrueName = "HK G3A4"
+SWEP.PrintName = "HK G3A4"
 SWEP.Trivia_Class = "Battle Rifle"
 SWEP.Trivia_Desc = "Select-fire battle rifle adopted by West Germany as their own 7.62mm rifle instead of the FAL. Based on a CETME design created by former Mauser engineers, this rifle follows the lineage of the ill-fated STG-45(M), the first weapon to use roller-delayed blowback."
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
@@ -14,10 +13,6 @@ SWEP.Trivia_Country = "Germany"
 SWEP.Trivia_Year = 1958
 
 SWEP.Slot = 3
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
 
 SWEP.UseHands = true
 

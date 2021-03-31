@@ -13,5 +13,4 @@ VertexlitGeneric
 	$envmap                    		 env_cubemap
 	$envmaptint                 		"[.01 .01 .01]"
 	$normalmapalphaenvmapmask   	1
-
 }

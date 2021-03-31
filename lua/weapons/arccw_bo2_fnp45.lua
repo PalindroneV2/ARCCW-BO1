@@ -3,9 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FDF MMP-45"
-SWEP.TrueName = "FNP-45"
 
+SWEP.PrintName = "FNP-45"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = ".45 Caliber semi-automatic pistol produced in Belgium that currently sees service with Spanish Navy Marines and in few police forces."
 SWEP.Trivia_Manufacturer = "FN Herstal"
@@ -15,16 +14,6 @@ SWEP.Trivia_Country = "Belgium"
 SWEP.Trivia_Year = 2006
 
 SWEP.Slot = 1
-
--- This is what governs the True Name feature. You can do extra stuff here such as changing a fictonal manufacturer to a real one!
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
-
-
-SWEP.Slot = 1
-
-if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 
 SWEP.UseHands = true
 
@@ -147,8 +136,7 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
         --VMMaterial = "models/weapons/pap/pap_blue_burn",
-        TrueNameChange = "Fearless kNight P115",
-        NameChange = "RAWR PWND",
+        NameChange = "Fatal Necro Puncher",
     },
     ["pistol_rail"] = {
         VMBodygroups = {
@@ -166,7 +154,7 @@ SWEP.Attachments = {
         Slot = {"optic_lp"},
         Bone = "j_bolt",
         Offset = {
-            vpos = Vector(0.75, 0.1, 0.1),
+            vpos = Vector(0.75, 0.1, 0.25),
             vang = Angle(0, 0, 0),
         },
         CorrectivePos = Vector(0, 0, 0.0125),

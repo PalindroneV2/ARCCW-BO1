@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Mk.416"
-SWEP.TrueName = "HK416"
+SWEP.PrintName = "HK416"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "An improved modification of the M4A1 Carbine by HK. Used by the USMC as a replacement for the M4A1 and M16A4 assault rifles and in a machine gun configuration with a heavier, longer barrel to replace the belt-fed M249 SAW."
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
@@ -14,10 +13,6 @@ SWEP.Trivia_Country = "Germany"
 SWEP.Trivia_Year = 2004
 
 SWEP.Slot = 2
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
 
 SWEP.UseHands = true
 
@@ -164,7 +159,6 @@ SWEP.AttachmentElements = {
     },
     ["ammo_papunch"] = {
         NamePriority = 4,
-        TrueNameChange = "Mystifier",
         NameChange = "Mystifier",
     },
     ["name_a4"] = {
@@ -177,8 +171,7 @@ SWEP.AttachmentElements = {
     },
     ["m27iar"] = {
         NamePriority = 2,
-        TrueNameChange = "M27 IAR",
-        NameChange = "Mk.416 SAW",
+        NameChange = "M27 IAR",
         ExcludeFlags = {"papname1"},
         AttPosMods = {
             [2] = {
@@ -188,8 +181,7 @@ SWEP.AttachmentElements = {
     },
     ["416C"] = {
         NamePriority = 1,
-        TrueNameChange = "HK416C",
-        NameChange = "Mk.416 Compact",
+        NameChange = "HK416C",
         ExcludeFlags = {"papname1"},
         AttPosMods = {
             [2] = {

@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Nimrod 7.62mm Gunner"
-SWEP.TrueName = "HK21"
+SWEP.PrintName = "HK21"
 SWEP.Trivia_Class = "Light Machine Gun"
 SWEP.Trivia_Desc = "G3 battle rifle converted into a light machine gun."
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
@@ -14,10 +13,6 @@ SWEP.Trivia_Country = "Germany"
 SWEP.Trivia_Year = 1961
 
 SWEP.Slot = 3
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
 
 SWEP.UseHands = true
 

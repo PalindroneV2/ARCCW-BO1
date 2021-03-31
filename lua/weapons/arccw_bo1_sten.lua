@@ -3,21 +3,16 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Sten"
-SWEP.TrueName = "Sten Mk II"
+SWEP.PrintName = "Sten Mk II"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "British submachine gun in 9mm. Made for cheap, very uncomfortable to hold, but very light and the slower rate of fire makes full auto controllable."
 SWEP.Trivia_Manufacturer = "RSAF"
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Straight Blowback"
-SWEP.Trivia_Country = "Nazi Germany"
+SWEP.Trivia_Country = "U.K."
 SWEP.Trivia_Year = 1940
 
 SWEP.Slot = 2
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
 
 SWEP.UseHands = true
 
@@ -34,7 +29,7 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "000000"
 
-SWEP.Damage = 24
+SWEP.Damage = 27
 SWEP.DamageMin = 15 -- damage done at maximum range
 SWEP.Range = 80 -- in METRES
 SWEP.Penetration = 4

@@ -4,7 +4,6 @@ SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "M1A1 Thompson"
-SWEP.TrueName = "M1A1 Thompson"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "American Submachine Gun in .45 ACP. The design was finalized too late for the Great War, but it found commercial success in the civilian market and infamy due to it's use by gangsters. Eventually the U.S. Military would fully adopt the Thompson as their standard SMG and would see service in World War 2."
 SWEP.Trivia_Manufacturer = "Auto-Ordnance"
@@ -14,10 +13,6 @@ SWEP.Trivia_Country = "United States of America"
 SWEP.Trivia_Year = 1920
 
 SWEP.Slot = 2
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
 
 SWEP.UseHands = true
 

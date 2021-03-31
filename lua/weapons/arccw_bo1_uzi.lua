@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "IDF Stormer"
-SWEP.TrueName = "IMI Uzi"
+SWEP.PrintName = "IMI Uzi"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "The Uzi is an israeli SMG chambered in 9mm designed to be compact and easy to manufacture. Made famous by it's use in Hollywood films."
 SWEP.Trivia_Manufacturer = "IMI"
@@ -14,10 +13,6 @@ SWEP.Trivia_Country = "Israel"
 SWEP.Trivia_Year = 1950
 
 SWEP.Slot = 2
-
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
 
 SWEP.UseHands = true
 
