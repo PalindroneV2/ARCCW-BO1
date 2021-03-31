@@ -18,10 +18,14 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_waw_nambu.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_waw_nambu.mdl"
+SWEP.MirrorVMWM = true
+SWEP.WorldModelOffset = {
+    scale = 1.025,
+    pos        =    Vector(10, 5, 0),
+    ang        =    Angle(0, 0, 0),
+    bone    =    "ValveBiped.Bip01_R_Hand",
+}
 SWEP.ViewModelFOV = 60
-SWEP.ViewModelFlip = false
-
-SWEP.Defaultmaingroups = "0000000000"
 
 SWEP.Damage = 22
 SWEP.DamageMin = 14 -- damage done at maximum range
@@ -148,9 +152,9 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Slot = "muzzle",
-        Bone = "muzzle",
+        Bone = "main",
         Offset = {
-            vpos = Vector(0, 0, 0),
+            vpos = Vector(5.5, -0.03, 1.25),
             vang = Angle(0, 0, 0),
         },
         VMScale = Vector(0.775, 0.775, 0.775)

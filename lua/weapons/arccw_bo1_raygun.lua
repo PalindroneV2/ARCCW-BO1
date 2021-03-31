@@ -14,10 +14,6 @@ SWEP.Trivia_Year = 1942
 
 SWEP.Slot = 1
 
-if GetConVar("arccw_truenames"):GetBool() then
-    SWEP.PrintName = SWEP.TrueName
-end
-
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_raygun.mdl"
