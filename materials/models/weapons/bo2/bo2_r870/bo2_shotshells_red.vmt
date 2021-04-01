@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/bo2/bo2_r870/shells_red_c"
+	$blendtintbybasealpha  "1"
+	"$bumpmap" "models/weapons/bo2/bo2_r870/shells_n"
+	$phong                      		1
+	$phongexponent                      "20"
+	$phongboost                         "1"
+	$phongfresnelranges         "[0.5 2.5 2.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+}

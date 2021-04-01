@@ -1,5 +1,5 @@
 SWEP.Base = "arccw_base"
-SWEP.Spawnable = true -- this obviously has to be set to true
+SWEP.Spawnable = false -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
@@ -20,7 +20,7 @@ SWEP.ViewModel = "models/weapons/arccw/c_waw_nambu.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_waw_nambu.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1.025,
+    scale = 1,
     pos        =    Vector(10, 5, 0),
     ang        =    Angle(0, 0, 0),
     bone    =    "ValveBiped.Bip01_R_Hand",

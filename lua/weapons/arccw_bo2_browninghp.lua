@@ -206,6 +206,12 @@ SWEP.Attachments = {
     },
 }
 
+SWEP.Hook_GetShootSound = function(wep, sound)
+    if wep.Attachments[1].Installed and wep:GetBuff_Override("Silencer") then
+        return "ArcCW_BO2.M1911_Sil"
+    end
+end
+
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[4].Installed == "ammo_papunch"
