@@ -11,4 +11,4 @@ att.AutoStats = true
 att.ExcludeFlags = {"bo1_wood"}
 
 att.SortOrder = 100
-att.Slot = {"bo1_cosmetic", "kali_wood", "r870_wood"}
+att.Slot = {"bo1_cosmetic", "r870_wood"}

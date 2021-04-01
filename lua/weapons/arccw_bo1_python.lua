@@ -170,7 +170,7 @@ SWEP.RejectAttachments = {
 SWEP.Attachments = {
     { --1
         PrintName = "Optic",
-        Slot = {"optic", "optic_lp"},
+        Slot = {"optic", "optic_lp", "bo1_lp_optic"},
         Bone = "tag_weapon",
         VMScale = Vector(1, 1, 1),
         WMScale = Vector(1, 1, 1),
