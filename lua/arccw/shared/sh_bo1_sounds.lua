@@ -1398,7 +1398,7 @@ sound.Add({
     sound = "weapons/arccw/bo1_l96/bolt_down.wav"
 })
 
--- AWSM --
+-- M60??? --
 
 sound.Add({
     name = "ArcCW_BO1.M60_Fire",
@@ -1466,6 +1466,18 @@ sound.Add({
     channel = CHAN_ITEM,
     level = 70,
     sound = "weapons/arccw/bo1_m60/futz.wav"
+})
+sound.Add({
+    name = "ArcCW_BO1.M60_Act",
+    channel = CHAN_STATIC,
+    level = 70,
+    sound = "weapons/arccw/bo1_m60/act_00.wav"
+})
+sound.Add({
+    name = "ArcCW_BO1.M60_Lfe",
+    channel = CHAN_STATIC,
+    level = 70,
+    sound = "weapons/arccw/bo1_m60/lfe_00.wav"
 })
 
 -- M1911 BO1 --
