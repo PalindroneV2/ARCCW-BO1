@@ -1873,6 +1873,59 @@ sound.Add( {
     }
 } )
 
+-- OLYMPIA SOUNDS --
+
+sound.Add( {
+    name = "ArcCW_BO1.Olympia_Fire",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_olympia/shot.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Olympia_Close",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_olympia/close.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Olympia_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_olympia/open.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Olympia_Switch",
+    channel = CHAN_ITEM + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_olympia/switch.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Olympia_Shell",
+    channel = CHAN_ITEM + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_olympia/shell.wav",
+    }
+} )
+
 -- WAW RIFLE GRENADE --
 
 sound.Add( {

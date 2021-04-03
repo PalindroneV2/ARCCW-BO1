@@ -7,7 +7,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = {"ammo_pap"}
+att.Slot = {"ammo_pap", "ammo_pap_sg"}
 
 att.PackAPunch = true
 

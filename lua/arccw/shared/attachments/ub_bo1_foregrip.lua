@@ -12,6 +12,7 @@ att.Desc_Cons = {
 att.AutoStats = true
 
 att.Slot = "bo1_foregrip"
+att.IntegratedGrip = true
 
 att.Mult_Recoil = 0.75
 
