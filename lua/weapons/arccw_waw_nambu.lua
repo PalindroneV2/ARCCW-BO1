@@ -107,9 +107,6 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.ActivePos = Vector(-1, -7.5, 1.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(-8, 0, 1)
-SWEP.CrouchAng = Angle(0, 0, -45)
-
 SWEP.HolsterPos = Vector(3, 3, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
 
@@ -276,14 +273,14 @@ SWEP.Animations = {
         Source = "bash",
         FrameRate = 60,
         LHIK = true,
-        LHIKIn = 14/60,
-        LHIKOut = 10/60,
+        LHIKIn = 14 / 60,
+        LHIKOut = 10 / 60,
     },
     ["bash_empty"] = {
         Source = "bash_empty",
         FrameRate = 60,
         LHIK = true,
-        LHIKIn = 14/60,
-        LHIKOut = 10/60,
+        LHIKIn = 14 / 60,
+        LHIKOut = 10 / 60,
     },
 }
