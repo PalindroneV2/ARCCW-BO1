@@ -2162,7 +2162,7 @@ sound.Add({
 sound.Add({
     name = "ArcCW_BO1.Perk_StaminUp",
     channel = CHAN_ITEM + 115,
-    level = 100,
+    level = 75,
     sound = "weapons/arccw/bo1_perks/perk_stamina.wav"
 })
 

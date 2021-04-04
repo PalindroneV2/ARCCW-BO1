@@ -1,5 +1,5 @@
 SWEP.Base = "arccw_base"
-SWEP.Spawnable = false -- this obviously has to be set to true
+SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
@@ -18,13 +18,12 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_waw_nambu.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_waw_nambu.mdl"
-SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1,
-    pos        =    Vector(10, 5, 0),
-    ang        =    Angle(0, 0, 0),
+    pos = Vector(-23, 7.125, -2.25),
+    ang = Angle(-10, -1.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
+SWEP.MirrorVMWM = true
 SWEP.ViewModelFOV = 60
 
 SWEP.Damage = 22
@@ -121,21 +120,12 @@ SWEP.BarrelLength = 12
 
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
-        NameChange = "Tsuyoi-115",
-        TrueNameChange = "Type 115 Samurai Nambu",
-        Override_Trivia_Desc = "A pistol recovered from the Rising Sun facility that was exposed to Element 115 meteor fragments.",
+        NameChange = "Type 115 Samurai Nambu",
+        VMSkin = 1
     },
 }
 
 SWEP.ExtraSightDist = 2
-
-SWEP.WorldModelOffset = {
-    pos = Vector(0, 0, 0),
-    ang = Angle(-10, 0, 180),
-    scale = 1.1
-}
-
-SWEP.MirrorVMWM = true
 
 SWEP.Attachments = {
     {
@@ -277,11 +267,23 @@ SWEP.Animations = {
         },
     },
     ["idle_sprint"] = {
-        Source = "idle_sprint",
-        Time = 1 / 30,
+        Source = "idle_sprint"
     },
     ["idle_sprint_empty"] = {
-        Source = "idle_sprint_empty",
-        Time = 1 / 30,
+        Source = "idle_sprint_empty"
+    },
+    ["bash"] = {
+        Source = "bash",
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 14/60,
+        LHIKOut = 10/60,
+    },
+    ["bash_empty"] = {
+        Source = "bash_empty",
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 14/60,
+        LHIKOut = 10/60,
     },
 }

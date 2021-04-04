@@ -25,6 +25,8 @@ att.Override_MuzzleEffect = "pap_heavy_flame"
 att.Override_ShootEntity = "arccw_bo1_mustangsally"
 att.Mult_MuzzleVelocity = 100000
 
+att.AttachSound = "weapons/arccw/pap/pap_jingle.wav"
+
 att.Override_MuzzleEffect = "pap_muzzle_big"
 
 att.Hook_FireBullets = function(wep, data)

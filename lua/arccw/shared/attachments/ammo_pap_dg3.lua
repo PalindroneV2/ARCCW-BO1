@@ -19,6 +19,8 @@ att.Override_ShootEntity = "arccw_bo1_dg2_bolt_pap"
 att.Override_MuzzleEffect = "dg3_flash"
 --att.Override_Tracer = "bo1_raygun_tracer_pap"
 
+att.AttachSound = "weapons/arccw/pap/pap_jingle.wav"
+
 att.Hook_FireBullets = function(wep, data)
   wep:EmitSound("PAP_Effect")
 end

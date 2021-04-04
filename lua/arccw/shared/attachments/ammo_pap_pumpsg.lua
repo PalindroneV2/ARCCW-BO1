@@ -21,6 +21,8 @@ att.Mult_Damage = 2.5
 att.Mult_DamageMin = 2.5
 att.Mult_Penetration = 2.5
 
+att.AttachSound = "weapons/arccw/pap/pap_jingle.wav"
+
 att.Override_MuzzleEffect = "pap_muzzle"
 
 att.Hook_FireBullets = function(wep, data)
