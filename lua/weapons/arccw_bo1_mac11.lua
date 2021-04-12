@@ -144,6 +144,11 @@ SWEP.AttachmentElements = {
     },
     ["light_stock"] = {
         VMBodygroups = {
+            {ind = 3, bg = 2},
+        },
+    },
+    ["solid_stock"] = {
+        VMBodygroups = {
             {ind = 3, bg = 1},
         },
     },
@@ -151,10 +156,6 @@ SWEP.AttachmentElements = {
         NamePriority = 10,
         NameChange = "Royale with Lead",
     },
-}
-
-SWEP.RejectAttachments = {
-    ["bo1_solid_stock"] = true,
 }
 
 SWEP.Attachments = {
@@ -245,7 +246,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local stock = wep.Attachments[4].Installed == "bo1_light_stock"
+    local stock = wep.Attachments[4].Installed == "bo1_solid_stock"
     local ext = wep.Attachments[6].Installed == "ammo_bo1_mac11_ext"
 
     if stock and !ext then
