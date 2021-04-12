@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Beretta 682"
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = "12 gauge dual mode combat shotgun designed to function primarily in semi-automatic mode, with the pump-action mode used for low-pressure ammunition such as bean bags."
+SWEP.Trivia_Desc = "12 gauge sporting and hunting purpose made double-barrel shotgun by Beretta that uses the Over and Under design."
 SWEP.Trivia_Manufacturer = "Beretta"
 SWEP.Trivia_Calibre = "12x70mm"
 SWEP.Trivia_Mechanism = "Double Barrel O/U, Break Action"

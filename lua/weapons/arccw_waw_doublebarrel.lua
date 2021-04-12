@@ -5,8 +5,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Double-Barrel Shotgun"
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = "12 gauge dual mode combat shotgun designed to function primarily in semi-automatic mode, with the pump-action mode used for low-pressure ammunition such as bean bags."
-SWEP.Trivia_Manufacturer = "Franchi"
+SWEP.Trivia_Desc = "Dating back to the old west, still in use today, two barrels of buckshot. A classic through and through."
+SWEP.Trivia_Manufacturer = "Many"
 SWEP.Trivia_Calibre = "12x70mm"
 SWEP.Trivia_Mechanism = "Double Barrel SxS, Break Action"
 SWEP.Trivia_Country = "USA"
@@ -55,8 +55,18 @@ SWEP.Num = 8 -- number of shots per trigger pull.
 SWEP.RunawayBurst = false
 SWEP.Firemodes = {
     {
-        Printname = "SEMI-AUTO",
+        PrintName = "SINGLE",
         Mode = 1,
+    },
+    {
+        PrintName = "BOTH",
+        Mode = 1,
+        Mult_Recoil = 2,
+        Mult_RecoilSide = 2,
+        Override_AmmoPerShot = 2,
+        Override_Num = 16,
+        Mult_Damage = 2,
+        Mult_DamageMin = 2,
     },
     {
         Mode = 0

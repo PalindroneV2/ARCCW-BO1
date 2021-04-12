@@ -27,3 +27,15 @@ att.Mult_DamageMin = 3
 att.Override_AmmoPerShot = 2
 att.Override_MuzzleEffectAttachment = 2
 att.Override_ShootWhileSprint = true
+
+att.Override_Firemodes = {
+    {
+        PrintName = "BOTH",
+        Mode = 1,
+    },
+    {
+        Mode = 0
+    }
+}
+
+att.AttachSound = "weapons/arccw/bo1_olympia/waw_e1m1.wav"
