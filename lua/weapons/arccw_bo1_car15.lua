@@ -109,7 +109,7 @@ SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
     Pos = Vector(-2.77, -2, -0.05),
-    Ang = Angle(1.375, 0, 0),
+    Ang = Angle(1.15, 0, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -180,9 +180,10 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 1}
         },
         Override_IronSightStruct = {
-            Pos = Vector(-2.78, -2, 0.4),
+            Pos = Vector(-2.775, -2, 0.4),
             Ang = Angle(-0.1, 0, 0),
             Magnification = 1.1,
+            CrosshairInSights = false,
         },
     },
     ["flattop"] = {

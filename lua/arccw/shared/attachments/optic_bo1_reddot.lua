@@ -16,7 +16,7 @@ att.Model = "models/weapons/arccw/atts/bo1_reddot.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.025, 7, -1),
+        Pos = Vector(-0.0125, 7, -1),
         Ang = Angle(0, 0, 0),
         Magnification = 1.1,
         ScrollFunc = ArcCW.SCROLL_NONE,
