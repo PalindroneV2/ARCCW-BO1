@@ -400,9 +400,9 @@ SWEP.Hook_GetCapacity = function(wep, cap)
 end
 
 SWEP.Hook_GetShootSound = function(wep, sound)
-    if wep.Attachments[2].Installed and wep:GetBuff_Override("Silencer") then
-        return "ArcCW_BO1.M16_Sil"
-    elseif wep.Attachments[3].Installed and wep:GetBuff_Override("Silencer") then
+    local silshot = 2 or 3
+
+    if wep.Attachments[silshot].Installed and wep:GetBuff_Override("Silencer") then
         return "ArcCW_BO1.M16_Sil"
     end
 end
