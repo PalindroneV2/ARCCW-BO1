@@ -16,6 +16,7 @@ att.Slot = "m1911_irons"
 att.ActivateElements = {"short_hdsliden"}
 
 att.ColtNickel = true
+att.ColtShort = true
 
 att.AutoStats = true
 att.Mult_Range = 0.85

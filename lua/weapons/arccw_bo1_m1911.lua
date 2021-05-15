@@ -356,7 +356,7 @@ SWEP.Attachments = {
     },
     { --5
         PrintName = "Tactical",
-        Slot = "tac_pistol",
+        Slot = {"tac", "bo1_tacslot"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(3.5, 0, 0),
@@ -400,6 +400,17 @@ SWEP.Attachments = {
         Slot = "1911akimbo",
     },
 }
+
+SWEP.Hook_NameChange = function(wep, name)
+
+    if wep:GetBuff_Override("PackAPunch") then return end
+
+    if wep:GetBuff_Override("ColtShort") then
+        return "Colt Officer"
+    elseif wep:GetBuff_Override("ColtLong") then
+        return "AMT Hardballer"
+    end
+end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm

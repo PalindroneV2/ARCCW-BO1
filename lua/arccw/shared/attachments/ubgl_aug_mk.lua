@@ -12,6 +12,7 @@ att.Desc_Neutrals = {
 att.AutoStats = true
 att.Slot = "bo1_mk"
 att.ExcludeFlags = {"kali_barrel_short"}
+att.BO1_UBMK = true
 
 att.SortOrder = 99
 

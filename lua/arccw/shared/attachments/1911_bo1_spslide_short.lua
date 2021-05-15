@@ -13,6 +13,7 @@ att.Desc_Cons = {
 }
 att.Slot = "m1911_irons"
 att.ActivateElements = {"short_spslide"}
+att.ColtShort = true
 
 att.AutoStats = true
 att.Mult_Range = 0.85

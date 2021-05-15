@@ -10,6 +10,7 @@ att.AutoStats = true
 att.Slot = {"ammo_dg2_pap"}
 att.GivesFlags = {"dg2pap"}
 
+att.AdminOnly = true
 att.PackAPunch = true
 
 att.MagExtender = true

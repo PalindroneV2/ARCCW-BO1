@@ -17,6 +17,7 @@ att.Free = true
 att.ActivateElements = {"short_shslide"}
 
 att.ColtNickel = true
+att.ColtShort = true
 
 att.AutoStats = true
 att.Mult_Range = 0.85

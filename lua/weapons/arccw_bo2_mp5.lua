@@ -301,7 +301,7 @@ SWEP.Attachments = {
     },
     { --6
         PrintName = "Tactical",
-        Slot = "tac",
+        Slot = {"tac", "bo1_tacslot"},
         VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {
@@ -446,7 +446,7 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     local stock = wep.Attachments[7].Installed == "bo1_solid_stock"
     local dual = wep.Attachments[8].Installed == "ammo_dualmag"
     local mp5k = wep.Attachments[2].Installed == "bo1_mp5_mp5k"
-    --local tube = wep.Attachments[13].Installed == "ubgl_m16_m203"
+    --local tube = wep:GetBuff_Override("BO1_UBGL")
 
     if sil and !tube and !stock and !dual and !mp5k then
         return anim .. "_sil"

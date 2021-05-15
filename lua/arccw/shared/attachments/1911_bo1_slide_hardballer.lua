@@ -17,6 +17,7 @@ att.Free = true
 att.ActivateElements = {"hardballer"}
 
 att.ColtNickel = true
+att.ColtLong = true
 
 att.AutoStats = true
 att.Mult_Range = 1.25

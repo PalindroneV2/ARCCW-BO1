@@ -255,7 +255,7 @@ SWEP.Attachments = {
     }, --6
     {
         PrintName = "Tactical",
-        Slot = "tac",
+        Slot = {"tac", "bo1_tacslot"},
         VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {
@@ -315,18 +315,17 @@ SWEP.Attachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[10].Installed == "ammo_papunch"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then return vm:SetSkin(2) end
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local attached = wep.Attachments[6].Installed
 
     local attthing
-        if attached == "ubgl_m16_m203" then attthing = 1
-        elseif attached == "ubgl_aug_mk" then attthing = 2
-        elseif attached == "ub_bo1_foregrip" then attthing = 3
+    if wep:GetBuff_Override("BO1_UBGL") then attthing = 1
+    elseif wep:GetBuff_Override("BO1_UBMK") then attthing = 2
+    elseif wep:GetBuff_Override("BO1_UBFG") then attthing = 3
     end
 
     if anim == "enter_ubgl" then

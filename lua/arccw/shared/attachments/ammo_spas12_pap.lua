@@ -24,6 +24,7 @@ att.Override_Firemodes = {
 }
 
 att.PackAPunch = true
+att.AdminOnly = true
 
 att.MagExtender = true
 att.ActivateElements = {"extendedmag"}

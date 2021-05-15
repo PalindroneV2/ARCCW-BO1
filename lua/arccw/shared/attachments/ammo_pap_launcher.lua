@@ -10,6 +10,7 @@ att.AutoStats = true
 att.Slot = {"ammo_pap_launchers"}
 
 att.PackAPunch = true
+att.AdminOnly = true
 
 att.MagExtender = true
 att.ActivateElements = {"extendedmag"}

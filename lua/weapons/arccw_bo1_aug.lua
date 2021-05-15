@@ -188,7 +188,7 @@ SWEP.Attachments = {
             wpos = Vector(7, 1.25, -5.75),
             wang = Angle(175, 179, -5)
         },
-        MergeSlots = {7},
+        MergeSlots = {6},
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0.5, 0, 0),
@@ -205,18 +205,18 @@ SWEP.Attachments = {
     },
     { --3
         PrintName = "Underbarrel",
-        Slot = {"ubgl"},
+        Slot = {"ubgl", "bo1_m203", "bo1_mk"},
         Bone = "tag_weapon",
         VMScale = Vector(1, 1, 1),
         WMScale = Vector(1, 1, 1),
         Offset = {
-            vpos = Vector(8.25, 0, 0.1), -- offset that the attachment will be relative to the bone
+            vpos = Vector(8.25, 0, 1.75), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(14.5, 0.8, -3.3),
             wang = Angle(172.5, -180.5, -5),
         },
         InstalledEles = {"heatrail"},
-        MergeSlots = {4,5,6}
+        MergeSlots = {4,5}
     },
     { --4
         Hidden = true,
@@ -244,10 +244,6 @@ SWEP.Attachments = {
     },
     { --6
         Hidden = true,
-        Slot = {"bo1_m203", "bo1_mk"},
-    },
-    { --7
-        Hidden = true,
         Slot = {"bo1_aug_sight"},
         VMScale = Vector(1, 1, 1),
         Bone = "tag_weapon",
@@ -262,9 +258,9 @@ SWEP.Attachments = {
         InstalledEles = {"aug_swarovski"},
         Installed = "optic_bo1_aug",
     },
-    { --8
+    { --7
         PrintName = "Tactical",
-        Slot = "tac",
+        Slot = {"tac", "bo1_tacslot"},
         VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {
@@ -272,19 +268,19 @@ SWEP.Attachments = {
             vang = Angle(0, 0, -135),
         },
     },
-    { --9
+    { --8
         PrintName = "FCG",
         Slot = {"bo1_fcg"}
     },
-    { --10
+    { --9
         PrintName = "Ammo Type",
         Slot = {"ammo_pap"}
     },
-    { --11
+    { --10
         PrintName = "Perk",
         Slot = {"bo1_perk"}
     },
-    { --12
+    { --11
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
@@ -300,7 +296,7 @@ SWEP.Attachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[10].Installed == "ammo_papunch"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then
         return vm:SetSkin(2)
@@ -308,11 +304,10 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local attached = wep.Attachments[6].Installed
 
     local attthing
-        if attached == "ubgl_m16_m203" then attthing = 1
-        elseif attached == "ubgl_aug_mk" then attthing = 2
+    if wep:GetBuff_Override("BO1_UBGL") then attthing = 1
+    elseif wep:GetBuff_Override("BO1_UBMK") then attthing = 2
     end
 
     if anim == "enter_ubgl" then

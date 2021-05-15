@@ -243,7 +243,7 @@ SWEP.Attachments = {
     }, --4
     {
         PrintName = "Tactical",
-        Slot = "tac",
+        Slot = {"tac", "bo1_tacslot"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(19, 0.55, -0.8), -- offset that the attachment will be relative to the bone
@@ -284,10 +284,10 @@ SWEP.Attachments = {
 }
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local attached = wep.Attachments[4].Installed
+    --local attached = wep.Attachments[4].Installed
 
     local attthing
-        if attached == "ub_bo1_foregrip" then attthing = 1
+        if wep:GetBuff_Override("BO1_UBFG") then attthing = 1
     end
 
     if attthing == 1 then
@@ -301,7 +301,7 @@ SWEP.RejectAttachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[8].Installed == "ammo_pap_pumpsg"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then
         vm:SetSkin(2)

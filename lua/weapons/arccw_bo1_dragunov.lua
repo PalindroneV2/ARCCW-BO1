@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Dragunov SVD-63"
-SWEP.Trivia_Class = "DMR"
+SWEP.Trivia_Class = "Designated Marskman Rifle"
 SWEP.Trivia_Desc = "Soviet semi-automatic sniper rifle aesthetically similar to the AK-47 built for designated marksmen. Also produced by the chinese gun manufacturer Norinco for the Chinese Army."
 SWEP.Trivia_Manufacturer = "Kalashnikov Concern"
 SWEP.Trivia_Calibre = "7.62x54mmR"
@@ -221,7 +221,7 @@ SWEP.Attachments = {
     },
     { --6
         PrintName = "Tactical",
-        Slot = "tac",
+        Slot = {"tac", "bo1_tacslot"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(20, -0.5, 2.25),

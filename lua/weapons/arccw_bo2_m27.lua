@@ -192,11 +192,10 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local attached = wep.Attachments[4].Installed
 
     local attthing
-        if attached == "ub_bo1_foregrip" then attthing = 1
-        elseif attached == "ubgl_m27_m320" then attthing = 2
+    if wep:GetBuff_Override("BO1_UBFG") then attthing = 1
+    elseif wep:GetBuff_Override("BO1_UBGL") then attthing = 2
     end
 
     if anim == "enter_ubgl" then
@@ -292,7 +291,7 @@ SWEP.Attachments = {
     }, --6
     {
         PrintName = "Tactical",
-        Slot = "tac",
+        Slot = {"tac", "bo1_tacslot"},
         VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {

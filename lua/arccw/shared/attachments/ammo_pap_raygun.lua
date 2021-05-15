@@ -11,6 +11,7 @@ att.Slot = {"ammo_raygun_pap"}
 att.GivesFlags = {"papraygun"}
 
 att.PackAPunch = true
+att.AdminOnly = true
 
 att.MagExtender = true
 

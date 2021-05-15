@@ -300,7 +300,7 @@ SWEP.Attachments = {
     },
     { --8
         PrintName = "Tactical",
-        Slot = "tac",
+        Slot = {"tac", "bo1_tacslot"},
         VMScale = Vector(0.75, 0.75, 0.75),
         WMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
@@ -362,13 +362,13 @@ SWEP.Attachments = {
 }
 
 SWEP.Hook_NameChange = function(wep, name)
-    local pap = wep.Attachments[12].Installed == "ammo_papunch"
+    local pap = wep:GetBuff_Override("PackAPunch")
     local s13 = wep.Attachments[10].Installed == "bo1_fcg_s13"
     local irons = wep.Attachments[15].Installed
     local flat = wep.Attachments[1].Installed
     local a2 = wep.Attachments[4].Installed == "m16_hand_a2"
     local a4 = wep.Attachments[4].Installed == "m16_hand_a4"
-    local tube = wep.Attachments[7].Installed == "ubgl_m16_m203"
+    local tube = wep:GetBuff_Override("BO1_UBGL")
 
     if !pap and !tube and !irons and !flat and (a2 or a4) and s13 then -- M16A2
         return "Colt M16A2" --BURST
@@ -403,11 +403,11 @@ end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local tube = wep.Attachments[7].Installed == "ubgl_m16_m203"
+    local tube = wep:GetBuff_Override("BO1_UBGL")
     local a2 = wep.Attachments[4].Installed == "m16_hand_a2"
     local a4 = wep.Attachments[4].Installed == "m16_hand_a4"
     local heat = wep.Attachments[4].Installed == "m16_hand_heat"
-    local papcamo = wep.Attachments[12].Installed == "ammo_papunch"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
     local camo = wep.Attachments[16].Installed
     local Wood = wep.Attachments[16].Installed == "bo1_cosmetic_wood"
     local Tan = wep.Attachments[16].Installed == "bo1_cosmetic_tan"
@@ -455,11 +455,10 @@ end
 
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local attached = wep.Attachments[7].Installed
 
     local attthing
-        if attached == "ubgl_m16_m203" then attthing = 1
-        elseif attached == "ubgl_aug_mk" then attthing = 2
+    if wep:GetBuff_Override("BO1_UBGL") then attthing = 1
+    elseif wep:GetBuff_Override("BO1_UBMK") then attthing = 2
     end
 
     if anim == "enter_ubgl" then
