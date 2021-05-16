@@ -12,7 +12,3 @@ att.Free = true
 
 att.GivesFlags = {"stg44_waw_pap"}
 att.BO1_STG44_Sound = true
-
-att.Hook_GetShootSound = function(wep, sound)
-    return "ArcCW_BO3.STG44_WAW"
-end

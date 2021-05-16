@@ -78,7 +78,6 @@ SWEP.MagID = "galilarm" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.FirstShootSound = "ArcCW_BO1.Galil_Fire"
 SWEP.ShootSound = "ArcCW_BO1.Galil_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
 

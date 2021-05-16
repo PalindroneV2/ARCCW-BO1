@@ -25,7 +25,3 @@ att.Override_ClipSize = 32
 att.Override_Ammo = "pistol"
 
 att.Override_MuzzleEffect = "muzzleflash_smg"
-
-att.Hook_GetShootSound = function(wep, sound)
-  return "ArcCW_WAW.MP40_Fire"
-end

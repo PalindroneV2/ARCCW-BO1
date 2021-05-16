@@ -83,9 +83,9 @@ SWEP.MagID = "stg44" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.FirstShootSound = "ArcCW_BO3.STG44_COD4"
 SWEP.ShootSound = "ArcCW_BO3.STG44_COD4"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
+SWEP.DistantShootSound = {"weapons/arccw/bo1_aug/ringoff_f.wav", "weapons/arccw/bo1_aug/ringoff_r.wav"}
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_762nato.mdl"
@@ -400,11 +400,33 @@ SWEP.Hook_GetCapacity = function(wep, cap)
 end
 
 SWEP.Hook_GetShootSound = function(wep, sound)
-    local silshot = 2 or 3
+    --local silshot = 2 or 3
+    local silbar = wep:GetBuff_Override("Silencer")
+    local mp = wep.Attachments[10].Installed == "ammo_stg44_9mm"
+    local sndatt = wep.Attachments[14].Installed
+    wep.DistantShootSound = {
+        "weapons/arccw/bo1_aug/ringoff_f.wav",
+        "weapons/arccw/bo1_aug/ringoff_r.wav"
+    }
 
-    if wep.Attachments[silshot].Installed and wep:GetBuff_Override("Silencer") then
-        return "ArcCW_BO1.M16_Sil"
-    end
+    if sndatt == "stg44_waw_sound" then
+        if silbar then
+            return "ArcCW_BO1.M16_Sil"
+        else
+            wep.DistantShootSound = "weapons/arccw/waw_dist/waw_rifle.wav"
+            return "ArcCW_BO3.STG44_WAW"
+        end
+    elseif sndatt == "stg44_dods_sound" then
+        if silbar then
+            return "ArcCW_BO1.M16_Sil"
+        else return "ArcCW_BO3.STG44_DOD"
+        end
+    elseif mp then
+        if silbar then
+            return "ArcCW_BO2.M1911_Sil"
+        else return "ArcCW_WAW.MP40_Fire"
+        end
+    else return end
 end
 
 SWEP.Animations = {

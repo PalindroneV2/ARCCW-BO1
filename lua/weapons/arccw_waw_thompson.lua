@@ -78,7 +78,7 @@ SWEP.MagID = "m1a1tommy" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
---SWEP.FirstShootSound = "ArcCW_WAW.Thompson_Fire"
+----SWEP.FirstShootSound = "ArcCW_WAW.Thompson_Fire"
 SWEP.ShootSound = "ArcCW_WAW.Thompson_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.M1911_Sil"
 SWEP.DistantShootSound = "weapons/arccw/waw_dist/waw_rifle.wav"

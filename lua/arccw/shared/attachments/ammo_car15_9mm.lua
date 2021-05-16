@@ -10,6 +10,7 @@ att.Slot = {"car15_9mm_ammo", "kali_ar15_mag"}
 
 att.ActivateElements = {"9mm_mag"}
 att.GivesFlags = {"m635"}
+att.ExcludeFlags = {"kali_barrel_long"}
 
 att.SortOrder = 98
 
@@ -25,7 +26,3 @@ att.Override_ClipSize = 32
 att.Override_Ammo = "pistol"
 
 att.Override_MuzzleEffect = "muzzleflash_smg"
-
-att.Hook_GetShootSound = function(wep, sound)
-  return "ArcCW_BO1.MP5_Fire"
-end

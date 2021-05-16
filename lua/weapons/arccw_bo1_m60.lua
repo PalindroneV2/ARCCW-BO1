@@ -75,7 +75,6 @@ SWEP.MagID = "m60" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.FirstShootSound = "ArcCW_BO1.M60_Fire"
 SWEP.ShootSound = "ArcCW_BO1.M60_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
 SWEP.DistantShootSound = {"weapons/arccw/bo1_g11/ringoff_f.wav", "weapons/arccw/bo1_g11/ringoff_r.wav"}

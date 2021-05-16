@@ -78,7 +78,6 @@ SWEP.MagID = "m16a1" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.FirstShootSound = "ArcCW_BO1.M16_Fire"
 SWEP.ShootSound = "ArcCW_BO1.M16_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
 SWEP.DistantShootSound = "weapons/arccw/bo1_m16/ringoff_f.wav"
@@ -500,7 +499,15 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_GetShootSound = function(wep, sound)
-    if wep.Attachments[3].Installed and wep:GetBuff_Override("Silencer") then
+    local sils = wep.Attachments[3].Installed and wep:GetBuff_Override("Silencer")
+
+    if wep.Attachments[12].Installed == "ammo_car15_9mm" then
+        if sils then return "ArcCW_BO2.M1911_Sil"
+        else return "ArcCW_BO1.MP5_Fire"
+        end
+    else return end
+
+    if sils then
         return "ArcCW_BO1.M16_Sil"
     end
 end
