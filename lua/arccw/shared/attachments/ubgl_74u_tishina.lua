@@ -25,6 +25,7 @@ att.UBGL_Ammo = "smg1_grenade"
 att.UBGL_RPM = 300
 att.UBGL_Recoil = 1
 att.UBGL_Capacity = 1
+att.UBGL_Icon = Material("entities/acwatt_ubgl_ak_gp25.png")
 
 local function Ammo(wep)
     return wep.Owner:GetAmmoCount("smg1_grenade")

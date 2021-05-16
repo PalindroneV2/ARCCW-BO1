@@ -349,7 +349,7 @@ SWEP.Attachments = {
     {
         PrintName = "Magazine",
         Slot = {"car15_9mm_ammo", "bo1_ar15_mag"},
-        DefaultAttName = "5,56mm NATO 30rnd",
+        DefaultAttName = "5.56mm NATO 30rnd",
     }, --12
     {
         PrintName = "Ammo Type",

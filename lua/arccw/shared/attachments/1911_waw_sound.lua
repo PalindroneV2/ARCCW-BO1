@@ -1,6 +1,6 @@
-att.PrintName = "BO2 Sound"
-att.Icon = Material("entities/acwatt_bo2_logo.png", "smooth mips")
-att.Description = "M1911A1 sound from Black Ops 2"
+att.PrintName = "WAW Sound"
+att.Icon = Material("entities/acwatt_waw_logo.png", "smooth mips")
+att.Description = "M1911A1 sound from World at War"
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

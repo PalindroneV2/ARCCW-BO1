@@ -207,8 +207,11 @@ SWEP.Attachments = {
 }
 
 SWEP.Hook_GetShootSound = function(wep, sound)
+    local maria = wep:GetBuff_Override("FNV_Unique")
     if wep.Attachments[1].Installed and wep:GetBuff_Override("Silencer") then
         return "ArcCW_BO2.M1911_Sil"
+    elseif maria then
+        return "ArcCW_BO2.FNV_9mm_Fire"
     end
 end
 

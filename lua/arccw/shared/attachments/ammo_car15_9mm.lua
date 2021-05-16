@@ -1,16 +1,15 @@
 att.PrintName = "9mm 32rnd"
-att.Icon = Material("entities/acwatt_car15_9mm.png")
+att.Icon = Material("entities/acwatt_bo1_ext_mag.png")
 att.Description = "Your assault rifle has been converted to fire 9x19mm Parabellum rounds, effectively making it an SMG."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = {"car15_9mm_ammo", "kali_ar15_mag"}
+att.Slot = {"car15_9mm_ammo"}
 
 att.ActivateElements = {"9mm_mag"}
 att.GivesFlags = {"m635"}
-att.ExcludeFlags = {"kali_barrel_long"}
 
 att.SortOrder = 98
 

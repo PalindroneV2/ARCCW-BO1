@@ -460,15 +460,27 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_GetShootSound = function(wep, sound)
-    if wep.Attachments[3].Installed and wep:GetBuff_Override("Silencer") then
-        return "ArcCW_BO2.M1911_Sil"
-    end
+    local bo2sound = wep.Attachments[9].Installed == "1911_bo2_sound"
+    local wawsound = wep.Attachments[9].Installed == "1911_waw_sound"
+    local sil = wep:GetBuff_Override("Silencer")
+
+    if bo2sound then
+        if sil then
+            return "ArcCW_BO2.M1911_Sil"
+        end
+        return "ArcCW_BO2.M1911_Fire"
+    elseif wawsound then
+        if sil then
+            return "ArcCW_BO2.M1911_Sil"
+        end
+        return "ArcCW_WAW.M1911_Fire"
+    else return end
 end
 
 SWEP.counter = 0
 
 SWEP.Hook_TranslateAnimation = function(wep, anim, data)
-    local bo2 = wep.Attachments[9].Installed
+    local bo2 = wep.Attachments[9].Installed == "1911_bo2_sound"
     local eclip = wep:Clip1() == 0
 
     if bo2 then

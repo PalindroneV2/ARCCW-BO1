@@ -1,6 +1,6 @@
-att.PrintName = "5,56mm NATO 20rnd Mag"
+att.PrintName = "5.56mm NATO 20rnd Mag"
 att.Icon = Material("entities/acwatt_bo1_ext_mag.png")
-att.Description = "A 20 round 5,56mm NATO STANAG magazine."
+att.Description = "A 20 round 5.56mm NATO STANAG magazine."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

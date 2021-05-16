@@ -4,13 +4,13 @@ VertexlitGeneric
 	//$color2 "[0.75 0.75 0.75]"
 	$bumpmap	"models\weapons\bo1\bo1_asp\asp_n"
 	$detail		"models\weapons\bo1\bo1_ak47\ak_wood"
-
+	$detailblendmode		2
+	
 	$phong                      		1
 	$phongexponent                      "20"
 	$phongboost                         "0.5"
 	$phongfresnelranges         "[0.1 0.5 0.5]"
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
-	$detailblendmode		4
 
 }

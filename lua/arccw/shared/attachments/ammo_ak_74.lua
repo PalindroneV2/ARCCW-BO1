@@ -1,5 +1,5 @@
 att.PrintName = "AK-74 Conversion"
-att.Icon = Material("entities/acwatt_car15_9mm.png")
+att.Icon = Material("entities/acwatt_bo1_ext_mag.png")
 att.Description = "Your AK has been converted to fire the 5,45x39mm round used by the AK-74 and its derivatives."
 att.Desc_Pros = {
 }
@@ -24,7 +24,8 @@ att.Mult_VisualRecoilMult = 0.75
 att.Override_Ammo = "smg1"
 
 att.Override_MuzzleEffect = "muzzleflash_4"
-
+/*
 att.Hook_GetShootSound = function(wep, sound)
   return "ArcCW_BO1.AK74u_Fire"
 end
+*/

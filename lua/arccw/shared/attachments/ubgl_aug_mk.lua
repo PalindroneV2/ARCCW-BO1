@@ -29,6 +29,7 @@ att.UBGL_Ammo = "buckshot"
 att.UBGL_RPM = 1200
 att.UBGL_Recoil = 0.5
 att.UBGL_Capacity = 4
+att.UBGL_Icon = Material("entities/acwatt_ubgl_aug_mk.png")
 
 att.Reloading = false
 att.ReloadingTimer = 0

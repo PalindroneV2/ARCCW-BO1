@@ -404,29 +404,24 @@ SWEP.Hook_GetShootSound = function(wep, sound)
     local silbar = wep:GetBuff_Override("Silencer")
     local mp = wep.Attachments[10].Installed == "ammo_stg44_9mm"
     local sndatt = wep.Attachments[14].Installed
-    wep.DistantShootSound = {
-        "weapons/arccw/bo1_aug/ringoff_f.wav",
-        "weapons/arccw/bo1_aug/ringoff_r.wav"
-    }
 
-    if sndatt == "stg44_waw_sound" then
-        if silbar then
-            return "ArcCW_BO1.M16_Sil"
-        else
-            wep.DistantShootSound = "weapons/arccw/waw_dist/waw_rifle.wav"
-            return "ArcCW_BO3.STG44_WAW"
-        end
+    if silbar then
+        return "ArcCW_BO1.M16_Sil"
+    elseif sndatt == "stg44_waw_sound" then
+        wep.DistantShootSound = "weapons/arccw/waw_dist/waw_rifle.wav"
+        return "ArcCW_BO3.STG44_WAW"
     elseif sndatt == "stg44_dods_sound" then
-        if silbar then
-            return "ArcCW_BO1.M16_Sil"
-        else return "ArcCW_BO3.STG44_DOD"
-        end
+        return "ArcCW_BO3.STG44_DOD"
     elseif mp then
-        if silbar then
-            return "ArcCW_BO2.M1911_Sil"
-        else return "ArcCW_WAW.MP40_Fire"
-        end
-    else return end
+        wep.DistantShootSound = "weapons/arccw/waw_dist/waw_9mm.wav"
+        return "ArcCW_WAW.MP40_Fire"
+    else
+        wep.DistantShootSound = {
+            "weapons/arccw/bo1_aug/ringoff_f.wav",
+            "weapons/arccw/bo1_aug/ringoff_r.wav"
+        }
+        return
+    end
 end
 
 SWEP.Animations = {

@@ -1488,7 +1488,29 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     pitch = {95, 110},
-    sound = {"weapons/arccw/bo1_m1911/fire.wav"}
+    sound = {
+        "weapons/arccw/bo1_m1911/fire1.wav",
+        "weapons/arccw/bo1_m1911/fire2.wav",
+        "weapons/arccw/bo1_m1911/fire3.wav",
+        "weapons/arccw/bo1_m1911/fire4.wav",
+        "weapons/arccw/bo1_m1911/fire5.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1911_Fire",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {"weapons/arccw/bo1_m1911/fire_waw.wav"}
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1911_RingOff",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {"weapons/arccw/bo1_m1911/ringoff_waw.wav"}
 } )
 sound.Add( {
     name = "ArcCW_BO1.M1911_In",

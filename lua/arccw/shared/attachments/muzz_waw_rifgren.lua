@@ -1,5 +1,5 @@
-att.PrintName = "M7 Grenade Launcher (HE)(BO1)"
-att.Icon = Material("entities/acwatt_ubgl_bo1_m203.png")
+att.PrintName = "Rifle Grenade Launcher (HE)(BO1)"
+att.Icon = Material("entities/acwatt_muzz_waw_rifgren.png")
 att.Description = "Selectable Grenade Launcher equipped at the rifle's muzzle. Double tap +ZOOM to equip/dequip."
 att.Desc_Pros = {
     "+ Selectable Grenade Launcher.",
@@ -18,7 +18,7 @@ att.MountPositionOverride = 0
 att.UBGL = true
 att.UBGL_BaseAnims = true
 
-att.UBGL_PrintName = "M7 (HE)"
+att.UBGL_PrintName = "RFLGREN (HE)"
 att.UBGL_Automatic = true
 att.UBGL_MuzzleEffect = "muzzleflash_m79"
 att.UBGL_ClipSize = 1
@@ -26,6 +26,7 @@ att.UBGL_Ammo = "smg1_grenade"
 att.UBGL_RPM = 300
 att.UBGL_Recoil = 1
 att.UBGL_Capacity = 1
+att.UBGL_Icon = Material("entities/acwatt_muzz_waw_rifgren.png")
 
 local function Ammo(wep)
     return wep.Owner:GetAmmoCount("smg1_grenade")

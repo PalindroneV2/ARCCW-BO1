@@ -244,8 +244,14 @@ SWEP.Hook_NameChange = function(wep, name)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim, data)
+    local ext = wep.Attachments[4].Installed == "ammo_bo1_cz_ext"
+
     if wep:Clip1() == 0 then
         return anim .. "_empty"
+    end
+
+    if ext then
+        return anim .. "_ext"
     end
 end
 
@@ -328,6 +334,34 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
+        Time = 58 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        LHIK = true,
+        LHIKIn = 1,
+        LHIKOut = 0.75,
+        SoundTable = {
+            {s = "ArcCW_BO1.CZ75_Out", t = 9 / 35},
+            {s = "ArcCW_BO1.CZ75_Futz", t = 16 / 35},
+            {s = "ArcCW_BO1.CZ75_In", t = 29 / 35},
+            {s = "ArcCW_BO1.CZ75_Back", t = 42 / 35},
+            {s = "ArcCW_BO1.CZ75_Fwd", t = 45 / 35}
+        },
+    },
+    ["reload_ext"] = {
+        Source = "reload_ext",
+        Time = 47 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        LHIK = true,
+        LHIKIn = 1,
+        LHIKOut = 0.75,
+        SoundTable = {
+            {s = "ArcCW_BO1.CZ75_Out", t = 9 / 35},
+            {s = "ArcCW_BO1.CZ75_Futz", t = 16 / 35},
+            {s = "ArcCW_BO1.CZ75_In", t = 29 / 35}
+        },
+    },
+    ["reload_empty_ext"] = {
+        Source = "reload_empty_ext",
         Time = 58 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,

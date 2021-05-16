@@ -415,9 +415,10 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
 end
 
 SWEP.Hook_GetShootSound = function(wep, sound)
+    local mag = wep.Attachments[9].Installed == "ammo_ak_74"
     if wep.Attachments[2].Installed and wep:GetBuff_Override("Silencer") then
         return "ArcCW_BO1.M16_Sil"
-    end
+    elseif mag then return "ArcCW_BO1.AK74u_Fire" end
 end
 
 SWEP.Animations = {
