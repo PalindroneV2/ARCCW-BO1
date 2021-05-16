@@ -1660,7 +1660,72 @@ sound.Add( {
     sound = {"weapons/arccw/bo1_makarov/makarov_slidef.wav"}
 } )
 
--- Makarov BO1 --
+-- CZ75 BO1 --
+
+sound.Add( {
+    name = "ArcCW_BO1.CZ75_Fire",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_cz75/fire1.wav",
+        "weapons/arccw/bo1_cz75/fire2.wav",
+        "weapons/arccw/bo1_cz75/fire3.wav",
+        "weapons/arccw/bo1_cz75/fire4.wav",
+        "weapons/arccw/bo1_cz75/fire5.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.CZ75_RingOff",
+    channel = CHAN_WEAPON + 1,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {"weapons/arccw/bo1_cz75/ringoff.wav"}
+} )
+sound.Add( {
+    name = "ArcCW_BO1.CZ75_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {"weapons/arccw/bo1_cz75/in.wav"}
+} )
+sound.Add( {
+    name = "ArcCW_BO1.CZ75_Futz",
+    channel = CHAN_ITEM + 1,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {"weapons/arccw/bo1_cz75/futz.wav"}
+} )
+sound.Add( {
+    name = "ArcCW_BO1.CZ75_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {"weapons/arccw/bo1_cz75/out.wav"}
+} )
+sound.Add( {
+    name = "ArcCW_BO1.CZ75_Back",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {"weapons/arccw/bo1_cz75/slideb.wav"}
+} )
+sound.Add( {
+    name = "ArcCW_BO1.CZ75_Fwd",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {"weapons/arccw/bo1_cz75/slidef.wav"}
+} )
+
+-- ASP BO1 --
 
 sound.Add( {
     name = "ArcCW_BO1.ASP_Fire",

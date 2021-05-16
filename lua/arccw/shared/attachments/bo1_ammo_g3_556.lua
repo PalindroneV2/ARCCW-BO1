@@ -42,5 +42,9 @@ att.Override_Firemodes = {
 att.Override_MuzzleEffect = "muzzleflash_4"
 
 att.Hook_GetShootSound = function(wep, sound)
+  wep.DistantShootSound = {
+    "weapons/arccw/bo1_aug/ringoff_f.wav",
+    "weapons/arccw/bo1_aug/ringoff_r.wav"
+  }
   return "ArcCW_BO1.AUG_Fire"
 end
