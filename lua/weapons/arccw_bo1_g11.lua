@@ -17,17 +17,17 @@ SWEP.Slot = 2
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_g11.mdl"
-SWEP.MirrorVMWM = false
+SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(13, 1, -4.5),
+    pos        =    Vector(-7, 3, -8),
     ang        =    Angle(-5, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   1.1
+    scale   =   1
 }
-SWEP.WorldModel = "models/weapons/arccw/w_bo1_g11.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_bo1_g11.mdl"
 SWEP.ViewModelFOV = 60
 
-SWEP.DefaultBodygroups = "00000000000"
+SWEP.DefaultBodygroups = "00100000000"
 
 SWEP.Damage = 27
 SWEP.DamageMin = 20 -- damage done at maximum range
@@ -143,9 +143,6 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
     ["mount"] = {
         VMBodygroups = {
-            {ind = 1, bg = 1},
-        },
-        WMBodygroups = {
             {ind = 1, bg = 1},
         },
     },

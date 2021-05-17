@@ -17,12 +17,12 @@ SWEP.Slot = 2
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_fal.mdl"
-SWEP.WorldModel = "models/weapons/arccw/w_bo1_fal.mdl"
-SWEP.MirrorVMWM = false
+SWEP.WorldModel = "models/weapons/arccw/c_bo1_fal.mdl"
+SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1.025,
-    pos        =    Vector(13.5, 1, -5.625),
-    ang        =    Angle(-9, -1, 180),
+    scale = 1,
+    pos        =    Vector(-3.9, 3, -5.75),
+    ang        =    Angle(-6, -1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
@@ -104,9 +104,10 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.205, -1.75, 0.15),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-2.205, 1.75, 0.15),
+    Ang = Angle(0, 0.05, 0),
     Magnification = 1.1,
+    CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
@@ -140,48 +141,36 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 4, bg = 1},
         },
-        WMBodygroups = {
-            {ind = 3, bg = 1},
-        },
     },
     ["bo1_mk"] = {
         VMBodygroups = {
             {ind = 4, bg = 2},
         },
-        WMBodygroups = {
-            {ind = 3, bg = 2},
-        }
     },
     ["solid_stock"] = {
         VMBodygroups = {
             {ind = 5, bg = 1},
         },
-        WMBodygroups = {
-            {ind = 4, bg = 1},
-        }
     },
     ["light_stock"] = {
         VMBodygroups = {
             {ind = 5, bg = 2},
         },
-        WMBodygroups = {
-            {ind = 4, bg = 2},
-        },
-        NamePriority = 5,
-        NameChange = "FN FAL Para",
-        ExcludeFlags = {"ammo_papunch"},
     },
     ["fal_rail"] = {
         VMBodygroups = {
             {ind = 2, bg = 1}
         },
-        WMBodygroups = {
-            {ind = 2, bg = 1}
-        },
     },
-    ["ammo_papunch"] = {
-        NamePriority = 10,
-        NameChange = "EPC WN",
+    ["parafal"] = {
+        VMBodygroups = {
+            {ind = 3, bg = 1}
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(18.5, 0, 2.25),
+            }
+        }
     },
 }
 
@@ -194,25 +183,26 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0.5, 0, 3.85), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(4.5, 0.8, -5.4),
-            wang = Angle(-9, -1, 180)
         },
         InstalledEles = {"fal_rail"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0)
     },--1
     {
+        PrintName = "Barrel",
+        DefaultAttName = "21 in. Standard Barrel",
+        Slot = {"fal_barrel"},
+    }, --2
+    {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = "muzzle",
-        Bone = "tag_suppressor",
+        Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0, 0, 0), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 90, 0),
-            wpos = Vector(25.5, 1.2, -7.1),
-            wang = Angle(-9, -1, 180),
+            vpos = Vector(24, 0, 2.25), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
         },
-    }, --2
+    }, --3
     {
         PrintName = "Underbarrel",
         Slot = {"ubgl"},
@@ -226,7 +216,7 @@ SWEP.Attachments = {
             wang = Angle(-9, -1, 180),
         },
         MergeSlots = {4,5,6}
-    }, --3
+    }, --4
     {
         Hidden = true,
         Slot = {"foregrip"},
@@ -237,7 +227,7 @@ SWEP.Attachments = {
             wpos = Vector(16, 1.125, -5.125),
             wang = Angle(-9, -1, 180),
         },
-    }, --4
+    }, --5
     {
         Hidden = true,
         Slot = {"bipod"},
@@ -248,11 +238,11 @@ SWEP.Attachments = {
             wpos = Vector(19, 1.125, -5.6),
             wang = Angle(-9, -1, 180),
         },
-    }, --5
+    }, --6
     {
         Hidden = true,
         Slot = {"bo1_m203", "bo1_mk"},
-    }, --6
+    }, --7
     {
         PrintName = "Tactical",
         Slot = {"tac", "bo1_tacslot"},
@@ -264,25 +254,25 @@ SWEP.Attachments = {
             wpos = Vector(18, 0.25, -5.725),
             wang = Angle(-9, -1, 90)
         },
-    }, --7
+    }, --8
     {
         PrintName = "Stock",
         Slot = {"bo1_stock"},
         DefaultAttName = "No Stock",
         Installed = "bo1_solid_stock"
-    }, --8
+    }, --9
     {
         PrintName = "FCG",
         Slot = {"bo1_fcg"}
-    }, --9
+    }, --10
     {
         PrintName = "Ammo Type",
         Slot = {"ammo_pap"}
-    }, --10
+    }, --11
     {
         PrintName = "Perk",
         Slot = {"bo1_perk"}
-    },
+    },--12
     {
         PrintName = "Charm",
         Slot = "charm",
@@ -297,13 +287,24 @@ SWEP.Attachments = {
     },
 }
 
+SWEP.Hook_NameChange = function(wep, data)
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local parab = wep.Attachments[2].Installed == "bo1_barrel_fal_para"
+    local paras = wep.Attachments[9].Installed == "bo1_light_stock"
+
+    if pap then
+        return "EPC WN"
+    elseif parab and paras then
+        return "FN FAL Para"
+    end
+end
+
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local wm = data.wm
     local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then
-        return vm:SetSkin(2) and wm:SetSkin(2)
+        return vm:SetSkin(2)
     end
 end
 
