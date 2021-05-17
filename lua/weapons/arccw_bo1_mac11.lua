@@ -75,8 +75,9 @@ SWEP.MagID = "uzi" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO1.Uzi_Fire"
+SWEP.ShootSound = "ArcCW_BO1.MAC11_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.M1911_Sil"
+SWEP.DistantShootSound = {"ArcCW_BO1.MAC11_RingOff_F", "ArcCW_BO1.MAC11_RingOff_R",}
 
 SWEP.MuzzleEffect = "muzzleflash_smg"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
@@ -298,8 +299,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_Futz", t = 6 / 30},
-            {s = "ArcCW_BO1.Uzi_BoltFwd", t = 12 / 30},
+            {s = "ArcCW_BO1.MAC11_Futz", t = 6 / 30},
+            {s = "ArcCW_BO1.MAC11_Stock", t = 12 / 30},
         },
     },
     ["draw_stock_ext"] = {
@@ -309,8 +310,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_Futz", t = 6 / 30},
-            {s = "ArcCW_BO1.Uzi_BoltFwd", t = 12 / 30},
+            {s = "ArcCW_BO1.MAC11_Futz", t = 6 / 30},
+            {s = "ArcCW_BO1.MAC11_Stock", t = 12 / 30},
         },
     },
     ["ready"] = {
@@ -327,8 +328,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_Futz", t = 12 / 30},
-            {s = "ArcCW_BO1.Uzi_BoltFwd", t = 18 / 30},
+            {s = "ArcCW_BO1.MAC11_Futz", t = 12 / 30},
+            {s = "ArcCW_BO1.MAC11_Stock", t = 18 / 30},
         },
     },
     ["ready_stock_ext"] = {
@@ -338,8 +339,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_Futz", t = 12 / 30},
-            {s = "ArcCW_BO1.Uzi_BoltFwd", t = 18 / 30},
+            {s = "ArcCW_BO1.MAC11_Futz", t = 12 / 30},
+            {s = "ArcCW_BO1.MAC11_Stock", t = 18 / 30},
         },
     },
     ["fire"] = {
@@ -362,8 +363,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_MagOut", t = 15 / 35},
-            {s = "ArcCW_BO1.Uzi_MagIn", t = 56 / 35}
+            {s = "ArcCW_BO1.MAC11_MagOut", t = 15 / 35},
+            {s = "ArcCW_BO1.MAC11_MagIn", t = 56 / 35}
         },
     },
     ["reload_empty"] = {
@@ -376,10 +377,10 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_MagOut", t = 16 / 35},
-            {s = "ArcCW_BO1.Uzi_MagIn", t = 56 / 35},
-            {s = "ArcCW_BO1.Uzi_BoltBack", t = 75 / 35},
-            {s = "ArcCW_BO1.Uzi_BoltFwd", t = 81 / 35},
+            {s = "ArcCW_BO1.MAC11_MagOut", t = 16 / 35},
+            {s = "ArcCW_BO1.MAC11_MagIn", t = 56 / 35},
+            {s = "ArcCW_BO1.MAC11_BoltBack", t = 75 / 35},
+            {s = "ArcCW_BO1.MAC11_BoltFwd", t = 81 / 35},
         },
     },
     ["reload_ext"] = {
@@ -392,8 +393,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_MagOut", t = 15 / 35},
-            {s = "ArcCW_BO1.Uzi_MagIn", t = 56 / 35}
+            {s = "ArcCW_BO1.MAC11_MagOut", t = 15 / 35},
+            {s = "ArcCW_BO1.MAC11_MagIn", t = 56 / 35}
         },
     },
     ["reload_empty_ext"] = {
@@ -406,10 +407,10 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_MagOut", t = 16 / 35},
-            {s = "ArcCW_BO1.Uzi_MagIn", t = 56 / 35},
-            {s = "ArcCW_BO1.Uzi_BoltBack", t = 75 / 35},
-            {s = "ArcCW_BO1.Uzi_BoltFwd", t = 81 / 35},
+            {s = "ArcCW_BO1.MAC11_MagOut", t = 16 / 35},
+            {s = "ArcCW_BO1.MAC11_MagIn", t = 56 / 35},
+            {s = "ArcCW_BO1.MAC11_BoltBack", t = 75 / 35},
+            {s = "ArcCW_BO1.MAC11_BoltFwd", t = 81 / 35},
         },
     },
     ["reload_stock_ext"] = {
@@ -422,8 +423,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_MagOut", t = 15 / 35},
-            {s = "ArcCW_BO1.Uzi_MagIn", t = 56 / 35}
+            {s = "ArcCW_BO1.MAC11_MagOut", t = 15 / 35},
+            {s = "ArcCW_BO1.MAC11_MagIn", t = 56 / 35}
         },
     },
     ["reload_empty_stock_ext"] = {
@@ -436,10 +437,10 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_MagOut", t = 16 / 35},
-            {s = "ArcCW_BO1.Uzi_MagIn", t = 56 / 35},
-            {s = "ArcCW_BO1.Uzi_BoltBack", t = 75 / 35},
-            {s = "ArcCW_BO1.Uzi_BoltFwd", t = 81 / 35},
+            {s = "ArcCW_BO1.MAC11_MagOut", t = 16 / 35},
+            {s = "ArcCW_BO1.MAC11_MagIn", t = 56 / 35},
+            {s = "ArcCW_BO1.MAC11_BoltBack", t = 75 / 35},
+            {s = "ArcCW_BO1.MAC11_BoltFwd", t = 81 / 35},
         },
     },
     ["enter_sprint"] = {

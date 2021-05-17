@@ -79,8 +79,8 @@ SWEP.MagID = "ak74" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
---SWEP.FirstShootSound = "ArcCW_BO1.MPL_Fire"
-SWEP.ShootSound = "ArcCW_BO1.MPL_Fire"
+--SWEP.FirstShootSound = "ArcCW_BO1.Spectre_Fire"
+SWEP.ShootSound = "ArcCW_BO1.Spectre_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.M1911_Sil"
 
 SWEP.MuzzleEffect = "muzzleflash_smg"
@@ -283,7 +283,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.MPL_Futz", t = 1 / 30},
+            {s = "ArcCW_BO1.Spectre_Futz", t = 1 / 30},
         },
     },
     ["holster"] = {
@@ -300,7 +300,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.MPL_Futz", t = 15 / 30},
+            {s = "ArcCW_BO1.Spectre_Futz", t = 15 / 30},
         },
     },
     ["holster_stock"] = {
@@ -317,7 +317,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.MPL_Futz", t = 15 / 30},
+            {s = "ArcCW_BO1.Spectre_Futz", t = 15 / 30},
         },
     },
     ["holster_stock_ext"] = {
@@ -334,8 +334,8 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.MPL_BoltBack", t = 10 / 30},
-            {s = "ArcCW_BO1.MPL_BoltFwd", t = 15 / 30},
+            {s = "ArcCW_BO1.Spectre_BoltBack", t = 10 / 30},
+            {s = "ArcCW_BO1.Spectre_BoltFwd", t = 15 / 30},
         },
     },
     ["ready_stock"] = {
@@ -376,8 +376,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.MPL_MagOut", t = 16 / 30},
-            {s = "ArcCW_BO1.MPL_MagIn", t = 51 / 30}
+            {s = "ArcCW_BO1.Spectre_MagOut", t = 16 / 30},
+            {s = "ArcCW_BO1.Spectre_Futz", t = 45 / 30},
+            {s = "ArcCW_BO1.Spectre_MagIn", t = 51 / 30}
         },
     },
     ["reload_ext"] = {
@@ -390,8 +391,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.MPL_MagOut", t = 16 / 30},
-            {s = "ArcCW_BO1.MPL_MagIn", t = 51 / 30}
+            {s = "ArcCW_BO1.Spectre_MagOut", t = 16 / 30},
+            {s = "ArcCW_BO1.Spectre_Futz", t = 45 / 30},
+            {s = "ArcCW_BO1.Spectre_MagIn", t = 51 / 30}
         },
     },
     ["reload_stock_ext"] = {
@@ -404,8 +406,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.MPL_MagOut", t = 16 / 30},
-            {s = "ArcCW_BO1.MPL_MagIn", t = 51 / 30}
+            {s = "ArcCW_BO1.Spectre_MagOut", t = 16 / 30},
+            {s = "ArcCW_BO1.Spectre_Futz", t = 45 / 30},
+            {s = "ArcCW_BO1.Spectre_MagIn", t = 51 / 30}
         },
     },
     ["reload_empty"] = {
@@ -418,10 +421,11 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.MPL_MagOut", t = 16 / 35},
-            {s = "ArcCW_BO1.MPL_MagIn", t = 51 / 35},
-            {s = "ArcCW_BO1.MPL_BoltBack", t = 74 / 35},
-            {s = "ArcCW_BO1.MPL_BoltFwd", t = 80 / 35},
+            {s = "ArcCW_BO1.Spectre_MagOut", t = 16 / 35},
+            {s = "ArcCW_BO1.Spectre_Futz", t = 45 / 30},
+            {s = "ArcCW_BO1.Spectre_MagIn", t = 51 / 35},
+            {s = "ArcCW_BO1.Spectre_BoltBack", t = 74 / 35},
+            {s = "ArcCW_BO1.Spectre_BoltFwd", t = 80 / 35},
         },
     },
     ["reload_empty_ext"] = {
@@ -434,10 +438,11 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.MPL_MagOut", t = 16 / 35},
-            {s = "ArcCW_BO1.MPL_MagIn", t = 51 / 35},
-            {s = "ArcCW_BO1.MPL_BoltBack", t = 74 / 35},
-            {s = "ArcCW_BO1.MPL_BoltFwd", t = 80 / 35},
+            {s = "ArcCW_BO1.Spectre_MagOut", t = 16 / 35},
+            {s = "ArcCW_BO1.Spectre_Futz", t = 45 / 30},
+            {s = "ArcCW_BO1.Spectre_MagIn", t = 51 / 35},
+            {s = "ArcCW_BO1.Spectre_BoltBack", t = 74 / 35},
+            {s = "ArcCW_BO1.Spectre_BoltFwd", t = 80 / 35},
         },
     },
     ["reload_empty_stock_ext"] = {
@@ -450,10 +455,11 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.MPL_MagOut", t = 16 / 35},
-            {s = "ArcCW_BO1.MPL_MagIn", t = 51 / 35},
-            {s = "ArcCW_BO1.MPL_BoltBack", t = 74 / 35},
-            {s = "ArcCW_BO1.MPL_BoltFwd", t = 80 / 35},
+            {s = "ArcCW_BO1.Spectre_MagOut", t = 16 / 35},
+            {s = "ArcCW_BO1.Spectre_Futz", t = 45 / 30},
+            {s = "ArcCW_BO1.Spectre_MagIn", t = 51 / 35},
+            {s = "ArcCW_BO1.Spectre_BoltBack", t = 74 / 35},
+            {s = "ArcCW_BO1.Spectre_BoltFwd", t = 80 / 35},
         },
     },
     ["enter_sprint"] = {

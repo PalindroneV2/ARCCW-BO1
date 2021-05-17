@@ -18,8 +18,8 @@ SWEP.ViewModel = "models/weapons/arccw/c_bo1_skorpion.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_skorpion.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-8.5, 3.5, -4.25),
-    ang        =    Angle(-5, -1, 180),
+    pos        =    Vector(-7.25, 4.75, -4),
+    ang        =    Angle(-10, 1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
@@ -75,9 +75,10 @@ SWEP.MagID = "skorpion" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
---SWEP.FirstShootSound = "ArcCW_BO1.Uzi_Fire"
-SWEP.ShootSound = "ArcCW_BO1.Uzi_Fire"
+--SWEP.FirstShootSound = "ArcCW_BO1.Skorpion_Fire"
+SWEP.ShootSound = "ArcCW_BO1.Skorpion_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.M1911_Sil"
+SWEP.DistantShootSound = {"ArcCW_BO1.Skorpion_RingOff_F", "ArcCW_BO1.Skorpion_RingOff_R"}
 
 SWEP.MuzzleEffect = "muzzleflash_smg"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
@@ -112,8 +113,8 @@ SWEP.IronSightStruct = {
 }
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "smg"
-SWEP.HoldtypeSights = "smg"
+SWEP.HoldtypeActive = "pistol"
+SWEP.HoldtypeSights = "revolver"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
@@ -294,8 +295,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_Futz", t = 6 / 30},
-            {s = "ArcCW_BO1.Uzi_BoltFwd", t = 12 / 30},
+            {s = "ArcCW_BO1.Skorpion_Futz", t = 6 / 30},
+            {s = "ArcCW_BO1.Skorpion_BoltFwd", t = 12 / 30},
         },
     },
     ["draw_stock_ext"] = {
@@ -305,8 +306,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_Futz", t = 6 / 30},
-            {s = "ArcCW_BO1.Uzi_BoltFwd", t = 12 / 30},
+            {s = "ArcCW_BO1.Skorpion_Futz", t = 6 / 30},
+            {s = "ArcCW_BO1.Skorpion_BoltFwd", t = 12 / 30},
         },
     },
     ["ready"] = {
@@ -323,8 +324,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_Futz", t = 12 / 30},
-            {s = "ArcCW_BO1.Uzi_BoltFwd", t = 18 / 30},
+            {s = "ArcCW_BO1.Skorpion_Futz", t = 12 / 30},
+            {s = "ArcCW_BO1.Skorpion_BoltFwd", t = 18 / 30},
         },
     },
     ["ready_stock_ext"] = {
@@ -334,8 +335,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_Futz", t = 12 / 30},
-            {s = "ArcCW_BO1.Uzi_BoltFwd", t = 18 / 30},
+            {s = "ArcCW_BO1.Skorpion_Futz", t = 12 / 30},
+            {s = "ArcCW_BO1.Skorpion_BoltFwd", t = 18 / 30},
         },
     },
     ["fire"] = {
@@ -358,8 +359,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_MagOut", t = 15 / 35},
-            {s = "ArcCW_BO1.Uzi_MagIn", t = 56 / 35}
+            {s = "ArcCW_BO1.Skorpion_MagOut", t = 15 / 35},
+            {s = "ArcCW_BO1.Skorpion_Futz", t = 45 / 30},
+            {s = "ArcCW_BO1.Skorpion_MagIn", t = 56 / 35}
         },
     },
     ["reload_empty"] = {
@@ -372,10 +374,11 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_MagOut", t = 16 / 35},
-            {s = "ArcCW_BO1.Uzi_MagIn", t = 56 / 35},
-            {s = "ArcCW_BO1.Uzi_BoltBack", t = 75 / 35},
-            {s = "ArcCW_BO1.Uzi_BoltFwd", t = 81 / 35},
+            {s = "ArcCW_BO1.Skorpion_MagOut", t = 16 / 35},
+            {s = "ArcCW_BO1.Skorpion_Futz", t = 45 / 30},
+            {s = "ArcCW_BO1.Skorpion_MagIn", t = 56 / 35},
+            {s = "ArcCW_BO1.Skorpion_BoltBack", t = 75 / 35},
+            {s = "ArcCW_BO1.Skorpion_BoltFwd", t = 81 / 35},
         },
     },
     ["reload_ext"] = {
@@ -388,8 +391,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_MagOut", t = 15 / 35},
-            {s = "ArcCW_BO1.Uzi_MagIn", t = 56 / 35}
+            {s = "ArcCW_BO1.Skorpion_MagOut", t = 15 / 35},
+            {s = "ArcCW_BO1.Skorpion_Futz", t = 45 / 30},
+            {s = "ArcCW_BO1.Skorpion_MagIn", t = 56 / 35}
         },
     },
     ["reload_empty_ext"] = {
@@ -402,10 +406,11 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_MagOut", t = 16 / 35},
-            {s = "ArcCW_BO1.Uzi_MagIn", t = 56 / 35},
-            {s = "ArcCW_BO1.Uzi_BoltBack", t = 75 / 35},
-            {s = "ArcCW_BO1.Uzi_BoltFwd", t = 81 / 35},
+            {s = "ArcCW_BO1.Skorpion_MagOut", t = 16 / 35},
+            {s = "ArcCW_BO1.Skorpion_Futz", t = 45 / 30},
+            {s = "ArcCW_BO1.Skorpion_MagIn", t = 56 / 35},
+            {s = "ArcCW_BO1.Skorpion_BoltBack", t = 75 / 35},
+            {s = "ArcCW_BO1.Skorpion_BoltFwd", t = 81 / 35},
         },
     },
     ["reload_stock_ext"] = {
@@ -418,8 +423,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_MagOut", t = 15 / 35},
-            {s = "ArcCW_BO1.Uzi_MagIn", t = 56 / 35}
+            {s = "ArcCW_BO1.Skorpion_MagOut", t = 15 / 35},
+            {s = "ArcCW_BO1.Skorpion_Futz", t = 45 / 30},
+            {s = "ArcCW_BO1.Skorpion_MagIn", t = 56 / 35}
         },
     },
     ["reload_empty_stock_ext"] = {
@@ -432,10 +438,11 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Uzi_MagOut", t = 16 / 35},
-            {s = "ArcCW_BO1.Uzi_MagIn", t = 56 / 35},
-            {s = "ArcCW_BO1.Uzi_BoltBack", t = 75 / 35},
-            {s = "ArcCW_BO1.Uzi_BoltFwd", t = 81 / 35},
+            {s = "ArcCW_BO1.Skorpion_MagOut", t = 16 / 35},
+            {s = "ArcCW_BO1.Skorpion_Futz", t = 45 / 30},
+            {s = "ArcCW_BO1.Skorpion_MagIn", t = 56 / 35},
+            {s = "ArcCW_BO1.Skorpion_BoltBack", t = 75 / 35},
+            {s = "ArcCW_BO1.Skorpion_BoltFwd", t = 81 / 35},
         },
     },
     ["enter_sprint"] = {

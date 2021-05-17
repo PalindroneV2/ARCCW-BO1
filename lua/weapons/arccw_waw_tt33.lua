@@ -76,7 +76,7 @@ SWEP.MagID = "makarov" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO1.Makarov_Fire"
+SWEP.ShootSound = "ArcCW_WAW.TT33_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.M1911_Sil"
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"

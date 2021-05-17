@@ -907,6 +907,73 @@ sound.Add( {
     }
 } )
 
+--- PM63 Main ---
+
+sound.Add( {
+    name = "ArcCW_BO1.PM63_Fire",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_pm63/fire1.wav",
+        "weapons/arccw/bo1_pm63/fire2.wav",
+        "weapons/arccw/bo1_pm63/fire3.wav",
+        "weapons/arccw/bo1_pm63/fire4.wav",
+        "weapons/arccw/bo1_pm63/fire5.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.PM63_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_pm63/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.PM63_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_pm63/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.PM63_BoltBack",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_pm63/pull.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.PM63_BoltFwd",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_pm63/fwd.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.PM63_Futz",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_pm63/futz.wav",
+    }
+} )
+
 --- MPL Main ---
 
 sound.Add( {
@@ -981,6 +1048,53 @@ sound.Add( {
     pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mpl/tap.wav",
+    }
+} )
+
+--- Kiparis Main ---
+
+sound.Add( {
+    name = "ArcCW_BO1.Kiparis_Fire",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_kiparis/fire1.wav",
+        "weapons/arccw/bo1_kiparis/fire2.wav",
+        "weapons/arccw/bo1_kiparis/fire3.wav",
+        "weapons/arccw/bo1_kiparis/fire4.wav",
+        "weapons/arccw/bo1_kiparis/fire5.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Kiparis_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_kiparis/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Kiparis_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_kiparis/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Kiparis_Bolt",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_kiparis/charge.wav",
     }
 } )
 
@@ -1187,6 +1301,247 @@ sound.Add( {
     pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_uzi/futz.wav",
+    }
+} )
+
+--- Spectre Main ---
+
+sound.Add( {
+    name = "ArcCW_BO1.Spectre_Fire",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_spectre/fire1.wav",
+        "weapons/arccw/bo1_spectre/fire2.wav",
+        "weapons/arccw/bo1_spectre/fire3.wav",
+        "weapons/arccw/bo1_spectre/fire4.wav",
+        "weapons/arccw/bo1_spectre/fire5.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Spectre_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_spectre/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Spectre_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_spectre/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Spectre_BoltBack",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_spectre/back.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Spectre_BoltFwd",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_spectre/fwd.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Spectre_Futz",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_spectre/futz.wav",
+    }
+} )
+
+--- Skorpion Main ---
+
+sound.Add( {
+    name = "ArcCW_BO1.Skorpion_Fire",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_skorpion/fire1.wav",
+        "weapons/arccw/bo1_skorpion/fire2.wav",
+        "weapons/arccw/bo1_skorpion/fire3.wav",
+        "weapons/arccw/bo1_skorpion/fire4.wav",
+        "weapons/arccw/bo1_skorpion/fire5.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Skorpion_RingOff_F",
+    channel = CHAN_WEAPON + 2,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_skorpion/ringoff_f.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Skorpion_RingOff_R",
+    channel = CHAN_WEAPON + 2,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_skorpion/ringoff_r.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Skorpion_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_skorpion/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Skorpion_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_skorpion/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Skorpion_BoltBack",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_skorpion/pull.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Skorpion_BoltFwd",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_skorpion/fwd.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Skorpion_Futz",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_skorpion/futz.wav",
+    }
+} )
+
+--- MAC-11 Main ---
+
+sound.Add( {
+    name = "ArcCW_BO1.MAC11_Fire",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_mac11/fire1.wav",
+        "weapons/arccw/bo1_mac11/fire2.wav",
+        "weapons/arccw/bo1_mac11/fire3.wav",
+        "weapons/arccw/bo1_mac11/fire4.wav",
+        "weapons/arccw/bo1_mac11/fire5.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.MAC11_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_mac11/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.MAC11_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_mac11/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.MAC11_BoltBack",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_mac11/charge.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.MAC11_RingOff_F",
+    channel = CHAN_WEAPON + 2,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_mac11/ringoff_f.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.MAC11_RingOff_F",
+    channel = CHAN_WEAPON + 2,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_mac11/ringoff_r.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.MAC11_Futz",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_mac11/futz.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.MAC11_Stock",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_mac11/stock.wav",
     }
 } )
 
@@ -1696,6 +2051,17 @@ sound.Add( {
         "weapons/arccw/bo1_cz75/fire3.wav",
         "weapons/arccw/bo1_cz75/fire4.wav",
         "weapons/arccw/bo1_cz75/fire5.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_WAW.TT33_Fire",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_tt33/fire.wav",
     }
 } )
 sound.Add( {
