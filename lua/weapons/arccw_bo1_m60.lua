@@ -130,6 +130,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.ActivePos = Vector(1, 0, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
+SWEP.InBipodPos = Vector(0, 0, -4)
+
 SWEP.SprintPos = Vector(0, 0, 0.5)
 SWEP.SprintAng = Angle(0, 0, 0)
 
@@ -155,6 +157,11 @@ SWEP.AttachmentElements = {
         },
 
     },
+    ["bo1_bipod"] = {
+        VMBodygroups = {
+            {ind = 3, bg = 1},
+        },
+    },
     ["rail"] = {
         VMBodygroups = {
             {ind = 2, bg = 1}
@@ -171,12 +178,11 @@ SWEP.Attachments = {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
         Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
+        VMScale = Vector(0.9, 0.9, 0.9),
         Bone = "j_reload_cover", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(-2.125, 0.075, 0.9), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(-2.125, 0.075, 0.85), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(4.5, 1.35, -5.4),
-            wang = Angle(171, 179, 0)
         },
         InstalledEles = {"rail"},
         CorrectivePos = Vector(0, 0, 0),
@@ -190,19 +196,15 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(24, 0, 2.35), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(0, 0, 0),
-            wang = Angle(0, 0, 0)
         },
     }, --2
     { --3
         PrintName = "Underbarrel",
-        Slot = {"foregrip"},
+        Slot = {"foregrip", "bo1_bipod"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(8, 0, 0), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(17.5, 1.125, -4.6),
-            wang = Angle(172.5, -179, -1.5),
         },
         MergeSlots = {4,5},
     }, --3
@@ -213,8 +215,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(15, 0, 0.5), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(18.25, 1.125, -5),
-            wang = Angle(172.5, -179, -1.5),
         },
     }, --4
     { --5
@@ -229,8 +229,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(21, 0, 0.5), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(18, 0.25, -5.6),
-            wang = Angle(-8, 0, 85)
         },
     }, --6
     { --7
@@ -253,8 +251,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(-5.25, -1, -0.5),
             vang = Angle(0, 0, 0),
-            wpos = Vector(2, 1.9, -4),
-            wang = Angle(-175, -175, 0)
         },
     }, --10
 }

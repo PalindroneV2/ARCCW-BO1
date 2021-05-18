@@ -73,6 +73,20 @@ SWEP.Firemodes = {
     }
 }
 
+-- for the ranger
+    /*
+    {
+        PrintName = "BOTH",
+        Mode = 1,
+        Mult_Recoil = 2,
+        Mult_RecoilSide = 2,
+        Override_AmmoPerShot = 2,
+        Override_Num = 12,
+        Mult_Damage = 2,
+        Mult_DamageMin = 0,
+    },
+    */
+
 SWEP.NPCWeaponType = "weapon_shotgun"
 SWEP.NPCWeight = 200
 

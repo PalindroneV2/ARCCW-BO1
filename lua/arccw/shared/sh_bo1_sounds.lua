@@ -1671,6 +1671,74 @@ sound.Add( {
     }
 } )
 
+-- RPK MAIN ---
+
+sound.Add( {
+    name = "ArcCW_BO1.RPK_Fire",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_rpk/fire1.wav",
+        "weapons/arccw/bo1_rpk/fire2.wav",
+        "weapons/arccw/bo1_rpk/fire3.wav",
+        "weapons/arccw/bo1_rpk/fire4.wav",
+        "weapons/arccw/bo1_rpk/fire5.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_BO1.RPK_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_rpk/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.RPK_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_rpk/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.RPK_BoltBack",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_rpk/back.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.RPK_BoltFwd",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_rpk/fwd.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.RPK_Futz",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_rpk/futz.wav",
+    }
+} )
+
 -- Dragunov --
 
 sound.Add({

@@ -13,7 +13,7 @@ att.GivesFlags = {"74ammo"}
 
 att.SortOrder = 97
 
-att.Override_Trivia_Calibre = "5,45x39mm"
+att.Override_Trivia_Calibre = "5.45x39mm"
 att.Mult_Damage = 0.85
 att.Mult_DamageMin = 0.85
 att.Mult_Penetration = 1.1

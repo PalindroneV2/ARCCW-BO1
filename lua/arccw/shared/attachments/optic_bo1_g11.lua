@@ -11,7 +11,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = "optic"
+att.Slot = "g11_optic"
 
 att.Model = "models/weapons/arccw/atts/bo1_g11_scope.mdl"
 
