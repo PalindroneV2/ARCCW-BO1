@@ -167,9 +167,9 @@ SWEP.Attachments = {
     {
         PrintName = "Underbarrel",
         Slot = "foregrip",
-        Bone = "tag_weapon",
+        Bone = "j_bolt",
         Offset = {
-            vpos = Vector(6, 0, -0.125),
+            vpos = Vector(8, 0, -0.5),
             vang = Angle(0, 0, 0),
             wpos = Vector(21.5, 0.75, -3.25),
             wang = Angle(172.5, 0, 0)
@@ -204,12 +204,10 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
-        Bone = "tag_weapon",
+        Bone = "j_bolt",
         Offset = {
-            vpos = Vector(0, -0.65, 0), -- offset that the attachment will be relative to the bone
+            vpos = Vector(-1, -0.65, 0.75), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(7, 1.6, -4),
-            wang = Angle(-10, 0, 180)
         },
     }, --5
 }
@@ -271,7 +269,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.2,
-        LHIKOut = 0.2,
+        LHIKOut = 1.5,
         SoundTable = {
             {s = "ArcCW_BO1.Olympia_Switch", t = 14 / 30},
             {s = "ArcCW_BO1.Olympia_Open", t = 32 / 30},
@@ -285,7 +283,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.2,
-        LHIKOut = 0.2,
+        LHIKOut = 1.5,
         SoundTable = {
             {s = "ArcCW_BO1.Olympia_Switch", t = 14 / 30},
             {s = "ArcCW_BO1.Olympia_Open", t = 32 / 30},
