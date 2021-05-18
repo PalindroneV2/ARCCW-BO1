@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "EX-41 China Lake"
+SWEP.PrintName = "China Lake"
 SWEP.Trivia_Class = "Grenade Launcher"
 SWEP.Trivia_Desc = "American experimental pump-action 40mm grenade launcher used only by the Navy SEALs. Due to its experimental nature very few of these launchers were manufactured."
 SWEP.Trivia_Manufacturer = "Ithaca"

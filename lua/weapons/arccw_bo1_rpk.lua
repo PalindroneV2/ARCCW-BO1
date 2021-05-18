@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "RPK"
+SWEP.PrintName = "RPK-74"
 SWEP.Trivia_Class = "Light Machine Gun"
 SWEP.Trivia_Desc = "Heavier, sturdier version of the AK platform for use as a light machine gun."
 SWEP.Trivia_Manufacturer = "Vyatskiye Polyany"
@@ -312,9 +312,18 @@ SWEP.Attachments = {
 
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep.Attachments[10].Installed == "ammo_papunch"
+    local stock = 0
+    if wep.Attachments[7].Installed == "bo1_light_stock" then stock = 1
+    elseif wep.Attachments[7].Installed == "bo1_solid_stock" then stock = 2
+    elseif wep.Attachments[7].Installed == "bo1_solider_stock" then stock = 3
+    end
 
     if pap then
         return "R115 Resonator"
+    elseif stock == 1 then
+        return "RPKS-74"
+    elseif stock == 0 or stock >= 2 then
+        return "RPK-74"
     end
 end
 
@@ -386,32 +395,32 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 4.76,
+        Time = 4.76 / 1.25,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.RPK_Futz", t = 3.3},
-            {s = "ArcCW_BO1.RPK_MagOut", t = 0.75},
-            {s = "ArcCW_BO1.RPK_Futz", t = 3.3},
-            {s = "ArcCW_BO1.RPK_MagIn", t = 3.45},
+            {s = "ArcCW_BO1.RPK_Futz", t = 0.6 / 1.25},
+            {s = "ArcCW_BO1.RPK_MagOut", t = 0.75 / 1.25},
+            {s = "ArcCW_BO1.RPK_Futz", t = 3.3 / 1.25},
+            {s = "ArcCW_BO1.RPK_MagIn", t = 3.45 / 1.25},
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 6.16,
+        Time = 6.16 / 1.25,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.RPK_Futz", t = 0.6},
-            {s = "ArcCW_BO1.RPK_MagOut", t = 0.75},
-            {s = "ArcCW_BO1.RPK_Futz", t = 3.3},
-            {s = "ArcCW_BO1.RPK_MagIn", t = 3.45},
-            {s = "ArcCW_BO1.RPK_BoltBack", t = 5.0},
-            {s = "ArcCW_BO1.RPK_BoltFwd", t = 5.25},
+            {s = "ArcCW_BO1.RPK_Futz", t = 0.6 / 1.25},
+            {s = "ArcCW_BO1.RPK_MagOut", t = 0.75 / 1.25},
+            {s = "ArcCW_BO1.RPK_Futz", t = 3.3 / 1.25},
+            {s = "ArcCW_BO1.RPK_MagIn", t = 3.45 / 1.25},
+            {s = "ArcCW_BO1.RPK_BoltBack", t = 5.0 / 1.25},
+            {s = "ArcCW_BO1.RPK_BoltFwd", t = 5.25 / 1.25},
         },
     },
     ["reload_dual"] = {

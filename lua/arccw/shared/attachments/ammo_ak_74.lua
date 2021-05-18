@@ -1,6 +1,6 @@
-att.PrintName = "AK-74 Conversion"
+att.PrintName = "30rnd 5.45x39mm Bakelite"
 att.Icon = Material("entities/acwatt_bo1_ext_mag.png")
-att.Description = "Your AK has been converted to fire the 5,45x39mm round used by the AK-74 and its derivatives."
+att.Description = "Your AK has been converted to fire the 5.45x39mm round used by the AK-74 and its derivatives."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
