@@ -246,12 +246,11 @@ end
 SWEP.Hook_TranslateAnimation = function(wep, anim, data)
     local ext = wep.Attachments[4].Installed == "ammo_bo1_cz_ext"
 
-    if wep:Clip1() == 0 then
-        return anim .. "_empty"
-    end
-
     if ext then
         return anim .. "_ext"
+    end
+    if wep:Clip1() == 0 then
+        return anim .. "_empty"
     end
 end
 
