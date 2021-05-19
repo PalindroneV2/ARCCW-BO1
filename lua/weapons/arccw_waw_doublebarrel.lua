@@ -275,7 +275,7 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
-        Time = 1,
+        Time = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.25,
@@ -355,7 +355,7 @@ SWEP.Animations = {
     },
     ["holster_grip"] = {
         Source = "holster_grip",
-        Time = 1,
+        Time = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.25,

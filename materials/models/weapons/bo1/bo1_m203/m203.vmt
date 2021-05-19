@@ -4,6 +4,10 @@
 	//$color2 "[0.5 0.5 0.5]"
 	$blendtintbybasealpha  "1"
 	"$bumpmap" "models/weapons/bo1/bo1_m203/m203_n"
+	$detail "models\weapons\bo1\gunmetal"
+	$detailblendmode 0
+	$detailblendscale 1
+
 	$phong                      		1
 	$phongexponent                      "20"
 	$phongboost                         "0.5"

@@ -6,7 +6,7 @@ VertexlitGeneric
 	$blendtintbybasealpha  "1"
 	$detail		"models\weapons\bo1\od_green"
 	$detailblendmode		3
-	$detailblendfactor 0.5
+	$detailblendfactor 0.3
 
 	$phong                      		1
 	$phongexponent                      "20"

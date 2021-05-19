@@ -226,7 +226,7 @@ SWEP.Animations = {
         Time = 1,
     },
     ["holster"] = {
-        Source = "empty",
+        Source = "holster",
         Time = 1,
     },
     ["ready"] = {

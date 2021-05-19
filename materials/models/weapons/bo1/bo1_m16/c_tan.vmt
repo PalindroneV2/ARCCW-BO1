@@ -5,7 +5,7 @@ VertexlitGeneric
 	$blendtintbybasealpha  "1"
 	$detail		"models\weapons\bo1\tan"
 	$detailblendmode		3
-	$detailblendfactor 0.75
+	$detailblendfactor 0.3
 
 	$phong                      		1
 	$phongexponent                      "20"

@@ -393,11 +393,11 @@ SWEP.Animations = {
         Source = {
             "pump_ads",
         },
-        Time = 20 / 35,
+        Time = 20 / 25,
         ShellEjectAt = 0.3,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 2 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 9 / 30},
+            {s = "ArcCW_BO1.MK_Back", t = 2 / 25},
+            {s = "ArcCW_BO1.MK_Fwd", t = 9 / 25},
         },
     },
     ["sgreload_start"] = {
@@ -513,11 +513,11 @@ SWEP.Animations = {
         Source = {
             "pump_ads_grip",
         },
-        Time = 20 / 35,
+        Time = 20 / 25,
         ShellEjectAt = 5 / 35,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 2 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 9 / 30},
+            {s = "ArcCW_BO1.MK_Back", t = 2 / 25},
+            {s = "ArcCW_BO1.MK_Fwd", t = 9 / 25},
         },
     },
     ["reload_grip"] = {

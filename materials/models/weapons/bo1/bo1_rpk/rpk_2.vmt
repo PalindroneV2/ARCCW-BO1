@@ -3,10 +3,9 @@ VertexlitGeneric
 	$basetexture	"models\weapons\bo1\bo1_rpk\rpk_c"
 	//$color2 "[0.85 0.85 0.85]"
 	$bumpmap	"models\weapons\bo1\bo1_rpk\rpk_n"
-	$phongexponenttexture "models\weapons\bo1\bo1_rpk\rpk_c"
 	$detail "models\weapons\bo1\rpk_plastic"
-	$detailblendmode 2
-	$detailblendfactor 0.2
+	$detailblendmode "[4]"
+	$detailblendfactor 1
 
 	$phong                      		1
 	$phongexponent                      "20"
