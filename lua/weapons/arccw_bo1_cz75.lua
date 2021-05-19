@@ -236,7 +236,7 @@ SWEP.Hook_NameChange = function(wep, name)
 
     if pap and !auto then
         return "Calamity"
-    elseif papa and auto then
+    elseif pap and auto then
         return "Calamity Jane"
     elseif auto and !pap then
         return "CZ75 Auto"
