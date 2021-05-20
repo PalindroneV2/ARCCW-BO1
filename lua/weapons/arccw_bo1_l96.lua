@@ -24,10 +24,10 @@ SWEP.WorldModelOffset = {
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_awm.mdl"
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 95
-SWEP.DamageMin = 150 -- damage done at maximum range
-SWEP.Range = 50 -- in METRES
-SWEP.Penetration = 35
+SWEP.Damage = 120
+SWEP.DamageMin = 110 -- damage done at maximum range
+SWEP.Range = 2000 -- in METRES
+SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 4000 -- projectile or phys bullet muzzle velocity

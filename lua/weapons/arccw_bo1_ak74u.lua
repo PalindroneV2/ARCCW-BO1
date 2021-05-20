@@ -279,7 +279,7 @@ SWEP.Attachments = {
     {
         PrintName = "Magazine",
         Slot = "ammo_bo1_74",
-        DefaultAttName = "Standard Magazine",
+        DefaultAttName = "30rnd 7.62x39mm Steel",
         Installed = "ammo_ak_74",
     }, --8
     {
@@ -395,8 +395,12 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_GetShootSound = function(wep, sound)
-    if wep.Attachments[2].Installed and wep:GetBuff_Override("Silencer") then
-        return "ArcCW_BO1.M16_Sil"
+    local bake = wep.Attachments[8].Installed == "ammo_ak_74"
+    if bake then
+        if wep.Attachments[2].Installed and wep:GetBuff_Override("Silencer") then
+            return "ArcCW_BO1.M16_Sil"
+        end
+        return "ArcCW_BO1.AK74u_Fire"
     end
 end
 

@@ -283,7 +283,7 @@ SWEP.Attachments = {
     { --9
         PrintName = "Caliber",
         Slot = "ammo_bo1_74",
-        DefaultAttName = "Standard Caliber"
+        DefaultAttName = "30rnd 7.62x39mm Steel"
     },
     {
         PrintName = "FCG",
@@ -415,10 +415,13 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
 end
 
 SWEP.Hook_GetShootSound = function(wep, sound)
-    local mag = wep.Attachments[9].Installed == "ammo_ak_74"
-    if wep.Attachments[2].Installed and wep:GetBuff_Override("Silencer") then
-        return "ArcCW_BO1.M16_Sil"
-    elseif mag then return "ArcCW_BO1.AK74u_Fire" end
+    local bake = wep.Attachments[9].Installed == "ammo_ak_74"
+    if bake then
+        if wep.Attachments[2].Installed and wep:GetBuff_Override("Silencer") then
+            return "ArcCW_BO1.M16_Sil"
+        end
+        return "ArcCW_BO1.AK74u_Fire"
+    end
 end
 
 SWEP.Animations = {
@@ -517,7 +520,7 @@ SWEP.Animations = {
         LHIKOut = 0.25,
     },
     ["holster_m203"] = {
-        Source = "holster_m203",
+        Source = "holster_gl",
         Time = 0.75,
         LHIK = true,
         LHIKIn = 0.2,

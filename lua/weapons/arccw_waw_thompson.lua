@@ -5,7 +5,12 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M1A1 Thompson"
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = "American Submachine Gun in .45 ACP. The design was finalized too late for the Great War, but it found commercial success in the civilian market and infamy due to it's use by gangsters. Eventually the U.S. Military would fully adopt the Thompson as their standard SMG and would see service in World War 2."
+SWEP.Trivia_Desc = [[
+    American Submachine Gun in .45 ACP. The design was finalized too late for the Great War,
+    but it found commercial success in the civilian market and infamy due to it's use by gangsters.
+    Eventually the U.S. Military would fully adopt the Thompson as their standard SMG and would see service in World War 2. \n\n
+    'Part sinner, part saint. An incredible gun that spits unbelievable tales. But the most amazing thing is that they're all twrue.'
+]]
 SWEP.Trivia_Manufacturer = "Auto-Ordnance"
 SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Straight Blowback"

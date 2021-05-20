@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 
 SWEP.PrintName = "New Model Army"
-SWEP.Trivia_Class = "Pistol"
+SWEP.Trivia_Class = "Revolver"
 SWEP.Trivia_Desc = "American revolver used by the US Army during the Civil War and the times of the old West."
 SWEP.Trivia_Manufacturer = "Remington"
 SWEP.Trivia_Calibre = ".44 Percussion"

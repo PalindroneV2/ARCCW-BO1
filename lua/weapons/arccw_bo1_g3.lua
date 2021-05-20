@@ -161,7 +161,6 @@ SWEP.AttachmentElements = {
     },
     ["rail"] = {
         VMBodygroups = {
-            --{ind = 2, bg = 4},
             {ind = 3, bg = 1},
         },
         ExcludeFlags = {"no_rail"},
@@ -188,11 +187,6 @@ SWEP.AttachmentElements = {
             [6] = {
                 vpos = Vector(5, 0, 1),
             }
-        },
-        VMBodygroups = {
-            {ind = 0, bg = 2},
-            {ind = 2, bg = 2},
-            {ind = 5, bg = 2},
         },
     },
     ["hk53_barrel"] = {
@@ -255,10 +249,6 @@ SWEP.AttachmentElements = {
 
 SWEP.DefaultBodygroups = "000000000"
 
-SWEP.RejectAttachments = {
-    ["bo1_barrel_g3_hk33"] = true,
-}
-
 SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
@@ -294,7 +284,7 @@ SWEP.Attachments = {
     }, --3
     {
         PrintName = "Underbarrel",
-        Slot = {"foregrip"},
+        Slot = {"foregrip", "bo1_bipod"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(7.5, 0, 1.3), -- offset that the attachment will be relative to the bone
@@ -390,57 +380,107 @@ SWEP.Hook_NameChange = function(wep, name)
 
     local barrel = wep.Attachments[2].Installed
     local length = 0
-        if barrel == "bo1_barrel_g3_psg1" then length = 1
-            elseif barrel == "bo1_barrel_g3_hk33" then legnth = 2
-            elseif barrel == "bo1_barrel_g3_hk53" then length = 3
-            elseif barrel == "bo1_barrel_g3_hk21" then length = 4
-            elseif barrel == "bo1_barrel_g3_psg1hg" then length = 5
-            elseif barrel == "bo1_barrel_g3_hk33hg" then length = 6
-            elseif barrel == "bo1_barrel_g3_hk53hg" then length = 7
-        end
-
-    if !pap and !stock and !hk33 and length == 1 then
-        return "HK PSG-1"
-    elseif !pap and stock and !hk33 and length == 1 then
-        return "HK PSG-1"
-    elseif !pap and !stock and !hk33 and length == 5 then
-        return "HK PSG-1"
-    elseif !pap and stock and !hk33 and length == 5 then
-        return "HK PSG-1"
-    elseif !pap and stock and !hk33 and length != 1 then
-        return "HK G3A3"
-    elseif !pap and !stock and !hk33 and length != 1 then
-        return "HK G3A4"
-    elseif !pap and stock and hk33 and length == 6 then
-        return "HK33A2"
-    elseif !pap and !stock and hk33 and length == 6 then
-        return "HK33A3"
-    elseif !pap and stock and hk33 and length == 3 then
-        return "HK53"
-    elseif !pap and !stock and hk33 and length == 3 then
-        return "HK53"
-    elseif !pap and stock and hk33 and length == 7 then
-        return "HK53"
-    elseif !pap and !stock and hk33 and length == 7 then
-        return "HK53"
-    elseif pap and !stock and !hk33 and length == 1 then
-        return "HK P115 Perforator"
-    elseif pap and stock and !hk33 and length == 1 then
-        return "HK P115 Perforator"
-    elseif pap and stock and !hk33 and length != 1 then
-        return "HK G115 Perforator"
-    elseif pap and !stock and !hk33 and length != 1 then
-        return "HK G115 Perforator"
-    elseif pap and stock and hk33 and length == 1 then
-        return "HK115 Perforator"
-    elseif pap and !stock and hk33 and length == 1 then
-        return "HK115 Perforator"
-    elseif pap and stock and hk33 and length != 1 then
-        return "HK115 Perforator"
-    elseif pap and !stock and hk33 and length != 1 then
-        return "HK115 Perforator"
+    if barrel == "bo1_barrel_g3_psg1" then length = 1
+    elseif barrel == "bo1_barrel_g3_hk33" then legnth = 2
+    elseif barrel == "bo1_barrel_g3_hk53" then length = 3
+    elseif barrel == "bo1_barrel_g3_hk21" then
+        hk21 = 1
+        length = 0
+    elseif barrel == "bo1_barrel_g3_psg1hg" then
+        hk21 = 1
+        length = 1
+    elseif barrel == "bo1_barrel_g3_hk33hg" then
+        hk21 = 1
+        length = 2
+    elseif barrel == "bo1_barrel_g3_hk53hg" then
+        hk21 = 1
+        length = 3
     end
+
+    local brand = "HK "
+    local model = "G3"
+    local alt = "A4"
+
+    for k = length, length do
+        if length == 0 then -- G3
+            if stock then
+                alt = "A3"
+            end
+            if hk33 then
+                model = "HK33"
+                alt = ""
+                if pap then
+                    brand = ""
+                    model = "HK115"
+                    alt = " Perforator"
+                end
+            end
+            if pap then
+                brand = ""
+                model = "G115"
+                alt = " Perforator"
+            end
+        elseif length == 1 then -- PSG1
+            model = "PSG-1"
+            alt = ""
+            if hk33 then
+                model = "HK33"
+                alt = ""
+                if pap then
+                    brand = ""
+                    model = "HK115"
+                    alt = " Perforator"
+                end
+            end
+            if pap then
+                brand = ""
+                model = "PSG-115"
+                alt = " Perforator"
+            end
+        elseif length == 2 then -- HK33
+            model = "HK33"
+            alt = "A3"
+            if stock then
+                alt = "A2"
+            end
+            if hk33 then
+                model = "HK33"
+                alt = ""
+                if pap then
+                    brand = ""
+                    model = "HK115"
+                    alt = " Perforator"
+                end
+            end
+            if pap then
+                brand = ""
+                model = "G115"
+                alt = " Perforator"
+            end
+        elseif length == 3 then -- HK53
+            if hk33 then
+                model = "HK53"
+                alt = ""
+                if pap then
+                    brand = ""
+                    model = "HK115"
+                    alt = " Perforator"
+                end
+            end
+            if pap then
+                brand = ""
+                model = "G115"
+                alt = " Perforator"
+            end
+        end
+    end
+
+    return brand .. model .. alt
 end
+
+SWEP.RejectAttachments = {
+    ["bo1_barrel_g3_hk33"] = true,
+}
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
@@ -449,92 +489,62 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local tan = wep.Attachments[14].Installed == "bo1_cosmetic_tan"
     local odgreen = wep.Attachments[14].Installed == "bo1_cosmetic_odgreen"
     local stock = wep.Attachments[8].Installed == "bo1_solider_stock"
+    local bipod = wep.Attachments[4].Installed == "bo1_bipod_integral"
+    local scope = wep.Attachments[1].Installed
 
     local barrel = wep.Attachments[2].Installed
     local length = 0
-        if barrel == "bo1_barrel_g3_psg1" then length = 1
-            elseif barrel == "bo1_barrel_g3_hk33" then legnth = 2
-            elseif barrel == "bo1_barrel_g3_hk53" then length = 3
-            elseif barrel == "bo1_barrel_g3_hk21" then length = 4
-            elseif barrel == "bo1_barrel_g3_psg1hg" then length = 5
-            elseif barrel == "bo1_barrel_g3_hk33hg" then length = 6
-            elseif barrel == "bo1_barrel_g3_hk53hg" then length = 7
+    local hk21 = 0
+    if barrel == "bo1_barrel_g3_psg1" then length = 1
+    elseif barrel == "bo1_barrel_g3_hk33" then legnth = 2
+    elseif barrel == "bo1_barrel_g3_hk53" then length = 3
+    elseif barrel == "bo1_barrel_g3_hk21" then
+        hk21 = 1
+        length = 0
+    elseif barrel == "bo1_barrel_g3_psg1hg" then
+        hk21 = 1
+        length = 1
+    elseif barrel == "bo1_barrel_g3_hk33hg" then
+        hk21 = 1
+        length = 2
+    elseif barrel == "bo1_barrel_g3_hk53hg" then
+        hk21 = 1
+        length = 3
+    end
+
+    for k = length, length do
+        vm:SetBodygroup(5, k)
+        if hk21 == 1 then
+            vm:SetBodygroup(5, k + 4)
         end
-
-    local scope = wep.Attachments[1].Installed
-
-    if length == 0 and stock then -- G3A3
-        vm:SetBodygroup(0, 0)
-        vm:SetBodygroup(2, 0)
-        vm:SetBodygroup(4, 3)
-        vm:SetBodygroup(5, 0)
-    elseif length == 0 and !stock then -- G3A4
-        vm:SetBodygroup(0, 0)
-        vm:SetBodygroup(2, 0)
-        vm:SetBodygroup(5, 0)
-    elseif length == 1 and stock then -- PSG1
-        vm:SetBodygroup(0, 1)
-        vm:SetBodygroup(2, 1)
-        vm:SetBodygroup(4, 4)
-        vm:SetBodygroup(5, 1)
-    elseif length == 1 and !stock then -- PSG1
-        vm:SetBodygroup(0, 1)
-        vm:SetBodygroup(2, 1)
-        vm:SetBodygroup(5, 1)
-    /*delseif length == 2 and !stock then -- HK33
-        vm:SetBodygroup(0, 2)
-        vm:SetBodygroup(2, 2)
-        vm:SetBodygroup(5, 2)
-    elseif length == 2 and stock then -- HK33
-        vm:SetBodygroup(0, 2)
-        vm:SetBodygroup(2, 2)
-        vm:SetBodygroup(4, 3)
-        vm:SetBodygroup(5, 2)*/
-    elseif length == 3 and !stock then -- HK53
-        vm:SetBodygroup(0, 3)
-        vm:SetBodygroup(2, 3)
-        vm:SetBodygroup(5, 3)
-    elseif length == 3 and stock then -- HK53
-        vm:SetBodygroup(0, 3)
-        vm:SetBodygroup(2, 3)
-        vm:SetBodygroup(4, 3)
-        vm:SetBodygroup(5, 3)
-    elseif length == 4 and stock then --G3A3 (HK21 STARTS HERE)
-        vm:SetBodygroup(0, 0)
-        vm:SetBodygroup(2, 0)
-        vm:SetBodygroup(4, 3)
-        vm:SetBodygroup(5, 4)
-    elseif length == 4 and !stock then -- G3A4
-        vm:SetBodygroup(0, 0)
-        vm:SetBodygroup(2, 0)
-        vm:SetBodygroup(5, 4)
-    elseif length == 5 and stock then -- PSG1
-        vm:SetBodygroup(0, 1)
-        vm:SetBodygroup(2, 1)
-        vm:SetBodygroup(4, 4)
-        vm:SetBodygroup(5, 5)
-    elseif length == 5 and !stock then -- PSG1
-        vm:SetBodygroup(0, 1)
-        vm:SetBodygroup(2, 1)
-        vm:SetBodygroup(5, 5)
-    elseif length == 6 and !stock then -- HK33
-        vm:SetBodygroup(0, 2)
-        vm:SetBodygroup(2, 2)
-        vm:SetBodygroup(5, 6)
-    elseif length == 6 and stock then -- HK33
-        vm:SetBodygroup(0, 2)
-        vm:SetBodygroup(2, 2)
-        vm:SetBodygroup(4, 3)
-        vm:SetBodygroup(5, 6)
-    elseif length == 7 and !stock then -- HK53
-        vm:SetBodygroup(0, 3)
-        vm:SetBodygroup(2, 3)
-        vm:SetBodygroup(5, 7)
-    elseif length == 7 and stock then -- HK53
-        vm:SetBodygroup(0, 3)
-        vm:SetBodygroup(2, 3)
-        vm:SetBodygroup(4, 3)
-        vm:SetBodygroup(5, 7)
+        if bipod then
+            vm:SetBodygroup(6, k)
+        else vm:SetBodygroup(6, 4) end
+        if length == 0 then -- G3
+            vm:SetBodygroup(0, 0)
+            vm:SetBodygroup(2, 0)
+            if stock then
+                vm:SetBodygroup(4, 3)
+            end
+        elseif length == 1 then -- PSG1
+            vm:SetBodygroup(0, 1)
+            vm:SetBodygroup(2, 1)
+            if stock then
+                vm:SetBodygroup(4, 4)
+            end
+        elseif length == 2 then -- HK33
+            vm:SetBodygroup(0, 2)
+            vm:SetBodygroup(2, 2)
+            if stock then
+                vm:SetBodygroup(4, 3)
+            end
+        elseif length == 3 then -- HK53
+            vm:SetBodygroup(0, 3)
+            vm:SetBodygroup(2, 3)
+            if stock then
+                vm:SetBodygroup(4, 3)
+            end
+        end
     end
 
     if scope then vm:SetBodygroup(2, 4) end

@@ -6,7 +6,10 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Colt M16A1"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "After the failure of the M14 rifle, the United States Military finally decided to adopt a rifle using intermediate rounds. The AR-15 platform was adopted as the next standard infantry rifle for the US Military."
+SWEP.Trivia_Desc = [[
+    After the failure of the M14 rifle, the United States Military finally decided to adopt a rifle using intermediate rounds.
+    The AR-15 platform was adopted as the next standard infantry rifle for the US Military and became the M16.
+]]
 SWEP.Trivia_Manufacturer = "Colt"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"

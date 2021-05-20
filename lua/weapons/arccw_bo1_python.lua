@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 
 SWEP.PrintName = "Colt Python"
-SWEP.Trivia_Class = "Pistol"
+SWEP.Trivia_Class = "Revolver"
 SWEP.Trivia_Desc = "American revolver regarded as one of the finest of its kind. The bore gets tighter towards the end, aiding in accuracy."
 SWEP.Trivia_Manufacturer = "Colt"
 SWEP.Trivia_Calibre = ".357 Magnum"
