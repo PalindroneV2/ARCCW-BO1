@@ -28,7 +28,7 @@ SWEP.WorldModelOffset = {
 SWEP.ViewModelFOV = 60
 
 SWEP.Damage = 52
-SWEP.DamageMin = 42 -- damage done at maximum range
+SWEP.DamageMin = 46 -- damage done at maximum range
 SWEP.Range = 195 -- in METRES
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
@@ -60,8 +60,11 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.NPCWeaponType = "weapon_ar2"
-SWEP.NPCWeight = 165
+SWEP.NPCWeaponType = {
+    "weapon_ar2",
+    "weapon_crossbow",
+}
+SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 1.75 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.

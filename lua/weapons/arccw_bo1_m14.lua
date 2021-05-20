@@ -63,8 +63,8 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.NPCWeaponType = "weapon_ar2"
-SWEP.NPCWeight = 165
+SWEP.NPCWeaponType = {"weapon_ar2", "weapon_smg1"}
+SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 1.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
@@ -198,7 +198,7 @@ SWEP.Attachments = {
         },
         InstalledEles = {"m14_rail"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0, 0, 0),
+        CorrectiveAng = Angle(0.5, 0, 0),
         MergeSlots = {13},
     },
     {
@@ -311,13 +311,30 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0)
     },
+    { --14
+        PrintName = "Cosmetic",
+        Slot = "bo1_cosmetic",
+        DefaultAttName = "Standard Light Wood",
+        FreeSlot = true,
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")
+    local camo = 0
+    if wep.Attachments[14].Installed == "bo1_cosmetic_wood" then camo = 4
+    elseif  wep.Attachments[14].Installed == "bo1_cosmetic_black" then camo = 8
+    elseif wep.Attachments[14].Installed == "bo1_cosmetic_odgreen" then camo = 12
+    end
 
-    if papcamo then return vm:SetSkin(2) end
+    for k = camo, camo do
+        if !papcamo and camo == k then
+            vm:SetSkin(0 + camo)
+        elseif papcamo and camo == k then
+            vm:SetSkin(2 + camo)
+        end
+    end
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
@@ -365,6 +382,7 @@ end
 
 SWEP.RejectAttachments = {
     ["ub_bo1_foregrip_uni"] = true,
+    ["bo1_cosmetic_tan"] = true,
 }
 
 SWEP.Animations = {

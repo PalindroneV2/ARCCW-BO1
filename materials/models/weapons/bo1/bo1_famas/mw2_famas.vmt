@@ -1,12 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\bo1\bo1_m16\mw2_m16"
+	$basetexture	"models\weapons\bo1\bo1_famas\mw2famas_c"
 	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models\weapons\bo1\bo1_m16\m16_mw2_n"
-	$blendtintbybasealpha  "1"
-	$detail "models\weapons\bo1\gunmetal"
-	$detailblendmode 0
-	$detailblendscale 1
+	$bumpmap	"models\weapons\bo1\bo1_famas\mw2famas_n"
 
 	$phong                      		1
 	$phongexponent                      "20"

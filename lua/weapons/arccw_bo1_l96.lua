@@ -57,8 +57,11 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.NPCWeaponType = {"weapon_ar2", "weapon_crossbow"}
-SWEP.NPCWeight = 25
+SWEP.NPCWeaponType = {
+    "weapon_ar2",
+    "weapon_crossbow",
+}
+SWEP.NPCWeight = 100
 
 SWEP.ManualAction = true
 

@@ -25,14 +25,6 @@ att.AdditionalSights = {
         ZoomLevels = 2,
         IgnoreExtra = true
     },
-    {
-        Pos = Vector(0, 5, -2.9),
-        Ang = Angle(0.774, 0, 0),
-        Magnification = 1.1,
-        HolosightData = {
-            Holosight = false
-        }
-    },
 }
 
 att.Holosight = true

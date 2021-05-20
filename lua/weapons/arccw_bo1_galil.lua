@@ -65,8 +65,11 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.NPCWeaponType = "weapon_ar2"
-SWEP.NPCWeight = 180
+SWEP.NPCWeaponType = {
+    "weapon_smg1",
+    "weapon_ar2",
+}
+SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 1.75 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 600 -- inaccuracy added by hip firing.
@@ -149,6 +152,11 @@ SWEP.AttachmentElements = {
             {ind = 4, bg = 2},
         },
     },
+    ["bo1_bipod"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 3},
+        },
+    },
     ["mount"] = {
         VMBodygroups = {
             {ind = 2, bg = 1},
@@ -206,7 +214,7 @@ SWEP.Attachments = {
     }, --2
     {
         PrintName = "Underbarrel",
-        Slot = {"ubgl"},
+        Slot = {"ubgl", "bo1_bipod"},
         Bone = "tag_weapon",
         VMScale = Vector(1, 1, 1),
         WMScale = Vector(1, 1, 1),

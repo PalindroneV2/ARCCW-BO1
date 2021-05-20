@@ -66,8 +66,11 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.NPCWeaponType = "weapon_smg1"
-SWEP.NPCWeight = 120
+SWEP.NPCWeaponType = {
+    "weapon_smg1",
+    "weapon_ar2",
+}
+SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 1.9 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 600 -- inaccuracy added by hip firing.
@@ -107,8 +110,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.9, -5, 0.3),
-    Ang = Angle(0.4, -0.1, 0),
+    Pos = Vector(-2.895, 0, 0.3),
+    Ang = Angle(-0.15, 0, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -142,12 +145,17 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
     ["bo1_m203"] = {
         VMBodygroups = {
-            {ind = 4, bg = 1},
+            {ind = 3, bg = 1},
         },
     },
     ["bo1_mk"] = {
         VMBodygroups = {
-            {ind = 4, bg = 2},
+            {ind = 3, bg = 2},
+        },
+    },
+    ["bo1_bipod"] = {
+        VMBodygroups = {
+            {ind = 3, bg = 3},
         },
     },
     ["mount"] = {
@@ -155,10 +163,23 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 1},
         },
     },
-    ["ammo_papunch"] = {
-        NamePriority = 10,
-        NameChange = "G16-GL35",
-    },
+    ["f1_top"] = {
+        VMBodygroups = {
+            {ind = 0, bg = 1},
+            {ind = 2, bg = 1},
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-2.895, 3, 0.3),
+            Ang = Angle(0.25, 0.01, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
+        },
+        AttPosMods = {
+            [1] = {
+                vpos = Vector(2, -0.025, 6.5),
+            }
+        }
+    }
 }
 
 SWEP.Attachments = {
@@ -191,7 +212,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Slot = {"ubgl"},
+        Slot = {"ubgl", "bo1_bipod"},
         Bone = "tag_weapon",
         VMScale = Vector(1, 1, 1),
         WMScale = Vector(1, 1, 1),
@@ -246,7 +267,7 @@ SWEP.Attachments = {
     },
     { --8
         PrintName = "FCG",
-        Slot = {"bo1_fcg"}
+        Slot = {"bo1_fcg", "fcg_famas"}
     },
     { --9
         PrintName = "Ammo Type",
@@ -273,9 +294,26 @@ SWEP.Attachments = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")
+    local f1 = wep.Attachments[8].Installed == "bo1_fcg_famas_s13"
+    local optic = wep.Attachments[1].Installed
+
+    if f1 and optic then
+        vm:SetBodygroup(2, 2)
+    end
 
     if papcamo then
         return vm:SetSkin(2)
+    end
+end
+
+SWEP.Hook_NameChange = function(wep, name)
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local f1 = wep.Attachments[8].Installed == "bo1_fcg_famas_s13"
+
+    if pap then
+        return "G16-GL35"
+    elseif f1 then
+        return "FAMAS F1"
     end
 end
 

@@ -12,7 +12,7 @@ SWEP.Trivia_Mechanism = "Unknown"
 SWEP.Trivia_Country = "Nazi Germany"
 SWEP.Trivia_Year = 1943
 
-SWEP.Slot = 1
+SWEP.Slot = 2
 
 SWEP.UseHands = true
 
@@ -61,7 +61,9 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.NPCWeaponType = "weapon_pistol"
+SWEP.NPCWeaponType = {
+    "weapon_rpg"
+}
 SWEP.NPCWeight = 0
 
 SWEP.AccuracyMOA = 0 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.

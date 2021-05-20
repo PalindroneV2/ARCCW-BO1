@@ -65,8 +65,8 @@ SWEP.Firemodes = {
     },
 }
 
-SWEP.NPCWeaponType = "weapon_shotgun"
-SWEP.NPCWeight = 200
+SWEP.NPCWeaponType = {"weapon_rpg", "weapon_shotgun"}
+SWEP.NPCWeight = 25
 
 SWEP.AccuracyMOA = 2.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
