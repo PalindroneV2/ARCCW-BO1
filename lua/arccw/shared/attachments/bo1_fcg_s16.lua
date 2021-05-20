@@ -1,4 +1,4 @@
-att.PrintName = "Skullsplitter FCG"
+att.PrintName = "A2 Skullsplitter FCG"
 att.Icon = Material("entities/acwatt_fcg_s13.png")
 att.Description = "Firemode conversion allowing for an absurd 6-round burst with a lightly longer delay between bursts."
 att.Desc_Pros = {
@@ -17,7 +17,8 @@ att.SortOrder = 105
 att.Override_Firemodes = {
     {
         Mode = -6,
-        PostBurstDelay = 0.15
+        PostBurstDelay = 0.2,
+        RunawayBurst = true,
     },
     {
         Mode = 1,

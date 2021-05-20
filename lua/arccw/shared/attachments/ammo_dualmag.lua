@@ -1,6 +1,6 @@
-att.PrintName = "Dual Magazine"
+att.PrintName = "Fast Mags"
 att.Icon = Material("entities/acwatt_bo1_dualmag.png")
-att.Description = "Two mags taped together for quick reloading."
+att.Description = "A mechanism for reloading your weapon more effectively."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

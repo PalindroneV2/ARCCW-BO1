@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Skorpion Vz. 65"
-SWEP.Trivia_Class = "Submachine Gun"
+SWEP.Trivia_Class = "Machine Pistol"
 SWEP.Trivia_Desc = "Soviet Submachine Gun designed for security forces which found use by low ranking army staff, vehicle drivers and personnel, and special forces."
 SWEP.Trivia_Manufacturer = "KBP"
 SWEP.Trivia_Calibre = "9x18mm Makarov"
