@@ -8,6 +8,7 @@ att.Desc_Cons = {
 }
 att.AutoStats = true
 att.Slot = "bo1_gp25"
+att.GivesFlags = {"ubanims"}
 att.BO1_UBGL = true
 
 att.SortOrder = 100

@@ -15,3 +15,4 @@ att.Desc_Cons = {
 att.Slot = "car15_irons"
 att.GivesFlags = {"name_a4"}
 att.ExcludeFlags = {"flattop", "flattop2"}
+att.AltIrons = true

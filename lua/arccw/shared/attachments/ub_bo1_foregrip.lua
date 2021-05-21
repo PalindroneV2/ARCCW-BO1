@@ -13,6 +13,7 @@ att.BO1_UBFG = true
 att.AutoStats = true
 
 att.Slot = "bo1_foregrip"
+att.GivesFlags = {"ubanims"}
 att.IntegratedGrip = true
 
 att.Mult_Recoil = 0.75

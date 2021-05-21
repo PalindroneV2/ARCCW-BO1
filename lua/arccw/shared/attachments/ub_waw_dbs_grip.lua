@@ -12,7 +12,7 @@ att.Desc_Cons = {
 att.AutoStats = true
 
 att.Slot = "waw_dbs_grip"
-att.GivesFlags = {"wide_grip"}
+att.GivesFlags = {"wide_grip", "ubanims"}
 
 att.IntegratedGrip = true
 

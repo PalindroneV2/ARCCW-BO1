@@ -8,7 +8,7 @@ att.Desc_Cons = {
 }
 att.AutoStats = true
 att.Slot = "bo1_flamer"
-att.GivesFlags = {"flamer_already_on"}
+att.GivesFlags = {"ubanims"}
 att.ExcludeFlags = {"kali_barrel_short"}
 att.BO1_UBFlamer = true
 
@@ -29,7 +29,7 @@ att.UBGL_Recoil = 0
 att.UBGL_Capacity = 100
 att.UBGL_Icon = Material("entities/acwatt_ubgl_xl60_flamer.png")
 att.AttachSound = "weapons/arccw/bo1_flamer/flame_front.wav"
-att.DetachSound = "weapons/arccw/bo1_flamer/flame_front.wav"
+att.DetachSound = "weapons/arccw/bo1_flamer/flame_rear.wav"
 
 local function Ammo(wep)
     return wep.Owner:GetAmmoCount("GaussEnergy")

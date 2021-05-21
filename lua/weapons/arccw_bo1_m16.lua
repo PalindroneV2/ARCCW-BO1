@@ -153,37 +153,6 @@ SWEP.AttachmentElements = {
     ["heat"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
     },
-    ["flattop"] = {
-        VMBodygroups = {
-            {ind = 2, bg = 2},
-        },
-        AttPosMods = {
-            [2] = {
-                vpos = Vector(3, 0.025, 3.6),
-            },
-        },
-        Override_IronSightStruct = {
-            Pos = Vector(-2.86, -2, 0.05),
-            Ang = Angle(0.66, 0, 0),
-            Magnification = 1.1,
-        },
-    },
-    ["flattop2"] = {
-        VMBodygroups = {
-            {ind = 2, bg = 2},
-            {ind = 0, bg = 1},
-        },
-        AttPosMods = {
-            [2] = {
-                vpos = Vector(3, 0.025, 3.6),
-            }
-        },
-        Override_IronSightStruct = {
-            Pos = Vector(0, 0, 0),
-            Ang = Angle(0, 0, 0),
-            Magnification = 1,
-        },
-    },
     ["bo1_m203"] = {
         VMBodygroups = {
             {ind = 4, bg = 1},
@@ -207,16 +176,18 @@ SWEP.AttachmentElements = {
                 }
             }
         },
-        ExcludeFlags = {"flattop", "flattop2"},
+        ExcludeFlags = {"car15_irons"},
     },
     ["car15_irons"] = {
-        VMBodygroups = {
-            {ind = 2, bg = 1}
-        },
         Override_IronSightStruct = {
             Pos = Vector(-2.875, -2, 0.45),
             Ang = Angle(-0.3, 0, 0),
             Magnification = 1.1,
+        },
+        AttPosMods = {
+            [2] = {
+                vpos = Vector(3, 0.025, 3.6),
+            },
         },
     },
     ["light_stock"] = {
@@ -235,7 +206,7 @@ SWEP.Attachments = {
     { --1
         PrintName = "Upper Receiver",
         DefaultAttName = "A1 Upper",
-        Slot = "bo1_flattop",
+        Slot = "car15_irons",
         FreeSlot = true,
     },
     { --2
@@ -251,8 +222,7 @@ SWEP.Attachments = {
         },
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0.5, 0, 0),
-        MergeSlots = {15},
+        CorrectiveAng = Angle(0.5, 0, 0)
     },
     { --3
         PrintName = "Muzzle",
@@ -353,108 +323,111 @@ SWEP.Attachments = {
         },
     },
     { --15
-        Hidden = true,
-        Slot = "car15_irons",
-        FreeSlot = true,
-    },
-    { --16
         PrintName = "Cosmetic",
         Slot = "bo1_cosmetic",
         DefaultAttName = "Black Polymer",
         FreeSlot = true,
-        GivesFlags = {"bo1_black"}
     },
+}
+
+SWEP.RejectAttachments = {
+    ["bo1_cosmetic_black"] = true,
 }
 
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
-    local s13 = wep.Attachments[10].Installed == "bo1_fcg_s13"
-    local irons = wep.Attachments[15].Installed
-    local flat = wep.Attachments[1].Installed
-    local a2 = wep.Attachments[4].Installed == "m16_hand_a2"
-    local a4 = wep.Attachments[4].Installed == "m16_hand_a4"
+    local s13 = 0
+    if wep.Attachments[10].Installed == "bo1_fcg_s13" then s13 = 1
+    elseif wep.Attachments[10].Installed == "bo1_fcg_s16" then s13 = 1
+    end
+    local irons = wep.Attachments[1].Installed
+    local m16a4 = irons and s13
+    local hand = 0
+    if wep.Attachments[4].Installed == "m16_hand_a2" then hand = 1
+    elseif wep.Attachments[4].Installed == "m16_hand_a4" then hand = 1
+    end
     local tube = wep:GetBuff_Override("BO1_UBGL")
 
-    if !pap and !tube and !irons and !flat and (a2 or a4) and s13 then -- M16A2
-        return "Colt M16A2" --BURST
-    elseif !pap and !tube and !irons and !flat and (a2 or a4) and !s13 then -- M16A2 E3
-        return "Colt M16A2-E3" --AUTO
-    elseif !pap and !tube and (irons or flat) and s13 then -- M16A2
-        return "Colt M16A4" --BURST
-    elseif !pap and !tube and (irons or flat) and !s13 then -- M16A2
-        return "Colt M16A3" --AUTO
-    elseif !pap and tube and !irons and !flat and a2 and s13 then -- M16A2
-        return "Colt M16A2" --BURST
-    elseif !pap and tube and !irons and !flat and a2 and !s13 then -- M16A2 E3
-        return "Colt M16A2-E3" --AUTO
-    elseif !pap and tube and (irons or flat) and s13 then -- M16A2
-        return "Colt M16A4" --BURST
-    elseif !pap and tube and (irons or flat) and !s13 then -- M16A2
-        return "Colt M16A3" --AUTO
-    elseif pap and !tube and !(a2 or a4) then -- M16A1 PAP NO TUBE
-        return "Skullpiercer"
-    elseif pap and !tube and a2 then -- M16A2 PAP NO TUBE
-        return "Skullsplitter"
-    elseif pap and !tube and a4 then -- M16A1 PAP TUBE
-        return "Skulleater" --AUTO
-    elseif pap and tube and !(a2 or a4) then -- M16A1 PAP TUBE
-        return "Skullcrusher" --AUTO
-    elseif pap and tube and a2 then -- M16A2
-        return "Skullsmasher" --AUTO
-    elseif pap and tube and a4 then -- M16A2
-        return "Skullreaper" --AUTO
+    local model = "Colt M16"
+    local alt = "A1"
+
+    for k = hand, hand do
+        if k == 1 then
+            alt = "A1-E1"
+            if irons then
+                alt = "A3"
+            end
+            if s13 == 1 then
+                alt = "A2"
+            end
+            if m16a4 then
+                alt = "A4"
+            end
+        end
+        if irons then
+            alt = "A3"
+        end
+        if m16a4 then
+            alt = "A4"
+        end
+        if pap then
+            model = "Skull"
+            alt = "piercer"
+            if s13 == 1 then
+                alt = "splitter"
+            end
+            if tube then
+                alt = "crusher"
+            end
+        end
     end
+
+    return model .. alt
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local tube = wep:GetBuff_Override("BO1_UBGL")
-    local a2 = wep.Attachments[4].Installed == "m16_hand_a2"
-    local a4 = wep.Attachments[4].Installed == "m16_hand_a4"
-    local heat = wep.Attachments[4].Installed == "m16_hand_heat"
-    local papcamo = wep:GetBuff_Override("PackAPunch")
-    local camo = wep.Attachments[16].Installed
-    local Wood = wep.Attachments[16].Installed == "bo1_cosmetic_wood"
-    local Tan = wep.Attachments[16].Installed == "bo1_cosmetic_tan"
-    local Green = wep.Attachments[16].Installed == "bo1_cosmetic_odgreen"
+    local irons = wep:GetBuff_Override("AltIrons")
+    local optic = wep.Attachments[2].Installed
 
-    if tube and a2 then
-        vm:SetBodygroup(4, 1)
-        vm:SetBodygroup(6, 1)
-    elseif tube and a4 then
-        vm:SetBodygroup(4, 3)
-        vm:SetBodygroup(5, 4)
-        vm:SetBodygroup(6, 1)
-    elseif tube and heat then
-        vm:SetBodygroup(4, 1)
-        vm:SetBodygroup(6, 0)
-    elseif a2 then
-        vm:SetBodygroup(4, 2)
-        vm:SetBodygroup(6, 1)
-    elseif a4 then
-        vm:SetBodygroup(4, 3)
-        vm:SetBodygroup(6, 1)
-    elseif heat then
-        vm:SetBodygroup(4, 1)
-        vm:SetBodygroup(6, 0)
-    elseif !tube and !a2 then vm:SetBodygroup(4, 0)
-    elseif !tube and !heat then vm:SetBodygroup(4, 0)
+    local hand = 0
+    if wep.Attachments[4].Installed == "m16_hand_heat" then hand = 1
+    elseif wep.Attachments[4].Installed == "m16_hand_a2" then hand = 2
+    elseif wep.Attachments[4].Installed == "m16_hand_a4" then hand = 3
+    end
+    local tube = wep:GetBuff_Override("BO1_UBGL")
+
+    local papcamo = wep:GetBuff_Override("PackAPunch")
+    local camo = 0
+    if wep.Attachments[15].Installed == "bo1_cosmetic_wood" then camo = 4
+    elseif wep.Attachments[15].Installed == "bo1_cosmetic_tan" then camo = 8
+    elseif wep.Attachments[15].Installed == "bo1_cosmetic_odgreen" then camo = 12
     end
 
-    if papcamo and !camo then
-        vm:SetSkin(2)
-    elseif !papcamo and Wood then
-        vm:SetSkin(4)
-    elseif papcamo and Wood then
-        vm:SetSkin(6)
-    elseif !papcamo and Tan then
-        vm:SetSkin(8)
-    elseif papcamo and Tan then
-        vm:SetSkin(10)
-    elseif !papcamo and Green then
-        vm:SetSkin(12)
-    elseif papcamo and Green then
-        vm:SetSkin(14)
+    for k = hand, hand do
+        vm:SetBodygroup(4,k)
+        if tube then
+            vm:SetBodygroup(4,1)
+            if k == 3 then
+                vm:SetBodygroup(4,3)
+                vm:SetBodygroup(5,4)
+            end
+        end
+    end
+
+    if irons then
+        vm:SetBodygroup(2,1)
+        if optic then
+            vm:SetBodygroup(2,2)
+            vm:SetBodygroup(0,1)
+        end
+    end
+
+    for k = camo, camo do
+        vm:SetSkin(k)
+        if papcamo then
+            vm:SetSkin(k + 2)
+        end
     end
 end
 

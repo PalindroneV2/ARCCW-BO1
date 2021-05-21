@@ -1992,7 +1992,7 @@ sound.Add({
 })
 sound.Add({
     name = "ArcCW_BO2.B23R_Fire",
-    channel = CHAN_WEAPON + 1,
+    channel = CHAN_WEAPON,
     level = 100,
     sound = "weapons/arccw/bo2_m1911/fire_b23r.wav"
 })

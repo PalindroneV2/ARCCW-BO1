@@ -172,48 +172,19 @@ SWEP.AttachmentElements = {
                 }
             }
         },
-        ExcludeFlags = {"flattop", "flattop2"},
+        ExcludeFlags = {"car15_irons"},
     },
     ["car15_irons"] = {
-        VMBodygroups = {
-            {ind = 2, bg = 1}
-        },
         Override_IronSightStruct = {
             Pos = Vector(-2.775, -2, 0.4),
             Ang = Angle(-0.1, 0, 0),
             Magnification = 1.1,
             CrosshairInSights = false,
         },
-    },
-    ["flattop"] = {
-        VMBodygroups = {
-            {ind = 2, bg = 2},
-        },
         AttPosMods = {
             [2] = {
                 vpos = Vector(3, 0, 3.625),
             }
-        },
-        Override_IronSightStruct = {
-            Pos = Vector(-2.77, -2, -0.05),
-            Ang = Angle(1.375, 0, 0),
-            Magnification = 1.1,
-        },
-    },
-    ["flattop2"] = {
-        VMBodygroups = {
-            {ind = 2, bg = 2},
-            {ind = 0, bg = 1},
-        },
-        AttPosMods = {
-            [2] = {
-                vpos = Vector(3, 0, 3.625),
-            }
-        },
-        Override_IronSightStruct = {
-            Pos = Vector(-1, 2, 0),
-            Ang = Angle(0, 0, 0),
-            Magnification = 1.1,
         },
     },
     ["a1_hand"] = {
@@ -247,7 +218,7 @@ SWEP.Attachments = {
     {
         PrintName = "Upper Receiver",
         DefaultAttName = "A1 Upper",
-        Slot = "bo1_flattop",
+        Slot = "car15_irons",
         FreeSlot = true,
     }, --1
     {
@@ -372,129 +343,102 @@ SWEP.Attachments = {
         },
     }, --15
     {
-        Hidden = true,
-        Slot = "car15_irons",
-        FreeSlot = true,
-    }, --16
-    {
         PrintName = "Sling",
         Slot = "car15_sling",
         FreeSlot = true,
-    }, --17
+    }, --16
     {
         PrintName = "Cosmetic",
         Slot = "bo1_cosmetic",
         DefaultAttName = "Black Polymer",
         FreeSlot = true,
-        GivesFlags = {"bo1_black"}
-    }, --18
+    }, --17
+}
+
+SWEP.RejectAttachments = {
+    ["bo1_cosmetic_black"] = true,
 }
 
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
     local m635 = wep.Attachments[12].Installed == "ammo_car15_9mm"
-    local s13 = wep.Attachments[10].Installed == "bo1_fcg_s13"
-    local irons = wep.Attachments[16].Installed
-    local flat = wep.Attachments[1].Installed
+    local s13 = 0
+    if wep.Attachments[10].Installed == "bo1_fcg_s13" then s13 = 1
+    elseif wep.Attachments[10].Installed == "bo1_fcg_s16" then s13 = 1
+    end
+    local irons = wep:GetBuff_Override("AltIrons")
     local m607 = wep.Attachments[4].Installed == "car15_hand_a1"
 
-    if pap and !irons and !flat and !m635 and !m607 then -- PAP
-        return "Predator"
-    elseif pap and irons and !flat and !m635 and !m607 then -- PAP M4 IRONS
-        return "Predator"
-    elseif pap and !irons and flat and !m635 and !m607 then -- PAP M4 FLAT
-        return "Predator"
-    elseif pap and !irons and !flat and m635 and !m607 then -- PAP M635
-        return "Predator"
-    elseif pap and !irons and !flat and !m635 and m607 then -- PAP M607
-        return "Predator"
-    elseif pap and irons and !flat and m635 and !m607 then -- PAP M4 9MM IRONS
-        return "Predator"
-    elseif pap and irons and !flat and !m635 and m607 then -- PAP M607 IRONS
-        return "Predator"
-    elseif pap and !irons and flat and m635 and !m607 then -- PAP M4 9MM FLAT
-        return "Predator"
-    elseif pap and !irons and flat and !m635 and m607 then -- PAP M607 FLAT
-        return "Predator"
-    elseif !pap and irons and !flat and !m635 and !m607 and !s13 then -- M4A1 IRONS
-        return "Colt M4A1 Carbine"
-    elseif !pap and !irons and flat and !m635 and !m607 and !s13 then -- M4A1 FLAT
-        return "Colt M4A1 Carbine"
-    elseif !pap and irons and !flat and !m635 and !m607 and s13 then -- M4 IRONS
-        return "Colt M4 Carbine"
-    elseif !pap and !irons and flat and !m635 and !m607 and s13 then -- M4 FLAT
-        return "Colt M4 Carbine"
-    elseif !pap and irons and !flat and !m635 and m607 and s13 then -- M4 607 IRONS
-        return "Colt M4 Carbine" --BST
-    elseif !pap and irons and !flat and !m635 and m607 and !s13 then -- M4A1 607 FLAT
-        return "Colt M4A1 Carbine" --AUTO
-    elseif !pap and !irons and flat and !m635 and m607 and s13 then -- M4 607 IRONS
-        return "Colt M4 Carbine" --BST
-    elseif !pap and !irons and flat and !m635 and m607 and !s13 then -- M4A1 607 FLAT
-        return "Colt M4A1 Carbine" --AUTO
-    elseif !pap and irons and !flat and m635 and !m607 and s13 then -- M4A1 9mm IRONS
-        return "Colt 9mm SMG" --AUTO
-    elseif !pap and !irons and flat and m635 and !m607 and s13 then -- M4A1 9mm FLAT
-        return "Colt 9mm SMG" --AUTO
-    elseif !pap and irons and !flat and m635 and !m607 and !s13 then -- M4 9mm IRONS
-        return "Colt 9mm SMG" --BST
-    elseif !pap and !irons and flat and m635 and !m607 and !s13 then -- M4 9mm FLAT
-        return "Colt 9mm SMG" --BST
-    elseif !pap and irons and !flat and m635 and m607 and s13 then -- M4A1 9mm IRONS M607
-        return "Colt 9mm SMG" --AUTO
-    elseif !pap and !irons and flat and m635 and m607 and s13 then -- M4A1 9mm FLAT M607
-        return "Colt 9mm SMG" --AUTO
-    elseif !pap and irons and !flat and m635 and m607 and !s13 then -- M4 9mm IRONS M607
-        return "Colt 9mm SMG" --BST
-    elseif !pap and !irons and flat and m635 and m607 and !s13 then -- M4 9mm FLAT M607
-        return "Colt 9mm SMG" --BST
-    elseif !pap and !irons and !flat and m635 and !m607 and s13 then -- M635 IRONS
-        return "Colt M635"
-    elseif !pap and !irons and !flat and m635 and !m607 and !s13 then -- M635 FLAT
-        return "Colt M635"
-    elseif !pap and !irons and !flat and m635 and m607 and s13 then -- M607 9MM IRONS
-        return "Colt M635" --BST
-    elseif !pap and !irons and !flat and m635 and m607 and !s13 then -- M607 9MM FLAT
-        return "Colt M635" --AUTO
-    elseif !pap and !irons and !flat and !m635 and m607 and s13 then -- M607 IRONS
-        return "Colt M607" --BST
-    elseif !pap and !irons and !flat and !m635 and m607 and !s13 then -- M607 FLAT
-        return "Colt M607" --AUTO
-    elseif !pap and !irons and !flat and !m635 and !m607 and s13 then -- M607 IRONS
-        return "Colt XM4" --BST
+    local brand = "Colt "
+    local model = "Commando"
+
+    for k = s13, s13 do
+        if m607 then
+            model = "CAR-15 SMG"
+        end
+        if m635 then
+            model = "M635"
+        end
+        if irons then
+            model = "M4 Carbine"
+            if m635 then
+                model = "9mm SMG"
+            end
+        end
+        if s13 == 1 then
+            model = "XM4"
+            if m635 then
+                model = "M635"
+            end
+            if irons then
+                model = "M4 Carbine"
+                if m635 then
+                    model = "9mm SMG"
+                end
+            end
+        end
+        if pap then
+            brand = ""
+            model = "Predator"
+            if irons then
+                model = "Xeno Matter 4000"
+            end
+        end
     end
+
+    return brand .. model
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local Flat = wep.Attachments[1].Installed
     local papcamo = wep:GetBuff_Override("PackAPunch")
-    local Irons = wep.Attachments[16].Installed
-    local Sling = wep.Attachments[17].Installed
-    local camo = wep.Attachments[18].Installed
-    local Wood = wep.Attachments[18].Installed == "bo1_cosmetic_wood"
-    local Tan = wep.Attachments[18].Installed == "bo1_cosmetic_tan"
-    local Green = wep.Attachments[18].Installed == "bo1_cosmetic_odgreen"
+    local irons = wep:GetBuff_Override("AltIrons")
+    local Sling = wep.Attachments[16].Installed
+    local optic = wep.Attachments[2].Installed
+    local camo = 0
+    if wep.Attachments[17].Installed == "bo1_cosmetic_wood" then camo = 4
+    elseif wep.Attachments[17].Installed == "bo1_cosmetic_tan" then camo = 8
+    elseif wep.Attachments[17].Installed == "bo1_cosmetic_odgreen" then camo = 12
+    end
 
-    if Irons and Sling then vm:SetBodygroup(3, 2)
-    elseif Flat and Sling then vm:SetBodygroup(3, 2)
+    if irons and Sling then vm:SetBodygroup(3, 2)
+    elseif irons and optic and Sling then vm:SetBodygroup(3, 2)
     elseif Sling then vm:SetBodygroup(3, 1)
     end
 
-    if papcamo and !camo then
-        vm:SetSkin(2)
-    elseif !papcamo and Wood then
-        vm:SetSkin(4)
-    elseif papcamo and Wood then
-        vm:SetSkin(6)
-    elseif !papcamo and Tan then
-        vm:SetSkin(8)
-    elseif papcamo and Tan then
-        vm:SetSkin(10)
-    elseif !papcamo and Green then
-        vm:SetSkin(12)
-    elseif papcamo and Green then
-        vm:SetSkin(14)
+    if irons then
+        vm:SetBodygroup(2,1)
+        if optic then
+            vm:SetBodygroup(2,2)
+            vm:SetBodygroup(0,1)
+        end
+    end
+
+    for k = camo, camo do
+        vm:SetSkin(k)
+        if papcamo then
+            vm:SetSkin(k + 2)
+        end
     end
 end
 

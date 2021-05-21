@@ -22,10 +22,10 @@ SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_xl60.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-8, 3.5, -4.75),
-    ang        =    Angle(-10, 0, 180),
+    pos        =    Vector(-5, 2.75, -4.25),
+    ang        =    Angle(-7.4, 1.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   1
+    scale   =   1.0
 }
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_xl60.mdl"
 SWEP.ViewModelFOV = 60
@@ -46,9 +46,8 @@ SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
+SWEP.Primary.ClipSize = 20 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 45
-SWEP.ReducedClipSize = 20
 
 SWEP.Recoil = 0.45
 SWEP.RecoilSide = 0.6
@@ -119,8 +118,8 @@ SWEP.IronSightStruct = {
 }
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "smg"
-SWEP.HoldtypeSights = "smg"
+SWEP.HoldtypeActive = "ar2"
+SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
@@ -188,7 +187,7 @@ SWEP.Attachments = {
         Slot = "muzzle",
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(16, 0, 3.15), -- offset that the attachment will be relative to the bone
+            vpos = Vector(14, 0, 2.75), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
     },
@@ -243,14 +242,19 @@ SWEP.Attachments = {
         Slot = {"bo1_fcg"}
     },
     { --8
+        PrintName = "Magazine",
+        Slot = {"bo1_mag", "bo1_extmag"},
+        DefaultAttName = "20rnd 4.85x49mm Mag"
+    },
+    { --9
         PrintName = "Ammo Type",
         Slot = {"ammo_pap"}
     },
-    { --9
+    { --10
         PrintName = "Perk",
         Slot = {"bo1_perk"}
     },
-    { --10
+    { --11
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
@@ -262,7 +266,7 @@ SWEP.Attachments = {
             wang = Angle(-175, -175, 0)
         },
     },
-    {--11
+    {--12
         PrintName = "Cosmetic",
         Slot = "bo1_cosmetic",
         DefaultAttName = "Black Polymer",
@@ -278,9 +282,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")
     local camo = 0
-    if wep.Attachments[11].Installed == "bo1_cosmetic_wood" then camo = 4
-    elseif wep.Attachments[11].Installed == "bo1_cosmetic_odgreen" then camo = 8
-    elseif wep.Attachments[11].Installed == "bo1_cosmetic_tan" then camo = 12
+    if wep.Attachments[12].Installed == "bo1_cosmetic_wood" then camo = 4
+    elseif wep.Attachments[12].Installed == "bo1_cosmetic_odgreen" then camo = 8
+    elseif wep.Attachments[12].Installed == "bo1_cosmetic_tan" then camo = 12
     end
 
     for k = camo, camo do
@@ -291,12 +295,25 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 end
 
+SWEP.Hook_GetCapacity = function(wep, cap)
+    local ext = wep:GetBuff_Override("BO1_ExtMag")
+    local pap = wep:GetBuff_Override("PackAPunch")
+
+    if ext then
+        return 30
+    elseif ext and pap then
+        return 55
+    else return 20 end
+end
+
 SWEP.Hook_TranslateAnimation = function(wep, anim)
 
     local attthing
     if wep:GetBuff_Override("BO1_UBGL") then attthing = 1
     elseif wep:GetBuff_Override("BO1_UBMK") then attthing = 2
     elseif wep:GetBuff_Override("BO1_UBFlamer") then attthing = 3
+    elseif wep:GetBuff_Override("BO1_ExtMag") then attthing = 4
+    elseif wep:GetBuff_Override("BO1_FastMag") then attthing = 5
     end
 
     if anim == "enter_ubgl" then
@@ -341,8 +358,8 @@ SWEP.Animations = {
         Source = "draw",
         Time = 1,
         LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
+        LHIKIn = 0,
+        LHIKOut = 0.5,
     },
     ["holster"] = {
         Source = "holster",
@@ -354,9 +371,6 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "first_draw",
         Time = 1.5,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
         SoundTable = {
             {s = "ArcCW_BO1.AUG_Back", t = 22 / 35},
             {s = "ArcCW_BO1.AUG_Fwd", t = 30 / 35},
@@ -378,9 +392,6 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Framerate = 30,
         Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         SoundTable = {
             {s = "ArcCW_BO1.AUG_MagOut", t = 18 / 35},
             {s = "ArcCW_BO1.AUG_MagIn", t = 58 / 35},
@@ -392,9 +403,6 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Framerate = 30,
         Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         SoundTable = {
             {s = "ArcCW_BO1.AUG_MagOut", t = 18 / 35},
             {s = "ArcCW_BO1.AUG_MagIn", t = 58 / 35},

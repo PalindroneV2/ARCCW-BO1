@@ -8,7 +8,7 @@ att.Desc_Cons = {
 }
 att.AutoStats = true
 att.Slot = "bo1_m203"
-att.GivesFlags = {"m203_already_on"}
+att.GivesFlags = {"ubanims"}
 att.ExcludeFlags = {"kali_barrel_short"}
 att.BO1_UBGL = true
 
