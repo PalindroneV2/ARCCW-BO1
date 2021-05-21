@@ -74,7 +74,7 @@ SWEP.AccuracyMOA = 1 -- accuracy in Minutes of Angle. There are 60 MOA in a degr
 SWEP.HipDispersion = 800 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 50
 
-SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
+SWEP.Primary.Ammo = "SniperPenetratedRound" -- what ammo type the gun uses
 SWEP.MagID = "svd" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 110 -- volume of shoot sound

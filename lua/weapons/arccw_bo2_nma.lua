@@ -75,7 +75,7 @@ SWEP.MoveDispersion = 130
 
 SWEP.ShootWhileSprint = false
 
-SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
+SWEP.Primary.Ammo = "357" -- what ammo type the gun uses
 SWEP.MagID = "makarov" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
