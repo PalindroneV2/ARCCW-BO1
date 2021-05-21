@@ -182,17 +182,12 @@ SWEP.AttachmentElements = {
         },
     },
     ["papname1"] = {
-        TrueNameChange = "Spatz-447+",
-        NameChange = "Spatz-447+",
         NamePriority = 10,
     },
     ["9mm_mag"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
         },
-        TrueNameChange = "MP-44/9",
-        NameChange = "VP-44/9",
-        NamePriority = 1,
     },
 }
 
