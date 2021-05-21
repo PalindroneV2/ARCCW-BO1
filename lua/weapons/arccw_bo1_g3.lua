@@ -383,18 +383,10 @@ SWEP.Hook_NameChange = function(wep, name)
     if barrel == "bo1_barrel_g3_psg1" then length = 1
     elseif barrel == "bo1_barrel_g3_hk33" then legnth = 2
     elseif barrel == "bo1_barrel_g3_hk53" then length = 3
-    elseif barrel == "bo1_barrel_g3_hk21" then
-        hk21 = 1
-        length = 0
-    elseif barrel == "bo1_barrel_g3_psg1hg" then
-        hk21 = 1
-        length = 1
-    elseif barrel == "bo1_barrel_g3_hk33hg" then
-        hk21 = 1
-        length = 2
-    elseif barrel == "bo1_barrel_g3_hk53hg" then
-        hk21 = 1
-        length = 3
+    elseif barrel == "bo1_barrel_g3_hk21" then length = 0
+    elseif barrel == "bo1_barrel_g3_psg1hg" then length = 1
+    elseif barrel == "bo1_barrel_g3_hk33hg" then length = 2
+    elseif barrel == "bo1_barrel_g3_hk53hg" then length = 3
     end
 
     local brand = "HK "
