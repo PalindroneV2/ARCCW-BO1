@@ -7,8 +7,8 @@ SWEP.PrintName = "MP40"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = [[
     "Picture this scene. Europe, World War II. A band of plucky heores captured by the germans, but they've got a cunning plan. Darkness falls and they make their escape. Nazi guards firing fruitlessly into the night and the weapon they're using...
-    \n It's the MP40."
-    \n\n
+    ... It's the MP40."
+
     German submachine gun in 9mm. The weight and slower rate of fire allow for a weapon with very little recoil.
 ]]
 SWEP.Trivia_Manufacturer = "Erma Werke"

@@ -14,12 +14,12 @@ att.Slot = {"optic", "optic_lp"}
 
 att.Model = "models/weapons/arccw/atts/bo2_solo.mdl"
 att.ModelOffset = Vector(0, 0, -0.01)
-att.OffsetAng = Angle(0, 90, 0)
+att.OffsetAng = Angle(0, 0, 0)
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.0125, 7, -1.075),
-        Ang = Angle(0, -90, 0),
+        Pos = Vector(-0.0125, 7, -1.125),
+        Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_NONE,
         IgnoreExtra = false
