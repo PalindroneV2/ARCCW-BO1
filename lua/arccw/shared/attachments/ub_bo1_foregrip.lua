@@ -2,7 +2,7 @@ att.PrintName = "Foregrip (BO1)"
 att.Icon = Material("entities/acwatt_bo1_foregrip.png")
 att.Description = "Vertical foregrip that goes under the weapon's handguard."
 
-att.SortOrder = 98
+att.SortOrder = 97
 
 att.Desc_Pros = {
 }

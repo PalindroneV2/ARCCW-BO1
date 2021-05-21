@@ -11,7 +11,7 @@ att.Desc_Cons = {
     "- Visible glint"
 }
 att.AutoStats = true
-att.Slot = "optic"
+att.Slot = "bo2_m82scope"
 
 att.Model = "models/weapons/arccw/atts/bo2_m82scope.mdl"
 att.ModelOffset = Vector(0, -0.1, 0)

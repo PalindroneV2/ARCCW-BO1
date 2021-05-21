@@ -171,7 +171,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {"optic_sniper", "optic"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic_sniper", "optic", "bo2_m82scope"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(4, 0, 3.8),

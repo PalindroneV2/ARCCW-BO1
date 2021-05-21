@@ -2747,3 +2747,85 @@ sound.Add({
     level = 100,
     sound = "weapons/arccw/fnv_ee/fnv_9mm_fire.ogg"
 })
+
+-- BO1 FLAMER --
+sound.Add( {
+    name = "ArcCW_BO1.Flamer_Loop",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {100},
+    sound = {"weapons/arccw/bo1_flamer/loop.wav"}
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Flamer_Start",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {100},
+    sound = {"weapons/arccw/bo1_flamer/start.wav"}
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Flamer_Stop",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {100},
+    sound = {"weapons/arccw/bo1_flamer/stop.wav"}
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Flamer_Lock",
+    channel = CHAN_ITEM + 1,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {"weapons/arccw/bo1_flamer/lock.wav"}
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Flamer_Pull",
+    channel = CHAN_ITEM + 1,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {"weapons/arccw/bo1_flamer/pull.wav"}
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Flamer_Remove",
+    channel = CHAN_ITEM + 1,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {"weapons/arccw/bo1_flamer/remove.wav"}
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Flamer_Replace",
+    channel = CHAN_ITEM + 1,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {"weapons/arccw/bo1_flamer/replace.wav"}
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Flamer_Drop",
+    channel = CHAN_ITEM + 1,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {"weapons/arccw/bo1_flamer/drop.wav"}
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Flamer_Front",
+    channel = CHAN_ITEM + 1,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {"weapons/arccw/bo1_flamer/flame_front.wav"}
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Flamer_Rear",
+    channel = CHAN_ITEM + 1,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {"weapons/arccw/bo1_flamer/flame_rear.wav"}
+} )
