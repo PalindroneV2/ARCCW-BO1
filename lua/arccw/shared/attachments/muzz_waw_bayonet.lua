@@ -1,0 +1,21 @@
+att.PrintName = "Bayonet (WAW)"
+att.Icon = Material("entities/acwatt_supp_bo1_supp.png")
+att.Description = "Bayonet fixed to the end of your weapon. Slash and stab."
+att.Desc_Pros = {
+}
+att.Desc_Cons = {
+}
+att.AutoStats = true
+
+att.Slot = {"waw_bayonet"}
+
+att.WAW_Bayonet = true
+
+att.SortOrder = 150
+
+att.Mult_Range = 0.99
+att.Mult_SightTime = 1.025
+att.Mult_MeleeDamage = 4
+att.Mult_MeleeTime = 2
+att.Add_MeleeRange = 15
+att.Add_BarrelLength = 7.5

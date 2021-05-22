@@ -4,25 +4,25 @@ SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
 
-SWEP.PrintName = "B23R"
-SWEP.Trivia_Class = "Machine Pistol"
-SWEP.Trivia_Desc = "Heavily modified italian pistol firing 9mm in 3 round bursts, based on the exensively used M93R Beretta."
-SWEP.Trivia_Manufacturer = "Beretta"
-SWEP.Trivia_Calibre = "9x19mm Parabellum"
-SWEP.Trivia_Mechanism = "Short Recoil"
-SWEP.Trivia_Country = "Italy"
-SWEP.Trivia_Year = 2023
+SWEP.PrintName = "FN FiveSeveN"
+SWEP.Trivia_Class = "Pistol"
+SWEP.Trivia_Desc = "Belgian pistol designed in conjunction with the FN P90 platform using the same cartridge. It is incredibly popular with police and military, as well as civilians."
+SWEP.Trivia_Manufacturer = "FN Herstal"
+SWEP.Trivia_Calibre = "5.7x28mm"
+SWEP.Trivia_Mechanism = "Delayed Blowback"
+SWEP.Trivia_Country = "Belgium"
+SWEP.Trivia_Year = 1998
 
 SWEP.Slot = 1
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_bo2_b23r.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_bo2_b23r.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_bo2_fiveseven.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_bo2_fiveseven.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     scale = 1.025,
-    pos        =    Vector(-9.5, 3, -3.5),
+    pos        =    Vector(-9.5, 3, -3.85),
     ang        =    Angle(-6, -2.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -31,10 +31,10 @@ SWEP.ViewModelFOV = 60
 SWEP.Damage = 27
 SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.Range = 75 -- in METRES
-SWEP.Penetration = 3
+SWEP.Penetration = 7
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 250 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 762 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.CanFireUnderwater = true
@@ -44,21 +44,16 @@ SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 15 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 36
+SWEP.Primary.ClipSize = 20 -- DefaultClip is automatically set.
+SWEP.ExtendedClipSize = 35
 
-SWEP.Recoil = 0.3
-SWEP.RecoilSide = 0.3
+SWEP.Recoil = 0.4
+SWEP.RecoilSide = 0.5
 SWEP.RecoilRise = 1
 
-SWEP.Delay = 60 / 937 -- 60 / RPM.
+SWEP.Delay = 60 / 750 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
-    {
-        Mode = -3,
-        RunawayBurst = true,
-        PostBurstDelay = 0.2,
-    },
     {
         Mode = 1
     },
@@ -70,7 +65,7 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_pistol"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 3.25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 2 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 250 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
@@ -82,9 +77,9 @@ SWEP.MagID = "m93r" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO2.B23R_Fire"
+SWEP.ShootSound = "ArcCW_BO2.BHP_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.M1911_Sil"
---SWEP.DistantShootSound = "weapons/arccw/bo1_m1911/1911_ring_00.wav"
+SWEP.DistantShootSound = "weapons/arccw/bo1_m1911/1911_ring_00.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
@@ -100,7 +95,7 @@ SWEP.SightTime = 0.175
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.75
 
-SWEP.BarrelLength = 18
+SWEP.BarrelLength = 14
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
@@ -113,7 +108,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.43, 3, 0.4),
+    Pos = Vector(-2.43, 3, 0.7),
     Ang = Angle(0, -0.075, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
@@ -143,15 +138,9 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
-        NameChange = "B34R",
+        NameChange = "Ultra",
     },
     ["pistol_rail"] = {
-        VMBodygroups = {
-            {ind = 2, bg = 1},
-        },
-    },
-    ["bo1_dual_mag"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
         },
@@ -167,7 +156,7 @@ SWEP.Attachments = {
         Slot = {"optic_lp", "bo1_lp_optic"},
         Bone = "j_bolt",
         Offset = {
-            vpos = Vector(0.75, 0.1, 0.25),
+            vpos = Vector(-1, 0.1, 0.25),
             vang = Angle(0, 0, 0),
         },
         CorrectivePos = Vector(0, 0, 0.0125),
@@ -181,7 +170,7 @@ SWEP.Attachments = {
         VMScale = Vector(1, 1, 1),
         Bone = "tag_Weapon",
         Offset = {
-            vpos = Vector(7.6, 0, 1.1),
+            vpos = Vector(5.775, 0, 1.1),
             vang = Angle(0, 0, 0),
         },
     },
@@ -201,17 +190,12 @@ SWEP.Attachments = {
         Slot = {"tac", "bo1_tacslot"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(5.25, 0, -0.65),
+            vpos = Vector(3.5, 0, 0.3),
             vang = Angle(0, 0, 0),
             wpos = Vector(8.5, 2, -2.9),
             wang = Angle(-5, -2, 177.5)
         },
     },
-    {
-        PrintName = "Magazine",
-        Slot = {"bo1_mag"},
-        DefaultAttName = "Standard 15rnd 9x19mm Mag"
-    },--5
     { --6
         PrintName = "Ammo Type",
         Slot = {"ammo_pap"}
@@ -236,34 +220,9 @@ SWEP.Attachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[6].Installed == "ammo_papunch"
-
+    local papcamo = wep:GetBuff_Override("PackAPunch")
     if papcamo then
-        wep.Firemodes = {
-            {
-                Mode = 2,
-            },
-            {
-                Mode = 1
-            },
-            {
-                Mode = 0
-            }
-        }
         return vm:SetSkin(2)
-    else
-        wep.Firemodes = {
-            {
-                Mode = -3,
-                RunawayBurst = true,
-            },
-            {
-                Mode = 1
-            },
-            {
-                Mode = 0
-            }
-        }
     end
 end
 
@@ -272,22 +231,6 @@ SWEP.Hook_GetShootSound = function(wep, sound)
         return "ArcCW_BO2.M1911_Sil"
     end
 end
-
-SWEP.counter = 0
-/*
-SWEP.Hook_TranslateAnimation = function(wep, anim, data)
-    local eclip = wep:Clip1() == 0
-
-    if eclip then
-        return anim .. "_empty"
-    end
-    local fastmag = wep.Attachments[5].Installed == "ammo_dualmag"
-
-    if fastmag then
-        return anim .. "_fast"
-    else return end
-end
-*/
 
 SWEP.Animations = {
     ["idle"] = {
@@ -301,30 +244,21 @@ SWEP.Animations = {
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 0.5,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["draw"] = {
         Source = "draw",
         Time = 0.5,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["holster"] = {
         Source = "holster",
         Time = 0.5,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
         Time = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
-        LHIKOut = 0.25,
+        LHIKOut = 0.2,
     },
     ["ready"] = {
         Source = "first_draw",
@@ -356,52 +290,27 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 1.5 * 1.25,
+        Time = 1.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.M1911_MagOut", t = 0.25 * 1.25},
-            {s = "ArcCW_BO2.M1911_MagIn", t = 1 * 1.25}
+            {s = "ArcCW_BO2.M1911_MagOut", t = 0.25},
+            {s = "ArcCW_BO2.M1911_MagIn", t = 0.75}
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 2 * 1.25,
+        Time = 2,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.M1911_MagOut", t = 0.25 * 1.25},
-            {s = "ArcCW_BO2.M1911_MagIn", t = 1 * 1.25},
-            {s = "ArcCW_BO2.M1911_SlideFwd", t = 1.5 * 1.25}
-        },
-    },
-    ["reload_fast"] = {
-        Source = "reload_fast",
-        Time = 1.5 * 1.25,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
-        SoundTable = {
-            {s = "ArcCW_BO2.M1911_MagOut", t = 0.25 * 1.25},
-            {s = "ArcCW_BO2.M1911_MagIn", t = 1 * 1.25}
-        },
-    },
-    ["reload_empty_fast"] = {
-        Source = "reload_empty_fast",
-        Time = 2 * 1.25,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
-        SoundTable = {
-            {s = "ArcCW_BO2.M1911_MagOut", t = 0.25 * 1.25},
-            {s = "ArcCW_BO2.M1911_MagIn", t = 1 * 1.25},
-            {s = "ArcCW_BO2.M1911_SlideFwd", t = 1.5 * 1.25}
+            {s = "ArcCW_BO2.M1911_MagOut", t = 0.25},
+            {s = "ArcCW_BO2.M1911_MagIn", t = 0.75},
+            {s = "ArcCW_BO2.M1911_SlideFwd", t = 1.5}
         },
     },
     ["enter_sprint"] = {

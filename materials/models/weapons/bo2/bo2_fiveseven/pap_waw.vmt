@@ -1,0 +1,14 @@
+VertexlitGeneric
+{
+	$basetexture	"models\weapons\pap\pap_blue_burn"
+	$bumpmap	"models\weapons\pap\pap_n"
+	//"$bumpmap" "models/weapons/bo1/bo1_m1911/1911_n"
+
+	$phong                      		1
+	$phongexponent                      "20"
+	$phongboost "0.5"
+	$phongfresnelranges "[0.5 2.5 2.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+}

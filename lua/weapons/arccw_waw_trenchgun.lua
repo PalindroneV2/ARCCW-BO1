@@ -3,20 +3,24 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "KS-23"
+SWEP.PrintName = "M1897 Trenchgun"
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = "Soviet pump-action shotgun designed to be fitted with 23mm barrels originally for aircraft guns that were rejected due to manufacturing flaws."
-SWEP.Trivia_Manufacturer = "Tula Arms"
-SWEP.Trivia_Calibre = "	23×75mmR"
+SWEP.Trivia_Desc = [[
+    American pump-action shotgun that saw extensive mmilitary use in World War 1. During World War 2 it saw reduced service and was eventually replaced by the M37 Ithaca. 
+    
+    It was the first shotgun designed to be slam-fired and inspred the Ithaca design directly.
+]]
+SWEP.Trivia_Manufacturer = "Winchester"
+SWEP.Trivia_Calibre = "12x70mm"
 SWEP.Trivia_Mechanism = "Pump-Action"
-SWEP.Trivia_Country = "USSR"
-SWEP.Trivia_Year = 1971
+SWEP.Trivia_Country = "USA"
+SWEP.Trivia_Year = 1897
 
 SWEP.Slot = 3
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_bo1_ks23.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_waw_trenchgun.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(0.75, 3.25, -4.25),
@@ -24,7 +28,7 @@ SWEP.WorldModelOffset = {
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale   =   1
 }
-SWEP.WorldModel = "models/weapons/arccw/c_bo1_ks23.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_waw_trenchgun.mdl"
 SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
@@ -46,24 +50,24 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 4 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 12
 
-SWEP.Recoil = 2
-SWEP.RecoilSide = 2
-SWEP.MaxRecoilBlowback = 2
+SWEP.Recoil = 1.5
+SWEP.RecoilSide = 1.5
+SWEP.MaxRecoilBlowback = 1.5
 
 SWEP.ShotgunReload = true
 SWEP.ManualAction = true
 
 SWEP.Delay = 60 / 312 -- 60 / RPM.
-SWEP.Num = 4 -- number of shots per trigger pull.
+SWEP.Num = 8 -- number of shots per trigger pull.
 SWEP.RunawayBurst = false
 SWEP.Firemodes = {
     {
-        PrintName = "PUMP",
-        Mode = 1,
+        PrintName = "SLAM-FIRE",
+        Mode = 2,
     },
     {
         Mode = 0
-    },
+    }
 }
 
 SWEP.NPCWeaponType = "weapon_shotgun"
@@ -91,7 +95,7 @@ SWEP.ShellScale = 1.5
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 1
-SWEP.CamAttachment = 4
+SWEP.CamAttachment = 3
 
 SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.75
@@ -105,8 +109,8 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.175, 0, 0.7),
-    Ang = Angle(0.1, 0.05, 0),
+    Pos = Vector(-0.5, -5, 0.25),
+    Ang = Angle(0.5, 0, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -119,14 +123,14 @@ SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 
-SWEP.ActivePos = Vector(1, 3, 0.25)
+SWEP.ActivePos = Vector(1, -5, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(0, 3, 0)
-SWEP.SprintAng = Angle(0, 0, 0)
+SWEP.SprintPos = Vector(12, -7.5, -1)
+SWEP.SprintAng = Angle(-15, 60, 15)
 
-SWEP.CustomizePos = Vector(12.5, 5, -3)
-SWEP.CustomizeAng = Angle(15, 40, 0)
+SWEP.CustomizePos = Vector(18, -5, -3)
+SWEP.CustomizeAng = Angle(15, 40, 12)
 
 SWEP.HolsterPos = Vector(0.532, -6, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -137,18 +141,26 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 SWEP.AttachmentElements = {
     ["papname1"] = {
         NamePriority = 10,
-        NameChange = "Gaubitsa",
+        NameChange = "Gut Shot",
     },
-    ["solid_stock"] = {
-        VMBodygroups = {
-            {ind = 2, bg = 1},
-        }
-    },
-    ["mount"] = {
+    ["waw_bayonet"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
-        }
+        },
     },
+    ["mount"] = {
+        VMElements = {
+            {
+                Model = "models/weapons/arccw/item/bo1_ak_rail.mdl",
+                Bone = "tag_weapon",
+                Scale = Vector(0.5, 0.35, 0.375),
+                Offset = {
+                    pos = Vector(1.5, 0.375, 1.35),
+                    ang = Angle(0, 90, 0),
+                }
+            }
+        },
+    }
 }
 
 SWEP.ExtraSightDist = 5
@@ -161,7 +173,7 @@ SWEP.Attachments = {
         VMScale = Vector(1.25, 1.25, 1.25),
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(-2, 0, 2.4), -- offset that the attachment will be relative to the bone
+            vpos = Vector(1.15, 0, 2.45), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(12.5, 1.3, -7),
             wang = Angle(172.5, 180, 0)
@@ -173,7 +185,7 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = "muzzle_shotgun",
+        Slot = {"muzzle_shotgun", "waw_bayonet"},
         Bone = "tag_weapon",
         VMScale = Vector(1.25, 1.25, 1.25),
         Offset = {
@@ -201,43 +213,43 @@ SWEP.Attachments = {
         },
     }, --4
     {
-        PrintName = "Stock",
-        Slot = "bo1_stock",
-        DefaultAttName = "No Stock",
-        Installed = "bo1_solid_stock"
-    }, --5
-    {
         PrintName = "Ammo Type",
         Slot = {"ammo_pap_pumpsg"},
-    }, --6
+    }, --5
     {
         PrintName = "Perk",
         Slot = "bo1_perk",
-    }, --7
+    }, --6
     {
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(-0.35, -0.65, 0.25), -- offset that the attachment will be relative to the bone
+            vpos = Vector(1.75, -0.55, 1.3), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(7, 1.6, -4),
             wang = Angle(-10, 0, 180)
         },
-    }, --8
-}
-
-SWEP.RejectAttachments = {
-    ["bo1_light_stock"] = true,
+    }, --7
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[6].Installed == "ammo_pap_pumpsg"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then
-        vm:SetSkin(2)
+        vm:SetSkin(1)
+    end
+end
+
+SWEP.MeleeTime = 1
+
+SWEP.Hook_TranslateAnimation = function(wep, anim)
+    local bayo = wep:GetBuff_Override("WAW_Bayonet")
+
+    if anim == "bash" and bayo then
+        return anim .. "_bayo"
     end
 end
 
@@ -252,10 +264,6 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
-        SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 17 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 23 / 30}
-        },
     },
     ["holster"] = {
         Source = "holster",
@@ -265,21 +273,29 @@ SWEP.Animations = {
         LHIKOut = 0.25,
     },
     ["ready"] = {
-        Source = "first_draw",
+        Source = "draw",
         Time = 1,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
-        SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 17 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 23 / 30}
-        },
     },
     ["fire"] = {
         Source = {
             "fire",
         },
         Time = 9 / 35,
+    },
+    ["bash"] = {
+        Source = {
+            "bash",
+        },
+        Time = 35 / 35,
+    },
+    ["bash_bayo"] = {
+        Source = {
+            "bash_2",
+        },
+        Time = 35 / 35,
     },
     ["fire_iron"] = {
         Source = {
@@ -288,116 +304,116 @@ SWEP.Animations = {
         Time = 9 / 35,
     },
     ["reload"] = {
-        Source = "reload_pap",
-        Time = 54 / 30,
+        Source = "reload",
+        Time = 91 / 40,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 21 / 30},
-            {s = "ArcCW_BO1.MK_Back", t = 40 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 44 / 30},
+            {s = "ArcCW_BO1.MK_Shell", t = 40 / 40},
+            {s = "ArcCW_BO1.MK_Back", t = 67 / 40},
+            {s = "ArcCW_BO1.MK_Fwd", t = 71 / 40},
         },
     },
     ["reload_empty"] = {
-        Source = "reload_pap",
-        Time = 54 / 30,
+        Source = "reload",
+        Time = 91 / 40,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 21 / 30},
-            {s = "ArcCW_BO1.MK_Back", t = 40 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 44 / 30},
+            {s = "ArcCW_BO1.MK_Shell", t = 40 / 40},
+            {s = "ArcCW_BO1.MK_Back", t = 67 / 40},
+            {s = "ArcCW_BO1.MK_Fwd", t = 71 / 40},
         },
     },
     ["cycle"] = {
         Source = {
             "pump",
         },
-        Time = 30 / 35,
-        ShellEjectAt = 10 / 35,
+        Time = 27 / 35,
+        ShellEjectAt = 8 / 35,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 10 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 14 / 30},
+            {s = "ArcCW_BO1.MK_Back", t = 8 / 35},
+            {s = "ArcCW_BO1.MK_Fwd", t = 15 / 35},
         },
     },
     ["cycle_iron"] = {
         Source = {
-            "pump_ads",
+            "pump",
         },
-        Time = 20 / 35,
-        ShellEjectAt = 5 / 35,
+        Time = 27 / 35,
+        ShellEjectAt = 8 / 35,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 2 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 9 / 30},
+            {s = "ArcCW_BO1.MK_Back", t = 8 / 35},
+            {s = "ArcCW_BO1.MK_Fwd", t = 15 / 35},
         },
     },
     ["sgreload_start"] = {
-        Source = "reload_in",
-        Time = 15 / 30,
+        Source = "reload_start2",
+        Time = 16 / 40,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0,
     },
     ["sgreload_start_empty"] = {
-        Source = "reload_in_empty",
-        Time = 30 / 30,
+        Source = "reload_start",
+        Time = 55 / 40,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 21 / 30},
+            {s = "ArcCW_BO1.MK_Shell", t = 21 / 40},
         },
     },
     ["sgreload_insert"] = {
         Source = "reload_loop",
-        Time = 16 / 30,
+        Time = 39 / 40,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 10 / 30},
+            {s = "ArcCW_BO1.MK_Shell", t = 20 / 40},
         },
     },
     ["sgreload_finish"] = {
-        Source = "reload_out",
-        Time = 22 / 30,
+        Source = "reload_end",
+        Time = 35 / 40,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 1,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 8 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 12 / 30},
+            {s = "ArcCW_BO1.MK_Back", t = 8 / 40},
+            {s = "ArcCW_BO1.MK_Fwd", t = 12 / 40},
         },
     },
     ["sgreload_finish_empty"] = {
-        Source = "reload_out",
-        Time = 22 / 30,
+        Source = "reload_end",
+        Time = 22 / 40,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 1,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 8 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 12 / 30},
+            {s = "ArcCW_BO1.MK_Back", t = 13 / 40},
+            {s = "ArcCW_BO1.MK_Fwd", t = 16 / 40},
         },
     },
     ["enter_sprint"] = {
-        Source = "sprint_in",
-        Time = 10 / 30
+        Source = "idle",
+        Time = 1 / 35,
     },
     ["idle_sprint"] = {
-        Source = "sprint_loop",
-        Time = 30 / 30
+        Source = "idle",
+        Time = 1 / 35,
     },
     ["exit_sprint"] = {
-        Source = "sprint_out",
-        Time = 10 / 30
+        Source = "idle",
+        Time = 1 / 35,
     },
 }
