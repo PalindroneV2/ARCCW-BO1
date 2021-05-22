@@ -159,6 +159,63 @@ sound.Add( {
     }
 } )
 
+--- XL60 Main ---
+
+sound.Add( {
+    name = "ArcCW_BO1.XL60_Fire",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_xl60/fire1.wav",
+        "weapons/arccw/bo1_xl60/fire2.wav",
+        "weapons/arccw/bo1_xl60/fire3.wav",
+        "weapons/arccw/bo1_xl60/fire4.wav",
+        "weapons/arccw/bo1_xl60/fire5.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.XL60_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_XL60/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.XL60_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_XL60/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.XL60_Bolt",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_XL60/bolt.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.XL60_Futz",
+    channel = CHAN_ITEM + 1,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_XL60/futz.wav",
+    }
+} )
+
 --- FAMAS Main ---
 
 sound.Add( {

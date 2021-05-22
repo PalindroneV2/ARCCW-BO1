@@ -16,7 +16,8 @@ att.SortOrder = 100
 att.Override_Firemodes = {
     {
         Mode = -3,
-        PostBurstDelay = 0.1
+        PostBurstDelay = 0.1,
+        RunawayBurst = true,
     },
     {
         Mode = 1,

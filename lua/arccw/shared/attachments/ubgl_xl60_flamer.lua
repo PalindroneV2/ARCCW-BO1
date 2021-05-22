@@ -35,6 +35,22 @@ local function Ammo(wep)
     return wep.Owner:GetAmmoCount("GaussEnergy")
 end
 
+/*
+local function FlamerShoot(wep,ubgl, ply)
+    if ply:GetOwner():KeyDown(IN_ATTACK) then
+        wep:EmitSound("ArcCW_BO1.Flamer_StartLoop", 20)
+    end
+end
+local function FlamerNot(wep,ubgl,ply)
+    if ply:GetOwner():KeyReleased(IN_ATTACK) then
+        wep:StopSound("ArcCW_BO1.Flamer_StartLoop")
+        wep:EmitSound("ArcCW_BO1.Flamer_Stop", 20)
+    end
+end
+hook.Add("Think", "FlamerFire", FlamerShoot)
+hook.Add("Think", "FlamerStop", FlamerNot)
+*/
+
 att.Hook_ShouldNotSight = function(wep)
     if wep:GetInUBGL() then return true end
 end
@@ -60,18 +76,20 @@ att.UBGL_Fire = function(wep, ubgl, ply)
 
     wep:FireRocket("arccw_bo1_flames", 50)
 
-    if wep:GetOwner(ply):KeyDown(IN_ATTACK) then
-        wep:EmitSound("ArcCW_BO1.Flamer_StartLoop", 20)
-    end
+    /*
+    hook.Call("FlamerFire")
+
+    hook.Call("FlamerStop")
+    */
 
     wep:SetClip2(wep:Clip2() - 1)
 
     wep:DoEffects()
 
-    if wep:GetOwner(ply):KeyReleased(IN_ATTACK) then
+    /*if ply:GetOwner():KeyReleased(IN_ATTACK) then
         wep:StopSound("ArcCW_BO1.Flamer_StartLoop")
         wep:EmitSound("ArcCW_BO1.Flamer_Stop", 20)
-    end
+    end*/
 end
 
 att.UBGL_Reload = function(wep, ubgl)

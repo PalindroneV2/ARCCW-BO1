@@ -76,14 +76,14 @@ SWEP.HipDispersion = 575 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
 SWEP.Primary.Ammo = "smg1" -- what ammo type the gun uses
-SWEP.MagID = "auga1" -- the magazine pool this gun draws from
+SWEP.MagID = "XL60a1" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO1.AUG_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO1.AUG_Sil"
-SWEP.DistantShootSound = {"weapons/arccw/bo1_aug/ringoff_f.wav", "weapons/arccw/bo1_aug/ringoff_r.wav"}
+SWEP.ShootSound = "ArcCW_BO1.XL60_Fire"
+SWEP.ShootSoundSilenced = "ArcCW_BO1.XL60_Sil"
+SWEP.DistantShootSound = {"weapons/arccw/bo1_XL60/ringoff_f.wav", "weapons/arccw/bo1_XL60/ringoff_r.wav"}
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_762nato.mdl"
@@ -129,8 +129,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(13, 3, -4.5)
-SWEP.CustomizeAng = Angle(15, 40, 0)
+SWEP.CustomizePos = Vector(15, 5, -3)
+SWEP.CustomizeAng = Angle(15, 40, 10)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -193,7 +193,7 @@ SWEP.Attachments = {
     },
     { --3
         PrintName = "Underbarrel",
-        Slot = {"ubgl", "bo1_m203", "bo1_mk", "bo1_flamer"},
+        Slot = {"ubgl", "bo1_m203", "bo1_mk",}, --"bo1_flamer" currently sounds dont work on the flamer
         Bone = "tag_weapon",
         VMScale = Vector(1, 1, 1),
         WMScale = Vector(1, 1, 1),
@@ -239,7 +239,8 @@ SWEP.Attachments = {
     },
     { --7
         PrintName = "FCG",
-        Slot = {"bo1_fcg"}
+        Slot = {"bo1_fcg"},
+        Installed = "bo1_fcg_famas_s13"
     },
     { --8
         PrintName = "Magazine",
@@ -277,6 +278,12 @@ SWEP.Attachments = {
 SWEP.RejectAttachments = {
     ["bo1_cosmetic_black"] = true,
 }
+
+SWEP.Hook_NameChange = function(wep, name)
+    local pap = wep:GetBuff_Override("PackAPunch")
+
+    if pap then return "XL115 Eviscerator" end
+end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
@@ -372,8 +379,8 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 1.5,
         SoundTable = {
-            {s = "ArcCW_BO1.AUG_Back", t = 22 / 35},
-            {s = "ArcCW_BO1.AUG_Fwd", t = 30 / 35},
+            {s = "ArcCW_BO1.XL60_Bolt", t = 22 / 35},
+            --{s = "ArcCW_BO1.XL60_Fwd", t = 30 / 35},
         },
     },
     ["fire"] = {
@@ -393,8 +400,9 @@ SWEP.Animations = {
         Framerate = 30,
         Checkpoints = {28, 38, 69},
         SoundTable = {
-            {s = "ArcCW_BO1.AUG_MagOut", t = 18 / 35},
-            {s = "ArcCW_BO1.AUG_MagIn", t = 58 / 35},
+            {s = "ArcCW_BO1.XL60_MagOut", t = 18 / 35},
+            {s = "ArcCW_BO1.XL60_Futz", t = 50 / 35},
+            {s = "ArcCW_BO1.XL60_MagIn", t = 58 / 35},
         },
     },
     ["reload_empty"] = {
@@ -404,10 +412,11 @@ SWEP.Animations = {
         Framerate = 30,
         Checkpoints = {28, 38, 69},
         SoundTable = {
-            {s = "ArcCW_BO1.AUG_MagOut", t = 18 / 35},
-            {s = "ArcCW_BO1.AUG_MagIn", t = 58 / 35},
-            {s = "ArcCW_BO1.AUG_Back", t = 72 / 35},
-            {s = "ArcCW_BO1.AUG_Fwd", t = 80 / 35},
+            {s = "ArcCW_BO1.XL60_MagOut", t = 18 / 35},
+            {s = "ArcCW_BO1.XL60_Futz", t = 50 / 35},
+            {s = "ArcCW_BO1.XL60_MagIn", t = 58 / 35},
+            {s = "ArcCW_BO1.XL60_Bolt", t = 72 / 35},
+            --{s = "ArcCW_BO1.XL60_Fwd", t = 80 / 35},
         },
     },
     ["enter_sprint"] = {
@@ -449,8 +458,8 @@ SWEP.Animations = {
         LHIKIn = 0.25,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.AUG_Back", t = 22 / 35},
-            {s = "ArcCW_BO1.AUG_Fwd", t = 30 / 35},
+            {s = "ArcCW_BO1.XL60_Bolt", t = 22 / 35},
+            --{s = "ArcCW_BO1.XL60_Fwd", t = 30 / 35},
         },
     },
     ["fire_m203"] = {
@@ -473,8 +482,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.AUG_MagOut", t = 18 / 35},
-            {s = "ArcCW_BO1.AUG_MagIn", t = 58 / 35}
+            {s = "ArcCW_BO1.XL60_MagOut", t = 18 / 35},
+            {s = "ArcCW_BO1.XL60_Futz", t = 50 / 35},
+            {s = "ArcCW_BO1.XL60_MagIn", t = 58 / 35},
         },
     },
     ["reload_empty_m203"] = {
@@ -487,10 +497,11 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.AUG_MagOut", t = 18 / 35},
-            {s = "ArcCW_BO1.AUG_MagIn", t = 58 / 35},
-            {s = "ArcCW_BO1.AUG_Back", t = 72 / 35},
-            {s = "ArcCW_BO1.AUG_Fwd", t = 80 / 35},
+            {s = "ArcCW_BO1.XL60_MagOut", t = 18 / 35},
+            {s = "ArcCW_BO1.XL60_Futz", t = 50 / 35},
+            {s = "ArcCW_BO1.XL60_MagIn", t = 58 / 35},
+            {s = "ArcCW_BO1.XL60_Bolt", t = 72 / 35},
+            --{s = "ArcCW_BO1.XL60_Fwd", t = 80 / 35},
         },
     },
     ["enter_sprint_m203"] = {
@@ -586,8 +597,8 @@ SWEP.Animations = {
         LHIKIn = 0.25,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.AUG_Back", t = 22 / 35},
-            {s = "ArcCW_BO1.AUG_Fwd", t = 30 / 35},
+            {s = "ArcCW_BO1.XL60_Bolt", t = 22 / 35},
+            --{s = "ArcCW_BO1.XL60_Fwd", t = 30 / 35},
         },
     },
     ["fire_ft"] = {
@@ -610,8 +621,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.AUG_MagOut", t = 18 / 35},
-            {s = "ArcCW_BO1.AUG_MagIn", t = 58 / 35}
+            {s = "ArcCW_BO1.XL60_MagOut", t = 18 / 35},
+            {s = "ArcCW_BO1.XL60_Futz", t = 50 / 35},
+            {s = "ArcCW_BO1.XL60_MagIn", t = 58 / 35},
         },
     },
     ["reload_empty_ft"] = {
@@ -624,10 +636,11 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.AUG_MagOut", t = 18 / 35},
-            {s = "ArcCW_BO1.AUG_MagIn", t = 58 / 35},
-            {s = "ArcCW_BO1.AUG_Back", t = 72 / 35},
-            {s = "ArcCW_BO1.AUG_Fwd", t = 80 / 35},
+            {s = "ArcCW_BO1.XL60_MagOut", t = 18 / 35},
+            {s = "ArcCW_BO1.XL60_Futz", t = 50 / 35},
+            {s = "ArcCW_BO1.XL60_MagIn", t = 58 / 35},
+            {s = "ArcCW_BO1.XL60_Bolt", t = 72 / 35},
+            --{s = "ArcCW_BO1.XL60_Fwd", t = 80 / 35},
         },
     },
     ["enter_sprint_ft"] = {
@@ -724,8 +737,8 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.AUG_Back", t = 22 / 35},
-            {s = "ArcCW_BO1.AUG_Fwd", t = 30 / 35},
+            {s = "ArcCW_BO1.XL60_Bolt", t = 22 / 35},
+            --{s = "ArcCW_BO1.XL60_Fwd", t = 30 / 35},
         },
     },
     ["fire_mk"] = {
@@ -748,8 +761,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.AUG_MagOut", t = 18 / 35},
-            {s = "ArcCW_BO1.AUG_MagIn", t = 58 / 35}
+            {s = "ArcCW_BO1.XL60_MagOut", t = 18 / 35},
+            {s = "ArcCW_BO1.XL60_Futz", t = 50 / 35},
+            {s = "ArcCW_BO1.XL60_MagIn", t = 58 / 35},
         },
     },
     ["reload_empty_mk"] = {
@@ -762,10 +776,11 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.AUG_MagOut", t = 18 / 35},
-            {s = "ArcCW_BO1.AUG_MagIn", t = 58 / 35},
-            {s = "ArcCW_BO1.AUG_Back", t = 72 / 35},
-            {s = "ArcCW_BO1.AUG_Fwd", t = 80 / 35},
+            {s = "ArcCW_BO1.XL60_MagOut", t = 18 / 35},
+            {s = "ArcCW_BO1.XL60_Futz", t = 50 / 35},
+            {s = "ArcCW_BO1.XL60_MagIn", t = 58 / 35},
+            {s = "ArcCW_BO1.XL60_Bolt", t = 72 / 35},
+            --{s = "ArcCW_BO1.XL60_Fwd", t = 80 / 35},
         },
     },
     ["enter_sprint_mk"] = {
@@ -806,7 +821,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
         TPAnimStartTime = 0,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 5 / 30 },
+            {s = "ArcCW_BO1.MK_Bolt", t = 5 / 30 },
             {s = "ArcCW_BO1.MK_Fwd", t = 10 / 30 },
         }
     },
@@ -834,7 +849,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.1,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 20 / 30 },
+            {s = "ArcCW_BO1.MK_Bolt", t = 20 / 30 },
             {s = "ArcCW_BO1.MK_Fwd", t = 25 / 30 },
         }
     },
