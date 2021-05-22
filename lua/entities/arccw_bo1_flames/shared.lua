@@ -11,6 +11,7 @@ ENT.FuseTime = 0.11
 ENT.ArmTime = 0
 ENT.FireTime = 0.1
 ENT.ImpactFuse = false
+ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 
 ENT.Armed = false
 
@@ -82,17 +83,17 @@ function ENT:Think()
     end
     if SERVER then
         local phys = self:GetPhysicsObject()
-        phys:SetVelocity( self:GetAngles():Forward() * 1200 )
+        phys:SetVelocity( self:GetAngles():Forward() * 1000 )
     end
         if SERVER then
             if self.NextDamageTick > CurTime() then return end
 
             local dmg = DamageInfo()
             dmg:SetDamageType(DMG_BURN)
-            dmg:SetDamage(9)
+            dmg:SetDamage(5)
             dmg:SetInflictor(self)
             dmg:SetAttacker(self.Owner)
-            util.BlastDamageInfo(dmg, self:GetPos(), 60)
+            util.BlastDamageInfo(dmg, self:GetPos(), 15)
             
             self.NextDamageTick = CurTime() + 0.01
 

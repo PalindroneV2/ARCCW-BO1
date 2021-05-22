@@ -44,7 +44,7 @@ att.UBGL_NPCFire = function(wep, ubgl)
 
     wep:PlayAnimation("fire_flamer")
 
-    wep:FireRocket("arccw_bo1_flames", 30000)
+    wep:FireRocket("arccw_bo1_flames", 50)
 
     wep:EmitSound("ArcCW_BO1.Flamer_Start", 100)
 
@@ -53,18 +53,25 @@ att.UBGL_NPCFire = function(wep, ubgl)
     wep:DoEffects()
 end
 
-att.UBGL_Fire = function(wep, ubgl)
+att.UBGL_Fire = function(wep, ubgl, ply)
     if wep:Clip2() <= 0 then return end
 
     wep:PlayAnimation("fire_flamer")
 
-    wep:FireRocket("arccw_bo1_flames", 30000)
+    wep:FireRocket("arccw_bo1_flames", 50)
 
-    wep:EmitSound("ArcCW_BO1.Flamer_Start", 100)
+    if wep:GetOwner(ply):KeyDown(IN_ATTACK) then
+        wep:EmitSound("ArcCW_BO1.Flamer_StartLoop", 20)
+    end
 
     wep:SetClip2(wep:Clip2() - 1)
 
     wep:DoEffects()
+
+    if wep:GetOwner(ply):KeyReleased(IN_ATTACK) then
+        wep:StopSound("ArcCW_BO1.Flamer_StartLoop")
+        wep:EmitSound("ArcCW_BO1.Flamer_Stop", 20)
+    end
 end
 
 att.UBGL_Reload = function(wep, ubgl)

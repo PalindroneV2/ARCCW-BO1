@@ -169,7 +169,7 @@ SWEP.Attachments = {
     { --1
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = "optic", -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(-1, -0.025, 3.775), -- 4.6 offset that the attachment will be relative to the bone
@@ -681,7 +681,7 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.Flamer_Remove", t = 1},
             {s = "ArcCW_BO1.Flamer_Drop", t = 1.25},
             {s = "ArcCW_BO1.Flamer_Replace", t = 1.75},
-            {s = "ArcCW_BO1.Flamer_Lock", t = 2.25},
+            {s = "ArcCW_BO1.Flamer_Lock", t = 2.4},
         }
     },
     ["enter_sprint_flamer"] = {

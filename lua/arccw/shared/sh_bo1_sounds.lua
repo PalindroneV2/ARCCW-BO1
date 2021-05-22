@@ -2751,7 +2751,7 @@ sound.Add({
 -- BO1 FLAMER --
 sound.Add( {
     name = "ArcCW_BO1.Flamer_Loop",
-    channel = CHAN_WEAPON + 5,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     pitch = {100},
@@ -2759,7 +2759,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_BO1.Flamer_Start",
-    channel = CHAN_WEAPON + 5,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     pitch = {100},
@@ -2772,6 +2772,14 @@ sound.Add( {
     level = 100,
     pitch = {100},
     sound = {"weapons/arccw/bo1_flamer/stop.wav"}
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Flamer_StartLoop",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    pitch = {100},
+    sound = {"weapons/arccw/bo1_flamer/startloop.wav"}
 } )
 sound.Add( {
     name = "ArcCW_BO1.Flamer_Lock",

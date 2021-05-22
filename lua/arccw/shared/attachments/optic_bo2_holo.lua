@@ -10,7 +10,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = {"optic", "optic_lp"}
+att.Slot = {"optic",}
 
 att.Model = "models/weapons/arccw/atts/bo2_holo.mdl"
 att.ModelOffset = Vector(0, 0, -0.01)
@@ -18,7 +18,7 @@ att.OffsetAng = Angle(0, 0, 0)
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.0125, 7, -1.325),
+        Pos = Vector(-0.0125, 10, -1.325),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_NONE,
@@ -27,10 +27,10 @@ att.AdditionalSights = {
 }
 
 att.Holosight = true
-att.HolosightReticle = Material("hud/reticles/reddot.png", "mips smooth")
-att.HolosightSize = 0.25
+att.HolosightReticle = Material("hud/reticles/bo2_holo.png", "mips smooth")
+att.HolosightSize = 1.1
 att.HolosightBone = "holosight"
-att.HolosightNoFlare = false
+att.HolosightNoFlare = true
 
 att.Mult_SightTime = 1.01
 
