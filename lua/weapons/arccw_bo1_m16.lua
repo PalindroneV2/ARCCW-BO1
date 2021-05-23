@@ -356,19 +356,19 @@ SWEP.Hook_NameChange = function(wep, name)
             alt = "A1-E1"
             if irons then
                 alt = "A3"
+                if s13 == 1 then
+                    alt = "A4"
+                end
             end
             if s13 == 1 then
                 alt = "A2"
             end
-            if m16a4 then
-                alt = "A4"
-            end
         end
         if irons then
             alt = "A3"
-        end
-        if m16a4 then
-            alt = "A4"
+            if s13 == 1 then
+                alt = "A4"
+            end
         end
         if pap then
             model = "Skull"

@@ -183,7 +183,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [2] = {
-                vpos = Vector(3, 0, 3.625),
+                vpos = Vector(2.5, 0, 3.625),
             }
         },
     },
@@ -229,13 +229,10 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(3.5, 0, 4.85), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(5.5, 0.85, -6.5),
-            wang = Angle(172.5, 181.75, 0)
         },
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0.5, 0, 0),
-        MergeSlots = {16}
     }, --2
     {
         PrintName = "Muzzle",
@@ -380,7 +377,7 @@ SWEP.Hook_NameChange = function(wep, name)
             model = "M635"
         end
         if irons then
-            model = "M4 Carbine"
+            model = "M4A1"
             if m635 then
                 model = "9mm SMG"
             end

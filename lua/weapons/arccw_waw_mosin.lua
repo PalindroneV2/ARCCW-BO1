@@ -20,7 +20,7 @@ SWEP.ViewModel = "models/weapons/arccw/c_waw_mosin.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_waw_mosin.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-6.5, 0.5, -3),
+    pos        =    Vector(-6.5, 2, -5),
     ang        =    Angle(-15, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale   =   1
@@ -130,8 +130,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(10, 0, -2)
 SWEP.SprintAng = Angle(-7.036, 45.016, 0)
 
-SWEP.CustomizePos = Vector(17, -3, -4.5)
-SWEP.CustomizeAng = Angle(15, 40, 0)
+SWEP.CustomizePos = Vector(15, -1, -4)
+SWEP.CustomizeAng = Angle(15, 40, 15)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -161,7 +161,17 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 2, bg = 2}
         }
-    }
+    },
+    ["waw_bayonet"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 1},
+        },
+    },
+    ["waw_rus_scope"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 2},
+        },
+    },
 }
 
 SWEP.Attachments = {
@@ -184,10 +194,10 @@ SWEP.Attachments = {
     { --2
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle", "waw_rifgren"},
+        Slot = {"muzzle", "waw_rifgren", "waw_bayonet"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(26.1, 0, 1.5), -- offset that the attachment will be relative to the bone
+            vpos = Vector(26.1, 0, 1), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(0, 0, 0),
             wang = Angle(0, 0, 0)
@@ -279,6 +289,10 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     local snipe = 0
     if wep.Attachments[9].Installed == "optic_waw_mosin" then snipe = 1 end
 
+    if wep.Attachments[2].Installed == "muzz_waw_bayonet" and anim == "bash" then
+        return "bash_bayo"
+    end
+
     if snipe == 1 then
         wep.ActivePos = Vector(0.5, 1, -2)
         wep.ActiveAng = Angle(0, 0, 0)
@@ -319,10 +333,6 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.25,
         LHIKOut = 0.25,
-        SoundTable = {
-            {s = "ArcCW_WAW.Garand_Pull", t = 21 / 30},
-            {s = "ArcCW_WAW.Garand_Close", t = 36 / 30}
-        },
     },
     ["fire"] = {
         Source = {"fire"},
@@ -330,8 +340,14 @@ SWEP.Animations = {
     },
     ["cycle"] = {
         Source = {"cycle"},
-        Time = 25 / 30,
+        Time = 28 / 30,
         ShellEjectAt = 10 / 30,
+        SoundTable = {
+            {s = "ArcCW_WAW.Mosin_Up", t = 5 / 30},
+            {s = "ArcCW_WAW.Mosin_Back", t = 10 / 30},
+            {s = "ArcCW_WAW.Mosin_Back", t = 20 / 30},
+            {s = "ArcCW_WAW.Mosin_Up", t = 22 / 30},
+        },
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
@@ -339,25 +355,30 @@ SWEP.Animations = {
     },
     ["cycle_ads"] = {
         Source = {"cycle_ads"},
-        Time = 25 / 30,
+        Time = 28 / 30,
         ShellEjectAt = 10 / 30,
+        SoundTable = {
+            {s = "ArcCW_WAW.Mosin_Up", t = 5 / 30},
+            {s = "ArcCW_WAW.Mosin_Back", t = 10 / 30},
+            {s = "ArcCW_WAW.Mosin_Back", t = 20 / 30},
+            {s = "ArcCW_WAW.Mosin_Up", t = 22 / 30},
+        },
     },
     ["reload"] = {
         Source = "reload",
-        Time = 105 / 30,
+        Time = 2.366 * 1.25,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 37,
-        Checkpoints = {28, 38, 69},
+        Framerate = 30,
         LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
+        LHIKIn = 0,
+        LHIKOut = 4,
         SoundTable = {
-            {s = "ArcCW_WAW.Garand_Pull", t = 16 / 30},
-            {s = "ArcCW_WAW.Garand_Out", t = 23 / 30},
-            {s = "ArcCW_WAW.Garand_Close", t = 32 / 30},
-            {s = "ArcCW_WAW.Garand_Pull", t = 68 / 30},
-            {s = "ArcCW_WAW.Garand_In", t = 77 / 30},
-            {s = "ArcCW_WAW.Garand_Close", t = 85 / 30},
+            {s = "ArcCW_WAW.Mosin_Up", t = 0.15 * 1.25},
+            {s = "ArcCW_WAW.Mosin_Back", t = 0.3 * 1.25},
+            {s = "ArcCW_WAW.Mosin_Rechamber", t = 0.5 * 1.25},
+            {s = "ArcCW_WAW.Mosin_Back", t = 1.67 * 1.25},
+            {s = "ArcCW_WAW.Mosin_Eject", t = 1.69 * 1.25},
+            {s = "ArcCW_WAW.Mosin_Up", t = 1.71 * 1.25},
         },
     },
 
@@ -381,24 +402,25 @@ SWEP.Animations = {
     },
     ["ready_snipe"] = {
         Source = "first_draw_snipe",
-        Time = 64 / 30,
+        Time = 31 / 30,
         LHIK = true,
         LHIKIn = 0.25,
         LHIKOut = 0.25,
-        SoundTable = {
-            {s = "ArcCW_WAW.Garand_Pull", t = 21 / 30},
-            {s = "ArcCW_WAW.Garand_Close", t = 36 / 30}
-        },
     },
     ["fire_snipe"] = {
         Source = {"fire_snipe"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
     },
     ["cycle_snipe"] = {
         Source = {"cycle_snipe"},
-        Time = 25 / 30,
-        ShellEjectAt = 3 / 30,
+        Time = 30 / 30,
+        ShellEjectAt = 10 / 30,
+        SoundTable = {
+            {s = "ArcCW_WAW.Mosin_Up", t = 5 / 30},
+            {s = "ArcCW_WAW.Mosin_Back", t = 10 / 30},
+            {s = "ArcCW_WAW.Mosin_Back", t = 20 / 30},
+            {s = "ArcCW_WAW.Mosin_Up", t = 25 / 30},
+        },
     },
     ["fire_iron_snipe"] = {
         Source = {"fire_snipe"},
@@ -411,13 +433,18 @@ SWEP.Animations = {
     },
     ["sgreload_start"] = {
         Source = "reload_in",
-        Time = 40 / 30,
+        Time = 60 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
         LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0,
+        LHIKIn = 0,
+        LHIKOut = 4,
         MinProgress = 0.6,
+        SoundTable = {
+            {s = "ArcCW_WAW.Mosin_Up", t = 5 / 30},
+            {s = "ArcCW_WAW.Mosin_Back", t = 10 / 30},
+            {s = "ArcCW_WAW.Mosin_Bullet", t = 30 / 30},
+        },
     },
     ["sgreload_insert"] = {
         Source = "reload_loop",
@@ -426,22 +453,48 @@ SWEP.Animations = {
         TPAnimStartTime = 0.3,
         LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 0,
+        LHIKOut = 4,
         MinProgress = 1,
+        SoundTable = {
+            {s = "ArcCW_WAW.Mosin_Bullet", t = 7 / 30},
+        }
     },
     ["sgreload_finish"] = {
         Source = "reload_out",
-        Time = 30 / 30,
+        Time = 26 / 30,
         LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 0.8,
+        LHIKOut = 4,
+        SoundTable = {
+            {s = "ArcCW_WAW.Mosin_Fwd", t = 5 / 30},
+            {s = "ArcCW_WAW.Mosin_Up", t = 10 / 30},
+        },
     },
     ["sgreload_finish_empty"] = {
         Source = "reload_out",
+        Time = 26 / 30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 4,
+        SoundTable = {
+            {s = "ArcCW_WAW.Mosin_Fwd", t = 5 / 30},
+            {s = "ArcCW_WAW.Mosin_Up", t = 10 / 30},
+        },
+    },
+
+    ["bash"] = {
+        Source = "swipe",
         Time = 30 / 30,
         LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 0.8,
+        LHIKOut = 4,
+    },
+    ["bash_bayo"] = {
+        Source = "stab",
+        Time = 30 / 30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 4,
     },
 
     -- M7 GRENADE LAUNCHER --

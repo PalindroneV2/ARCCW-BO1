@@ -748,6 +748,63 @@ sound.Add( {
     }
 } )
 
+-- MOSIN Main --
+
+sound.Add( {
+    name = "ArcCW_WAW.Mosin_Up",
+    channel = CHAN_ITEM + 4,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/waw_mosin/up.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Mosin_Back",
+    channel = CHAN_ITEM + 4,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/waw_mosin/back.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Mosin_Fwd",
+    channel = CHAN_ITEM + 4,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/waw_mosin/fwd.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Mosin_Rechamber",
+    channel = CHAN_ITEM + 2,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/waw_mosin/rechamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Mosin_Eject",
+    channel = CHAN_ITEM + 1,
+    volume = 0.5,
+    level = 20,
+    sound = {
+        "weapons/arccw/waw_mosin/eject.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Mosin_Bullet",
+    channel = CHAN_ITEM + 4,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/waw_mosin/bullet.wav",
+    }
+} )
+
 -- M27 Main --
 
 sound.Add( {
@@ -2455,7 +2512,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_BO1.MK_Shell",
-    channel = CHAN_ITEM,
+    channel = CHAN_ITEM + 6,
     volume = 1.0,
     level = 100,
     pitch = {95, 110},

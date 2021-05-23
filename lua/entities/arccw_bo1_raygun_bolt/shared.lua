@@ -8,7 +8,7 @@ ENT.Spawnable = false
 ENT.AdminSpawnable = false
 
 ENT.Damage = 1500
-ENT.Radius = 35
+ENT.Radius = 50
 ENT.Ticks = 0
 ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 

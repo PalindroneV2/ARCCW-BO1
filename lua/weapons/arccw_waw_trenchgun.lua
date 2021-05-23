@@ -23,8 +23,8 @@ SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/arccw/c_waw_trenchgun.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(0.75, 3.25, -4.25),
-    ang        =    Angle(-12.5, 0, 180),
+    pos        =    Vector(-7, 1, -4),
+    ang        =    Angle(-9, -0.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale   =   1
 }
@@ -119,11 +119,11 @@ SWEP.IronSightStruct = {
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "shotgun"
-SWEP.HoldtypeSights = "ar2"
+SWEP.HoldtypeSights = "shotgun"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 
-SWEP.ActivePos = Vector(1, -5, 0.5)
+SWEP.ActivePos = Vector(2, -6, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.SprintPos = Vector(12, -7.5, -1)
@@ -187,9 +187,9 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle_shotgun", "waw_bayonet"},
         Bone = "tag_weapon",
-        VMScale = Vector(1.25, 1.25, 1.25),
+        VMScale = Vector(2, 1.4, 1.4),
         Offset = {
-            vpos = Vector(22, 0, 1.4), -- offset that the attachment will be relative to the bone
+            vpos = Vector(27.5, 0, 1.6), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
     }, --2

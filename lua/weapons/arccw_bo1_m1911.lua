@@ -6,7 +6,12 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Colt M1911A1"
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = "One of the first semi-automatic pistols, this design is a staple and has been in service with military, police and civilians for over 100 years. For John made the 1911, and lo all of his weapons, from the designs which I, the Lord, gave him upon the mountain."
+SWEP.Trivia_Desc = [[
+    This handgun is a staple of firearm design. It would influence many future semi-automatic handguns.
+    The M1911 has been in service with military forces, law enforcement agencies and civilians for over 100 years.
+    
+    The pistol that forgot to become obsolete.
+]]
 SWEP.Trivia_Manufacturer = "Colt"
 SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Short Recoil"
