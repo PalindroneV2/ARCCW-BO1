@@ -303,6 +303,10 @@ SWEP.Attachments = {
     }, --13
 }
 
+SWEP.RejectAttachments = {
+    ["bo1_cosmetic_tan"] = true,
+}
+
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep.Attachments[10].Installed == "ammo_papunch"
 

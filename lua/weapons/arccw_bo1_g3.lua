@@ -472,6 +472,7 @@ end
 
 SWEP.RejectAttachments = {
     ["bo1_barrel_g3_hk33"] = true,
+    ["bo1_cosmetic_black"] = true,
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
