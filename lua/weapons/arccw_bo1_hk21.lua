@@ -317,29 +317,23 @@ end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[10].Installed == "ammo_papunch"
-    local wood = wep.Attachments[13].Installed == "bo1_cosmetic_wood"
-    local odgreen = wep.Attachments[13].Installed == "bo1_cosmetic_odgreen"
-    local cblack = wep.Attachments[13].Installed == "bo1_cosmetic_black"
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local camo = 0
+    if wep.Attachments[13].Installed == "bo1_cosmetic_black" then camo = 4
+    elseif wep.Attachments[13].Installed == "bo1_cosmetic_wood" then camo = 8
+    elseif wep.Attachments[13].Installed == "bo1_cosmetic_odgreen" then camo = 12
+    end
+
+    for k = camo, camo do
+        vm:SetSkin(k)
+        if pap then
+            vm:SetSkin(k + 2)
+        end
+    end
+
     local scope = wep.Attachments[1].Installed == "optic_bo1_psg1"
 
     if scope then vm:SetBodygroup(2, 2) end
-
-    if papcamo then
-        return vm:SetSkin(2)
-    elseif !papcamo and cblack then
-        return vm:SetSkin(4)
-    elseif !papcamo and wood then
-        return vm:SetSkin(8)
-    elseif !papcamo and odgreen then
-        return vm:SetSkin(12)
-    elseif papcamo and cblack then
-        return vm:SetSkin(6)
-    elseif papcamo and wood then
-        return vm:SetSkin(10)
-    elseif papcamo and odgreen then
-        return vm:SetSkin(14)
-    end
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)

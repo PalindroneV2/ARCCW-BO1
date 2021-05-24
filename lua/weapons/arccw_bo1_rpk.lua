@@ -171,8 +171,19 @@ SWEP.AttachmentElements = {
     },
     ["cobrakai"] = {
         VMBodygroups = {
+            {ind = 2, bg = 3}
+        },
+    },
+    ["bo2_altirons"] = {
+        VMBodygroups = {
             {ind = 2, bg = 2}
         },
+        Override_IronSightStruct = {
+            Pos = Vector(-2.135, -3, 0.6),
+            Ang = Angle(0.1, 0.125, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
+        }
     },
     ["bo1_bipod"] = {
         VMBodygroups = {
@@ -187,7 +198,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {"optic", "optic_lp", "optic_sniper"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic", "optic_lp", "optic_sniper", "bo2_altirons"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(1.15, 0, 3.225), -- 4.6 offset that the attachment will be relative to the bone

@@ -341,7 +341,6 @@ SWEP.Hook_NameChange = function(wep, name)
     elseif wep.Attachments[10].Installed == "bo1_fcg_s16" then s13 = 1
     end
     local irons = wep.Attachments[1].Installed
-    local m16a4 = irons and s13
     local hand = 0
     if wep.Attachments[4].Installed == "m16_hand_a2" then hand = 1
     elseif wep.Attachments[4].Installed == "m16_hand_a4" then hand = 1
