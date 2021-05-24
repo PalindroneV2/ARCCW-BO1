@@ -1,6 +1,6 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
+SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "M1 Garand"
@@ -153,9 +153,14 @@ SWEP.AttachmentElements = {
     },
     ["waw_rifgren"] = {
         VMBodygroups = {
+            {ind = 2, bg = 2}
+        }
+    },
+    ["waw_bayonet"] = {
+        VMBodygroups = {
             {ind = 2, bg = 1}
         }
-    }
+    },
 }
 
 SWEP.Attachments = {
@@ -177,7 +182,7 @@ SWEP.Attachments = {
     { --2
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle", "waw_rifgren"},
+        Slot = {"muzzle", "waw_rifgren", "waw_bayonet"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(26.1, 0, 1.5), -- offset that the attachment will be relative to the bone
@@ -257,31 +262,14 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    /*local attached = wep.Attachments[2].Installed
-
-    local attthing
-        if attached == "muzz_waw_rifgren" then attthing = 1
-    end
-
-    if anim == "enter_ubgl" then
-        if attthing == 1 then
-            return "in_glsetup"
-        end
-    elseif anim == "exit_ubgl" then
-        if attthing == 1 then
-            return "out_glsetup"
-        end
-    end*/
 
     if wep:Clip1() == 0 then
         return anim .. "_empty"
     end
 
-    /*if wep:Clip2() == 0 and attthing == 1 and wep:GetInUBGL() then
-        return anim .. "_glsetup_empty"
-    elseif wep:Clip2() != 0 and attthing == 1 and wep:GetInUBGL() then
-        return anim .. "_glsetup"
-    end*/
+    if wep.Attachments[2].Installed == "muzz_waw_bayonet" and anim == "bash" then
+        return "bash_bayo"
+    end
 
 end
 
@@ -307,6 +295,14 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.25,
         LHIKOut = 0.25,
+    },
+    ["bash"] = {
+        Source = "swipe",
+        Time = 30 / 30,
+    },
+    ["bash_bayo"] = {
+        Source = "stab",
+        Time = 30 / 30,
     },
     ["holster"] = {
         Source = "holster",

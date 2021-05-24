@@ -1,6 +1,6 @@
-att.PrintName = "Destron (WAW)"
-att.Icon = Material("entities/acwatt_optic_bo1_acog.png", "mips smooth")
-att.Description = "Custom mid-range scope originally for the Walther P38."
+att.PrintName = "PU 3.5x Scope (WAW)"
+att.Icon = Material("entities/acwatt_optic_waw_mosin.png", "mips smooth")
+att.Description = "Sniper Scope for the Mosin Nagant."
 
 att.SortOrder = 109
 
@@ -21,7 +21,7 @@ att.AdditionalSights = {
     {
         Pos = Vector(-1.475, 0, -0.95),
         Ang = Angle(0, 0, 0),
-        Magnification = 1.25,
+        Magnification = 1.5,
         IgnoreExtra = true
     },
 }
@@ -36,7 +36,7 @@ att.Colorable = true
 
 att.HolosightBlackbox = true
 
-att.HolosightMagnification = 2
+att.HolosightMagnification = 4
 
 att.Mult_SightTime = 1.1
 att.Override_ShotgunReload = true

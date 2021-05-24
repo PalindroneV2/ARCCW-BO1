@@ -751,8 +751,26 @@ sound.Add( {
 -- MOSIN Main --
 
 sound.Add( {
+    name = "ArcCW_WAW.Mosin_Fire",
+    channel = CHAN_WEAPON + 1,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/waw_mosin/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Mosin_RingOff",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/waw_mosin/ringoff.wav",
+    }
+} )
+sound.Add( {
     name = "ArcCW_WAW.Mosin_Up",
-    channel = CHAN_ITEM + 4,
+    channel = CHAN_ITEM + 1,
     volume = 1.0,
     level = 100,
     sound = {
@@ -761,7 +779,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Mosin_Back",
-    channel = CHAN_ITEM + 4,
+    channel = CHAN_ITEM + 2,
     volume = 1.0,
     level = 100,
     sound = {
@@ -770,7 +788,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Mosin_Fwd",
-    channel = CHAN_ITEM + 4,
+    channel = CHAN_ITEM + 3,
     volume = 1.0,
     level = 100,
     sound = {
@@ -779,7 +797,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Mosin_Rechamber",
-    channel = CHAN_ITEM + 2,
+    channel = CHAN_ITEM + 4,
     volume = 1.0,
     level = 100,
     sound = {
@@ -788,7 +806,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Mosin_Eject",
-    channel = CHAN_ITEM + 1,
+    channel = CHAN_ITEM + 5,
     volume = 0.5,
     level = 20,
     sound = {
@@ -797,7 +815,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Mosin_Bullet",
-    channel = CHAN_ITEM + 4,
+    channel = CHAN_ITEM + 6,
     volume = 1.0,
     level = 100,
     sound = {
@@ -2488,6 +2506,26 @@ sound.Add( {
     pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mk/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.TrenchGun_Fire",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_shotgun/fire_trench.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.DBS_Fire",
+    channel = CHAN_WEAPON + 5,
+volume = 1,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_shotgun/fire_double.wav",
     }
 } )
 sound.Add( {
