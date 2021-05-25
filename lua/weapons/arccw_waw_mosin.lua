@@ -286,6 +286,7 @@ end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
 
+    local pap = wep.Attachments[6].Installed == "ammo_papunch"
     local snipe = 0
     if wep.Attachments[9].Installed == "optic_waw_mosin" then snipe = 1 end
 
@@ -300,6 +301,10 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     elseif snipe == 0 then
         wep.ActivePos = Vector(1.5, 1, 2)
         wep.ActiveAng = Angle(0, 0, 0)
+    end
+
+    if (anim == "sgreload_start") and snipe == 1 and pap then
+        return anim .. "_pap"
     end
 
     if wep:Clip1() == 0 then

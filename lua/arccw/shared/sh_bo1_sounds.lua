@@ -2272,7 +2272,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_BO1.CZ75_RingOff",
-    channel = CHAN_WEAPON + 5,
+    channel = CHAN_WEAPON + 1,
     volume = 1.0,
     level = 100,
     pitch = {95, 110},

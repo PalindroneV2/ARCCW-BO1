@@ -3,20 +3,21 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "SPAS-12"
+SWEP.PrintName = "HS10"
 SWEP.Trivia_Class = "Combat Shotgun"
-SWEP.Trivia_Desc = "12 gauge dual mode combat shotgun designed to function primarily in semi-automatic mode, with the pump-action mode used for low-pressure ammunition such as bean bags."
-SWEP.Trivia_Manufacturer = "Franchi"
+SWEP.Trivia_Desc = [[The High Standard Model 10 is a bullpup semi-automatic shotgun which was sold to law enforcement agencies.
+Due to many shortcomings in reliability and quality the weapon was swiftly abandoned by police in favor of more traditional pump shotguns.]]
+SWEP.Trivia_Manufacturer = "High Standard"
 SWEP.Trivia_Calibre = "12x70mm"
 SWEP.Trivia_Mechanism = "Semi-Automatic"
-SWEP.Trivia_Country = "Italy"
-SWEP.Trivia_Year = 1979
+SWEP.Trivia_Country = "USA"
+SWEP.Trivia_Year = 1967
 
 SWEP.Slot = 3
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_bo1_spas12.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_bo1_hs10.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-1, 4, -6),
@@ -24,18 +25,18 @@ SWEP.WorldModelOffset = {
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale   =   1
 }
-SWEP.WorldModel = "models/weapons/arccw/c_bo1_spas12.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_bo1_hs10.mdl"
 SWEP.ViewModelFOV = 60
 
-SWEP.DefaultBodygroups = "001000000"
+SWEP.DefaultBodygroups = "000000000"
 
-SWEP.Damage = 15
+SWEP.Damage = 16
 SWEP.DamageMin = 10 -- damage done at maximum range
 SWEP.Range = 45 -- in METRES
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 1500 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 100 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
@@ -43,13 +44,12 @@ SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 8 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 24
-SWEP.ReducedClipSize = 6
+SWEP.Primary.ClipSize = 4 -- DefaultClip is automatically set.
+SWEP.ExtendedClipSize = 20
 
-SWEP.Recoil = 2
-SWEP.RecoilSide = 2
-SWEP.MaxRecoilBlowback = 2
+SWEP.Recoil = 2.25
+SWEP.RecoilSide = 2.25
+SWEP.MaxRecoilBlowback = 2.25
 
 SWEP.ShotgunReload = true
 
@@ -70,8 +70,8 @@ SWEP.NPCWeaponType = "weapon_shotgun"
 SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 40 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.HipDispersion = 700 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 200
 
 SWEP.Primary.Ammo = "buckshot" -- what ammo type the gun uses
 
@@ -95,7 +95,7 @@ SWEP.CamAttachment = 4
 
 SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.27
+SWEP.SightTime = 0.25
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
@@ -105,9 +105,10 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.2, 0, 1.675),
-    Ang = Angle(0.45, 0, 0),
+    Pos = Vector(-2.26, 2, 0.35),
+    Ang = Angle(00, 0, 0),
     Magnification = 1.1,
+    CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
@@ -124,8 +125,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(13, 0, -3)
-SWEP.CustomizeAng = Angle(15, 40, 0)
+SWEP.CustomizePos = Vector(13, 0, -2.5)
+SWEP.CustomizeAng = Angle(15, 40, 15)
 
 SWEP.HolsterPos = Vector(0.532, -6, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -135,19 +136,8 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.AttachmentElements = {
     ["spas12_pap"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
         NamePriority = 10,
-        NameChange = "SPAZ-24",
-    },
-    ["spas_stockon"] = {
-        VMBodygroups = {
-            {ind = 2, bg = 0},
-        },
-    },
-    ["spas_stockoff"] = {
-        VMBodygroups = {
-            {ind = 2, bg = 2},
-        }
+        NameChange = "Typhoid Mary",
     },
     ["mount"] = {
         VMBodygroups = {
@@ -159,7 +149,7 @@ SWEP.AttachmentElements = {
                 Bone = "tag_weapon",
                 Scale = Vector(0.375, 0.375, 0.375),
                 Offset = {
-                    pos = Vector(-1, 0.3, 0.1),
+                    pos = Vector(-3.5, 0.3, 0.9),
                     ang = Angle(0, 90, 0),
                 }
             }
@@ -176,7 +166,7 @@ SWEP.Attachments = {
         Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(-1.5, 0, 1.25), -- offset that the attachment will be relative to the bone
+            vpos = Vector(-3.5, 0, 2), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(12.5, 1.3, -7),
             wang = Angle(172.5, 180, 0)
@@ -191,18 +181,18 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Muzzle",
         Slot = "muzzle_shotgun",
         Bone = "tag_weapon",
-        VMScale = Vector(1, 1, 1),
+        VMScale = Vector(1.5, 1.25, 1.25),
         Offset = {
-            vpos = Vector(22, 0, 0.36), -- offset that the attachment will be relative to the bone
+            vpos = Vector(6.5, 0, 0.75), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
     }, --2
     {
         PrintName = "Underbarrel",
         Slot = "foregrip",
-        Bone = "j_pump",
+        Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(6, 0, -0.125),
+            vpos = Vector(2.25, 0, -1.5),
             vang = Angle(0, 0, 0),
             wpos = Vector(21.5, 0.75, -3.25),
             wang = Angle(172.5, 0, 0)
@@ -214,18 +204,12 @@ SWEP.Attachments = {
         Slot = {"tac", "bo1_tacslot"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(19, 0.55, -0.8), -- offset that the attachment will be relative to the bone
+            vpos = Vector(-2, 0.55, -0.5), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, -90),
             wpos = Vector(28, 0.25, -6),
             wang = Angle(-5, 0, 90)
         },
     }, --4
-    {
-        PrintName = "Stock",
-        Slot = "spas12_stock",
-        DefaultAttName = "Unfolded Stock",
-        GivesFlags = {"notfolded"}
-    }, --5
     { --6
         PrintName = "FCG",
         Slot = {"bo1_fcg"}
@@ -244,7 +228,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0, -0.65, 0), -- offset that the attachment will be relative to the bone
+            vpos = Vector(-10, -0.9, 0.75), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(7, 1.6, -4),
             wang = Angle(-10, 0, 180)
@@ -254,14 +238,10 @@ SWEP.Attachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[7].Installed == "ammo_spas12_pap"
-    local off = wep.Attachments[5].Installed == "spas12_stock_off"
-    local folded = wep.Attachments[5].Installed == "spas12_stock_on"
+    local papcamo = wep.Attachments[6].Installed == "ammo_spas12_pap"
 
-    if papcamo and folded then
-        return vm:SetSkin(2)
-    elseif papcamo and (!off or off) then
-        return vm:SetSkin(3)
+    if papcamo then
+        vm:SetSkin(2)
     end
 end
 
@@ -311,48 +291,26 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload_pap",
-        Time = 77 / 30,
+        Time = 94 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.4,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Shell", t = 40 / 30},
-            {s = "ArcCW_BO1.MK_Back", t = 61 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 65 / 30},
-        },
-    },
-    ["reload_empty"] = {
-        Source = "reload_pap",
-        Time = 77 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.4,
-        SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 40 / 30},
-            {s = "ArcCW_BO1.MK_Back", t = 61 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 65 / 30},
+            {s = "ArcCW_BO1.MK_Back", t = 63 / 30},
+            {s = "ArcCW_BO1.MK_Fwd", t = 67 / 30},
         },
     },
     ["sgreload_start"] = {
-        Source = "reload_in2",
-        Time = 30 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0,
-        SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 40 / 30},
-        },
-    },
-    ["sgreload_start_empty"] = {
         Source = "reload_in",
-        Time = 54 / 30,
+        Time = 52 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
-        LHIKIn = 0.5,
+        LHIKIn = 0.2,
         LHIKOut = 0,
+        RestoreAmmo = 1,
+        MinProgress = 0.6,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Shell", t = 40 / 30},
         },
@@ -365,6 +323,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0,
+        MinProgress = 1,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Shell", t = 10 / 30},
         },
@@ -374,7 +333,7 @@ SWEP.Animations = {
         Time = 24 / 30,
         LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 1,
+        LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Back", t = 8 / 30},
             {s = "ArcCW_BO1.MK_Fwd", t = 12 / 30},
@@ -385,7 +344,7 @@ SWEP.Animations = {
         Time = 24 / 30,
         LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 1,
+        LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Back", t = 8 / 30},
             {s = "ArcCW_BO1.MK_Fwd", t = 12 / 30},

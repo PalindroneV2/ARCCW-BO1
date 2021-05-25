@@ -4,8 +4,8 @@
 	$blendtintbybasealpha  "1"
 	"$bumpmap" "models/weapons/bo1/bo1_mp5k/mp5k_n"
 	$detail "models/weapons/bo1/gunmetal"
-	$detailblendmode 
-	"$detailblendfactor" "0.5"
+	$detailblendmode 0
+	$detailblendfactor 1
 
 	$phong                      		1
 	$phongexponent                      "20"
