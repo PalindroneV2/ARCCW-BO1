@@ -13,6 +13,7 @@ att.AutoStats = true
 att.Slot = "bo1_bipod"
 att.ActivateElements = {"bo1_bipod"}
 att.ExcludeFlags = {"famas_f1"}
+att.BO1_Bipod = true
 
 att.Free = true
 

@@ -208,19 +208,23 @@ SWEP.Attachments = {
         },
     },
     {
+        PrintName = "FCG",
+        Slot = {"bo1_fcg"},
+    },--5
+    {
         PrintName = "Magazine",
         Slot = {"bo1_mag"},
         DefaultAttName = "Standard 15rnd 9x19mm Mag"
-    },--5
-    { --6
+    },--6
+    { --7
         PrintName = "Ammo Type",
         Slot = {"ammo_pap"}
     },
-    { --7
+    { --8
         PrintName = "Perk",
         Slot = "bo1_perk"
     },
-    { --8
+    { --9
         PrintName = "Charms",
         Slot = "charm",
         Bone = "j_bolt",
@@ -236,7 +240,7 @@ SWEP.Attachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[6].Installed == "ammo_papunch"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then
         wep.Firemodes = {
@@ -273,7 +277,6 @@ SWEP.Hook_GetShootSound = function(wep, sound)
     end
 end
 
-SWEP.counter = 0
 /*
 SWEP.Hook_TranslateAnimation = function(wep, anim, data)
     local eclip = wep:Clip1() == 0

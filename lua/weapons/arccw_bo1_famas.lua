@@ -152,11 +152,6 @@ SWEP.AttachmentElements = {
             {ind = 3, bg = 2},
         },
     },
-    ["bo1_bipod"] = {
-        VMBodygroups = {
-            {ind = 3, bg = 3},
-        },
-    },
     ["mount"] = {
         VMBodygroups = {
             {ind = 2, bg = 1},
@@ -293,10 +288,25 @@ SWEP.Attachments = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")
-    local f1 = wep.Attachments[8].Installed == "bo1_fcg_famas_s13"
+    local f1 = 0
+    if wep.Attachments[8].Installed == "bo1_fcg_famas_s13" then f1 = 2 end
     local optic = wep.Attachments[1].Installed
+    local intbipod = wep:GetBuff_Override("BO1_Bipod")
 
-    if f1 and optic then
+    for k = f1, f1 do
+        vm:SetBodygroup(4,k)
+        if intbipod then
+            vm:SetBodygroup(4,k + 1)
+        end
+        if k == 2 then
+            vm:SetBodygroup(4,k)
+            if intbipod then
+                vm:SetBodygroup(4,k + 1)
+            end
+        end
+    end
+
+    if f1 == 1 and optic then
         vm:SetBodygroup(2, 2)
     end
 
