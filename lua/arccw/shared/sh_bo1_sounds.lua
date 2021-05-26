@@ -2399,6 +2399,22 @@ sound.Add({
     }
 })
 sound.Add({
+    name = "ArcCW_BO2.357_Fire",
+    channel = CHAN_WEAPON + 5,
+    level = 100,
+    sound = {
+        "weapons/arccw/bo1_python/fire_bo2.wav",
+    }
+})
+sound.Add({
+    name = "ArcCW_CDE.Eagle_Fire",
+    channel = CHAN_WEAPON + 5,
+    level = 100,
+    sound = {
+        "weapons/arccw/bo1_python/fire_eagle.wav",
+    }
+})
+sound.Add({
     name = "ArcCW_BO1.Python_Open",
     channel = CHAN_ITEM,
     level = 70,
