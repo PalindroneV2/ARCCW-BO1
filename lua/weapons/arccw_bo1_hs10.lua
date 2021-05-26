@@ -30,8 +30,8 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "000000000"
 
-SWEP.Damage = 16
-SWEP.DamageMin = 10 -- damage done at maximum range
+SWEP.Damage = 35
+SWEP.DamageMin = 25 -- damage done at maximum range
 SWEP.Range = 45 -- in METRES
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
@@ -53,7 +53,7 @@ SWEP.MaxRecoilBlowback = 2.25
 
 SWEP.ShotgunReload = true
 
-SWEP.Delay = 60 / 312 -- 60 / RPM.
+SWEP.Delay = 60 / 500 -- 60 / RPM.
 SWEP.Num = 8 -- number of shots per trigger pull.
 SWEP.RunawayBurst = false
 SWEP.Firemodes = {
@@ -93,8 +93,8 @@ SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 4
 
-SWEP.SpeedMult = 0.95
-SWEP.SightedSpeedMult = 0.75
+SWEP.SpeedMult = 1
+SWEP.SightedSpeedMult = 0.85
 SWEP.SightTime = 0.25
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag

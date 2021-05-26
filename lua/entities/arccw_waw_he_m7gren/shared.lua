@@ -1,6 +1,6 @@
 ENT.Type 				= "anim"
 ENT.Base 				= "base_entity"
-ENT.PrintName 			= "40mm HE"
+ENT.PrintName 			= "M7 (HE)"
 ENT.Author 				= ""
 ENT.Information 		= ""
 

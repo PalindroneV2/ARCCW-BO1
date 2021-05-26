@@ -27,7 +27,7 @@ SWEP.ViewModelFOV = 60
 SWEP.Damage = 120
 SWEP.DamageMin = 110 -- damage done at maximum range
 SWEP.Range = 2000 -- in METRES
-SWEP.Penetration = 10
+SWEP.Penetration = 12
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 4000 -- projectile or phys bullet muzzle velocity
@@ -89,8 +89,8 @@ SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 4
 
-SWEP.SightTime = 0.35
-SWEP.SpeedMult = 0.95
+SWEP.SightTime = 0.45
+SWEP.SpeedMult = 0.85
 SWEP.SightedSpeedMult = 0.25
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag

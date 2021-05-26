@@ -32,9 +32,9 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "00000000000"
 
-SWEP.Damage = 29
-SWEP.DamageMin = 25 -- damage done at maximum range
-SWEP.Range = 150 -- in METRES
+SWEP.Damage = 36
+SWEP.DamageMin = 27 -- damage done at maximum range
+SWEP.Range = 130 -- in METRES
 SWEP.Penetration = 7
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -49,9 +49,9 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 20 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 45
 
-SWEP.Recoil = 0.45
-SWEP.RecoilSide = 0.6
-SWEP.RecoilRise = 0.75
+SWEP.Recoil = 0.4
+SWEP.RecoilSide = 0.5
+SWEP.RecoilRise = 0.6
 SWEP.VisualRecoilMult = 0.25
 
 SWEP.Delay = 60 / 700 -- 60 / RPM.
@@ -83,7 +83,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_BO1.XL60_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.AUG_Sil"
-SWEP.DistantShootSound = {"weapons/arccw/bo1_XL60/ringoff_f.wav", "weapons/arccw/bo1_XL60/ringoff_r.wav"}
+SWEP.DistantShootSound = {"weapons/arccw/bo1_aug/ringoff_f.wav", "weapons/arccw/bo1_aug/ringoff_r.wav"}
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_762nato.mdl"

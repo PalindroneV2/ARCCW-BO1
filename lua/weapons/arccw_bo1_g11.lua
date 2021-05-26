@@ -47,10 +47,9 @@ SWEP.Primary.ClipSize = 48 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 48
 SWEP.ReducedClipSize = 30
 
-SWEP.Recoil = 0.45
+SWEP.Recoil = 0.3
 SWEP.RecoilSide = 0.3
-SWEP.RecoilRise = 0.5
-SWEP.VisualRecoilMult = 0.25
+SWEP.RecoilRise = 0.25
 
 SWEP.Delay = 60 / 1250 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
