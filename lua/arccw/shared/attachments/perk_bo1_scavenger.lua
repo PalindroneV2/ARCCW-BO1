@@ -6,10 +6,8 @@ att.Desc_Pros = {
     "   a magazine when hitting an enemy.",
 }
 att.Desc_Cons = {
-    "- Does not replenish Underbarrel",
-    "   Grenade Launchers.",
-    "- Does not replenish Underbarrel",
-    "   Shotguns.",
+    "- Does not replenish Underbarrel Grenade Launchers.",
+    "- Does not replenish Underbarrel Shotguns.",
 }
 att.AutoStats = true
 att.Slot = {"bo1_perk"}
