@@ -234,8 +234,8 @@ SWEP.AttachmentElements = {
     },
     ["mp5k"] = {
         Override_IronSightStruct = {
-            Pos = Vector(-3.175, 0, 0.85),
-            Ang = Angle(0.3, 0.1, 0),
+            Pos = Vector(-3.175, 2, 0.85),
+            Ang = Angle(0.1, 0.025, 0),
             Magnification = 1.1,
             CrosshairInSights = false,
         },
@@ -402,61 +402,27 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[10].Installed == "ammo_papunch"
     local mp5k = wep.Attachments[2].Installed == "bo1_mp5_mp5k"
-    local stock1 = wep.Attachments[7].Installed == "bo1_light_stock"
-    local stock2 = wep.Attachments[7].Installed == "bo1_solid_stock"
-    local stock3 = wep.Attachments[7].Installed == "bo1_solider_stock"
     local optic = wep.Attachments[1].Installed
 
-    if mp5k and !optic and !stock1 and !stock2 and !stock3 then
-        vm:SetBodygroup(0, 1)
-        vm:SetBodygroup(2, 3)
-        vm:SetBodygroup(1, 2)
+    local stock = 0
+    if wep.Attachments[7].Installed == "bo1_light_stock" then stock = 1
+    elseif wep.Attachments[7].Installed == "bo1_solid_stock" then stock = 2
+    elseif wep.Attachments[7].Installed == "bo1_solider_stock" then stock = 3
+    end
+
+    for k = stock, stock do
+        vm:SetBodygroup(4,k)
+        if mp5k then
+            vm:SetBodygroup(4,k + 4)
+        end
+    end
+
+    if mp5k then
+        vm:SetBodygroup(0,1)
+        vm:SetBodygroup(1,2)
+        vm:SetBodygroup(2,3)
         vm:SetBodygroup(3, 2)
-        vm:SetBodygroup(4, 4)
-    elseif mp5k and !optic and stock1 and !stock2 and !stock3 then
-        vm:SetBodygroup(0, 1)
-        vm:SetBodygroup(1, 2)
-        vm:SetBodygroup(2, 3)
-        vm:SetBodygroup(3, 2)
-        vm:SetBodygroup(4, 5)
-    elseif mp5k and !optic and stock2 and !stock1 and !stock3 then
-        vm:SetBodygroup(0, 1)
-        vm:SetBodygroup(1, 2)
-        vm:SetBodygroup(2, 3)
-        vm:SetBodygroup(3, 2)
-        vm:SetBodygroup(4, 6)
-    elseif mp5k and !optic and stock3 and !stock2 and !stock1 then
-        vm:SetBodygroup(0, 1)
-        vm:SetBodygroup(1, 2)
-        vm:SetBodygroup(2, 3)
-        vm:SetBodygroup(3, 2)
-        vm:SetBodygroup(4, 7)
-    elseif mp5k and optic and !stock1 and !stock2 and !stock3 then
-        vm:SetBodygroup(0, 1)
-        vm:SetBodygroup(1, 2)
-        vm:SetBodygroup(2, 3)
-        vm:SetBodygroup(3, 3)
-        vm:SetBodygroup(4, 4)
-    elseif mp5k and optic and stock1 and !stock2 and !stock3 then
-        vm:SetBodygroup(0, 1)
-        vm:SetBodygroup(1, 2)
-        vm:SetBodygroup(2, 3)
-        vm:SetBodygroup(3, 3)
-        vm:SetBodygroup(4, 5)
-    elseif mp5k and optic and stock2 and !stock1 and !stock3 then
-        vm:SetBodygroup(0, 1)
-        vm:SetBodygroup(1, 2)
-        vm:SetBodygroup(2, 3)
-        vm:SetBodygroup(3, 3)
-        vm:SetBodygroup(4, 6)
-    elseif mp5k and optic and stock3 and !stock2 and !stock1 then
-        vm:SetBodygroup(0, 1)
-        vm:SetBodygroup(1, 2)
-        vm:SetBodygroup(2, 3)
-        vm:SetBodygroup(3, 3)
-        vm:SetBodygroup(4, 7)
-    elseif !mp5k and optic then
-        vm:SetBodygroup(3, 1)
+        if optic then vm:SetBodygroup(3,3) end
     end
 
     if papcamo then
@@ -465,36 +431,49 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local sil0 = wep.Attachments[2].Installed == "supp_bo1_mp5"
-    local sil1 = wep.Attachments[2].Installed == "bo1_mp5_sdhg"
-    local sil2 = wep.Attachments[2].Installed == "bo1_mp5_sdhg"
-    local sil = sil0 or sil1 or sil2
     local stock = wep.Attachments[7].Installed == "bo1_solid_stock"
     local dual = wep.Attachments[8].Installed == "ammo_dualmag"
-    local mp5k = wep.Attachments[2].Installed == "bo1_mp5_mp5k"
-    --local tube = wep:GetBuff_Override("BO1_UBGL")
 
-    if sil and !tube and !stock and !dual and !mp5k then
-        return anim .. "_sil"
-    elseif tube and (sil or !sil) and !stock and !dual and !mp5k then
-        return anim .. "_gl"
-    elseif !sil and !tube and stock and !dual and !mp5k then
-        return anim .. "_stock"
-    elseif sil and !tube and stock and !dual and !mp5k then
-        return anim .. "_stock_sil"
-    elseif (sil or !sil) and tube and stock and !dual and !mp5k then
-        return anim .. "_stock_gl"
-    elseif !sil and !tube and !stock and dual and !mp5k then
-        return anim .. "_quick"
-     elseif !sil and !tube and stock and dual and !mp5k then
-        return anim .. "_stock_quick"
-    elseif sil and !tube and !stock and dual and !mp5k then
-        return anim .. "_sil_quick"
-    elseif sil and !tube and stock and dual and !mp5k then
-        return anim .. "_stock_sil_quick"
-    elseif mp5k and !tube and (stock or !stock) and (dual or !dual) then
-        return anim .. "_grip"
+    local hand = 0
+    if wep.Attachments[2].Installed == "supp_bo1_mp5" then hand = 1
+    elseif wep.Attachments[2].Installed == "bo1_mp5_sdhg" then hand = 1
+    elseif wep.Attachments[2].Installed == "bo1_mp5_rishg" then hand = 1
+    elseif wep.Attachments[2].Installed == "bo1_mp5_mp5k" then hand = 2
     end
+
+    local final = ""
+
+    for k = hand, hand do
+        if tube then
+            final = "_gl"
+        end
+        if stock then
+            final = "_stock"
+        end
+        if dual then
+            final = "_quick"
+        end
+        if stock and dual then
+            final = "_stock_quick"
+        end
+        if hand == 1 then
+            final = "_sil"
+            if stock then
+                final = "_stock_sil"
+            end
+            if dual then
+                final = "_sil_quick"
+            end
+            if stock and dual then
+                final = "_stock_sil_quick"
+            end
+        end
+        if hand == 2 then
+            final = "_grip"
+        end
+    end
+
+    return anim .. final
 end
 
 SWEP.Hook_GetCapacity = function(wep, cap)
