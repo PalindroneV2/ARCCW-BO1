@@ -827,72 +827,82 @@ sound.Add( {
 
 sound.Add( {
     name = "ArcCW_BO2.M27_Fire",
-    channel = CHAN_WEAPON + 5,
+    channel = CHAN_WEAPON + 1,
     volume = 1.0,
     level = 100,
     pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo2_m27/fire_m27.wav",
+        "weapons/arccw/bo2_generic_ar/fire_m27.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO2.AN94_Fire",
+    channel = CHAN_WEAPON + 1,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_generic_ar/fire_an94.wav",
     }
 } )
 sound.Add( {
     name = "ArcCW_BO2.M27_Sil",
-    channel = CHAN_WEAPON + 5,
+    channel = CHAN_WEAPON + 1,
     volume = 1.0,
     level = 100,
     pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo2_m27/sil_m27.wav",
+        "weapons/arccw/bo2_generic_ar/fire_sil.wav",
     }
 } )
 sound.Add( {
-    name = "ArcCW_BO2.M27_MagIn",
+    name = "ArcCW_BO2.AR_MagIn",
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
     pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo2_m27/mag_in.wav",
+        "weapons/arccw/bo2_generic_ar/in.wav",
     }
 } )
 sound.Add( {
-    name = "ArcCW_BO2.M27_MagOut",
+    name = "ArcCW_BO2.AR_MagOut",
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
     pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo2_m27/mag_out.wav",
+        "weapons/arccw/bo2_generic_ar/out.wav",
     }
 } )
 sound.Add( {
-    name = "ArcCW_BO2.M27_Charge",
+    name = "ArcCW_BO2.AR_Charge",
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
     pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo2_m27/charge.wav",
+        "weapons/arccw/bo2_generic_ar/charge.wav",
     }
 } )
 sound.Add( {
-    name = "ArcCW_BO2.M27_Back",
+    name = "ArcCW_BO2.AR_Back",
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
     pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo2_m27/bolt_back.wav",
+        "weapons/arccw/bo2_generic_ar/back.wav",
     }
 } )
 sound.Add( {
-    name = "ArcCW_BO2.M27_Fwd",
+    name = "ArcCW_BO2.AR_Fwd",
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
     pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo2_m27/bolt_fwd.wav",
+        "weapons/arccw/bo2_generic_ar/fwd.wav",
     }
 } )
 
@@ -1874,38 +1884,45 @@ sound.Add( {
 -- Dragunov --
 
 sound.Add({
-    name = "ArcCW_BO2_SVD.Shoot",
+    name = "ArcCW_BO2.SVD_Shoot",
     channel = CHAN_WEAPON + 5,
     level = 100,
-    sound = "weapons/arccw/bo2_dragunov/wpn_ballista_fire_plr.wav"
+    sound = "weapons/arccw/bo2_generic_sniper/wpn_ballista_fire_plr.wav"
 })
 
 sound.Add({
-    name = "ArcCW_BO2_SVD.ClipIn",
-    channel = CHAN_ITEM,
-    level = 70,
-    sound = "weapons/arccw/bo2_dragunov/fly_sniper_mag_in.wav"
+    name = "ArcCW_BO2.DSR50_Shoot",
+    channel = CHAN_WEAPON + 5,
+    level = 100,
+    sound = "weapons/arccw/bo2_generic_sniper/wpn_dsr_fire_plr.wav"
 })
 
 sound.Add({
-    name = "ArcCW_BO2_SVD.ClipOut",
+    name = "ArcCW_BO2.Sniper_ClipIn",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/bo2_dragunov/fly_sniper_mag_out.wav"
+    sound = "weapons/arccw/bo2_generic_sniper/fly_sniper_mag_in.wav"
 })
 
 sound.Add({
-    name = "ArcCW_BO2_SVD.BoltBack",
+    name = "ArcCW_BO2.Sniper_ClipOut",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/bo2_dragunov/fly_sniper_bb.wav"
+    sound = "weapons/arccw/bo2_generic_sniper/fly_sniper_mag_out.wav"
 })
 
 sound.Add({
-    name = "ArcCW_BO2_SVD.BoltFwd",
+    name = "ArcCW_BO2.Sniper_BoltBack",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/bo2_dragunov/fly_sniper_bf.wav"
+    sound = "weapons/arccw/bo2_generic_sniper/fly_sniper_bb.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO2.Sniper_BoltFwd",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/bo2_generic_sniper/fly_sniper_bf.wav"
 })
 
 -- AWSM --
@@ -2114,52 +2131,52 @@ sound.Add({
     name = "ArcCW_BO2.M1911_Fire",
     channel = CHAN_WEAPON + 5,
     level = 100,
-    sound = "weapons/arccw/bo2_m1911/fire_heavier.wav"
+    sound = "weapons/arccw/bo2_generic_pistol/fire_heavier.wav"
 })
 sound.Add({
     name = "ArcCW_BO2.BHP_Fire",
     channel = CHAN_WEAPON + 5,
     level = 100,
-    sound = "weapons/arccw/bo2_m1911/fire_light.wav"
+    sound = "weapons/arccw/bo2_generic_pistol/fire_light.wav"
 })
 sound.Add({
     name = "ArcCW_BO2.B23R_Fire",
     channel = CHAN_WEAPON,
     level = 100,
-    sound = "weapons/arccw/bo2_m1911/fire_b23r.wav"
+    sound = "weapons/arccw/bo2_generic_pistol/fire_b23r.wav"
 })
 sound.Add({
     name = "ArcCW_BO2.M1911_Sil",
     channel = CHAN_WEAPON + 5,
     level = 100,
-    sound = "weapons/arccw/bo2_m1911/wpn_fiveseven_sil_shot_plr.wav"
+    sound = "weapons/arccw/bo2_generic_pistol/wpn_fiveseven_sil_shot_plr.wav"
 })
 sound.Add({
     name = "ArcCW_BO2.M1911_MagIn",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/bo2_m1911/magin.wav"
+    sound = "weapons/arccw/bo2_generic_pistol/magin.wav"
 })
 
 sound.Add({
     name = "ArcCW_BO2.M1911_MagOut",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/bo2_m1911/magout.wav"
+    sound = "weapons/arccw/bo2_generic_pistol/magout.wav"
 })
 
 sound.Add({
     name = "ArcCW_BO2.M1911_SlideBack",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/bo2_m1911/slideback.wav"
+    sound = "weapons/arccw/bo2_generic_pistol/slideback.wav"
 })
 
 sound.Add({
     name = "ArcCW_BO2.M1911_SlideFwd",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/bo2_m1911/slidefwd.wav"
+    sound = "weapons/arccw/bo2_generic_pistol/slidefwd.wav"
 })
 
 -- P38 MAIN ---

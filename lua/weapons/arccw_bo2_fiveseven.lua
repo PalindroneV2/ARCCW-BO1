@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
 
-SWEP.PrintName = "FN FiveSeveN"
+SWEP.PrintName = "FN Five-SeveN"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "Belgian pistol designed in conjunction with the FN P90 platform using the same cartridge. It is incredibly popular with police and military, as well as civilians."
 SWEP.Trivia_Manufacturer = "FN Herstal"

@@ -71,7 +71,7 @@ SWEP.NPCWeaponType = {
 SWEP.NPCWeight = 75
 
 SWEP.AccuracyMOA = 1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 1000 -- inaccuracy added by hip firing.
+SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 250
 
 SWEP.Primary.Ammo = "SniperPenetratedRound" -- what ammo type the gun uses
@@ -80,7 +80,7 @@ SWEP.MagID = "svd" -- the magazine pool this gun draws from
 SWEP.ShootVol = 110 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO2_SVD.Shoot"
+SWEP.ShootSound = "ArcCW_BO2.DSR50_Shoot"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
 SWEP.DistantShootSound = {"weapons/arccw/bo1_l96/ringoff_00.wav", "weapons/arccw/bo1_l96/ringoff_01.wav"}
 
@@ -291,8 +291,8 @@ SWEP.Animations = {
         Checkpoints = {33, 55},
         FrameRate = 30,
         SoundTable = {
-            {s = "ArcCW_BO2_SVD.ClipOut", t = 0.5},
-            {s = "ArcCW_BO2_SVD.ClipIn", t = 1.9},
+            {s = "ArcCW_BO2.SVD_ClipOut", t = 0.5},
+            {s = "ArcCW_BO2.SVD_ClipIn", t = 1.9},
         },
         LHIK = true,
         LHIKIn = 0.5,
@@ -305,10 +305,10 @@ SWEP.Animations = {
         Checkpoints = {33, 55, 88},
         FrameRate = 30,
         SoundTable = {
-            {s = "ArcCW_BO2_SVD.ClipOut", t = 0.5},
-            {s = "ArcCW_BO2_SVD.ClipIn", t = 1.9},
-            {s = "ArcCW_BO2_SVD.BoltBack", t = 2.9},
-            {s = "ArcCW_BO2_SVD.BoltFwd", t = 3.1},
+            {s = "ArcCW_BO2.SVD_ClipOut", t = 0.5},
+            {s = "ArcCW_BO2.SVD_ClipIn", t = 1.9},
+            {s = "ArcCW_BO2.SVD_BoltBack", t = 2.9},
+            {s = "ArcCW_BO2.SVD_BoltFwd", t = 3.1},
         },
         LHIK = true,
         LHIKIn = 0.5,

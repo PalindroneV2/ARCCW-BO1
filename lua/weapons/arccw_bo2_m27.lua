@@ -85,7 +85,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 --SWEP.FirstShootSound = "ArcCW_BO2.M27_Fire"
 SWEP.ShootSound = "ArcCW_BO2.M27_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.M27_Sil"
-SWEP.DistantShootSound = "weapons/arccw/bo1_m16/ringoff_f.wav"
+--SWEP.DistantShootSound = "weapons/arccw/bo1_m16/ringoff_f.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -423,7 +423,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO2.M27_Charge", t = 22 / 35}
+            {s = "ArcCW_BO2.AR_Charge", t = 22 / 35}
         },
     },
     ["fire"] = {
@@ -446,8 +446,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.M27_MagOut", t = 11 / 35},
-            {s = "ArcCW_BO2.M27_MagIn", t = 40 / 35},
+            {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
+            {s = "ArcCW_BO2.AR_MagIn", t = 40 / 35},
         },
     },
     ["reload_empty"] = {
@@ -460,9 +460,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.M27_MagOut", t = 11 / 35},
-            {s = "ArcCW_BO2.M27_MagIn", t = 40 / 35},
-            {s = "ArcCW_BO2.M27_Charge", t = 55 / 35},
+            {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
+            {s = "ArcCW_BO2.AR_MagIn", t = 40 / 35},
+            {s = "ArcCW_BO2.AR_Charge", t = 55 / 35},
             --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
         },
     },
@@ -504,7 +504,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO2.M27_Charge", t = 22 / 35}
+            {s = "ArcCW_BO2.AR_Charge", t = 22 / 35}
         },
     },
     ["fire_m203"] = {
@@ -527,8 +527,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.M27_MagOut", t = 11 / 35},
-            {s = "ArcCW_BO2.M27_MagIn", t = 40 / 35},
+            {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
+            {s = "ArcCW_BO2.AR_MagIn", t = 40 / 35},
         },
     },
     ["reload_empty_m203"] = {
@@ -541,9 +541,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.M27_MagOut", t = 11 / 35},
-            {s = "ArcCW_BO2.M27_MagIn", t = 40 / 35},
-            {s = "ArcCW_BO2.M27_Charge", t = 55 / 35},
+            {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
+            {s = "ArcCW_BO2.AR_MagIn", t = 40 / 35},
+            {s = "ArcCW_BO2.AR_Charge", t = 55 / 35},
             --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
         },
     },
@@ -639,7 +639,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO2.M27_Charge", t = 22 / 35}
+            {s = "ArcCW_BO2.AR_Charge", t = 22 / 35}
         },
     },
     ["fire_grip"] = {
@@ -662,8 +662,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.M27_MagOut", t = 11 / 35},
-            {s = "ArcCW_BO2.M27_MagIn", t = 40 / 35},
+            {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
+            {s = "ArcCW_BO2.AR_MagIn", t = 40 / 35},
         },
     },
     ["reload_empty_grip"] = {
@@ -676,9 +676,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.M27_MagOut", t = 11 / 35},
-            {s = "ArcCW_BO2.M27_MagIn", t = 40 / 35},
-            {s = "ArcCW_BO2.M27_Charge", t = 55 / 35},
+            {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
+            {s = "ArcCW_BO2.AR_MagIn", t = 40 / 35},
+            {s = "ArcCW_BO2.AR_Charge", t = 55 / 35},
             --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
         },
     },

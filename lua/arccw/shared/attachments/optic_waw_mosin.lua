@@ -2,7 +2,7 @@ att.PrintName = "PU 3.5x Scope (WAW)"
 att.Icon = Material("entities/acwatt_optic_waw_mosin.png", "mips smooth")
 att.Description = "Sniper Scope for the Mosin Nagant."
 
-att.SortOrder = 109
+att.SortOrder = 150
 
 att.Desc_Pros = {
     "autostat.holosight",

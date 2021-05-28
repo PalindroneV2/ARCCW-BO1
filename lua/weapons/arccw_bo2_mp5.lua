@@ -417,6 +417,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         end
     end
 
+    if optic then vm:SetBodygroup(3,1) end
     if mp5k then
         vm:SetBodygroup(0,1)
         vm:SetBodygroup(1,2)
