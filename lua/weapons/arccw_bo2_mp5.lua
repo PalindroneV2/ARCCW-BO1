@@ -113,8 +113,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.19, -3, 1),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-3.19, 2, 1),
+    Ang = Angle(0, 0.025, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -170,9 +170,10 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [6] = {
-                vpos = Vector(5, 0, 0.15),
+                vpos = Vector(5, 0, 0),
             }
         },
+        ExcludeFlags = {"ubrail", "sdhg", "rishg"},
     },
     ["sdhg"] = {
         VMBodygroups = {
@@ -180,9 +181,21 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [6] = {
-                vpos = Vector(5, 0, 0.15),
+                vpos = Vector(5, 0, 0),
             }
         },
+        ExcludeFlags = {"ubrail", "mp5sd", "rishg"},
+    },
+    ["rishg"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 2},
+        },
+        AttPosMods = {
+            [6] = {
+                vpos = Vector(5, 0, 0),
+            }
+        },
+        ExcludeFlags = {"ubrail", "sdhg", "mp5sd"},
     },
     ["ubrail"] = {
         VMElements = {
@@ -196,7 +209,7 @@ SWEP.AttachmentElements = {
                 }
             }
         },
-        ExcludeFlags = {"sdhg", "mp5sd"},
+        ExcludeFlags = {"sdhg", "mp5sd", "rishg"},
     },
     ["bo1_mag"] = {
         VMBodygroups = {
@@ -221,7 +234,7 @@ SWEP.AttachmentElements = {
     },
     ["mp5k"] = {
         Override_IronSightStruct = {
-            Pos = Vector(-3.175, -2, 0.85),
+            Pos = Vector(-3.175, 0, 0.85),
             Ang = Angle(0.3, 0.1, 0),
             Magnification = 1.1,
             CrosshairInSights = false,
@@ -277,6 +290,21 @@ SWEP.Attachments = {
     },
     { --4
         PrintName = "Underbarrel",
+        Slot = {"foregrip"},
+        Bone = "tag_weapon",
+        Offset = {
+            vpos = Vector(6, 0, 0.3), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+            wpos = Vector(15, 1.15, -5.5),
+            wang = Angle(170, -180, 0),
+        },
+        InstalledEles = {"ubrail"},
+        ExcludeFlags = {"mp5kk"},
+        GivesFlags = {"nomp5k"},
+        MergeSlots = {5} -- Slot 13 also goes in here. Whenever that is fixed.
+    },
+    { --5
+        Hidden = true,
         Slot = {"ubgl"},
         Bone = "tag_weapon",
         VMScale = Vector(1, 1, 1),
@@ -287,20 +315,6 @@ SWEP.Attachments = {
             wpos = Vector(12, 0.8, -4.5),
             wang = Angle(172.5, -180, 0),
         },
-        ExcludeFlags = {"mp5kk"},
-        MergeSlots = {5} -- Slot 13 also goes in here. Whenever that is fixed.
-    },
-    { --5
-        Hidden = true,
-        Slot = {"foregrip"},
-        Bone = "tag_weapon",
-        Offset = {
-            vpos = Vector(6, 0, 0.3), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 0),
-            wpos = Vector(15, 1.15, -5.5),
-            wang = Angle(170, -180, 0),
-        },
-        InstalledEles = {"ubrail"},
     },
     { --6
         PrintName = "Tactical",
@@ -395,42 +409,50 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if mp5k and !optic and !stock1 and !stock2 and !stock3 then
         vm:SetBodygroup(0, 1)
+        vm:SetBodygroup(2, 3)
         vm:SetBodygroup(1, 2)
         vm:SetBodygroup(3, 2)
         vm:SetBodygroup(4, 4)
     elseif mp5k and !optic and stock1 and !stock2 and !stock3 then
         vm:SetBodygroup(0, 1)
         vm:SetBodygroup(1, 2)
+        vm:SetBodygroup(2, 3)
         vm:SetBodygroup(3, 2)
         vm:SetBodygroup(4, 5)
     elseif mp5k and !optic and stock2 and !stock1 and !stock3 then
         vm:SetBodygroup(0, 1)
         vm:SetBodygroup(1, 2)
+        vm:SetBodygroup(2, 3)
         vm:SetBodygroup(3, 2)
         vm:SetBodygroup(4, 6)
     elseif mp5k and !optic and stock3 and !stock2 and !stock1 then
         vm:SetBodygroup(0, 1)
         vm:SetBodygroup(1, 2)
+        vm:SetBodygroup(2, 3)
         vm:SetBodygroup(3, 2)
         vm:SetBodygroup(4, 7)
     elseif mp5k and optic and !stock1 and !stock2 and !stock3 then
         vm:SetBodygroup(0, 1)
         vm:SetBodygroup(1, 2)
+        vm:SetBodygroup(2, 3)
         vm:SetBodygroup(3, 3)
         vm:SetBodygroup(4, 4)
     elseif mp5k and optic and stock1 and !stock2 and !stock3 then
         vm:SetBodygroup(0, 1)
         vm:SetBodygroup(1, 2)
+        vm:SetBodygroup(2, 3)
         vm:SetBodygroup(3, 3)
         vm:SetBodygroup(4, 5)
     elseif mp5k and optic and stock2 and !stock1 and !stock3 then
         vm:SetBodygroup(0, 1)
         vm:SetBodygroup(1, 2)
+        vm:SetBodygroup(2, 3)
         vm:SetBodygroup(3, 3)
         vm:SetBodygroup(4, 6)
     elseif mp5k and optic and stock3 and !stock2 and !stock1 then
         vm:SetBodygroup(0, 1)
         vm:SetBodygroup(1, 2)
+        vm:SetBodygroup(2, 3)
         vm:SetBodygroup(3, 3)
         vm:SetBodygroup(4, 7)
     elseif !mp5k and optic then
@@ -445,7 +467,8 @@ end
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     local sil0 = wep.Attachments[2].Installed == "supp_bo1_mp5"
     local sil1 = wep.Attachments[2].Installed == "bo1_mp5_sdhg"
-    local sil = sil0 or sil1
+    local sil2 = wep.Attachments[2].Installed == "bo1_mp5_sdhg"
+    local sil = sil0 or sil1 or sil2
     local stock = wep.Attachments[7].Installed == "bo1_solid_stock"
     local dual = wep.Attachments[8].Installed == "ammo_dualmag"
     local mp5k = wep.Attachments[2].Installed == "bo1_mp5_mp5k"

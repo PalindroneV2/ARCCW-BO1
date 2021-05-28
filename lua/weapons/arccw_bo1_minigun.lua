@@ -27,6 +27,7 @@ SWEP.WorldModelOffset = {
 SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "00"
+SWEP.DefaultBodygroups = "00"
 
 SWEP.Damage = 50
 SWEP.DamageMin = 40 -- damage done at maximum range
@@ -101,12 +102,14 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(1, 1, 0.5),
+    Pos = Vector(1, 0, 0.5),
     Ang = Angle(0, 0, 0),
     Magnification = 1,
     CrosshairInSights = true,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
+
+SWEP.Override_ShootWhileSprint = false
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "crossbow"
@@ -210,6 +213,10 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 3 / 30,
         ShellEjectAt = 0,
+    },
+    ["idle_iron"] = {
+        Source = "spinup",
+        Time = 3 / 30,
     },
     ["fire_iron"] = {
         Source = {"fire"},
