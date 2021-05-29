@@ -289,7 +289,7 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 70 / 35,
         SoundTable = {
-            {s = "ArcCW_BO1.WA2000_Scope", t = 0.1},
+            {s = "ArcCW_BO1.WA2000_Scope", t = 1},
         },
         LHIK = true,
         LHIKIn = 0,
