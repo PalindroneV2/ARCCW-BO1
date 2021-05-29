@@ -80,7 +80,7 @@ SWEP.MagID = "svd" -- the magazine pool this gun draws from
 SWEP.ShootVol = 110 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO2_SVD.Shoot"
+SWEP.ShootSound = "ArcCW_BO2.SVD_Shoot"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
 
 SWEP.MuzzleEffect = "muzzleflash_1"
@@ -289,8 +289,7 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 70 / 35,
         SoundTable = {
-            {s = "ArcCW_BO2_SVD.BoltBack", t = 0.1},
-            {s = "ArcCW_BO2_SVD.BoltFwd", t = 0.75},
+            {s = "ArcCW_BO1.WA2000_Scope", t = 0.1},
         },
         LHIK = true,
         LHIKIn = 0,
@@ -313,8 +312,8 @@ SWEP.Animations = {
         Checkpoints = {33, 55},
         FrameRate = 30,
         SoundTable = {
-            {s = "ArcCW_BO2_SVD.ClipOut", t = 20 / 35},
-            {s = "ArcCW_BO2_SVD.ClipIn", t = 67 / 35},
+            {s = "ArcCW_BO1.WA2000_ClipOut", t = 20 / 35},
+            {s = "ArcCW_BO1.WA2000_ClipIn", t = 67 / 35},
         },
         LHIK = true,
         LHIKIn = 0.2,
@@ -327,10 +326,10 @@ SWEP.Animations = {
         Checkpoints = {33, 55, 88},
         FrameRate = 30,
         SoundTable = {
-            {s = "ArcCW_BO2_SVD.ClipOut", t = 20 / 35},
-            {s = "ArcCW_BO2_SVD.ClipIn", t = 67 / 35},
-            {s = "ArcCW_BO2_SVD.BoltBack", t = 92 / 35},
-            {s = "ArcCW_BO2_SVD.BoltFwd", t = 96 / 35},
+            {s = "ArcCW_BO1.WA2000_ClipOut", t = 20 / 35},
+            {s = "ArcCW_BO1.WA2000_ClipIn", t = 67 / 35},
+            {s = "ArcCW_BO2.Sniper_BoltBack", t = 92 / 35},
+            {s = "ArcCW_BO2.Sniper_BoltFwd", t = 96 / 35},
         },
         LHIK = true,
         LHIKIn = 0.2,
@@ -343,8 +342,8 @@ SWEP.Animations = {
         Checkpoints = {33, 55},
         FrameRate = 30,
         SoundTable = {
-            {s = "ArcCW_BO2_SVD.ClipOut", t = 20 / 35},
-            {s = "ArcCW_BO2_SVD.ClipIn", t = 67 / 35},
+            {s = "ArcCW_BO1.WA2000_ClipOut", t = 20 / 35},
+            {s = "ArcCW_BO1.WA2000_ClipIn", t = 67 / 35},
         },
         LHIK = true,
         LHIKIn = 0.2,
@@ -357,10 +356,10 @@ SWEP.Animations = {
         Checkpoints = {33, 55, 88},
         FrameRate = 30,
         SoundTable = {
-            {s = "ArcCW_BO2_SVD.ClipOut", t = 20 / 35},
-            {s = "ArcCW_BO2_SVD.ClipIn", t = 67 / 35},
-            {s = "ArcCW_BO2_SVD.BoltBack", t = 92 / 35},
-            {s = "ArcCW_BO2_SVD.BoltFwd", t = 96 / 35},
+            {s = "ArcCW_BO1.WA2000_ClipOut", t = 20 / 35},
+            {s = "ArcCW_BO1.WA2000_ClipIn", t = 67 / 35},
+            {s = "ArcCW_BO2.Sniper_BoltBack", t = 92 / 35},
+            {s = "ArcCW_BO2.Sniper_BoltFwd", t = 96 / 35},
         },
         LHIK = true,
         LHIKIn = 0.2,

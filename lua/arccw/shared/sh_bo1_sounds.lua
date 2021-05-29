@@ -1925,6 +1925,49 @@ sound.Add({
     sound = "weapons/arccw/bo2_generic_sniper/fly_sniper_bf.wav"
 })
 
+-- WA 2000 main -- 
+
+sound.Add({
+    name = "ArcCW_BO1.WA2000_Shoot",
+    channel = CHAN_WEAPON + 1,
+    level = 100,
+    sound = "weapons/arccw/bo1_wa2000/fire.wav"
+})
+sound.Add({
+    name = "ArcCW_BO1.WA2000_Sil",
+    channel = CHAN_WEAPON + 1,
+    level = 100,
+    sound = "weapons/arccw/bo1_wa2000/sil.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.WA2000_ClipIn",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/bo1_wa2000/in.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.WA2000_ClipOut",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/bo1_wa2000/out.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.WA2000_Tap",
+    channel = CHAN_ITEM + 1,
+    level = 70,
+    sound = "weapons/arccw/bo1_wa2000/tap.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.WA2000_Scope",
+    channel = CHAN_ITEM + 1,
+    level = 70,
+    sound = "weapons/arccw/bo1_wa2000/scope.wav"
+})
+
 -- AWSM --
 
 sound.Add({
