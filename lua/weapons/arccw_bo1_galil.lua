@@ -146,15 +146,23 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 4, bg = 1},
         },
+        ExcludeFlags = {"nobip"},
     },
     ["bo1_mk"] = {
         VMBodygroups = {
             {ind = 4, bg = 2},
         },
+        ExcludeFlags = {"nobip"},
     },
     ["bo1_bipod"] = {
         VMBodygroups = {
             {ind = 4, bg = 3},
+        },
+        ExcludeFlags = {"nobip"},
+    },
+    ["nobip"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 4},
         },
     },
     ["mount"] = {
@@ -214,17 +222,8 @@ SWEP.Attachments = {
     }, --2
     {
         PrintName = "Underbarrel",
-        Slot = {"ubgl", "bo1_bipod"},
-        Bone = "tag_weapon",
-        VMScale = Vector(1, 1, 1),
-        WMScale = Vector(1, 1, 1),
-        Offset = {
-            vpos = Vector(8.25, 0, 0.1), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 0),
-            wpos = Vector(14.5, 0.8, -3.3),
-            wang = Angle(172.5, -180.5, -5),
-        },
-        MergeSlots = {4,5,6}
+        Slot = {"bo1_gp25", "bo1_mk", "bo1_bipod"},
+        MergeSlots = {4,5,6},
     }, --3
     {
         Hidden = true,
@@ -236,6 +235,7 @@ SWEP.Attachments = {
             wpos = Vector(15, 1.0, -3.5),
             wang = Angle(170, -180, -5),
         },
+        GivesFlags = {"nobip"}
     }, --4
     {
         Hidden = true,
@@ -247,10 +247,21 @@ SWEP.Attachments = {
             wpos = Vector(18, 0.8, -3.95),
             wang = Angle(175, -180.5, -5),
         },
+        GivesFlags = {"nobip"}
     }, -- 5
     {
         Hidden = true,
-        Slot = {"bo1_gp25", "bo1_mk"},
+        Slot = {"ubgl"},
+        Bone = "tag_weapon",
+        VMScale = Vector(1, 1, 1),
+        WMScale = Vector(1, 1, 1),
+        Offset = {
+            vpos = Vector(8.25, 0, 0.1), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+            wpos = Vector(14.5, 0.8, -3.3),
+            wang = Angle(172.5, -180.5, -5),
+        },
+        GivesFlags = {"nobip"}
     }, --6
     {
         PrintName = "Tactical",
