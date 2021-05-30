@@ -1,12 +1,15 @@
 {
 	"folders": [
 		{
+			"name": "ARCCW-BO1",
 			"path": "."
 		},
 		{
-			"path": "..\\[arccw]_bo1_extras"
+			"name": "ARCCW-CODEXTRAS",
+			"path": "..\\ARCCW-CODEXTRAS"
 		},
 		{
+			"name": "vmanip_codz_perks",
 			"path": "..\\vmanip_codz_perks"
 		}
 	],
