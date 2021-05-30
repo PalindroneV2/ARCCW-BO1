@@ -80,7 +80,7 @@ SWEP.MagID = "svd" -- the magazine pool this gun draws from
 SWEP.ShootVol = 110 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO2.SVD_Shoot"
+SWEP.ShootSound = "ArcCW_BO1.WA2000_Shoot"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
 
 SWEP.MuzzleEffect = "muzzleflash_1"
