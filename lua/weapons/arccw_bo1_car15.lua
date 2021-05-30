@@ -3,6 +3,10 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
+if GetConVar("arccw_codextras_merge"):GetBool() then
+    SWEP.Spawnable = false
+end
+
 SWEP.PrintName = "Colt Commando"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "The Colt Commando is a name for a family of carbine variants of the M16 rifle which would eventually evolve into the M4. Created for spec-ops unit MACV-SOG."
