@@ -197,11 +197,6 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0)
     },--1
-    /*{
-        PrintName = "Barrel",
-        DefaultAttName = "G3 Barrel",
-        Slot = "bo1_g3_barrel",
-    },--2*/
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
@@ -409,10 +404,10 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.G3_Out", t = 27 / 35},
-            {s = "ArcCW_BO1.G3_Futz", t = 97 / 35},
-            {s = "ArcCW_BO1.G3_In", t = 107 / 35},
-            {s = "ArcCW_BO1.M60_Bonk", t = 120 / 35}
+            {s = "ArcCW_BO1.HK21_Out", t = 27 / 35},
+            --{s = "ArcCW_BO1.G3_Futz", t = 97 / 35},
+            {s = "ArcCW_BO1.HK21_In", t = 100 / 35},
+            --{s = "ArcCW_BO1.M60_Bonk", t = 120 / 35}
         },
     },
     ["reload_empty"] = {
@@ -425,10 +420,10 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.G3_Out", t = 27 / 35},
-            {s = "ArcCW_BO1.G3_Futz", t = 97 / 35},
-            {s = "ArcCW_BO1.G3_In", t = 107 / 35},
-            {s = "ArcCW_BO1.M60_Bonk", t = 120 / 35},
+            {s = "ArcCW_BO1.HK21_Out", t = 27 / 35},
+            --{s = "ArcCW_BO1.G3_Futz", t = 97 / 35},
+            {s = "ArcCW_BO1.HK21_In", t = 100 / 35},
+            --{s = "ArcCW_BO1.M60_Bonk", t = 120 / 35},
             {s = "ArcCW_BO1.HK21_Pull", t = 152 / 35},
             {s = "ArcCW_BO1.HK21_Release", t = 157 / 35},
         },
@@ -443,9 +438,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.G3_Out", t = 27 / 35},
-            {s = "ArcCW_BO1.G3_Futz", t = 100 / 35},
-            {s = "ArcCW_BO1.G3_In", t = 108 / 35}
+            {s = "ArcCW_BO1.HK21_Out", t = 27 / 35},
+            --{s = "ArcCW_BO1.G3_Futz", t = 100 / 35},
+            {s = "ArcCW_BO1.HK21_In", t = 100 / 35}
         },
     },
     ["reload_empty_small"] = {
@@ -458,11 +453,11 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.G3_Out", t = 27 / 35},
-            {s = "ArcCW_BO1.G3_Futz", t = 100 / 35},
-            {s = "ArcCW_BO1.G3_In", t = 108 / 35},
+            {s = "ArcCW_BO1.HK21_Out", t = 27 / 35},
+            --{s = "ArcCW_BO1.G3_Futz", t = 100 / 35},
+            {s = "ArcCW_BO1.HK21_In", t = 100 / 35},
             {s = "ArcCW_BO1.HK21_Pull", t = 145 / 35},
-            {s = "ArcCW_BO1.HK21_Pull", t = 150 / 35},
+            {s = "ArcCW_BO1.HK21_Release", t = 150 / 35},
         },
     },
     ["enter_sprint"] = {

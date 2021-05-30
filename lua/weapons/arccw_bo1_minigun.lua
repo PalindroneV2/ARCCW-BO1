@@ -4,7 +4,9 @@ SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = true
 SWEP.AutoSpawnable = false
 
-SWEP.PrintName = "M134 Minigun"
+
+SWEP.PrintName = "Death Machine"
+SWEP.TrueName = "M134 Minigun"
 SWEP.Trivia_Class = "Rotary Medium Machine Gun"
 SWEP.Trivia_Desc = "How you manage to carry and fire this massive machine of death is of no concern. What you know is that wherever you take this with you there will be carnage."
 SWEP.Trivia_Manufacturer = "U.S. Ordnance"
@@ -12,6 +14,10 @@ SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Electrically driven rotary breech"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1960
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 
@@ -180,7 +186,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")
 
-    if papcamo then return vm:SetSkin(2) end
+    if papcamo then return vm:SetSkin(3) end
 end
 
 SWEP.Animations = {
