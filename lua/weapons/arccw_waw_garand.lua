@@ -333,6 +333,7 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 7 / 30,
         ShellEjectAt = 0,
+        SoundTable = {{ s = "weapons/arccw/waw_garand/mech.wav", t = 0 }}
     },
     ["fire_empty"] = {
         Source = {"fire_empty"},
@@ -340,6 +341,7 @@ SWEP.Animations = {
         ShellEjectAt = 0,
          SoundTable = {
             {s = "ArcCW_WAW.Garand_Ping", t = 0},
+            {s = "weapons/arccw/waw_garand/mech_last.wav", t = 0.05}
         },
     },
     ["fire_iron"] = {
