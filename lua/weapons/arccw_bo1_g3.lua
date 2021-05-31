@@ -478,9 +478,6 @@ SWEP.RejectAttachments = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[11].Installed == "ammo_papunch"
-    local wood = wep.Attachments[14].Installed == "bo1_cosmetic_wood"
-    local tan = wep.Attachments[14].Installed == "bo1_cosmetic_tan"
-    local odgreen = wep.Attachments[14].Installed == "bo1_cosmetic_odgreen"
     local stock = wep.Attachments[8].Installed == "bo1_solider_stock"
     local bipod = wep.Attachments[4].Installed == "bo1_bipod_integral"
     local scope = wep.Attachments[1].Installed
@@ -542,20 +539,16 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if scope then vm:SetBodygroup(2, 4) end
 
-    if papcamo then
-        return vm:SetSkin(2)
-    elseif papcamo and wood then
-        return vm:SetSkin(6)
-    elseif !papcamo and wood then
-        return vm:SetSkin(4)
-    elseif papcamo and tan then
-        return vm:SetSkin(10)
-    elseif !papcamo and tan then
-        return vm:SetSkin(8)
-    elseif papcamo and odgreen then
-        return vm:SetSkin(14)
-    elseif !papcamo and odgreen then
-        return vm:SetSkin(12)
+    local camo = 0
+    if wep.Attachments[14].Installed == "bo1_cosmetic_wood" then camo = 4
+    elseif wep.Attachments[14].Installed == "bo1_cosmetic_tan" then camo = 8
+    elseif wep.Attachments[14].Installed == "bo1_cosmetic_odgreen" then camo = 12
+    elseif wep.Attachments[14].Installed == "bo1_cosmetic_red" then camo = 16
+    end
+
+    for k = camo, camo do
+        vm:SetSkin(k)
+        if papcamo then vm:SetSkin(k + 2) end
     end
 end
 

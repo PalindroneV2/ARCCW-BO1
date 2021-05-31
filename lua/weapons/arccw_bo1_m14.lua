@@ -326,13 +326,13 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     if wep.Attachments[14].Installed == "bo1_cosmetic_wood" then camo = 4
     elseif  wep.Attachments[14].Installed == "bo1_cosmetic_black" then camo = 8
     elseif wep.Attachments[14].Installed == "bo1_cosmetic_odgreen" then camo = 12
+    elseif wep.Attachments[14].Installed == "bo1_cosmetic_red" then camo = 16
     end
 
     for k = camo, camo do
-        if !papcamo and camo == k then
-            vm:SetSkin(0 + camo)
-        elseif papcamo and camo == k then
-            vm:SetSkin(2 + camo)
+        vm:SetSkin(k)
+        if papcamo then
+            vm:SetSkin(k + 2)
         end
     end
 end
