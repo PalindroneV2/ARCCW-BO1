@@ -2028,6 +2028,18 @@ sound.Add({
         "weapons/arccw/bo1_m60/fire4.wav"
     }
 })
+
+sound.Add({
+    name = "ArcCW_BO1.Chaingun_Fire",
+    channel = CHAN_WEAPON + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_m60/dspistol.wav",
+    }
+})
+
 sound.Add({
     name = "ArcCW_BO1.M60_BoxOff",
     channel = CHAN_ITEM,
@@ -2690,6 +2702,50 @@ sound.Add( {
     pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_olympia/shell.wav",
+    }
+} )
+
+-- DOOM EE SSG RELOAD --
+
+sound.Add( {
+    name = "ArcCW_WAW.SSG_Fire",
+    channel = CHAN_WEAPON + 5,
+volume = 1,
+    level = 100,
+    pitch = {100},
+    sound = {
+        "weapons/arccw/waw_shotgun/fire_ssg.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_WAW.SSG_Open",
+    channel = CHAN_ITEM + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {100},
+    sound = {
+        "weapons/arccw/waw_shotgun/open_ssg.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.SSG_Close",
+    channel = CHAN_ITEM + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {100},
+    sound = {
+        "weapons/arccw/waw_shotgun/close_ssg.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.SSG_Shell",
+    channel = CHAN_ITEM + 5,
+    volume = 1.0,
+    level = 100,
+    pitch = {100},
+    sound = {
+        "weapons/arccw/waw_shotgun/shell_ssg.wav",
     }
 } )
 

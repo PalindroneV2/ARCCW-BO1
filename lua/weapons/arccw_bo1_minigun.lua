@@ -95,8 +95,8 @@ SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 3
 
-SWEP.SpeedMult = 0.5
-SWEP.SightedSpeedMult = 0.25
+SWEP.SpeedMult = 0.75
+SWEP.SightedSpeedMult = 0.75
 SWEP.SightTime = 1
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
@@ -147,10 +147,6 @@ SWEP.ExtraSightDist = 5
 --SWEP.DefaultPoseParams = {["idle"] = 0.5}
 
 SWEP.AttachmentElements = {
-    ["papname1"] = {
-        NamePriority = 10,
-        NameChange = "Meat Grinder",
-    },
 }
 
 SWEP.Attachments = {
@@ -168,7 +164,7 @@ SWEP.Attachments = {
     }, --3
     { --4
         PrintName = "Perk",
-        Slot = {"bo1_perk"}
+        Slot = {"bo1_perk", "bo1_perk_minigun"}
     }, --4
     { --5
         PrintName = "Charm",
@@ -188,6 +184,28 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if papcamo then return vm:SetSkin(3) end
 end
+
+SWEP.Hook_NameChange = function(wep, name)
+
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local chaingun = wep:GetBuff_Override("DOOM_EE")
+
+    local gunname = wep.PrintName
+
+    if pap then gunname = "Meat Grinder" end
+
+    if chaingun then
+        gunname = "Chaingun"
+        wep.ActivePos = Vector(-8.25, -10, 1)
+        wep.ActiveAng = Angle(5, 0, 0)
+    else
+        wep.ActivePos = Vector(1, 0, 0.5)
+        wep.ActiveAng = Angle(0, 0, 0)
+    end
+
+    return gunname
+end
+
 
 SWEP.Animations = {
     ["idle"] = {

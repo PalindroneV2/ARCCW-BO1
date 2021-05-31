@@ -244,21 +244,38 @@ end
 
 SWEP.Hook_NameChange = function(wep, name)
     local barrel = wep.Attachments[1].Installed == "bo1_dbs_barrel_sawnoff"
+    local ssg = wep.Attachments[1].Installed == "bo1_dbs_barrel_super"
     local pap = wep:GetBuff_Override("PackAPunch")
 
+    local gunname = "Double-Barreled Shotgun"
+
     if pap and !barrel then
-        return "24 Bore Long Range"
+        gunname = "24 Bore Long Range"
     elseif pap and barrel then
-        return "Super Shotgun"
+        gunname = "Snuff Box"
     elseif !pap and barrel then
-        return "Super Shotgun"
+        gunname = "Double-Barrel Shotgun Sawed-Off"
     end
+
+    if ssg then
+        gunname = "Super Shotgun"
+        wep.ActivePos = Vector(-2.6, -7.5, 0)
+        wep.ActiveAng = Angle(0, 0.05, 0)
+    else
+        wep.ActivePos = Vector(0, -7.5, 0)
+        wep.ActiveAng = Angle(0, 0, 0)
+    end
+
+    return gunname
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     local grip = wep:GetBuff_Override("IntegratedGrip")
+    local ssg = wep:GetBuff_Override("DOOM_EE")
 
+    if ssg and grip then return anim .. "_ssg_grip" end
     if grip then return anim .. "_grip" end
+    if ssg then return anim .. "_ssg" end
 end
 
 SWEP.Animations = {
@@ -325,6 +342,32 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.Olympia_Shell", t = 32 / 30},
             {s = "ArcCW_BO1.Olympia_Shell", t = 71 / 30},
             {s = "ArcCW_BO1.Olympia_Close", t = 95 / 30},
+        },
+    },
+    ["reload_ssg"] = {
+        Source = "reload_ssg",
+        Time = 35 / (30 / 2.25),
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+        SoundTable = {
+            {s = "ArcCW_WAW.SSG_Open", t = 7 / 30},
+            {s = "ArcCW_WAW.SSG_Shell", t = 16 / 30},
+            {s = "ArcCW_WAW.SSG_Close", t = 28 / 30},
+        },
+    },
+    ["reload_empty_ssg"] = {
+        Source = "reload_ssg",
+        Time = 35 / (30 / 2.25),
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+        SoundTable = {
+            {s = "ArcCW_WAW.SSG_Open", t = 7 / (30 / 2.25)},
+            {s = "ArcCW_WAW.SSG_Shell", t = 16 / (30 / 2.25)},
+            {s = "ArcCW_WAW.SSG_Close", t = 28 / (30 / 2.25)},
         },
     },
     ["enter_sprint"] = {
@@ -405,6 +448,32 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.Olympia_Shell", t = 32 / 30},
             {s = "ArcCW_BO1.Olympia_Shell", t = 71 / 30},
             {s = "ArcCW_BO1.Olympia_Close", t = 95 / 30},
+        },
+    },
+    ["reload_ssg_grip"] = {
+        Source = "reload_ssg_grip",
+        Time = 35 / (30 / 2.25),
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+        SoundTable = {
+            {s = "ArcCW_WAW.SSG_Open", t = 7 / (30 / 2.25)},
+            {s = "ArcCW_WAW.SSG_Shell", t = 16 / (30 / 2.25)},
+            {s = "ArcCW_WAW.SSG_Close", t = 28 / (30 / 2.25)},
+        },
+    },
+    ["reload_empty_ssg_grip"] = {
+        Source = "reload_ssg_grip",
+        Time = 35 / (30 / 2.25),
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+        SoundTable = {
+            {s = "ArcCW_WAW.SSG_Open", t = 7 / (30 / 2.25)},
+            {s = "ArcCW_WAW.SSG_Shell", t = 16 / (30 / 2.25)},
+            {s = "ArcCW_WAW.SSG_Close", t = 28 / (30 / 2.25)},
         },
     },
     ["enter_sprint_grip"] = {

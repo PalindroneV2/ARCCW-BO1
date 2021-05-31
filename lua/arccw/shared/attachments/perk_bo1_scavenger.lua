@@ -1,9 +1,8 @@
 att.PrintName = "Vulture Aid"
 att.Icon = Material("entities/acwatt_perk_scavenger.png")
-att.Description = "One third of your magazine is replenished to your reserve when hitting a foe."
+att.Description = "A portion of your magazine is replenished to your reserve when hitting a foe."
 att.Desc_Pros = {
-    "+ 50% chance of recovering 1/3 of",
-    "   a magazine when hitting an enemy.",
+    "+ 50% chance of recovering ammunition a magazine when hitting an enemy.",
 }
 att.Desc_Cons = {
     "- Does not replenish Underbarrel Grenade Launchers.",
@@ -20,11 +19,17 @@ att.Hook_BulletHit = function(wep, data)
 
     if math.Rand(0, 100) > 50 then return end
 
-    local scav = wep:Clip1() / 3
+    local mag = wep:Clip1()
+
+    local scav = mag / 3
+    if mag > 200 then
+        scav = mag / 5
+    end
+
 
     if ent then
         if wep.Owner:IsNPC() then
-            wep:SetClip1(wep:Clip1() + 1)
+            wep:SetClip1(mag + 1)
             return
         end
 
