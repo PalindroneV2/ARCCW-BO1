@@ -309,12 +309,14 @@ SWEP.Animations = {
             "fire",
         },
         Time = 9 / 10,
+        SoundTable = {{s = "ArcCW_WAW.DBS_Mech", t = 1 / 10}},
     },
     ["fire_iron"] = {
         Source = {
             "fire_ads",
         },
         Time = 9 / 10,
+        SoundTable = {{s = "ArcCW_WAW.DBS_Mech", t = 1 / 10}},
     },
     ["reload"] = {
         Source = "reload",

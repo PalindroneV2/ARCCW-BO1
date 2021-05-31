@@ -2607,13 +2607,33 @@ sound.Add( {
     }
 } )
 sound.Add( {
-    name = "ArcCW_WAW.DBS_Fire",
+    name = "ArcCW_WAW.Trenchgun_Mech",
     channel = CHAN_WEAPON + 5,
 volume = 1,
     level = 100,
     pitch = {95, 110},
     sound = {
+        "weapons/arccw/waw_shotgun/mech_trench.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.DBS_Fire",
+    channel = CHAN_STATIC,
+volume = 1,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
         "weapons/arccw/waw_shotgun/fire_double.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.DBS_Mech",
+    channel = CHAN_WEAPON + 5,
+volume = 1,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_shotgun/mech_double.wav",
     }
 } )
 sound.Add( {
