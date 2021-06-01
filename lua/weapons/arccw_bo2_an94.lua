@@ -9,7 +9,7 @@ SWEP.Trivia_Desc = "A russian assault rifle with a design derived from the class
 SWEP.Trivia_Manufacturer = "Izhmash"
 SWEP.Trivia_Calibre = "5.45x39mm"
 SWEP.Trivia_Mechanism = "Gas-Operated"
-SWEP.Trivia_Country = "USSR"
+SWEP.Trivia_Country = "Russia"
 SWEP.Trivia_Year = 1994
 
 SWEP.Slot = 2
