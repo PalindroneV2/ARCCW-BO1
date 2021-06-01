@@ -5,7 +5,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m16/fire1.wav",
         "weapons/arccw/bo1_m16/fire2.wav",
@@ -19,7 +19,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m16/sil1.wav",
         "weapons/arccw/bo1_m16/sil2.wav",
@@ -33,7 +33,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m16/m16_mag_in.wav",
     }
@@ -43,7 +43,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m16/m16_mag_out.wav",
     }
@@ -53,7 +53,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m16/m16_button.wav",
     }
@@ -63,7 +63,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m16/m16_charge.wav",
     }
@@ -73,7 +73,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m16/m16_futz.wav",
     }
@@ -86,7 +86,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_aug/fire1.wav",
         "weapons/arccw/bo1_aug/fire2.wav",
@@ -100,7 +100,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_aug/sil1.wav",
         "weapons/arccw/bo1_aug/sil2.wav",
@@ -113,7 +113,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_aug/mag_in.wav",
     }
@@ -123,7 +123,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_aug/mag_out.wav",
     }
@@ -133,7 +133,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_aug/bolt_back.wav",
     }
@@ -143,7 +143,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_aug/bolt_fwd.wav",
     }
@@ -153,7 +153,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_aug/grip_down.wav",
     }
@@ -166,7 +166,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_xl60/fire1.wav",
         "weapons/arccw/bo1_xl60/fire2.wav",
@@ -180,7 +180,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_XL60/in.wav",
     }
@@ -190,7 +190,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_XL60/out.wav",
     }
@@ -200,7 +200,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_XL60/bolt.wav",
     }
@@ -210,7 +210,7 @@ sound.Add( {
     channel = CHAN_ITEM + 1,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_XL60/futz.wav",
     }
@@ -223,7 +223,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_famas/fire1.wav",
         "weapons/arccw/bo1_famas/fire2.wav",
@@ -237,7 +237,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_famas/mag_in.wav",
     }
@@ -247,7 +247,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_famas/mag_out.wav",
     }
@@ -257,7 +257,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_famas/bolt_back.wav",
     }
@@ -267,7 +267,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_famas/bolt_fwd.wav",
     }
@@ -277,7 +277,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_famas/futz.wav",
     }
@@ -290,7 +290,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_ak47/fire1.wav",
         "weapons/arccw/bo1_ak47/fire2.wav",
@@ -300,11 +300,25 @@ sound.Add( {
     }
 } )
 sound.Add( {
+    name = "ArcCW_BO1.AK47_Ringoff",
+    channel = CHAN_AUTO + 5,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_ak47/dist1.wav",
+        "weapons/arccw/bo1_ak47/dist2.wav",
+        "weapons/arccw/bo1_ak47/dist3.wav",
+        "weapons/arccw/bo1_ak47/dist4.wav",
+        "weapons/arccw/bo1_ak47/dist5.wav",
+    }
+} )
+sound.Add( {
     name = "ArcCW_BO1.AK74u_Fire",
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_ak74u/fire1.wav",
         "weapons/arccw/bo1_ak74u/fire2.wav",
@@ -314,11 +328,23 @@ sound.Add( {
     }
 } )
 sound.Add( {
+    name = "ArcCW_BO1.AK74u_Ringoff",
+    channel = CHAN_AUTO + 5,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_ak74u/dist1.wav",
+        "weapons/arccw/bo1_ak74u/dist2.wav",
+        "weapons/arccw/bo1_ak74u/dist3.wav",
+    }
+} )
+sound.Add( {
     name = "ArcCW_BO1.AK_MagIn",
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_ak47/ak_in.wav",
     }
@@ -328,7 +354,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_ak47/ak_out.wav",
     }
@@ -338,7 +364,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_ak47/ak_charge.wav",
     }
@@ -348,7 +374,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_ak47/ak_boltback.wav",
     }
@@ -358,7 +384,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_ak47/ak_boltfwd.wav",
     }
@@ -368,7 +394,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_ak47/ak_futz.wav",
     }
@@ -381,7 +407,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_galil/fire1.wav",
         "weapons/arccw/bo1_galil/fire2.wav",
@@ -395,7 +421,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_galil/mag_in.wav",
     }
@@ -405,7 +431,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_galil/mag_out.wav",
     }
@@ -415,7 +441,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_galil/charge.wav",
     }
@@ -425,7 +451,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_galil/galil_bb.wav",
     }
@@ -435,7 +461,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_galil/galil_bf.wav",
     }
@@ -445,7 +471,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_galil/futz.wav",
     }
@@ -458,7 +484,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_fal/fire1.wav",
         "weapons/arccw/bo1_fal/fire2.wav",
@@ -472,7 +498,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_fal/sil1.wav",
         "weapons/arccw/bo1_fal/sil2.wav",
@@ -486,7 +512,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_fal/fal_mag_in.wav",
     }
@@ -496,7 +522,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_fal/fal_mag_out.wav",
     }
@@ -506,7 +532,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_fal/fal_button.wav",
     }
@@ -516,7 +542,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_fal/fal_charge.wav",
     }
@@ -526,7 +552,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_fal/fal_futz.wav",
     }
@@ -539,7 +565,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_g11/fire1.wav",
         "weapons/arccw/bo1_g11/fire2.wav",
@@ -553,7 +579,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_g11/mag_in.wav",
     }
@@ -563,7 +589,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_g11/mag_out.wav",
     }
@@ -573,7 +599,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_g11/tap.wav",
     }
@@ -583,7 +609,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_g11/spin1.wav",
     }
@@ -593,7 +619,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_g11/spin2.wav",
     }
@@ -603,7 +629,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_g11/spin3.wav",
     }
@@ -613,7 +639,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_g11/futz.wav",
     }
@@ -626,7 +652,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m14/fire1.wav",
         "weapons/arccw/bo1_m14/fire2.wav",
@@ -640,7 +666,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m14/mag_in.wav",
     }
@@ -650,7 +676,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m14/mag_out.wav",
     }
@@ -660,7 +686,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m14/bolt_back.wav",
     }
@@ -670,7 +696,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m14/bolt_fwd.wav",
     }
@@ -680,7 +706,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m14/futz.wav",
     }
@@ -693,7 +719,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    --pitch = {95, 110},
+    ----pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_garand/fire.wav",
     }
@@ -703,7 +729,7 @@ sound.Add( {
     channel = CHAN_ITEM + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_garand/in.wav",
     }
@@ -713,7 +739,7 @@ sound.Add( {
     channel = CHAN_ITEM + 2,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_garand/out.wav",
     }
@@ -723,7 +749,7 @@ sound.Add( {
     channel = CHAN_ITEM + 3,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_garand/close.wav",
     }
@@ -742,7 +768,7 @@ sound.Add( {
     channel = CHAN_ITEM + 15,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_garand/ping.wav",
     }
@@ -830,7 +856,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 1,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo2_generic_ar/fire_m27.wav",
     }
@@ -840,7 +866,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 1,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo2_generic_ar/fire_an94.wav",
     }
@@ -850,7 +876,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 1,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo2_generic_ar/fire_sil.wav",
     }
@@ -860,7 +886,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo2_generic_ar/in.wav",
     }
@@ -870,7 +896,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo2_generic_ar/out.wav",
     }
@@ -880,7 +906,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo2_generic_ar/charge.wav",
     }
@@ -890,7 +916,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo2_generic_ar/back.wav",
     }
@@ -900,7 +926,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo2_generic_ar/fwd.wav",
     }
@@ -913,7 +939,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bopack_stg44/stg44_fire1.wav",
         "weapons/arccw/bopack_stg44/stg44_fire2.wav",
@@ -926,7 +952,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "^weapons/arccw/bopack_stg44/stg44_dod_fire.wav",
     }
@@ -936,7 +962,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bopack_stg44/stg44_waw_fire.wav",
     }
@@ -946,7 +972,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bopack_stg44/fly_galil_mag_out.wav",
     }
@@ -956,7 +982,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bopack_stg44/fly_galil_mag_in.wav",
     }
@@ -966,7 +992,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bopack_stg44/fly_galil_bolt_back.wav",
     }
@@ -976,7 +1002,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bopack_stg44/fly_galil_bolt_release.wav",
     }
@@ -989,7 +1015,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo2_mp5/fire1.wav",
         "weapons/arccw/bo2_mp5/fire2.wav",
@@ -1003,7 +1029,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo2_mp5/mag_in.wav",
     }
@@ -1013,7 +1039,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo2_mp5/mag_out.wav",
     }
@@ -1023,7 +1049,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo2_mp5/pull_charge.wav",
     }
@@ -1033,7 +1059,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo2_mp5/charge.wav",
     }
@@ -1043,7 +1069,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo2_mp5/futz.wav",
     }
@@ -1056,7 +1082,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_pm63/fire1.wav",
         "weapons/arccw/bo1_pm63/fire2.wav",
@@ -1070,7 +1096,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_pm63/in.wav",
     }
@@ -1080,7 +1106,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_pm63/out.wav",
     }
@@ -1090,7 +1116,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_pm63/pull.wav",
     }
@@ -1100,7 +1126,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_pm63/fwd.wav",
     }
@@ -1110,7 +1136,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_pm63/futz.wav",
     }
@@ -1123,7 +1149,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mpl/fire1.wav",
         "weapons/arccw/bo1_mpl/fire2.wav",
@@ -1137,7 +1163,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mpl/mag_in.wav",
     }
@@ -1147,7 +1173,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mpl/mag_out.wav",
     }
@@ -1157,7 +1183,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mpl/charge_pull.wav",
     }
@@ -1167,7 +1193,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mpl/charge.wav",
     }
@@ -1177,7 +1203,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mpl/futz.wav",
     }
@@ -1187,7 +1213,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mpl/tap.wav",
     }
@@ -1200,7 +1226,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_kiparis/fire1.wav",
         "weapons/arccw/bo1_kiparis/fire2.wav",
@@ -1214,7 +1240,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_kiparis/in.wav",
     }
@@ -1224,7 +1250,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_kiparis/out.wav",
     }
@@ -1234,7 +1260,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_kiparis/charge.wav",
     }
@@ -1247,7 +1273,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_mp40/mp40_fire.wav",
     }
@@ -1257,7 +1283,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_mp40/mag_in.wav",
     }
@@ -1267,7 +1293,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_mp40/mag_out.wav",
     }
@@ -1277,7 +1303,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_mp40/charge.wav",
     }
@@ -1290,7 +1316,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    --pitch = {95, 110},
+    ----pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_thompson/fire.wav",
     }
@@ -1300,7 +1326,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_thompson/in.wav",
     }
@@ -1310,7 +1336,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_thompson/out.wav",
     }
@@ -1320,7 +1346,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_thompson/charge.wav",
     }
@@ -1333,7 +1359,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_ppsh/ppsh_fire1.wav",
     }
@@ -1343,7 +1369,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_ppsh/mag_in.wav",
     }
@@ -1353,7 +1379,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_ppsh/mag_tap.wav",
     }
@@ -1363,7 +1389,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_ppsh/mag_out.wav",
     }
@@ -1373,7 +1399,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_ppsh/bolt_fwd.wav",
     }
@@ -1386,7 +1412,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_uzi/fire1.wav",
         "weapons/arccw/bo1_uzi/fire2.wav",
@@ -1400,7 +1426,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_uzi/mag_in.wav",
     }
@@ -1410,7 +1436,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_uzi/mag_out.wav",
     }
@@ -1420,7 +1446,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_uzi/pull_charge.wav",
     }
@@ -1430,7 +1456,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_uzi/charge.wav",
     }
@@ -1440,7 +1466,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_uzi/futz.wav",
     }
@@ -1453,7 +1479,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_spectre/fire1.wav",
         "weapons/arccw/bo1_spectre/fire2.wav",
@@ -1467,7 +1493,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_spectre/in.wav",
     }
@@ -1477,7 +1503,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_spectre/out.wav",
     }
@@ -1487,7 +1513,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_spectre/back.wav",
     }
@@ -1497,7 +1523,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_spectre/fwd.wav",
     }
@@ -1507,7 +1533,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_spectre/futz.wav",
     }
@@ -1520,7 +1546,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_skorpion/fire1.wav",
         "weapons/arccw/bo1_skorpion/fire2.wav",
@@ -1534,7 +1560,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 2,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_skorpion/ringoff_f.wav",
     }
@@ -1544,7 +1570,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 2,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_skorpion/ringoff_r.wav",
     }
@@ -1554,7 +1580,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_skorpion/in.wav",
     }
@@ -1564,7 +1590,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_skorpion/out.wav",
     }
@@ -1574,7 +1600,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_skorpion/pull.wav",
     }
@@ -1584,7 +1610,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_skorpion/fwd.wav",
     }
@@ -1594,7 +1620,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_skorpion/futz.wav",
     }
@@ -1607,7 +1633,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mac11/fire1.wav",
         "weapons/arccw/bo1_mac11/fire2.wav",
@@ -1621,7 +1647,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mac11/in.wav",
     }
@@ -1631,7 +1657,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mac11/out.wav",
     }
@@ -1641,7 +1667,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mac11/charge.wav",
     }
@@ -1651,7 +1677,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 2,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mac11/ringoff_f.wav",
     }
@@ -1661,7 +1687,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 2,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mac11/ringoff_r.wav",
     }
@@ -1671,7 +1697,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mac11/futz.wav",
     }
@@ -1681,7 +1707,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mac11/stock.wav",
     }
@@ -1694,7 +1720,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_psg1/fire.wav",
     }
@@ -1704,7 +1730,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_psg1/mag_in.wav",
     }
@@ -1714,7 +1740,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_psg1/mag_out.wav",
     }
@@ -1724,7 +1750,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_psg1/charge.wav",
     }
@@ -1734,7 +1760,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_psg1/futz.wav",
     }
@@ -1747,7 +1773,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_hk21/fire1.wav",
         "weapons/arccw/bo1_hk21/fire2.wav",
@@ -1756,11 +1782,21 @@ sound.Add( {
     }
 } )
 sound.Add( {
+    name = "ArcCW_BO1.HK21_Dist",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_hk21/dist.wav",
+    }
+} )
+sound.Add( {
     name = "ArcCW_BO1.HK21_In",
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_hk21/mag_in.wav",
     }
@@ -1770,7 +1806,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_hk21/mag_out.wav",
     }
@@ -1780,7 +1816,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_hk21/pull.wav",
     }
@@ -1790,7 +1826,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_hk21/release.wav",
     }
@@ -1803,7 +1839,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_stoner/fire1.wav",
         "weapons/arccw/bo1_stoner/fire2.wav",
@@ -1820,7 +1856,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_rpk/fire1.wav",
         "weapons/arccw/bo1_rpk/fire2.wav",
@@ -1835,7 +1871,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_rpk/in.wav",
     }
@@ -1845,7 +1881,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_rpk/out.wav",
     }
@@ -1855,7 +1891,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_rpk/back.wav",
     }
@@ -1865,7 +1901,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_rpk/fwd.wav",
     }
@@ -1875,7 +1911,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_rpk/futz.wav",
     }
@@ -2020,7 +2056,7 @@ sound.Add({
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m60/fire1.wav",
         "weapons/arccw/bo1_m60/fire2.wav",
@@ -2034,7 +2070,7 @@ sound.Add({
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m60/dspistol.wav",
     }
@@ -2114,7 +2150,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m1911/fire1.wav",
         "weapons/arccw/bo1_m1911/fire2.wav",
@@ -2128,15 +2164,23 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_m1911/fire_waw.wav"}
 } )
 sound.Add( {
-    name = "ArcCW_WAW.M1911_RingOff",
-    channel = CHAN_WEAPON + 5,
+    name = "ArcCW_BO1.M1911_RingOff",
+    channel = CHAN_AUTO,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
+    sound = {"weapons/arccw/bo1_m1911/ringoff.wav"}
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1911_RingOff",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_m1911/ringoff_waw.wav"}
 } )
 sound.Add( {
@@ -2144,7 +2188,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_m1911/in1.wav"}
 } )
 sound.Add( {
@@ -2152,7 +2196,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_m1911/out.wav"}
 } )
 sound.Add( {
@@ -2160,7 +2204,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_m1911/slide_back.wav"}
 } )
 sound.Add( {
@@ -2168,7 +2212,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_m1911/slide_fwd.wav"}
 } )
 sound.Add( {
@@ -2176,7 +2220,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_m1911/deploy2.wav"}
 } )
 
@@ -2186,7 +2230,7 @@ sound.Add({
     name = "ArcCW_BO2.M1911_Fire",
     channel = CHAN_WEAPON + 5,
     level = 100,
-    sound = "weapons/arccw/bo2_generic_pistol/fire_heavier.wav"
+    sound = "weapons/arccw/bo2_generic_pistol/fire_heavy.wav"
 })
 sound.Add({
     name = "ArcCW_BO2.BHP_Fire",
@@ -2201,34 +2245,40 @@ sound.Add({
     sound = "weapons/arccw/bo2_generic_pistol/fire_b23r.wav"
 })
 sound.Add({
-    name = "ArcCW_BO2.M1911_Sil",
+    name = "ArcCW_BO2.Pistol_Sil",
     channel = CHAN_WEAPON + 5,
     level = 100,
-    sound = "weapons/arccw/bo2_generic_pistol/wpn_fiveseven_sil_shot_plr.wav"
+    sound = "weapons/arccw/bo2_generic_pistol/sil_bo2.wav"
 })
 sound.Add({
-    name = "ArcCW_BO2.M1911_MagIn",
+    name = "ArcCW_BO2.Pistol_RingOff",
+    channel = CHAN_WEAPON,
+    level = 100,
+    sound = "weapons/arccw/bo2_generic_pistol/ringoff_bo2.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.Pistol_MagIn",
     channel = CHAN_ITEM,
     level = 70,
     sound = "weapons/arccw/bo2_generic_pistol/magin.wav"
 })
 
 sound.Add({
-    name = "ArcCW_BO2.M1911_MagOut",
+    name = "ArcCW_BO2.Pistol_MagOut",
     channel = CHAN_ITEM,
     level = 70,
     sound = "weapons/arccw/bo2_generic_pistol/magout.wav"
 })
 
 sound.Add({
-    name = "ArcCW_BO2.M1911_SlideBack",
+    name = "ArcCW_BO2.Pistol_SlideBack",
     channel = CHAN_ITEM,
     level = 70,
     sound = "weapons/arccw/bo2_generic_pistol/slideback.wav"
 })
 
 sound.Add({
-    name = "ArcCW_BO2.M1911_SlideFwd",
+    name = "ArcCW_BO2.Pistol_SlideFwd",
     channel = CHAN_ITEM,
     level = 70,
     sound = "weapons/arccw/bo2_generic_pistol/slidefwd.wav"
@@ -2268,7 +2318,7 @@ sound.Add({
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = "weapons/arccw/pap/fusion.wav"
 })
 
@@ -2279,7 +2329,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_makarov/fire.wav"}
 } )
 sound.Add( {
@@ -2287,7 +2337,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_makarov/makarov_in.wav"}
 } )
 sound.Add( {
@@ -2295,7 +2345,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_makarov/makarov_out.wav"}
 } )
 sound.Add( {
@@ -2303,7 +2353,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_makarov/makarov_slideb.wav"}
 } )
 sound.Add( {
@@ -2311,7 +2361,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_makarov/makarov_slidef.wav"}
 } )
 
@@ -2322,7 +2372,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_cz75/fire1.wav",
         "weapons/arccw/bo1_cz75/fire2.wav",
@@ -2337,7 +2387,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_tt33/fire.wav",
     }
@@ -2347,7 +2397,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 1,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_cz75/ringoff.wav"}
 } )
 sound.Add( {
@@ -2355,7 +2405,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_cz75/in.wav"}
 } )
 sound.Add( {
@@ -2363,7 +2413,7 @@ sound.Add( {
     channel = CHAN_ITEM + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_cz75/futz.wav"}
 } )
 sound.Add( {
@@ -2371,7 +2421,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_cz75/out.wav"}
 } )
 sound.Add( {
@@ -2379,7 +2429,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_cz75/slideb.wav"}
 } )
 sound.Add( {
@@ -2387,7 +2437,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_cz75/slidef.wav"}
 } )
 
@@ -2398,7 +2448,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_asp/fire1.wav",
         "weapons/arccw/bo1_asp/fire2.wav",
@@ -2412,7 +2462,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_asp/mag_in.wav"}
 } )
 sound.Add( {
@@ -2420,7 +2470,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_asp/mag_out.wav"}
 } )
 sound.Add( {
@@ -2428,7 +2478,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_asp/slide_back.wav"}
 } )
 sound.Add( {
@@ -2436,7 +2486,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_asp/slide_fwd.wav"}
 } )
 sound.Add( {
@@ -2444,7 +2494,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_asp/hammer.wav"}
 } )
 sound.Add( {
@@ -2452,7 +2502,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_asp/futz.wav"}
 } )
 
@@ -2468,6 +2518,14 @@ sound.Add({
         "weapons/arccw/bo1_python/fire3.wav",
         "weapons/arccw/bo1_python/fire4.wav",
         "weapons/arccw/bo1_python/fire5.wav",
+    }
+})
+sound.Add({
+    name = "ArcCW_BO1.Python_RingOff",
+    channel = CHAN_AUTO,
+    level = 100,
+    sound = {
+        "weapons/arccw/bo1_python/ringoff.wav",
     }
 })
 sound.Add({
@@ -2538,7 +2596,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m203/40mm_fire.wav",
     }
@@ -2548,7 +2606,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m203/m203_open.wav",
     }
@@ -2558,7 +2616,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m203/m203_close.wav",
     }
@@ -2568,7 +2626,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m203/40mm_in.wav",
     }
@@ -2578,7 +2636,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_m203/40mm_out.wav",
     }
@@ -2591,7 +2649,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mk/fire.wav",
     }
@@ -2601,7 +2659,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_shotgun/fire_trench.wav",
     }
@@ -2611,7 +2669,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
 volume = 1,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_shotgun/mech_trench.wav",
     }
@@ -2621,7 +2679,7 @@ sound.Add( {
     channel = CHAN_STATIC,
 volume = 1,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_shotgun/fire_double.wav",
     }
@@ -2631,7 +2689,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
 volume = 1,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_shotgun/mech_double.wav",
     }
@@ -2641,7 +2699,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mk/pump_back.wav",
     }
@@ -2651,7 +2709,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mk/pump_fwd.wav",
     }
@@ -2661,7 +2719,7 @@ sound.Add( {
     channel = CHAN_ITEM + 6,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_mk/shell1.wav",
         "weapons/arccw/bo1_mk/shell2.wav",
@@ -2679,7 +2737,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_olympia/shot.wav",
     }
@@ -2689,7 +2747,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_olympia/close.wav",
     }
@@ -2699,7 +2757,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_olympia/open.wav",
     }
@@ -2709,7 +2767,7 @@ sound.Add( {
     channel = CHAN_ITEM + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_olympia/switch.wav",
     }
@@ -2719,7 +2777,7 @@ sound.Add( {
     channel = CHAN_ITEM + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_olympia/shell.wav",
     }
@@ -2732,7 +2790,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
 volume = 1,
     level = 100,
-    pitch = {100},
+    --pitch = {100},
     sound = {
         "weapons/arccw/waw_shotgun/fire_ssg.wav",
     }
@@ -2743,7 +2801,7 @@ sound.Add( {
     channel = CHAN_ITEM + 5,
     volume = 1.0,
     level = 100,
-    pitch = {100},
+    --pitch = {100},
     sound = {
         "weapons/arccw/waw_shotgun/open_ssg.wav",
     }
@@ -2753,7 +2811,7 @@ sound.Add( {
     channel = CHAN_ITEM + 5,
     volume = 1.0,
     level = 100,
-    pitch = {100},
+    --pitch = {100},
     sound = {
         "weapons/arccw/waw_shotgun/close_ssg.wav",
     }
@@ -2763,7 +2821,7 @@ sound.Add( {
     channel = CHAN_ITEM + 5,
     volume = 1.0,
     level = 100,
-    pitch = {100},
+    --pitch = {100},
     sound = {
         "weapons/arccw/waw_shotgun/shell_ssg.wav",
     }
@@ -2776,7 +2834,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_rifgren/click.wav",
     }
@@ -2786,7 +2844,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_rifgren/futz.wav",
     }
@@ -2796,7 +2854,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_rifgren/load.wav",
     }
@@ -2806,7 +2864,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_rifgren/remove.wav",
     }
@@ -2819,7 +2877,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_mg42/fire.wav",
     }
@@ -2829,7 +2887,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_mg42/mag_in.wav",
     }
@@ -2839,7 +2897,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_mg42/mag_tap.wav",
     }
@@ -2849,7 +2907,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_mg42/mag_out.wav",
     }
@@ -2859,7 +2917,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_mg42/bolt_fwd.wav",
     }
@@ -2872,7 +2930,7 @@ sound.Add({
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = "weapons/arccw/bo1_raygun/fire.wav"
 })
 sound.Add({
@@ -2924,7 +2982,7 @@ sound.Add({
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = "weapons/arccw/waw_dg2/fire.wav"
 })
 sound.Add({
@@ -2989,7 +3047,7 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/pap/pap_fire.wav"}
 } )
 
@@ -3058,7 +3116,7 @@ sound.Add( {
     channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
-    pitch = {100},
+    --pitch = {100},
     sound = {"weapons/arccw/bo1_flamer/loop.wav"}
 } )
 sound.Add( {
@@ -3066,7 +3124,7 @@ sound.Add( {
     channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
-    pitch = {100},
+    --pitch = {100},
     sound = {"weapons/arccw/bo1_flamer/start.wav"}
 } )
 sound.Add( {
@@ -3074,7 +3132,7 @@ sound.Add( {
     channel = CHAN_WEAPON + 5,
     volume = 1.0,
     level = 100,
-    pitch = {100},
+    --pitch = {100},
     sound = {"weapons/arccw/bo1_flamer/stop.wav"}
 } )
 sound.Add( {
@@ -3082,7 +3140,7 @@ sound.Add( {
     channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
-    pitch = {100},
+    --pitch = {100},
     sound = {"weapons/arccw/bo1_flamer/startloop.wav"}
 } )
 sound.Add( {
@@ -3090,7 +3148,7 @@ sound.Add( {
     channel = CHAN_ITEM + 1,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_flamer/lock.wav"}
 } )
 sound.Add( {
@@ -3098,7 +3156,7 @@ sound.Add( {
     channel = CHAN_ITEM + 1,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_flamer/pull.wav"}
 } )
 sound.Add( {
@@ -3106,7 +3164,7 @@ sound.Add( {
     channel = CHAN_ITEM + 1,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_flamer/remove.wav"}
 } )
 sound.Add( {
@@ -3114,7 +3172,7 @@ sound.Add( {
     channel = CHAN_ITEM + 1,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_flamer/replace.wav"}
 } )
 sound.Add( {
@@ -3122,7 +3180,7 @@ sound.Add( {
     channel = CHAN_ITEM + 1,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_flamer/drop.wav"}
 } )
 sound.Add( {
@@ -3130,7 +3188,7 @@ sound.Add( {
     channel = CHAN_ITEM + 1,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_flamer/flame_front.wav"}
 } )
 sound.Add( {
@@ -3138,6 +3196,6 @@ sound.Add( {
     channel = CHAN_ITEM + 1,
     volume = 1.0,
     level = 100,
-    pitch = {95, 110},
+    --pitch = {95, 110},
     sound = {"weapons/arccw/bo1_flamer/flame_rear.wav"}
 } )

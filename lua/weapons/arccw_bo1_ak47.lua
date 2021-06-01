@@ -80,6 +80,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_BO1.AK47_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
+SWEP.DistantShootSound = "ArcCW_BO1.AK47_Ringoff"
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_762nato.mdl"
@@ -421,6 +422,13 @@ SWEP.Hook_GetShootSound = function(wep, sound)
             return "ArcCW_BO1.M16_Sil"
         end
         return "ArcCW_BO1.AK74u_Fire"
+    end
+end
+
+SWEP.Hook_GetDistantShootSound = function(wep, distancesound)
+    local bake = wep.Attachments[9].Installed == "ammo_ak_74"
+    if bake then
+        return "ArcCW_BO1.AK74u_Ringoff"
     end
 end
 

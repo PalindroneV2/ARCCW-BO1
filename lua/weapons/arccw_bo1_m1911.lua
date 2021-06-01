@@ -84,8 +84,8 @@ SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_BO1.M1911_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO2.M1911_Sil"
-SWEP.DistantShootSound = "weapons/arccw/bo1_m1911/1911_ring_00.wav"
+SWEP.ShootSoundSilenced = "ArcCW_BO2.Pistol_Sil"
+SWEP.DistantShootSound = "ArcCW_BO1.M1911_RingOff"
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
@@ -464,6 +464,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 end
 
+/*
 SWEP.Hook_GetShootSound = function(wep, sound)
     local bo2sound = wep.Attachments[9].Installed == "1911_bo2_sound"
     local wawsound = wep.Attachments[9].Installed == "1911_waw_sound"
@@ -478,9 +479,11 @@ SWEP.Hook_GetShootSound = function(wep, sound)
         if sil then
             return "ArcCW_BO2.M1911_Sil"
         end
+        wep.DistantShootSound = "ArcCW_BO2.Pistol_RingOff"
         return "ArcCW_WAW.M1911_Fire"
     else return end
 end
+*/
 
 SWEP.counter = 0
 

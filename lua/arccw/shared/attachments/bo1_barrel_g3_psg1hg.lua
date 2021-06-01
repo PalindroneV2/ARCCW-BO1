@@ -33,3 +33,9 @@ att.Override_Firemodes = {
 att.Hook_GetShootSound = function(wep, sound)
   return "ArcCW_BO1.G3_Fire"
 end
+
+att.Hook_GetDistantShootSound = function(wep, distancesound)
+  if distancesound == wep.DistantShootSound then
+      return "weapons/arccw/bo1_generic_sniper/ringoff/1/ring_02.wav"
+  end
+end

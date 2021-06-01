@@ -111,7 +111,7 @@ SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
     Pos = Vector (-3.05, -8, -0.75),
-    Ang = Angle(0.4, -0.05, 0),
+    Ang = Angle(0.375, 0, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -413,6 +413,19 @@ SWEP.Hook_GetShootSound = function(wep, sound)
             "weapons/arccw/bo1_aug/ringoff_r.wav"
         }
         return
+    end
+end
+
+SWEP.Hook_GetDistantShootSound = function(wep, distancesound)
+    local mp = wep.Attachments[10].Installed == "ammo_stg44_9mm"
+    local sndatt = wep.Attachments[14].Installed
+
+    if sndatt == "stg44_waw_sound" then
+        return "weapons/arccw/waw_dist/waw_rifle.wav"
+    elseif sndatt == "stg44_dods_sound" then
+        return ""
+    elseif mp then
+        return "weapons/arccw/waw_dist/waw_9mm.wav"
     end
 end
 

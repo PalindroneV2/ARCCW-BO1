@@ -9,13 +9,13 @@ att.Slot = "1911_sound"
 
 att.Free = true
 
-/*
+
 att.Hook_GetShootSound = function(wep, sound)
     return "ArcCW_BO2.M1911_Fire"
 end
-*/
 
 att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then
-        return "weapons/arccw/bo1_m1911/ringoff_bo2.wav" end
+        return "ArcCW_BO2.Pistol_Ringoff"
+    end
 end
