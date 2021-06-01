@@ -82,7 +82,7 @@ SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_BO1.Python_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO2.M1911_Sil"
+SWEP.ShootSoundSilenced = "ArcCW_BO2.Pistol_Sil"
 SWEP.DistantShootSound = "ArcCW_BO1.Python_RingOff"
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"

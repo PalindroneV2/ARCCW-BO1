@@ -472,12 +472,12 @@ SWEP.Hook_GetShootSound = function(wep, sound)
 
     if bo2sound then
         if sil then
-            return "ArcCW_BO2.M1911_Sil"
+            return "ArcCW_BO2.Pistol_Sil"
         end
         return "ArcCW_BO2.M1911_Fire"
     elseif wawsound then
         if sil then
-            return "ArcCW_BO2.M1911_Sil"
+            return "ArcCW_BO2.Pistol_Sil"
         end
         wep.DistantShootSound = "ArcCW_BO2.Pistol_RingOff"
         return "ArcCW_WAW.M1911_Fire"
@@ -547,8 +547,8 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 1,
         SoundTable = {
-            {s = "ArcCW_BO2.M1911_SlideBack", t = 0.2},
-            {s = "ArcCW_BO2.M1911_SlideFwd", t = 0.8}
+            {s = "ArcCW_BO2.Pistol_SlideBack", t = 0.2},
+            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 0.8}
         }
     },
     ["fire"] = {
@@ -604,8 +604,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.M1911_MagOut", t = 0.25},
-            {s = "ArcCW_BO2.M1911_MagIn", t = 1}
+            {s = "ArcCW_BO2.Pistol_MagOut", t = 0.25},
+            {s = "ArcCW_BO2.Pistol_MagIn", t = 1}
         },
     },
     ["reload_empty_bo2"] = {
@@ -616,9 +616,9 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.M1911_MagOut", t = 0.25},
-            {s = "ArcCW_BO2.M1911_MagIn", t = 1},
-            {s = "ArcCW_BO2.M1911_SlideFwd", t = 1.5}
+            {s = "ArcCW_BO2.Pistol_MagOut", t = 0.25},
+            {s = "ArcCW_BO2.Pistol_MagIn", t = 1},
+            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 1.5}
         },
     },
     ["enter_sprint"] = {

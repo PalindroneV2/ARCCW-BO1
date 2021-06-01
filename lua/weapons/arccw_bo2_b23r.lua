@@ -83,7 +83,7 @@ SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_BO2.B23R_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO2.M1911_Sil"
+SWEP.ShootSoundSilenced = "ArcCW_BO2.Pistol_Sil"
 SWEP.DistantShootSound = "ArcCW_BO2.Pistol_RingOff"
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"
@@ -273,7 +273,7 @@ end
 
 SWEP.Hook_GetShootSound = function(wep, sound)
     if wep.Attachments[3].Installed and wep:GetBuff_Override("Silencer") then
-        return "ArcCW_BO2.M1911_Sil"
+        return "ArcCW_BO2.Pistol_Sil"
     end
 end
 
@@ -333,8 +333,8 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 1,
         SoundTable = {
-            {s = "ArcCW_BO2.M1911_SlideBack", t = 0.2},
-            {s = "ArcCW_BO2.M1911_SlideFwd", t = 0.5}
+            {s = "ArcCW_BO2.Pistol_SlideBack", t = 0.2},
+            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 0.5}
         }
     },
     ["fire"] = {
@@ -365,8 +365,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.M1911_MagOut", t = 0.25 * 1.25},
-            {s = "ArcCW_BO2.M1911_MagIn", t = 1 * 1.25}
+            {s = "ArcCW_BO2.Pistol_MagOut", t = 0.25 * 1.25},
+            {s = "ArcCW_BO2.Pistol_MagIn", t = 1 * 1.25}
         },
     },
     ["reload_empty"] = {
@@ -377,9 +377,9 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.M1911_MagOut", t = 0.25 * 1.25},
-            {s = "ArcCW_BO2.M1911_MagIn", t = 1 * 1.25},
-            {s = "ArcCW_BO2.M1911_SlideFwd", t = 1.5 * 1.25}
+            {s = "ArcCW_BO2.Pistol_MagOut", t = 0.25 * 1.25},
+            {s = "ArcCW_BO2.Pistol_MagIn", t = 1 * 1.25},
+            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 1.5 * 1.25}
         },
     },
     ["reload_fast"] = {
@@ -390,8 +390,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.M1911_MagOut", t = 0.25 * 1.25},
-            {s = "ArcCW_BO2.M1911_MagIn", t = 1 * 1.25}
+            {s = "ArcCW_BO2.Pistol_MagOut", t = 0.25 * 1.25},
+            {s = "ArcCW_BO2.Pistol_MagIn", t = 1 * 1.25}
         },
     },
     ["reload_empty_fast"] = {
@@ -402,9 +402,9 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.M1911_MagOut", t = 0.25 * 1.25},
-            {s = "ArcCW_BO2.M1911_MagIn", t = 1 * 1.25},
-            {s = "ArcCW_BO2.M1911_SlideFwd", t = 1.5 * 1.25}
+            {s = "ArcCW_BO2.Pistol_MagOut", t = 0.25 * 1.25},
+            {s = "ArcCW_BO2.Pistol_MagIn", t = 1 * 1.25},
+            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 1.5 * 1.25}
         },
     },
     ["enter_sprint"] = {
