@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "AKMu"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "A carbine length version of the AKM. Affectionally nicknamed the Krinkov, this weapon was issued to only Soviet tank crews, special forces and support units."
-SWEP.Trivia_Manufacturer = "Kalashnikov Concern"
+SWEP.Trivia_Manufacturer = "Izhmash"
 SWEP.Trivia_Calibre = "7.62x39mm M43" --"5.45x39mm"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "USSR"
@@ -406,7 +406,7 @@ SWEP.Hook_GetShootSound = function(wep, sound)
 end
 
 SWEP.Hook_GetDistantShootSound = function(wep, distancesound)
-    local bake = wep.Attachments[9].Installed == "ammo_ak_74"
+    local bake = wep.Attachments[8].Installed == "ammo_ak_74"
     if bake then
         return "ArcCW_BO1.AK74u_Ringoff"
     end

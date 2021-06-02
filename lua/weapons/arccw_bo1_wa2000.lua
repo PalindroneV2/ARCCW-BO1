@@ -186,7 +186,7 @@ SWEP.Attachments = {
         },
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(1.2, 0, 0),
-        --Installed = "optic_bo1_wascope",
+        Installed = "optic_bo1_wascope",
     },
     {
         PrintName = "Muzzle",
@@ -264,6 +264,10 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     if extmag then
         return anim .. "_ext"
     end
+
+    local wascope = wep.Attachments[2].Installed == "optic_bo1_wascope"
+
+    if wascope then return anim .. "_scope" end
 end
 
 SWEP.Animations = {
@@ -278,6 +282,13 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.25,
     },
+    ["ready"] = {
+        Source = "draw",
+        Time = 56 / 35,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
     ["holster"] = {
         Source = "holster",
         Time = 1.25,
@@ -285,11 +296,21 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.25,
     },
-    ["ready"] = {
+    ["draw_scope"] = {
+        Source = "first_draw",
+        Time = 35 / 35,
+        SoundTable = {
+            {s = "ArcCW_BO1.WA2000_Scope", t = 1 / 2},
+        },
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.25,
+    },
+    ["ready_scope"] = {
         Source = "first_draw",
         Time = 70 / 35,
         SoundTable = {
-            {s = "ArcCW_BO1.WA2000_Scope", t = 1},
+            {s = "ArcCW_BO1.WA2000_Scope", t = 25 / 35},
         },
         LHIK = true,
         LHIKIn = 0,

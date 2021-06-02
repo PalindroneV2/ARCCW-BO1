@@ -1,4 +1,4 @@
-att.PrintName = "Integrated Bipod"
+att.PrintName = "Bipod (BO1)"
 att.Icon = Material("entities/acwatt_bo1_awm_bipod.png")
 att.Description = "Bipod designed specifically for this weapon. More egronomic than regular bipods."
 

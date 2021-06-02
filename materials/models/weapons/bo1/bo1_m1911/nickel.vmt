@@ -1,7 +1,12 @@
 "VertexlitGeneric"
 {
-	$basetexture "models/weapons/bo1/bo1_m1911/1911_mp2_c"
+	$basetexture "models/weapons/bo1/bo1_m1911/1911_mp_c"
 	$bumpmap "models/weapons/bo1/bo1_m1911/1911_mp_n"
+	"$detail" "models/weapons/bo1/bo1_m1911/1911_mp_s"
+	$detailscale "1"
+	$detailblendmode 1
+	$detailblendfactor "0.25"
+
 	$envmapmask "models/weapons/bo1/gold"
 	
 	$phong "1"
@@ -13,6 +18,6 @@
 	$normalmapalphaenvmapmask "1"
 	
 	$envmap "env_cubemap"
-	$envmaptint "[0.5 0.5 0.75]"
+//	$envmaptint "[0.5 0.5 0.75]"
 	$envmapfresnel "[1 1 1]"
 }

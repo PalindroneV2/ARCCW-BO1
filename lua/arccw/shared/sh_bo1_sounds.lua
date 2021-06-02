@@ -301,7 +301,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_BO1.AK47_Ringoff",
-    channel = CHAN_AUTO + 5,
+    channel = CHAN_AUTO,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -329,7 +329,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_BO1.AK74u_Ringoff",
-    channel = CHAN_AUTO + 5,
+    channel = CHAN_AUTO,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -1723,6 +1723,17 @@ sound.Add( {
     --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo1_psg1/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_BO1.G3_RingOff",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_generic_sniper/ringoff/1/ring_02.wav",
     }
 } )
 sound.Add( {
