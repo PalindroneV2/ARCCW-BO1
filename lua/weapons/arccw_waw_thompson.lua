@@ -395,7 +395,7 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             {s = "ArcCW_WAW.Thompson_MagOut", t = 14 / 30},
-            {s = "ArcCW_WAW.Thompson_MagIn", t = 49 / 30}
+            {s = "ArcCW_WAW.Thompson_MagIn", t = 40 / 30}
         },
     },
     ["reload_empty_drum"] = {
@@ -408,9 +408,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_WAW.Thompson_MagOut", t = 19 / 35},
-            {s = "ArcCW_WAW.Thompson_MagIn", t = 49 / 35},
-            {s = "ArcCW_WAW.Thompson_Bolt", t = 82 / 35},
+            {s = "ArcCW_WAW.Thompson_MagOut", t = 19 / 30},
+            {s = "ArcCW_WAW.Thompson_MagIn", t = 40 / 30},
+            {s = "ArcCW_WAW.Thompson_Bolt", t = 60 / 30},
         },
     },
     /*

@@ -2395,12 +2395,22 @@ sound.Add( {
 
 sound.Add( {
     name = "ArcCW_WAW.TT33_Fire",
-    channel = CHAN_WEAPON + 5,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_tt33/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.TT33_Dist",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_tt33/fire_dist.wav",
     }
 } )
 sound.Add( {
