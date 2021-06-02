@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "B23R"
 SWEP.Trivia_Class = "Machine Pistol"
-SWEP.Trivia_Desc = "Heavily modified italian pistol firing 9mm in 3 round bursts, based on the exensively used M93R Beretta."
+SWEP.Trivia_Desc = "Heavily modified italian pistol firing 9mm in 3 round bursts, based on the extensively used M93R Beretta."
 SWEP.Trivia_Manufacturer = "Beretta"
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Short Recoil"
