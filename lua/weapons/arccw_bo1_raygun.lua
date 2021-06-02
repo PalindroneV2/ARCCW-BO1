@@ -36,7 +36,7 @@ SWEP.ShootEntity = "arccw_bo1_raygun_bolt"
 SWEP.MuzzleVelocity = 999999 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
-SWEP.CanFireUnderwater = true
+SWEP.CanFireUnderwater = false
 
 --SWEP.Tracer = "bo1_raygun_tracer"
 SWEP.TracerNum = 1 -- tracer every X
@@ -111,8 +111,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-5, -9, 1.75),
-    Ang = Angle(-0.75, -0.125, 0),
+    Pos = Vector(-5, 0, 1.75),
+    Ang = Angle(-0.6, -0.125, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
