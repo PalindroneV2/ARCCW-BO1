@@ -51,7 +51,7 @@ SWEP.Recoil = 0.3
 SWEP.RecoilSide = 0.3
 SWEP.RecoilRise = 0.25
 
-SWEP.Delay = 60 / 1250 -- 60 / RPM.
+SWEP.Delay = 60 / 2100 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -111,8 +111,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.2, -3, 0.25),
-    Ang = Angle(0.4, -0.1, 0),
+    Pos = Vector(-2.19, 0, 0.25),
+    Ang = Angle(-0.1, 0.05, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
