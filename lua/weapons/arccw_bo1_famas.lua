@@ -306,7 +306,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         end
     end
 
-    if f1 == 1 and optic then
+    if f1 == 2 and optic then
         vm:SetBodygroup(2, 2)
     end
 
