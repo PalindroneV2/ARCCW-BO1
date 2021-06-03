@@ -10,6 +10,10 @@ att.Slot = "1911_sound"
 att.Free = true
 
 att.Hook_GetShootSound = function(wep, sound)
+    local sil = wep:GetBuff_Override("Silencer")
+    if sil then
+        return "ArcCW_BO2.Pistol_Sil"
+    end
     return "ArcCW_WAW.M1911_Fire"
 end
 

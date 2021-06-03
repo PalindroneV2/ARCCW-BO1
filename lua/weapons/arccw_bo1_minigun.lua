@@ -235,16 +235,16 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 3 / 30,
+        Time = 4 / 60,
         ShellEjectAt = 0,
     },
     ["idle_iron"] = {
         Source = "spinup",
-        Time = 3 / 30,
+        Time = 4 / 60,
     },
     ["fire_iron"] = {
         Source = {"fire"},
-        Time = 3 / 30,
+        Time = 4 / 60,
         ShellEjectAt = 0,
     },
     ["reload"] = {

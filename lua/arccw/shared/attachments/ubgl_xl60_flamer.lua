@@ -11,6 +11,8 @@ att.Slot = "bo1_flamer"
 att.GivesFlags = {"ubanims"}
 att.ExcludeFlags = {"kali_barrel_short"}
 att.BO1_UBFlamer = true
+att.Ignore = true
+att.Spawnable = false
 
 att.SortOrder = 98
 

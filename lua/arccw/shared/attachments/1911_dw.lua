@@ -1,7 +1,8 @@
 att.PrintName = "M1911 Dual Wield"
 att.Icon = Material("entities/acwatt_1911_meu2.png", "smooth mips")
 att.Description = "A second M1911A1 for your left hand."
-att.Hidden = false
+att.Spawnable = false
+att.Ignore = true
 att.Desc_Pros = {
     "+100% more gun",
 }
