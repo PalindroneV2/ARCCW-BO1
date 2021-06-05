@@ -1,0 +1,27 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/cde/bocw_m93r/receiver"
+	"$bumpmap" "models/weapons/cde/bocw_m93r/receiver_n"
+
+	"$phong" "1"
+	"$phongboost" "3.5"
+	"$phongexponent" "10"
+	"$phongalbedotint" "1"
+	"$normalmapalphaenvmapmask" "1"
+
+	"$detail" "models/weapons/cde/bocw_m93r/receiver_s"
+	"$detailscale" "1"
+	"$detailblendmode" "1"  
+	"$detailblendfactor" "0.15"
+
+	"$color2" "[.8 .8 .8]"
+
+	"$phongexponenttexture" "models/weapons/cde/bocw_m93r/exponent"
+	"$cloakPassEnabled" 		"1"						
+	"$phongfresnelranges"	"[ .2 1.2 8]"	
+
+
+	"$nocull" "1"
+
+
+}

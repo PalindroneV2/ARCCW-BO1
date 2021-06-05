@@ -1,0 +1,27 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\weapons\cde\bocw_krig6\sight"
+	"$bumpmap" "models\weapons\cde\bocw_krig6\sight_n"
+
+	"$phong" "1"
+	"$phongboost" "3.5"
+	"$phongexponent" "10"
+	"$phongalbedotint" "1"
+	"$normalmapalphaenvmapmask" "1"
+
+	"$detail" "models\weapons\cde\bocw_krig6\sight_s"
+	"$detailscale" "1"        
+	"$detailblendfactor" "0.15"     
+	"$detailblendmode" "1"
+
+	"$color2" "[.7 .7 .7]"
+
+	"$phongexponenttexture" "models\weapons\cde\bocw_krig6\exponent"
+	"$cloakPassEnabled" 		"1"						
+	"$phongfresnelranges"	"[ .2 1.2 8]"	
+
+
+	"$nocull" "1"
+
+
+}
