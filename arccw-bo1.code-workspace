@@ -5,10 +5,6 @@
 			"path": "."
 		},
 		{
-			"name": "ARCCW-CODEXTRAS",
-			"path": "..\\ARCCW-CODEXTRAS"
-		},
-		{
 			"name": "vmanip_codz_perks",
 			"path": "..\\vmanip_codz_perks"
 		}

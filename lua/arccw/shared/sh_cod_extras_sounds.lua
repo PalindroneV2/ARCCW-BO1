@@ -12,7 +12,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_CDE.M16_Dist",
-    channel = CHAN_AUTO + 2,
+    channel = CHAN_AUTO,
     volume = 1.0,
     level = 100,
     sound = {
@@ -21,7 +21,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_CDE.M16_First",
-    channel = CHAN_WEAPON + 5,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     sound = {
@@ -48,7 +48,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_CDE.M16_MagFutz",
-    channel = CHAN_ITEM + 2,
+    channel = CHAN_USER_BASE + 2,
     volume = 1.0,
     level = 100,
     sound = {
