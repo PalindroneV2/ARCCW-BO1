@@ -265,13 +265,6 @@ SWEP.Attachments = {
             wang = Angle(-9, -1, 180)
         },
     }, --12
-    {
-        PrintName = "Cosmetic",
-        Slot = "bo1_cosmetic",
-        DefaultAttName = "Tan Polymer",
-        FreeSlot = true,
-        GivesFlags = {"bo1_tan"},
-    }, --13
 }
 
 SWEP.Hook_NameChange = function(wep, name)
@@ -287,7 +280,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local papcamo = wep.Attachments[10].Installed == "ammo_papunch"
 
     if papcamo then
-        return vm:SetSkin(2)
+        return vm:SetSkin(3)
     end
 end
 

@@ -1,13 +1,14 @@
 VertexlitGeneric
 {
-	$basetexture	"models/weapons/pap/pap_bo3"
-	$bumpmap	"models\weapons\pap\pap_bo3_n"
-	//$detail	"models\weapons\pap\pap_bo3"
-	
+	$basetexture	"models\weapons\pap\pap_bo1"
+	"$basetexturetransform" "center .5 .5 scale 2 2 rotate 0 translate 0 0"
+	$bumpmap	"models\weapons\pap\pap_bo1_n"
+	"$bumptransform" "center .5 .5 scale 2 2 rotate 0 translate 0 0"
+
 	$phong                      		1
-	$phongboost                         "5"
-	$phongfresnelranges         "[0.5 2.5 2.5]"
+	$phongexponent                      "20"
+	$phongboost                         "1"
+	$phongfresnelranges         "[0.1 0.75 1.25]"
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
-	//$detailblendmode	3
 }

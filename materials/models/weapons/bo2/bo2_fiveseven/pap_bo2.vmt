@@ -1,25 +1,26 @@
-"VertexlitGeneric"
+VertexlitGeneric
 {
-	"$basetexture" "models/weapons/bo1/bo1_m1911/1911_sp"
-	$blendtintbybasealpha  "1"
-	"$bumpmap" "models/weapons/bo1/bo1_m1911/1911_n"
-	
-	$detail		"models\weapons\bo1\gold_c"
-	$envmapmask	"models\weapons\bo1\gold_s"
-	$detailblendmode		3
+	$basetexture "models/weapons/bo1/plastic"
+	$bumpmap	"models/weapons/bo1/plastic"
+	$selfillum 1
+	$selfillummask "models\weapons\pap\pap_cosmic_s"
+
+	$detail	"models\weapons\pap\pap_cosmic"
+	$detailscale 4
+	$detailblendmode 2
 	$detailblendfactor 1
+
+	$envmap                    		 env_cubemap
+	$envmaptint                 		"[.01 .01 .01]"
+	$normalmapalphaenvmapmask   	1
+	Proxies
+	{
+		TextureScroll
+		{
+			texturescrollvar $detailtexturetransform
+			texturescrollrate .05
+			texturescrollangle 210
+		}
+	}
 	
-	$phong "1"
-	$phongexponent	"15"
-	$phongboost "2.5"
-	$phongfresnelranges "[0.5 2.5 2.5]"
-	$phongtint "[1 .65 .2]"
-	$phongalbedotint "1"
-	$blendtintbybasealpha  "1"
-	$normalmapalphaenvmapmask "1"
-	
-	$envmap "env_cubemap"
-	$envmaptint "[1 .75 .25]"
-	$envmapfresnel "[1 1 1]"
 }
-// CREDIT TO GAMER BARNEY 

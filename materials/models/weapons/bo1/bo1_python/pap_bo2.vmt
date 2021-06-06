@@ -1,20 +1,28 @@
-"VertexlitGeneric"
+VertexlitGeneric
 {
-	"$basetexture" "models/weapons/bo1/bo1_python/python_c"
-	//"$bumpmap" "models/weapons/bo1/bo1_python/python_n"
-	
-	$detail	"models\weapons\pap\pap_mob"
+	"$basetexture" "models\weapons\pap\pap_mob"
+	"$basetexturetransform" "center .5 .5 scale 4 4 rotate 0 translate 0 0"
 	$bumpmap	"models\weapons\pap\pap_mob_n"
-	$selfillum 1
-    $selfillummask "models\weapons\pap\pap_mob_s"
-	
+	"$bumptransform" "center .5 .5 scale 4 4 rotate 0 translate 0 0"
+
 	$phong                      		1
 	$phongexponent                      "20"
-	$phongboost                         "1"
-	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0 .1 0.5]"
 	$phongalbedotint             "1"
-	$normalmapalphaphongmask    	1
+    
+	$detail	"models\weapons\pap\pap_mob_s"
 	$detailscale 4
-	$detailblendmode 2
+	$detailblendmode 5
+
+	Proxies // proxies are listed inside this block
+	{
+		Sine // a proxy which produces a sine wave
+		{
+			resultVar	$detailblendfactor // The shader parameter to be manipulated
+			sineperiod	2
+			sinemin		0.75
+			sinemax		1.25
+		}
+	}
 }
-// CREDIT TO GAMER BARNEY 

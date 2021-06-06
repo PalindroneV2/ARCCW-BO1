@@ -1,10 +1,11 @@
-VertexlitGeneric
+"VertexlitGeneric"
 {
 	"$basetexture" "models/weapons/bo1/bo1_python/python_c"
+	$blendtintbybasealpha  "1"
 	"$bumpmap" "models/weapons/bo1/bo1_python/python_n"
 	
 	$detail		"models\weapons\bo1\gold_c"
-	$envmapmask	"models\weapons\bo1\gold_s"
+	"$detailscale" "1"
 	$detailblendmode		3
 	$detailblendfactor 1
 	
@@ -18,7 +19,8 @@ VertexlitGeneric
 	$normalmapalphaenvmapmask "1"
 	
 	$envmap "env_cubemap"
+	$envmapmask	"models\weapons\bo1\gold_s"
 	$envmaptint "[1 .75 .25]"
 	$envmapfresnel "[1 1 1]"
-
 }
+// CREDIT TO GAMER BARNEY

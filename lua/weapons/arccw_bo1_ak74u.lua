@@ -391,7 +391,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif !black and papcamo then
         return vm:SetSkin(2)
     elseif black and papcamo then
-        return vm:SetSkin(2)
+        return vm:SetSkin(3)
     end
 end
 

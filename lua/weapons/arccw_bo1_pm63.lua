@@ -239,7 +239,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local papcamo = wep.Attachments[7].Installed == "ammo_papunch"
 
     if papcamo then
-        return vm:SetSkin(2)
+        return vm:SetSkin(3)
     end
 end
 

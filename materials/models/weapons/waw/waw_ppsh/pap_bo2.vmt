@@ -1,18 +1,28 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\pap\pap_bo2_crystal"
-	$bumpmap	"models\weapons\pap\pap_bo2_crystal_n"
-	$selfillummask "models\weapons\pap\pap_bo2_crystal_env"
-	$selfillum 1
-	
+	"$basetexture" "models\weapons\pap\pap_mob"
+	"$basetexturetransform" "center .5 .5 scale 4 4 rotate 0 translate 0 0"
+	$bumpmap	"models\weapons\pap\pap_mob_n"
+	"$bumptransform" "center .5 .5 scale 4 4 rotate 0 translate 0 0"
+
 	$phong                      		1
 	$phongexponent                      "20"
-	$phongboost                         "1"
-	$phongfresnelranges         "[0.1 0.75 1.25]"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0 .1 0.5]"
 	$phongalbedotint             "1"
-	$normalmapalphaphongmask    	1
+    
+	$detail	"models\weapons\pap\pap_mob_s"
+	$detailscale 4
+	$detailblendmode 5
 
-	$envmap                    		 env_cubemap
-	$envmaptint                 		"[.01 .01 .01]"
-	$normalmapalphaenvmapmask   	1
+	Proxies // proxies are listed inside this block
+	{
+		Sine // a proxy which produces a sine wave
+		{
+			resultVar	$detailblendfactor // The shader parameter to be manipulated
+			sineperiod	2
+			sinemin		0.75
+			sinemax		1.25
+		}
+	}
 }

@@ -81,7 +81,7 @@ SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 90
-SWEP.ShellScale = 2
+SWEP.ShellScale = 1.5
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
@@ -549,7 +549,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     for k = camo, camo do
         vm:SetSkin(k)
-        if papcamo then vm:SetSkin(k + 2) end
+        if papcamo then vm:SetSkin(k + 3) end
     end
 end
 

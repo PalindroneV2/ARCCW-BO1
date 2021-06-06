@@ -1,0 +1,17 @@
+VertexlitGeneric
+{
+	$basetexture	"models\weapons\bo1\bo1_g11\g11_c"
+	//$color2 "[0.5 0.5 0.5]"
+	$bumpmap	"models\weapons\bo1\bo1_g11\g11_n"
+
+	$phong                      		1
+	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	$detail "models/weapons/bo1/red"
+	$detailblendmode 2
+	"$detailblendfactor" "0.5"
+}

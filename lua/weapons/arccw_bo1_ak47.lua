@@ -367,18 +367,19 @@ SWEP.Hook_NameChange = function(wep, name)
     end
 end
 
+--local r = math.random(1, 3)
+
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep:GetBuff_Override("PackAPunch")
+    local papcamo = 0
+    if wep:GetBuff_Override("PackAPunch") then papcamo = 1 end
     local mag = wep.Attachments[9].Installed == "ammo_ak_74"
 
-    if papcamo and !mag then
+    if (papcamo == 1) then
         vm:SetSkin(3)
-        vm:SetBodygroup(1, 0)
-    elseif papcamo and mag then
-        vm:SetSkin(3)
-        vm:SetBodygroup(1, 1)
-    elseif !papcamo and mag then
+    end
+
+    if mag then
         vm:SetBodygroup(1, 1)
     end
 end

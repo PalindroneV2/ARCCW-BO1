@@ -260,47 +260,30 @@ SWEP.Attachments = {
             wang = Angle(-5, 0, 180)
         },
     },
+    {
+        PrintName = "Cosmetic",
+        Slot = "bo1_cosmetic",
+        DefaultAttName = "Paintless Polymer",
+        FreeSlot = true,
+    }, --17
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[8].Installed == "ammo_papunch"
-
-    if papcamo then
-        return vm:SetSkin(2)
-    end
-end
-
-SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local attached = wep.Attachments[6].Installed
-
-    local attthing
-        if attached == "ubgl_m16_m203" then attthing = 1
-        elseif attached == "ubgl_aug_mk" then attthing = 2
+    local camo = 0
+    if wep.Attachments[11].Installed == "bo1_cosmetic_wood" then camo = 4
+    elseif wep.Attachments[11].Installed == "bo1_cosmetic_tan" then camo = 8
+    elseif wep.Attachments[11].Installed == "bo1_cosmetic_black" then camo = 12
+    elseif wep.Attachments[11].Installed == "bo1_cosmetic_odgreen" then camo = 16
+    elseif wep.Attachments[11].Installed == "bo1_cosmetic_red" then camo = 20
     end
 
-    if anim == "enter_ubgl" then
-        if attthing == 1 then
-            return "in_glsetup"
-        elseif attthing == 2 then
-            return "in_mksetup"
+    for k = camo, camo do
+        vm:SetSkin(k)
+        if papcamo then
+            vm:SetSkin(k + 2)
         end
-    elseif anim == "exit_ubgl" then
-        if attthing == 1 then
-            return "out_glsetup"
-        elseif attthing == 2 then
-            return "out_mksetup"
-        end
-    end
-
-    if attthing == 1 and wep:GetInUBGL() then
-        return anim .. "_glsetup"
-    elseif attthing == 1 then
-        return anim .. "_m203"
-    elseif attthing == 2 and wep:GetInUBGL() then
-        return anim .. "_mksetup"
-    elseif attthing == 2 then
-        return anim .. "_mk"
     end
 end
 

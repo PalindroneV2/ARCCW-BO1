@@ -116,9 +116,9 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.82, 3, 0.675),
+    Pos = Vector(-2.82, 0, 0.675),
     Ang = Angle(0, 0.025, 0),
-    Magnification = 1.1,
+    Magnification = 1.25,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -279,6 +279,7 @@ SWEP.Attachments = {
 SWEP.RejectAttachments = {
     ["bo1_solid_stock"] = true,
     ["cde_cosmetic_od"] = true,
+    ["cde_cosmetic_red"] = true,
     ["cde_cosmetic_wood"] = true,
 }
 
