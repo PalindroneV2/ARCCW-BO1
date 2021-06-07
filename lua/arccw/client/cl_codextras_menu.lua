@@ -1,5 +1,5 @@
 hook.Add( "PopulateToolMenu", "ArcCW_CoDExtras_Options", function()
-    spawnmenu.AddToolMenuOption( "Utilities", "ArcCW", "ArcCW_CoDExtras_Options", "COD Extras", "", "", ArcCW_CoDExtras_Options)
+    spawnmenu.AddToolMenuOption( "Options", "ArcCW", "ArcCW_CoDExtras_Options", "COD Extras", "", "", ArcCW_CoDExtras_Options)
 end )
 
 function ArcCW_CoDExtras_Options( CPanel )
