@@ -531,7 +531,6 @@ SWEP.Hook_NameChange = function(wep, name)
             prefix = "M"
             model = "635"
             alteration = ""
-            wep.Trivia_Class = "Submachine Gun"
             wep.Trivia_Desc = "First an experimental model in 9mm for the military emerged in the M635. Eventually it found more success in the civilian market."
             if ris == 1 then
                 wep.Trivia_Desc = "First an experimental model in 9mm for the military emerged in the M635. Eventually it found more success in the civilian market. This one has a modern quad rail RIS handguard."
@@ -539,7 +538,6 @@ SWEP.Hook_NameChange = function(wep, name)
             if fcg >= 3 then
                 prefix = "9mm"
                 model = " SMG"
-                wep.Trivia_Class = "Submachine Gun"
                 if k <= 1 then
                     model = " Rifle"
                 end
@@ -553,14 +551,12 @@ SWEP.Hook_NameChange = function(wep, name)
                 prefix = "9mm"
                 model = "AR"
                 alteration = " HD"
-                wep.Trivia_Class = "Submachine Gun"
                 wep.Trivia_Desc = "Carried by grunts and stashed in Black Mesa Armories. Althought stopping power isn't as great, it's faster firing and the grenade launcher offers the punch the primary fire lacks."
             end
             if k == 5  and fcg <= 2 then
                 prefix = "Patriot"
                 model = " SMG"
                 alteration = ""
-                wep.Trivia_Class = "Submachine Gun"
                 wep.Trivia_Desc = "Carbine variant of the M16 with no front sight, made for shooting from ports in armored behicles. This one seems to have a way shorter barrel than usual and is in 9mm."
             end
         elseif k == 0 then
@@ -852,6 +848,12 @@ SWEP.Hook_NameChange = function(wep, name)
                 wep.Trivia_Desc = "M4 Carbine with FAMAS furniture slapped on top."
             end
         end
+    end
+
+    if m635 then
+        wep.Trivia_Class = "Submachine Gun"
+    else
+        wep.Trivia_Class = "Assault Rifle"
     end
 
     if !pap then
