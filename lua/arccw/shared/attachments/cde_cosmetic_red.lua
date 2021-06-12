@@ -17,3 +17,5 @@ att.SortOrder = 98
 att.Slot = {"cde_cosmetic"}
 att.ExcludeFlags = {
 }
+
+att.NoRandom = true

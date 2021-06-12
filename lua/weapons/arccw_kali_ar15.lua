@@ -951,7 +951,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     local optic = wep.Attachments[2].Installed
     local sling = wep.Attachments[15].Installed == "kali_ar15_sling"
-    local altirons = wep:GetBuff_Override("AltIrons")
+    local troyirons = wep:GetBuff_Override("AltIrons")
+    local kacirons = wep:GetBuff_Override("AltIrons2")
 
     local fcg = 0
     if wep.Attachments[1].Installed == "bo1_fcg_s13" then
@@ -1000,14 +1001,14 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         if optic then
             vm:SetBodygroup(5,1)
             if barrel == 11 then
-                vm:SetBodygroup(5,4)
+                vm:SetBodygroup(5,5)
             end
         end
         if fcg == 2 then
             if barrel == 11 then
                 vm:SetBodygroup(5,0)
             else
-                vm:SetBodygroup(5,3)
+                vm:SetBodygroup(5,4)
                 wep.IronSightStruct = {
                     Pos = Vector(-2.765, -2, 0),
                     Ang = Angle(0.55, 0.0125, 0),
@@ -1026,8 +1027,28 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
                     end
                 end
             end
-            if altirons then
+            if troyirons then
                 vm:SetBodygroup(5,2)
+                wep.IronSightStruct = {
+                    Pos = Vector(-2.765, -2, 0.25),
+                    Ang = Angle(0, 0.0125, 0),
+                    Magnification = 1.1,
+                    CrosshairInSights = false,
+                }
+                if barrel == 10 then
+                    wep.IronSightStruct = {
+                        Pos = Vector(-2.765, -2, 0.25),
+                        Ang = Angle(-0.05, 0.0125, 0),
+                        Magnification = 1.1,
+                        CrosshairInSights = false,
+                    }
+                    if optic then
+                        vm:SetBodygroup(7,0)
+                    end
+                end
+            end
+            if kacirons then
+                vm:SetBodygroup(5,3)
                 wep.IronSightStruct = {
                     Pos = Vector(-2.765, -2, 0.25),
                     Ang = Angle(0, 0.0125, 0),
@@ -1049,13 +1070,13 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             if optic then
                 vm:SetBodygroup(5,0)
                 if barrel == 11 then
-                    vm:SetBodygroup(5,4)
+                    vm:SetBodygroup(5,5)
                 end
             end
         end
     end
 
-    if sling and (altirons or optic) then vm:SetBodygroup(6,2) end
+    if sling and (troyirons or optic) then vm:SetBodygroup(6,2) end
 
     local camo = 0
     if wep.Attachments[13].Installed == "cde_cosmetic_wood" then camo = 2
