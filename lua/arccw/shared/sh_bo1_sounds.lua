@@ -2142,16 +2142,10 @@ sound.Add({
     sound = "weapons/arccw/bo1_m60/futz.wav"
 })
 sound.Add({
-    name = "ArcCW_BO1.M60_Act",
+    name = "ArcCW_BO1.M60_Action",
     channel = CHAN_AUTO,
     level = 70,
     sound = "weapons/arccw/bo1_m60/act_00.wav"
-})
-sound.Add({
-    name = "ArcCW_BO1.M60_Lfe",
-    channel = CHAN_AUTO,
-    level = 70,
-    sound = "weapons/arccw/bo1_m60/lfe_00.wav"
 })
 
 -- M1911 BO1 --

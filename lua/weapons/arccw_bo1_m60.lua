@@ -309,8 +309,7 @@ SWEP.Animations = {
         Time = 7 / 30,
         ShellEjectAt = 0,
         SoundTable = {
-            { s = "ArcCW_BO1.M60_Act", t = 0 },
-            { s = "ArcCW_BO1.M60_Lfe", t = 0.05 },
+            { s = "ArcCW_BO1.M60_Action", t = 0 },
         }
     },
     ["fire_iron"] = {
@@ -318,8 +317,7 @@ SWEP.Animations = {
         Time = 7 / 30,
         ShellEjectAt = 0,
         SoundTable = {
-            { s = "ArcCW_BO1.M60_Act", t = 0 },
-            { s = "ArcCW_BO1.M60_Lfe", t = 0.05 },
+            { s = "ArcCW_BO1.M60_Action", t = 0 },
         }
     },
     ["reload"] = {
@@ -410,13 +408,13 @@ SWEP.Animations = {
         Source = {"fire_grip"},
         Time = 9 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = "weapons/arccw/bo1_m60/lfe_00.wav", t = 0 }},
+        SoundTable = {{ s = "ArcCW_BO1.M60_Action", t = 0 }},
     },
     ["fire_iron_grip"] = {
         Source = {"fire_ads_grip"},
         Time = 9 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = "weapons/arccw/bo1_m60/lfe_00.wav", t = 0 }},
+        SoundTable = {{ s = "ArcCW_BO1.M60_Action", t = 0 }},
     },
     ["reload_grip"] = {
         Source = "reload_grip",
