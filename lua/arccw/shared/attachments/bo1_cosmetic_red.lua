@@ -16,3 +16,5 @@ att.ExcludeFlags = {"bo1_red"}
 
 att.SortOrder = 100
 att.Slot = {"bo1_cosmetic"}
+
+att.NoRandom = true

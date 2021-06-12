@@ -1,4 +1,4 @@
-att.PrintName = "Integral Compensator"
+att.PrintName = "Compensator (BO3)"
 att.Icon = Material("entities/acwatt_bo3_1911_comp.png", "smooth mips")
 att.Description = "Muzzle device specifically fitted for the M1911A1. Drastically improves weapon handling."
 att.Desc_Pros = {

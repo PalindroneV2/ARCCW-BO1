@@ -7,6 +7,7 @@ att.Desc_Cons = {
 }
 att.AutoStats = true
 att.Slot = {"bo1_perk"}
+att.Ignore = true
 
 att.Mult_SpeedMult = 10.35
 att.Mult_SightedSpeedMult = 10.35

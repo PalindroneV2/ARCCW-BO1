@@ -416,6 +416,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
                 vm:SetBodygroup(5,4)
             end
         end
+        if k == 2 or k == 4 then
+            vm:SetBodygroup(6,1)
+        end
     end
 
     if irons then

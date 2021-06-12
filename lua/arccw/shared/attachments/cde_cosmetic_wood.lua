@@ -30,3 +30,5 @@ att.GiveFlags = {"FNV_Unique"}
 
 att.FNV_Unique = true
 att.AttachSound = "weapons/arccw/fnv_ee/fnv_ww.ogg"
+
+att.NoRandom = true
