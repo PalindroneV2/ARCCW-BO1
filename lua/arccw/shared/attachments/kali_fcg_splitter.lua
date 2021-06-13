@@ -14,6 +14,7 @@ att.SortOrder = 106
 
 att.GivesFlags = {"a4top", "flattop_carry"}
 att.RequireFlags = {"papname1"}
+att.HideIfBlocked = true
 
 att.Override_Firemodes = {
     {

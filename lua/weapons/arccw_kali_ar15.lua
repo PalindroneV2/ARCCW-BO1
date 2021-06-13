@@ -331,7 +331,8 @@ SWEP.Attachments = {
     {
         PrintName = "Receiver",
         Slot = {"fcg_m16a2", "bo1_fcg", "fcg_kali"},
-        DefaultAttName = "A1 Receiver"
+        DefaultAttName = "A1 Receiver",
+        RandomChance = 3,
     }, --1
     {
         PrintName = "Optic", -- print name
@@ -370,6 +371,7 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         DefaultAttName = "M16A1 20 in. Barrel",
         Slot = {"kali_barrel"},
+        RandomChance = 3,
     }, --4
     {
         PrintName = "Underbarrel",
@@ -424,12 +426,14 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"bo1_stock", "bo1_mp5stock"},
         DefaultAttName = "No Stock",
+        RandomChance = 3,
         --Installed = "bo1_solider_stock"
     }, --9
     {
         PrintName = "Magazine",
         Slot = {"kali_ar15_mag"},
         DefaultAttName = "5.56mm NATO 30rnd",
+        RandomChance = 0.1,
     }, --10
     {
         PrintName = "Ammo Type",

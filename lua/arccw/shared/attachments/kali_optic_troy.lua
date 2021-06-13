@@ -16,3 +16,4 @@ att.ActivateElements = {"kali_nocarry"}
 att.ExcludeFlags = {"kali_barrel_famas"}
 att.RequireFlags = {"a4top"}
 att.AltIrons = true
+att.HideIfBlocked = true

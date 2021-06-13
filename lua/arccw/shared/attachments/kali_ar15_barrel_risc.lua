@@ -11,7 +11,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.Slot = "kali_barrel"
-att.GivesFlags = {"kali_barrel_risc", "risc_carry", "risc_troy", "kali_barrel_carbine"}
+att.GivesFlags = {"kali_barrel_risc", "risc_carry", "risc_troy", "kali_barrel_carbine", "notwood"}
 
 att.Mult_Range = 0.85
 att.Mult_Recoil = 1.1

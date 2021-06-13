@@ -11,6 +11,9 @@ att.Desc_Pros = {
 att.Desc_Cons = {
     "- Aesthetics provide no real performance upgrades."
 }
+att.Desc_Neutrals = {
+    " Replicate the look of the the original Commando from Black Ops to access this attachment!"
+}
 att.Slot = "kali_ar15_sling"
 att.RequireFlags = {"kali_barrel_xm"}
 att.ExcludeFlags = {"solider_stock"}

@@ -13,6 +13,7 @@ att.Slot = "fcg_m16a2"
 att.RequireFlags = {"papname1"}
 att.GivesFlags = {"a2top"}
 att.SortOrder = 105
+att.HideIfBlocked = true
 
 att.Override_Firemodes = {
     {

@@ -12,4 +12,4 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.Slot = "kali_barrel"
-att.GivesFlags = {"kali_barrel_a4", "kali_barrel_long"}
+att.GivesFlags = {"kali_barrel_a4", "kali_barrel_long", "notwood"}

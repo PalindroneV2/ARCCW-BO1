@@ -10,22 +10,17 @@ att.Desc_Cons = {
 att.Desc_Neutrals = {
     " Only Cosmetic"
 }
+att.Desc_Neutrals = {
+    " Replicate the look of the the original Service Rifle from Fallout: New Vegas to access this attachment!"
+}
 att.AutoStats = true
 att.Free = true
 
 att.SortOrder = 100
 att.Slot = {"kali_wood"}
 att.ExcludeFlags = {
-    "a2top",
-    "a4top",
-    "kali_barrel_short",
-    "kali_barrel_long",
-    "kali_barrel_carbine",
-    "kali_barrel_risc",
-    "m635",
-    "mag_patriot",
+    "notwood",
 }
-att.RequireFlags = {"solider_stock"}
 att.GiveFlags = {"FNV_Unique"}
 
 att.FNV_Unique = true
