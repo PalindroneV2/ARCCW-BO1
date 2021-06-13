@@ -20,4 +20,4 @@ att.Hook_BulletHit = function(wep, data)
     end
 end
 
-att.AttachSound = {"weapons/arccw/bo1_perks/perk_deadshot.wav", 75, 100, 0.5}
+att.AttachSound = "weapons/arccw/bo1_perks/perk_deadshot.wav"
