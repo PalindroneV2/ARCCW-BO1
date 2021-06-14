@@ -6,7 +6,7 @@
 	$detail		"models\weapons\bo1\gold_c"
 	$envmapmask	"models\weapons\bo1\gold_s"
 	$detailblendmode		3
-	$detailblendfactor 0.1
+	$detailblendfactor 0.5
 	
 	$phong "1"
 	$phongexponent	"15"

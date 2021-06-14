@@ -1,0 +1,16 @@
+VertexlitGeneric
+{
+	$basetexture	"models\weapons\cde\kali_ar15\cm901_c"
+	//$color2 "[0.5 0.5 0.5]"
+	$bumpmap	"models\weapons\cde\kali_ar15\cm901_n"
+
+	$phong                      		1
+	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	"$detail" "models\weapons\bo1\solid_white"
+	"$detailblendfactor" "0.05"
+}

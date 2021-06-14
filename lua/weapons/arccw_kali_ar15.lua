@@ -199,6 +199,21 @@ SWEP.AttachmentElements = {
             {ind = 4, bg = 3},
         },
     },
+    ["full_stock"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 2},
+        },
+    },
+    ["light_stock"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 1},
+        },
+    },
+    ["solid_stock"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 3},
+        },
+    },
     ["solider_stock"] = {
         VMBodygroups = {
             {ind = 4, bg = 2},
@@ -424,7 +439,7 @@ SWEP.Attachments = {
     }, --8
     {
         PrintName = "Stock",
-        Slot = {"bo1_stock", "bo1_mp5stock"},
+        Slot = {"kali_stock"},
         DefaultAttName = "No Stock",
         RandomChance = 3,
         --Installed = "bo1_solider_stock"
@@ -507,18 +522,22 @@ SWEP.Hook_NameChange = function(wep, name)
     end
 
     local fcg = 0
-        if sear == "bo1_fcg_s13" then fcg = 1
-        elseif sear == "kali_fcg_funswitch" then fcg = 2
-        elseif sear == "kali_fcg_funswitch_2" then fcg = 3
-        elseif sear == "kali_fcg_a4" then fcg = 4
-        elseif sear == "bo1_fcg_s16" then fcg = 5
-        elseif sear == "kali_fcg_splitter" then fcg = 6
-        end
+    if sear == "bo1_fcg_s13" then fcg = 1
+    elseif sear == "kali_fcg_funswitch" then fcg = 2
+    elseif sear == "kali_fcg_funswitch_2" then fcg = 3
+    elseif sear == "kali_fcg_a4" then fcg = 4
+    elseif sear == "bo1_fcg_s16" then fcg = 5
+    elseif sear == "kali_fcg_splitter" then fcg = 6
+    end
     local stock = 0
-            if stocka == "bo1_solider_stock" then stock = 3
-            elseif stocka == "bo1_solid_stock" then stock = 2
-            elseif stocka == "bo1_light_stock" then stock = 1
-            end
+    if stocka == "kali_stock_full" then stock = 1
+    elseif stocka == "kali_stock_collapsed" then stock = 2
+    elseif stocka == "kali_stock_extended" then stock = 3
+    elseif stocka == "kali_stock_half_ext" then stock = 4
+    elseif stocka == "kali_stock_wire" then stock = 5
+    elseif stocka == "kali_stock_cm901_ext" then stock = 6
+    elseif stocka == "kali_stock_famas" then stock = 7
+    end
     local truepatriot = 0
     local brand = "Colt "
     local prefix = "M"
@@ -578,7 +597,7 @@ SWEP.Hook_NameChange = function(wep, name)
                     model = "7"
                     alteration = ""
                     wep.Trivia_Desc = "Canadian variant of the M16A2, standard for their military. Uses a full auto sear."
-                    if stock < 3 then
+                    if stock > 1 then
                         alteration = "A2"
                     end
                 end
@@ -590,7 +609,7 @@ SWEP.Hook_NameChange = function(wep, name)
                     model = "7"
                     alteration = "A1"
                     wep.Trivia_Desc = "Canadian variant of the M16A3, standard for their military."
-                    if stock < 3 then
+                    if stock > 1 then
                         alteration = "A2"
                     end
                 end
@@ -617,7 +636,7 @@ SWEP.Hook_NameChange = function(wep, name)
                     model = "7"
                     alteration = ""
                     wep.Trivia_Desc = "Canadian variant of the M16A2, standard for their military. Uses a full auto sear."
-                    if stock < 3 then
+                    if stock > 1 then
                         alteration = "A2"
                     end
                 end
@@ -629,7 +648,7 @@ SWEP.Hook_NameChange = function(wep, name)
                     model = "7"
                     alteration = "A1"
                     wep.Trivia_Desc = "Canadian variant of the M16A3, standard for their military."
-                    if stock < 3 then
+                    if stock > 1 then
                         alteration = "A2"
                     end
                 end
@@ -936,21 +955,18 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     local stock = 0
-        if wep.Attachments[9].Installed == "bo1_solider_stock" then stock = 3
-        elseif wep.Attachments[9].Installed == "bo1_solid_stock" then stock = 2
-        elseif wep.Attachments[9].Installed == "bo1_light_stock" then stock = 1
-        end
-
-    if (stock == 2) and barrel == 5 then
-        vm:SetBodygroup(4, 4)
+    local stocka = wep.Attachments[9].Installed
+    if stocka == "kali_stock_full" then stock = 1
+    elseif stocka == "kali_stock_collapsed" then stock = 2
+    elseif stocka == "kali_stock_extended" then stock = 3
+    elseif stocka == "kali_stock_half_ext" then stock = 4
+    elseif stocka == "kali_stock_wire" then stock = 5
+    elseif stocka == "kali_stock_cm901_ext" then stock = 6
+    elseif stocka == "kali_stock_famas" then stock = 7
     end
 
-    if (stock == 3) and barrel == 11 then
-        vm:SetBodygroup(4, 6)
-    end
-
-    if (stock == 1) and barrel == 6 then
-        vm:SetBodygroup(4, 5)
+    for k = stock, stock do
+        vm:SetBodygroup(4, k)
     end
 
     local optic = wep.Attachments[2].Installed
@@ -1054,15 +1070,15 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             if kacirons then
                 vm:SetBodygroup(5,3)
                 wep.IronSightStruct = {
-                    Pos = Vector(-2.765, -2, 0.25),
-                    Ang = Angle(0, 0.0125, 0),
+                    Pos = Vector(-2.765, -2, 0.275),
+                    Ang = Angle(-0.05, 0.0125, 0),
                     Magnification = 1.1,
                     CrosshairInSights = false,
                 }
                 if barrel == 10 then
                     wep.IronSightStruct = {
-                        Pos = Vector(-2.765, -2, 0.25),
-                        Ang = Angle(-0.05, 0.0125, 0),
+                        Pos = Vector(-2.765, -2, 0.275),
+                        Ang = Angle(-0.1, 0.0125, 0),
                         Magnification = 1.1,
                         CrosshairInSights = false,
                     }
@@ -1129,31 +1145,35 @@ SWEP.Hook_GetCapacity = function(wep, cap)
     local sear = wep.Attachments[1].Installed
 
     local stock = 0
-        if stocka == "bo1_solider_stock" then stock = 1
-        elseif stocka == "bo1_solid_stock" then stock = 1
-        elseif stocka == "bo1_light_stock" then stock = 1
-        end
+    if stocka == "kali_stock_full" then stock = 1
+    elseif stocka == "kali_stock_collapsed" then stock = 2
+    elseif stocka == "kali_stock_extended" then stock = 3
+    elseif stocka == "kali_stock_half_ext" then stock = 4
+    elseif stocka == "kali_stock_wire" then stock = 5
+    elseif stocka == "kali_stock_cm901_ext" then stock = 6
+    elseif stocka == "kali_stock_famas" then stock = 7
+    end
 
     local length = 0
-        if barrel == "kali_ar15_barrel_m203" then length = 0
-        elseif barrel == "kali_ar15_barrel_a2" then length = 1
-        elseif barrel == "kali_ar15_barrel_a4" then length = 1
-        elseif barrel == "kali_ar15_barrel_xm" then length = 2
-        elseif barrel == "kali_ar15_barrel_607" then length = 3
-        elseif barrel == "kali_ar15_barrel_727" then length = 4
-        elseif barrel == "kali_ar15_barrel_727c" then length = 4
-        elseif barrel == "kali_ar15_barrel_ris" then length = 4
-        elseif barrel == "kali_ar15_barrel_risc" then length = 4
-        elseif barrel == "kali_ar15_barrel_patriot" then length = 5
-        end
+    if barrel == "kali_ar15_barrel_m203" then length = 0
+    elseif barrel == "kali_ar15_barrel_a2" then length = 1
+    elseif barrel == "kali_ar15_barrel_a4" then length = 1
+    elseif barrel == "kali_ar15_barrel_xm" then length = 2
+    elseif barrel == "kali_ar15_barrel_607" then length = 3
+    elseif barrel == "kali_ar15_barrel_727" then length = 4
+    elseif barrel == "kali_ar15_barrel_727c" then length = 4
+    elseif barrel == "kali_ar15_barrel_ris" then length = 4
+    elseif barrel == "kali_ar15_barrel_risc" then length = 4
+    elseif barrel == "kali_ar15_barrel_patriot" then length = 5
+    end
     local fcg = 0
-        if sear == "bo1_fcg_s13" then fcg = 1
-        elseif sear == "kali_fcg_funswitch" then fcg = 2
-        elseif sear == "kali_fcg_funswitch_2" then fcg = 3
-        elseif sear == "kali_fcg_a4" then fcg = 4
-        elseif sear == "bo1_fcg_s16" then fcg = 5
-        elseif sear == "kali_fcg_splitter" then fcg = 6
-        end
+    if sear == "bo1_fcg_s13" then fcg = 1
+    elseif sear == "kali_fcg_funswitch" then fcg = 2
+    elseif sear == "kali_fcg_funswitch_2" then fcg = 3
+    elseif sear == "kali_fcg_a4" then fcg = 4
+    elseif sear == "bo1_fcg_s16" then fcg = 5
+    elseif sear == "kali_fcg_splitter" then fcg = 6
+    end
 
     if pap and m635 then
         return 50
