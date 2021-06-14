@@ -1,5 +1,5 @@
 att.PrintName = "FAMAS Stock"
-att.Icon = Material("entities/acwatt_m16_stock.png")
+att.Icon = Material("entities/acwatt_bo1_stock_icon.png")
 att.Description = "The rear of the FAMAS receiver has been turned into a stock that performs equally as well as a standard M16 full stock."
 att.Desc_Pros = {
 }

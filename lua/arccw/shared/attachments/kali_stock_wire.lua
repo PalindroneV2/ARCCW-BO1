@@ -1,5 +1,5 @@
 att.PrintName = "Wire Stock"
-att.Icon = Material("entities/acwatt_car15_stock.png")
+att.Icon = Material("entities/acwatt_bo1_stock_icon.png")
 att.Description = "Extended wire stock which provides better handling and a small bonus to recoil control"
 att.Desc_Pros = {
 }

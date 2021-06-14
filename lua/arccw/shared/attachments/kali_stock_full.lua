@@ -1,5 +1,5 @@
 att.PrintName = "Full Stock"
-att.Icon = Material("entities/acwatt_m16_stock.png")
+att.Icon = Material("entities/acwatt_bo1_stock_icon.png")
 att.Description = "Full stock standard for the M16 platform. Provides the best possible recoil control while penalizing handling."
 att.Desc_Pros = {
 }

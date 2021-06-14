@@ -1,5 +1,5 @@
 att.PrintName = "Gen-3 Extended Stock"
-att.Icon = Material("entities/acwatt_m16_stock.png")
+att.Icon = Material("entities/acwatt_bo1_stock_icon.png")
 att.Description = "Extended gen-3 collapsible stock that provides better recoil control at the cost of maneuverability."
 att.Desc_Pros = {
 }
