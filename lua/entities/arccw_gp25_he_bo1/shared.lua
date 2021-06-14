@@ -110,7 +110,10 @@ function ENT:Detonate()
 end
 
 function ENT:PhysicsCollide(colData, collider)
-	if CurTime() - self.SpawnTime >= self.FuseTime then
+	if self:WaterLevel() >= 1 then
+        self:Defuse()
+    end
+    if CurTime() - self.SpawnTime >= self.FuseTime then
 		self:Detonate()
 	else
 		self:Defuse()
