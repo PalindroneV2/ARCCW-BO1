@@ -189,36 +189,6 @@ SWEP.AttachmentElements = {
             {ind = 6, bg = 1},
         },
     },
-    ["light_stock"] = {
-        VMBodygroups = {
-            {ind = 4, bg = 1},
-        },
-    },
-    ["solid_stock"] = {
-        VMBodygroups = {
-            {ind = 4, bg = 3},
-        },
-    },
-    ["full_stock"] = {
-        VMBodygroups = {
-            {ind = 4, bg = 2},
-        },
-    },
-    ["light_stock"] = {
-        VMBodygroups = {
-            {ind = 4, bg = 1},
-        },
-    },
-    ["solid_stock"] = {
-        VMBodygroups = {
-            {ind = 4, bg = 3},
-        },
-    },
-    ["solider_stock"] = {
-        VMBodygroups = {
-            {ind = 4, bg = 2},
-        },
-    },
     ["kali_barrel_607"] = {
         AttPosMods = {
             [3] = {
