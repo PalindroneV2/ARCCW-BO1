@@ -14,6 +14,7 @@ att.Slot = "kali_barrel"
 att.GivesFlags = {"kali_barrel_famas", "kali_barrel_carbine", "notwood"}
 --att.RequireFlags = {"a4top"}
 att.HideIfBlocked = true
+att.NoRandom = true
 
 att.Mult_Range = 0.85
 att.Mult_Recoil = 1.1

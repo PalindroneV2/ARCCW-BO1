@@ -19,3 +19,4 @@ att.Mult_SightedSpeedMult = 0.85
 att.GivesFlags = {"famas_stock"}
 --att.RequireFlags = {"kali_barrel_famas"}
 att.HideIfBlocked = true
+att.NoRandom = true
