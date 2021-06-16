@@ -94,7 +94,6 @@ SWEP.RecoilRise = 1
 SWEP.SpeedMult = 0.85
 SWEP.SightedSpeedMult = 0.5
 SWEP.SightTime = 0.3
-SWEP.VisualRecoilMult = 0
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
