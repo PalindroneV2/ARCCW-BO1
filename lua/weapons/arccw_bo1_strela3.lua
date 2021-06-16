@@ -88,8 +88,8 @@ SWEP.ShellSounds = ArcCW.ShotgunShellSoundsTable
 SWEP.ShellScale = 1.5
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
-SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
-SWEP.ProceduralViewBobAttachment = 1
+SWEP.CaseEffectAttachment = nil -- which attachment to put the case effect on
+SWEP.ProceduralViewBobAttachment = 2
 SWEP.CamAttachment = 2
 
 SWEP.SpeedMult = 0.95
@@ -104,10 +104,10 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3, 3, -0.25),
-    Ang = Angle(5, -0.3, 0),
+    Pos = Vector(-2, 3, -0.25),
+    Ang = Angle(4.9, -1.25, 0),
     Magnification = 1.1,
-    CrosshairInSights = false,
+    CrosshairInSights = true,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
