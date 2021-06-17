@@ -1,11 +1,8 @@
 SWEP.Base = "arccw_base"
-SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
+SWEP.Spawnable = false -- this obviously has to be set to true
+SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
-
-if GetConVar("arccw_codextras_merge"):GetBool() then
-    SWEP.Category = "ArcCW - Black Ops"
-end
+SWEP.AutoSpawnable = false
 
 SWEP.PrintName = "9K34 Strela-3"
 SWEP.Trivia_Class = "Rocket Launcher"
