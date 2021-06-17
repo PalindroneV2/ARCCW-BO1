@@ -862,6 +862,16 @@ sound.Add( {
     }
 } )
 sound.Add( {
+    name = "ArcCW_BO2.SCAR_Fire",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_generic_ar/fire_scar.wav",
+    }
+} )
+sound.Add( {
     name = "ArcCW_BO2.AN94_Fire",
     channel = CHAN_AUTO,
     volume = 1.0,

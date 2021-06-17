@@ -1,17 +1,16 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
+SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-if GetConVar("arccw_codextras_merge"):GetBool() then
-    SWEP.Category = "ArcCW - Black Ops"
-end
 
 -- This one is so yall are aware.
 SWEP.PrintName = "SCAR-H"
 SWEP.Trivia_Class = "Battle Rifle"
 SWEP.Trivia_Desc = [[
-    The FN SCAR is a rifle based on the AR-15 platform. This is the H variant, which fires 7.62x51mm NATO.
+    The FN SCAR is a rifle based on the AR-15 platform. Designed to be a light, modular and highly customizable system, the SCAR has found favor with many spefcial forces groups around the world.
+
+    This is the H ("Heavy") variant, which fires 7.62x51mm NATO.
 ]]
 SWEP.Trivia_Manufacturer = "Carl Gustafs"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
@@ -24,18 +23,20 @@ SWEP.Slot = 2
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_cde_scarh.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_cde_scarh.mdl"
+--SWEP.WorldModel = "models/weapons/arccw/c_cde_scarh.mdl"
+SWEP.MirrorWorldModel = "models/weapons/arccw/w_cde_scarh.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-4, 3.5, -5.25),
-    ang        =    Angle(-9, -1, 180),
+    pos        =    Vector(-4.25, 3.5, -7.15),
+    ang        =    Angle(0, 1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
+    scale = 1.05
 }
 SWEP.ViewModelFOV = 60
 
 SWEP.Damage = 55
 SWEP.DamageMin = 40 -- damage done at maximum range
-SWEP.Range = 175 -- in METRES
+SWEP.Range = 125 -- in METRES
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -86,7 +87,7 @@ SWEP.MagID = "scarh" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO2.M27_Fire"
+SWEP.ShootSound = "ArcCW_BO2.SCAR_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.M27_Sil"
 SWEP.DistantShootSound = "weapons/arccw/bo1_m16/ringoff_f.wav"
 
@@ -94,7 +95,7 @@ SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 90
 SWEP.ShellAngle = 90
-SWEP.ShellScale = 1.5
+SWEP.ShellScale = 1.6
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
@@ -112,10 +113,10 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.2, 3, -0.5),
-    Ang = Angle(0.1, 0.025, 0),
+    Pos = Vector(-2.2, 3, -0.2),
+    Ang = Angle(0.5, 0.025, 0),
     Magnification = 1.25,
-    CrosshairInSights = true,
+    CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
@@ -145,6 +146,7 @@ SWEP.BarrelLength = 30
 SWEP.ExtraSightDist = 5
 
 SWEP.DefaultBodygroups = "0000000"
+SWEP.DefaultWMBodygroups = "0000000"
 
 SWEP.AttachmentElements = {
     ["bo1_m320"] = {
@@ -154,17 +156,24 @@ SWEP.AttachmentElements = {
     },
     ["mount"] = {
         VMBodygroups = {
-            {ind = 2, bg = 1},
+            {ind = 2, bg = 2},
         },
     },
     ["solider_stock"] = {
         VMBodygroups = {
-            {ind = 4, bg = 2},
+            {ind = 4, bg = 3},
         },
     },
     ["solid_stock"] = {
         VMBodygroups = {
             {ind = 4, bg = 1},
+        },
+    },
+    ["bo2_cosmetic_scarcharm"] = {
+        AttPosMods = {
+            [2] = {
+                vpos = Vector(19.25, 0, 1.25),
+            },
         },
     },
 }
@@ -178,8 +187,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(2, 0, 3.175), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(5.5, 1.4, -6.25),
-            wang = Angle(175, 180, -2.5)
         },
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
@@ -192,7 +199,7 @@ SWEP.Attachments = {
         VMScale = Vector(1.5, 1.5, 1.5),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(19.25, 0, 1.25), -- offset that the attachment will be relative to the bone
+            vpos = Vector(19, 0, 1.4), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(0, 0, 0),
             wang = Angle(0, 0, 0)
@@ -259,7 +266,7 @@ SWEP.Attachments = {
     },
     { --10
         PrintName = "Charm",
-        Slot = "charm",
+        Slot = {"charm", "bo2_scar_charm"},
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
@@ -293,8 +300,18 @@ end
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
 
+    local csgo = wep:GetBuff_Override("CSGO_EE")
+
     local papcamo = wep:GetBuff_Override("PackAPunch")
     local camo = 0
+
+    if csgo then
+        vm:SetBodygroup(0, 2)
+        vm:SetBodygroup(1, 1)
+        if wep.Attachments[6].Installed == "bo1_solid_stock" then
+            vm:SetBodygroup(4, 2)
+        end
+    end
 
     for k = camo, camo do
         vm:SetSkin(k)
@@ -337,6 +354,10 @@ SWEP.Animations = {
         Source = "idle",
         Time = 1 / 30,
     },
+    ["idle_empty"] = {
+        Source = "idle_empty",
+        Time = 1 / 30,
+    },
     ["draw"] = {
         Source = "draw",
         Time = 1,
@@ -351,20 +372,48 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.25,
     },
-    ["ready"] = {
-        Source = "draw",
+    ["draw_empty"] = {
+        Source = "draw_empty",
         Time = 1,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.25,
+    },
+    ["holster_empty"] = {
+        Source = "holster_empty",
+        Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
+    ["ready"] = {
+        Source = "first_draw",
+        Time = 1,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+        SoundTable = {
+            {s = "ArcCW_BO2.AR_Back", t = 0.2},
+            {s = "ArcCW_BO2.AR_Fwd", t = 0.4}
+        }
     },
     ["fire"] = {
         Source = {"fire"},
         Time = 5 / 30,
         ShellEjectAt = 0,
     },
+    ["fire_empty"] = {
+        Source = {"fire_last"},
+        Time = 5 / 30,
+        ShellEjectAt = 0,
+    },
     ["fire_iron"] = {
         Source = {"fire_ads"},
+        Time = 5 / 30,
+        ShellEjectAt = 0,
+    },
+    ["fire_iron_empty"] = {
+        Source = {"fire_last_ads"},
         Time = 5 / 30,
         ShellEjectAt = 0,
     },
@@ -375,12 +424,11 @@ SWEP.Animations = {
         Framerate = 37,
         Checkpoints = {28, 38, 69},
         LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 0.5},
-            {s = "ArcCW_BO1.M16_Futz", t = 1.15},
-            {s = "ArcCW_BO1.M16_MagIn", t = 1.25}
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.5},
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.25}
         },
     },
     ["reload_empty"] = {
@@ -390,13 +438,12 @@ SWEP.Animations = {
         Framerate = 37,
         Checkpoints = {28, 38, 69},
         LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 0.5},
-            {s = "ArcCW_BO1.M16_Futz", t = 1.15},
-            {s = "ArcCW_BO1.M16_MagIn", t = 1.25},
-            {s = "ArcCW_BO1.M16_Button", t = 1.75}
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.5},
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
+            {s = "ArcCW_BO2.AR_Fwd", t = 1.75}
         },
     },
     ["enter_sprint"] = {
@@ -411,6 +458,18 @@ SWEP.Animations = {
         Source = "sprint_out",
         Time = 10 / 30
     },
+    ["enter_sprint_empty"] = {
+        Source = "sprint_in_empty",
+        Time = 10 / 30
+    },
+    ["idle_sprint_empty"] = {
+        Source = "sprint_loop_empty",
+        Time = 30 / 40
+    },
+    ["exit_sprint"] = {
+        Source = "sprint_out_empty",
+        Time = 10 / 30
+    },
 
 -- UBGL OUT ANIMS ---------------------------------------------------------------
 
@@ -421,23 +480,30 @@ SWEP.Animations = {
     ["draw_m203"] = {
         Source = "draw_gl",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.1,
-        LHIKOut = 0.25,
     },
     ["holster_m203"] = {
         Source = "holster_gl",
         Time = 0.75,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
+    },
+    ["idle_m203_empty"] = {
+        Source = "idle_empty_gl",
+        Time = 1 / 30,
+    },
+    ["draw_m203_empty"] = {
+        Source = "draw_empty_gl",
+        Time = 1,
+    },
+    ["holster_m203_empty"] = {
+        Source = "holster_empty_gl",
+        Time = 0.75,
     },
     ["ready_m203"] = {
-        Source = "draw_gl",
+        Source = "first_draw_gl",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.1,
-        LHIKOut = 0.25,
+        SoundTable = {
+            {s = "ArcCW_BO2.AR_Back", t = 0.2},
+            {s = "ArcCW_BO2.AR_Fwd", t = 0.4}
+        }
     },
     ["fire_m203"] = {
         Source = {"fire_gl"},
@@ -449,19 +515,25 @@ SWEP.Animations = {
         Time = 5 / 30,
         ShellEjectAt = 0,
     },
+    ["fire_empty_m203"] = {
+        Source = {"fire_last_gl"},
+        Time = 5 / 30,
+        ShellEjectAt = 0,
+    },
+    ["fire_iron_m203"] = {
+        Source = {"fire_last_ads_gl"},
+        Time = 5 / 30,
+        ShellEjectAt = 0,
+    },
     ["reload_m203"] = {
         Source = "reload_gl",
         Time = 2,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
         Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 0.5},
-            {s = "ArcCW_BO1.M16_Futz", t = 1.15},
-            {s = "ArcCW_BO1.M16_MagIn", t = 1.25}
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.5},
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.25}
         },
     },
     ["reload_empty_m203"] = {
@@ -470,14 +542,10 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
         Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 0.5},
-            {s = "ArcCW_BO1.M16_Futz", t = 1.15},
-            {s = "ArcCW_BO1.M16_MagIn", t = 1.25},
-            {s = "ArcCW_BO1.M16_Button", t = 1.75}
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.5},
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
+            {s = "ArcCW_BO2.AR_Fwd", t = 1.75}
         },
     },
     ["enter_sprint_m203"] = {
@@ -490,6 +558,18 @@ SWEP.Animations = {
     },
     ["exit_sprint_m203"] = {
         Source = "sprint_out_gl",
+        Time = 10 / 30
+    },
+    ["enter_sprint_m203_empty"] = {
+        Source = "sprint_in_empty_gl",
+        Time = 10 / 30
+    },
+    ["idle_sprint_m203_empty"] = {
+        Source = "sprint_loop_empty_gl",
+        Time = 30 / 40
+    },
+    ["exit_sprint_m203_empty"] = {
+        Source = "sprint_out_empty_gl",
         Time = 10 / 30
     },
 

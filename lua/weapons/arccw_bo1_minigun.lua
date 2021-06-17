@@ -23,6 +23,7 @@ SWEP.Slot = 3
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_minigun.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_minigun.mdl"
+--SWEP.MirrorWorldModel = "models/weapons/arccw/c_bo1_minigun.mdl"
 SWEP.MirrorVMWM = false
 SWEP.WorldModelOffset = {
     pos        =    Vector(8, 10, -6.75),
@@ -32,8 +33,8 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.DefaultBodygroups = "00"
-SWEP.DefaultBodygroups = "00"
+SWEP.DefaultBodygroups = "10"
+SWEP.DefaultWMBodygroups = "00"
 
 SWEP.Damage = 50
 SWEP.DamageMin = 40 -- damage done at maximum range
