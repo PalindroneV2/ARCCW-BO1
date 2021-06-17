@@ -23,7 +23,7 @@ SWEP.Slot = 2
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_cde_scarh.mdl"
---SWEP.WorldModel = "models/weapons/arccw/c_cde_scarh.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_cde_scarh.mdl"
 SWEP.MirrorWorldModel = "models/weapons/arccw/w_cde_scarh.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
