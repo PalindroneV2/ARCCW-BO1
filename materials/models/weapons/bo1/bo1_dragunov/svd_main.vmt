@@ -2,8 +2,8 @@
 {
 	"$basetexture" "models/weapons/bo1/bo1_dragunov/svd_c"
 	"$bumpmap" "models/weapons/bo1/bo1_dragunov/svd_n"
-	$detail "models\weapons\bo1\black"
-	$detailblendmode	4
+	$detail "models\weapons\bo1\gunmetal"
+	$detailblendmode	0
 	$detailblendfactor	1
 	
 	$phong                      		1

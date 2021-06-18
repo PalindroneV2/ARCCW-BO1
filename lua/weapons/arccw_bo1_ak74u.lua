@@ -251,13 +251,11 @@ SWEP.Attachments = {
     }, --4
     {
         Hidden = true,
-        Slot = {"bipod"},
+        Slot = {"bo2_dong"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(12, 0, 1.4), -- offset that the attachment will be relative to the bone
+            vpos = Vector(10, -0.75, 0.75), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(17, 1.15, -3.8),
-            wang = Angle(170, -180, 0),
         },
     }, --5
     {
@@ -406,6 +404,8 @@ SWEP.Hook_GetShootSound = function(wep, sound)
 end
 
 SWEP.Hook_GetDistantShootSound = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then return end
+
     local bake = wep.Attachments[8].Installed == "ammo_ak_74"
     if bake then
         return "ArcCW_BO1.AK74u_Ringoff"

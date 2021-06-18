@@ -3,8 +3,8 @@
 	"$basetexture" "models/weapons/bo1/bo1_l96/awm_c"
     $bumpmap   "models/weapons/bo1/bo1_l96/awm_n"
 	$detail "models/weapons/bo1/l96_od"
-	$detailblendmode 2
-	$detailblendfactor 0.25
+	$detailblendmode 0
+	$detailblendfactor 1
     
 	$phong                      		1
 	$phongexponent                      "20"

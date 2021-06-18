@@ -244,8 +244,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(10, 0, 0.2), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(15, 1.0, -3.5),
-            wang = Angle(170, -180, -5),
         },
     },
     { -- 5
@@ -261,7 +259,12 @@ SWEP.Attachments = {
     },
     { -- 6
         Hidden = true,
-        Slot = {"bo1_gp25", "bo1_mk"},
+        Slot = {"bo1_gp25", "bo1_mk", "bo2_dong"},
+        Bone = "tag_weapon",
+        Offset = {
+            vpos = Vector(10, -0.75, 0.5), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+        },
     },
     { --7
         PrintName = "Tactical",
@@ -427,6 +430,9 @@ SWEP.Hook_GetShootSound = function(wep, sound)
 end
 
 SWEP.Hook_GetDistantShootSound = function(wep, distancesound)
+
+    if wep:GetBuff_Override("Silencer") then return end
+
     local bake = wep.Attachments[9].Installed == "ammo_ak_74"
     if bake then
         return "ArcCW_BO1.AK74u_Ringoff"

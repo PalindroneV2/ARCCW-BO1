@@ -12,6 +12,6 @@ VertexlitGeneric
 	$normalmapalphaphongmask    	1
 
 	$detail "models/weapons/bo1/tan"
-	$detailblendmode 1
-	"$detailblendfactor" "0.25"
+	$detailblendmode 4
+	"$detailblendfactor" "1"
 }

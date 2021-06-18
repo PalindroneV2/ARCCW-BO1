@@ -5,7 +5,7 @@
 	"$bumpmap" "models/weapons/bo1/bo1_mp5k/mp5k_n"
 	$detail "models/weapons/bo1/black"
 	$detailblendmode 0
-	"$detailblendfactor" "0.5"
+	"$detailblendfactor" "0.9"
 
 	$phong                      		1
 	$phongexponent                      "20"

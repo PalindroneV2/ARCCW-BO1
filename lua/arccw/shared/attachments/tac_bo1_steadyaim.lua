@@ -10,4 +10,4 @@ att.AutoStats = true
 att.Slot = {"tac", "tac_pistol", "bo1_tacslot"}
 
 att.Mult_HipDispersion = 0.9
-att.Mult_MoveDispersion = 0.9
+att.Mult_MoveDispersion = 0.75

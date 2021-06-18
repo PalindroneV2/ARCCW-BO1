@@ -3,9 +3,9 @@
 	"$basetexture" "models/weapons/bo1/bo1_skorpion/skorpion_c"
 	"$bumpmap" "models/weapons/bo1/bo1_skorpion/skorpion_n"
 	$detail "models\weapons\bo1\bo1_ak47\ak_wood"
-	$detailblendmode 4
-	$detailblendfactor 1.25
-	
+	$detailblendmode 0
+	$detailblendfactor 1
+
 	$phong                      		1
 	$phongexponent                      "20"
 	$phongboost                         "0.5"

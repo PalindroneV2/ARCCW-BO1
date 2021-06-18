@@ -2,6 +2,9 @@
 {
 	"$basetexture" "models/weapons/bo1/bo1_kiparis/kiparis_c"
 	"$bumpmap" "models/weapons/bo1/bo1_kiparis/kiparis_n"
+	$detail "models/weapons/bo1/black"
+	$detailblendmode 0
+	$detailblendfactor 1
 	
 	$phong                      		1
 	$phongexponent                      "20"

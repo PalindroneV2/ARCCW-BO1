@@ -152,7 +152,7 @@ SWEP.AttachmentElements = {
     },
     ["ammo_papunch"] = {
         NamePriority = 10,
-        NameChange = "Wound Aggregator 20K`",
+        NameChange = "Wound Aggregator 20K",
     },
 }
 

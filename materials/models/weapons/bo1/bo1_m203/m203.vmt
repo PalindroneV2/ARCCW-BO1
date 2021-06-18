@@ -4,7 +4,7 @@
 	//$color2 "[0.5 0.5 0.5]"
 	$blendtintbybasealpha  "1"
 	"$bumpmap" "models/weapons/bo1/bo1_m203/m203_n"
-	$detail "models\weapons\bo1\gunmetal"
+	$detail "models\weapons\bo1\black"
 	$detailblendmode 0
 	$detailblendscale 1
 

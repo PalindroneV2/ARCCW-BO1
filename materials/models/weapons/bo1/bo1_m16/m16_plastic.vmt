@@ -4,7 +4,7 @@ VertexlitGeneric
 	//$color2 "[0.75 0.75 0.75]"
 	$bumpmap	"models\weapons\bo1\bo1_m16\m16_n"
 	$blendtintbybasealpha  "1"
-	$detail "models\weapons\bo1\plastic"
+	$detail "models\weapons\bo1\black"
 	$detailblendmode 0
 	$detailblendscale 1
 

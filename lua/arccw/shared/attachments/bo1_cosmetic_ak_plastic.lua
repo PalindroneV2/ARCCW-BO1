@@ -1,6 +1,6 @@
-att.PrintName = "Black Polymer"
+att.PrintName = "Worn Down Polymer"
 att.Icon = Material("entities/acwatt_m16_stock.png")
-att.Description = "Black finish for polymer AK parts."
+att.Description = "The sign of a well worn weapon is the factory finish not being there anymore."
 att.Desc_Pros = {
     "+ Only cosmetic.",
 }

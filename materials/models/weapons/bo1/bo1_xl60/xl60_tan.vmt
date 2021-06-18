@@ -4,7 +4,7 @@ VertexlitGeneric
 	//$color2 "[0.5 0.5 0.5]"
 	$bumpmap	"models\weapons\bo1\bo1_xl60\xl60_n"
 	$detail "models\weapons\bo1\tan"
-	$detailblendmode 4
+	$detailblendmode 0
 	$detailblendfactor "1"
 
 	$phong                      		1

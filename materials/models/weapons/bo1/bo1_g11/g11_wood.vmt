@@ -12,6 +12,6 @@ VertexlitGeneric
 	$normalmapalphaphongmask    	1
 
 	$detail "models/weapons/bo1/ak_wood"
-	$detailblendmode 3
-	"$detailblendfactor" "0.5"
+	$detailblendmode 0
+	"$detailblendfactor" "1"
 }

@@ -3,6 +3,9 @@
 	"$basetexture" "models/weapons/bo1/bo1_wa2000/wa2000_c"
 	$blendtintbybasealpha  "1"
 	"$bumpmap" "models/weapons/bo1/bo1_wa2000/wa2000_n"
+	$detail "models\weapons\bo1\gunmetal"
+	$detailblendmode 0
+	$detailblendfactor 1s
 	
 	$phong                      		1
 	$phongexponent                      "20"

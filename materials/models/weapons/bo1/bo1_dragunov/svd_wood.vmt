@@ -4,7 +4,7 @@
 	$blendtintbybasealpha  "1"
 	"$bumpmap" "models/weapons/bo1/bo1_dragunov/svd_n"
 	$detail "models\weapons\bo1\bo1_ak47\ak_wood"
-	$detailblendmode		4
+	$detailblendmode		0
 	$detailblendfactor	1
 	
 	$phong                      		1

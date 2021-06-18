@@ -3,9 +3,6 @@ VertexlitGeneric
 	$basetexture	"models\weapons\bo1\bo1_ak74u\ak74u_c"
 	//$color2 "[2 2 2]"
 	$bumpmap	"models\weapons\bo1\bo1_ak74u\ak74u_n"
-	$detail		"models\weapons\bo1\plastic"
-	$detailblendmode 0
-	$detailblendfactor 2
 	
 	$phong                      		1
 	$phongexponent                      "20"

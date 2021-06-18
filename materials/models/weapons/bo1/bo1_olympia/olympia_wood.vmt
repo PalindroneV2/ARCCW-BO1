@@ -3,8 +3,8 @@ VertexlitGeneric
 	$basetexture	"models\weapons\bo1\bo1_olympia\olympia_c"
 	$bumpmap	"models\weapons\bo1\bo1_olympia\olympia_n"
 	$detail "models\weapons\bo1\olympia_wood"
-	$detailblendmode 2
-	$detailblendfactor 0.5
+	$detailblendmode 0
+	$detailblendfactor 1
 
 	$phong                      		1
 	$phongexponent                      "20"

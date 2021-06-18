@@ -4,7 +4,7 @@ VertexlitGeneric
 	$bumpmap	"models\weapons\bo1\bo1_fal\fal_n"
 	$detail	"models\weapons\bo1\bo1_fal\fal_wood"
 	$detailblendmode 4
-	$detailblendfactor 0.5
+	$detailblendfactor 1
 
 	$phong                      		1
 	$phongexponent                      "20"

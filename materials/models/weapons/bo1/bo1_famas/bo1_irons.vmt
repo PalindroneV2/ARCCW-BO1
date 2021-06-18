@@ -2,6 +2,7 @@ VertexlitGeneric
 {
 	$basetexture	"models\weapons\bo1\bo1_irons\irons_c"
 	$bumpmap	"models\weapons\bo1\bo1_irons\irons_n"
+	$detail "models/weapons/bo1/gunmetal"
 
 	$phong                      		1
 	$phongexponent                      "20"

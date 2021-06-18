@@ -3,9 +3,9 @@ VertexlitGeneric
 	$basetexture	"models\weapons\bo1\bo1_car15\car15_c"
 	//$color2 "[0.75 0.75 0.75]"
 	$bumpmap	"models\weapons\bo1\bo1_car15\car15_n"
-	$detail "models\weapons\bo1\plastic"
+	$detail "models\weapons\bo1\black"
 	$detailblendmode 0
-	$detailblendscale 1
+	$detailblendfactor 1.1
 
 	$phong                      		1
 	$phongexponent                      "20"

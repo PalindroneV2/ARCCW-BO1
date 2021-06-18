@@ -12,4 +12,8 @@ VertexlitGeneric
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
 
+	$detail "models\weapons\bo1\gunmetal"
+	$detailblendmode 0
+	$detailblendfactor 1
+
 }
