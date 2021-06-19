@@ -14,6 +14,7 @@ VertexlitGeneric
 	$detail	"models\weapons\pap\pap_mob_s"
 	$detailscale 4
 	$detailblendmode 5
+	"$nocull" "1"
 
 	Proxies // proxies are listed inside this block
 	{

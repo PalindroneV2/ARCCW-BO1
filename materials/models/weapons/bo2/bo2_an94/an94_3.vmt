@@ -18,4 +18,5 @@
 	$envmap 	env_cubemap
 	$envmaptint   "[0.05 0.05 0.05]"
 	$envmapfresnel "1"
+	"$nocull" "1"
 }
