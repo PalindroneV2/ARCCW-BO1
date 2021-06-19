@@ -13,4 +13,8 @@ VertexLitGeneric
     $detail		"models\weapons\bo1\ak_wood"
 	$detailblendmode		3
 	$detailblendfactor 0.75
+
+	$envmap 	env_cubemap
+	$envmaptint   "[0.025 0.025 0.025]"
+	$envmapfresnel "1"
 }

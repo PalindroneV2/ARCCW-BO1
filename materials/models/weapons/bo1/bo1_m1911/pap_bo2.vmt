@@ -22,5 +22,7 @@
 	$envmapmask	"models\weapons\bo1\gold_s"
 	$envmaptint "[1 .75 .25]"
 	$envmapfresnel "[1 1 1]"
+
+	"$nocull" "1"
 }
 // CREDIT TO GAMER BARNEY 

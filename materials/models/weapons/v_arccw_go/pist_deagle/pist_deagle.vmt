@@ -21,4 +21,6 @@ VertexLitGeneric
 	$selfillum 1
 	$selfillumtint "[1 1 1]"
 	$selfillummask "models\weapons\v_arccw_go\pist_deagle\pist_deagle_selfillum"
+
+	"$nocull" "1"
 }

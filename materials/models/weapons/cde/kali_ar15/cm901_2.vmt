@@ -13,4 +13,8 @@ VertexlitGeneric
 
 	"$detail" "models\weapons\bo1\solid_white"
 	"$detailblendfactor" "0.05"
+
+	"$envmap" "env_cubemap"					
+	"$envmaptint" "[ .02 .02 .02 ]"					
+	"$envmapFresnel" "0.2"
 }

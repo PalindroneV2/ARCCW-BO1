@@ -13,4 +13,8 @@ VertexLitGeneric
     $detail "models/weapons/bo1/gunmetal"
 	$detailblendmode 0
 	"$detailblendfactor" "0.25"
+
+	$envmap 	env_cubemap
+	$envmaptint   "[0.025 0.025 0.025]"
+	$envmapfresnel "1"
 }
