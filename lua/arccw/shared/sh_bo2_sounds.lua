@@ -120,10 +120,10 @@ sound.Add({
     --pitch = {95, 110},
     sound = {
         {
-            "weapons/arccw/bo2_generic_lmg/dist/0.wav",
-            "weapons/arccw/bo2_generic_lmg/dist/1.wav",
-            "weapons/arccw/bo2_generic_lmg/dist/2.wav",
-            "weapons/arccw/bo2_generic_lmg/dist/3.wav"
+            "weapons/arccw/bo2_generic_ar/dist/0.wav",
+            "weapons/arccw/bo2_generic_ar/dist/1.wav",
+            "weapons/arccw/bo2_generic_ar/dist/2.wav",
+            "weapons/arccw/bo2_generic_ar/dist/3.wav"
         }
     }
 })
