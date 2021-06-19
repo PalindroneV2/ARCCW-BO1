@@ -75,8 +75,8 @@ SWEP.MagID = "rpd" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO1.RPK_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
+SWEP.ShootSound = "ArcCW_BO2.LSAT_Fire"
+SWEP.ShootSoundSilenced = "ArcCW_BO2.LSAT_Sil"
 SWEP.DistantShootSound = {"weapons/arccw/bo1_g11/ringoff_f.wav", "weapons/arccw/bo1_g11/ringoff_r.wav"}
 
 SWEP.MuzzleEffect = "muzzleflash_1"
@@ -195,9 +195,10 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = "muzzle",
+        VMScale = Vector(1.5, 1.25, 1.25),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(24, 0, 2.35), -- offset that the attachment will be relative to the bone
+            vpos = Vector(27.5, 0, 1.25), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
     }, --2
@@ -236,8 +237,8 @@ SWEP.Attachments = {
         VMScale = Vector(1, 1, 1),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(21, 0, 0.5), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 0),
+            vpos = Vector(17, 0, 0.75), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 90),
         },
     }, --6
     { --7
@@ -256,9 +257,9 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
-        Bone = "j_reload_cover",
+        Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(-5.25, -1, -0.5),
+            vpos = Vector(2, -0.5, 1),
             vang = Angle(0, 0, 0),
         },
     }, --10
@@ -334,15 +335,15 @@ SWEP.Animations = {
         LHIKIn = nil,
         LHIKOut = 1,
         SoundTable = {
-            {s = "ArcCW_BO1.M60_Charge", t = 17 / 35},
-            {s = "ArcCW_BO1.M60_Charge", t = 20 / 35},
-            {s = "ArcCW_BO1.M60_Open", t = 57 / 35},
-            {s = "ArcCW_BO1.M60_BoxOff", t = 95 / 35},
-            {s = "ArcCW_BO1.M60_BoxOn", t = 130 / 35},
-            {s = "ArcCW_BO1.M60_BeltPull", t = 160 / 35},
-            {s = "ArcCW_BO1.M60_BeltPlace", t = 175 / 35},
-            {s = "ArcCW_BO1.M60_Close", t = 200 / 35},
-            {s = "ArcCW_BO1.M60_LidClose", t = 205 / 35},
+            {s = "ArcCW_BO2.LMG_Back", t = 17 / 35},
+            {s = "ArcCW_BO2.LMG_Fwd", t = 20 / 35},
+            {s = "ArcCW_BO2.LMG_Open", t = 57 / 35},
+            {s = "ArcCW_BO2.LMG_BoxOff", t = 95 / 35},
+            {s = "ArcCW_BO2.LMG_BoxOn", t = 130 / 35},
+            {s = "ArcCW_BO2.LMG_BeltPull", t = 160 / 35},
+            {s = "ArcCW_BO2.LMG_BeltPlace", t = 175 / 35},
+            {s = "ArcCW_BO2.LMG_Close", t = 200 / 35},
+            {s = "ArcCW_BO2.LMG_LidClose", t = 205 / 35},
             {s = "ArcCW_BO1.M60_Bonk", t = 210 / 35},
         },
     },
@@ -356,15 +357,15 @@ SWEP.Animations = {
         LHIKIn = nil,
         LHIKOut = 1,
         SoundTable = {
-            {s = "ArcCW_BO1.M60_Charge", t = 17 / 35},
-            {s = "ArcCW_BO1.M60_Charge", t = 20 / 35},
-            {s = "ArcCW_BO1.M60_Open", t = 57 / 35},
-            {s = "ArcCW_BO1.M60_BoxOff", t = 95 / 35},
-            {s = "ArcCW_BO1.M60_BoxOn", t = 130 / 35},
-            {s = "ArcCW_BO1.M60_BeltPull", t = 160 / 35},
-            {s = "ArcCW_BO1.M60_BeltPlace", t = 175 / 35},
-            {s = "ArcCW_BO1.M60_Close", t = 200 / 35},
-            {s = "ArcCW_BO1.M60_LidClose", t = 205 / 35},
+            {s = "ArcCW_BO2.LMG_Back", t = 17 / 35},
+            {s = "ArcCW_BO2.LMG_Fwd", t = 20 / 35},
+            {s = "ArcCW_BO2.LMG_Open", t = 57 / 35},
+            {s = "ArcCW_BO2.LMG_BoxOff", t = 95 / 35},
+            {s = "ArcCW_BO2.LMG_BoxOn", t = 130 / 35},
+            {s = "ArcCW_BO2.LMG_BeltPull", t = 160 / 35},
+            {s = "ArcCW_BO2.LMG_BeltPlace", t = 175 / 35},
+            {s = "ArcCW_BO2.LMG_Close", t = 200 / 35},
+            {s = "ArcCW_BO2.LMG_LidClose", t = 205 / 35},
             {s = "ArcCW_BO1.M60_Bonk", t = 210 / 35},
         },
     },

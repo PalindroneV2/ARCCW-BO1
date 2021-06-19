@@ -167,16 +167,6 @@ SWEP.Attachments = {
         PrintName = "Perk",
         Slot = {"bo1_perk", "bo1_perk_minigun"}
     }, --4
-    { --5
-        PrintName = "Charm",
-        Slot = "charm",
-        FreeSlot = true,
-        Bone = "j_reload_cover",
-        Offset = {
-            vpos = Vector(-5.25, -1, -0.5),
-            vang = Angle(0, 0, 0),
-        },
-    }, --5
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)

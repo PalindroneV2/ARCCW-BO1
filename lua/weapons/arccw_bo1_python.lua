@@ -17,7 +17,8 @@ SWEP.Slot = 1
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_python.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_bo1_python.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_bo1_python.mdl"
+SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo1_python.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-8.5, 4, -4),
@@ -91,9 +92,9 @@ SWEP.ShellScale = 1.5
 SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
-SWEP.CaseEffectAttachment = 3 -- which attachment to put the case effect on
+SWEP.CaseEffectAttachment = nil -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 1
-SWEP.CamAttachment = 2
+SWEP.CamAttachment = nil
 
 SWEP.SightTime = 0.175
 
@@ -275,22 +276,11 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
+        RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
+        MinProgress = 1.2,
         SoundTable = {
             {s = "ArcCW_BO1.Python_Open", t = 20 / 35},
             {s = "ArcCW_BO1.Python_Empty", t = 26 / 35},
-        },
-    },
-    ["sgreload_start_empty"] = {
-        Source = "reload_in2",
-        Time = 67 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
-        SoundTable = {
-            {s = "ArcCW_BO1.Python_Open", t = 20 / 35},
-            {s = "ArcCW_BO1.Python_Empty", t = 26 / 35},
-            {s = "ArcCW_BO1.Python_Bullet", t = 64 / 30},
         },
     },
     ["sgreload_insert"] = {
@@ -301,6 +291,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
+        MinProgress = 16 / 30,
         SoundTable = {
             {s = "ArcCW_BO1.Python_Bullet", t = 13 / 30},
         },

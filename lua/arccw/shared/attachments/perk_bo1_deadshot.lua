@@ -8,8 +8,8 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = {"bo1_perk"}
 
-att.Mult_HipDispersion = 0.8
-att.Mult_MoveDispersion = 0.8
+att.Mult_HipDispersion = 0.7
+att.Mult_MoveDispersion = 0.7
 att.Mult_Recoil = 0.75
 
 att.Hook_BulletHit = function(wep, data)

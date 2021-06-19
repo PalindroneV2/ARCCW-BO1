@@ -441,10 +441,10 @@ SWEP.Animations = {
         Time = 60 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
+        MinProgress = 0.6,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 4,
-        MinProgress = 0.6,
         SoundTable = {
             {s = "ArcCW_WAW.Mosin_Up", t = 5 / 30},
             {s = "ArcCW_WAW.Mosin_Back", t = 10 / 30},
