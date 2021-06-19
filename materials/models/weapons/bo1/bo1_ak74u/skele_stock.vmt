@@ -11,8 +11,9 @@ VertexLitGeneric
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
 
-	$detail "models\weapons\bo1\gunmetal"
-	$detailblendfactor 0.5
+	$detail "models\weapons\bo1\gunmetal_brown"
+	$detailblendmode 1
+	$detailblendfactor 0.4
 
 	$envmap 	env_cubemap
 	$envmaptint   "[0.05 0.05 0.05]"
