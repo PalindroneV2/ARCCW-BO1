@@ -365,7 +365,8 @@ SWEP.Animations = {
         Time = 5 / 30,
         ShellEjectAt = 0,
         SoundTable = {
-            {s = "weapons/arccw/cde_ak5/lfe.wav", t = 0}
+            {s = "weapons/arccw/cde_ak5/lfe.wav", t = 0},
+            {s = "weapons/arccw/cde_ak5/mech.wav", t = 0.05}
         },
     },
     ["fire_iron"] = {
@@ -451,7 +452,8 @@ SWEP.Animations = {
         Time = 5 / 30,
         ShellEjectAt = 0,
         SoundTable = {
-            {s = "weapons/arccw/cde_ak5/lfe.wav", t = 0}
+            {s = "weapons/arccw/cde_ak5/lfe.wav", t = 0},
+            {s = "weapons/arccw/cde_ak5/mech.wav", t = 0.05}
         },
     },
     ["fire_iron_m203"] = {
