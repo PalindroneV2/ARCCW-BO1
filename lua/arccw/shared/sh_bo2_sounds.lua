@@ -111,6 +111,23 @@ sound.Add( {
         "weapons/arccw/bo2_generic_ar/fire_sil.wav",
     }
 } )
+
+sound.Add({
+    name = "ArcCW_BO2.AR_Dist",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        {
+            "weapons/arccw/bo2_generic_lmg/dist/0.wav",
+            "weapons/arccw/bo2_generic_lmg/dist/1.wav",
+            "weapons/arccw/bo2_generic_lmg/dist/2.wav",
+            "weapons/arccw/bo2_generic_lmg/dist/3.wav"
+        }
+    }
+})
+
 sound.Add( {
     name = "ArcCW_BO2.AR_MagIn",
     channel = CHAN_ITEM,
@@ -182,6 +199,20 @@ sound.Add({
     --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo2_generic_lmg/sil_lsat.wav",
+    }
+})
+
+sound.Add({
+    name = "ArcCW_BO2.LMG_Dist",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        {
+            "weapons/arccw/bo2_generic_lmg/dist/0.wav",
+            "weapons/arccw/bo2_generic_lmg/dist/1.wav"
+        }
     }
 })
 

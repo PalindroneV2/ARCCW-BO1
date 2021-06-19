@@ -77,7 +77,10 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_BO2.LSAT_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.LSAT_Sil"
-SWEP.DistantShootSound = {"weapons/arccw/bo1_g11/ringoff_f.wav", "weapons/arccw/bo1_g11/ringoff_r.wav"}
+SWEP.DistantShootSound = {
+    "weapons/arccw/bo2_generic_lmg/dist/0.wav",
+    "weapons/arccw/bo2_generic_lmg/dist/1.wav"
+}
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_762nato.mdl"
