@@ -85,9 +85,10 @@ SWEP.MagID = "m16a1" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO1.Galil_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
-SWEP.DistantShootSound = "weapons/arccw/bo1_m16/ringoff_f.wav"
+SWEP.FirstShootSound = "weapons/arccw/cde_ak5/fire_first.wav"
+SWEP.ShootSound = {"weapons/arccw/cde_ak5/fire_auto_1.wav", "weapons/arccw/cde_ak5/fire_auto_2.wav", "weapons/arccw/cde_ak5/fire_auto_3.wav"}
+SWEP.ShootSoundSilenced = "weapons/arccw/cde_ak5/fire_supp.wav"
+SWEP.DistantShootSound = "weapons/arccw/bocw_common/fire_dist.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -363,11 +364,18 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 5 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "weapons/arccw/cde_ak5/lfe.wav", t = 0}
+        },
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 5 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "weapons/arccw/cde_ak5/lfe.wav", t = 0},
+            {s = "weapons/arccw/cde_ak5/mech_ads.wav", t = 0.05}
+        },
     },
     ["reload"] = {
         Source = "reload",
@@ -379,9 +387,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 0.5},
-            {s = "ArcCW_BO1.M16_Futz", t = 1.15},
-            {s = "ArcCW_BO1.M16_MagIn", t = 1.25}
+            {s = "weapons/arccw/cde_ak5/magout.wav", t = 0.25},
+            {s = "weapons/arccw/cde_ak5/magin.wav", t = 1.0}
         },
     },
     ["reload_empty"] = {
@@ -394,10 +401,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 0.5},
-            {s = "ArcCW_BO1.M16_Futz", t = 1.15},
-            {s = "ArcCW_BO1.M16_MagIn", t = 1.25},
-            {s = "ArcCW_BO1.M16_Button", t = 1.75}
+            {s = "weapons/arccw/cde_ak5/magout.wav", t = 0.25},
+            {s = "weapons/arccw/cde_ak5/magin.wav", t = 1.0},
+            {s = "weapons/arccw/cde_ak5/chamber.wav", t = 1.75}
         },
     },
     ["enter_sprint"] = {
@@ -444,11 +450,18 @@ SWEP.Animations = {
         Source = {"fire_gl"},
         Time = 5 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "weapons/arccw/cde_ak5/lfe.wav", t = 0}
+        },
     },
     ["fire_iron_m203"] = {
         Source = {"fire_ads_gl"},
         Time = 5 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "weapons/arccw/cde_ak5/lfe.wav", t = 0},
+            {s = "weapons/arccw/cde_ak5/mech_ads.wav", t = 0.05}
+        },
     },
     ["reload_m203"] = {
         Source = "reload_gl",
@@ -460,9 +473,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 0.5},
-            {s = "ArcCW_BO1.M16_Futz", t = 1.15},
-            {s = "ArcCW_BO1.M16_MagIn", t = 1.25}
+        SoundTable = {
+            {s = "weapons/arccw/cde_ak5/magout.wav", t = 0.25},
+            {s = "weapons/arccw/cde_ak5/magin.wav", t = 1.0}
         },
     },
     ["reload_empty_m203"] = {
@@ -475,10 +488,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 0.5},
-            {s = "ArcCW_BO1.M16_Futz", t = 1.15},
-            {s = "ArcCW_BO1.M16_MagIn", t = 1.25},
-            {s = "ArcCW_BO1.M16_Button", t = 1.75}
+            {s = "weapons/arccw/cde_ak5/magout.wav", t = 0.25},
+            {s = "weapons/arccw/cde_ak5/magin.wav", t = 1.0},
+            {s = "weapons/arccw/cde_ak5/chamber.wav", t = 1.75}
         },
     },
     ["enter_sprint_m203"] = {
@@ -546,4 +558,5 @@ SWEP.Animations = {
         Source = "sprint_out_glsetup",
         Time = 10 / 30
     },
+}
 }
