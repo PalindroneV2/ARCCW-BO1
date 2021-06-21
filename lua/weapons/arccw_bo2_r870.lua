@@ -179,6 +179,10 @@ SWEP.AttachmentElements = {
 
 SWEP.ExtraSightDist = 5
 
+SWEP.RejectAttachments = {
+    ["ub_bo2_foregrip"] = true,
+}
+
 SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
@@ -304,22 +308,19 @@ SWEP.Animations = {
         Source = "draw",
         Time = 1,
         LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
+        LHIKIn = 0.5,
+        LHIKOut = 1,
     },
     ["holster"] = {
         Source = "holster",
         Time = 0.75,
         LHIK = true,
         LHIKIn = 0.2,
-        LHIKOut = 0.25,
+        LHIKOut = 0.2,
     },
     ["ready"] = {
         Source = "first_draw",
         Time = 2,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Back", t = 14 / 30},
             {s = "ArcCW_BO1.MK_Fwd", t = 21 / 30}
@@ -343,9 +344,6 @@ SWEP.Animations = {
         Source = "reload_pap",
         Time = 54 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.4,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Shell", t = 21 / 30},
             {s = "ArcCW_BO1.MK_Back", t = 40 / 30},
@@ -356,9 +354,6 @@ SWEP.Animations = {
         Source = "reload_pap",
         Time = 54 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.4,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Shell", t = 21 / 30},
             {s = "ArcCW_BO1.MK_Back", t = 40 / 30},
@@ -388,20 +383,11 @@ SWEP.Animations = {
         },
     },
     ["sgreload_start"] = {
-        Source = "reload_in2",
-        Time = 16 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0,
-    },
-    ["sgreload_start_empty"] = {
         Source = "reload_in",
         Time = 40 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0,
+        RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
+        MinProgress = 1,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Shell", t = 21 / 30},
         },
@@ -411,9 +397,7 @@ SWEP.Animations = {
         Time = 26 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0,
+        MinProgress = 15 / 30,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Shell", t = 10 / 30},
         },
@@ -421,9 +405,6 @@ SWEP.Animations = {
     ["sgreload_finish"] = {
         Source = "reload_out",
         Time = 30 / 30,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 1,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Back", t = 8 / 30},
             {s = "ArcCW_BO1.MK_Fwd", t = 12 / 30},
@@ -432,9 +413,6 @@ SWEP.Animations = {
     ["sgreload_finish_empty"] = {
         Source = "reload_out",
         Time = 30 / 30,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 1,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Back", t = 8 / 30},
             {s = "ArcCW_BO1.MK_Fwd", t = 12 / 30},

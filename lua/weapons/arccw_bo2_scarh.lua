@@ -350,10 +350,6 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     end
 end
 
-SWEP.Hook_GetCapacity = function(wep, cap)
-    --local pap = wep:GetBuff_Override("PackAPunch")
-end
-
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
@@ -471,7 +467,7 @@ SWEP.Animations = {
         Source = "sprint_loop_empty",
         Time = 30 / 40
     },
-    ["exit_sprint"] = {
+    ["exit_sprint_empty"] = {
         Source = "sprint_out_empty",
         Time = 10 / 30
     },

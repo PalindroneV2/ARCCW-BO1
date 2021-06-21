@@ -11,7 +11,7 @@ att.Desc_Cons = {
 
 att.AutoStats = true
 
-att.Slot = "foregrip"
+att.Slot = {"foregrip", "bo1_uniforegrip"}
 att.ModelOffset = Vector(-17.5, -2.5, 4.25)
 
 att.LHIK = true
@@ -23,3 +23,5 @@ att.Mult_Recoil = 0.75
 att.Mult_SightTime = 0.75
 att.Mult_HipDispersion = 1.2
 att.Mult_SpeedMult = 0.95
+
+att.Override_HoldtypeActive = "smg"

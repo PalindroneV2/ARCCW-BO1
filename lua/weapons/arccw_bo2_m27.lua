@@ -118,8 +118,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.84, 0, 0.1),
-    Ang = Angle(0.95, 0, 0),
+    Pos = Vector(-2.825, 0, 0.1),
+    Ang = Angle(0.8, 0.025, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -153,17 +153,42 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
     ["bo1_m320"] = {
         VMBodygroups = {
-            {ind = 5, bg = 2},
+            {ind = 4, bg = 2},
         },
     },
-    ["bo1_foregrip"] = {
+    ["mount"] = {
         VMBodygroups = {
-            {ind = 5, bg = 1},
+            {ind = 2, bg = 1},
+        },
+    },
+    ["cover"] = {
+        VMBodygroups = {
+            {ind = 6, bg = 1},
+        },
+    },
+    ["bo2_foregrip"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 1},
         },
     },
     ["iarmag"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
+        },
+    },
+    ["light_stock"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 1},
+        },
+    },
+    ["solid_stock"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 2},
+        },
+    },
+    ["solider_stock"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 3},
         },
     },
     ["ammo_papunch"] = {
@@ -187,6 +212,9 @@ SWEP.AttachmentElements = {
                 vpos = Vector(23, 0, 2.3),
             }
         },
+        VMBodygroups = {
+            {ind = 3, bg = 1},
+        },
     },
     ["416C"] = {
         NamePriority = 1,
@@ -196,6 +224,9 @@ SWEP.AttachmentElements = {
             [2] = {
                 vpos = Vector(15.15, 0, 2.3),
             }
+        },
+        VMBodygroups = {
+            {ind = 3, bg = 2},
         },
     },
 }
@@ -227,7 +258,8 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
 end
 
 SWEP.RejectAttachments = {
-    ["ub_bo1_foregrip_uni"] = true,
+    ["ub_bo1_foregrip_uni"] = false,
+    ["ub_bo2_foregrip_uni"] = true,
 }
 
 SWEP.Attachments = {
@@ -237,7 +269,7 @@ SWEP.Attachments = {
         Slot = {"optic"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(2.25, -0.025, 3.85), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(2.25, 0, 3.75), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(5.5, 1.2, -6),
             wang = Angle(172.5, 181.75, 0)
@@ -264,7 +296,7 @@ SWEP.Attachments = {
     }, --3
     {
         PrintName = "Underbarrel",
-        Slot = {"ubgl", "bo1_m320", "bo1_foregrip"},
+        Slot = {"ubgl", "bo1_m320"},
         Bone = "tag_weapon",
         VMScale = Vector(1, 1, 1),
         WMScale = Vector(1, 1, 1),
@@ -274,27 +306,28 @@ SWEP.Attachments = {
             wpos = Vector(11, 0.8, -2.5),
             wang = Angle(172.5, -180, 0),
         },
-        MergeSlots = {5,6}
+        GivesFlags = {"integral"},
+        MergeSlots = {5,6},
     }, --4
     {
         Hidden = true,
-        Slot = {"foregrip"},
+        Slot = {"bo1_uniforegrip", "bo2_foregrip"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(10, 0, 1.1), -- offset that the attachment will be relative to the bone
+            vpos = Vector(8.5, -0.25, 1.35), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(15, 1.15, -3.5),
+            wpos = Vector(17, 1.15, -3.8),
             wang = Angle(170, -180, 0),
         },
     }, --5
     {
         Hidden = true,
-        Slot = {"bipod"},
+        Slot = {"foregrip"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(12, 0, 1.1), -- offset that the attachment will be relative to the bone
+            vpos = Vector(11, 0, 1.1), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(17, 1.15, -3.8),
+            wpos = Vector(15, 1.15, -3.5),
             wang = Angle(170, -180, 0),
         },
     }, --6
@@ -309,12 +342,12 @@ SWEP.Attachments = {
             wpos = Vector(16, 0.4, -5.25),
             wang = Angle(-9, 0, 85)
         },
+        InstalledEles = {"cover"},
     }, --7
     {
         PrintName = "Stock",
-        Slot = {"bo1_stock"},
+        Slot = {"bo1_stock", "bo1_mp5stock"},
         DefaultAttName = "No Stock",
-        Installed = "bo1_light_stock"
     }, --8
     {
         PrintName = "FCG",
@@ -346,52 +379,11 @@ SWEP.Attachments = {
             wang = Angle(-175, -175, 0)
         },
     }, --12
-    {
-        Hidden = true,
-        Slot = "car15_irons"
-    }, --14
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[11].Installed == "ammo_papunch"
-    local light = wep.Attachments[8].Installed == "bo1_light_stock"
-    local solid = wep.Attachments[8].Installed == "bo1_solid_stock"
-    local m27 = wep.Attachments[3].Installed == "bo2_m27_long"
-    local m416 = wep.Attachments[3].Installed == "bo2_m27_short"
-    local optic = wep.Attachments[1].Installed
-
-    /*local optic
-        if sight != "optic_commando_irons" then optic = 1
-        elseif sight == "optic_commando_irons" then optic = 2
-    end*/
-
-    if light then
-        vm:SetBodygroup(6, 1)
-    elseif solid then
-        vm:SetBodygroup(6, 2)
-    else vm:SetBodygroup(6, 0)
-    end
-
-    if optic and !m27 and !m416 then
-        vm:SetBodygroup(2,4)
-    elseif optic and m27 and !m416 then
-        vm:SetBodygroup(2,4)
-        vm:SetBodygroup(3,1)
-        vm:SetBodygroup(4,1)
-    elseif !optic and m27 and !m416 then
-        vm:SetBodygroup(2,1)
-        vm:SetBodygroup(3,1)
-        vm:SetBodygroup(4,1)
-    elseif optic and !m27 and m416 then
-        vm:SetBodygroup(2,4)
-        vm:SetBodygroup(3,2)
-        vm:SetBodygroup(4,0)
-    elseif !optic and !m27 and m416 then
-        vm:SetBodygroup(2,0)
-        vm:SetBodygroup(3,2)
-        vm:SetBodygroup(4,0)
-    end
 
     if papcamo then return vm:SetSkin(3) end
 end
@@ -411,22 +403,22 @@ SWEP.Animations = {
         Source = "draw",
         Time = 1,
         LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
+        LHIKIn = 0.2,
+        LHIKOut = 0.5,
     },
     ["holster"] = {
         Source = "holster",
         Time = 1,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
         LHIKOut = 0.25,
     },
     ["ready"] = {
         Source = "first_draw",
         Time = 2,
         LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
+        LHIKIn = 0.2,
+        LHIKOut = 0.5,
         SoundTable = {
             {s = "ArcCW_BO2.AR_Charge", t = 22 / 35}
         },
@@ -448,8 +440,8 @@ SWEP.Animations = {
         Framerate = 35,
         Checkpoints = {28, 38, 69},
         LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
             {s = "ArcCW_BO2.AR_MagIn", t = 40 / 35},
@@ -462,8 +454,8 @@ SWEP.Animations = {
         Framerate = 35,
         Checkpoints = {28, 38, 69},
         LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
             {s = "ArcCW_BO2.AR_MagIn", t = 40 / 35},
@@ -627,22 +619,22 @@ SWEP.Animations = {
         Source = "draw_grip",
         Time = 1,
         LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
+        LHIKIn = 0.1,
+        LHIKOut = 0.1,
     },
     ["holster_grip"] = {
         Source = "holster_grip",
         Time = 1,
         LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
     },
     ["ready_grip"] = {
         Source = "first_draw_grip",
         Time = 2,
         LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO2.AR_Charge", t = 22 / 35}
         },
@@ -664,8 +656,8 @@ SWEP.Animations = {
         Framerate = 35,
         Checkpoints = {28, 38, 69},
         LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
             {s = "ArcCW_BO2.AR_MagIn", t = 40 / 35},
@@ -678,8 +670,8 @@ SWEP.Animations = {
         Framerate = 35,
         Checkpoints = {28, 38, 69},
         LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
             {s = "ArcCW_BO2.AR_MagIn", t = 40 / 35},
