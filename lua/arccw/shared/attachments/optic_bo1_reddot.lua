@@ -10,7 +10,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = {"optic"}
+att.Slot = {"optic", "bo1_reddots"}
 
 att.Model = "models/weapons/arccw/atts/bo1_reddot.mdl"
 

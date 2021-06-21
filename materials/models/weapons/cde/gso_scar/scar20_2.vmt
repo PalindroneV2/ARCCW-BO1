@@ -17,6 +17,11 @@
 	"$phongalbedotint" "1"
 
 	"$phongdisablehalflambert" "1"
+
+	$detail "models/weapons/bo1/black"
+	$detailblendmode 0
+	"$detailblendfactor" "0.7"
+	$detailscale 1
 }
 
 

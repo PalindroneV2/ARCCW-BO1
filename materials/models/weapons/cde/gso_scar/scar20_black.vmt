@@ -1,10 +1,10 @@
-VertexLitGeneric
+"VertexLitGeneric"
 {
-	"$basetexture"	"models\weapons\cde\gso_scar\rif_scar"
-	"$phongexponenttexture" "models\weapons\cde\gso_scar\rif_scar_exponent"
+	"$basetexture"	"models\weapons\cde\gso_scar\snip_scar20"
+	"$phongexponenttexture" "models\weapons\cde\gso_scar\snip_scar20_exponent"
 
 	"$phong" "1"
-	"$phongboost" ".1"
+	"$phongboost" ".5"
 	"$phongalbedoboost" "30"
 	"$phongfresnelranges" "[.83 .83 1]"
 
@@ -12,7 +12,7 @@ VertexLitGeneric
 
 	"$envmap" "env_cubemap"
 	"$envmapfresnel" "1"
-	"$envmaptint" 		"[.01 .01 .01]"
+	"$envmaptint" 		"[.005 .005 .005]"
 
 	"$phongalbedotint" "1"
 
@@ -20,6 +20,6 @@ VertexLitGeneric
 
 	$detail "models/weapons/bo1/black"
 	$detailblendmode 0
-	"$detailblendfactor" "0.7"
+	"$detailblendfactor" "1.175"
 	$detailscale 1
 }

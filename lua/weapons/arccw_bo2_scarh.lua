@@ -22,9 +22,9 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_cde_scarh.mdl"
-SWEP.WorldModel = "models/weapons/arccw/w_cde_scarh.mdl"
-SWEP.MirrorWorldModel = "models/weapons/arccw/w_cde_scarh.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_bo2_scarh.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_bo2_scarh.mdl"
+SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_scarh.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-4.25, 3.5, -7.15),
@@ -166,19 +166,12 @@ SWEP.AttachmentElements = {
     },
     ["solider_stock"] = {
         VMBodygroups = {
-            {ind = 4, bg = 3},
+            {ind = 4, bg = 2},
         },
     },
     ["solid_stock"] = {
         VMBodygroups = {
             {ind = 4, bg = 1},
-        },
-    },
-    ["bo2_cosmetic_scarcharm"] = {
-        AttPosMods = {
-            [2] = {
-                vpos = Vector(19.25, 0, 1.25),
-            },
         },
     },
 }
@@ -271,7 +264,7 @@ SWEP.Attachments = {
     },
     { --10
         PrintName = "Charm",
-        Slot = {"charm", "bo2_scar_charm"},
+        Slot = {"charm"},
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
@@ -281,12 +274,12 @@ SWEP.Attachments = {
             wang = Angle(-175, -175, 0)
         },
     },
-    /*{ --11
+    { --11
         PrintName = "Cosmetic",
         Slot = "cde_cosmetic",
-        DefaultAttName = "Green Finish",
+        DefaultAttName = "Tan Finish",
         FreeSlot = true,
-    },*/
+    },
 }
 
 SWEP.RejectAttachments = {
@@ -294,6 +287,8 @@ SWEP.RejectAttachments = {
     ["cde_cosmetic_od"] = true,
     ["cde_cosmetic_red"] = true,
     ["cde_cosmetic_wood"] = true,
+    ["cde_cosmetic_od"] = true,
+    ["cde_cosmetic_tan"] = true,
 }
 
 SWEP.Hook_NameChange = function(wep, name)
@@ -305,18 +300,9 @@ end
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
 
-    local csgo = wep:GetBuff_Override("CSGO_EE")
-
     local papcamo = wep:GetBuff_Override("PackAPunch")
     local camo = 0
-
-    if csgo then
-        vm:SetBodygroup(0, 2)
-        vm:SetBodygroup(1, 1)
-        if wep.Attachments[6].Installed == "bo1_solid_stock" then
-            vm:SetBodygroup(4, 2)
-        end
-    end
+    if wep.Attachments[11].Installed == "cde_cosmetic_black" then camo = 4 end
 
     for k = camo, camo do
         vm:SetSkin(k)

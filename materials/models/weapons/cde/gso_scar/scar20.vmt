@@ -12,11 +12,16 @@
 
 	"$envmap" "env_cubemap"
 	"$envmapfresnel" "1"
-	"$envmaptint" 		"[.01 .01 .01]"
+	"$envmaptint" 		"[.005 .005 .005]"
 
 	"$phongalbedotint" "1"
 
 	"$phongdisablehalflambert" "1"
+
+	$detail "models/weapons/bo1/black"
+	$detailblendmode 0
+	"$detailblendfactor" "0.7"
+	$detailscale 1
 }
 
 

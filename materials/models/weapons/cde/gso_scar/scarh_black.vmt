@@ -19,7 +19,7 @@ VertexLitGeneric
 	"$phongdisablehalflambert" "1"
 
 	$detail "models/weapons/bo1/black"
-	$detailblendmode 0
-	"$detailblendfactor" "0.7"
+	$detailblendmode 3
+	"$detailblendfactor" "1"
 	$detailscale 1
 }
