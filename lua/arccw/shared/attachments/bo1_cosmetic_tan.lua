@@ -13,6 +13,7 @@ att.Desc_Neutrals = {
 att.AutoStats = true
 
 att.ExcludeFlags = {"bo1_tan"}
+att.HideIfBlocked = true
 
 att.SortOrder = 101
 att.Slot = {"bo1_cosmetic"}

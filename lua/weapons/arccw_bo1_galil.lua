@@ -109,8 +109,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.6725, -2.25, 0.4),
-    Ang = Angle(0, 0.05, 0),
+    Pos = Vector(-2.72, -2.25, 0.39),
+    Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -185,6 +185,11 @@ SWEP.AttachmentElements = {
             {ind = 3, bg = 2},
         },
     },
+    ["solider_stock"] = {
+        VMBodygroups = {
+            {ind = 3, bg = 3},
+        },
+    },
     ["ammo_papunch"] = {
         NamePriority = 10,
         NameChange = "Lamentation",
@@ -206,7 +211,7 @@ SWEP.Attachments = {
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0.5, 0, 0),
-        MergeSlots = {13,14}
+        MergeSlots = {14, 15}
     }, --1
     {
         PrintName = "Muzzle",
@@ -277,7 +282,7 @@ SWEP.Attachments = {
     }, --7
     {
         PrintName = "Stock",
-        Slot = "bo1_stock",
+        Slot = {"bo1_stock", "bo1_mp5stock"},
         DefaultAttName = "No Stock",
         Installed = "bo1_light_stock"
     }, --8
@@ -294,6 +299,11 @@ SWEP.Attachments = {
         Slot = {"bo1_perk"},
     }, --11
     {
+        PrintName = "Furniture",
+        DefaultAttName = "Standard Polymer",
+        Slot = {"bo1_cosmetic_ak"},
+    }, --12
+    {
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
@@ -304,8 +314,8 @@ SWEP.Attachments = {
             wpos = Vector(5.25, 1.5, -3.25),
             wang = Angle(-175, -175, 0)
         },
-    }, --12
-    { --13
+    }, --13
+    { --14
         Hidden = true,
         Slot = "bo1_cobra",
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
@@ -317,7 +327,7 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(-1, 0, 0),
     },
-    { --14
+    { --15
         Hidden = true,
         Slot = {"bo1_pso"},
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
@@ -331,13 +341,25 @@ SWEP.Attachments = {
     },
 }
 
+SWEP.RejectAttachments = {
+    ["bo1_cosmetic_black"] = true,
+}
+
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local wm = data.wm
     local papcamo = wep:GetBuff_Override("PackAPunch")
+    local camo = 0
+    if wep.Attachments[12].Installed == "bo1_cosmetic_wood" then camo = 2
+    elseif wep.Attachments[12].Installed == "bo1_cosmetic_bake" then camo = 4
+    elseif wep.Attachments[12].Installed == "bo1_cosmetic_odgreen" then camo = 6
+    elseif wep.Attachments[12].Installed == "bo1_cosmetic_red" then camo = 8
+    end
 
-    if papcamo then
-        return vm:SetSkin(2) and wm:SetSkin(2)
+    for k = camo, camo do
+        vm:SetSkin(k)
+        if papcamo then
+            return vm:SetSkin(k + 1)
+        end
     end
 end
 

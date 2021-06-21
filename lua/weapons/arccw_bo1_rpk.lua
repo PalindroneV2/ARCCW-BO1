@@ -40,7 +40,7 @@ SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
+SWEP.Primary.ClipSize = 40 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 80
 
 SWEP.Delay = 60 / 750 -- 60 / RPM.
@@ -192,7 +192,7 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.DefaultBodygroups = "0000000"
+SWEP.DefaultBodygroups = "000000"
 
 SWEP.Attachments = {
     {
@@ -207,7 +207,7 @@ SWEP.Attachments = {
         InstalledEles = {"rail"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0.5, 0, 0),
-        MergeSlots = {13,14},
+        MergeSlots = {14, 15},
     },--1
     {
         PrintName = "Muzzle",
@@ -289,6 +289,11 @@ SWEP.Attachments = {
         Slot = {"bo1_perk"}
     }, --11
     {
+        PrintName = "Furniture",
+        DefaultAttName = "Standard Bakelite",
+        Slot = {"bo1_cosmetic_ak"},
+    }, --12
+    {
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
@@ -297,8 +302,8 @@ SWEP.Attachments = {
             vpos = Vector(1, -0.5, 1),
             vang = Angle(0, 0, 0),
         },
-    }, --12
-    { --13
+    }, --13
+    { --14
         Hidden = true,
         Slot = "bo1_cobra",
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
@@ -321,7 +326,11 @@ SWEP.Attachments = {
         GivesFlags = {"cobrakai"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(1.25, 0, 0),
-    }, --14
+    }, --15
+}
+
+SWEP.RejectAttachments = {
+    ["bo1_cosmetic_bake"] = true,
 }
 
 SWEP.Hook_NameChange = function(wep, name)
@@ -334,19 +343,29 @@ SWEP.Hook_NameChange = function(wep, name)
 
     if pap then
         return "R115 Resonator"
-    elseif stock == 1 then
+    end
+    if stock == 1 then
         return "RPKS-74"
-    elseif stock == 0 or stock >= 2 then
-        return "RPK-74"
     end
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[10].Installed == "ammo_papunch"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
+    local camo = 0
+    if wep.Attachments[12].Installed == "bo1_cosmetic_wood" then camo = 2
+    elseif wep.Attachments[12].Installed == "bo1_cosmetic_black" then camo = 4
+    elseif wep.Attachments[12].Installed == "bo1_cosmetic_odgreen" then camo = 6
+    elseif wep.Attachments[12].Installed == "bo1_cosmetic_red" then camo = 8
+    end
 
-    if papcamo then
-        return vm:SetSkin(3)
+    if camo == 2 then vm:SetBodygroup(5, 1) end
+
+    for k = camo, camo do
+        vm:SetSkin(k)
+        if papcamo then
+            return vm:SetSkin(k + 1)
+        end
     end
 end
 

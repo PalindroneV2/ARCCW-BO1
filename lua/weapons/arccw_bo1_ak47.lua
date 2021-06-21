@@ -163,14 +163,14 @@ SWEP.AttachmentElements = {
             {ind = 4, bg = 2},
         },
     },
-    ["no_stock"] = {
+    ["solider_stock"] = {
         VMBodygroups = {
-            {ind = 5, bg = 1},
+            {ind = 5, bg = 3},
         },
     },
     ["solid_stock"] = {
         VMBodygroups = {
-            {ind = 5, bg = 0},
+            {ind = 5, bg = 2},
         },
     },
     ["light_stock"] = {
@@ -209,7 +209,7 @@ SWEP.Attachments = {
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0.5, 0, 0),
-        MergeSlots = {14, 15}
+        MergeSlots = {15,16}
     },
     { -- 2
         PrintName = "Muzzle",
@@ -280,7 +280,7 @@ SWEP.Attachments = {
     },
     { --8
         PrintName = "Stock",
-        Slot = {"bo1_stock"},
+        Slot = {"bo1_stock", "bo1_mp5stock"},
         DefaultAttName = "No Stock",
         Installed = "bo1_solid_stock",
     },
@@ -301,7 +301,12 @@ SWEP.Attachments = {
         PrintName = "Perk",
         Slot = {"bo1_perk"}
     },
-    { --13
+    {
+        PrintName = "Furniture",
+        DefaultAttName = "Standard Bakelite",
+        Slot = {"bo1_cosmetic_ak", "bo1_cosmetic_redson"},
+    }, --13
+    { --14
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
@@ -313,7 +318,7 @@ SWEP.Attachments = {
             wang = Angle(-175, -175, 0)
         },
     },
-    { --14
+    { --15
         Hidden = true,
         Slot = {"bo1_cobra"},
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
@@ -325,7 +330,7 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(-1, 0, 0),
     },
-    { --15
+    { --16
         Hidden = true,
         Slot = {"bo1_pso"},
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
@@ -342,45 +347,44 @@ SWEP.Attachments = {
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
     local ak74 = wep.Attachments[9].Installed == "ammo_ak_74"
-    local solid = wep.Attachments[8].Installed == "bo1_solid_stock"
     local light = wep.Attachments[8].Installed == "bo1_light_stock"
 
-    if !pap and !ak74 and !light and solid then
-        return "AK-47"
-    elseif !pap and !ak74 and light and !solid then
-        return "AKS-47"
-    elseif !pap and ak74 and !light and !solid then
-        return "AK-74"
-    elseif !pap and ak74 and !light and solid then
-        return "AK-74"
-    elseif !pap and ak74 and light and !solid then
-        return "AKS-74"
-    elseif pap and !ak74 and !light and !solid then --AK-47 PAP NO STOCK
+    caliber = "47"
+    stock = ""
+
+    if ak74 then caliber = "74" end
+    if light then stock = "S" end
+
+    if pap then
         return "Reznov's Revenge"
-    elseif pap and ak74 and !light and !solid then -- AK-74 PAP NO STOCK
-        return "Reznov's Revenge"
-    elseif pap and !ak74 and !light and solid then -- AK-47 PAP STOCK
-        return "Reznov's Revenge"
-    elseif pap and !ak74 and light and !solid then -- AKS-47 PAP
-        return "Reznov's Revenge"
-    elseif pap and ak74 and !light and solid then -- AK-74 PAP STOCK
-        return "Reznov's Revenge"
-    elseif pap and ak74 and light and !solid then -- AKS-74 PAP
-        return "Reznov's Revenge"
+    else return "AK" .. stock .. "-" .. caliber
     end
 end
 
---local r = math.random(1, 3)
+SWEP.RejectAttachments = {
+    ["bo1_cosmetic_wood"] = true,
+    ["bo1_cosmetic_red"] = true,
+}
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = 0
-    if wep:GetBuff_Override("PackAPunch") then papcamo = 1 end
-    local mag = wep.Attachments[9].Installed == "ammo_ak_74"
 
-    if (papcamo == 1) then
-        vm:SetSkin(3)
+    local papcamo = wep:GetBuff_Override("PackAPunch")
+    local camo = 0
+    if wep.Attachments[13].Installed == "bo1_cosmetic_black" then camo = 2
+    elseif wep.Attachments[13].Installed == "bo1_cosmetic_bake" then camo = 4
+    elseif wep.Attachments[13].Installed == "bo1_cosmetic_odgreen" then camo = 6
+    elseif wep.Attachments[13].Installed == "bo1_cosmetic_redson" then camo = 8
     end
+
+    for k = camo, camo do
+        vm:SetSkin(k)
+        if papcamo then
+            vm:SetSkin(k + 1)
+        end
+    end
+
+    local mag = wep.Attachments[9].Installed == "ammo_ak_74"
 
     if mag then
         vm:SetBodygroup(1, 1)

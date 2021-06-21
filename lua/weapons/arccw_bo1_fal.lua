@@ -275,6 +275,12 @@ SWEP.Attachments = {
         PrintName = "Perk",
         Slot = {"bo1_perk"}
     },--12
+    { --13
+        PrintName = "Cosmetic",
+        Slot = "bo1_cosmetic",
+        DefaultAttName = "Standard Light Wood",
+        FreeSlot = true,
+    },
     {
         PrintName = "Charm",
         Slot = "charm",
@@ -289,14 +295,22 @@ SWEP.Attachments = {
     },
 }
 
+SWEP.RejectAttachments = {
+    ["bo1_cosmetic_tan"] = true,
+}
+
 SWEP.Hook_NameChange = function(wep, data)
     local pap = wep:GetBuff_Override("PackAPunch")
-    local parab = wep.Attachments[2].Installed == "bo1_barrel_fal_para"
-    local paras = wep.Attachments[9].Installed == "bo1_light_stock"
+    local para = wep.Attachments[9].Installed == "bo1_light_stock" and wep.Attachments[2].Installed == "bo1_barrel_fal_para"
 
     if pap then
+        if para then
+            return "EPC WN 4ME"
+        end
         return "EPC WN"
-    elseif parab and paras then
+    end
+
+    if para then
         return "FN FAL Para"
     end
 end
@@ -304,9 +318,18 @@ end
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")
+    local camo = 0
+    if wep.Attachments[13].Installed == "bo1_cosmetic_wood" then camo = 2
+    elseif  wep.Attachments[13].Installed == "bo1_cosmetic_black" then camo = 4
+    elseif wep.Attachments[13].Installed == "bo1_cosmetic_odgreen" then camo = 6
+    elseif wep.Attachments[13].Installed == "bo1_cosmetic_red" then camo = 8
+    end
 
-    if papcamo then
-        return vm:SetSkin(2)
+    for k = camo, camo do
+        vm:SetSkin(k)
+        if papcamo then
+            return vm:SetSkin(k + 1)
+        end
     end
 end
 

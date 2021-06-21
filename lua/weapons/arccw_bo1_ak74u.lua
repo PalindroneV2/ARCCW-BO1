@@ -272,7 +272,7 @@ SWEP.Attachments = {
     }, --6
     {
         PrintName = "Stock",
-        Slot = {"bo1_stock"},
+        Slot = {"bo1_stock", "bo1_mp5stock"},
         DefaultAttName = "No Stock",
     }, --7
     {
@@ -296,7 +296,7 @@ SWEP.Attachments = {
     {
         PrintName = "Furniture",
         DefaultAttName = "Standard Wood",
-        Slot = {"bo1_cosmetic_ak"},
+        Slot = {"bo1_cosmetic_74u", "bo1_cosmetic_ak"},
     }, --12
     {
         PrintName = "Charm",
@@ -336,60 +336,66 @@ SWEP.Attachments = {
     },
 }
 
+SWEP.RejectAttachments = {
+    ["bo1_cosmetic_black"] = true,
+    ["bo1_cosmetic_wood"] = true,
+    ["bo1_cosmetic_red"] = true,
+}
+
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep.Attachments[10].Installed == "ammo_papunch"
     local ak74 = wep.Attachments[8].Installed == "ammo_ak_74"
     local light = wep.Attachments[7].Installed == "bo1_light_stock"
-    local solid = wep.Attachments[7].Installed == "bo1_solid_stock"
 
-    if !pap and !ak74 and !light and solid then
-        return "AKMu"
-    elseif !pap and !ak74 and light and !solid then
-        return "AKMSu"
-    elseif !pap and ak74 and !light and !solid then
-        return "AK-74u"
-    elseif !pap and ak74 and !light and solid then
-        return "AK-74u"
-    elseif !pap and ak74 and light and !solid then
-        return "AKS-74u"
-    elseif pap and !ak74 and !light and !solid then --AK-47 PAP NO STOCK
-        return "AKMfu2"
-    elseif pap and ak74 and !light and !solid then -- AK-74 PAP NO STOCK
-        return "AK-74fu2"
-    elseif pap and !ak74 and !light and solid then -- AK-47 PAP STOCK
-        return "AKMfu2"
-    elseif pap and !ak74 and light and !solid then -- AKS-47 PAP
-        return "AKMSfu2"
-    elseif pap and ak74 and !light and solid then -- AK-74 PAP STOCK
-        return "AK-74fu2"
-    elseif pap and ak74 and light and !solid then -- AKS-74 PAP
-        return "AKS-74fu2"
-    end
+    cal = "M"
+    stock = ""
+    barrel = "u"
+
+    if ak74 then cal = "-74" end
+    if light then stock = "S" end
+    if pap then barrel = "fu2" end
+
+    if cal == "-74" then
+        return "AK" .. stock .. cal .. barrel
+    else return "AK" .. cal .. stock .. barrel end
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[10].Installed == "ammo_papunch"
-    local bake = wep.Attachments[8].Installed == "ammo_ak_74"
+    local camo = 0
+    if wep.Attachments[12].Installed == "bo1_cosmetic_74u" then camo = 2
+    elseif wep.Attachments[12].Installed == "bo1_cosmetic_bake" then camo = 4
+    elseif wep.Attachments[12].Installed == "bo1_cosmetic_odgreen" then camo = 6
+    elseif wep.Attachments[12].Installed == "bo1_cosmetic_red" then camo = 8
+    end
+
+    for k = camo, camo do
+        vm:SetSkin(k)
+        if papcamo then
+            vm:SetSkin(k + 1)
+        end
+    end
+
     local light = wep.Attachments[7].Installed == "bo1_light_stock"
     local solid = wep.Attachments[7].Installed == "bo1_solid_stock"
-    local black = wep.Attachments[12].Installed == "bo1_cosmetic_ak_plastic"
+    local solider = wep.Attachments[7].Installed == "bo1_solider_stock"
+    local bake = wep.Attachments[8].Installed == "ammo_ak_74"
 
-    if bake then vm:SetBodygroup(1, 1) end
+    if bake then
+        vm:SetBodygroup(1, 1)
+    end
+
+    if camo > 0 then vm:SetBodygroup(6,1) else vm:SetBodygroup(6,0) end
 
     if light then
         vm:SetBodygroup(5, 2)
-    elseif solid then
-        vm:SetBodygroup(5, 1)
-    else vm:SetBodygroup(5, 0)
     end
-
-    if black and !papcamo then
-        return vm:SetSkin(1)
-    elseif !black and papcamo then
-        return vm:SetSkin(2)
-    elseif black and papcamo then
-        return vm:SetSkin(3)
+    if solid then
+        vm:SetBodygroup(5, 1)
+    end
+    if solider then
+        vm:SetBodygroup(5, 3)
     end
 end
 

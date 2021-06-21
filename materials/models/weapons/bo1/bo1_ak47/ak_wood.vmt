@@ -6,6 +6,7 @@ VertexlitGeneric
 	$detail "models\weapons\bo1\bo1_ak47\ak_wood"
 	$detailblendmode 4
 	$detailblendfactor 1
+	"$detailscale" "5"
 
 	$phong                      		1
 	$phongexponent                      "20"
