@@ -46,7 +46,7 @@ SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
-SWEP.ChamberSize = 0 -- how many rounds can be chambered.
+SWEP.ChamberSize = 1 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 48
 
@@ -1274,9 +1274,9 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.35,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 0.5},
-            {s = "ArcCW_BO1.M16_Futz", t = 1.15},
-            {s = "ArcCW_BO1.M16_MagIn", t = 1.25}
+            {s = "weapons/arccw/cde_m16/magout.ogg", t = 0.25},
+            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.15},
+            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.25}
         },
     },
     ["reload_empty"] = {
@@ -1289,10 +1289,10 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 0.5},
-            {s = "ArcCW_BO1.M16_Futz", t = 1.15},
-            {s = "ArcCW_BO1.M16_MagIn", t = 1.25},
-            {s = "ArcCW_BO1.M16_Button", t = 1.75}
+            {s = "weapons/arccw/cde_m16/magout.ogg", t = 0.25},
+            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.15},
+            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.25},
+            {s = "weapons/arccw/cde_m16/boltdrop.ogg", t = 1.75}
         },
     },
     ["enter_sprint"] = {
@@ -1355,9 +1355,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 0.5},
-            {s = "ArcCW_BO1.M16_Futz", t = 1.15},
-            {s = "ArcCW_BO1.M16_MagIn", t = 1.25}
+            {s = "weapons/arccw/cde_m16/magout.ogg", t = 0.25},
+            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.15},
+            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.25}
         },
     },
     ["reload_empty_m203"] = {
@@ -1370,10 +1370,10 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 0.5},
-            {s = "ArcCW_BO1.M16_Futz", t = 1.15},
-            {s = "ArcCW_BO1.M16_MagIn", t = 1.25},
-            {s = "ArcCW_BO1.M16_Button", t = 1.75}
+            {s = "weapons/arccw/cde_m16/magout.ogg", t = 0.25},
+            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.15},
+            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.25},
+            {s = "weapons/arccw/cde_m16/boltdrop.ogg", t = 1.75}
         },
     },
     ["enter_sprint_m203"] = {
