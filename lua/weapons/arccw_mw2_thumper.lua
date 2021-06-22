@@ -16,7 +16,7 @@ SWEP.Trivia_Mechanism = "Pump-Action"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1961
 
-SWEP.Slot = 3
+SWEP.Slot = 4
 
 SWEP.UseHands = true
 

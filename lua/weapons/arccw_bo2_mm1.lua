@@ -1,18 +1,18 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
-SWEP.AdminOnly = false
+SWEP.AdminOnly = true
 
 SWEP.PrintName = "Hawk MM-1"
 SWEP.Trivia_Class = "Grenade Launcher"
 SWEP.Trivia_Desc = "American revolver grenade launcher using 40mm High Explosive rounds developed from the Manville Machine Projector."
-SWEP.Trivia_Manufacturer = "Ithaca"
+SWEP.Trivia_Manufacturer = "Hawk Engineering Company"
 SWEP.Trivia_Calibre = "40x46mm HE"
-SWEP.Trivia_Mechanism = "Hawk Engineering Company"
+SWEP.Trivia_Mechanism = "Spring-Loaded"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1981
 
-SWEP.Slot = 3
+SWEP.Slot = 4
 
 SWEP.UseHands = true
 
@@ -54,7 +54,7 @@ SWEP.Delay = 60 / 300 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        PrintName = "REVOLVER",
+        PrintName = "SEMI",
         Mode = 1,
     },
     {
@@ -119,8 +119,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(12.5, 5, -3)
-SWEP.CustomizeAng = Angle(15, 40, 0)
+SWEP.CustomizePos = Vector(12.5, 5, -2)
+SWEP.CustomizeAng = Angle(15, 40, 15)
 
 SWEP.HolsterPos = Vector(0.532, -6, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
