@@ -356,7 +356,7 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         DefaultAttName = "M16A1 20 in. Barrel",
         Slot = {"kali_barrel"},
-        RandomChance = 3,
+        RandomChance = 5,
     }, --4
     {
         PrintName = "Underbarrel",
@@ -411,7 +411,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"kali_stock"},
         DefaultAttName = "No Stock",
-        RandomChance = 3,
+        RandomChance = 10,
         --Installed = "bo1_solider_stock"
     }, --9
     {
@@ -454,6 +454,7 @@ SWEP.Attachments = {
     {
         Hidden = true,
         Slot = "kali_carryhandle",
+        RandomChance = 2,
     },--16
 }
 

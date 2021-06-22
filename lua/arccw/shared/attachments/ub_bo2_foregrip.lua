@@ -41,13 +41,13 @@ att.FlashlightBone = "1"
 
 att.ToggleStats = {
     {
+        PrintName = "Off",
+        Flashlight = false,
+    },
+    {
         PrintName = "High",
         Flashlight = true
     },
-    {
-        PrintName = "Off",
-        Flashlight = false,
-    }
 }
 
 att.DrawFunc = function(wep, element)

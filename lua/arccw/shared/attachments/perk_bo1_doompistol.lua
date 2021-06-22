@@ -22,6 +22,12 @@ att.Override_CanBash = false
 att.Override_ShootWhileSprint = true
 att.Override_BottomlessClip = true
 
+att.Override_Firemodes = {
+    {
+      Mode = 2,
+    },
+}
+
 att.Hook_ShouldNotSight = function(wep)
     return true
 end
