@@ -96,13 +96,24 @@ sound.Add({
 -- DOOM EE --
 
 sound.Add( {
+    name = "ArcCW_BO1.DOOMSG_Fire",
+    channel = CHAN_AUTO,
+volume = 1,
+    level = 100,
+    --pitch = {100},
+    sound = {
+        "weapons/arccw/doom_ee/doomshotgun.wav",
+    }
+} )
+
+sound.Add( {
     name = "ArcCW_WAW.SSG_Fire",
     channel = CHAN_AUTO,
 volume = 1,
     level = 100,
     --pitch = {100},
     sound = {
-        "weapons/arccw/waw_shotgun/fire_ssg.wav",
+        "weapons/arccw/doom_ee/fire_ssg.wav",
     }
 } )
 
@@ -113,7 +124,7 @@ sound.Add( {
     level = 100,
     --pitch = {100},
     sound = {
-        "weapons/arccw/waw_shotgun/open_ssg.wav",
+        "weapons/arccw/doom_ee/open_ssg.wav",
     }
 } )
 sound.Add( {
@@ -123,7 +134,7 @@ sound.Add( {
     level = 100,
     --pitch = {100},
     sound = {
-        "weapons/arccw/waw_shotgun/close_ssg.wav",
+        "weapons/arccw/doom_ee/close_ssg.wav",
     }
 } )
 sound.Add( {
@@ -133,7 +144,7 @@ sound.Add( {
     level = 100,
     --pitch = {100},
     sound = {
-        "weapons/arccw/waw_shotgun/shell_ssg.wav",
+        "weapons/arccw/doom_ee/shell_ssg.wav",
     }
 } )
 
@@ -144,7 +155,7 @@ sound.Add({
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo1_m60/dspistol.wav",
+        "weapons/arccw/doom_ee/doompistol.wav",
     }
 })
 

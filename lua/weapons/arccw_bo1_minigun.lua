@@ -154,14 +154,17 @@ SWEP.Attachments = {
     { --1
         PrintName = "Tactical",
         Slot = {"bo1_tacslot"},
+        ExcludeFlags = {"doom_ee"},
     }, --1
     { --2
         PrintName = "FCG",
-        Slot = {"bo1_fcg"}
+        Slot = {"bo1_fcg"},
+        ExcludeFlags = {"doom_ee"},
     }, --2
     { --3
         PrintName = "Ammo Type",
-        Slot = {"ammo_pap"}
+        Slot = {"ammo_pap"},
+        ExcludeFlags = {"doom_ee"},
     }, --3
     { --4
         PrintName = "Perk",

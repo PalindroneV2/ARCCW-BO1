@@ -159,6 +159,7 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, 0.0125),
         CorrectiveAng = Angle(0, 0, 0),
         GivesFlags = {"pistol_rail"},
+        ExcludeFlags = {"doom_ee"},
     },
     { --2
         PrintName = "Muzzle",
@@ -170,6 +171,7 @@ SWEP.Attachments = {
             vpos = Vector(6.45, 0, 1.4),
             vang = Angle(0, 0, 0),
         },
+        ExcludeFlags = {"doom_ee"},
     },
     { --3
         PrintName = "Underbarrel",
@@ -181,6 +183,7 @@ SWEP.Attachments = {
             wpos = Vector(7.238, 1.9, -2.622),
             wang = Angle(90, 0, 0)
         },
+        ExcludeFlags = {"doom_ee"},
     },
     { --4
         PrintName = "Tactical",
@@ -192,18 +195,21 @@ SWEP.Attachments = {
             wpos = Vector(8.5, 2, -2.9),
             wang = Angle(-5, -2, 177.5)
         },
+        ExcludeFlags = {"doom_ee"},
     },
     {
         PrintName = "FCG",
         Slot = {"fcg_diamatti"},
+        ExcludeFlags = {"doom_ee"},
     },--5
     { --6
         PrintName = "Ammo Type",
-        Slot = {"ammo_pap"}
+        Slot = {"ammo_pap"},
+        ExcludeFlags = {"doom_ee"},
     },
     { --7
         PrintName = "Perk",
-        Slot = "bo1_perk"
+        Slot = {"bo1_perk", "bo1_perk_doompistol"}
     },
     { --8
         PrintName = "Charms",
@@ -216,6 +222,7 @@ SWEP.Attachments = {
             wpos = Vector(8.5, 2.5, -4),
             wang = Angle(-5, -2, 177.5)
         },
+        ExcludeFlags = {"doom_ee"},
     },
 }
 
@@ -226,15 +233,29 @@ SWEP.RejectAttachments = {
 
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
+    local doompistol = wep:GetBuff_Override("DOOM_EE")
     local m93r = wep.Attachments[5].Installed == "cde_fcg_93r"
 
+    local gunname = wep.PrintName
+
+    if doompistol then
+        gunname = "Pistol"
+        wep.ActivePos = Vector(-2.395, 0, 0)
+        wep.ActiveAng = Angle(0.25, -0.025, 0)
+    else
+        wep.ActivePos = Vector(1, 3, 0.5)
+        wep.ActiveAng = Angle(0, 0, 0)
+    end
+
     if pap then
-        return "Die-A-Lotti"
+        gunname = "Die-A-Lotti"
     end
 
     if m93r then
-        return "Beretta 93R"
+        gunname = "Beretta 93R"
     end
+
+    return gunname
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)

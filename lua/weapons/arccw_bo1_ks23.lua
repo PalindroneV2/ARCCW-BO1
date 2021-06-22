@@ -135,10 +135,6 @@ SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
 SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.AttachmentElements = {
-    ["papname1"] = {
-        NamePriority = 10,
-        NameChange = "Gaubitsa",
-    },
     ["solid_stock"] = {
         VMBodygroups = {
             {ind = 2, bg = 1},
@@ -169,6 +165,7 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
         InstalledEles = {"mount"},
+        ExcludeFlags = {"doom_ee"},
     }, --1
     {
         PrintName = "Muzzle",
@@ -180,6 +177,7 @@ SWEP.Attachments = {
             vpos = Vector(22, 0, 1.4), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
+        ExcludeFlags = {"doom_ee"},
     }, --2
     {
         PrintName = "Underbarrel",
@@ -189,7 +187,8 @@ SWEP.Attachments = {
             vpos = Vector(-2, 0, -0.25),
             vang = Angle(0, 0, 0),
         },
-        SlideAmount = false
+        SlideAmount = false,
+        ExcludeFlags = {"doom_ee"},
     }, --3
     {
         PrintName = "Tactical",
@@ -199,20 +198,22 @@ SWEP.Attachments = {
             vpos = Vector(02, -0.7, 0.75), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 90),
         },
+        ExcludeFlags = {"doom_ee"},
     }, --4
     {
         PrintName = "Stock",
         Slot = "bo1_stock",
         DefaultAttName = "No Stock",
-        Installed = "bo1_solid_stock"
+        Installed = "bo1_solid_stock",
     }, --5
     {
         PrintName = "Ammo Type",
         Slot = {"ammo_pap_pumpsg"},
+        ExcludeFlags = {"doom_ee"},
     }, --6
     {
         PrintName = "Perk",
-        Slot = "bo1_perk",
+        Slot = {"bo1_perk", "bo1_perk_doomshotgun"},
     }, --7
     {
         PrintName = "Charm",
@@ -225,12 +226,35 @@ SWEP.Attachments = {
             wpos = Vector(7, 1.6, -4),
             wang = Angle(-10, 0, 180)
         },
+        ExcludeFlags = {"doom_ee"},
     }, --8
 }
 
 SWEP.RejectAttachments = {
     ["bo1_light_stock"] = true,
 }
+
+SWEP.Hook_NameChange = function(wep, name)
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local doomshotgun = wep:GetBuff_Override("DOOM_EE")
+
+    local gunname = wep.PrintName
+
+    if doomshotgun then
+        gunname = "Shotgun"
+        wep.ActivePos = Vector(-2.175, 0, 0)
+        wep.ActiveAng = Angle(0.1, 0.05, 0)
+    else
+        wep.ActivePos = Vector(1, 3, 0.25)
+        wep.ActiveAng = Angle(0, 0, 0)
+    end
+
+    if pap then
+        gunname = "Gaubitsa"
+    end
+
+    return gunname
+end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
@@ -239,6 +263,16 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     if papcamo then
         vm:SetSkin(3)
     end
+end
+
+att.Hook_TranslateAnimation = function(wep, anim)
+
+    local doomshotgun = wep:GetBuff_Override("DOOM_EE")
+
+    if doomshotgun then
+        return anim .. "_doom"
+    end
+
 end
 
 SWEP.Animations = {
@@ -253,8 +287,15 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 17 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 23 / 30}
+        },
+    },
+    ["ready_doom"] = {
+        Source = "draw",
+        Time = 1,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.25,
+        SoundTable = {
         },
     },
     ["holster"] = {
@@ -324,6 +365,15 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.MK_Fwd", t = 14 / 30},
         },
     },
+    ["cycle_doom"] = {
+        Source = {
+            "pump",
+        },
+        Time = 30 / 35,
+        ShellEjectAt = 10 / 35,
+        SoundTable = {
+        },
+    },
     ["cycle_iron"] = {
         Source = {
             "pump_ads",
@@ -333,6 +383,15 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO1.MK_Back", t = 2 / 30},
             {s = "ArcCW_BO1.MK_Fwd", t = 9 / 30},
+        },
+    },
+    ["cycle_iron_doom"] = {
+        Source = {
+            "pump_ads",
+        },
+        Time = 20 / 35,
+        ShellEjectAt = 5 / 35,
+        SoundTable = {
         },
     },
     ["sgreload_start"] = {

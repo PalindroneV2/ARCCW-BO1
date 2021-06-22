@@ -1,4 +1,4 @@
-att.PrintName = "Chaingun"
+att.PrintName = "Pistol Start"
 att.Icon = Material("entities/acwatt_bo1_doom_ee.png")
 att.Description = "Rip and Tear until it is done."
 att.Desc_Pros = {
@@ -6,10 +6,11 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = {"bo1_perk_minigun"}
+att.Slot = {"bo1_perk_doompistol"}
 att.GivesFlags = {"doom_ee"}
 
 att.DOOM_EE = true
+att.LHIKHide = true
 
 att.Mult_HipDispersion = 0
 att.Mult_MoveDispersion = 0
@@ -26,7 +27,7 @@ att.Hook_ShouldNotSight = function(wep)
 end
 
 att.Hook_ModifyRPM = function(wep, delay)
-    return 60 / 525
+    return 60 / 150
 end
 
 att.AttachSound = "weapons/arccw/bo1_olympia/waw_e1m1.wav"
