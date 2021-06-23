@@ -4,6 +4,7 @@ att.Description = "Rip and Tear until it is done."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
+    " -Blocks all other attachments",
 }
 att.AutoStats = true
 att.Slot = {"bo1_perk_doompistol"}

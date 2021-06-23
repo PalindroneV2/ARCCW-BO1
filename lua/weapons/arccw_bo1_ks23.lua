@@ -140,6 +140,11 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 1},
         }
     },
+    ["doom_ee"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 1},
+        }
+    },
     ["mount"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
@@ -205,6 +210,7 @@ SWEP.Attachments = {
         Slot = "bo1_stock",
         DefaultAttName = "No Stock",
         Installed = "bo1_solid_stock",
+        ExcludeFlags = {"doom_ee"},
     }, --5
     {
         PrintName = "Ammo Type",

@@ -98,7 +98,7 @@ sound.Add({
 sound.Add( {
     name = "ArcCW_BO1.DOOMSG_Fire",
     channel = CHAN_AUTO,
-volume = 1,
+    volume = 1,
     level = 100,
     --pitch = {100},
     sound = {
@@ -109,7 +109,7 @@ volume = 1,
 sound.Add( {
     name = "ArcCW_WAW.SSG_Fire",
     channel = CHAN_AUTO,
-volume = 1,
+    volume = 1,
     level = 100,
     --pitch = {100},
     sound = {
@@ -156,6 +156,28 @@ sound.Add({
     --pitch = {95, 110},
     sound = {
         "weapons/arccw/doom_ee/doompistol.wav",
+    }
+})
+
+sound.Add({
+    name = "ArcCW_BO1.DOOMRPG_Fire",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/doom_ee/doomlauncher.wav",
+    }
+})
+
+sound.Add({
+    name = "ArcCW_BO1.DOOMRPG_Impact",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/doom_ee/doomlauncher_impact.wav",
     }
 })
 

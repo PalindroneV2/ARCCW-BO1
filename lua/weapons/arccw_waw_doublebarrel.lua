@@ -174,6 +174,12 @@ SWEP.AttachmentElements = {
             {ind = 3, bg = 1}
         }
     },
+    ["doom_ee"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 1},
+            {ind = 1, bg = 0},
+        }
+    },
 }
 
 SWEP.ExtraSightDist = 5
@@ -183,6 +189,7 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         Slot = "waw_dbs_barrel",
         DefaultAttName = "Long Barrel",
+        ExcludeFlags = {"doom_ee"},
     },
     {
         PrintName = "Underbarrel",
@@ -194,30 +201,28 @@ SWEP.Attachments = {
             wpos = Vector(21.5, 0.75, -3.25),
             wang = Angle(172.5, 0, 0)
         },
+        ExcludeFlags = {"doom_ee"},
     }, --1
     {
         PrintName = "Tactical",
         Slot = "bo1_tacslot",
         Bone = "tag_weapon",
-        /*
-        Offset = {
-            vpos = Vector(19, 0.55, -0.8), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, -90),
-        },
-        */
+        ExcludeFlags = {"doom_ee"},
     }, --2
     {
         PrintName = "Stock",
         DefaultAttName = "Cut-off Stock",
         Slot = "bo1_mp5stock",
+        ExcludeFlags = {"doom_ee"},
     },
     {
         PrintName = "Ammo Type",
         Slot = {"ammo_pap_sg"},
+        ExcludeFlags = {"doom_ee"},
     }, --3
     {
         PrintName = "Perk",
-        Slot = "bo1_perk",
+        Slot = {"bo1_perk", "perk_bo1_ssg"},
     }, --4
     {
         PrintName = "Charm",
@@ -230,6 +235,7 @@ SWEP.Attachments = {
             wpos = Vector(7, 1.6, -4),
             wang = Angle(-10, 0, 180)
         },
+        ExcludeFlags = {"doom_ee"},
     }, --5
 }
 
@@ -244,7 +250,7 @@ end
 
 SWEP.Hook_NameChange = function(wep, name)
     local barrel = wep.Attachments[1].Installed == "bo1_dbs_barrel_sawnoff"
-    local ssg = wep.Attachments[1].Installed == "bo1_dbs_barrel_super"
+    local ssg = wep:GetBuff_Override("DOOM_EE")
     local pap = wep:GetBuff_Override("PackAPunch")
 
     local gunname = "Double-Barreled Shotgun"

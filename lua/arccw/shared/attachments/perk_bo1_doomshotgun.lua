@@ -4,6 +4,7 @@ att.Description = "Rip and Tear until it is done."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
+    " -Blocks all other attachments",
 }
 att.AutoStats = true
 att.Slot = {"bo1_perk_doomshotgun"}
@@ -16,7 +17,6 @@ att.Mult_MoveDispersion = 0
 att.Mult_Recoil = 0
 att.Mult_SpeedMult = 3
 att.Mult_SightedSpeedMult = 3
-att.Mult_AccuracyMOA = 1.75
 att.Override_Num = 8
 
 att.Override_CanBash = false
