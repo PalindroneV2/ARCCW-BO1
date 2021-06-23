@@ -1489,9 +1489,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 0.5},
-            {s = "ArcCW_BO1.M16_Futz", t = 1.15},
-            {s = "ArcCW_BO1.M16_MagIn", t = 1.25}
+            {s = "weapons/arccw/cde_m16/magout.ogg", t = 0.25},
+            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.15},
+            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.25}
         },
     },
     ["reload_empty_mk"] = {
@@ -1504,10 +1504,10 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.M16_MagOut", t = 0.5},
-            {s = "ArcCW_BO1.M16_Futz", t = 1.15},
-            {s = "ArcCW_BO1.M16_MagIn", t = 1.25},
-            {s = "ArcCW_BO1.M16_Button", t = 1.75}
+            {s = "weapons/arccw/cde_m16/magout.ogg", t = 0.25},
+            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.15},
+            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.25},
+            {s = "weapons/arccw/cde_m16/boltdrop.ogg", t = 1.75}
         },
     },
     ["enter_sprint_mk"] = {
