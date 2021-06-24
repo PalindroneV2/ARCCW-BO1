@@ -75,7 +75,7 @@ SWEP.Primary.Ammo = "RPG_Rocket" -- what ammo type the gun uses
 SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO1.M203_Fire"
+SWEP.ShootSound = "ArcCW_BO1.RPG_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
 
 SWEP.MuzzleEffect = "muzzleflash_shotgun"
@@ -276,32 +276,30 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload_out",
-        Time = 93 / 35,
+        Time = 93 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         MinProgress = 0.1,
         SoundTable = {
-            {s = "ArcCW_BO1.M203_Open", t = 5 / 35},
-            {s = "ArcCW_BO1.M203_40mmOut", t = 29 / 35},
-            {s = "ArcCW_BO1.M203_40mmIn", t = 61 / 35},
-            {s = "ArcCW_BO1.M203_Close", t = 83 / 35},
+            {s = "ArcCW_BO1.RPG_Slide", t = 25 / 30},
+            {s = "ArcCW_BO1.RPG_Futz", t = 33 / 30},
+            {s = "ArcCW_BO1.RPG_Latch", t = 40 / 30},
         },
     },
     ["reload_sight"] = {
         Source = "reload",
-        Time = 93 / 35,
+        Time = 93 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         MinProgress = 0.1,
         SoundTable = {
-            {s = "ArcCW_BO1.M203_Open", t = 5 / 35},
-            {s = "ArcCW_BO1.M203_40mmOut", t = 29 / 35},
-            {s = "ArcCW_BO1.M203_40mmIn", t = 61 / 35},
-            {s = "ArcCW_BO1.M203_Close", t = 83 / 35},
+            {s = "ArcCW_BO1.RPG_Slide", t = 25 / 30},
+            {s = "ArcCW_BO1.RPG_Futz", t = 33 / 30},
+            {s = "ArcCW_BO1.RPG_Latch", t = 40 / 30},
         },
     },
     ["enter_sprint"] = {

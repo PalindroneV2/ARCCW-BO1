@@ -3,10 +3,6 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
 SWEP.AdminOnly = false
 
-if GetConVar("arccw_codextras_merge"):GetBool() then
-    SWEP.Category = "ArcCW - Black Ops"
-end
-
 SWEP.PrintName = "Colt M16A1"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "The AR-15 is a family of rifles originally created by Arma-Lite, subsquently picked up by Colt and the standard United States infantry rifle since the 1960s. Despite its poor start, this rifle has a long carreer of excellent and reliable performance and its modularity has kept it in service for over 50 years. The M16A1 entered service in 1969 after having fixed many issues with the rifle's first military configuration."

@@ -3,10 +3,6 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
 SWEP.AdminOnly = false
 
-if GetConVar("arccw_codextras_merge"):GetBool() then
-    SWEP.Category = "ArcCW - Black Ops"
-end
-
 SWEP.PrintName = "Beretta 92"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "9mm italian pistol with a a double stack magazine. Eventually becomes the standard pistol for the US military."

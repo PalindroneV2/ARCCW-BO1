@@ -3,10 +3,6 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-if GetConVar("arccw_codextras_merge"):GetBool() then
-    SWEP.Spawnable = false
-end
-
 SWEP.PrintName = "Colt M16A1"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = [[

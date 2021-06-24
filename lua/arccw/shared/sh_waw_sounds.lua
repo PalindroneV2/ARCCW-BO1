@@ -2,7 +2,7 @@
 
 sound.Add( {
     name = "ArcCW_WAW.Garand_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     ----pitch = {95, 110},
@@ -12,7 +12,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Garand_In",
-    channel = CHAN_ITEM + 5,
+    channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -22,7 +22,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Garand_Out",
-    channel = CHAN_ITEM + 2,
+    channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -32,7 +32,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Garand_Close",
-    channel = CHAN_ITEM + 3,
+    channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -42,7 +42,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Garand_Pull",
-    channel = CHAN_ITEM + 4,
+    channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
     sound = {
@@ -64,7 +64,7 @@ sound.Add( {
 
 sound.Add( {
     name = "ArcCW_WAW.Mosin_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     sound = {
@@ -82,7 +82,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Mosin_Up",
-    channel = CHAN_ITEM + 1,
+    channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
     sound = {
@@ -91,7 +91,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Mosin_Back",
-    channel = CHAN_ITEM + 2,
+    channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
     sound = {
@@ -100,7 +100,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Mosin_Fwd",
-    channel = CHAN_ITEM + 3,
+    channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
     sound = {
@@ -109,7 +109,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Mosin_Rechamber",
-    channel = CHAN_ITEM + 4,
+    channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
     sound = {
@@ -118,7 +118,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Mosin_Eject",
-    channel = CHAN_ITEM + 5,
+    channel = CHAN_USER_BASE + 1,
     volume = 0.5,
     level = 20,
     sound = {
@@ -127,7 +127,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Mosin_Bullet",
-    channel = CHAN_ITEM + 6,
+    channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
     sound = {
@@ -139,7 +139,7 @@ sound.Add( {
 
 sound.Add( {
     name = "ArcCW_BO3.STG44_COD4",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -152,7 +152,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_BO3.STG44_DOD",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -162,7 +162,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_BO3.STG44_WAW",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -215,7 +215,7 @@ sound.Add( {
 
 sound.Add( {
     name = "ArcCW_WAW.TrenchGun_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -225,7 +225,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Trenchgun_Mech",
-    channel = CHAN_AUTO,
+    channel = CHAN_USER_BASE + 2,
 volume = 1,
     level = 100,
     --pitch = {95, 110},
@@ -235,7 +235,7 @@ volume = 1,
 } )
 sound.Add( {
     name = "ArcCW_WAW.DBS_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
 volume = 1,
     level = 100,
     --pitch = {95, 110},
@@ -245,7 +245,7 @@ volume = 1,
 } )
 sound.Add( {
     name = "ArcCW_WAW.DBS_Mech",
-    channel = CHAN_AUTO,
+    channel = CHAN_USER_BASE + 2,
 volume = 1,
     level = 100,
     --pitch = {95, 110},
@@ -301,7 +301,7 @@ sound.Add( {
 
 sound.Add( {
     name = "ArcCW_WAW.MG42_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -354,7 +354,7 @@ sound.Add( {
 
 sound.Add( {
     name = "ArcCW_WAW.MP40_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -397,7 +397,7 @@ sound.Add( {
 
 sound.Add( {
     name = "ArcCW_WAW.Thompson_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     ----pitch = {95, 110},
@@ -440,7 +440,7 @@ sound.Add( {
 
 sound.Add( {
     name = "ArcCW_WAW.PPSh_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -493,7 +493,7 @@ sound.Add( {
 -- WAW PISTOLS --
 sound.Add( {
     name = "ArcCW_WAW.M1911_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -510,7 +510,7 @@ sound.Add( {
 
 sound.Add( {
     name = "ArcCW_WAW.TT33_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -533,7 +533,7 @@ sound.Add( {
 
 sound.Add({
     name = "ArcCW_WAW.P38_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     level = 100,
     sound = "weapons/arccw/waw_p38/fire.wav"
 })
@@ -571,7 +571,7 @@ sound.Add({
 
 sound.Add({
     name = "ArcCW_BO1.DG2_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -627,7 +627,7 @@ sound.Add({
 
 sound.Add({
     name = "ArcCW_BO1.DG2_Impact",
-    channel = CHAN_USER_BASE + 1,
+    channel = CHAN_USER_BASE + 5,
     level = 70,
     sound = "weapons/arccw/waw_dg2/splash.wav"
 })

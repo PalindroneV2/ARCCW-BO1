@@ -3,10 +3,6 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
 SWEP.AdminOnly = false
 
-if GetConVar("arccw_codextras_merge"):GetBool() then
-    SWEP.Category = "ArcCW - Black Ops II"
-end
-
 SWEP.PrintName = "Walther P99"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "9mm german pistol. Pistol made for law enforcement, security forces and civilian shooting market. Successor of the P5 and P88."

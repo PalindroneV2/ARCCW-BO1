@@ -3,10 +3,6 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
 SWEP.AdminOnly = false
 
-if GetConVar("arccw_codextras_merge"):GetBool() then
-    SWEP.Category = "ArcCW - Black Ops"
-end
-
 SWEP.PrintName = "M79 Thumper"
 SWEP.Trivia_Class = "Grenade Launcher"
 SWEP.Trivia_Desc = "American break-action, single shot grenade launcher using 40mm High Explosive rounds. Famously used in the Vietnam War and still used in small numbers."

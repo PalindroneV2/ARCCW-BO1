@@ -2,13 +2,13 @@
 
 sound.Add({
     name = "ArcCW_BO2.M1911_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     level = 100,
     sound = "weapons/arccw/bo2_generic_pistol/fire_heavy.wav"
 })
 sound.Add({
     name = "ArcCW_BO2.BHP_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     level = 100,
     sound = "weapons/arccw/bo2_generic_pistol/fire_light.wav"
 })
@@ -73,7 +73,7 @@ sound.Add({
 
 sound.Add( {
     name = "ArcCW_BO2.M27_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -83,7 +83,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_BO2.SCAR_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -93,7 +93,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_BO2.AN94_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -103,7 +103,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_BO2.M27_Sil",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -183,7 +183,7 @@ sound.Add( {
 
 sound.Add({
     name = "ArcCW_BO2.LSAT_Fire",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -193,7 +193,7 @@ sound.Add({
 })
 sound.Add({
     name = "ArcCW_BO2.LSAT_Sil",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -281,14 +281,14 @@ sound.Add({
 
 sound.Add({
     name = "ArcCW_BO2.SVD_Shoot",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     level = 100,
     sound = "weapons/arccw/bo2_generic_sniper/wpn_ballista_fire_plr.wav"
 })
 
 sound.Add({
     name = "ArcCW_BO2.DSR50_Shoot",
-    channel = CHAN_AUTO,
+    channel = CHAN_WEAPON,
     level = 100,
     sound = "weapons/arccw/bo2_generic_sniper/wpn_dsr_fire_plr.wav"
 })

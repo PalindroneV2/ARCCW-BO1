@@ -3,10 +3,6 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
 SWEP.AdminOnly = false
 
-if GetConVar("arccw_codextras_merge"):GetBool() then
-    SWEP.Category = "ArcCW - Black Ops"
-end
-
 SWEP.PrintName = "Desert Eagle Mk XIX"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "Magnum caliber semi-automatic pistol designed in the United States and produced by IMI. Though hard to control and unreliable at times it offers great stopping power due to its massive round."
