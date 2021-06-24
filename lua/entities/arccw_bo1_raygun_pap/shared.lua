@@ -12,6 +12,10 @@ ENT.Radius = 75
 ENT.Ticks = 0
 ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 
+if CLIENT then
+    killicon.Add( "arccw_bo1_raygun_pap", "arccw/weaponicons/arccw_bo1_raygun", Color( 255, 255, 255, 255 ) )
+end
+
 if SERVER then
 
     AddCSLuaFile()

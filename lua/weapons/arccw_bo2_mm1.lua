@@ -2,6 +2,7 @@ SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = true
+SWEP.AutoSpawnable = false
 
 SWEP.PrintName = "Hawk MM-1"
 SWEP.Trivia_Class = "Grenade Launcher"
@@ -63,7 +64,7 @@ SWEP.Firemodes = {
 }
 
 SWEP.NPCWeaponType = {"weapon_rpg"}
-SWEP.NPCWeight = 100
+SWEP.NPCWeight = 0
 
 SWEP.AccuracyMOA = 20 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.

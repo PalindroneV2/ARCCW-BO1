@@ -12,6 +12,10 @@ ENT.Radius = 250
 ENT.Ticks = 0
 ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 
+if CLIENT then
+    killicon.Add( "arccw_bo1_doomrocket", "arccw/weaponicons/arccw_bo1_rpg7", Color( 255, 255, 255, 255 ) )
+end
+
 if SERVER then
 
     AddCSLuaFile()
@@ -81,6 +85,10 @@ end
 function ENT:Draw()
     self:DrawModel()
 
+    cam.Start3D() -- Start the 3D function so we can draw onto the screen.
+        render.SetMaterial( Material("effects/blueflare1") ) -- Tell render what material we want, in this case the flash from the gravgun
+        render.DrawSprite( self:GetPos(), math.random(30, 45), math.random(30, 45), Color(255, 40, 40) ) -- Draw the sprite in the middle of the map, at 16x16 in it's original colour with full alpha.
+    cam.End3D()
     /*cam.Start3D() -- Start the 3D function so we can draw onto the screen.
         render.SetMaterial( Material("effects/blueflare1") ) -- Tell render what material we want, in this case the flash from the gravgun
         render.DrawSprite( self:GetPos(), math.random(30, 45), math.random(30, 45), Color(0, 255, 66) ) -- Draw the sprite in the middle of the map, at 16x16 in it's original colour with full alpha.

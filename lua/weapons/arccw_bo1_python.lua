@@ -65,7 +65,6 @@ SWEP.Firemodes = {
 }
 
 SWEP.NPCWeaponType = {
-    "weapon_pistol",
     "weapon_357",
 }
 SWEP.NPCWeight = 100

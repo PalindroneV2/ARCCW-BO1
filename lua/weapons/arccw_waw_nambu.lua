@@ -72,9 +72,9 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_WAW.P38_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.Pistol_Sil"
+SWEP.DistantShootSound = "weapons/arccw/waw_dist/waw_9mm.wav"
 
 SWEP.MeleeMissSound = "weapons/iceaxe/iceaxe_swing1.wav"
-SWEP.MeleeHitSound = "arccw_go/knife/knife_hitwall1.wav"
 SWEP.MeleeHitNPCSound = "physics/main/main_medium_break2.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"
@@ -244,7 +244,7 @@ SWEP.Animations = {
         LHIKOut = 10 / 60,
         SoundTable = {
             {s = "ArcCW_WAW.P38_Out", t = 27 / 60},
-            {s = "ArcCW_BO2.M1911_SlideFwd", t = 28 / 60},
+            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 28 / 60},
             {s = "ArcCW_WAW.P38_In", t = 87 / 60},
         },
     },
@@ -259,8 +259,8 @@ SWEP.Animations = {
             {s = "ArcCW_WAW.P38_Out", t = 27 / 60},
             {s = "ArcCW_BO2.M1911_SlideFwd", t = 28 / 60},
             {s = "ArcCW_WAW.P38_In", t = 87 / 60},
-            {s = "ArcCW_BO2.M1911_SlideBack", t = 125 / 60},
-            {s = "ArcCW_BO2.M1911_SlideFwd", t = 138 / 60}
+            {s = "ArcCW_BO2.Pistol_SlideBack", t = 125 / 60},
+            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 138 / 60}
         },
     },
     ["idle_sprint"] = {

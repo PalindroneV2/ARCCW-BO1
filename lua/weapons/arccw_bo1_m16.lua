@@ -483,23 +483,23 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 1,
-        LHIK = true,
         LHIKIn = 0.2,
-        LHIKOut = 0.25,
+        LHIKOut = 1,
+        LHIK = true,
     },
     ["holster"] = {
         Source = "holster",
         Time = 0.75,
-        LHIK = true,
         LHIKIn = 0.2,
-        LHIKOut = 0.25,
+        LHIKOut = 0.2,
+        LHIK = true,
     },
     ["ready"] = {
         Source = "first_draw",
         Time = 1,
         LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
         SoundTable = {
             {s = "ArcCW_BO1.M16_Charge", t = 0}
         },

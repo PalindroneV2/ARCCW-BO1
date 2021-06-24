@@ -352,20 +352,14 @@ SWEP.Animations = {
         },
     },
     ["sgreload_start"] = {
-        Source = "reload_start2",
-        Time = 16 / 40,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0,
-    },
-    ["sgreload_start_empty"] = {
         Source = "reload_start",
         Time = 55 / 40,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0,
+        RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
+        MinProgress = 21 / 40,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Shell", t = 21 / 40},
         },
@@ -378,6 +372,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0,
+        MinProgress = 21 / 40,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Shell", t = 20 / 40},
         },

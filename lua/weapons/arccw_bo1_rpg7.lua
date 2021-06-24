@@ -50,6 +50,8 @@ SWEP.ExtendedClipSize = 3
 SWEP.Recoil = 2
 SWEP.RecoilSide = 2
 SWEP.MaxRecoilBlowback = 2
+SWEP.RecoilPunch = 2
+SWEP.RecoilPunchBackMax = 2
 
 SWEP.Delay = 60 / 300 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.

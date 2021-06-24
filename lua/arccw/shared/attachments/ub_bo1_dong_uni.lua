@@ -18,7 +18,7 @@ att.LHIK = true
 
 att.Model = "models/weapons/arccw/atts/bo2_ub_dong.mdl"
 
-att.Mult_Recoil = 0.75
+att.Mult_Recoil = 0.85
 
 att.Mult_SightTime = 0.75
 att.Mult_HipDispersion = 1.2

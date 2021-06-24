@@ -16,7 +16,7 @@ att.Slot = "bo1_foregrip"
 att.GivesFlags = {"ubanims"}
 att.IntegratedGrip = true
 
-att.Mult_Recoil = 0.75
+att.Mult_Recoil = 0.85
 
 att.Mult_SightTime = 0.75
 att.Mult_HipDispersion = 1.2

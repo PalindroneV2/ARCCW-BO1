@@ -14,6 +14,10 @@ ENT.Ticks = 0
 ENT.FuseTime = 0.1
 ENT.Defused = false
 
+if CLIENT then
+    killicon.Add( "arccw_m203_he_bo1", "arccw/weaponicons/ubs/m203", Color( 255, 255, 255, 255 ) )
+end
+
 if SERVER then
 
     function ENT:Initialize()

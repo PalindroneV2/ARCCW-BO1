@@ -58,7 +58,6 @@ SWEP.Firemodes = {
 }
 
 SWEP.NPCWeaponType = {
-    "weapon_smg1",
     "weapon_ar2",
     "weapon_crossbow",
 }
@@ -270,7 +269,6 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         DefaultAttName = "G3 Barrel",
         Slot = "bo1_g3_barrel",
-        Installed = "bo1_barrel_g3_psg1"
     },--2
     {
         PrintName = "Muzzle",
@@ -343,7 +341,6 @@ SWEP.Attachments = {
     {
         PrintName = "Magazine",
         Slot = {"bo1_g3_ammo"},
-        Installed = "bo1_ammo_g3_psg1"
     }, --10
     {
         PrintName = "Ammo Type",

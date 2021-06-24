@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
 	$basetexture "models/weapons/bo1/plastic"
-	$bumpmap	"models/weapons/bo1/plastic"
+	$bumpmap	"models/weapons/bo1/bo1_spas12/spas_n"
 	$selfillum 1
 	$selfillummask "models\weapons\pap\pap_cosmic_s"
 

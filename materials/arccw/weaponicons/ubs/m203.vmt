@@ -1,0 +1,5 @@
+"UnlitGeneric" 
+{ 
+    "$basetexture" "arccw/weaponicons/ubs/m203" 
+    "$translucent" 1 
+} 
