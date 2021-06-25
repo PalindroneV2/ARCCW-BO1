@@ -8,7 +8,7 @@ att.Desc_Cons = {
 }
 att.AutoStats = true
 att.Slot = "waw_rifgren"
-att.GivesFlags = {}
+att.GivesFlags = {"waw_muzzgren"}
 att.ExcludeFlags = {}
 
 att.SortOrder = 100

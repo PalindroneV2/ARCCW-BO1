@@ -390,13 +390,13 @@ SWEP.Animations = {
     },
     ["sgreload_finish_empty"] = {
         Source = "reload_end",
-        Time = 22 / 40,
+        Time = 35 / 40,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 1,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 13 / 40},
-            {s = "ArcCW_BO1.MK_Fwd", t = 16 / 40},
+            {s = "ArcCW_BO1.MK_Back", t = 8 / 40},
+            {s = "ArcCW_BO1.MK_Fwd", t = 12 / 40},
         },
     },
     ["enter_sprint"] = {

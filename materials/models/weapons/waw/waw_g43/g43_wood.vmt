@@ -1,0 +1,14 @@
+VertexlitGeneric
+{
+	$basetexture	"models\weapons\waw\waw_g43\g43"
+	$bumpmap	"models\weapons\waw\normalmap"
+
+	$phong                      		1
+	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.1 0.1 0.1]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	"$nocull" "1"
+}

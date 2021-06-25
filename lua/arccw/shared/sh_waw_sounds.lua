@@ -60,6 +60,89 @@ sound.Add( {
     }
 } )
 
+-- Gewehr 43 Main --
+
+sound.Add( {
+    name = "ArcCW_WAW.G43_Fire",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_g43/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.G43_Sil",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_g43/sil.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.G43_Mech",
+    channel = CHAN_USER_BASE + 6,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_g43/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.G43_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_g43/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.G43_Tap",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_g43/tap.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.G43_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_g43/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.G43_Back",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_g43/back.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.G43_Fwd",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_g43/fwd.wav",
+    }
+} )
+
 -- MOSIN Main --
 
 sound.Add( {

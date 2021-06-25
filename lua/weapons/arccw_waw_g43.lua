@@ -3,24 +3,25 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M1 Garand"
+SWEP.PrintName = "Gewehr 43"
 SWEP.Trivia_Class = "Battle Rifle"
-SWEP.Trivia_Desc = "What does a battle rifle have in common with a microwave? They both go 'ping' when they're done. American semi-automatic battle rifle using an en-bloc 8-round magazine which gave US Troops an advantage against the more commonplace bolt-action rifles wielded by their enemies during World War 2."
-SWEP.Trivia_Manufacturer = "Springfield Armory"
-SWEP.Trivia_Calibre = ".30-06 Springfield"
-SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
-SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 1928
+SWEP.Trivia_Desc = "World War 2 era German Semi-Automatic rifle successor of the G41(W) made to catch up with the SVT-38 and subsequently the SVT-40."
+SWEP.Trivia_Manufacturer = "Walther"
+SWEP.Trivia_Calibre = "7.92x57mm Mauser"
+SWEP.Trivia_Mechanism = "Gas-Operated"
+SWEP.Trivia_Country = "Nazi Germany"
+SWEP.Trivia_Year = 1943
 
 SWEP.Slot = 3
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_waw_garand.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_waw_garand.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_waw_g43.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_waw_g43.mdl"
+SWEP.MirrorWorldModel = "models/weapons/arccw/w_waw_g43.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-6.5, 0.5, -3),
+    pos        =    Vector(-6.75, 3, -3),
     ang        =    Angle(-15, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale   =   1
@@ -41,15 +42,14 @@ SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 8 -- DefaultClip is automatically set.
+SWEP.Primary.ClipSize = 10 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 20
 
 SWEP.Recoil = 1
 SWEP.RecoilSide = 0.75
 SWEP.RecoilRise = 0.75
-SWEP.VisualRecoilMult = 0
 
-SWEP.Delay = 60 / 750-- 60 / RPM.
+SWEP.Delay = 60 / 600-- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -76,8 +76,8 @@ SWEP.MagID = "m1garand" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_WAW.Garand_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
+SWEP.ShootSound = "ArcCW_WAW.G43_Fire"
+SWEP.ShootSoundSilenced = "ArcCW_WAW.G43_Sil"
 SWEP.DistantShootSound = "weapons/arccw/waw_dist/waw_rifle.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
@@ -105,8 +105,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(0.325, -6, 0.9),
-    Ang = Angle(-0.9, 0.025, 0),
+    Pos = Vector(-1.9375, -6, 0.5),
+    Ang = Angle(0.05, -0.0875, 0),
     Magnification = 1.25,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -153,12 +153,13 @@ SWEP.AttachmentElements = {
     },
     ["waw_rifgren"] = {
         VMBodygroups = {
-            {ind = 2, bg = 2}
+            {ind = 1, bg = 1},
+            {ind = 2, bg = 1},
         }
     },
     ["waw_bayonet"] = {
         VMBodygroups = {
-            {ind = 2, bg = 1}
+            {ind = 1, bg = 2}
         }
     },
 }
@@ -182,10 +183,11 @@ SWEP.Attachments = {
     { --2
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle", "waw_rifgren", "waw_bayonet"},
+        Slot = {"muzzle", "waw_rifgren"}, -- "waw_bayonet" not ready
+        VMScale = Vector (2, 1.5, 1.5),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(26.1, 0, 1.5), -- offset that the attachment will be relative to the bone
+            vpos = Vector(22, 0, 0.75), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(0, 0, 0),
             wang = Angle(0, 0, 0)
@@ -246,19 +248,15 @@ SWEP.Attachments = {
 
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep.Attachments[6].Installed == "ammo_papunch"
-    local tube = wep.Attachments[2].Installed == "muzz_waw_rifgren"
 
-    if pap and tube then
-        return "M1000 Imploder"
-    elseif pap and !tube then
-        return "M1000"
+    if pap then
+        return "G115 Compressor"
     end
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[6].Installed == "ammo_papunch"
-
     if papcamo then return vm:SetSkin(1) end
 end
 
@@ -285,11 +283,17 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 0.75,
+        Time = 0.5,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 0.5,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
     },
     ["bash"] = {
         Source = "swipe",
@@ -302,73 +306,84 @@ SWEP.Animations = {
     ["holster"] = {
         Source = "holster",
         Time = 0.5,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
         Time = 0.5,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 64 / 30,
+        Time = 40 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_WAW.Garand_Pull", t = 21 / 30},
-            {s = "ArcCW_WAW.Garand_Close", t = 36 / 30}
         },
     },
     ["fire"] = {
         Source = {"fire"},
         Time = 7 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = "weapons/arccw/waw_garand/mech.wav", t = 0 }}
+        SoundTable = {{ s = "ArcCW_WAW.G43_Mech", t = 1 / 30 }}
     },
     ["fire_empty"] = {
-        Source = {"fire_empty"},
+        Source = {"fire_last"},
         Time = 7 / 30,
         ShellEjectAt = 0,
          SoundTable = {
-            {s = "ArcCW_WAW.Garand_Ping", t = 0},
-            {s = "weapons/arccw/waw_garand/mech_last.wav", t = 1 / 30}
+            {s = "ArcCW_WAW.G43_Mech", t = 1 / 30}
         },
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = "weapons/arccw/waw_garand/mech.wav", t = 0 }}
+        SoundTable = {{ s = "ArcCW_WAW.G43_Mech", t = 1 / 30 }}
     },
     ["fire_iron_empty"] = {
-        Source = {"fire_ads_empty"},
+        Source = {"fire_last"},
         Time = 7 / 30,
         ShellEjectAt = 0,
         SoundTable = {
-            {s = "ArcCW_WAW.Garand_Ping", t = 0},
-            {s = "weapons/arccw/waw_garand/mech_last.wav", t = 1 / 30},
+            {s = "ArcCW_WAW.G43_Mech", t = 1 / 30},
         },
     },
     ["reload"] = {
-        Source = "reload_long",
-        Time = 105 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 37,
-        Checkpoints = {28, 38, 69},
-        SoundTable = {
-            {s = "ArcCW_WAW.Garand_Pull", t = 16 / 30},
-            {s = "ArcCW_WAW.Garand_Out", t = 23 / 30},
-            {s = "ArcCW_WAW.Garand_Close", t = 32 / 30},
-            {s = "ArcCW_WAW.Garand_Pull", t = 68 / 30},
-            {s = "ArcCW_WAW.Garand_In", t = 77 / 30},
-            {s = "ArcCW_WAW.Garand_Close", t = 85 / 30},
-        },
-    },
-    ["reload_empty"] = {
         Source = "reload",
-        Time = 46 / 30,
+        Time = 99 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,
         Checkpoints = {28, 38, 69},
+        LHIK = true,
+        LHIKIn = 0.75,
+        LHIKOut = 0.75,
         SoundTable = {
-            {s = "ArcCW_WAW.Garand_In", t = 27 / 30},
-            {s = "ArcCW_WAW.Garand_Close", t = 33 / 30},
+            {s = "ArcCW_WAW.G43_Out", t = 10 / 35},
+            {s = "ArcCW_WAW.G43_In", t = 40 / 35},
+            {s = "ArcCW_WAW.G43_Tap", t = 45 / 35},
+        },
+    },
+    ["reload_empty"] = {
+        Source = "reload_empty",
+        Time = 142 / 35,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Framerate = 30,
+        Checkpoints = {28, 38, 69},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 1.75,
+        SoundTable = {
+            {s = "ArcCW_WAW.G43_Out", t = 24 / 35},
+            {s = "ArcCW_WAW.G43_In", t = 70 / 35},
+            --{s = "ArcCW_WAW.G43_Tap", t = 45 / 30},
+            {s = "ArcCW_WAW.G43_Back", t = 98 / 35},
+            {s = "ArcCW_WAW.G43_Fwd", t = 106 / 35},
         },
     },
     /*["enter_sprint"] = {
@@ -400,14 +415,23 @@ SWEP.Animations = {
     ["idle_ubgl"] = {
         Source = "idle_glsetup",
         Time = 1 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
     },
     ["idle_ubgl_empty"] = {
         Source = "idle_glsetup_empty",
         Time = 1 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
     },
     ["enter_ubgl"] = {
         Source = "glsetup_in",
         Time = 80 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
         SoundTable = {
             {s = "ArcCW_WAW.RGren_Futz", t = 34 / 30},
             {s = "ArcCW_WAW.RGren_Load", t = 40 / 30},
@@ -417,23 +441,35 @@ SWEP.Animations = {
     ["exit_ubgl"] = {
         Source = "glsetup_out",
         Time = 90 / 40,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
         SoundTable = {
             {s = "ArcCW_WAW.RGren_Click", t = 24 / 40},
             {s = "ArcCW_WAW.RGren_Remove", t = 36 / 40},
             {s = "ArcCW_WAW.RGren_Futz", t = 38 / 40},
         }
     },
-    ["enter_ubgl_empty"] = {
-        Source = "glsetup_in_empty",
+    /*["enter_ubgl_empty"] = {
+        Source = "glsetup_in",
         Time = 19 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
     },
     ["exit_ubgl_empty"] = {
-        Source = "glsetup_out_empty",
+        Source = "glsetup_out",
         Time = 10 / 30,
-    },
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
+    },*/
     ["fire_ubgl"] = {
         Source = "fire_glsetup",
         Time = 7 / 30,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
         TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
         TPAnimStartTime = 0,
     },
@@ -442,6 +478,9 @@ SWEP.Animations = {
         Time = 64 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.1,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.25,
         SoundTable = {
             {s = "ArcCW_WAW.RGren_Futz", t = 16 / 30},
             {s = "ArcCW_WAW.RGren_Load", t = 19 / 30},

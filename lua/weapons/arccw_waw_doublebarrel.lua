@@ -372,6 +372,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
+        Framerate = 16,
         SoundTable = {
             {s = "ArcCW_WAW.SSG_Open", t = 7 / (30 / 2.25)},
             {s = "ArcCW_WAW.SSG_Shell", t = 16 / (30 / 2.25)},
