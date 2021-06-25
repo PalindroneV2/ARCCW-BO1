@@ -1,5 +1,5 @@
 att.PrintName = "5.56mm IAR 60rnd"
-att.Icon = Material("entities/acwatt_bo1_ext_mag.png")
+att.Icon = Material("entities/acwatt_bo1_ext_mag.png", "mips smooth")
 att.Description = "Massive 60 round magazine for your IAR."
 att.Desc_Pros = {
 }

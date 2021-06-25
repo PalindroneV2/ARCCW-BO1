@@ -206,7 +206,8 @@ SWEP.Attachments = {
         },
         InstalledEles = {"noch"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0, 0, 0)
+        CorrectiveAng = Angle(0, 0, 0),
+        MergeSlots = {15}
     },
     { --2
         PrintName = "Muzzle",
@@ -312,6 +313,21 @@ SWEP.Attachments = {
         FreeSlot = true,
         DefaultAttName = "COD4 Sound",
         ExcludeFlags = {"smgsound"},
+    },
+    {--15
+        Hidden = true,
+        Slot = {"waw_zf4_scope_1"}, -- what kind of attachments can fit here, can be string or table
+        Bone = "tag_weapon",
+        VMScale = Vector(1.25, 1.25, 1.25),
+        Offset = {
+            vpos = Vector(-2.5, 0.25, 0.5), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+            wpos = Vector(6.5, 1.2, -5.6),
+            wang = Angle(172.5, -180, -2),
+        },
+        GivesFlags = {"nochit"},
+        CorrectivePos = Vector(0, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
     },
 }
 

@@ -33,9 +33,7 @@ att.HolosightSize = 12
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/waw_rus_scope_hsp.mdl"
 att.Colorable = true
-
 att.HolosightBlackbox = true
-
 att.HolosightMagnification = 4
 
 att.Mult_SightTime = 1.1

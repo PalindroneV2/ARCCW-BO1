@@ -1,5 +1,5 @@
 att.PrintName = "Speed Cola"
-att.Icon = Material("entities/acwatt_perk_speedcola.png")
+att.Icon = Material("entities/acwatt_perk_speedcola.png", "mips smooth")
 att.Description = "Reload your weapon faster, along with small sight and draw time improvements."
 att.Desc_Pros = {
 }

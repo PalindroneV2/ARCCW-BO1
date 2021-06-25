@@ -1,5 +1,5 @@
 att.PrintName = "Rifle Grenade Launcher (HE)(BO1)"
-att.Icon = Material("entities/acwatt_muzz_waw_rifgren.png")
+att.Icon = Material("entities/acwatt_muzz_waw_rifgren.png", "mips smooth")
 att.Description = "Selectable Grenade Launcher equipped at the rifle's muzzle. Double tap +ZOOM to equip/dequip."
 att.Desc_Pros = {
     "+ Selectable Grenade Launcher.",

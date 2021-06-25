@@ -1,5 +1,5 @@
 att.PrintName = "Orange Bakelite"
-att.Icon = Material("entities/acwatt_m16_stock.png")
+att.Icon = Material("entities/acwatt_m16_stock.png", "mips smooth")
 att.Description = "Standard bakelite with an orange finish."
 att.Desc_Pros = {
     "+ Only cosmetic.",

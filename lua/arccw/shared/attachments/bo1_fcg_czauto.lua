@@ -1,5 +1,5 @@
 att.PrintName = "Auto Barrel"
-att.Icon = Material("entities/acwatt_bo1_fcg_rapid.png")
+att.Icon = Material("entities/acwatt_bo1_fcg_rapid.png", "mips smooth")
 att.Description = "Extended barrel and internal modification for automatic fire. Forward spare magazine improves recoil control just a bit."
 att.Desc_Pros = {
     "+ Automatic Fire",

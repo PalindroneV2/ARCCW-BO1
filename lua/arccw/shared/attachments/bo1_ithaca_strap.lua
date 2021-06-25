@@ -1,5 +1,5 @@
 att.PrintName = "Ithaca Shell Strap"
-att.Icon = Material("entities/acwatt_bo1_fcg_rapid.png")
+att.Icon = Material("entities/acwatt_bo1_fcg_rapid.png", "mips smooth")
 att.Description = "Leather strap equipped with shells increases reload times slightly."
 att.Desc_Pros = {
 }

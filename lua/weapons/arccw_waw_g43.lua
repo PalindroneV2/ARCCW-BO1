@@ -125,7 +125,7 @@ SWEP.SprintPos = Vector(10, 0, -2)
 SWEP.SprintAng = Angle(-7.036, 45.016, 0)
 
 SWEP.CustomizePos = Vector(17, -3, -4.5)
-SWEP.CustomizeAng = Angle(15, 40, 0)
+SWEP.CustomizeAng = Angle(15, 40, 15)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -139,13 +139,16 @@ SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
     ["mount"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 1}
+        },
         VMElements = {
             {
                 Model = "models/weapons/arccw/item/bo1_ak_rail.mdl",
                 Bone = "tag_weapon",
                 Scale = Vector(0.375, 0.375, 0.375),
                 Offset = {
-                    pos = Vector(5, 0.325, 0.8),
+                    pos = Vector(5, 0.325, 0.9),
                     ang = Angle(0, 90, 0),
                 }
             },
@@ -153,13 +156,13 @@ SWEP.AttachmentElements = {
     },
     ["waw_rifgren"] = {
         VMBodygroups = {
-            {ind = 1, bg = 1},
             {ind = 2, bg = 1},
+            {ind = 3, bg = 1},
         }
     },
     ["waw_bayonet"] = {
         VMBodygroups = {
-            {ind = 1, bg = 2}
+            {ind = 2, bg = 2}
         }
     },
 }
@@ -171,14 +174,15 @@ SWEP.Attachments = {
         Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(5.5, 0, 1.95), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(5.5, 0, 2.05), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(4.5, 1.35, -5.4),
             wang = Angle(171, 179, 0)
         },
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
-        InstalledEles = {"mount"}
+        InstalledEles = {"mount"},
+        MergeSlots = {9}
     },
     { --2
         PrintName = "Muzzle",
@@ -244,6 +248,20 @@ SWEP.Attachments = {
             vang = Angle(0, 0, 0),
         },
     }, --8
+    {
+        Hidden = true,
+        Slot = {"waw_zf4_scope_1"},
+        Bone = "j_gun",
+        VMScale = Vector(1, 1, 1),
+        Offset = {
+            vpos = Vector(0, 0, 0), -- 4.6 offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+            wpos = Vector(4.5, 1.35, -5.4),
+            wang = Angle(171, 179, 0)
+        },
+        CorrectivePos = Vector(0, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
+    },
 }
 
 SWEP.Hook_NameChange = function(wep, name)
@@ -365,8 +383,8 @@ SWEP.Animations = {
         LHIKOut = 0.75,
         SoundTable = {
             {s = "ArcCW_WAW.G43_Out", t = 10 / 35},
-            {s = "ArcCW_WAW.G43_In", t = 40 / 35},
-            {s = "ArcCW_WAW.G43_Tap", t = 45 / 35},
+            {s = "ArcCW_WAW.G43_In", t = 45 / 35},
+            {s = "ArcCW_WAW.G43_Tap", t = 52 / 35},
         },
     },
     ["reload_empty"] = {

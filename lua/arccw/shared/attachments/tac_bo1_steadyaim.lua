@@ -1,5 +1,5 @@
 att.PrintName = "Steady Aim"
-att.Icon = Material("entities/acwatt_tac_bo1_steadyaim.png")
+att.Icon = Material("entities/acwatt_tac_bo1_steadyaim.png", "mips smooth")
 att.Description = "Tighter aim when firing from hip, less dispersion when moving."
 att.Desc_Pros = {
 }

@@ -143,6 +143,69 @@ sound.Add( {
     }
 } )
 
+-- M1 CARBINE MAIN --
+
+sound.Add( {
+    name = "ArcCW_WAW.Carbine_Fire",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_carbine/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Carbine_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_carbine/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Carbine_Futz",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_carbine/futz.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Carbine_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_carbine/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Carbine_Mech",
+    channel = CHAN_USER_BASE + 6,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_carbine/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Carbine_Charge",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_carbine/charge.wav",
+    }
+} )
+
 -- MOSIN Main --
 
 sound.Add( {

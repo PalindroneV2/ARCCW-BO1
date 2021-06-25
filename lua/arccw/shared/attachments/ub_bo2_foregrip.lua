@@ -1,5 +1,5 @@
 att.PrintName = "Tac-Light Foregrip (BO2)"
-att.Icon = Material("entities/acwatt_bo2_foregrip.png")
+att.Icon = Material("entities/acwatt_bo2_foregrip.png", "mips smooth")
 att.Description = "Vertical foregrip that goes under the weapon's handguard. Includes a toggleable tactical weapon light."
 
 att.SortOrder = 97
@@ -51,7 +51,7 @@ att.ToggleStats = {
 }
 
 att.DrawFunc = function(wep, element)
-    if wep:GetFlags() == "integral" then
+    if table.HasValue(wep:GetWeaponFlags(), "integral") then
         element.Model:SetBodygroup(0,0)
     else
         element.Model:SetBodygroup(0,1)

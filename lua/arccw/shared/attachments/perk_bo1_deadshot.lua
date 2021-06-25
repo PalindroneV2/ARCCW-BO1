@@ -1,5 +1,5 @@
 att.PrintName = "Deadshot Daquiri"
-att.Icon = Material("entities/acwatt_perk_deadshot.png")
+att.Icon = Material("entities/acwatt_perk_deadshot.png", "mips smooth")
 att.Description = "Tighter aim when firing from hip, less dispersion when moving, less recoil and a higher headshot multiplier."
 att.Desc_Pros = {
 }
@@ -11,7 +11,7 @@ att.Slot = {"bo1_perk"}
 att.Mult_HipDispersion = 0.5
 att.Mult_MoveDispersion = 0.5
 att.Mult_Recoil = 0.7
-att.Mult_MOA = 0.85
+att.Mult_AccuracyMOA = 0.85
 
 att.Hook_BulletHit = function(wep, data)
     if CLIENT then return end

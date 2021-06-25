@@ -1,5 +1,5 @@
 att.PrintName = "9x18mm 30rnd Mag"
-att.Icon = Material("entities/acwatt_bo1_ext_mag.png")
+att.Icon = Material("entities/acwatt_bo1_ext_mag.png", "mips smooth")
 att.Description = "A 30 round magazine for the Skorpion Vz. 65."
 att.Desc_Pros = {
 }

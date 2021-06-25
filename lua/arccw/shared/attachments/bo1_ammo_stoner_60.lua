@@ -1,5 +1,5 @@
 att.PrintName = "STANAG 5.56mm 60rnd Mag"
-att.Icon = Material("entities/acwatt_bo1_ext_mag.png")
+att.Icon = Material("entities/acwatt_bo1_ext_mag.png", "mips smooth")
 att.Description = "A very long 60 round magazine."
 att.Desc_Pros = {
 }

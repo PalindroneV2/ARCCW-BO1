@@ -1,6 +1,6 @@
 // This is a duplicate double tap perk compatible with Shotguns
 att.PrintName = "Double Tap"
-att.Icon = Material("entities/acwatt_perk_doubletap.png")
+att.Icon = Material("entities/acwatt_perk_doubletap.png", "mips smooth")
 att.Description = "All weapons have a higher fire rate."
 att.Desc_Pros = {
 }

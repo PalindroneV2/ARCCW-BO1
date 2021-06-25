@@ -1,5 +1,5 @@
 att.PrintName = "FAMAS F1 S-1-3 FCG"
-att.Icon = Material("entities/acwatt_fcg_s13.png")
+att.Icon = Material("entities/acwatt_fcg_s13.png", "mips smooth")
 att.Description = "Firemode conversion allowing for 3-round burst and semi-auto fire modes. Added weight from the carry handle improves recoil control."
 att.Desc_Pros = {
     "+ Burst Fire mode allows for ammunition",

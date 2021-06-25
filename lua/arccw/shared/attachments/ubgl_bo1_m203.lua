@@ -1,5 +1,5 @@
 att.PrintName = "M203 (BO1)[LHIK]"
-att.Icon = Material("entities/acwatt_ubgl_bo1_m203.png")
+att.Icon = Material("entities/acwatt_ubgl_bo1_m203.png", "mips smooth")
 att.Description = "Selectable Grenade Launcher equipped under the rifle's handguard. Double tap +ZOOM to equip/dequip."
 att.Desc_Pros = {
     "pro.ubgl",

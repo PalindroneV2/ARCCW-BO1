@@ -1,5 +1,5 @@
 att.PrintName = "Wood Furniture"
-att.Icon = Material("entities/acwatt_m16_stock.png")
+att.Icon = Material("entities/acwatt_m16_stock.png", "mips smooth")
 att.Description = "Patrolling the Mojave makes you wish for a nuclear winter."
 att.Desc_Pros = {
     "+ Only cosmetic.",

@@ -1,5 +1,5 @@
 att.PrintName = "Masterkey (BO1)"
-att.Icon = Material("entities/acwatt_ubgl_aug_mk.png")
+att.Icon = Material("entities/acwatt_ubgl_aug_mk.png", "mips smooth")
 att.Description = "Selectable shotgun equipped under the rifle's barrel. Double tap +ZOOM to equip/dequip."
 att.Desc_Pros = {
 	"+ Selectable Underbarrel Shotgun.",

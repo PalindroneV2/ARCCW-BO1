@@ -1,5 +1,5 @@
 att.PrintName = "M720 10.5 in. Barrel"
-att.Icon = Material("entities/acwatt_m16a2_hg.png")
+att.Icon = Material("entities/acwatt_m16a2_hg.png", "mips smooth")
 att.Description = "Short 10.5 inch barrel with a round ribbed handguard. Cannot accept UBGLs."
 
 att.SortOrder = 93

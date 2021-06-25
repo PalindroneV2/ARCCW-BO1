@@ -1,5 +1,5 @@
 att.PrintName = "Vulture Aid"
-att.Icon = Material("entities/acwatt_perk_scavenger.png")
+att.Icon = Material("entities/acwatt_perk_scavenger.png", "mips smooth")
 att.Description = "A portion of your magazine is replenished to your reserve when hitting a foe."
 att.Desc_Pros = {
     "+ 50% chance of recovering ammunition a magazine when hitting an enemy.",

@@ -1,5 +1,5 @@
 att.PrintName = "A2 Funswitch FCG"
-att.Icon = Material("entities/acwatt_fcg_s13.png")
+att.Icon = Material("entities/acwatt_fcg_s13.png", "mips smooth")
 att.Description = "M16A2 receiver with a full-auto sear. Affectionately known as the fun switch."
 att.Desc_Pros = {
     "+ Purely Cosmetic."

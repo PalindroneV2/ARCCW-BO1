@@ -1,5 +1,5 @@
 att.PrintName = "Tac-Light Foregrip (BO2)"
-att.Icon = Material("entities/acwatt_bo2_foregrip.png")
+att.Icon = Material("entities/acwatt_bo2_foregrip.png", "mips smooth")
 att.Description = "Vertical foregrip that goes under the weapon's handguard. Has a weapon light."
 
 att.SortOrder = 97

@@ -1,5 +1,5 @@
 att.PrintName = ".45 ACP 50rnd Drum"
-att.Icon = Material("entities/acwatt_ammo_waw_thompson_drum.png")
+att.Icon = Material("entities/acwatt_ammo_waw_thompson_drum.png", "mips smooth")
 att.Description = "A 50 round drum magazine for the Thompson that had not been decommissioned yet, fitted to your Thompson thanks to modifications by a Marine Raiders armorer."
 att.Desc_Pros = {
 }

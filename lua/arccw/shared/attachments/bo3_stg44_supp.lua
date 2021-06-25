@@ -1,5 +1,5 @@
 att.PrintName = "StG-44SD Barrel"
-att.Icon = Material("entities/acwatt_supp_bo1_supp.png")
+att.Icon = Material("entities/acwatt_supp_bo1_supp.png", "mips smooth")
 att.Description = "Integrated Suppressor Barrel for the STG-44."
 att.Desc_Pros = {
 }

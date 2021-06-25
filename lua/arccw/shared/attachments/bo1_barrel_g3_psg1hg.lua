@@ -1,5 +1,5 @@
 att.PrintName = "PSG-1 Barrel (HK21)"
-att.Icon = Material("entities/acwatt_m16a2_hg.png")
+att.Icon = Material("entities/acwatt_m16a2_hg.png", "mips smooth")
 att.Description = [[
   Longer, heavier barel and extended handguard increase range and reduce imprecision as well as recoil, at the cost of sight time.
   A modification was also made to the receiver to remove full auto from this marksman's rifle.

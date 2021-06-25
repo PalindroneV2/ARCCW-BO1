@@ -1,5 +1,5 @@
 att.PrintName = "Pack-A-Punched"
-att.Icon = Material("entities/acwatt_ammo_papunch.png")
+att.Icon = Material("entities/acwatt_ammo_papunch.png", "mips smooth")
 att.Description = "Ray Gun now fires even more powerful balls of plasma.."
 att.Desc_Pros = {
     "+ Extended Magazine."

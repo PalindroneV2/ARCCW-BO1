@@ -1,5 +1,5 @@
 att.PrintName = "Pistol Start"
-att.Icon = Material("entities/acwatt_bo1_doom_ee.png")
+att.Icon = Material("entities/acwatt_bo1_doom_ee.png", "mips smooth")
 att.Description = "Rip and Tear until it is done."
 att.Desc_Pros = {
 }

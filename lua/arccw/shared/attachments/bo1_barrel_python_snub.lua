@@ -1,5 +1,5 @@
 att.PrintName = "Snub Nose Barrel"
-att.Icon = Material("entities/acwatt_m16a2_hg.png")
+att.Icon = Material("entities/acwatt_m16a2_hg.png", "mips smooth")
 att.Description = "Low profile barrel helps with conceal carry but makes the weapon's accuracy and recoil suffer."
 
 att.SortOrder = 104

@@ -1,5 +1,5 @@
 att.PrintName = "25rnd 10mm Auto"
-att.Icon = Material("entities/acwatt_bo1_dualmag.png")
+att.Icon = Material("entities/acwatt_bo1_dualmag.png", "mips smooth")
 att.Description = "10x25mm Automatic"
 att.Desc_Pros = {
 }

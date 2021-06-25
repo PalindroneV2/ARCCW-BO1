@@ -1,5 +1,5 @@
 att.PrintName = ".380 ACP 32rnd Mag"
-att.Icon = Material("entities/acwatt_bo1_ext_mag.png")
+att.Icon = Material("entities/acwatt_bo1_ext_mag.png", "mips smooth")
 att.Description = "A 32 round magazine for the MAC-11."
 att.Desc_Pros = {
 }

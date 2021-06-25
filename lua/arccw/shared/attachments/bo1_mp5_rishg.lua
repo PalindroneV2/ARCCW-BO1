@@ -1,5 +1,5 @@
 att.PrintName = "MP5 RIS Handguard"
-att.Icon = Material("entities/acwatt_m16a2_hg.png")
+att.Icon = Material("entities/acwatt_m16a2_hg.png", "mips smooth")
 att.Description = "Modern MP5 RIS handguard."
 
 att.SortOrder = 100

@@ -1,6 +1,6 @@
 
 att.PrintName = "Tan Finish"
-att.Icon = Material("entities/acwatt_m16_stock.png")
+att.Icon = Material("entities/acwatt_m16_stock.png", "mips smooth")
 att.Description = "Weapon now has a tan finish."
 att.Desc_Pros = {
     "+ Only cosmetic.",

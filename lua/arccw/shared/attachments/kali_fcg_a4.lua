@@ -1,5 +1,5 @@
 att.PrintName = "A4 S-1-3 FCG"
-att.Icon = Material("entities/acwatt_fcg_s13.png")
+att.Icon = Material("entities/acwatt_fcg_s13.png", "mips smooth")
 att.Description = "Flat top M16A4 receiver with a standard 3 round burst sear."
 att.Desc_Pros = {
     "+ Burst Fire mode allows for ammunition",

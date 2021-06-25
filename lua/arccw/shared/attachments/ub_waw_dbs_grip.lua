@@ -1,5 +1,5 @@
 att.PrintName = "Wide Grip (WAW)"
-att.Icon = Material("entities/acwatt_bo1_foregrip.png")
+att.Icon = Material("entities/acwatt_bo1_foregrip.png", "mips smooth")
 att.Description = "Wider grip that goes under the barrels. Allows for a minor buff to handling at a minor cost of movement speed."
 
 att.SortOrder = 97

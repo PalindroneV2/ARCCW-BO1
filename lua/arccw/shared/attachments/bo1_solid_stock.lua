@@ -1,5 +1,5 @@
 att.PrintName = "Medium Stock"
-att.Icon = Material("entities/acwatt_bo1_stock_icon.png")
+att.Icon = Material("entities/acwatt_bo1_stock_icon.png", "mips smooth")
 att.Description = "A sturdy solid stock that provides better recoil control at the cost of maneuverability."
 att.Desc_Pros = {
 }

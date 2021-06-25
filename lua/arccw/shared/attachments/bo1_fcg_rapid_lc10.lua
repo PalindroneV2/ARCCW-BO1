@@ -1,5 +1,5 @@
 att.PrintName = "Heavy Modification"
-att.Icon = Material("entities/acwatt_bo1_fcg_rapid.png")
+att.Icon = Material("entities/acwatt_bo1_fcg_rapid.png", "mips smooth")
 att.Description = "Modified furniture based on the Arctic Warfare and an improved sear and trigger mechanism make the MPL incredibly fast."
 att.Desc_Pros = {
 }

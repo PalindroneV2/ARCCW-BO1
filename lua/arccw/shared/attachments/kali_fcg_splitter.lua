@@ -1,5 +1,5 @@
 att.PrintName = "A4 Skullsplitter FCG"
-att.Icon = Material("entities/acwatt_fcg_s13.png")
+att.Icon = Material("entities/acwatt_fcg_s13.png", "mips smooth")
 att.Description = "Flat top M16A4 receiver with allowing for an absurd 6-round burst with a lightly longer delay between bursts."
 att.Desc_Pros = {
     "+ Burst Fire mode allows for ammunition",

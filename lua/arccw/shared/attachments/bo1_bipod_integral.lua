@@ -1,5 +1,5 @@
 att.PrintName = "Bipod (BO1)"
-att.Icon = Material("entities/acwatt_bo1_awm_bipod.png")
+att.Icon = Material("entities/acwatt_bo1_awm_bipod.png", "mips smooth")
 att.Description = "Bipod designed specifically for this weapon. More egronomic than regular bipods."
 
 att.SortOrder = 100

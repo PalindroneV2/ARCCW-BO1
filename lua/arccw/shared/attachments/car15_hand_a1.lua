@@ -1,5 +1,5 @@
 att.PrintName = "M607 Handguard"
-att.Icon = Material("entities/acwatt_m16a2_hg.png")
+att.Icon = Material("entities/acwatt_m16a2_hg.png", "mips smooth")
 att.Description = "Carbine length version of the A1 handguard that was used in the earliest CAR-15 models."
 
 att.SortOrder = 100

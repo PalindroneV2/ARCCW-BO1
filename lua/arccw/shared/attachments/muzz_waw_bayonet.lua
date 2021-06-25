@@ -1,5 +1,5 @@
 att.PrintName = "Bayonet (WAW)"
-att.Icon = Material("entities/acwatt_muzz_waw_bayonet.png")
+att.Icon = Material("entities/acwatt_muzz_waw_bayonet.png", "mips smooth")
 att.Description = "Bayonet fixed to the end of your weapon. Stab your enemies for massive melee damage."
 att.Desc_Pros = {
 }

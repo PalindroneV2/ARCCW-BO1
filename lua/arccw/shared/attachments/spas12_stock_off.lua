@@ -1,5 +1,5 @@
 att.PrintName = "SPAS-12 Stock Removed."
-att.Icon = Material("entities/acwatt_spas12_nostock.png")
+att.Icon = Material("entities/acwatt_spas12_nostock.png", "mips smooth")
 att.Description = "Revoming the SPAS-12's stock makes it lighter and easier to handle. However, reduced weight and lack of support hinders ability to control recoil."
 att.Desc_Pros = {
     "Allows the Optic attachment slot."

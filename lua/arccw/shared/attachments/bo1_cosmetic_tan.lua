@@ -1,5 +1,5 @@
 att.PrintName = "Tan Polymer"
-att.Icon = Material("entities/acwatt_m16_stock.png")
+att.Icon = Material("entities/acwatt_m16_stock.png", "mips smooth")
 att.Description = "Tan finish common for desert environments."
 att.Desc_Pros = {
     "+ Only cosmetic.",

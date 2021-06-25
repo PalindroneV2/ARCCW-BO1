@@ -1,5 +1,5 @@
 att.PrintName = "5.56mm NATO 100rnd C-Mag"
-att.Icon = Material("entities/acwatt_ammo_waw_thompson_drum.png")
+att.Icon = Material("entities/acwatt_ammo_waw_thompson_drum.png", "mips smooth")
 att.Description = "A 100 round 5.56mm NATO drum magazine."
 att.Desc_Pros = {
 }

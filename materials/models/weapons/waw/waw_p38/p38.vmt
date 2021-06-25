@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
 	$basetexture	"models\weapons\waw\waw_p38\p38"
-	$bumpmap	"models\weapons\waw\waw_p38\p38_n"
+	$bumpmap	"models\weapons\waw\normalmap"
 
 	$phong                      		1
 	$phongexponent                      "20"
@@ -10,7 +10,7 @@ VertexlitGeneric
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
 	
-	"$envmap" "env_cubemap"					
+	"$envmap" "env_cubemap"
 	"$envmaptint" "[ .05 .05 .05 ]"					
 	"$envmapFresnel" "1"
 	"$nocull" "1"

@@ -1,5 +1,5 @@
 att.PrintName = "OD Green Polymer"
-att.Icon = Material("entities/acwatt_m16_stock.png")
+att.Icon = Material("entities/acwatt_m16_stock.png", "mips smooth")
 att.Description = "Simple olive drab green finish."
 att.Desc_Pros = {
     "+ Only cosmetic.",

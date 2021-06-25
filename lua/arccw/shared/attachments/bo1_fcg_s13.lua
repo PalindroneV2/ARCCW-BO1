@@ -1,5 +1,5 @@
 att.PrintName = "A2 S-1-3 FCG"
-att.Icon = Material("entities/acwatt_fcg_s13.png")
+att.Icon = Material("entities/acwatt_fcg_s13.png", "mips smooth")
 att.Description = "Firemode conversion allowing for 3-round burst and semi-auto fire modes."
 att.Desc_Pros = {
     "+ Burst Fire mode allows for ammunition",

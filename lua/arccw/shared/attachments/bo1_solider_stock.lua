@@ -1,5 +1,5 @@
 att.PrintName = "Heavy Stock"
-att.Icon = Material("entities/acwatt_bo1_stock_icon.png")
+att.Icon = Material("entities/acwatt_bo1_stock_icon.png", "mips smooth")
 att.Description = "Sturdy, heavyweight stock provides even better recoil control at the cost of maneuverability."
 att.Desc_Pros = {
 }

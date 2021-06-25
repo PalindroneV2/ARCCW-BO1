@@ -1,5 +1,5 @@
 att.PrintName = "Soviet Suppressor (BO1)"
-att.Icon = Material("entities/acwatt_supp_bo1_supp.png")
+att.Icon = Material("entities/acwatt_supp_bo1_supp.png", "mips smooth")
 att.Description = "Soviet Suppressor that fits every weapon. Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report but slowing down muzzle velocity."
 att.Desc_Pros = {
 }

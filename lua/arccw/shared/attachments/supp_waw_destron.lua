@@ -1,5 +1,5 @@
 att.PrintName = "UNCLE Carbine Barrel (WAW)"
-att.Icon = Material("entities/acwatt_supp_bo1_supp.png")
+att.Icon = Material("entities/acwatt_supp_bo1_supp.png", "mips smooth")
 att.Description = "Longer barrel for the P38."
 att.Desc_Pros = {
 }

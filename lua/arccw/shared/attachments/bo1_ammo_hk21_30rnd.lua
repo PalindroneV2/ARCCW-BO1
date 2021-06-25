@@ -1,5 +1,5 @@
 att.PrintName = "HK 7.62mm 20rnd"
-att.Icon = Material("entities/acwatt_bo1_ext_mag.png")
+att.Icon = Material("entities/acwatt_bo1_ext_mag.png", "mips smooth")
 att.Description = "A standar HK platform 7.62mm NATO 20 round magazine. Makes the gun much lighter and increases reload times. Recoil increased due to reduced weight"
 att.Desc_Pros = {
 }

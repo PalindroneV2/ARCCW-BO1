@@ -1,5 +1,5 @@
 att.PrintName = "Extended Mags"
-att.Icon = Material("entities/acwatt_bo1_ext_mag.png")
+att.Icon = Material("entities/acwatt_bo1_ext_mag.png", "mips smooth")
 att.Description = "A larger magazine for your weapon."
 att.Desc_Pros = {
 }

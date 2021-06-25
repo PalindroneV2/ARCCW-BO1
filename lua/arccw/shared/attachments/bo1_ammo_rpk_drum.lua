@@ -1,5 +1,5 @@
 att.PrintName = "80rnd 5.45mm Drum"
-att.Icon = Material("entities/acwatt_bo1_ext_mag.png")
+att.Icon = Material("entities/acwatt_bo1_ext_mag.png", "mips smooth")
 att.Description = "Unweildy 80 round drum magazine for the RPK."
 att.Desc_Pros = {
 }

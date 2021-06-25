@@ -1,5 +1,5 @@
 att.PrintName = "Dong Foregrip (BO1)"
-att.Icon = Material("entities/acwatt_bo1_foregrip.png")
+att.Icon = Material("entities/acwatt_bo1_foregrip.png", "mips smooth")
 att.Description = "Wooden vertical dong foregrip that goes under the weapon's handguard. Exclusive to soviet weapons"
 
 att.SortOrder = 105
@@ -25,7 +25,7 @@ att.Mult_HipDispersion = 1.2
 att.Mult_SpeedMult = 0.95
 
 att.DrawFunc = function(wep, element)
-    if wep:GetFlags() == "donggrip" then
+    if table.HasValue(wep:GetWeaponFlags(), "donggrip") then
         element.Model:SetBodygroup(0,0)
     else
         element.Model:SetBodygroup(0,1)

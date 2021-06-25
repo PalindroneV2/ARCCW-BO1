@@ -1,5 +1,5 @@
 att.PrintName = "Commando Wrapped Sling"
-att.Icon = Material("entities/acwatt_sling_wrap.png")
+att.Icon = Material("entities/acwatt_sling_wrap.png", "mips smooth")
 att.Description = "Having no need for your sling, but not wanting to take it off, you wrap it around the body of your AR-15."
 
 att.SortOrder = 100

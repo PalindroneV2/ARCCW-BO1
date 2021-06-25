@@ -1,5 +1,5 @@
 att.PrintName = "Stamin-Up"
-att.Icon = Material("entities/acwatt_perk_staminup.png")
+att.Icon = Material("entities/acwatt_perk_staminup.png", "mips smooth")
 att.Description = "Negates all speed debuffs for base movement speed and ADS movement speed."
 att.Desc_Pros = {
 }

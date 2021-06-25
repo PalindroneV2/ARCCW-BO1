@@ -1,5 +1,5 @@
 att.PrintName = "M16A1 Heatshield"
-att.Icon = Material("entities/acwatt_m16a2_hg.png")
+att.Icon = Material("entities/acwatt_m16a2_hg.png", "mips smooth")
 att.Description = "The M16A1 heatshield handguard usually with an M203 attached underneath it, now without."
 
 att.SortOrder = 99

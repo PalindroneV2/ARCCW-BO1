@@ -1,5 +1,5 @@
 att.PrintName = "Gung-Ho EX"
-att.Icon = Material("entities/acwatt_tac_bo1_steadyaim.png")
+att.Icon = Material("entities/acwatt_tac_bo1_steadyaim.png", "mips smooth")
 att.Description = "Shoot while moving."
 att.Ignore = true
 att.Desc_Pros = {

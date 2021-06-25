@@ -1,5 +1,5 @@
 att.PrintName = "Short Barrel"
-att.Icon = Material("entities/acwatt_m16a2_hg.png")
+att.Icon = Material("entities/acwatt_m16a2_hg.png", "mips smooth")
 att.Description = "Cut down barrel. Bigger spread. Lower Range. Strange but more pellets shoot out."
 
 att.SortOrder = 105

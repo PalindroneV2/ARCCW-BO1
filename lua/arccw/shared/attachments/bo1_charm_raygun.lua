@@ -1,5 +1,5 @@
 att.PrintName = "Ray Gun"
-att.Icon = Material("entities/arccw_bo1_raygun.png")
+att.Icon = Material("entities/arccw_bo1_raygun.png", "mips smooth")
 att.Description = "A wonderful weapon. Everyone is obligated to revive you if you go down with this."
 
 att.Desc_Pros = {

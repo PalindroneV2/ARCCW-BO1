@@ -1,5 +1,5 @@
 att.PrintName = "Barrel Heatshield"
-att.Icon = Material("entities/acwatt_spas12_nostock.png")
+att.Icon = Material("entities/acwatt_spas12_nostock.png", "mips smooth")
 att.Description = "Heatshield on the barrel of the Ithaca M37 allows for better cooling of the weapon's barrel. Added weight makes the weapon slightly more controllable but also makes maneuverabilty lower."
 att.Desc_Pros = {
 }

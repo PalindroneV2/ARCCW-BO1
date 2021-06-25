@@ -1,5 +1,5 @@
 att.PrintName = "Sling (BO1)"
-att.Icon = Material("entities/acwatt_bo1_foregrip.png")
+att.Icon = Material("entities/acwatt_bo1_foregrip.png", "mips smooth")
 att.Description = "Sling attachment increases sight time."
 
 att.SortOrder = 101

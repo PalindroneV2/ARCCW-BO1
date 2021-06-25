@@ -1,5 +1,5 @@
 att.PrintName = "StG-44SD Handguard"
-att.Icon = Material("entities/acwatt_m16a2_hg.png")
+att.Icon = Material("entities/acwatt_m16a2_hg.png", "mips smooth")
 att.Description = "StG-44 with an HK round ribbed handguard without the suppressor."
 
 att.SortOrder = 99
