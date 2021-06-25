@@ -1,3 +1,24 @@
+--- RIFLE SHARED ---
+
+sound.Add( {
+    name = "ArcCW_WAW.Rifle_RingOff",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/waw_dist/waw_rifle.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Sniper_RingSt",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/waw_dist/waw_sniper_st.wav",
+    }
+} )
+
 --- Garand Main ---
 
 sound.Add( {
@@ -218,12 +239,12 @@ sound.Add( {
     }
 } )
 sound.Add( {
-    name = "ArcCW_WAW.Mosin_RingOff",
-    channel = CHAN_AUTO,
+    name = "ArcCW_WAW.Mosin_Mech",
+    channel = CHAN_USER_BASE + 6,
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_mosin/ringoff.wav",
+        "weapons/arccw/waw_mosin/mech.wav",
     }
 } )
 sound.Add( {

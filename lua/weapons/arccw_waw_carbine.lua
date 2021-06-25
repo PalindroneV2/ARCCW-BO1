@@ -106,7 +106,7 @@ SWEP.IronSightStruct = {
     Pos = Vector(-2.185, -9, 1.65),
     Ang = Angle(-0.75, 0.05, 0),
     Magnification = 1.25,
-    CrosshairInSights = true,
+    CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
@@ -119,7 +119,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.ActivePos = Vector(3, -3, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(10, 0, -2)
+SWEP.SprintPos = Vector(6, -3, -2)
 SWEP.SprintAng = Angle(-7.036, 45.016, 0)
 
 SWEP.CustomizePos = Vector(17, -3, -4.5)
@@ -421,7 +421,7 @@ SWEP.Animations = {
             {s = "ArcCW_WAW.Carbine_Futz", t = 54 / 30},
             {s = "ArcCW_WAW.Carbine_In", t = 70 / 30 },
             {s = "ArcCW_WAW.Carbine_Charge", t = 93 / 30 },
-            {s = "ArcCW_WAW.Carbine_Charge", t = 98 / 30 },
+            --{s = "ArcCW_WAW.Carbine_Charge", t = 98 / 30 },
         },
     },
     ["reload_ext"] = {
@@ -447,7 +447,7 @@ SWEP.Animations = {
             {s = "ArcCW_WAW.Carbine_Futz", t = 54 / 30},
             {s = "ArcCW_WAW.Carbine_In", t = 70 / 30 },
             {s = "ArcCW_WAW.Carbine_Charge", t = 93 / 30 },
-            {s = "ArcCW_WAW.Carbine_Charge", t = 98 / 30 },
+            --{s = "ArcCW_WAW.Carbine_Charge", t = 98 / 30 },
         },
     },
 }

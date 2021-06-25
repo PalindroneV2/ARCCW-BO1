@@ -121,7 +121,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.ActivePos = Vector(3, -3, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(10, 0, -2)
+SWEP.SprintPos = Vector(6, -3, -2)
 SWEP.SprintAng = Angle(-7.036, 45.016, 0)
 
 SWEP.CustomizePos = Vector(17, -3, -4.5)
@@ -398,9 +398,9 @@ SWEP.Animations = {
         LHIKOut = 1.75,
         SoundTable = {
             {s = "ArcCW_WAW.G43_Out", t = 24 / 35},
-            {s = "ArcCW_WAW.G43_In", t = 70 / 35},
-            --{s = "ArcCW_WAW.G43_Tap", t = 45 / 30},
-            {s = "ArcCW_WAW.G43_Back", t = 98 / 35},
+            {s = "ArcCW_WAW.G43_In", t = 60 / 35},
+            {s = "ArcCW_WAW.G43_Tap", t = 64 / 30},
+            {s = "ArcCW_WAW.G43_Back", t = 102 / 35},
             {s = "ArcCW_WAW.G43_Fwd", t = 106 / 35},
         },
     },

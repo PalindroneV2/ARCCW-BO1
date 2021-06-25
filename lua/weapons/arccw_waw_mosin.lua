@@ -76,11 +76,10 @@ SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
 SWEP.MagID = "mosin" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
-SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_WAW.Mosin_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
-SWEP.DistantShootSound = "ArcCW_WAW.Mosin_RingOff"
+SWEP.DistantShootSound = "ArcCW_WAW.Rifle_RingOff"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -342,6 +341,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
         Time = 7 / 30,
+        {s = "ArcCW_WAW.Mosin_Mech", t = 1 / 30},
     },
     ["cycle"] = {
         Source = {"cycle"},
@@ -357,6 +357,7 @@ SWEP.Animations = {
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
+        {s = "ArcCW_WAW.Mosin_Mech", t = 1 / 30},
     },
     ["cycle_ads"] = {
         Source = {"cycle_ads"},
@@ -415,6 +416,7 @@ SWEP.Animations = {
     ["fire_snipe"] = {
         Source = {"fire_snipe"},
         Time = 7 / 30,
+        {s = "ArcCW_WAW.Mosin_Mech", t = 1 / 30},
     },
     ["cycle_snipe"] = {
         Source = {"cycle_snipe"},
@@ -430,6 +432,7 @@ SWEP.Animations = {
     ["fire_iron_snipe"] = {
         Source = {"fire_snipe"},
         Time = 7 / 30,
+        {s = "ArcCW_WAW.Mosin_Mech", t = 1 / 30},
     },
     ["cycle_iron_snipe"] = {
         Source = {"cycle_snipe"},
@@ -441,14 +444,14 @@ SWEP.Animations = {
         Time = 60 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
-        MinProgress = 0.6,
+        MinProgress = 1,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 4,
         SoundTable = {
             {s = "ArcCW_WAW.Mosin_Up", t = 5 / 30},
             {s = "ArcCW_WAW.Mosin_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.Mosin_Bullet", t = 30 / 30},
+            {s = "ArcCW_WAW.Mosin_Bullet", t = 27 / 30},
         },
     },
     ["sgreload_insert"] = {
@@ -459,9 +462,9 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 4,
-        MinProgress = 1,
+        MinProgress = 3 / 30,
         SoundTable = {
-            {s = "ArcCW_WAW.Mosin_Bullet", t = 7 / 30},
+            {s = "ArcCW_WAW.Mosin_Bullet", t = 3 / 30},
         }
     },
     ["sgreload_finish"] = {

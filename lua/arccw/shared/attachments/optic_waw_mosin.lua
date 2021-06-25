@@ -38,3 +38,9 @@ att.HolosightMagnification = 4
 
 att.Mult_SightTime = 1.1
 att.Override_ShotgunReload = true
+
+att.Hook_GetDistantShootSound = function(wep, distancesound)
+    if distancesound == wep.DistantShootSound then
+        return "ArcCW_WAW.Sniper_RingSt"
+    end
+end

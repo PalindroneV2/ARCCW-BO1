@@ -698,7 +698,7 @@ SWEP.Hook_NameChange = function(wep, name)
         elseif k == 4 then
             if fcg == 0 then
                 prefix = "M"
-                model = "653"
+                model = "723"
                 alteration = ""
                 wep.Trivia_Desc = "M16A1 Carbine variant firing in full auto. Part of the Colt Commando family."
                 if ris == 1 then
