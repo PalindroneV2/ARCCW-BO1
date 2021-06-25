@@ -38,7 +38,7 @@ if SERVER then
             self:GetPhysicsObject():Wake()
         end
 
-        --util.SpriteTrail(self, 0, Color( 66 , 255 , 0 ), false, 3, 6, 0.5, 1, "effects/laser1.vmt")
+        util.SpriteTrail(self, 0, Color( 255 , 255 , 255 ), false, 6, 6, 0.5, 1 / (6 + 6) * 0.5, "particle/particle_smokegrenade")
 
         timer.Simple(0.1, function()
             if !IsValid(self) then return end
@@ -84,11 +84,6 @@ end
 
 function ENT:Draw()
     self:DrawModel()
-
-    cam.Start3D() -- Start the 3D function so we can draw onto the screen.
-        render.SetMaterial( Material("effects/blueflare1") ) -- Tell render what material we want, in this case the flash from the gravgun
-        render.DrawSprite( self:GetPos(), math.random(30, 45), math.random(30, 45), Color(255, 40, 40) ) -- Draw the sprite in the middle of the map, at 16x16 in it's original colour with full alpha.
-    cam.End3D()
     /*
     cam.Start3D() -- Start the 3D function so we can draw onto the screen.
         render.SetMaterial( Material("particles/bo1/raygun_ring.vmt") ) -- Tell render what material we want, in this case the flash from the gravgun
