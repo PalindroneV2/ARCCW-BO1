@@ -27,13 +27,13 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 52
-SWEP.DamageMin = 46 -- damage done at maximum range
-SWEP.Range = 120 -- in METRES
-SWEP.Penetration = 10
+SWEP.Damage = 42
+SWEP.DamageMin = 30 -- damage done at maximum range
+SWEP.Range = 90 -- in METRES
+SWEP.Penetration = 7
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 850 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 607 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
@@ -143,7 +143,7 @@ SWEP.AttachmentElements = {
                 Bone = "tag_weapon",
                 Scale = Vector(0.375, 0.375, 0.375),
                 Offset = {
-                    pos = Vector(5, 0.325, 0.8),
+                    pos = Vector(2.5, 0.325, 0.8),
                     ang = Angle(0, 90, 0),
                 }
             },
@@ -179,7 +179,7 @@ SWEP.Attachments = {
         Slot = {"optic", "optic_lp", "waw_aperture"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(5.5, 0, 1.95), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(2.5, 0, 1.95), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(4.5, 1.35, -5.4),
             wang = Angle(171, 179, 0)
