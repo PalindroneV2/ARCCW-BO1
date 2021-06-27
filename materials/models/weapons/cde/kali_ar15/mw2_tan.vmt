@@ -14,8 +14,4 @@ VertexlitGeneric
     $detail "models/weapons/bo1/tan"
     $detailblendmode 2
     "$detailblendfactor" "0.5"
-
-	"$envmap" "env_cubemap"					
-	"$envmaptint" "[ .02 .02 .02 ]"					
-	"$envmapFresnel" "0.2"
 }

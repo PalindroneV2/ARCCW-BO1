@@ -4,7 +4,7 @@ VertexlitGeneric
 	//$color2 "[0.5 0.5 0.5]"
 	$bumpmap	"models\weapons\bo1\bo1_m16\m16_mw2_n"
 	$detail "models\weapons\bo1\gunmetal"
-	$detailblendfactor 1.5
+	$detailblendfactor 1.3
 
 	$phong                      		1
 	$phongexponent                      "20"
@@ -13,7 +13,9 @@ VertexlitGeneric
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
 
-	"$envmap" "env_cubemap"					
-	"$envmaptint" "[ .02 .02 .02 ]"					
-	"$envmapFresnel" "0.2"
+//	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .01 .01 .01 ]"					
+	"$envmapFresnel" "1"
+
+	"$nocull" "1"
 }
