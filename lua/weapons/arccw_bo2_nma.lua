@@ -82,8 +82,8 @@ SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_BO2.357_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO2.M1911_Sil"
---SWEP.DistantShootSound = "weapons/arccw/bo1_python/python_ring_00.wav"
+SWEP.ShootSoundSilenced = "ArcCW_BO2.Pistol_Sil"
+SWEP.DistantShootSound = "ArcCW_BO1.Python_RingOff"
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
@@ -131,8 +131,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, 2.5, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(13, 2, -4.5)
-SWEP.CustomizeAng = Angle(15, 40, 0)
+SWEP.CustomizePos = Vector(17, 3, -2)
+SWEP.CustomizeAng = Angle(15, 40, 20)
 
 SWEP.HolsterPos = Vector(0, -4, -5)
 SWEP.HolsterAng = Angle(37.5, 0, 0)
@@ -238,21 +238,7 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.Makarov_Slide_Fwd", t = 17 / 35},
             {s = "ArcCW_BO1.Makarov_Out", t = 38 / 35},
             {s = "ArcCW_BO1.Makarov_In", t = 68 / 35},
-            {s = "ArcCW_BO2.M1911_SlideFwd", t = 83 / 35},
-        },
-    },
-    ["reload_empty"] = {
-        Source = "reload",
-        Time = 100 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
-        LHIK = true,
-        LHIKIn = 1,
-        LHIKOut = 0.75,
-        SoundTable = {
-            {s = "ArcCW_BO1.Makarov_Slide_Fwd", t = 17 / 35},
-            {s = "ArcCW_BO1.Makarov_Out", t = 38 / 35},
-            {s = "ArcCW_BO1.Makarov_In", t = 68 / 35},
-            {s = "ArcCW_BO2.M1911_SlideFwd", t = 83 / 35},
+            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 83 / 35},
         },
     },
     ["enter_sprint"] = {

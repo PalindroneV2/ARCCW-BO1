@@ -124,8 +124,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(13, 1, -2)
-SWEP.CustomizeAng = Angle(15, 40, 0)
+SWEP.CustomizePos = Vector(15, 2, -2)
+SWEP.CustomizeAng = Angle(15, 40, 20)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -245,15 +245,16 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local stock = wep.Attachments[4].Installed == "bo1_light_stock"
+    --local stock = wep.Attachments[4].Installed == "bo1_light_stock"
     local ext = wep.Attachments[6].Installed == "ammo_bo1_kiparis_ext"
 
-    if stock and !ext then
+    /*
+    if stock and (anim == "ready" or anim == "draw") then
         return anim .. "_stock"
-    elseif ext and !stock then
+    end
+    */
+    if ext and (anim == "reload" or anim == "reload_empty") then
         return anim .. "_ext"
-    elseif ext and stock then
-        return anim .. "_stock_ext"
     end
 end
 
@@ -301,19 +302,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.MAC11_Stock", t = 6 / 30},
+            --{s = "ArcCW_BO1.MAC11_Stock", t = 6 / 30},
             --{s = "ArcCW_BO1.MAC11_Stock", t = 12 / 30},
-        },
-    },
-    ["draw_stock_ext"] = {
-        Source = "first_draw_stock",
-        Time = 1,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
-        SoundTable = {
-            {s = "ArcCW_BO1.Kiparis_Futz", t = 6 / 30},
-            {s = "ArcCW_BO1.Kiparis_Bolt", t = 12 / 30},
         },
     },
     ["ready"] = {
@@ -330,8 +320,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.Kiparis_Futz", t = 12 / 30},
-            {s = "ArcCW_BO1.Kiparis_Bolt", t = 18 / 30},
+            --{s = "ArcCW_BO1.MAC11_Stock", t = 6 / 30},
+            --{s = "ArcCW_BO1.MAC11_Stock", t = 12 / 30},
         },
     },
     ["ready_stock_ext"] = {
@@ -341,8 +331,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.Kiparis_Futz", t = 12 / 30},
-            {s = "ArcCW_BO1.Kiparis_Bolt", t = 18 / 30},
+            --{s = "ArcCW_BO1.MAC11_Stock", t = 6 / 30},
+            --{s = "ArcCW_BO1.MAC11_Stock", t = 12 / 30},
         },
     },
     ["fire"] = {
@@ -399,35 +389,6 @@ SWEP.Animations = {
         },
     },
     ["reload_empty_ext"] = {
-        Source = "reload_empty_ext",
-        Time = 120 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-        SoundTable = {
-            {s = "ArcCW_BO1.Kiparis_MagOut", t = 16 / 35},
-            {s = "ArcCW_BO1.Kiparis_MagIn", t = 56 / 35},
-            {s = "ArcCW_BO1.Kiparis_Bolt", t = 75 / 35},
-        },
-    },
-    ["reload_stock_ext"] = {
-        Source = "reload_ext",
-        Time = 90 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-        SoundTable = {
-            {s = "ArcCW_BO1.Kiparis_MagOut", t = 15 / 35},
-            {s = "ArcCW_BO1.Kiparis_MagIn", t = 56 / 35}
-        },
-    },
-    ["reload_empty_stock_ext"] = {
         Source = "reload_empty_ext",
         Time = 120 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,

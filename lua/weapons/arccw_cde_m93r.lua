@@ -80,7 +80,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_BO2.B23R_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.Pistol_Sil"
-SWEP.DistantShootSound = "weapons/arccw/bo2_generic_pistol/ringoff_bo2.wav"
+SWEP.DistantShootSound = "ArcCW_BO2.PistolBurst_RingOff"
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
@@ -125,8 +125,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 SWEP.ActivePos = Vector(1, 3, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(12, 0, -2)
-SWEP.CustomizeAng = Angle(15, 40, 15)
+SWEP.CustomizePos = Vector(16, 1, -2)
+SWEP.CustomizeAng = Angle(15, 40, 20)
 
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)

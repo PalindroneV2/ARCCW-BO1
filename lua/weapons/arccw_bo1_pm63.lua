@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "PM-63 RAK"
-SWEP.Trivia_Class = "Submachine Gun"
+SWEP.Trivia_Class = "Machine Pistol"
 SWEP.Trivia_Desc = "The PM-63 is polish submachine gun chambered in the standard eastern bloc 9mm Makarov."
 SWEP.Trivia_Manufacturer = "FB Radom"
 SWEP.Trivia_Calibre = "9x18mm Makarov"
@@ -12,7 +12,7 @@ SWEP.Trivia_Mechanism = "Straight Blowback"
 SWEP.Trivia_Country = "Poland"
 SWEP.Trivia_Year = 1965
 
-SWEP.Slot = 2
+SWEP.Slot = 1
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_pm63.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_pm63.mdl"
@@ -123,8 +123,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(13, 1, -2)
-SWEP.CustomizeAng = Angle(15, 40, 0)
+SWEP.CustomizePos = Vector(16, 2, -2)
+SWEP.CustomizeAng = Angle(15, 40, 20)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)

@@ -146,7 +146,7 @@ SWEP.InBipodPos = Vector(-6, 0, -2)
 SWEP.SprintPos = Vector(0, 0, 0.5)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(15, 0, -2)
+SWEP.CustomizePos = Vector(15, 3, -2)
 SWEP.CustomizeAng = Angle(15, 40, 20)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
@@ -293,24 +293,22 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 41 / 30,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,s
+        Time = 35 / 30,
     },
     ["holster"] = {
         Source = "holster",
-        Time = 41 / 30,
+        Time = 24 / 30,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 41 / 30,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
+        Time = 2.2,
+        SoundTable = {
+            {s = "ArcCW_BO2.LMG_Back", t = 20 / 35},
+            {s = "ArcCW_BO2.LMG_Fwd", t = 30 / 35},
+        },
     },
     ["fire"] = {
         Source = {"fire"},
@@ -338,8 +336,8 @@ SWEP.Animations = {
         LHIKIn = nil,
         LHIKOut = 1,
         SoundTable = {
-            {s = "ArcCW_BO2.LMG_Back", t = 17 / 35},
-            {s = "ArcCW_BO2.LMG_Fwd", t = 20 / 35},
+            {s = "ArcCW_BO2.LMG_Back", t = 20 / 35},
+            {s = "ArcCW_BO2.LMG_Fwd", t = 30 / 35},
             {s = "ArcCW_BO2.LMG_Open", t = 57 / 35},
             {s = "ArcCW_BO2.LMG_BoxOff", t = 95 / 35},
             {s = "ArcCW_BO2.LMG_BoxOn", t = 130 / 35},
@@ -360,8 +358,8 @@ SWEP.Animations = {
         LHIKIn = nil,
         LHIKOut = 1,
         SoundTable = {
-            {s = "ArcCW_BO2.LMG_Back", t = 17 / 35},
-            {s = "ArcCW_BO2.LMG_Fwd", t = 20 / 35},
+            {s = "ArcCW_BO2.LMG_Back", t = 20 / 35},
+            {s = "ArcCW_BO2.LMG_Fwd", t = 30 / 35},
             {s = "ArcCW_BO2.LMG_Open", t = 57 / 35},
             {s = "ArcCW_BO2.LMG_BoxOff", t = 95 / 35},
             {s = "ArcCW_BO2.LMG_BoxOn", t = 130 / 35},

@@ -14,7 +14,7 @@ sound.Add({
 })
 sound.Add({
     name = "ArcCW_BO2.B23R_Fire",
-    channel = CHAN_STATIC,
+    channel = CHAN_WEAPON,
     level = 100,
     sound = "weapons/arccw/bo2_generic_pistol/fire_b23r.wav"
 })
@@ -27,6 +27,12 @@ sound.Add({
 sound.Add({
     name = "ArcCW_BO2.Pistol_RingOff",
     channel = CHAN_WEAPON,
+    level = 100,
+    sound = "weapons/arccw/bo2_generic_pistol/ringoff_bo2.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.PistolBurst_RingOff",
+    channel = CHAN_STATIC,
     level = 100,
     sound = "weapons/arccw/bo2_generic_pistol/ringoff_bo2.wav"
 })

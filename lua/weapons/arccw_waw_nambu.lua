@@ -110,8 +110,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(3, 3, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
 
-SWEP.CustomizePos = Vector(12, -12, 0)
-SWEP.CustomizeAng = Angle(5, 45, 20)
+SWEP.CustomizePos = Vector(12, -12, 3)
+SWEP.CustomizeAng = Angle(5, 45, 40)
 
 SWEP.BarrelLength = 12
 

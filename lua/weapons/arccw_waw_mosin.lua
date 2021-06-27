@@ -129,8 +129,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(10, 0, -2)
 SWEP.SprintAng = Angle(-7.036, 45.016, 0)
 
-SWEP.CustomizePos = Vector(15, -1, -4)
-SWEP.CustomizeAng = Angle(15, 40, 15)
+SWEP.CustomizePos = Vector(20, 0, 0)
+SWEP.CustomizeAng = Angle(15, 40, 25)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -281,6 +281,16 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local papcamo = wep.Attachments[6].Installed == "ammo_papunch"
 
     if papcamo then return vm:SetSkin(1) end
+
+    local snipe = wep.Attachments[9].Installed == "optic_waw_mosin"
+    if snipe then
+        wep.CustomizePos = Vector(20, 0, -3)
+        wep.CustomizeAng = Angle(15, 40, 25)
+    else
+        wep.CustomizePos = Vector(20, 0, 0)
+        wep.CustomizeAng = Angle(15, 40, 25)
+    end
+
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
