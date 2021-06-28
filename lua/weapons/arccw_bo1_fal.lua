@@ -12,7 +12,7 @@ SWEP.Trivia_Mechanism = "Short-stroke gas piston"
 SWEP.Trivia_Country = "Belgium"
 SWEP.Trivia_Year = 1953
 
-SWEP.Slot = 2
+SWEP.Slot = 3
 
 SWEP.UseHands = true
 

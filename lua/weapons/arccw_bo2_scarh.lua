@@ -18,7 +18,7 @@ SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "Belgium"
 SWEP.Trivia_Year = 2004
 
-SWEP.Slot = 2
+SWEP.Slot = 3
 
 SWEP.UseHands = true
 

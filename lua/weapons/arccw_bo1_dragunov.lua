@@ -12,7 +12,7 @@ SWEP.Trivia_Mechanism = "Gas Operated, Rotating Bolt"
 SWEP.Trivia_Country = "U.S.S.R."
 SWEP.Trivia_Year = 1963
 
-SWEP.Slot = 2
+SWEP.Slot = 3
 
 SWEP.UseHands = true
 

@@ -13,7 +13,7 @@ SWEP.Trivia_Mechanism = "Unknown"
 SWEP.Trivia_Country = "Nazi Germany"
 SWEP.Trivia_Year = 1943
 
-SWEP.Slot = 2
+SWEP.Slot = 5
 
 SWEP.UseHands = true
 
