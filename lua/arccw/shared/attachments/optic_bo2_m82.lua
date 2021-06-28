@@ -23,7 +23,7 @@ att.DroppedModel = "models/weapons/arccw/atts/bo2_m82scope.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.025, 15, -1.4),
+        Pos = Vector(-0.025, 12, -1.4),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
@@ -37,7 +37,7 @@ att.ScopeGlint = false
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/psg1_scope.png")
 att.HolosightNoFlare = true
-att.HolosightSize = 9.5
+att.HolosightSize = 15
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo2_m82scope_hsp.mdl"
 att.Colorable = true
