@@ -1,0 +1,20 @@
+VertexlitGeneric
+{
+	$basetexture	"models\weapons\mw3\mw3_glock\g18"
+	//$color2 "[0.5 0.5 0.5]"
+	$bumpmap	"models\weapons\mw3\mw3_glock\g18_n"
+	$detail "models\weapons\bo1\black"
+	$detailblendmode 0
+	$detailblendfactor 1
+
+	$phong                      		1
+	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	"$envmap" "env_cubemap"					
+	"$envmaptint" "[ .025 .025 .025 ]"					
+	"$envmapFresnel" "1"
+}

@@ -354,7 +354,7 @@ SWEP.Attachments = {
             wang = Angle(-175, -175, 0)
         },
     }, --12
-    {  
+    {
         Hidden = true,
         Slot = {"g11_optic"}, -- what kind of attachments can fit here, can be string or table
         VMScale = Vector(1, 1, 1),
