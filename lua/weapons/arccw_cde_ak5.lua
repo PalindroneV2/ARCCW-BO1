@@ -308,16 +308,6 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     if wep:GetBuff_Override("BO1_UBGL") then attthing = 1
     end
 
-    if anim == "enter_ubgl" then
-        if attthing == 1 then
-            return "in_glsetup"
-        end
-    elseif anim == "exit_ubgl" then
-        if attthing == 1 then
-            return "out_glsetup"
-        end
-    end
-
     if attthing == 1 and wep:GetInUBGL() then
         return anim .. "_glsetup"
     elseif attthing == 1 then
@@ -507,11 +497,11 @@ SWEP.Animations = {
 
     ["enter_ubgl"] = {
         Source = "glsetup_in",
-        Time = 0 / 30,
+        Time = 0.5,
     },
     ["exit_ubgl"] = {
         Source = "glsetup_out",
-        Time = 0 / 30
+        Time = 0.5,
     },
     ["idle_glsetup"] = {
         Source = "idle_glsetup",
