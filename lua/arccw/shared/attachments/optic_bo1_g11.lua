@@ -17,7 +17,7 @@ att.Model = "models/weapons/arccw/atts/bo1_g11_scope.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0.025, 8, -1.4),
+        Pos = Vector(0.025, 9, -1.4),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         IgnoreExtra = true
