@@ -81,16 +81,15 @@ SWEP.MagID = "g36" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.FirstShootSound = "ArcCW_CDE.Ak5_First"
-SWEP.ShootSound = "ArcCW_CDE.Ak5_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_CDE.Ak5_Sil"
-SWEP.DistantShootSound = "weapons/arccw/bocw_common/fire_dist.wav"
+SWEP.ShootSound = "ArcCW_MW3E.G36_Fire"
+SWEP.ShootSoundSilenced = "ArcCW_BO2.M27_Sil"
+--SWEP.DistantShootSound = "ArcCW_MW3E.Mech_D"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 90
 SWEP.ShellAngle = 90
-SWEP.ShellScale = 1.5
+SWEP.ShellScale = 1.25
 
 SWEP.MuzzleEffectAttachment = 4 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
@@ -489,18 +488,24 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_Charge", t = 22 / 35}
+            {s = "ArcCW_MW3E.G36_Charge", t = 22 / 35}
         },
     },
     ["fire"] = {
         Source = {"fire"},
         Time = 10 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+        },
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 10 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+        },
     },
     ["reload"] = {
         Source = "reload",
@@ -511,8 +516,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.75,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
-            {s = "ArcCW_BO2.AR_MagIn", t = 30 / 35},
+            {s = "ArcCW_MW3E.G36_MagOut", t = 11 / 35},
+            {s = "ArcCW_MW3E.G36_MagIn", t = 30 / 35},
         },
     },
     ["reload_empty"] = {
@@ -524,10 +529,9 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.75,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
-            {s = "ArcCW_BO2.AR_MagIn", t = 30 / 35},
-            {s = "ArcCW_BO2.AR_Charge", t = 55 / 35},
-            --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
+            {s = "ArcCW_MW3E.G36_MagOut", t = 11 / 35},
+            {s = "ArcCW_MW3E.G36_MagIn", t = 30 / 35},
+            {s = "ArcCW_MW3E.G36_Charge", t = 55 / 35},
         },
     },
     ["enter_sprint"] = {
@@ -568,18 +572,24 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_Charge", t = 22 / 35}
+            {s = "ArcCW_MW3E.G36_Charge", t = 22 / 35}
         },
     },
     ["fire_m203"] = {
         Source = {"fire_gl"},
         Time = 0.5,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+        },
     },
     ["fire_iron_m203"] = {
         Source = {"fire_ads_gl"},
         Time = 0.5,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+        },
     },
     ["reload_m203"] = {
         Source = "reload_gl",
@@ -590,8 +600,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.75,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
-            {s = "ArcCW_BO2.AR_MagIn", t = 30 / 35},
+            {s = "ArcCW_MW3E.G36_MagOut", t = 11 / 35},
+            {s = "ArcCW_MW3E.G36_MagIn", t = 30 / 35},
         },
     },
     ["reload_empty_m203"] = {
@@ -603,9 +613,9 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.75,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
-            {s = "ArcCW_BO2.AR_MagIn", t = 30 / 35},
-            {s = "ArcCW_BO2.AR_Charge", t = 55 / 35},
+            {s = "ArcCW_MW3E.G36_MagOut", t = 11 / 35},
+            {s = "ArcCW_MW3E.G36_MagIn", t = 30 / 35},
+            {s = "ArcCW_MW3E.G36_Charge", t = 55 / 35},
             --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
         },
     },
@@ -703,11 +713,17 @@ SWEP.Animations = {
         Source = {"fire_mg"},
         Time = 0.5,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+        },
     },
     ["fire_iron_mg"] = {
         Source = {"fire_ads_mg"},
         Time = 0.5,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+        },
     },
     ["reload_mg"] = {
         Source = "reload_mg",
@@ -718,8 +734,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 30 / 35},
-            {s = "ArcCW_BO2.AR_MagIn", t = 90 / 35},
+            {s = "ArcCW_MW3E.MG36_MagOut", t = 30 / 35},
+            {s = "ArcCW_MW3E.MG36_MagIn", t = 90 / 35},
         },
     },
     ["reload_empty_mg"] = {
@@ -731,9 +747,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 30 / 35},
-            {s = "ArcCW_BO2.AR_MagIn", t = 90 / 35},
-            {s = "ArcCW_BO2.AR_Charge", t = 120 / 35},
+            {s = "ArcCW_MW3E.MG36_MagOut", t = 30 / 35},
+            {s = "ArcCW_MW3E.MG36_MagIn", t = 90 / 35},
+            {s = "ArcCW_MW3E.MG36_Charge", t = 120 / 35},
             --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
         },
     },

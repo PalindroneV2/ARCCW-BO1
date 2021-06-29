@@ -285,3 +285,68 @@ sound.Add( {
         "weapons/arccw/cde_ak5/lfe.wav",
     }
 } )
+
+-- MW3E G36 -- 
+
+sound.Add( {
+    name = "ArcCW_MW3E.G36_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/mw3e_g36/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_MW3E.G36_Charge",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/mw3e_g36/charge.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.G36_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/mw3e_g36/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.G36_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/mw3e_g36/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.Mech_D",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/mw3e_mech/mech_d/1.wav",
+        "weapons/arccw/mw3e_mech/mech_d/2.wav",
+        "weapons/arccw/mw3e_mech/mech_d/3.wav",
+        "weapons/arccw/mw3e_mech/mech_d/4.wav",
+        "weapons/arccw/mw3e_mech/mech_d/5.wav",
+        "weapons/arccw/mw3e_mech/mech_d/6.wav",
+        "weapons/arccw/mw3e_mech/mech_d/7.wav",
+        "weapons/arccw/mw3e_mech/mech_d/8.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.G36_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/mw3e_g36/lift.wav",
+    }
+} )

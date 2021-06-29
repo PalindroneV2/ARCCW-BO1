@@ -304,19 +304,13 @@ end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
 
-    local attthing
-    if wep:GetBuff_Override("BO1_UBGL") then attthing = 1
-    end
+    local tube = wep:GetBuff_Override("BO1_UBGL")
 
-    if attthing == 1 and wep:GetInUBGL() then
+    if tube and wep:GetInUBGL() then
         return anim .. "_glsetup"
-    elseif attthing == 1 then
+    elseif tube then
         return anim .. "_m203"
     end
-end
-
-SWEP.Hook_GetCapacity = function(wep, cap)
-    --local pap = wep:GetBuff_Override("PackAPunch")
 end
 
 SWEP.Animations = {
