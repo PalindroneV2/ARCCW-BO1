@@ -416,7 +416,7 @@ SWEP.Hook_GetShootSound = function(wep, sound)
     if silbar then
         return "ArcCW_BO1.M16_Sil"
     elseif sndatt == "stg44_waw_sound" then
-        return "ArcCW_BO3.STG44_WAW"
+        return "ArcCW_WAW.STG44_Fire"
     elseif sndatt == "stg44_dods_sound" then
         return "ArcCW_BO3.STG44_DOD"
     elseif mp then
@@ -430,7 +430,7 @@ SWEP.Hook_GetDistantShootSound = function(wep, distancesound)
     local sndatt = wep.Attachments[14].Installed
 
     if sndatt == "stg44_waw_sound" then
-        return "weapons/arccw/waw_dist/waw_rifle.wav"
+        return "ArcCW_WAW.Rifle_RingOff"
     elseif sndatt == "stg44_dods_sound" then
         return ""
     elseif mp then
@@ -472,11 +472,17 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 6 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_WAW.STG44_Mech", t = 1 / 35},
+        },
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 6 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_WAW.STG44_Mech", t = 1 / 35},
+        },
     },
     ["reload"] = {
         Source = "reload",

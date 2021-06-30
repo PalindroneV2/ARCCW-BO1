@@ -105,7 +105,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.G43_Mech",
-    channel = CHAN_USER_BASE + 6,
+    channel = CHAN_USER_BASE,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -328,23 +328,13 @@ sound.Add( {
     }
 } )
 sound.Add( {
-    name = "ArcCW_BO3.STG44_WAW",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    level = 100,
-    --pitch = {95, 110},
-    sound = {
-        "weapons/arccw/bopack_stg44/stg44_waw_fire.wav",
-    }
-} )
-sound.Add( {
     name = "ArcCW_BO3.STG44_MagOut",
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bopack_stg44/fly_galil_mag_out.wav",
+        "weapons/arccw/bopack_stg44/out.wav",
     }
 } )
 sound.Add( {
@@ -354,7 +344,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bopack_stg44/fly_galil_mag_in.wav",
+        "weapons/arccw/bopack_stg44/in.wav",
     }
 } )
 sound.Add( {
@@ -364,7 +354,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bopack_stg44/fly_galil_bolt_back.wav",
+        "weapons/arccw/bopack_stg44/back.wav",
     }
 } )
 sound.Add( {
@@ -374,7 +364,67 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bopack_stg44/fly_galil_bolt_release.wav",
+        "weapons/arccw/bopack_stg44/fwd.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.STG44_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bopack_stg44/waw/fire_r.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.STG44_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bopack_stg44/waw/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.STG44_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bopack_stg44/waw/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.STG44_Futz",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bopack_stg44/waw/futz.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.STG44_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bopack_stg44/waw/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.STG44_Charge",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bopack_stg44/waw/charge.wav",
     }
 } )
 
@@ -461,6 +511,69 @@ sound.Add( {
     --pitch = {95, 110},
     sound = {
         "weapons/arccw/waw_rifgren/remove.wav",
+    }
+} )
+
+-- BAR Main --
+
+sound.Add( {
+    name = "ArcCW_WAW.BAR_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_bar/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.BAR_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_bar/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.BAR_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_bar/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.BAR_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_bar/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.BAR_Tap",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_bar/tap.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.BAR_Charge",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_bar/charge.wav",
     }
 } )
 
