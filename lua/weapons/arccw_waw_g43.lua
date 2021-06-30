@@ -313,6 +313,7 @@ SWEP.Animations = {
         LHIKIn = 0.25,
         LHIKOut = 0.25,
     },
+    /*
     ["bash"] = {
         Source = "swipe",
         Time = 30 / 30,
@@ -321,6 +322,7 @@ SWEP.Animations = {
         Source = "stab",
         Time = 30 / 30,
     },
+    */
     ["holster"] = {
         Source = "holster",
         Time = 0.5,

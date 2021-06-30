@@ -454,7 +454,6 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-        SoundTable = {
             {s = "ArcCW_CDE.Ak5_Out", t = 0.25},
             {s = "ArcCW_CDE.Ak5_In", t = 1.0}
         },
@@ -539,5 +538,4 @@ SWEP.Animations = {
         Source = "sprint_out_glsetup",
         Time = 10 / 30
     },
-}
 }
