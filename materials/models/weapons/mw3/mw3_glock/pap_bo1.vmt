@@ -23,4 +23,5 @@ VertexlitGeneric
 		}
 	}
 	
+	"$nocull" "1"
 }

@@ -158,12 +158,24 @@ SWEP.AttachmentElements = {
     },
     ["mount"] = {
         VMBodygroups = {
-            {ind = 2, bg = 1},
+            {ind = 2, bg = 2},
         },
     },
     ["cover"] = {
         VMBodygroups = {
             {ind = 6, bg = 1},
+        },
+    },
+    ["bo2_altirons"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 1},
+            {ind = 7, bg = 1},
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-2.825, 0, -0.1),
+            Ang = Angle(0.1, 0.025, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
         },
     },
     ["bo2_foregrip"] = {
@@ -266,7 +278,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {"optic"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic", "bo2_altirons"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(2.25, 0, 3.75), -- 4.6 offset that the attachment will be relative to the bone

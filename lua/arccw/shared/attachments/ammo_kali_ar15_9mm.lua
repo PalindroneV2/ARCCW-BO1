@@ -14,8 +14,8 @@ att.GivesFlags = {"m635"}
 att.SortOrder = 98
 
 att.Override_Trivia_Calibre = "9x19mm Parabellum"
-att.Mult_Damage = 0.60
-att.Mult_DamageMin = 0.60
+att.Mult_Damage = 0.80
+att.Mult_DamageMin = 0.80
 att.Mult_Penetration = 0.75
 att.Mult_Recoil = 0.5
 att.Mult_RecoilSide = 0.5

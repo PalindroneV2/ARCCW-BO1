@@ -1,13 +1,17 @@
 att.PrintName = "Extended Half Stock"
 att.Icon = Material("entities/acwatt_bo1_stock_icon.png", "mips smooth")
-att.Description = "Extended gen-1 collapsible stock that provides better recoil control at the cost of maneuverability."
+att.Description = [[
+    Extended gen-1 collapsible stock that provides better recoil control at the cost of maneuverability.
+
+    Rare. Ever only found on the obscure CAR-15 SMG configuration, the Colt Models 607a and 607b.
+]]
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
 }
 att.AutoStats = true
 
-att.SortOrder = 95
+att.SortOrder = 94
 att.Slot = {"kali_stock"}
 
 att.Mult_Recoil = 0.625

@@ -17,4 +17,6 @@ VertexlitGeneric
 	"$envmap" "env_cubemap"					
 	"$envmaptint" "[ .02 .02 .02 ]"					
 	"$envmapFresnel" "1"
+
+	"$nocull" "1"
 }

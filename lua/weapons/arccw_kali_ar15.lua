@@ -298,7 +298,7 @@ SWEP.AttachmentElements = {
     ["a4top"] = {
         AttPosMods = {
             [2] = {
-                vpos = Vector(3.5, 0, 3.56),
+                vpos = Vector(3.5, 0, 3.7),
                 /*SlideAmount = {
                     vmin = Vector(1.5, 0, 3.56),
                     vmax = Vector(3.5, 0, 3.56),
@@ -929,7 +929,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif stocka == "kali_stock_half_ext" then stock = 4
     elseif stocka == "kali_stock_wire" then stock = 5
     elseif stocka == "kali_stock_cm901_ext" then stock = 6
-    elseif stocka == "kali_stock_famas" then stock = 7
+    elseif stocka == "kali_stock_magpul_ext" then stock = 7
+    elseif stocka == "kali_stock_famas" then stock = 8
     end
 
     for k = stock, stock do
@@ -1118,7 +1119,8 @@ SWEP.Hook_GetCapacity = function(wep, cap)
     elseif stocka == "kali_stock_half_ext" then stock = 4
     elseif stocka == "kali_stock_wire" then stock = 5
     elseif stocka == "kali_stock_cm901_ext" then stock = 6
-    elseif stocka == "kali_stock_famas" then stock = 7
+    elseif stocka == "kali_stock_magpul_ext" then stock = 7
+    elseif stocka == "kali_stock_famas" then stock = 8
     end
 
     local length = 0

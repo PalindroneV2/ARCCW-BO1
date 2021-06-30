@@ -1,13 +1,18 @@
 att.PrintName = "FAMAS Stock"
 att.Icon = Material("entities/acwatt_bo1_stock_icon.png", "mips smooth")
-att.Description = "The rear of the FAMAS receiver has been turned into a stock that performs equally as well as a standard M16 full stock."
+att.Description = [[
+    The rear of the FAMAS receiver has been turned into a stock that performs equally as well as a standard M16 full stock.
+    
+    None of the previous functionality of this part of the FAMAS has carried over to its life as a stock, with most of its internals being stripped to keep it in line with the weight of a standard full stock.
+]]
+
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
 }
 att.AutoStats = true
 
-att.SortOrder = 94
+att.SortOrder = 93
 att.Slot = {"kali_stock"}
 
 att.Mult_Recoil = 0.50

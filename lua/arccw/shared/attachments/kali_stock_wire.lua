@@ -1,13 +1,17 @@
 att.PrintName = "Wire Stock"
 att.Icon = Material("entities/acwatt_bo1_stock_icon.png", "mips smooth")
-att.Description = "Extended wire stock which provides better handling and a small bonus to recoil control"
+att.Description = [[
+    Extended wire stock which provides better handling and a small bonus to recoil control. 
+    
+    Rare. Ever only found present in obscure "SMG" configurations and FPWs.
+]]
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
 }
 att.AutoStats = true
 
-att.SortOrder = 96
+att.SortOrder = 95
 att.Slot = {"kali_stock"}
 
 att.Mult_Recoil = 0.9
