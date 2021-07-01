@@ -1,0 +1,17 @@
+VertexlitGeneric
+{
+	"$basetexture" "models/weapons/bo3/bo3_c96/c96"
+	"$bumpmap" "models/weapons/bo3/bo3_c96/c96_n"
+	$selfillum 1
+	"$selfillummask" "models\weapons\pap\pap_bo2_crystal"
+
+	$detail	"models\weapons\pap\pap_bo2_crystal"
+	$detailscale 1
+	$detailblendmode 2
+	$detailblendfactor 2
+
+	$envmap                    		 env_cubemap
+	$envmaptint                 		"[.01 .01 .01]"
+	$normalmapalphaenvmapmask   	1
+	
+}
