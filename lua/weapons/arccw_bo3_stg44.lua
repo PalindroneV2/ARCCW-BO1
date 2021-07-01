@@ -129,7 +129,7 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(2, 0, -1)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(16, -4, -2)
+SWEP.CustomizePos = Vector(16, -3, -2)
 SWEP.CustomizeAng = Angle(15, 40, 20)
 
 SWEP.HolsterPos = Vector(8, -3, -1)
@@ -207,7 +207,7 @@ SWEP.Attachments = {
         InstalledEles = {"noch"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
-        MergeSlots = {15}
+        MergeSlots = {15,16},
     },
     { --2
         PrintName = "Muzzle",
@@ -328,6 +328,19 @@ SWEP.Attachments = {
         GivesFlags = {"nochit"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
+    },
+    {
+        Hidden = true, -- print name
+        Slot = {"bo3_mauserscope"}, -- what kind of attachments can fit here, can be string or table
+        Bone = "tag_weapon",
+        VMScale = Vector(1.25, 1.25, 1.25),
+        Offset = {
+            vpos = Vector(1, 0.225, 3.4), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+        },
+        CorrectivePos = Vector(0, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
+        GivesFlags = {"notmauser", "nochit"},
     },
 }
 

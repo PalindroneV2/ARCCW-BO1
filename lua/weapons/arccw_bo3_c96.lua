@@ -28,7 +28,7 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 30
+SWEP.Damage = 35
 SWEP.DamageMin = 25 -- damage done at maximum range
 SWEP.Range = 75 -- in METRES
 SWEP.Penetration = 6
@@ -160,7 +160,7 @@ SWEP.Attachments = {
         Slot = {"bo3_mauserscope"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(2, 0.05, 2.375),
+            vpos = Vector(2, 0, 2.375),
             vang = Angle(0, 0, 0),
             wpos = Vector(7.238, 1.9, -2.622),
             wang = Angle(90, 0, 0)

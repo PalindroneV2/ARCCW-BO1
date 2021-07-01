@@ -26,6 +26,12 @@ att.AdditionalSights = {
     },
 }
 
+att.DrawFunc = function(wep, element, wm)
+    if table.HasValue(wep:GetWeaponFlags(), "notmauser") then
+        element.Model:SetBodygroup(0,1)
+    end
+end
+
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/bo3_mauserscope.png", "mips smooth")
 att.HolosightNoFlare = true
