@@ -847,6 +847,71 @@ sound.Add({
     sound = "weapons/arccw/pap/fusion.wav"
 })
 
+-- SW Model 27 main --
+
+sound.Add( {
+    name = "ArcCW_WAW.357_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_357/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.357_Dist",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_357/dist.wav",
+    }
+} )
+/*
+sound.Add( {
+    name = "ArcCW_WAW.357_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_357/open.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.357_Close",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_357/close.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.357_Empty",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_357/empty.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.357_Load",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_357/load.wav",
+    }
+} )
+*/
+
 -- WUNDERWAFFE DG2 --
 
 sound.Add({
