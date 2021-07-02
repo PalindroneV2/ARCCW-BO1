@@ -134,7 +134,7 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, 0, -1)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(17, 2.5, -2)
+SWEP.CustomizePos = Vector(14, -0.2, -2.2)
 SWEP.CustomizeAng = Angle(15, 40, 20)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
@@ -208,7 +208,7 @@ SWEP.Attachments = {
         VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(6, 0.45, 1.25), -- offset that the attachment will be relative to the bone
+            vpos = Vector(6, 1, 2.25), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, -90),
         },
     }, --3
@@ -301,11 +301,17 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 7 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_WAW.MP40_Mech", t = 1 / 30},
+        },
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_WAW.MP40_Mech", t = 1 / 30},
+        },
     },
     ["reload"] = {
         Source = "reload",

@@ -159,7 +159,13 @@ SWEP.AttachmentElements = {
     ["r870_rails"] = {
         VMBodygroups = {
             {ind = 1, bg = 2}
-        }
+        },
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(12.5, -1.25, 3.25),
+                vang = Angle(0, 0, -60),
+            },
+        },
     },
     ["r870_wood"] = {
         VMSkin = 1
@@ -224,12 +230,11 @@ SWEP.Attachments = {
     {
         PrintName = "Tactical",
         Slot = {"tac", "bo1_tacslot"},
+        VMScale = Vector(0.95, 0.95, 0.95),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(19, 0.55, -0.8), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, -90),
-            wpos = Vector(28, 0.25, -6),
-            wang = Angle(-5, 0, 90)
+            vpos = Vector(6.25, -0.7, 2),
+            vang = Angle(0, 0, 90),
         },
     }, --5
     {

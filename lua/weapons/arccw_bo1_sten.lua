@@ -81,6 +81,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 --SWEP.FirstShootSound = "ArcCW_WAW.MP40_Fire"
 SWEP.ShootSound = "ArcCW_WAW.MP40_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.Pistol_Sil"
+SWEP.DistantShootSound = "weapons/arccw/waw_dist/waw_9mm.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_smg"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
@@ -123,7 +124,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 SWEP.ActivePos = Vector(0, -8, -4)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(0, -8, -4)
+SWEP.SprintPos = Vector(0, -8, -6)
 SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(10, -5, -7)
@@ -247,23 +248,26 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "draw",
-        Time = 1,
+        Time = 1.75,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
-        SoundTable = {
-            {s = "ArcCW_WaW.PPSh_Bolt", t = 19 / 30}
-        },
     },
     ["fire"] = {
         Source = {"fire"},
         Time = 7 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_WAW.MP40_Mech", t = 1 / 30},
+        },
     },
     ["fire_iron"] = {
         Source = {"fire"},
         Time = 7 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_WAW.MP40_Mech", t = 1 / 30},
+        },
     },
     ["reload"] = {
         Source = "reload",

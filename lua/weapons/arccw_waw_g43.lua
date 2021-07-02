@@ -71,7 +71,7 @@ SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 200
 
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
-SWEP.MagID = "m1garand" -- the magazine pool this gun draws from
+SWEP.MagID = "g43" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
@@ -226,7 +226,7 @@ SWEP.Attachments = {
         VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(15, -0.6, 1.25), -- offset that the attachment will be relative to the bone
+            vpos = Vector(12, -0.7, 0.5), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 90),
         },
     }, --5

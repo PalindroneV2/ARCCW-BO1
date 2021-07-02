@@ -83,7 +83,6 @@ SWEP.MagID = "ak74" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
---SWEP.FirstShootSound = "ArcCW_WAW.MP40_Fire"
 SWEP.ShootSound = "ArcCW_WAW.MP40_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.Pistol_Sil"
 SWEP.DistantShootSound = "weapons/arccw/waw_dist/waw_9mm.wav"
@@ -126,10 +125,10 @@ SWEP.HoldtypeSights = "smg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
-SWEP.ActivePos = Vector(2, -2, 0)
+SWEP.ActivePos = Vector(2, -4, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(6, 0, -2)
+SWEP.SprintPos = Vector(3, -4, -2)
 SWEP.SprintAng = Angle(-7.036, 45.016, 0)
 
 SWEP.CustomizePos = Vector(15, 0, -2)
@@ -147,7 +146,6 @@ SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
         TrueNameChange = "The Afterburner",
         NameChange = "The Afterburner",
     },
@@ -199,7 +197,7 @@ SWEP.Attachments = {
         VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(6, 0.45, 1.25), -- offset that the attachment will be relative to the bone
+            vpos = Vector(6, -3, 1.25), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, -90),
         },
     }, --3 --1
@@ -281,33 +279,42 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "draw",
-        Time = 1,
+        Time = 0.75,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
-        SoundTable = {
-            {s = "ArcCW_WaW.PPSh_Bolt", t = 19 / 30}
-        },
     },
     ["fire"] = {
         Source = {"fire"},
         Time = 7 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_WAW.MP40_Mech", t = 1 / 30},
+        },
     },
     ["fire_iron"] = {
         Source = {"fire"},
         Time = 7 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_WAW.MP40_Mech", t = 1 / 30},
+        },
     },
     ["fire_empty"] = {
         Source = {"fire_empty"},
         Time = 7 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_WAW.MP40_Mech", t = 1 / 30},
+        },
     },
     ["fire_iron_empty"] = {
         Source = {"fire_empty"},
         Time = 7 / 30,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_WAW.MP40_Mech", t = 1 / 30},
+        },
     },
     ["reload"] = {
         Source = "reload",
@@ -338,18 +345,4 @@ SWEP.Animations = {
             {s = "ArcCW_WAW.MP40_Bolt", t = 80 / 30},
         },
     },
-    /*
-    ["enter_sprint"] = {
-        Source = "Idle_to_sprint",
-        Time = 10 / 30
-    },
-    ["idle_sprint"] = {
-        Source = "Sprint_",
-        Time = 30 / 40
-    },
-    ["exit_sprint"] = {
-        Source = "Sprint_to_Idle",
-        Time = 10 / 30
-    },
-    */
 }

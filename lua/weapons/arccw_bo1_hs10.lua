@@ -168,8 +168,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(-3.5, 0, 2), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(12.5, 1.3, -7),
-            wang = Angle(172.5, 180, 0)
         },
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
@@ -194,8 +192,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(2.25, 0, -1.5),
             vang = Angle(0, 0, 0),
-            wpos = Vector(21.5, 0.75, -3.25),
-            wang = Angle(172.5, 0, 0)
         },
         SlideAmount = false
     }, --3
@@ -204,10 +200,8 @@ SWEP.Attachments = {
         Slot = {"tac", "bo1_tacslot"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(-2, 0.55, -0.5), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, -90),
-            wpos = Vector(28, 0.25, -6),
-            wang = Angle(-5, 0, 90)
+            vpos = Vector(3, 0, -1.5), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
         },
     }, --4
     { --6

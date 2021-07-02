@@ -183,7 +183,7 @@ SWEP.Attachments = {
         VMScale = Vector(1, 1, 1),
         WMScale = Vector(1, 1, 1),
         Offset = {
-            vpos = Vector(8, 0, 1.5),
+            vpos = Vector(5, -0.025, 1.2),
             vang = Angle(0, 0, 0),
         },
     },

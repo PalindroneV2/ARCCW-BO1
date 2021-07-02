@@ -162,7 +162,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 3, bg = 1}
         }
-    }
+    },
 }
 
 SWEP.ExtraSightDist = 2

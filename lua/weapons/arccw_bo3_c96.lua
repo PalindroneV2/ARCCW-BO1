@@ -160,7 +160,7 @@ SWEP.Attachments = {
         Slot = {"bo3_mauserscope"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(2, 0, 2.375),
+            vpos = Vector(1.4, 0.04125, 2.37),
             vang = Angle(0, 0, 0),
             wpos = Vector(7.238, 1.9, -2.622),
             wang = Angle(90, 0, 0)
@@ -193,10 +193,8 @@ SWEP.Attachments = {
         Slot = {"tac", "bo1_tacslot"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(4, 0, 0),
-            vang = Angle(0, 0, 0),
-            wpos = Vector(8.5, 2, -2.9),
-            wang = Angle(-5, -2, 177.5)
+            vpos = Vector(3, -0.5, 0),
+            vang = Angle(0, 0, 90),
         },
     },
     { --6

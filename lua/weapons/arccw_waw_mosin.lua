@@ -230,7 +230,7 @@ SWEP.Attachments = {
         VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(15, -0.6, 1.25), -- offset that the attachment will be relative to the bone
+            vpos = Vector(15, -0.6, 0.75), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 90),
         },
     }, --5

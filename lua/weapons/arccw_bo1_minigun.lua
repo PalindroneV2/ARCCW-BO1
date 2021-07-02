@@ -172,6 +172,10 @@ SWEP.Attachments = {
     }, --4
 }
 
+SWEP.RejectAttachments = {
+    ["tac_bo2_anpeq"] = true,
+}
+
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")

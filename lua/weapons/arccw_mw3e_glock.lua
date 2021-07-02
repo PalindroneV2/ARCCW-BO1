@@ -156,8 +156,9 @@ SWEP.Attachments = {
         DefaultAttName = "Iron Sights",
         Slot = {"optic_lp", "bo1_lp_optic"},
         Bone = "tag_weapon",
+        VMScale = Vector(1, 1, 1),
         Offset = {
-            vpos = Vector(1.5, 0.1, 1.75),
+            vpos = Vector(0.5, 0.1, 1.75),
             vang = Angle(0, 0, 0),
         },
         CorrectivePos = Vector(0, 0, 0.0125),
@@ -189,7 +190,7 @@ SWEP.Attachments = {
         Slot = {"tac", "bo1_tacslot"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(5.25, 0.1, -0.65),
+            vpos = Vector(3, 0.1, 0),
             vang = Angle(0, 0, 0),
         },
     },

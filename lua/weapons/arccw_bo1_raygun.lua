@@ -150,6 +150,7 @@ SWEP.AttachmentElements = {
 SWEP.ExtraSightDist = 2
 
 SWEP.RejectAttachments = {
+    ["tac_bo2_anpeq"] = true,
 }
 
 SWEP.Attachments = {

@@ -577,6 +577,79 @@ sound.Add( {
     }
 } )
 
+-- FG 42 main --
+
+sound.Add( {
+    name = "ArcCW_WAW.FG42_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_fg42/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.FG42_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_fg42/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.FG42_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_fg42/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.FG42_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_fg42/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.FG42_Futz",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_fg42/futz.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.FG42_Back",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_fg42/back.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.FG42_Fwd",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_fg42/fwd.wav",
+    }
+} )
+
 --- MG42 Main ---
 
 sound.Add( {
@@ -639,7 +712,17 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_mp40/mp40_fire.wav",
+        "weapons/arccw/waw_mp40/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.MP40_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 0.5,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_mp40/mech.wav",
     }
 } )
 sound.Add( {
@@ -721,11 +804,31 @@ sound.Add( {
 sound.Add( {
     name = "ArcCW_WAW.PPSh_Fire",
     channel = CHAN_STATIC,
+    volume = 1,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_ppsh/fire_mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.PPSh_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_ppsh/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.PPSh_Dist",
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_ppsh/ppsh_fire1.wav",
+        "weapons/arccw/waw_dist/waw_ppsh_dist.wav",
     }
 } )
 sound.Add( {
@@ -869,48 +972,6 @@ sound.Add( {
         "weapons/arccw/waw_357/dist.wav",
     }
 } )
-/*
-sound.Add( {
-    name = "ArcCW_WAW.357_Open",
-    channel = CHAN_ITEM,
-    volume = 1.0,
-    level = 100,
-    ----pitch = {95, 110},
-    sound = {
-        "weapons/arccw/waw_357/open.wav",
-    }
-} )
-sound.Add( {
-    name = "ArcCW_WAW.357_Close",
-    channel = CHAN_ITEM,
-    volume = 1.0,
-    level = 100,
-    ----pitch = {95, 110},
-    sound = {
-        "weapons/arccw/waw_357/close.wav",
-    }
-} )
-sound.Add( {
-    name = "ArcCW_WAW.357_Empty",
-    channel = CHAN_ITEM,
-    volume = 1.0,
-    level = 100,
-    ----pitch = {95, 110},
-    sound = {
-        "weapons/arccw/waw_357/empty.wav",
-    }
-} )
-sound.Add( {
-    name = "ArcCW_WAW.357_Load",
-    channel = CHAN_ITEM,
-    volume = 1.0,
-    level = 100,
-    ----pitch = {95, 110},
-    sound = {
-        "weapons/arccw/waw_357/load.wav",
-    }
-} )
-*/
 
 -- WUNDERWAFFE DG2 --
 
