@@ -319,7 +319,22 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO2.Pistol_MagOut", t = 0.25},
             {s = "ArcCW_BO2.Pistol_MagIn", t = 1},
-            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 1.5}
+            {s = "ArcCW_BO2.Pistol_SlideBack", t = 1.35},
+            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 1.45}
+        },
+    },
+    ["reload_empty_scope"] = {
+        Source = "reload_empty_scope",
+        Time = 2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+        SoundTable = {
+            {s = "ArcCW_BO2.Pistol_MagOut", t = 0.25},
+            {s = "ArcCW_BO2.Pistol_MagIn", t = 1},
+            {s = "ArcCW_BO2.Pistol_SlideBack", t = 1.35},
+            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 1.45}
         },
     },
     ["enter_sprint"] = {

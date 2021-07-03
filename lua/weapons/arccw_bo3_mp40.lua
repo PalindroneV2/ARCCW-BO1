@@ -92,7 +92,7 @@ SWEP.DistantShootSound = "weapons/arccw/waw_dist/waw_9mm.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_smg"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
-SWEP.ShellScale = 1.25
+SWEP.ShellScale = 1.5
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on

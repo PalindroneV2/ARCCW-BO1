@@ -80,9 +80,9 @@ SWEP.MagID = "stg44" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO3.STG44_COD4"
-SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
-SWEP.DistantShootSound = {"weapons/arccw/bo1_aug/ringoff_f.wav", "weapons/arccw/bo1_aug/ringoff_r.wav"}
+SWEP.ShootSound = "ArcCW_WAW.STG44_Fire"
+SWEP.ShootSoundSilenced = "ArcCW_WAW.G43_Sil"
+SWEP.DistantShootSound = "ArcCW_WAW.Rifle_RingOff"
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_762nato.mdl"
@@ -311,7 +311,8 @@ SWEP.Attachments = {
         PrintName = "Sound",
         Slot = "sound_mp44",
         FreeSlot = true,
-        DefaultAttName = "COD4 Sound",
+        DefaultAttName = "WAW Sound",
+        DefaultAttIcon = Material("entities/acwatt_waw_logo.png", "smooth mips"),
         ExcludeFlags = {"smgsound"},
     },
     {--15
@@ -376,7 +377,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local sdhg = wep.Attachments[3].Installed == "bo3_stg44_sdhg"
     local barr = carb or supp or sdhg
     local papcamo = wep.Attachments[11].Installed == "ammo_papunch"
-    local waw = wep.Attachments[14].Installed == "stg44_waw_sound"
+    local bo1 = wep.Attachments[14].Installed == "stg44_bo1_sound"
     local dods = wep.Attachments[14].Installed == "stg44_dods_sound"
 
     if sigh and !barr then
@@ -402,12 +403,14 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(2, 2)
     end
 
-    if papcamo and waw then
+    if papcamo then
+        if bo1 then
+            return vm:SetSkin(2)
+        end
+        if dods then
+            return vm:SetSkin(3)
+        end
         return vm:SetSkin(1)
-    elseif papcamo and dods then
-        return vm:SetSkin(2)
-    elseif papcamo and !waw then
-        return vm:SetSkin(3)
     end
 end
 
@@ -428,8 +431,8 @@ SWEP.Hook_GetShootSound = function(wep, sound)
 
     if silbar then
         return "ArcCW_BO1.M16_Sil"
-    elseif sndatt == "stg44_waw_sound" then
-        return "ArcCW_WAW.STG44_Fire"
+    elseif sndatt == "stg44_bo1_sound" then
+        return "ArcCW_BO1.HK21_Fire"
     elseif sndatt == "stg44_dods_sound" then
         return "ArcCW_BO3.STG44_DOD"
     elseif mp then
@@ -442,8 +445,8 @@ SWEP.Hook_GetDistantShootSound = function(wep, distancesound)
     local mp = wep.Attachments[10].Installed == "ammo_stg44_9mm"
     local sndatt = wep.Attachments[14].Installed
 
-    if sndatt == "stg44_waw_sound" then
-        return "ArcCW_WAW.Rifle_RingOff"
+    if sndatt == "stg44_bo1_sound" then
+        return "ArcCW_BO1.HK21_Dist"
     elseif sndatt == "stg44_dods_sound" then
         return ""
     elseif mp then
@@ -477,8 +480,9 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO3.STG44_BoltBack", t = 0.1},
-            {s = "ArcCW_BO3.STG44_BoltFwd", t = 0.75},
+            {s = "ArcCW_WAW.STG44_Charge", t = 0.2},
+            --{s = "ArcCW_BO3.STG44_BoltBack", t = 0.1},
+            --{s = "ArcCW_BO3.STG44_BoltFwd", t = 0.75},
         },
     },
     ["fire"] = {
@@ -506,8 +510,9 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO3.STG44_MagOut", t = 0.2},
-            {s = "ArcCW_BO3.STG44_MagIn", t = 1},
+            {s = "ArcCW_WAW.STG44_MagOut", t = 0.2},
+            {s = "ArcCW_WAW.STG44_Futz", t = 0.9},
+            {s = "ArcCW_WAW.STG44_MagIn", t = 1},
         },
     },
     ["reload_empty"] = {
@@ -519,10 +524,16 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
+            {s = "ArcCW_WAW.STG44_MagOut", t = 0.2},
+            {s = "ArcCW_WAW.STG44_Futz", t = 0.9},
+            {s = "ArcCW_WAW.STG44_MagIn", t = 1},
+            {s = "ArcCW_WAW.STG44_Charge", t = 1.6},
+            /*
             {s = "ArcCW_BO3.STG44_MagOut", t = 0.2},
             {s = "ArcCW_BO3.STG44_MagIn", t = 1},
             {s = "ArcCW_BO3.STG44_BoltBack", t = 1.6},
             {s = "ArcCW_BO3.STG44_BoltFwd", t = 1.9},
+            */
         },
     },
     ["enter_sprint"] = {

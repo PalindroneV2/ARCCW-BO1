@@ -22,7 +22,7 @@ SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     scale = 1.1,
     pos        =    Vector(-4.5, 4.5, -4.9),
-    ang        =    Angle(-10, 1.5, 180),
+    ang        =    Angle(-10, 3, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
@@ -313,7 +313,7 @@ SWEP.Attachments = {
         VMScale = Vector(1, 1, 1),
         WMScale = Vector(1, 1, 1),
         Offset = {
-            vpos = Vector(7, 0, 0.25), -- offset that the attachment will be relative to the bone
+            vpos = Vector(8.5, 0, 0.75), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(11, 0.8, -2.5),
             wang = Angle(172.5, -180, 0),

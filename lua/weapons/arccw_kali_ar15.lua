@@ -192,7 +192,11 @@ SWEP.AttachmentElements = {
             },
             [6] = {
                 vpos = Vector(8, 0, 1.75),
-            }
+            },
+            [8] = {
+                vpos = Vector(11, 0.85, 2),
+                vang = Angle(0, 0, -90),
+            },
         },
     },
     ["kali_barrel_xm"] = {
@@ -200,7 +204,11 @@ SWEP.AttachmentElements = {
         AttPosMods = {
             [3] = {
                 vpos = Vector(16.75, 0, 2.25),
-            }
+            },
+            [8] = {
+                vpos = Vector(11, 0.85, 2.25),
+                vang = Angle(0, 0, -90),
+            },
         },
     },
     ["kali_barrel_xm_m203"] = {
@@ -221,7 +229,11 @@ SWEP.AttachmentElements = {
             },
             [6] = {
                 vpos = Vector(7.65, 0, 1.75),
-            }
+            },
+            [8] = {
+                vpos = Vector(11, 0.85, 2.25),
+                vang = Angle(0, 0, -90),
+            },
         },
     },
     ["kali_barrel_727c"] = {
@@ -231,21 +243,33 @@ SWEP.AttachmentElements = {
             },
             [6] = {
                 vpos = Vector(7.65, 0, 1.75),
-            }
+            },
+            [8] = {
+                vpos = Vector(11, 0.85, 2.25),
+                vang = Angle(0, 0, -90),
+            },
         },
     },
     ["kali_barrel_a4"] = {
         AttPosMods = {
             [6] = {
                 vpos = Vector(11, 0, 1.75),
-            }
+            },
+            [8] = {
+                vpos = Vector(16, 0.75, 2.5),
+                vang = Angle(0, 0, -90),
+            },
         },
     },
     ["kali_barrel_a2"] = {
         AttPosMods = {
             [6] = {
                 vpos = Vector(11, 0, 1.575),
-            }
+            },
+            [8] = {
+                vpos = Vector(16, 0.85, 2.25),
+                vang = Angle(0, 0, -90),
+            },
         },
     },
     ["kali_barrel_727"] = {
@@ -255,7 +279,11 @@ SWEP.AttachmentElements = {
             },
             [6] = {
                 vpos = Vector(7.65, 0, 1.75),
-            }
+            },
+            [8] = {
+                vpos = Vector(11, 0.85, 2.25),
+                vang = Angle(0, 0, -90),
+            },
         },
     },
     ["kali_barrel_famas"] = {
@@ -272,7 +300,11 @@ SWEP.AttachmentElements = {
             },
             [6] = {
                 vpos = Vector(9.1, 0, 1.55),
-            }
+            },
+            [8] = {
+                vpos = Vector(11, 0.85, 2.65),
+                vang = Angle(0, 0, -90),
+            },
         },
     },
     ["kali_barrel_ris"] = {
@@ -282,7 +314,11 @@ SWEP.AttachmentElements = {
             },
             [6] = {
                 vpos = Vector(7.65, 0, 1.75),
-            }
+            },
+            [8] = {
+                vpos = Vector(11, 0.75, 2.5),
+                vang = Angle(0, 0, -90),
+            },
         },
     },
     ["kali_barrel_risc"] = {
@@ -292,7 +328,11 @@ SWEP.AttachmentElements = {
             },
             [6] = {
                 vpos = Vector(7.65, 0, 1.75),
-            }
+            },
+            [8] = {
+                vpos = Vector(11, 0.75, 2.5),
+                vang = Angle(0, 0, -90),
+            },
         },
     },
     ["a4top"] = {
@@ -397,10 +437,8 @@ SWEP.Attachments = {
         VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(12, 0.825, 2.25), -- offset that the attachment will be relative to the bone
+            vpos = Vector(16, 0.75, 2),
             vang = Angle(0, 0, -90),
-            wpos = Vector(15, 0.3, -5.25),
-            wang = Angle(-10, 0, 90)
         },
     }, --8
     {

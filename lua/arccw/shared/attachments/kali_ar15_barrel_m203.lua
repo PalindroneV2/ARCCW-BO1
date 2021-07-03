@@ -1,4 +1,4 @@
-att.PrintName = "M203 Heatshield 20 in. Barrel"
+att.PrintName = "Heatshield 20 in. Barrel"
 att.Icon = Material("entities/acwatt_m16a2_hg.png", "mips smooth")
 att.Description = "Standard 20 inch barrel with a heatshield for an M203 grenade launcher.."
 

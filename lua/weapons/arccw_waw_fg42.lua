@@ -174,7 +174,7 @@ SWEP.AttachmentElements = {
             Pos = Vector(-3.512, -3, 1.75),
             Ang = Angle(0.25, 0.025, 0),
             Magnification = 1.25,
-            CrosshairInSights = true,
+            CrosshairInSights = false,
         },
     },
 }
