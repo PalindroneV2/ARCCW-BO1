@@ -9,7 +9,7 @@ att.AutoStats = true
 att.Slot = {"bo1_mag"}
 
 att.ExcludeFlags = {"mp5k", "ubanims"}
-att.GivesFlags = {"bo1_dual_mag"}
+att.GivesFlags = {"bo1_dual_mag", "bo2_fastmags"}
 att.BO1_FastMag = true
 
 att.SortOrder = 100

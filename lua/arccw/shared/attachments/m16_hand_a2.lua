@@ -12,3 +12,5 @@ att.Desc_Cons = {
     "- Aesthetics provide no real performance upgrades."
 }
 att.Slot = "m16_hand"
+
+att.GivesFlags = {"a2_hand"}

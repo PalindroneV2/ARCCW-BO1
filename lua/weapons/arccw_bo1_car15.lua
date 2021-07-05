@@ -191,6 +191,9 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 4, bg = 1},
         },
+        [9] = {
+            vpos = Vector(12, 0.5, 2.25),
+        },
     },
     ["ris_hand"] = {
         VMBodygroups = {
@@ -210,6 +213,11 @@ SWEP.AttachmentElements = {
     ["heat_hand"] = {
         VMBodygroups = {
             {ind = 4, bg = 2}
+        },
+        AttPosMods = {
+            [9] = {
+                vpos = Vector(12, 0.6, 2.25),
+            },
         },
     },
 }
@@ -293,7 +301,7 @@ SWEP.Attachments = {
     }, --8
     {
         PrintName = "Tactical",
-        Slot = {"tac", "bo1_tacslot"},
+        Slot = {"bo1_tacprimary"},
         VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {

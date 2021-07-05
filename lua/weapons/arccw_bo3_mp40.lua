@@ -27,9 +27,9 @@ SWEP.ViewModel = "models/weapons/arccw/c_bo3_mp40.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo3_mp40.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1.1,
-    pos        =    Vector(-9, 3, -4),
-    ang        =    Angle(-7, 0, 180),
+    scale = 0.9,
+    pos        =    Vector(-8, 3, -4.5),
+    ang        =    Angle(-7, -3, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
@@ -204,11 +204,11 @@ SWEP.Attachments = {
     }, --2
     {
         PrintName = "Tactical",
-        Slot = "bo1_tacslot",
+        Slot = "bo1_tacpistol",
         VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(6, 1, 2.25), -- offset that the attachment will be relative to the bone
+            vpos = Vector(8, 0.75, 2.125), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, -90),
         },
     }, --3

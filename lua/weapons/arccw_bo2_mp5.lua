@@ -165,37 +165,39 @@ SWEP.AttachmentElements = {
     },
     ["mp5sd"] = {
         VMBodygroups = {
-            {ind = 2, bg = 1},
             {ind = 5, bg = 1},
         },
         AttPosMods = {
+            [4] = {
+                Vector(6, 0, 0.15)
+            },
             [6] = {
-                vpos = Vector(5, 0, 0),
-            }
+                Vector(6, 1.1, 2),
+            },
         },
-        ExcludeFlags = {"ubrail", "sdhg", "rishg"},
+        ExcludeFlags = {"ubrail"},
     },
     ["sdhg"] = {
-        VMBodygroups = {
-            {ind = 2, bg = 1},
-        },
         AttPosMods = {
+            [4] = {
+                Vector(6, 0, 0.15)
+            },
             [6] = {
-                vpos = Vector(5, 0, 0),
-            }
+                Vector(6, 1.1, 2)
+            },
         },
-        ExcludeFlags = {"ubrail", "mp5sd", "rishg"},
+        ExcludeFlags = {"ubrail"},
     },
     ["rishg"] = {
-        VMBodygroups = {
-            {ind = 2, bg = 2},
-        },
         AttPosMods = {
+            [4] = {
+                Vector(6, 0, 0.15)
+            },
             [6] = {
-                vpos = Vector(5, 0, 0),
-            }
+                Vector(6, 1.1, 2)
+            },
         },
-        ExcludeFlags = {"ubrail", "sdhg", "mp5sd"},
+        ExcludeFlags = {"ubrail"},
     },
     ["ubrail"] = {
         VMElements = {
@@ -318,11 +320,11 @@ SWEP.Attachments = {
     },
     { --6
         PrintName = "Tactical",
-        Slot = {"tac", "bo1_tacslot"},
+        Slot = {"bo1_tacprimary"},
         VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(6, 0.65, 1.25), -- offset that the attachment will be relative to the bone
+            vpos = Vector(6, 0.75, 1), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, -90),
             wpos = Vector(16, 0.4, -6),
             wang = Angle(-7.5, 0, 85)
@@ -401,7 +403,6 @@ end
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[10].Installed == "ammo_papunch"
-    local mp5k = wep.Attachments[2].Installed == "bo1_mp5_mp5k"
     local optic = wep.Attachments[1].Installed
 
     local stock = 0
@@ -417,11 +418,19 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         end
     end
 
+    local hand = 0
+    if wep.Attachments[2].Installed == "supp_bo1_mp5" then hand = 1
+    elseif wep.Attachments[2].Installed == "bo1_mp5_sdhg" then hand = 1
+    elseif wep.Attachments[2].Installed == "bo1_mp5_rishg" then hand = 2
+    elseif wep.Attachments[2].Installed == "bo1_mp5_mp5k" then hand = 3
+    end
+
+    vm:SetBodygroup(2,hand)
+
     if optic then vm:SetBodygroup(3,1) end
-    if mp5k then
+    if hand == 3 then
         vm:SetBodygroup(0,1)
         vm:SetBodygroup(1,2)
-        vm:SetBodygroup(2,3)
         vm:SetBodygroup(3, 2)
         if optic then vm:SetBodygroup(3,3) end
     end

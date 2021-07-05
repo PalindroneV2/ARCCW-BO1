@@ -205,7 +205,7 @@ SWEP.Attachments = {
     }, --1
     {
         PrintName = "Tactical",
-        Slot = "bo1_tacslot",
+        Slot = "bo1_steadyaim",
         Bone = "tag_weapon",
         ExcludeFlags = {"doom_ee"},
     }, --2

@@ -211,11 +211,11 @@ SWEP.Attachments = {
     }, --3
     {
         PrintName = "Tactical",
-        Slot = {"tac", "bo1_tacslot"},
+        Slot = {"bo1_tacall"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(19, 0.55, -0.8), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, -90),
+            vpos = Vector(19, 0, -1), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
             wpos = Vector(28, 0.25, -6),
             wang = Angle(-5, 0, 90)
         },

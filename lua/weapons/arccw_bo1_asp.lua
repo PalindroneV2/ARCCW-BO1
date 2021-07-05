@@ -209,12 +209,12 @@ SWEP.Attachments = {
     },
     { --3
         PrintName = "Tactical",
-        Slot = {"tac", "bo1_tacslot"},
+        Slot = {"bo1_tacpistol"},
         Bone = "tag_weapon",
         VMScale = Vector(0.75, 0.75, 0.75),
         WMScale = Vector(0.75, 0.75, 0.75),
         Offset = {
-            vpos = Vector(2.5, 0, 0),
+            vpos = Vector(2.5, 0, 0.25),
             vang = Angle(0, 0, 0),
             wpos = Vector(7.9, 2, -3.2),
             wang = Angle(-5, -2, 177.5)
@@ -311,8 +311,8 @@ SWEP.Animations = {
         LHIKIn = 1,
         LHIKOut = 0.75,
         SoundTable = {
-            {s = "ArcCW_BO1.ASP_Out", t = 16 / 30},
-            {s = "ArcCW_BO1.ASP_In", t = 29 / 30}
+            {s = "ArcCW_BO1.ASP_Out", t = 8 / 30},
+            {s = "ArcCW_BO1.ASP_In", t = 25 / 30}
         },
     },
     ["reload_empty"] = {
@@ -323,9 +323,9 @@ SWEP.Animations = {
         LHIKIn = 1,
         LHIKOut = 0.75,
         SoundTable = {
-            {s = "ArcCW_BO1.ASP_Out", t = 16 / 30},
-            {s = "ArcCW_BO1.ASP_In", t = 29 / 30},
-            {s = "ArcCW_BO1.ASP_Fwd", t = 45 / 30}
+            {s = "ArcCW_BO1.ASP_Out", t = 8 / 30},
+            {s = "ArcCW_BO1.ASP_In", t = 25 / 30},
+            {s = "ArcCW_BO1.ASP_Fwd", t = 36 / 30}
         },
     },
     ["enter_sprint"] = {

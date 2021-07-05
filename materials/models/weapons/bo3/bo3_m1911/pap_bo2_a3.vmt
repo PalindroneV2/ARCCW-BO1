@@ -1,7 +1,6 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/weapons/bo3/bo3_m1911/base/mag_c"
-	$blendtintbybasealpha  "1"
 	"$bumpmap" "models/weapons/bo3/bo3_m1911/base/mag_n"
 	
 	$detail		"models\weapons\bo1\gold_c"

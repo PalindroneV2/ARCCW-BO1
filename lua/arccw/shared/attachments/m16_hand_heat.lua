@@ -13,4 +13,4 @@ att.Desc_Cons = {
     "- Has no effect if the M203 is aready on.",
 }
 att.Slot = "m16_hand"
---att.ExcludeFlags = {"m203_already_on"}
+att.GivesFlags = {"heat_hand"}

@@ -191,12 +191,12 @@ SWEP.Attachments = {
     },
     { --3
         PrintName = "Tactical",
-        Slot = "bo1_tacslot",
+        Slot = "bo1_tacprimary",
         VMScale = Vector(1, 1, 1),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(1, -0.7, 1.5), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 90),
+            vpos = Vector(7, 0.7, 2), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, -90),
             wpos = Vector(8, 0.4, -4.5),
             wang = Angle(-7.5, 0, 85)
         },
@@ -355,8 +355,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Kiparis_MagOut", t = 15 / 35},
-            {s = "ArcCW_BO1.Kiparis_MagIn", t = 56 / 35}
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 35},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 50 / 35}
         },
     },
     ["reload_empty"] = {
@@ -369,8 +369,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Kiparis_MagOut", t = 16 / 35},
-            {s = "ArcCW_BO1.Kiparis_MagIn", t = 56 / 35},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 35},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 50 / 35},
             {s = "ArcCW_BO1.Kiparis_Bolt", t = 75 / 35},
         },
     },
@@ -384,8 +384,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Kiparis_MagOut", t = 15 / 35},
-            {s = "ArcCW_BO1.Kiparis_MagIn", t = 56 / 35}
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 35},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 50 / 35}
         },
     },
     ["reload_empty_ext"] = {
@@ -398,8 +398,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Kiparis_MagOut", t = 16 / 35},
-            {s = "ArcCW_BO1.Kiparis_MagIn", t = 56 / 35},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 35},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 50 / 35},
             {s = "ArcCW_BO1.Kiparis_Bolt", t = 75 / 35},
         },
     },

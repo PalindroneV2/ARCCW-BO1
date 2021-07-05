@@ -1,4 +1,4 @@
-att.PrintName = "Foregrip (BO1)"
+att.PrintName = "Exclusive Foregrip (BO1)"
 att.Icon = Material("entities/acwatt_bo1_foregrip.png", "mips smooth")
 att.Description = "Vertical foregrip that goes under the weapon's handguard."
 

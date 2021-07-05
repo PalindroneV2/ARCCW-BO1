@@ -75,6 +75,70 @@ sound.Add({
     }
 })
 
+-- GENERIC BO2 SMG --
+
+sound.Add( {
+    name = "ArcCW_BO2.MP7_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_generic_smg/fire_mp7.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO2.MSMC_Sil",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_generic_smg/sil_msmc.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_BO2.MP7_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_generic_smg/out_mp7.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO2.MP7_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_generic_smg/in_mp7.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO2.MP7_Charge",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_generic_smg/charge_mp7.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO2.MP7_Grip",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_generic_smg/start_mp7.wav",
+    }
+} )
+
 -- GENERIC BO2 AR --
 
 sound.Add( {

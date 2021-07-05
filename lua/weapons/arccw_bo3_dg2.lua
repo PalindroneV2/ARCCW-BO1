@@ -157,16 +157,7 @@ SWEP.RejectAttachments = {
 SWEP.Attachments = {
     { --1
         PrintName = "Tactical",
-        Slot = "bo1_tacslot",
-        Bone = "tag_weapon",
-        VMScale = Vector(0.75, 0.75, 0.75),
-        WMScale = Vector(0.75, 0.75, 0.75),
-        Offset = {
-            vpos = Vector(3.5, 0, 0),
-            vang = Angle(0, 0, 0),
-            wpos = Vector(7.9, 2, -3.2),
-            wang = Angle(-5, -2, 177.5)
-        },
+        Slot = "bo1_steadyaim",
     },
     { --2
         PrintName = "Ammo Type",

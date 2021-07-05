@@ -199,6 +199,30 @@ SWEP.AttachmentElements = {
             {ind = 3, bg = 0},
         },
     },
+    ["a2_hand"] = {
+        AttPosMods = {
+            [8] = {
+                vpos = Vector(15, 0.9, 2.5),
+                vang = Angle(0, 0, -90)
+            },
+        },
+    },
+    ["ris_hand"] = {
+        AttPosMods = {
+            [8] = {
+                vpos = Vector(15, 0.7, 2.5),
+                vang = Angle(0, 0, -90)
+            },
+        },
+    },
+    ["heat_hand"] = {
+        AttPosMods = {
+            [8] = {
+                vpos = Vector(15, 0.7, 2.25),
+                vang = Angle(0, 0, -90)
+            },
+        },
+    },
 }
 
 SWEP.Attachments = {
@@ -274,7 +298,7 @@ SWEP.Attachments = {
     },
     { --8
         PrintName = "Tactical",
-        Slot = {"tac", "bo1_tacslot"},
+        Slot = {"bo1_tacprimary"},
         VMScale = Vector(0.75, 0.75, 0.75),
         WMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",

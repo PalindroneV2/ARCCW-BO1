@@ -7,7 +7,7 @@ att.Desc_Cons = {
     "- No tacticool laser sight :(",
 }
 att.AutoStats = true
-att.Slot = {"tac", "tac_pistol", "bo1_tacslot"}
+att.Slot = {"tac", "tac_pistol", "bo1_steadyaim", "bo1_tacall", "bo1_tacpistol", "bo1_tacprimary"}
 
 att.Mult_HipDispersion = 0.9
 att.Mult_MoveDispersion = 0.75

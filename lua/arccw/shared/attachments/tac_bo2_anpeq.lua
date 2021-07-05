@@ -8,7 +8,7 @@ att.Desc_Cons = {
     "- Visible Light Beam"
 }
 att.AutoStats = true
-att.Slot = {"tac", "tac_pistol", "bo1_tacslot"}
+att.Slot = {"tac", "bo2_anpeq", "bo1_tacall", "bo1_tacprimary"}
 att.GivesFlags = {"bo1_laser"}
 att.ExcludeFlags = {"python_snub"}
 

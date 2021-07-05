@@ -107,10 +107,10 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.5, 3, 0),
-    Ang = Angle(-0.25, 0.1, 0),
+    Pos = Vector(-2.5, 3, 1.1),
+    Ang = Angle(0.525, 0.075, 0),
     Magnification = 1.1,
-    CrosshairInSights = true,
+    CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
@@ -162,8 +162,8 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [4] = {
-                vpos = Vector(12.5, -1.25, 3.25),
-                vang = Angle(0, 0, -60),
+                vpos = Vector(12.5, -0.8, 2.8),
+                vang = Angle(0, 0, 120),
             },
         },
     },
@@ -179,6 +179,12 @@ SWEP.AttachmentElements = {
             Ang = Angle(-0.25, 0.1, 0),
             Magnification = 1.1,
             CrosshairInSights = false,
+        },
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(12.5, -0.8, 2.8),
+                vang = Angle(0, 0, 120),
+            },
         },
     },
 }
