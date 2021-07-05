@@ -2025,7 +2025,37 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo1_mk/fire.wav",
+        "weapons/arccw/bo1_generic_shotgun/fire_mk.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.HS10_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_generic_shotgun/fire_hs10.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Ithaca_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_generic_shotgun/fire_ithaca.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.SPAS_Sil",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_generic_shotgun/sil_spas.wav",
     }
 } )
 
@@ -2036,7 +2066,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo1_mk/pump_back.wav",
+        "weapons/arccw/bo1_generic_shotgun/pump_back.wav",
     }
 } )
 sound.Add( {
@@ -2046,7 +2076,38 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo1_mk/pump_fwd.wav",
+        "weapons/arccw/bo1_generic_shotgun/pump_fwd.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_BO1.SPAS_Back",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_generic_shotgun/back_spas.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.SPAS_Fwd",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_generic_shotgun/fwd_spas.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.HS10_Charge",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo1_generic_shotgun/charge_hs10.wav",
     }
 } )
 sound.Add( {
@@ -2056,12 +2117,12 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bo1_mk/shell1.wav",
-        "weapons/arccw/bo1_mk/shell2.wav",
-        "weapons/arccw/bo1_mk/shell3.wav",
-        "weapons/arccw/bo1_mk/shell4.wav",
-        "weapons/arccw/bo1_mk/shell5.wav",
-        "weapons/arccw/bo1_mk/shell6.wav",
+        "weapons/arccw/bo1_generic_shotgun/shell1.wav",
+        "weapons/arccw/bo1_generic_shotgun/shell2.wav",
+        "weapons/arccw/bo1_generic_shotgun/shell3.wav",
+        "weapons/arccw/bo1_generic_shotgun/shell4.wav",
+        "weapons/arccw/bo1_generic_shotgun/shell5.wav",
+        "weapons/arccw/bo1_generic_shotgun/shell6.wav",
     }
 } )
 

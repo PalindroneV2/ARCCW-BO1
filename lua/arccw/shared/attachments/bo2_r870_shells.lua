@@ -8,6 +8,6 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = "bo2_r870_shells"
 att.GivesFlags = {"r870_shells"}
-att.RequireFlags = {"r870_mcs"}
+att.ExcludeFlags = {"r870_classic"}
 att.SortOrder = 100
 att.Mult_ReloadTime = 0.9

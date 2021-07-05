@@ -86,8 +86,8 @@ SWEP.Primary.Ammo = "buckshot" -- what ammo type the gun uses
 SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO1.MK_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
+SWEP.ShootSound = "ArcCW_BO1.Ithaca_Fire"
+SWEP.ShootSoundSilenced = "ArcCW_BO1.SPAS_Sil"
 SWEP.DistantShootSound = {"weapons/arccw/bo1_mk/ringoff_f.wav", "weapons/arccw/bo1_mk/ringoff_r.wav"}
 
 SWEP.MuzzleEffect = "muzzleflash_shotgun"

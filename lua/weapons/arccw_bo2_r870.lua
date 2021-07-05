@@ -27,7 +27,7 @@ SWEP.WorldModelOffset = {
 SWEP.WorldModel = "models/weapons/arccw/c_bo2_r870.mdl"
 SWEP.ViewModelFOV = 60
 
-SWEP.DefaultBodygroups = "00000"
+SWEP.DefaultBodygroups = "0100000"
 SWEP.DefaultSkin = 0
 
 SWEP.Damage = 42
@@ -107,8 +107,8 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.5, 3, 1.1),
-    Ang = Angle(0.525, 0.075, 0),
+    Pos = Vector(-2.5, 0, 0.6),
+    Ang = Angle(-0.25, 0.1, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -172,18 +172,18 @@ SWEP.AttachmentElements = {
     },
     ["bo2_altirons"] = {
         VMBodygroups = {
-            {ind = 1, bg = 1}
+            {ind = 1, bg = 0}
         },
         Override_IronSightStruct = {
-            Pos = Vector(-2.5, 0, 0.6),
-            Ang = Angle(-0.25, 0.1, 0),
+            Pos = Vector(-2.5, 3, 1.1),
+            Ang = Angle(0.525, 0.075, 0),
             Magnification = 1.1,
             CrosshairInSights = false,
         },
         AttPosMods = {
             [4] = {
-                vpos = Vector(12.5, -0.8, 2.8),
-                vang = Angle(0, 0, 120),
+                vpos = Vector(6.25, -0.7, 2),
+                vang = Angle(0, 0, 90),
             },
         },
     },
@@ -239,8 +239,8 @@ SWEP.Attachments = {
         VMScale = Vector(0.95, 0.95, 0.95),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(6.25, -0.7, 2),
-            vang = Angle(0, 0, 90),
+            vpos = Vector(12.5, -0.8, 2.8),
+            vang = Angle(0, 0, 120),
         },
     }, --5
     {
@@ -274,7 +274,8 @@ SWEP.Attachments = {
     }, --10
     {
         Hidden = true,
-        Slot = "bo2_altirons"
+        Slot = "bo2_altirons",
+        GivesFlags = {"r870_classic"},
     },
     {
         PrintName = "Cosmetic",

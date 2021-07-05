@@ -78,8 +78,8 @@ SWEP.Primary.Ammo = "buckshot" -- what ammo type the gun uses
 SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO1.MK_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
+SWEP.ShootSound = "ArcCW_BO1.HS10_Fire"
+SWEP.ShootSoundSilenced = "ArcCW_BO1.SPAS_Sil"
 SWEP.DistantShootSound = {"weapons/arccw/bo1_mk/ringoff_f.wav", "weapons/arccw/bo1_mk/ringoff_r.wav"}
 
 SWEP.MuzzleEffect = "muzzleflash_shotgun"
@@ -265,8 +265,7 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 17 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 23 / 30}
+            {s = "ArcCW_BO1.HS10_Charge", t = 17 / 30},
         },
     },
     ["fire"] = {
@@ -292,8 +291,7 @@ SWEP.Animations = {
         LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Shell", t = 40 / 30},
-            {s = "ArcCW_BO1.MK_Back", t = 63 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 67 / 30},
+            {s = "ArcCW_BO1.HS10_Charge", t = 63 / 30},
         },
     },
     ["sgreload_start"] = {
@@ -329,8 +327,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 8 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 12 / 30},
+            {s = "ArcCW_BO1.HS10_Charge", t = 8 / 30},
         },
     },
     ["sgreload_finish_empty"] = {
@@ -340,8 +337,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 8 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 12 / 30},
+            {s = "ArcCW_BO1.HS10_Charge", t = 8 / 30},
         },
     },
     ["enter_sprint"] = {
