@@ -80,8 +80,8 @@ SWEP.Primary.Ammo = "buckshot" -- what ammo type the gun uses
 SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO1.MK_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
+SWEP.ShootSound = "ArcCW_BO2.870_Fire"
+SWEP.ShootSoundSilenced = "ArcCW_BO2.S12_Sil"
 SWEP.DistantShootSound = {"weapons/arccw/bo1_mk/ringoff_f.wav", "weapons/arccw/bo1_mk/ringoff_r.wav"}
 
 SWEP.MuzzleEffect = "muzzleflash_shotgun"
@@ -333,8 +333,8 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 2,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 14 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 21 / 30}
+            {s = "ArcCW_BO2.870_Back", t = 14 / 30},
+            {s = "ArcCW_BO2.870_Fwd", t = 21 / 30}
         },
     },
     ["fire"] = {
@@ -356,9 +356,9 @@ SWEP.Animations = {
         Time = 54 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 21 / 30},
-            {s = "ArcCW_BO1.MK_Back", t = 40 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 44 / 30},
+            {s = "ArcCW_BO2.Shotgun_Shell", t = 21 / 30},
+            {s = "ArcCW_BO2.870_Back", t = 40 / 30},
+            {s = "ArcCW_BO2.870_Fwd", t = 44 / 30},
         },
     },
     ["reload_empty"] = {
@@ -366,9 +366,9 @@ SWEP.Animations = {
         Time = 54 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 21 / 30},
-            {s = "ArcCW_BO1.MK_Back", t = 40 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 44 / 30},
+            {s = "ArcCW_BO2.Shotgun_Shell", t = 21 / 30},
+            {s = "ArcCW_BO2.870_Back", t = 40 / 30},
+            {s = "ArcCW_BO2.870_Fwd", t = 44 / 30},
         },
     },
     ["cycle"] = {
@@ -378,8 +378,8 @@ SWEP.Animations = {
         Time = 20 / 35,
         --ShellEjectAt = 0.3,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 2 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 9 / 30},
+            {s = "ArcCW_BO2.870_Back", t = 2 / 30},
+            {s = "ArcCW_BO2.870_Fwd", t = 9 / 30},
         },
     },
     ["cycle_iron"] = {
@@ -389,8 +389,8 @@ SWEP.Animations = {
         Time = 20 / 35,
         --ShellEjectAt = 0.3,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 2 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 9 / 30},
+            {s = "ArcCW_BO2.870_Back", t = 2 / 30},
+            {s = "ArcCW_BO2.870_Fwd", t = 9 / 30},
         },
     },
     ["sgreload_start"] = {
@@ -400,7 +400,7 @@ SWEP.Animations = {
         RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
         MinProgress = 1,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 21 / 30},
+            {s = "ArcCW_BO2.Shotgun_Shell", t = 21 / 30},
         },
     },
     ["sgreload_insert"] = {
@@ -410,23 +410,23 @@ SWEP.Animations = {
         TPAnimStartTime = 0.3,
         MinProgress = 15 / 30,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 10 / 30},
+            {s = "ArcCW_BO2.Shotgun_Shell", t = 10 / 30},
         },
     },
     ["sgreload_finish"] = {
         Source = "reload_out",
         Time = 30 / 30,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 8 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 12 / 30},
+            {s = "ArcCW_BO2.870_Back", t = 8 / 30},
+            {s = "ArcCW_BO2.870_Fwd", t = 12 / 30},
         },
     },
     ["sgreload_finish_empty"] = {
         Source = "reload_out",
         Time = 30 / 30,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 8 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 12 / 30},
+            {s = "ArcCW_BO2.870_Back", t = 8 / 30},
+            {s = "ArcCW_BO2.870_Fwd", t = 12 / 30},
         },
     },
     ["enter_sprint"] = {

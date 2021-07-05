@@ -259,6 +259,70 @@ sound.Add( {
     }
 } )
 
+-- GENERIC BO2 SHOTGUN --
+
+sound.Add({
+    name = "ArcCW_BO2.870_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_generic_shotgun/fire_870.wav",
+    }
+})
+sound.Add({
+    name = "ArcCW_BO2.S12_Sil",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_generic_shotgun/sil_s12.wav",
+    }
+})
+sound.Add({
+    name = "ArcCW_BO2.Shotgun_Shell",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = {
+        "weapons/arccw/bo2_generic_shotgun/load1.wav",
+        "weapons/arccw/bo2_generic_shotgun/load2.wav",
+        "weapons/arccw/bo2_generic_shotgun/load3.wav",
+        "weapons/arccw/bo2_generic_shotgun/load4.wav",
+        "weapons/arccw/bo2_generic_shotgun/load5.wav",
+        "weapons/arccw/bo2_generic_shotgun/load6.wav",
+    }
+})
+sound.Add({
+    name = "ArcCW_BO2.Shotgun_Back",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 70,
+    sound = "weapons/arccw/bo2_generic_shotgun/back.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.Shotgun_Fwd",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 70,
+    sound = "weapons/arccw/bo2_generic_shotgun/fwd.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.870_Back",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 70,
+    sound = "weapons/arccw/bo2_generic_shotgun/back_870.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.870_Fwd",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 70,
+    sound = "weapons/arccw/bo2_generic_shotgun/fwd_870.wav"
+})
+
 -- GENERIC BO2 LMG --
 
 sound.Add({
