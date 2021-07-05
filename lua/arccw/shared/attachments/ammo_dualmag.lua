@@ -6,7 +6,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = {"bo1_mag"}
+att.Slot = {"bo1_mag", "bo1_dualmag"}
 
 att.ExcludeFlags = {"mp5k", "ubanims"}
 att.GivesFlags = {"bo1_dual_mag", "bo2_fastmags"}
