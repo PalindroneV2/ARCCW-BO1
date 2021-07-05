@@ -295,7 +295,7 @@ SWEP.Animations = {
         Source = {
             "bash_2",
         },
-        Time = 35 / 35,
+        Time = 70 / 35,
     },
     ["fire_iron"] = {
         Source = {
@@ -398,17 +398,5 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.MK_Back", t = 8 / 40},
             {s = "ArcCW_BO1.MK_Fwd", t = 12 / 40},
         },
-    },
-    ["enter_sprint"] = {
-        Source = "idle",
-        Time = 1 / 35,
-    },
-    ["idle_sprint"] = {
-        Source = "idle",
-        Time = 1 / 35,
-    },
-    ["exit_sprint"] = {
-        Source = "idle",
-        Time = 1 / 35,
     },
 }

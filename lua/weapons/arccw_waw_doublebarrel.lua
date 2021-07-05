@@ -489,16 +489,4 @@ SWEP.Animations = {
             {s = "ArcCW_WAW.SSG_Close", t = 28 / (30 / 2.25)},
         },
     },
-    ["enter_sprint_grip"] = {
-        Source = "idle_grip",
-        Time = 1 / 30
-    },
-    ["idle_sprint_grip"] = {
-        Source = "idle_grip",
-        Time = 1 / 30
-    },
-    ["exit_sprint_grip"] = {
-        Source = "idle_grip",
-        Time = 1 / 30
-    },
 }

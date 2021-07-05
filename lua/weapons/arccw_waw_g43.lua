@@ -320,7 +320,7 @@ SWEP.Animations = {
     },
     ["bash_bayo"] = {
         Source = "stab",
-        Time = 30 / 30,
+        Time = 60 / 30,
     },
     */
     ["holster"] = {
@@ -406,30 +406,6 @@ SWEP.Animations = {
             {s = "ArcCW_WAW.G43_Fwd", t = 106 / 35},
         },
     },
-    /*["enter_sprint"] = {
-        Source = "idle",
-        Time = 10 / 30
-    },
-    ["idle_sprint"] = {
-        Source = "idle",
-        Time = 30 / 40
-    },
-    ["exit_sprint"] = {
-        Source = "idle",
-        Time = 10 / 30
-    },
-    ["enter_sprint_empty"] = {
-        Source = "idle_empty",
-        Time = 10 / 30
-    },
-    ["idle_sprint_empty"] = {
-        Source = "idle_empty",
-        Time = 30 / 40
-    },
-    ["exit_sprint_empty"] = {
-        Source = "idle_empty",
-        Time = 10 / 30
-    },*/
 
     -- M7 GRENADE LAUNCHER --
     ["idle_ubgl"] = {

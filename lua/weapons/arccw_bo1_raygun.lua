@@ -260,16 +260,4 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.RayGun_Close", t = 95 / 30},
         },
     },
-    ["enter_sprint"] = {
-        Source = "idle",
-        Time = 10 / 30
-    },
-    ["idle_sprint"] = {
-        Source = "idle",
-        Time = 30 / 40
-    },
-    ["exit_sprint"] = {
-        Source = "idle",
-        Time = 10 / 30
-    },
 }

@@ -18,4 +18,5 @@
 	$envmaptint   "[0.025 0.025 0.025]"
 	$envmapfresnel "1"
 
+	"$nocull" "1"
 }

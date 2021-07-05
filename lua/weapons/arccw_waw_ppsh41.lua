@@ -338,18 +338,4 @@ SWEP.Animations = {
             {s = "ArcCW_WAW.PPSh_Bolt", t = 70 / 35},
         },
     },
-    /*
-    ["enter_sprint"] = {
-        Source = "Idle_to_sprint",
-        Time = 10 / 30
-    },
-    ["idle_sprint"] = {
-        Source = "Sprint_",
-        Time = 30 / 40
-    },
-    ["exit_sprint"] = {
-        Source = "Sprint_to_Idle",
-        Time = 10 / 30
-    },
-    */
 }

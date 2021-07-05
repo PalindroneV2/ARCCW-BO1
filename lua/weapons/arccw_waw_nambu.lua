@@ -84,7 +84,7 @@ SWEP.ShellPitch = 95
 SWEP.ShellScale = 1.25
 SWEP.ShellRotateAngle = Angle(0, 180, 0)
  -- which attachment to put the muzzle on
-SWEP.CaseEffectAttachment = 1 -- which attachment to put the case effect on
+SWEP.CaseEffectAttachment = 3 -- which attachment to put the case effect on
 
 SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.75
@@ -107,7 +107,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.ActivePos = Vector(-1, -7.5, 1.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, 3, 0)
+SWEP.HolsterPos = Vector(1, -5, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
 
 SWEP.CustomizePos = Vector(12, -12, 3)
@@ -262,12 +262,6 @@ SWEP.Animations = {
             {s = "ArcCW_BO2.Pistol_SlideBack", t = 125 / 60},
             {s = "ArcCW_BO2.Pistol_SlideFwd", t = 138 / 60}
         },
-    },
-    ["idle_sprint"] = {
-        Source = "idle_sprint"
-    },
-    ["idle_sprint_empty"] = {
-        Source = "idle_sprint_empty"
     },
     ["bash"] = {
         Source = "bash",
