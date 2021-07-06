@@ -10,7 +10,6 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = {"tac_pistol", "bo2_wlp", "bo1_tacall", "bo1_tacpistol"}
 att.GivesFlags = {"bo1_laser"}
-att.ExcludeFlags = {"python_snub"}
 
 att.Model = "models/weapons/arccw/atts/bo2_wlp.mdl"
 att.ModelOffset = Vector(0, 0, -1)

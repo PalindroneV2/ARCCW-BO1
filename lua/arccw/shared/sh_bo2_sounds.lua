@@ -67,12 +67,29 @@ sound.Add({
 -- GENERIC BO2 REVOLVER --
 
 sound.Add({
-    name = "ArcCW_BO2.357_Fire",
+    name = "ArcCW_BO2.Judge_Fire",
     channel = CHAN_STATIC,
     level = 100,
     sound = {
-        "weapons/arccw/bo1_python/fire_bo2.wav",
+        "weapons/arccw/bo1_python/fire_judge.wav",
     }
+})
+sound.Add({
+    name = "ArcCW_BO2.Judge_Empty",
+    channel = CHAN_USER_BASE,
+    level = 100,
+    sound = {
+        "weapons/arccw/bo1_python/empty_judge.wav",
+    }
+})
+sound.Add({
+    name = "ArcCW_BO2.Judge_Load",
+    channel = CHAN_ITEM,
+    level = 100,
+    sound = {
+        "weapons/arccw/bo1_python/load_j1.wav",
+        "weapons/arccw/bo1_python/load_j2.wav",
+    },
 })
 
 -- GENERIC BO2 SMG --

@@ -1,36 +1,36 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
+SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
 
-SWEP.PrintName = "Colt Python"
-SWEP.Trivia_Class = "Revolver"
-SWEP.Trivia_Desc = "American revolver regarded as one of the finest of its kind. The bore gets tighter towards the end, aiding in accuracy."
-SWEP.Trivia_Manufacturer = "Colt"
-SWEP.Trivia_Calibre = ".357 Magnum"
-SWEP.Trivia_Mechanism = "SA/DA"
-SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 1955
+SWEP.PrintName = "Raging Judge"
+SWEP.Trivia_Class = "Shotgun Revolver"
+SWEP.Trivia_Desc = "5-shot Revolver chambered in .410 bore shotshell."
+SWEP.Trivia_Manufacturer = "Taurus"
+SWEP.Trivia_Calibre = ".410 bore"
+SWEP.Trivia_Mechanism = "Double-Action"
+SWEP.Trivia_Country = "Brazil/USA"
+SWEP.Trivia_Year = 2006
 SWEP.Slot = 1
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_bo1_python.mdl"
-SWEP.WorldModel = "models/weapons/arccw/w_bo1_python.mdl"
-SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo1_python.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_bo2_judge.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_bo2_judge.mdl"
+SWEP.MirrorWorldModel = "models/weapons/arccw/c_bo2_judge.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-8.5, 4, -4),
-    ang        =    Angle(-10, 0, 180),
+    pos        =    Vector(-8.5, 4, -4.5),
+    ang        =    Angle(-10, -3, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale = 1
+    scale = 0.8
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 65
-SWEP.DamageMin = 40 -- damage done at maximum range
-SWEP.Range = 100 -- in METRES
+SWEP.Damage = 35
+SWEP.DamageMin = 20 -- damage done at maximum range
+SWEP.Range = 50 -- in METRES
 SWEP.Penetration = 2
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -44,16 +44,15 @@ SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 6 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 12
-SWEP.ReducedClipSize = 6
+SWEP.Primary.ClipSize = 5 -- DefaultClip is automatically set.
+SWEP.ExtendedClipSize = 5
 
 SWEP.Recoil = 1
 SWEP.RecoilSide = 0.75
 SWEP.RecoilRise = 1
 
-SWEP.Delay = 60 / 300 -- 60 / RPM.
-SWEP.Num = 1 -- number of shots per trigger pull.
+SWEP.Delay = 60 / 468 -- 60 / RPM.
+SWEP.Num = 4 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 1,
@@ -69,7 +68,7 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 2 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 30 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 220 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 130
 
@@ -81,9 +80,9 @@ SWEP.MagID = "coltpython" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO1.Python_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO2.Pistol_Sil"
-SWEP.DistantShootSound = "ArcCW_BO1.Python_RingOff"
+SWEP.ShootSound = "ArcCW_BO2.Judge_Fire"
+SWEP.ShootSoundSilenced = "ArcCW_BO2.S12_Sil"
+--SWEP.DistantShootSound = "ArcCW_BO1.Python_RingOff"
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
@@ -93,7 +92,7 @@ SWEP.ShellPitch = 90
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = nil -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 1
-SWEP.CamAttachment = 2
+SWEP.CamAttachment = 3
 
 SWEP.SightTime = 0.175
 
@@ -115,8 +114,8 @@ SWEP.CaseBones = {}
 SWEP.ShotgunReload = true
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.175, 3, 0.9),
-    Ang = Angle(-0.5, -0.05, 0),
+    Pos = Vector(-2.175, 3, 0),
+    Ang = Angle(-0.6, -0.06, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -146,16 +145,11 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
         NamePriority = 10,
-        NameChange = "Cobra",
+        NameChange = "Voice of Justice",
     },
     ["python_snub"] = {
         VMBodygroups = {
             {ind = 1, bg = 1}
-        },
-        AttPosMods = {
-            [3] = {
-                vpos = Vector(3.25, 0, 0.15),
-            }
         },
     },
     ["bo1_speedloader"] = {
@@ -173,12 +167,12 @@ SWEP.RejectAttachments = {
 SWEP.Attachments = {
     { --1
         PrintName = "Optic",
-        Slot = {"optic", "optic_lp", "bo1_lp_optic"},
+        Slot = {"bo1_lp_optic", "bo1_reddots"},
         Bone = "tag_weapon",
-        VMScale = Vector(1, 1, 1),
-        WMScale = Vector(1, 1, 1),
+        VMScale = Vector(1.25, 1.25, 1.25),
+        WMScale = Vector(1.25, 1.25, 1.25),
         Offset = {
-            vpos = Vector(6, -0.025, 2.85),
+            vpos = Vector(6.5, -0.025, 4),
             vang = Angle(0, 0, 0),
             wpos = Vector(7.9, 2, -3.2),
             wang = Angle(-5, -2, 177.5)
@@ -188,36 +182,38 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         Slot = "bo1_python_barrel",
-    },
-    { --1
+    }, --2
+    { --3
         PrintName = "Tactical",
         Slot = {"bo1_tacpistol"},
         Bone = "tag_weapon",
-        VMScale = Vector(0.75, 0.75, 0.75),
-        WMScale = Vector(0.75, 0.75, 0.75),
+        VMScale = Vector(1, 1, 1),
+        WMScale = Vector(1, 1, 1),
         Offset = {
-            vpos = Vector(9.5, 0, 1.65),
+            vpos = Vector(4.125, 0, 0.15),
             vang = Angle(0, 0, 0),
         },
     },
+    /*
     {
         PrintName = "Cylinder",
         Slot = "bo1_cylinder"
-    },
-    { --2
+    },--4
+    */
+    { --5
         PrintName = "Ammo Type",
-        Slot = {"ammo_pap"}
+        Slot = {"ammo_pap_sg"}
     },
-    { --3
+    { --6
         PrintName = "Perk",
         Slot = "bo1_perk"
     },
-    { --4
+    { --7
         PrintName = "Charms",
         Slot = "charm",
-        Bone = "j_gun",
+        Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(-3.5, -0.5, -1.25),
+            vpos = Vector(2, -0.5, 0.25),
             vang = Angle(0, 0, 0),
         },
         ExcludeFlags = {"python_snub"}
@@ -226,13 +222,10 @@ SWEP.Attachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[5].Installed == "ammo_papunch"
-    local snub = wep.Attachments[2].Installed == "bo1_barrel_python_snub"
+    local papcamo = wep.Attachments[4].Installed == "ammo_papunch"
 
-    if papcamo and !snub then
+    if papcamo then
         return vm:SetSkin(2)
-    elseif papcamo and snub then
-        return vm:SetSkin(3)
     end
 end
 
@@ -254,11 +247,7 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 60 / 30,
-        SoundTable = {
-            {s = "ArcCW_BO1.Python_Spin", t = 16 / 30},
-            {s = "ArcCW_BO1.Python_Close", t = 40 / 30},
-        }
+        Time = 1.56,
     },
     ["fire"] = {
         Source = {"fire"},
@@ -270,7 +259,7 @@ SWEP.Animations = {
     },
     ["sgreload_start"] = {
         Source = "reload_in",
-        Time = 52 / 30,
+        Time = 2.433,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
         LHIK = true,
         LHIKIn = 0.2,
@@ -279,12 +268,13 @@ SWEP.Animations = {
         MinProgress = 1.2,
         SoundTable = {
             {s = "ArcCW_BO1.Python_Open", t = 20 / 35},
-            {s = "ArcCW_BO1.Python_Empty", t = 26 / 35},
+            {s = "ArcCW_BO2.Judge_Empty", t = 40 / 35},
+            {s = "ArcCW_BO2.Judge_Load", t = 60 / 30},
         },
     },
     ["sgreload_insert"] = {
         Source = "reload_loop",
-        Time = 16 / 30,
+        Time = 1.003,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
         TPAnimStartTime = 0.3,
         LHIK = true,
@@ -292,27 +282,27 @@ SWEP.Animations = {
         LHIKOut = 0.2,
         MinProgress = 16 / 30,
         SoundTable = {
-            {s = "ArcCW_BO1.Python_Bullet", t = 13 / 30},
+            {s = "ArcCW_BO2.Judge_Load", t = 0.8},
         },
     },
     ["sgreload_finish"] = {
-        Source = "reload_out_snap",
-        Time = 33 / 30,
+        Source = "reload_out",
+        Time = 1.6,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.Python_Close", t = 8 / 30},
+            {s = "ArcCW_BO1.Python_Close", t = 0.75},
         },
     },
     ["sgreload_finish_empty"] = {
-        Source = "reload_out_snap",
-        Time = 33 / 30,
+        Source = "reload_out",
+        Time = 1.6,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.Python_Close", t = 8 / 30},
+            {s = "ArcCW_BO1.Python_Close", t = 0.6},
         },
     },
     ["reload"] = {
@@ -324,7 +314,7 @@ SWEP.Animations = {
         LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO1.Python_Open", t = 17 / 35},
-            {s = "ArcCW_BO1.Python_Empty", t = 38 / 35},
+            {s = "ArcCW_BO2.Judge_Empty", t = 38 / 35},
             {s = "ArcCW_BO1.Python_Load", t = 68 / 35},
             {s = "ArcCW_BO1.Python_Close", t = 83 / 35},
         },
@@ -344,15 +334,15 @@ SWEP.Animations = {
         },
     },
     ["enter_sprint"] = {
-        Source = "idle",
-        Time = 3 / 30
+        Source = "sprint_in",
+        Time = 10 / 30
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 30 / 30
+        Time = 30 / 40
     },
     ["exit_sprint"] = {
-        Source = "idle",
-        Time = 3 / 30
+        Source = "sprint_out",
+        Time = 10 / 30
     },
 }

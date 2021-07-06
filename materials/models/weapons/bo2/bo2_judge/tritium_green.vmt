@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/bo2/bo2_trit/tritium_green_dot"
+	"$bumpmap" "models/weapons/bo2/bo2_trit/tritium_n"
+
+	"$selfillummask" "models/weapons/bo2/bo2_trit/tritium_green_dot"
+	"$selfillum" "1"
+	"$translucent" "1"
+}

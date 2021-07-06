@@ -10,7 +10,6 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = {"tac", "bo2_anpeq", "bo1_tacall", "bo1_tacprimary"}
 att.GivesFlags = {"bo1_laser"}
-att.ExcludeFlags = {"python_snub"}
 
 att.Model = "models/weapons/arccw/atts/bo2_anpeq.mdl"
 
