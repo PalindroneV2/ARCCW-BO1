@@ -230,9 +230,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     for k = camo, camo do
         vm:SetSkin(k)
-        if papcamo then
-            vm:SetSkin(k + 2)
-        end
+    end
+    if papcamo then
+        vm:SetSkin(2)
     end
 end
 
