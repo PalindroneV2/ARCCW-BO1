@@ -17,8 +17,8 @@ SWEP.Slot = 1
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo2_judge.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_bo2_judge.mdl"
-SWEP.MirrorWorldModel = "models/weapons/arccw/c_bo2_judge.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_bo2_judge.mdl"
+SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_judge.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-8.5, 4, -4.5),
@@ -74,8 +74,8 @@ SWEP.MoveDispersion = 130
 
 SWEP.ShootWhileSprint = false
 
-SWEP.Primary.Ammo = "357" -- what ammo type the gun uses
-SWEP.MagID = "coltpython" -- the magazine pool this gun draws from
+SWEP.Primary.Ammo = "buckshot" -- what ammo type the gun uses
+SWEP.MagID = "judge" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
@@ -154,7 +154,7 @@ SWEP.AttachmentElements = {
     },
     ["bo1_speedloader"] = {
         VMBodygroups = {
-            {ind = 3, bg = 1}
+            {ind = 2, bg = 1}
         }
     },
 }
@@ -194,12 +194,10 @@ SWEP.Attachments = {
             vang = Angle(0, 0, 0),
         },
     },
-    /*
     {
         PrintName = "Cylinder",
         Slot = "bo1_cylinder"
     },--4
-    */
     { --5
         PrintName = "Ammo Type",
         Slot = {"ammo_pap_sg"}
@@ -222,12 +220,30 @@ SWEP.Attachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[4].Installed == "ammo_papunch"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then
         return vm:SetSkin(2)
     end
 end
+
+/*
+SWEP.Hook_TranslateAnimation = function(wep, anim)
+    local speed = wep:GetBuff_Override("BO1_SpeedLoader")
+
+    if speed then
+        if anim == "sgreload_start" then
+            return anim .. "_speed"
+        end
+        if anim == "sgreload_insert" then
+            return anim .. "_speed"
+        end
+        if anim == "sgreload_finish" then
+            return anim .. "_speed"
+        end
+    end
+end
+*/
 
 SWEP.Animations = {
     ["idle"] = {
@@ -259,7 +275,7 @@ SWEP.Animations = {
     },
     ["sgreload_start"] = {
         Source = "reload_in",
-        Time = 2.433,
+        Time = 2.433 * (30 / 40),
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
         LHIK = true,
         LHIKIn = 0.2,
@@ -267,14 +283,14 @@ SWEP.Animations = {
         RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
         MinProgress = 1.2,
         SoundTable = {
-            {s = "ArcCW_BO1.Python_Open", t = 20 / 35},
-            {s = "ArcCW_BO2.Judge_Empty", t = 40 / 35},
-            {s = "ArcCW_BO2.Judge_Load", t = 60 / 30},
+            {s = "ArcCW_BO1.Python_Open", t = 20 / 40},
+            {s = "ArcCW_BO2.Judge_Empty", t = 40 / 40},
+            {s = "ArcCW_BO2.Judge_Load", t = 60 / 40},
         },
     },
     ["sgreload_insert"] = {
         Source = "reload_loop",
-        Time = 1.003,
+        Time = 1.003 * (30 / 40),
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
         TPAnimStartTime = 0.3,
         LHIK = true,
@@ -282,55 +298,69 @@ SWEP.Animations = {
         LHIKOut = 0.2,
         MinProgress = 16 / 30,
         SoundTable = {
-            {s = "ArcCW_BO2.Judge_Load", t = 0.8},
+            {s = "ArcCW_BO2.Judge_Load", t = 0.8 * (30 / 40)},
         },
     },
     ["sgreload_finish"] = {
         Source = "reload_out",
-        Time = 1.6,
+        Time = 1.6 * (30 / 40),
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.Python_Close", t = 0.75},
+            {s = "ArcCW_BO1.Python_Close", t = 0.75 * (30 / 40)},
         },
     },
-    ["sgreload_finish_empty"] = {
-        Source = "reload_out",
-        Time = 1.6,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
-        SoundTable = {
-            {s = "ArcCW_BO1.Python_Close", t = 0.6},
-        },
-    },
+    -- speed--
     ["reload"] = {
-        Source = "reload",
-        Time = 100 / 35,
+        Source = "reload_speed",
+        Time = 3.76 * (30 / 40),
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
+        RestoreAmmo = 5,
+        MinProgress = 1,
         SoundTable = {
-            {s = "ArcCW_BO1.Python_Open", t = 17 / 35},
-            {s = "ArcCW_BO2.Judge_Empty", t = 38 / 35},
-            {s = "ArcCW_BO1.Python_Load", t = 68 / 35},
-            {s = "ArcCW_BO1.Python_Close", t = 83 / 35},
+            {s = "ArcCW_BO1.Python_Open", t = 20 / 40},
+            {s = "ArcCW_BO2.Judge_Empty", t = 40 / 40},
+            {s = "ArcCW_BO1.Python_Load", t = 60 / 40},
+            {s = "ArcCW_BO1.Python_Close", t = 80 / 40},
         },
     },
-    ["reload_empty"] = {
-        Source = "reload",
-        Time = 100 / 35,
+
+    ["sgreload_start_speed"] = {
+        Source = "reload_in_speed",
+        Time = 2.4 * (30 / 40),
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
+        RestoreAmmo = 5,
+        MinProgress = 1,
         SoundTable = {
-            {s = "ArcCW_BO1.Python_Open", t = 17 / 35},
-            {s = "ArcCW_BO1.Python_Empty", t = 38 / 35},
-            {s = "ArcCW_BO1.Python_Load", t = 68 / 35},
-            {s = "ArcCW_BO1.Python_Close", t = 83 / 35},
+            {s = "ArcCW_BO1.Python_Open", t = 20 / 40},
+            {s = "ArcCW_BO2.Judge_Empty", t = 40 / 40},
+            {s = "ArcCW_BO1.Python_Load", t = 60 / 40},
+        },
+    },
+    ["sgreload_insert_speed"] = {
+        Source = "reload_loop_speed",
+        Time = .033 * (30 / 40),
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
+        TPAnimStartTime = 0.3,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+    },
+    ["sgreload_finish_speed"] = {
+        Source = "reload_out_speed",
+        Time = 1.6 * (30 / 40),
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+        SoundTable = {
+            {s = "ArcCW_BO1.Python_Close", t = 0.75 * (30 / 40)},
         },
     },
     ["enter_sprint"] = {

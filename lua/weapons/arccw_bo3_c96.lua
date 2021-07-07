@@ -269,10 +269,10 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 1,
+        Time = 1.5666,
         SoundTable = {
-            {s = "ArcCW_BO2.Pistol_SlideBack", t = 0.2},
-            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 0.8}
+            {s = "ArcCW_BO2.Pistol_SlideBack", t = 0.45},
+            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 0.65}
         }
     },
     ["ready_scope"] = {

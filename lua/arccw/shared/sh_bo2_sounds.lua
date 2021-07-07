@@ -67,6 +67,15 @@ sound.Add({
 -- GENERIC BO2 REVOLVER --
 
 sound.Add({
+    name = "ArcCW_BO2.357_Fire",
+    channel = CHAN_STATIC,
+    level = 100,
+    sound = {
+        "weapons/arccw/bo1_python/fire_bo2.wav",
+    }
+})
+
+sound.Add({
     name = "ArcCW_BO2.Judge_Fire",
     channel = CHAN_STATIC,
     level = 100,
@@ -170,7 +179,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_BO2.SIG556_Fire",
-    channel = CHAN_STATIC,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -196,6 +205,16 @@ sound.Add( {
     --pitch = {95, 110},
     sound = {
         "weapons/arccw/bo2_generic_ar/fire_an94.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO2.XM8_Fire",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_generic_ar/fire_xm8.wav",
     }
 } )
 sound.Add( {

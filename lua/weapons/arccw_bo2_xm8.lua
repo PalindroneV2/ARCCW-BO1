@@ -5,30 +5,30 @@ SWEP.AdminOnly = false
 
 
 -- This one is so yall are aware.
-SWEP.PrintName = "SIG 556"
+SWEP.PrintName = "HK XM8"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = [[
-    Import version of the SG 550 series of rifles with modifications that allow them to take STANAG magazines.
+    German assault rifle. Remnant of HK's OICW prototype. Tried for replacement of the US army's standard M4 carbines but the project was canceled.
 
-    Equipped with a Magpul MOE Stock and modified for military use with a 3 round burst mode.
+    In some alternate timeline the US Army may have adopted this rifle.
 ]]
-SWEP.Trivia_Manufacturer = "SIG-Sauer"
+SWEP.Trivia_Manufacturer = "Heckler & Koch"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
-SWEP.Trivia_Country = "Switzerland"
-SWEP.Trivia_Year = 1990
+SWEP.Trivia_Country = "Germany"
+SWEP.Trivia_Year = 2002
 
 SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_bo2_sig556.mdl"
-SWEP.WorldModel = "models/weapons/arccw/w_bo2_sig556.mdl"
-SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_sig556.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_bo2_xm8.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_bo2_xm8.mdl"
+SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_xm8.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-4.25, 3.5, -7.15),
-    ang        =    Angle(0, 0, 180),
+    pos        =    Vector(-2.5, 3.5, -7.15),
+    ang        =    Angle(-5, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale = 1
 }
@@ -48,8 +48,8 @@ SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 45
+SWEP.Primary.ClipSize = 32 -- DefaultClip is automatically set.
+SWEP.ExtendedClipSize = 64
 SWEP.ReducedClipSize = 20
 
 SWEP.Recoil = 0.5
@@ -60,11 +60,11 @@ SWEP.SightedSpeedMult = 0.5
 SWEP.SightTime = 0.3
 SWEP.VisualRecoilMult = 0.25
 
-SWEP.Delay = 60 / 700 -- 60 / RPM.
+SWEP.Delay = 60 / 750 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        Mode = -3,
+        Mode = -4,
         RunawayBurst = true,
     },
     {
@@ -86,13 +86,12 @@ SWEP.HipDispersion = 600 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
 SWEP.Primary.Ammo = "smg1" -- what ammo type the gun uses
-SWEP.MagID = "hk416" -- the magazine pool this gun draws from
+SWEP.MagID = "xm8" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
---SWEP.FirstShootSound = "ArcCW_BO2.M27_Fire"
-SWEP.ShootSound = "ArcCW_BO2.SIG556_Fire"
+SWEP.ShootSound = "ArcCW_BO2.XM8_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.M27_Sil"
 SWEP.DistantShootSound = {
     "weapons/arccw/bo2_generic_ar/dist/0.wav",
@@ -122,7 +121,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.025, 3, 0.325),
+    Pos = Vector(-2.5, 3, 0.8),
     Ang = Angle(0, 0.025, 0),
     Magnification = 1.25,
     CrosshairInSights = false,
@@ -141,8 +140,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(15, 3, -2)
-SWEP.CustomizeAng = Angle(15, 40, 20)
+SWEP.CustomizePos = Vector(17, 7, -2)
+SWEP.CustomizeAng = Angle(15, 40, 25)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -173,6 +172,11 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 1},
         },
     },
+    ["cover"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 1},
+        },
+    }
 }
 
 SWEP.Attachments = {
@@ -182,7 +186,7 @@ SWEP.Attachments = {
         Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(4, 0, 3.9), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(4, 0, 3.4), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
         InstalledEles = {"mount"},
@@ -196,7 +200,7 @@ SWEP.Attachments = {
         VMScale = Vector(1.5, 1.5, 1.5),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(27.25, 0, 2), -- offset that the attachment will be relative to the bone
+            vpos = Vector(23, 0, 0.75), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(0, 0, 0),
             wang = Angle(0, 0, 0)
@@ -223,7 +227,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         WMScale = Vector(0.85, 0.85, 0.85),
         Offset = {
-            vpos = Vector(12.5, 0, 0.6), -- offset that the attachment will be relative to the bone
+            vpos = Vector(12.5, 0, -0.75), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(15, 1.125, -4.25),
             wang = Angle(175, -179, -1.5),
@@ -235,11 +239,12 @@ SWEP.Attachments = {
         VMScale = Vector(1, 1, 1),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(17, -1.35, 2.5), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 90),
+            vpos = Vector(15, 1.1, 1), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, -90),
             wpos = Vector(19, 0.5, -5.5),
             wang = Angle(-5, 0, 85)
         },
+        InstalledEles = {"cover"},
     },
     {
         PrintName = "Magazine",
@@ -284,7 +289,7 @@ SWEP.Attachments = {
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
 
-    if pap then return "Rift Breacker" end
+    if pap then return "Micro Aerator" end
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
@@ -406,9 +411,9 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 0.6},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25}
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.5}
         },
-        MinProgress = 1.4,
+        MinProgress = 1.6,
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -419,9 +424,9 @@ SWEP.Animations = {
         LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 0.6},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
-            {s = "ArcCW_BO2.AR_Back", t = 1.8},
-            {s = "ArcCW_BO2.AR_Fwd", t = 1.9},
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.5},
+            {s = "ArcCW_BO2.AR_Back", t = 2},
+            {s = "ArcCW_BO2.AR_Fwd", t = 2.15},
         },
         MinProgress = 2.0,
     },
@@ -539,9 +544,9 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 0.6},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25}
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.5}
         },
-        MinProgress = 1.4,
+        MinProgress = 1.6,
     },
     ["reload_empty_m203"] = {
         Source = "reload_empty_gl",
@@ -549,9 +554,9 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 0.6},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
-            {s = "ArcCW_BO2.AR_Back", t = 1.8},
-            {s = "ArcCW_BO2.AR_Fwd", t = 1.9},
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.5},
+            {s = "ArcCW_BO2.AR_Back", t = 2},
+            {s = "ArcCW_BO2.AR_Fwd", t = 2.15},
         },
         MinProgress = 2.0,
     },
@@ -563,6 +568,7 @@ SWEP.Animations = {
             {s = "ArcCW_BO2.AR_MagOut", t = 0.6},
             {s = "ArcCW_BO2.AR_MagIn", t = 1.25}
         },
+        MinProgress = 1.4,
     },
     ["reload_empty_m203_fast"] = {
         Source = "reload_empty_gl_fast",
@@ -574,6 +580,7 @@ SWEP.Animations = {
             {s = "ArcCW_BO2.AR_Back", t = 1.8},
             {s = "ArcCW_BO2.AR_Fwd", t = 1.9},
         },
+        MinProgress = 2,
     },
     ["enter_sprint_m203"] = {
         Source = "sprint_in_gl",

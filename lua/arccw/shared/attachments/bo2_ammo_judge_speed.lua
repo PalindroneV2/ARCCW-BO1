@@ -6,9 +6,9 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = {"bo1_cylinder"}
-att.GivesFlags = {"bo1_speedloader"}
+att.Slot = {"bo2_cylinder"}
+att.GivesFlags = {"bo2_speedloader"}
+
+att.BO1_SpeedLoader = true
 
 att.SortOrder = 100
-att.BO1_SpeedLoader = true
-att.Override_ShotgunReload = false
