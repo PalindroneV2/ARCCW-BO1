@@ -1311,9 +1311,15 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.35,
         SoundTable = {
+            {s = "weapons/arccw/cde_m16/raise.ogg", t = 0},
             {s = "weapons/arccw/cde_m16/magout.ogg", t = 0.25},
-            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.15},
-            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.25}
+            {s = "weapons/arccw/cde_m16/gear1.ogg", t = 0.35},
+            {s = "weapons/arccw/cde_m16/magpouch.ogg", t = 0.7},
+            {s = "weapons/arccw/cde_m16/gear2.ogg", t = 1.0},
+            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.17},
+            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.3},
+            {s = "weapons/arccw/cde_m16/grab.ogg", t = 1.45},
+            {s = "weapons/arccw/cde_m16/gearhit.ogg", t = 1.6}
         },
     },
     ["reload_empty"] = {
@@ -1326,10 +1332,17 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
+            {s = "weapons/arccw/cde_m16/raise.ogg", t = 0},
             {s = "weapons/arccw/cde_m16/magout.ogg", t = 0.25},
-            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.15},
-            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.25},
-            {s = "weapons/arccw/cde_m16/boltdrop.ogg", t = 1.75}
+            {s = "weapons/arccw/cde_m16/gear1.ogg", t = 0.35},
+            {s = "weapons/arccw/cde_m16/magpouch.ogg", t = 0.7},
+            {s = "weapons/arccw/cde_m16/gear2.ogg", t = 1.0},
+            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.17},
+            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.3},
+            {s = "weapons/arccw/cde_m16/rattle.ogg", t = 1.7},
+            {s = "weapons/arccw/cde_m16/boltdrop.ogg", t = 1.75},
+            {s = "weapons/arccw/cde_m16/grab.ogg", t = 1.7},
+            {s = "weapons/arccw/cde_m16/gearhit.ogg", t = 2.15}
         },
     },
     ["enter_sprint"] = {
@@ -1392,9 +1405,15 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
+            {s = "weapons/arccw/cde_m16/raise.ogg", t = 0},
             {s = "weapons/arccw/cde_m16/magout.ogg", t = 0.25},
-            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.15},
-            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.25}
+            {s = "weapons/arccw/cde_m16/gear1.ogg", t = 0.35},
+            {s = "weapons/arccw/cde_m16/magpouch.ogg", t = 0.7},
+            {s = "weapons/arccw/cde_m16/gear2.ogg", t = 1.0},
+            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.17},
+            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.3},
+            {s = "weapons/arccw/cde_m16/grab.ogg", t = 1.45},
+            {s = "weapons/arccw/cde_m16/gearhit.ogg", t = 1.6}
         },
     },
     ["reload_empty_m203"] = {
@@ -1407,10 +1426,17 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
+            {s = "weapons/arccw/cde_m16/raise.ogg", t = 0},
             {s = "weapons/arccw/cde_m16/magout.ogg", t = 0.25},
-            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.15},
-            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.25},
-            {s = "weapons/arccw/cde_m16/boltdrop.ogg", t = 1.75}
+            {s = "weapons/arccw/cde_m16/gear1.ogg", t = 0.35},
+            {s = "weapons/arccw/cde_m16/magpouch.ogg", t = 0.7},
+            {s = "weapons/arccw/cde_m16/gear2.ogg", t = 1.0},
+            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.17},
+            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.3},
+            {s = "weapons/arccw/cde_m16/rattle.ogg", t = 1.7},
+            {s = "weapons/arccw/cde_m16/boltdrop.ogg", t = 1.75},
+            {s = "weapons/arccw/cde_m16/grab.ogg", t = 1.7},
+            {s = "weapons/arccw/cde_m16/gearhit.ogg", t = 2.15}
         },
     },
     ["enter_sprint_m203"] = {
@@ -1525,9 +1551,15 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
+            {s = "weapons/arccw/cde_m16/raise.ogg", t = 0},
             {s = "weapons/arccw/cde_m16/magout.ogg", t = 0.25},
-            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.15},
-            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.25}
+            {s = "weapons/arccw/cde_m16/gear1.ogg", t = 0.35},
+            {s = "weapons/arccw/cde_m16/magpouch.ogg", t = 0.7},
+            {s = "weapons/arccw/cde_m16/gear2.ogg", t = 1.0},
+            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.17},
+            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.3},
+            {s = "weapons/arccw/cde_m16/grab.ogg", t = 1.45},
+            {s = "weapons/arccw/cde_m16/gearhit.ogg", t = 1.6}
         },
     },
     ["reload_empty_mk"] = {
@@ -1540,10 +1572,17 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
+            {s = "weapons/arccw/cde_m16/raise.ogg", t = 0},
             {s = "weapons/arccw/cde_m16/magout.ogg", t = 0.25},
-            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.15},
-            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.25},
-            {s = "weapons/arccw/cde_m16/boltdrop.ogg", t = 1.75}
+            {s = "weapons/arccw/cde_m16/gear1.ogg", t = 0.35},
+            {s = "weapons/arccw/cde_m16/magpouch.ogg", t = 0.7},
+            {s = "weapons/arccw/cde_m16/gear2.ogg", t = 1.0},
+            {s = "weapons/arccw/cde_m16/magin_fail.ogg", t = 1.17},
+            {s = "weapons/arccw/cde_m16/magin.ogg", t = 1.3},
+            {s = "weapons/arccw/cde_m16/rattle.ogg", t = 1.7},
+            {s = "weapons/arccw/cde_m16/boltdrop.ogg", t = 1.75},
+            {s = "weapons/arccw/cde_m16/grab.ogg", t = 1.7},
+            {s = "weapons/arccw/cde_m16/gearhit.ogg", t = 2.15}
         },
     },
     ["enter_sprint_mk"] = {
