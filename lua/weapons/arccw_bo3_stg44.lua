@@ -432,7 +432,7 @@ SWEP.Hook_GetShootSound = function(wep, sound)
     if silbar then
         return "ArcCW_BO1.M16_Sil"
     elseif sndatt == "stg44_bo1_sound" then
-        return "ArcCW_BO1.HK21_Fire"
+        return "ArcCW_BO1.RPK_Fire"
     elseif sndatt == "stg44_dods_sound" then
         return "ArcCW_BO3.STG44_DOD"
     elseif mp then
@@ -446,7 +446,7 @@ SWEP.Hook_GetDistantShootSound = function(wep, distancesound)
     local sndatt = wep.Attachments[14].Installed
 
     if sndatt == "stg44_bo1_sound" then
-        return "ArcCW_BO1.HK21_Dist"
+        return "ArcCW_BO1.AK74u_Ringoff"
     elseif sndatt == "stg44_dods_sound" then
         return ""
     elseif mp then

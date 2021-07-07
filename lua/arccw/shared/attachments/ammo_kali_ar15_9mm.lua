@@ -27,12 +27,12 @@ att.Override_Ammo = "pistol"
 att.Override_MuzzleEffect = "muzzleflash_smg"
 
 att.Hook_GetShootSound = function(wep, fsound)
-    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return "weapons/arccw/cde_m16/fire_9.ogg" end
-    if fsound == wep.ShootSoundSilenced then return "weapons/arccw/cde_m16/fire_9_sup.ogg" end
+    if fsound == wep.ShootSound or sound == wep.FirstShootSound then return "ArcCW_CDE.M16_9mm" end
+    if fsound == wep.ShootSoundSilenced then return "ArcCW_CDE.M16_9mmSil" end
 end
 
 att.Hook_GetDistantShootSound = function(wep, distancesound)
-    if distancesound == wep.DistantShootSound then return "weapons/arccw/cde_m16/fire_9_dist.ogg" end
+    if distancesound == wep.DistantShootSound then return "ArcCW_CDE.M16_9mmDist" end
 end
 
 -- now that's more like it

@@ -448,6 +448,9 @@ SWEP.Hook_NameChange = function(wep, name)
                 alt = " Perforator"
             end
         elseif length == 3 then -- HK53
+            if stock then
+                alt = "A3"
+            end
             if hk33 then
                 model = "HK53"
                 alt = ""

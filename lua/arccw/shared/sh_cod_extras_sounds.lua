@@ -1,6 +1,15 @@
 -- EXTRAS AR-15 --
 
 sound.Add( {
+    name = "ArcCW_CDE.M16_First",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/cde_m16/first.ogg",
+    }
+} )
+sound.Add( {
     name = "ArcCW_CDE.M16_Auto",
     channel = CHAN_STATIC,
     volume = 1.0,
@@ -13,6 +22,15 @@ sound.Add( {
     }
 } )
 sound.Add( {
+    name = "ArcCW_CDE.M16_Sil",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/cde_m16/sup.ogg",
+    }
+} )
+sound.Add( {
     name = "ArcCW_CDE.M16_Dist",
     channel = CHAN_WEAPON,
     volume = 1.0,
@@ -21,15 +39,35 @@ sound.Add( {
         "weapons/arccw/cde_m16/dist.ogg",
     }
 } )
+
 sound.Add( {
-    name = "ArcCW_CDE.M16_First",
+    name = "ArcCW_CDE.M16_9mm",
     channel = CHAN_STATIC,
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/cde_m16/first.ogg",
+        "weapons/arccw/cde_m16/fire_9.ogg",
     }
 } )
+sound.Add( {
+    name = "ArcCW_CDE.M16_9mmSil",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/cde_m16/fire_9_sup.ogg",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_CDE.M16_9mmDist",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/cde_m16/fire_9_dist.ogg",
+    }
+} )
+
 sound.Add( {
     name = "ArcCW_CDE.M16_MagIn",
     channel = CHAN_ITEM,

@@ -80,7 +80,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.FirstShootSound = "ArcCW_CDE.M16_First"
 SWEP.ShootSound = "ArcCW_CDE.M16_Auto"
-SWEP.ShootSoundSilenced = "weapons/arccw/cde_m16/sup.ogg"
+SWEP.ShootSoundSilenced = "ArcCW_CDE.M16_Sil"
 SWEP.DistantShootSound = "ArcCW_CDE.M16_Dist"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
@@ -1120,24 +1120,6 @@ end
 SWEP.RejectAttachments = {
     ["cde_cosmetic_black"] = true,
 }
-
---[[SWEP.Hook_GetShootSound = function(wep, sound)
-    local sils = wep.Attachments[3].Installed and wep:GetBuff_Override("Silencer")
-
-    if wep.Attachments[10].Installed == "ammo_kali_ar15_9mm" then
-        if sils then return "ArcCW_BO2.Pistol_Sil"
-        else
-            wep.DistantShootSound = ""
-            return "ArcCW_BO1.MP5_Fire"
-        end
-    else wep.DistantShootSound = "ArcCW_CDE.M16_Dist"
-        return
-    end
-
-    if sils then
-        return "ArcCW_BO1.M16_Sil"
-    end
-end]] -- palindrone why would you do this dude this doesn't even fucking work properly
 
 SWEP.Hook_GetCapacity = function(wep, cap)
     local pap = wep:GetBuff_Override("PackAPunch")
