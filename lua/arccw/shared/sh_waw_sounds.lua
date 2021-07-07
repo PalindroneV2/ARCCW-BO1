@@ -669,17 +669,17 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_mg42/mag_in.wav",
+        "weapons/arccw/waw_mg42/in.wav",
     }
 } )
 sound.Add( {
-    name = "ArcCW_WAW.MG42_MagTap",
+    name = "ArcCW_WAW.MG42_Jimmy",
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_mg42/mag_tap.wav",
+        "weapons/arccw/waw_mg42/jimmy.wav",
     }
 } )
 sound.Add( {
@@ -689,17 +689,27 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_mg42/mag_out.wav",
+        "weapons/arccw/waw_mg42/out.wav",
     }
 } )
 sound.Add( {
-    name = "ArcCW_WAW.MG42_Bolt",
+    name = "ArcCW_WAW.MG42_Charge",
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_mg42/bolt_fwd.wav",
+        "weapons/arccw/waw_mg42/charge.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.MG42_Pull",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/waw_mg42/pull.wav",
     }
 } )
 

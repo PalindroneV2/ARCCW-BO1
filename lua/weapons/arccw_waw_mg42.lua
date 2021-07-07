@@ -129,6 +129,7 @@ SWEP.ActivePos = Vector(5, -10, 3)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.InBipodPos = Vector(0, 0, -4)
+SWEP.InBipodAng = Angle(0.3, 0, 0)
 
 SWEP.SprintPos = Vector(14, -10, 0)
 SWEP.SprintAng = Angle(-7.036, 45.016, 0)
@@ -320,9 +321,6 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
-        SoundTable = {
-            {s = "ArcCW_WaW.PPSh_Bolt", t = 19 / 30}
-        },
     },
     ["fire"] = {
         Source = {"fire"},
@@ -354,29 +352,12 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_WAW.PPSh_MagOut", t = 20 / 35},
-            {s = "ArcCW_WAW.PPSh_MagIn", t = 57 / 35},
-            {s = "ArcCW_WAW.PPSh_Bolt", t = 110 / 35},
-        },
-        /*SoundTable = {
+            {s = "ArcCW_WAW.MG42_Jimmy", t = 10 / 35},
             {s = "ArcCW_WAW.MG42_MagOut", t = 20 / 35},
+            {s = "ArcCW_WAW.MG42_Jimmy", t = 37 / 35},
             {s = "ArcCW_WAW.MG42_MagIn", t = 57 / 35},
-            {s = "ArcCW_WAW.MG42_Bolt", t = 110 / 35},
-        },*/
-    },
-    ["reload_empty"] = {
-        Source = "reload",
-        Time = 150 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-        SoundTable = {
-            {s = "ArcCW_WAW.PPSh_MagOut", t = 20 / 35},
-            {s = "ArcCW_WAW.PPSh_MagIn", t = 57 / 35},
-            {s = "ArcCW_WAW.PPSh_Bolt", t = 110 / 35},
+            {s = "ArcCW_WAW.MG42_Pull", t = 100 / 35},
+            {s = "ArcCW_WAW.MG42_Charge", t = 105 / 35},
         },
     },
 }
