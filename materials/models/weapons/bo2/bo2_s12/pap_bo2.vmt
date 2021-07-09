@@ -22,6 +22,5 @@ VertexlitGeneric
 			texturescrollangle 210
 		}
 	}
-	
-	"$nocull" "1"
+	"$nocull" "1"	
 }
