@@ -105,17 +105,6 @@ sound.Add( {
     }
 } )
 
--- DEAGLE SOUND --
-
-sound.Add({
-    name = "ArcCW_CDE.Eagle_Fire",
-    channel = CHAN_STATIC,
-    level = 100,
-    sound = {
-        "weapons/arccw/bo1_python/fire_eagle.wav",
-    }
-})
-
 -- FNV EE --
 
 sound.Add({
@@ -455,5 +444,52 @@ sound.Add( {
     level = 100,
     sound = {
         "weapons/arccw/mw3e_Glock/lift.wav",
+    }
+} )
+
+-- MW3E DEAGLE SOUND --
+
+sound.Add({
+    name = "ArcCW_MW3E.Eagle_Fire",
+    channel = CHAN_STATIC,
+    level = 100,
+    sound = {
+        "weapons/arccw/mw3e_deagle/fire.wav",
+    }
+})
+sound.Add( {
+    name = "ArcCW_MW3E.Eagle_SlideFwd",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/mw3e_deagle/slide.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.Eagle_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/mw3e_deagle/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.Eagle_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/mw3e_deagle/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.Eagle_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/mw3e_deagle/lift.wav",
     }
 } )
