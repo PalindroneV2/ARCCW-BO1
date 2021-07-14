@@ -325,12 +325,16 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     elseif attthing == 1 then
         return anim .. "_m203"
     end
+end
 
-    if anim == "reload" and fastmag then
-        return anim .. "_fast"
+SWEP.Hook_SelectReloadAnimation = function(wep, curanim)
+    local fastmag = wep:GetBuff_Override("BO1_FastMag")
+
+    if curanim == "reload" and fastmag then
+        return curanim .. "_fast"
     end
-    if anim == "reload_empty" and fastmag then
-        return anim .. "_fast"
+    if curanim == "reload_empty" and fastmag then
+        return curanim .. "_fast"
     end
 end
 

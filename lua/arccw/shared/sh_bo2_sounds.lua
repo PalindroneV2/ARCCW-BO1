@@ -114,6 +114,16 @@ sound.Add( {
     }
 } )
 sound.Add( {
+    name = "ArcCW_BO2.PDW57_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_generic_smg/fire_pdw.wav",
+    }
+} )
+sound.Add( {
     name = "ArcCW_BO2.MSMC_Sil",
     channel = CHAN_STATIC,
     volume = 1.0,

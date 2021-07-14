@@ -521,9 +521,6 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "first_draw",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         SoundTable = {
             {s = "ArcCW_BO1.M16_Charge", t = 0}
         },

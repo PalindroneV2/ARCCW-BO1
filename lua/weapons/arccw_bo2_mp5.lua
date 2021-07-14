@@ -332,7 +332,7 @@ SWEP.Attachments = {
     },
     { --7
         PrintName = "Stock",
-        Slot = {"bo1_stock", "bo1_mp5stock"},
+        Slot = {"bo1_stocks_all"},
         DefaultAttName = "No Stock",
         InstalledEles = "bo1_light_stock",
     },
@@ -373,30 +373,36 @@ SWEP.Attachments = {
 
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep.Attachments[10].Installed == "ammo_papunch"
-    local mp5a2 = wep.Attachments[7].Installed == "bo1_solider_stock"
+    local sstock = wep.Attachments[7].Installed == "bo1_solider_stock"
     local mp5sd = wep.Attachments[2].Installed == "supp_bo1_mp5"
     local mp5k = wep.Attachments[2].Installed == "bo1_mp5_mp5k"
 
-    if !pap and !mp5a2 and mp5sd then
+    if mp5k then
+        if pap then
+            return "MP115 Kollider"
+        end
+        return "HK MP5K"
+    end
+
+    if mp5sd then
+        if sstock then
+            if pap then
+                return "MP115 Semiramis"
+            end
+            return "HK MP5SD2"
+        end
+        if pap then
+            return "MP115 Semiramis"
+        end
         return "HK MP5SD3"
-    elseif !pap and mp5a2 and mp5sd then
-        return "HK MP5SD2"
-    elseif !pap and mp5a2 and !mp5sd and !mp5k then
+    end
+
+    if pap then
+        return "MP115 Nimrod"
+    end
+
+    if sstock then
         return "HK MP5A2"
-    elseif pap and mp5a2 and mp5sd then
-        return "MP115 Semiramis"
-    elseif pap and !mp5a2 and !mp5sd and !mp5k then
-        return "MP115 Nimrod"
-    elseif pap and !mp5a2 and mp5sd then
-        return "MP115 Semiramis"
-    elseif pap and mp5a2 and !mp5sd then
-        return "MP115 Nimrod"
-    elseif !pap and mp5k and !mp5a2 then
-        return "HK MP5K"
-    elseif !pap and mp5k and mp5a2 then
-        return "HK MP5K"
-    elseif pap and mp5k and (mp5a2 or !mp5a2) then
-        return "MP115 Kollider"
     end
 end
 
@@ -404,19 +410,6 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[10].Installed == "ammo_papunch"
     local optic = wep.Attachments[1].Installed
-
-    local stock = 0
-    if wep.Attachments[7].Installed == "bo1_light_stock" then stock = 1
-    elseif wep.Attachments[7].Installed == "bo1_solid_stock" then stock = 2
-    elseif wep.Attachments[7].Installed == "bo1_solider_stock" then stock = 3
-    end
-
-    for k = stock, stock do
-        vm:SetBodygroup(4,k)
-        if mp5k then
-            vm:SetBodygroup(4,k + 4)
-        end
-    end
 
     local hand = 0
     if wep.Attachments[2].Installed == "supp_bo1_mp5" then hand = 1
@@ -437,6 +430,19 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if papcamo then
         return vm:SetSkin(2)
+    end
+
+    local stock = 0
+    if wep.Attachments[7].Installed == "bo1_light_stock" then stock = 1
+    elseif wep.Attachments[7].Installed == "bo1_solid_stock" then stock = 2
+    elseif wep.Attachments[7].Installed == "bo1_solider_stock" then stock = 3
+    end
+
+    for k = stock, stock do
+        vm:SetBodygroup(4, k)
+        if hand == 3 then
+            vm:SetBodygroup(4, k + 4)
+        end
     end
 end
 

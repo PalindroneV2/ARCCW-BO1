@@ -33,7 +33,7 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 45
+SWEP.Damage = 50
 SWEP.DamageMin = 25 -- damage done at maximum range
 SWEP.Range = 75 -- in METRES
 SWEP.Penetration = 3
@@ -50,7 +50,7 @@ SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 8 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 14
+SWEP.ExtendedClipSize = 30
 SWEP.ReducedClipSize = 6
 
 SWEP.Recoil = 0.5

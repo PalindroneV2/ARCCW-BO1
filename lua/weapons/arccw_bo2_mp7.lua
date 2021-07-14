@@ -188,10 +188,10 @@ SWEP.Attachments = {
     { --1
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(1.5, 0, 2.6), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(1.25, 0, 2.6), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(5.5, 1.2, -7.5),
             wang = Angle(172.5, 181.75, 0)
@@ -236,7 +236,7 @@ SWEP.Attachments = {
     },
     { --6
         PrintName = "Magazine",
-        Slot = {"bo1_mag"},
+        Slot = {"bo2_fastmag"},
         DefaultAttName = "Standard Magazine",
     },
     { --7
@@ -301,31 +301,21 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     local attthing
     if wep:GetBuff_Override("BO1_UBFG") then attthing = 1
     end
-    local fastmag = wep:GetBuff_Override("BO1_FastMag")
 
     if attthing == 1 then
         return anim .. "_grip"
     end
+end
 
-    if anim == "reload" and attthing == 1 then
-        if fastmag then
-            return "reload_grip_fast"
-        else
-            return "reload_grip"
-        end
+SWEP.Hook_SelectReloadAnimation = function(wep, curanim)
+    local fastmag = wep:GetBuff_Override("BO1_FastMag")
+    local grasp = wep:GetBuff_Override("BO1_UBFG")
+
+    if grasp and fastmag then
+        return curanim .. "_grip_fast"
     end
-    if anim == "reload_empty" and attthing == 1 then
-        if fastmag then
-            return "reload_empty_grip_fast"
-        else
-            return "reload_empty_grip"
-        end
-    end
-    if anim == "reload" and fastmag then
-        return "reload_fast"
-    end
-    if anim == "reload_empty" and fastmag then
-        return "reload_empty_fast"
+    if fastmag then
+        return curanim .. "_fast"
     end
 end
 
@@ -399,30 +389,32 @@ SWEP.Animations = {
     },
     ["reload_fast"] = {
         Source = "reload_fast",
-        Time = 2.4333 * 1.25,
+        Time = 2.4333,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Framerate = 30,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
+        MinProgress = 40 / 30,
         SoundTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 16 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 51 / 30}
+            {s = "ArcCW_BO2.MP7_Out", t = 10 / 30},
+            {s = "ArcCW_BO2.MP7_In", t = 40 / 30},
         },
     },
     ["reload_empty_fast"] = {
         Source = "reload_empty_fast",
-        Time = 2.7333 * 1.25,
+        Time = 2.7333,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Framerate = 30,
         Checkpoints = {16, 36, 59},
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
+        MinProgress = 55 / 30,
         SoundTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 16 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 51 / 30},
-            {s = "ArcCW_BO2.MP7_Charge", t = 74 / 30},
+            {s = "ArcCW_BO2.MP7_Out", t = 10 / 30},
+            {s = "ArcCW_BO2.MP7_In", t = 40 / 30},
+            {s = "ArcCW_BO1.M16_Button", t = 59 / 30},
         },
     },
     ["enter_sprint"] = {
@@ -511,31 +503,32 @@ SWEP.Animations = {
     },
     ["reload_grip_fast"] = {
         Source = "reload_grip_fast",
-        Time = 80 / 35,
+        Time = 2.4333,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Framerate = 35,
-        Checkpoints = {16, 36},
+        Framerate = 30,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
+        MinProgress = 40 / 30,
         SoundTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 16 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 51 / 30}
+            {s = "ArcCW_BO2.MP7_Out", t = 10 / 30},
+            {s = "ArcCW_BO2.MP7_In", t = 40 / 30},
         },
     },
     ["reload_empty_grip_fast"] = {
         Source = "reload_empty_grip_fast",
-        Time = 120 / 35,
+        Time = 2.7333,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Framerate = 35,
+        Framerate = 30,
         Checkpoints = {16, 36, 59},
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
+        MinProgress = 55 / 30,
         SoundTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 16 / 35},
-            {s = "ArcCW_BO2.MP7_In", t = 51 / 35},
-            {s = "ArcCW_BO2.MP7_Charge", t = 74 / 35},
+            {s = "ArcCW_BO2.MP7_Out", t = 10 / 30},
+            {s = "ArcCW_BO2.MP7_In", t = 40 / 30},
+            {s = "ArcCW_BO1.M16_Button", t = 59 / 30},
         },
     },
     ["enter_sprint_grip"] = {

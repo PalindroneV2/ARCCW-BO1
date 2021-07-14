@@ -120,10 +120,10 @@ SWEP.HoldtypeSights = "revolver"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.ActivePos = Vector(0, 2.5, 0)
+SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(0, 2.5, 0)
+SWEP.SprintPos = Vector(0, 0, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(13, 0, -2)
@@ -224,19 +224,19 @@ SWEP.Animations = {
     },
     ["draw_empty"] = {
         Source = "draw_empty",
-        Time = 0.5,
+        Time = 0.75,
     },
     ["draw"] = {
         Source = "draw",
-        Time = 0.5,
+        Time = 1,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
-        Time = 0.5,
+        Time = 0.75,
     },
     ["holster"] = {
-        Source = "empty",
-        Time = 0.5,
+        Source = "holster",
+        Time = 1,
     },
     ["ready"] = {
         Source = "first_draw",
