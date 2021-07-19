@@ -237,7 +237,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetSkin(k)
     end
     if papcamo then
-        vm:SetSkin(4)
+        vm:SetSkin(5)
     end
 end
 
