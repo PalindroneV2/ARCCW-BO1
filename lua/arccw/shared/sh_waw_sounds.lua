@@ -654,7 +654,7 @@ sound.Add( {
 
 sound.Add( {
     name = "ArcCW_WAW.MG42_Fire",
-    channel = CHAN_USER_BASE,
+    channel = CHAN_STATIC,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
