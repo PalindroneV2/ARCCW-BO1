@@ -1,16 +1,15 @@
-att.PrintName = "M203 (HE)(BO1)"
-att.Icon = Material("entities/acwatt_ubgl_bo1_m203.png", "mips smooth")
-att.Description = "Selectable Grenade Launcher equipped under the rifle's handguard. Double tap +ZOOM to equip/dequip."
+att.PrintName = "Combine Launcher (HE)(BO2)"
+att.Icon = Material("entities/acwatt_ubgl_m27_m320.png", "mips smooth")
+att.Description = "Selectable Grenade Launcher special made by the Combine for their MP7s. Double tap +ZOOM to equip/dequip."
 att.Desc_Pros = {
     "+ Selectable Grenade Launcher.",
 }
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = "bo1_m203"
-att.GivesFlags = {"ubanims"}
-att.ExcludeFlags = {"kali_barrel_short"}
-att.BO1_UBGL = true
+att.Slot = "bo2_mp7_combine"
+att.GivesFlags = {"mp7_combine"}
+att.RequireFlags = {"mp7_foregrip"}
 
 att.SortOrder = 100
 
@@ -19,7 +18,7 @@ att.MountPositionOverride = 0
 att.UBGL = true
 att.UBGL_BaseAnims = true
 
-att.UBGL_PrintName = "M203 (HE)"
+att.UBGL_PrintName = "M320 (HE)"
 att.UBGL_Automatic = true
 att.UBGL_MuzzleEffect = "muzzleflash_m79"
 att.UBGL_ClipSize = 1
@@ -27,7 +26,7 @@ att.UBGL_Ammo = "smg1_grenade"
 att.UBGL_RPM = 300
 att.UBGL_Recoil = 1
 att.UBGL_Capacity = 1
-att.UBGL_Icon = Material("entities/acwatt_ubgl_bo1_m203.png")
+att.UBGL_Icon = Material("entities/acwatt_ubgl_m27_m320.png")
 
 local function Ammo(wep)
     return wep.Owner:GetAmmoCount("smg1_grenade")
@@ -42,7 +41,7 @@ att.UBGL_NPCFire = function(wep, ubgl)
 
     wep:PlayAnimation("fire_glsetup")
 
-    wep:FireRocket("arccw_m203_he_bo1", 4000)
+    wep:FireRocket("arccw_25mm_he_bo1", 4000)
 
     wep:EmitSound("ArcCW_BO1.M203_Fire", 100)
 
@@ -56,7 +55,7 @@ att.UBGL_Fire = function(wep, ubgl)
 
     wep:PlayAnimation("fire_glsetup")
 
-    wep:FireRocket("arccw_m203_he_bo1", 4000)
+    wep:FireRocket("arccw_25mm_he_bo1", 4000)
 
     wep:EmitSound("ArcCW_BO1.M203_Fire", 100)
 
@@ -70,9 +69,9 @@ att.UBGL_Reload = function(wep, ubgl)
 
     if Ammo(wep) <= 0 then return end
 
-    wep:SetNextSecondaryFire(CurTime() + 3)
+    wep:SetNextSecondaryFire(CurTime() + 1.5)
 
-    wep:PlayAnimation("reload_glsetup")
+    wep:PlayAnimation("idle_grip")
 
     /*
     wep:PlaySoundTable({

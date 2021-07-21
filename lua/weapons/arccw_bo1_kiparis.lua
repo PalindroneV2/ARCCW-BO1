@@ -150,7 +150,7 @@ SWEP.AttachmentElements = {
     },
     ["ammo_papunch"] = {
         NamePriority = 10,
-        NameChange = "Ministersvo",
+        NameChange = "Die Breaker",
         Mult_RPM = 1.1,
     },
     ["mount"] = {

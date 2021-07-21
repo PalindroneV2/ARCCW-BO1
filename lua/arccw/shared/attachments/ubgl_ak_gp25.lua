@@ -41,7 +41,7 @@ att.UBGL_NPCFire = function(wep, ubgl)
 
     wep:PlayAnimation("fire_glsetup")
 
-    wep:FireRocket("arccw_gp25_he_bo1", 30000)
+    wep:FireRocket("arccw_gp25_he_bo1", 4000)
 
     wep:EmitSound("ArcCW_BO1.M203_Fire", 100)
 
@@ -55,7 +55,7 @@ att.UBGL_Fire = function(wep, ubgl)
 
     wep:PlayAnimation("fire_glsetup")
 
-    wep:FireRocket("arccw_gp25_he_bo1", 30000)
+    wep:FireRocket("arccw_gp25_he_bo1", 4000)
 
     wep:EmitSound("ArcCW_BO1.M203_Fire", 100)
 

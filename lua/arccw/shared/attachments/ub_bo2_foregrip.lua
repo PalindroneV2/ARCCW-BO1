@@ -28,6 +28,7 @@ att.LHIK = true
 att.Model = "models/weapons/arccw/atts/bo2_foregrip.mdl"
 
 att.Override_HoldtypeActive = "smg"
+att.Override_HoldtypeSights = "smg"
 
 att.Flashlight = false
 att.FlashlightFOV = 50

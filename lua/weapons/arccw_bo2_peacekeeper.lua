@@ -21,9 +21,9 @@ SWEP.WorldModel = "models/weapons/arccw/w_bo2_peacekeeper.mdl"
 SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_peacekeeper.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1,
-    pos        =    Vector(-9, 4.5, -4.5),
-    ang        =    Angle(-10, -1, 180),
+    scale = 1.1,
+    pos        =    Vector(-4.5, 3.75, -5),
+    ang        =    Angle(-10, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
@@ -119,8 +119,8 @@ SWEP.IronSightStruct = {
 }
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "smg"
-SWEP.HoldtypeSights = "smg"
+SWEP.HoldtypeActive = "ar2"
+SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
@@ -182,8 +182,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(3, 0, 3.65), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(5.5, 1.2, -7.5),
-            wang = Angle(172.5, 181.75, 0)
         },
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
@@ -213,8 +211,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(9, 1.1, 2.35), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, -90),
-            wpos = Vector(16, 0.4, -6),
-            wang = Angle(-7.5, 0, 85)
         },
     },
     { --5
@@ -242,8 +238,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0, -0.45, 2.75),
             vang = Angle(0, 0, 0),
-            wpos = Vector(5.25, 1.5, -3.25),
-            wang = Angle(-175, -175, 0)
         },
     },
     {
@@ -251,10 +245,8 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(8.5, 0, 1.4), -- offset that the attachment will be relative to the bone
+            vpos = Vector(7, -0.25, 1.65), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(15, 1.15, -5.5),
-            wang = Angle(170, -180, 0),
         },
         GivesFlags = {"customgrip"},
     }, --10

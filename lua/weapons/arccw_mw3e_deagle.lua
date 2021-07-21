@@ -44,12 +44,12 @@ SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 9 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 14
+SWEP.ExtendedClipSize = 18
 
-SWEP.Recoil = 1.5
-SWEP.RecoilSide = 1.5
-SWEP.RecoilRise = 1.5
-SWEP.VisualRecoilMult = 1
+SWEP.Recoil = 1.25
+SWEP.RecoilSide = 1.25
+SWEP.RecoilRise = 1.25
+SWEP.VisualRecoilMult = 0.75
 
 SWEP.Delay = 60 / 300 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -65,7 +65,7 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = {"weapon_357", "weapon_pistol"}
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 3.75 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 3.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 350 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 200
 
@@ -77,7 +77,7 @@ SWEP.MagID = "deagle" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_MW3E.Eagle_Fire"
+SWEP.ShootSound = "ArcCW_MW3E.Eagle_357"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.Pistol_Sil"
 SWEP.DistantShootSound = "ArcCW_BO1.Python_RingOff"
 
@@ -193,6 +193,11 @@ SWEP.Attachments = {
         },
     },
     { --5
+        PrintName = "Caliber",
+        Slot = {"mw3e_ammo_deagle"},
+        DefaultAttName = "9rnd .357 Magnum",
+    },
+    { --5
         PrintName = "Ammo Type",
         Slot = {"ammo_pap"}
     },
@@ -212,7 +217,7 @@ SWEP.Attachments = {
             wang = Angle(-5, -2, 177.5)
         },
     },
-    { --8
+    { --9
         PrintName = "Cosmetic",
         Slot = {"cde_cosmetic", "cde_cosmetic_silver", "cde_cosmetic_steel"},
         FreeSlot = true,
@@ -225,12 +230,12 @@ SWEP.RejectAttachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[5].Installed == "ammo_papunch"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
     local camo = 0
-    if wep.Attachments[8].Installed == "cde_cosmetic_silver" then camo = 1
-    elseif wep.Attachments[8].Installed == "cde_cosmetic_steel" then camo = 2
-    elseif wep.Attachments[8].Installed == "cde_cosmetic_od" then camo = 3
-    elseif wep.Attachments[8].Installed == "cde_cosmetic_red" then camo = 4
+    if wep.Attachments[9].Installed == "cde_cosmetic_silver" then camo = 1
+    elseif wep.Attachments[9].Installed == "cde_cosmetic_steel" then camo = 2
+    elseif wep.Attachments[9].Installed == "cde_cosmetic_od" then camo = 3
+    elseif wep.Attachments[9].Installed == "cde_cosmetic_red" then camo = 4
     end
 
     for k = camo, camo do

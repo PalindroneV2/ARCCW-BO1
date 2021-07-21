@@ -4,7 +4,7 @@ VertexlitGeneric
 	$bumpmap	"models\weapons\mw3\mw3_deagle\desert_eagle_n"
 	$detail "models\weapons\bo1\od_green"
 	$detailblendmode 1
-	$detailblendfactor 0.2
+	$detailblendfactor 0.35
 
 	$phong                      		1
 	$phongexponent                      "20"

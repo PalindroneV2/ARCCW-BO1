@@ -179,6 +179,11 @@ SWEP.AttachmentElements = {
             {ind = 4, bg = 1},
         },
     },
+    ["mp7_combine"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 1}
+        },
+    },
 }
 
 SWEP.RejectAttachments = {
@@ -203,7 +208,7 @@ SWEP.Attachments = {
     { --2
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = "muzzle",
+        Slot = {"muzzle", "bo2_mp7_combine"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(9.9, 0, 0.375), -- offset that the attachment will be relative to the bone

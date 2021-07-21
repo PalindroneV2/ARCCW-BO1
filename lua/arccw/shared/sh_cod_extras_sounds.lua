@@ -450,11 +450,27 @@ sound.Add( {
 -- MW3E DEAGLE SOUND --
 
 sound.Add({
-    name = "ArcCW_MW3E.Eagle_Fire",
+    name = "ArcCW_MW3E.Eagle_357",
     channel = CHAN_STATIC,
     level = 100,
     sound = {
-        "weapons/arccw/mw3e_deagle/fire.wav",
+        "weapons/arccw/mw3e_deagle/fire_357.wav",
+    }
+})
+sound.Add({
+    name = "ArcCW_MW3E.Eagle_44",
+    channel = CHAN_STATIC,
+    level = 100,
+    sound = {
+        "weapons/arccw/mw3e_deagle/fire_44.wav",
+    }
+})
+sound.Add({
+    name = "ArcCW_MW3E.Eagle_50",
+    channel = CHAN_STATIC,
+    level = 100,
+    sound = {
+        "weapons/arccw/mw3e_deagle/fire_50.wav",
     }
 })
 sound.Add( {

@@ -1,9 +1,9 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\mw3\mw3_deagle\gold_eagle"
+	$basetexture	"models\weapons\mw3\mw3_deagle\steel_eagle"
 	//$color2 "[0.5 0.5 0.5]"
 	$bumpmap	"models\weapons\mw3\mw3_deagle\desert_eagle_n"
-	$detail		"models\weapons\bo1\gold_c"
+	$detail		"models\weapons\bo1\gold_s"
 	$envmapmask	"models\weapons\bo1\gold_s"
 	$detailblendmode 0
 	$detailblendfactor 1
@@ -17,7 +17,7 @@ VertexlitGeneric
 	$blendtintbybasealpha  "1"
 	$normalmapalphaenvmapmask "1"
 	
-	$envmap "env_cubemap"
+	//$envmap "env_cubemap"
 	$envmaptint "[1 .75 .25]"
 	$envmapfresnel "[1 1 1]"
 

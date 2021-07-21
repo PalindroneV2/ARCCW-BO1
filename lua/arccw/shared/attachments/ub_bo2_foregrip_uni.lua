@@ -28,6 +28,7 @@ att.Mult_HipDispersion = 1.2
 att.Mult_SpeedMult = 0.95
 
 att.Override_HoldtypeActive = "smg"
+att.Override_HoldtypeSights = "smg"
 
 att.Flashlight = false
 att.FlashlightFOV = 50

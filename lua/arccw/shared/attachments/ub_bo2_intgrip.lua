@@ -13,8 +13,11 @@ att.BO1_UBFG = true
 att.AutoStats = true
 
 att.Slot = "bo2_intgrip"
-att.GivesFlags = {"ubanims"}
+att.GivesFlags = {"ubanims", "mp7_foregrip"}
 att.IntegratedGrip = true
+
+att.Override_HoldtypeActive = "smg"
+att.Override_HoldtypeSights = "smg"
 
 att.Mult_Recoil = 0.85
 
