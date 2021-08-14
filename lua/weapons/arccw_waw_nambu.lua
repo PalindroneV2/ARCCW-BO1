@@ -24,7 +24,7 @@ SWEP.WorldModelOffset = {
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.MirrorVMWM = true
-SWEP.ViewModelFOV = 60
+SWEP.ViewModelFOV = 70
 
 SWEP.Damage = 28
 SWEP.DamageMin = 20 -- damage done at maximum range
@@ -91,8 +91,8 @@ SWEP.SightedSpeedMult = 0.75
 SWEP.SightTime = 0.175
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-6.355, -12.922, 2.5),
-    Ang = Angle(0.25, 0.05, 0),
+    Pos = Vector(-5.35, -12.535, 2.42),
+    Ang = Angle(0, 0., 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
@@ -104,7 +104,7 @@ SWEP.HoldtypeSights = "revolver"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(-1, -7.5, 1.5)
+SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(1, -5, 0)
@@ -117,7 +117,7 @@ SWEP.BarrelLength = 12
 
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
-        NameChange = "Type 115 Samurai Nambu",
+        NameChange = "Type 115",
         VMSkin = 1
     },
 }
@@ -208,12 +208,12 @@ SWEP.Animations = {
         Source = "deploy",
         FrameRate = 60,
         SoundTable = {
-            {s = "ArcCW_BO2.M1911_SlideBack", t = 17 / 60},
+            {s = "ArcCW_BO2.M1911_SlideBack", t = 15 / 60},
             {s = "ArcCW_BO2.M1911_SlideFwd", t = 30 / 60}
         },
         LHIK = true,
         LHIKIn = 14 / 60,
-        LHIKOut = 10 / 60,
+        LHIKOut = 1 / 60,
     },
     ["fire"] = {
         Source = {"fire"},
@@ -225,16 +225,6 @@ SWEP.Animations = {
         FrameRate = 60,
         ShellEjectAt = 0,
     },
-    ["fire_iron"] = {
-        Source = "fire_irons",
-        FrameRate = 60,
-        ShellEjectAt = 0,
-    },
-    ["fire_iron_empty"] = {
-        Source = "fire_irons_empty",
-        FrameRate = 60,
-        ShellEjectAt = 0,
-    },
     ["reload"] = {
         Source = "reload",
         FrameRate = 60,
@@ -243,9 +233,8 @@ SWEP.Animations = {
         LHIKIn = 14 / 60,
         LHIKOut = 10 / 60,
         SoundTable = {
-            {s = "ArcCW_WAW.P38_Out", t = 27 / 60},
-            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 28 / 60},
-            {s = "ArcCW_WAW.P38_In", t = 87 / 60},
+            {s = "ArcCW_WAW.P38_Out", t = 29 / 60},
+            {s = "ArcCW_WAW.P38_In", t = 58 / 60},
         },
     },
     ["reload_empty"] = {
@@ -256,25 +245,10 @@ SWEP.Animations = {
         LHIKIn = 14 / 60,
         LHIKOut = 10 / 60,
         SoundTable = {
-            {s = "ArcCW_WAW.P38_Out", t = 27 / 60},
-            {s = "ArcCW_BO2.M1911_SlideFwd", t = 28 / 60},
-            {s = "ArcCW_WAW.P38_In", t = 87 / 60},
-            {s = "ArcCW_BO2.Pistol_SlideBack", t = 125 / 60},
-            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 138 / 60}
+            {s = "ArcCW_WAW.P38_Out", t = 29 / 60},
+            {s = "ArcCW_WAW.P38_In", t = 78 / 60},
+            {s = "ArcCW_BO2.Pistol_SlideBack", t = 112 / 60},
+            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 125 / 60}
         },
-    },
-    ["bash"] = {
-        Source = "bash",
-        FrameRate = 60,
-        LHIK = true,
-        LHIKIn = 14 / 60,
-        LHIKOut = 10 / 60,
-    },
-    ["bash_empty"] = {
-        Source = "bash_empty",
-        FrameRate = 60,
-        LHIK = true,
-        LHIKIn = 14 / 60,
-        LHIKOut = 10 / 60,
     },
 }
