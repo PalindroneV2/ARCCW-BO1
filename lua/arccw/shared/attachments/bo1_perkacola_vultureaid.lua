@@ -17,7 +17,7 @@ att.BO1_VultureAid = true
 att.AttachSound = "weapons/arccw/bo1_perks/perk_vulture.wav"
 
 local function drop(ent, attacker)
-    local wep = attacker:GetActiveWeapon()
+    local wep = IsValid(attacker) and attacker:IsPlayer() and attacker:GetActiveWeapon()
     if not IsValid(wep) or not wep.ArcCW or not wep:GetBuff_Override("BO1_VultureAid") then return end
 
     local mult = ent:IsPlayer() and 3 or (math.Clamp(ent:GetMaxHealth() / 100, 0.1, 6))
