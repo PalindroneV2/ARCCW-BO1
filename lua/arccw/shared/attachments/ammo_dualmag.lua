@@ -12,5 +12,7 @@ att.ExcludeFlags = {"mp5k", "ubanims"}
 att.GivesFlags = {"bo1_dual_mag", "bo2_fastmags"}
 att.BO1_FastMag = true
 
-att.SortOrder = 100
 att.Mult_ReloadTime = 0.75
+att.Mult_SightTime = 1.15
+att.Mult_DrawTime = 1.25
+att.Mult_HolsterTime = 1.25

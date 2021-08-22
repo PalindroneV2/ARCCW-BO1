@@ -187,7 +187,7 @@ SWEP.Attachments = {
     },
     { --3
         PrintName = "Underbarrel",
-        Slot = {"foregrip_pistol", "style_pistol"},
+        Slot = {"foregrip"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(0, 0, 0), -- offset that the attachment will be relative to the bone

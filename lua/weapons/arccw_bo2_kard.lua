@@ -28,16 +28,13 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 45
-SWEP.DamageMin = 25 -- damage done at maximum range
-SWEP.Range = 60 -- in METRES
-SWEP.Penetration = 3
-SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 250 -- projectile or phys bullet muzzle velocity
--- IN M/S
+SWEP.Damage = 44
+SWEP.DamageMin = 4
+SWEP.RangeMin = 5
+SWEP.Range = 60
 
-SWEP.CanFireUnderwater = true
+SWEP.Penetration = 5
+SWEP.DamageType = DMG_BULLET
 
 SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
@@ -47,8 +44,8 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 12 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 24
 
-SWEP.Recoil = 0.3
-SWEP.RecoilSide = 0.3
+SWEP.Recoil = 0.75
+SWEP.RecoilSide = 0.75
 SWEP.RecoilRise = 1
 
 SWEP.Delay = 60 / 937 -- 60 / RPM.
@@ -68,8 +65,8 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_pistol"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 3.25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 250 -- inaccuracy added by hip firing.
+SWEP.AccuracyMOA = 6 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 350 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
 SWEP.ShootWhileSprint = false
@@ -174,13 +171,12 @@ SWEP.Attachments = {
     },
     { --3
         PrintName = "Underbarrel",
-        Slot = {"foregrip_pistol", "style_pistol"},
+        Slot = {"foregrip"},
         Bone = "tag_weapon",
+        VMScale = Vector(1, 1, 1),
         Offset = {
-            vpos = Vector(2.5, 0.1, -0.3),
-            vang = Angle(0, 0, 0),
-            wpos = Vector(7.238, 1.9, -2.622),
-            wang = Angle(90, 0, 0)
+            vpos = Vector(5.5, 0, -1.75),
+            vang = Angle(0, 0, 0)
         },
     },
     { --4

@@ -28,16 +28,13 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 37
-SWEP.DamageMin = 31 -- damage done at maximum range
-SWEP.Range = 75 -- in METRES
-SWEP.Penetration = 7
-SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 762 -- projectile or phys bullet muzzle velocity
--- IN M/S
+SWEP.Damage = 34
+SWEP.DamageMin = 10
+SWEP.RangeMin = 25
+SWEP.Range = 100
 
-SWEP.CanFireUnderwater = true
+SWEP.Penetration = 20
+SWEP.DamageType = DMG_BULLET
 
 SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
@@ -47,11 +44,11 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 20 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 35
 
-SWEP.Recoil = 0.4
+SWEP.Recoil = 0.85
 SWEP.RecoilSide = 0.5
 SWEP.RecoilRise = 1
 
-SWEP.Delay = 60 / 750 -- 60 / RPM.
+SWEP.Delay = 60 / 600 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -65,9 +62,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_pistol"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 2 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 250 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 3 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 300 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 120
 
 SWEP.ShootWhileSprint = false
 
@@ -156,7 +153,7 @@ SWEP.Attachments = {
         Slot = {"optic_lp", "bo1_lp_optic"},
         Bone = "j_bolt",
         Offset = {
-            vpos = Vector(-1, 0.1, 0.25),
+            vpos = Vector(-1, 0.1, 0.1),
             vang = Angle(0, 0, 0),
         },
         CorrectivePos = Vector(0, 0, 0.0125),
@@ -176,7 +173,7 @@ SWEP.Attachments = {
     },
     { --3
         PrintName = "Underbarrel",
-        Slot = {"foregrip_pistol", "style_pistol"},
+        Slot = {"foregrip"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(2.5, 0.1, -0.3),
@@ -187,7 +184,7 @@ SWEP.Attachments = {
     },
     { --4
         PrintName = "Tactical",
-        Slot = {"bo1_tacpistol"},
+        Slot = {"bo1_tacpistol", "tac_pistol"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(3.5, 0, 0.2),
