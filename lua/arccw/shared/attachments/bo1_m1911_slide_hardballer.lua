@@ -4,7 +4,7 @@ att.AbbrevName = "Hardballer Slide"
 att.Icon = Material("entities/acwatt_1911_shiny2.png", "smooth mips")
 att.Description = "An aftermarket extended length slide in nickel finish.\nNo pity. No pain. No fear."
 
-att.Desc_Neutrals = {"bo1_m1911.hardballer"}
+att.Desc_Neutrals = {"bo1.m1911.hardballer"}
 
 att.Slot = "m1911_slide"
 att.Free = true
