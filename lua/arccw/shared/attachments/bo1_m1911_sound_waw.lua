@@ -1,11 +1,9 @@
-att.PrintName = "WAW Sound"
+att.PrintName = "M1911A1 World At War Sound"
+att.AbbrevName = "World At War"
+
 att.Icon = Material("entities/acwatt_waw_logo.png", "smooth mips")
 att.Description = "M1911A1 sound from World at War"
-att.Desc_Pros = {
-}
-att.Desc_Cons = {
-}
-att.Slot = "1911_sound"
+att.Slot = "bo1_m1911_sound"
 
 att.Free = true
 

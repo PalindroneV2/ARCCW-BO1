@@ -1,12 +1,10 @@
-att.PrintName = "BO2 Sound"
+att.PrintName = "M1911A1 Black Ops 2 Sound"
+att.AbbrevName = "Black Ops 2"
+
 att.Icon = Material("entities/acwatt_bo2_logo.png", "smooth mips")
 att.Description = "M1911A1 sound from Black Ops 2"
-att.Desc_Pros = {
-}
-att.Desc_Cons = {
-}
-att.Slot = "1911_sound"
 
+att.Slot = "bo1_m1911_sound"
 att.Free = true
 
 

@@ -229,7 +229,7 @@ SWEP.Attachments = {
         Slot = "bo1_perk"
     },
     { --6
-        PrintName = "Charms",
+        PrintName = "Charm",
         Slot = "charm",
         Bone = "j_bolt",
         Offset = {

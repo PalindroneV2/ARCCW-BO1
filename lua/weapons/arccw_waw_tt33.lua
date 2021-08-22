@@ -180,7 +180,7 @@ SWEP.Attachments = {
         Slot = "bo1_perk"
     },
     { --5
-        PrintName = "Charms",
+        PrintName = "Charm",
         Slot = "charm",
         Bone = "j_bolt",
         VMScale = Vector(0.75, 0.75, 0.75),

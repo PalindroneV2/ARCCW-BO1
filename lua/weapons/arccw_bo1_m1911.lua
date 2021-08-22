@@ -9,7 +9,7 @@ SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = [[
     This handgun is a staple of firearm design. It would come to influence many future semi-automatic handguns.
     The M1911 has been in service with military forces, law enforcement agencies and civilians for over 100 years.
-    
+
     The pistol that forgot to become obsolete.
 ]]
 SWEP.Trivia_Manufacturer = "Colt"
@@ -71,7 +71,7 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_pistol"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 3.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 250 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
@@ -149,6 +149,25 @@ SWEP.AttachmentElements = {
     ["ammo_1911_pap"] = {
         NameChange = "C-3000 B1AT-CH35",
     },
+    ["slide_short"] = {
+        NameChange = "Colt Commander",
+        NameChange_Priority = -1,
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(4.5, 0.1, 1.05),
+            }
+        },
+    },
+    ["slide_hardballer"] = {
+        NameChange = "AMT Hardballer",
+        NameChange_Priority = -1,
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(8, 0.1, 1.05),
+            }
+        },
+    },
+    --[[]
     ["m1911_spframe"] = {
         VMBodygroups = {
             {ind = 0, bg = 2},
@@ -320,27 +339,28 @@ SWEP.AttachmentElements = {
             }
         },
     },
+    ]]
 }
 
 SWEP.ExtraSightDist = 2
 
 SWEP.Attachments = {
-    { --1
-        PrintName = "Irons",
-        DefaultAttName = "G.I. Irons",
-        Slot = {"m1911_irons"},
+    {
+        PrintName = "Slide",
+        DefaultAttName = "Standard Slide",
+        Slot = "m1911_slide",
         FreeSlot = true,
     },
-    { --2
+    {
         PrintName = "Frame",
-        DefaultAttName = "G.I. Frame",
-        Slot = {"m1911_frame", "m1911_hdframe", "m1911_shiny", "m1911_shframe"},
+        DefaultAttName = "Standard Frame",
+        Slot = "m1911_frame",
         FreeSlot = true,
     },
-    { --3
+    {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = "muzzle",
+        Slot = {"muzzle", "1911_barrel"},
         VMScale = Vector(1, 0.75, 0.75),
         WMScale = Vector(1, 0.75, 0.75),
         Bone = "tag_Weapon",
@@ -348,23 +368,22 @@ SWEP.Attachments = {
             vpos = Vector(5.6, 0.1, 1.05),
             vang = Angle(0, 0, 0),
         },
-        MergeSlots = {10},
     },
-    { --4
+    {
+        Hidden = true,
         PrintName = "Underbarrel",
-        Slot = {"foregrip_pistol", "style_pistol"},
+        Slot = {"foregrip"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(2.5, 0.1, -0.3),
+            vpos = Vector(3, 0.1, -0.1),
             vang = Angle(0, 0, 0),
             wpos = Vector(7.238, 1.9, -2.622),
             wang = Angle(90, 0, 0)
         },
-        --MergeSlots = {14}
     },
-    { --5
+    {
         PrintName = "Tactical",
-        Slot = {"bo1_tacpistol"},
+        Slot = {"bo1_tacpistol", "tac_pistol"},
         VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {
@@ -373,20 +392,22 @@ SWEP.Attachments = {
             wpos = Vector(8.5, 2, -2.9),
             wang = Angle(-5, -2, 177.5)
         },
+        MergeSlots = {4},
     },
-    { --6
+    {
         PrintName = "Ammo Type",
         Slot = {"ammo_pap", "ammo_1911_pap"}
     },
-    { --7
+    {
         PrintName = "Perk",
         Slot = "bo1_perk"
     },
-    { --8
-        PrintName = "Charms",
+    {
+        PrintName = "Charm",
         Slot = "charm",
         Bone = "j_bolt",
         VMScale = Vector(0.55, 0.55, 0.55),
+        FreeSlot = true,
         Offset = {
             vpos = Vector(5, -0.3, -0.85),
             vang = Angle(0, 0, 0),
@@ -394,105 +415,65 @@ SWEP.Attachments = {
             wang = Angle(-5, -2, 177.5)
         },
     },
-    { --9
-        PrintName = "Sound",
-        DefaultAttName = "BO1 Sound",
-        Slot = "1911_sound",
+    {
+        PrintName = "Finish",
+        DefaultAttName = "Black Ops 1",
+        Slot = "bo1_m1911_finish",
         FreeSlot = true,
     },
-    { -- 10
-        Hidden = true,
-        Slot = "1911_barrel"
-    },
-    { -- 11
-        Hidden = true,
-        Slot = "1911akimbo",
+    {
+        PrintName = "Sound",
+        DefaultAttName = "Black Ops 1",
+        Slot = "bo1_m1911_sound",
+        FreeSlot = true,
     },
 }
 
-SWEP.Hook_NameChange = function(wep, name)
-
-    if wep:GetBuff_Override("PackAPunch") then return end
-
-    if wep:GetBuff_Override("ColtShort") then
-        return "Colt Officer"
-    elseif wep:GetBuff_Override("ColtLong") then
-        return "AMT Hardballer"
-    end
-end
+local slide_info = {
+    -- {{no finish, nickel, worn}, irons, compensator}
+    ["default"] = {{0, 1, 2}, 0, 1},
+    ["bo1_m1911_slide_short"] = {{5, 6, 7}, 3, 2},
+    ["bo1_m1911_slide_hd"] = {{3, 4}, 2, 1},
+    ["bo1_m1911_slide_short_hd"] = {{8, 9}, 4, 2},
+    ["bo1_m1911_slide_hardballer"] = {{10}, 5, 3},
+}
+local frame_info = {
+    -- {{no finish, nickel, worn}, hammer}
+    ["default"] = {{0, 1, 2}, 0},
+    ["bo1_m1911_frame_hd"] = {{3, 4}, 1},
+    ["bo1_m1911_frame_hammer"] = {{0, 1, 2}, 1},
+}
+local finish_info = {
+    ["bo1_m1911_finish_nickel"] = 2,
+    ["bo1_m1911_finish_worn"] = 3,
+}
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[6].Installed == "ammo_papunch"
-    local papcamo2 = wep.Attachments[6].Installed == "ammo_1911_pap"
+    local slide = slide_info[wep.Attachments[1].Installed] or slide_info["default"]
+    local frame = frame_info[wep.Attachments[2].Installed] or frame_info["default"]
+    local finish = finish_info[wep.Attachments[9].Installed] or 1
+
+    vm:SetBodygroup(0, frame[1][finish] or frame[1][1]) -- Frame
+    vm:SetBodygroup(1, slide[1][finish] or slide[1][1]) -- Slide
+    vm:SetBodygroup(2, slide[2]) -- Irons
+    vm:SetBodygroup(3, frame[2]) -- Hammer
+    vm:SetBodygroup(4, (wep.Attachments[3].Installed == "bo1_m1911_comp_bo3") and slide[3] or 0) -- Compensator
+
     local pap = wep:GetBuff_Override("PackAPunch")
-    local nick = wep:GetBuff_Override("ColtNickel")
-    local bo2sound = wep.Attachments[9].Installed == "1911_bo2_sound"
-    local comp = wep.Attachments[10].Installed == "1911_bo3_comp"
-    local barrel = wep.Attachments[1].Installed
-    /*"1911_bo1_hdslide_nickel_short"
-    "1911_bo1_hdslide_short"
-    "1911_bo1_shslide_short"
-    "1911_bo1_slide_short"
-    "1911_bo1_spslide_short"
-    "1911_bo1_slide_hardballer"*/
+    local sally = wep.Attachments[6].Installed == "ammo_1911_pap"
 
-    local length
-        if barrel == "1911_bo1_hdslide_nickel_short" then length = 1
-        elseif barrel == "1911_bo1_hdslide_short" then length = 1
-        elseif barrel == "1911_bo1_shslide_short" then length = 1
-        elseif barrel == "1911_bo1_slide_short" then length = 1
-        elseif barrel == "1911_bo1_spslide_short" then length = 1
-        elseif barrel == "1911_bo1_slide_hardballer" then length = 2
-        else length = 0
-    end
-
-    if comp and (length == 0) then
-        vm:SetBodygroup(4, 1)
-    elseif comp and (length == 1) then
-        vm:SetBodygroup(4, 2)
-    elseif comp and (length == 2) then
-        vm:SetBodygroup(4, 3)
-    end
-
-    if papcamo and !bo2sound and !nick then
-        return vm:SetSkin(2)
-    elseif papcamo and bo2sound and !nick then
-        return vm:SetSkin(2)
-    elseif papcamo2 and !bo2sound and !nick then
-        return vm:SetSkin(1)
-    elseif papcamo2 and bo2sound and !nick then
-        return vm:SetSkin(1)
-    elseif pap and nick then
+    if finish == 2 and (pap or sally) then
         return vm:SetSkin(3)
+    elseif pap then
+        return vm:SetSkin(2)
+    elseif pap then
+        return vm:SetSkin(1)
     end
 end
-
-/*
-SWEP.Hook_GetShootSound = function(wep, sound)
-    local bo2sound = wep.Attachments[9].Installed == "1911_bo2_sound"
-    local wawsound = wep.Attachments[9].Installed == "1911_waw_sound"
-    local sil = wep:GetBuff_Override("Silencer")
-
-    if bo2sound then
-        if sil then
-            return "ArcCW_BO2.Pistol_Sil"
-        end
-        return "ArcCW_BO2.M1911_Fire"
-    elseif wawsound then
-        if sil then
-            return "ArcCW_BO2.Pistol_Sil"
-        end
-        wep.DistantShootSound = "ArcCW_BO2.Pistol_RingOff"
-        return "ArcCW_WAW.M1911_Fire"
-    else return end
-end
-*/
-
-SWEP.counter = 0
 
 SWEP.Hook_TranslateAnimation = function(wep, anim, data)
-    local bo2 = wep.Attachments[9].Installed == "1911_bo2_sound"
+    local bo2 = wep.Attachments[9].Installed == "bo1_m1911_sound_bo2"
     local eclip = wep:Clip1() == 0
 
     if bo2 then
