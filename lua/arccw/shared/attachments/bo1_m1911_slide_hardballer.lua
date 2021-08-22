@@ -13,6 +13,8 @@ att.ActivateElements = {"slide_hardballer"}
 
 att.AutoStats = true
 
+att.Mult_ShootPitch = 0.8
+
 att.Mult_SightTime = 1.5
 att.Mult_DrawTime = 1.5
 att.Mult_HolsterTime = 1.5
