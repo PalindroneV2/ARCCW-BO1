@@ -1,15 +1,14 @@
-att.PrintName = "Colt 3x20 (BO1)"
+att.PrintName = "Colt 4x20 (4x)"
 att.Icon = Material("entities/acwatt_optic_bo1_acog.png", "mips smooth")
-att.Description = "Black Ops 1 Colt 3x20 Scope. Medium range combat scope for improved precision at longer ranges."
-
-att.SortOrder = 112
-
+att.Description = "Medium range combat scope for improved precision at longer ranges."
 att.Desc_Pros = {
     "autostat.holosight",
     "autostat.zoom",
 }
-att.Desc_Cons = {
-}
+att.Desc_Neutrals = {"bo.desc"}
+
+att.SortOrder = 4
+
 att.AutoStats = true
 att.Slot = "optic"
 

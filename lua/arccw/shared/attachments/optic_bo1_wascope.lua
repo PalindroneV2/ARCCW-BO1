@@ -1,15 +1,16 @@
-att.PrintName = "WA2000 Scope (BO1)"
+att.PrintName = "WA2000 Scope (12x)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
-att.Description = "High Power Scope for the WA2000. Magnification of 4-8x"
+att.Description = "High Power Scope for the WA2000."
 
-att.SortOrder = 150
+att.SortOrder = 6
 
 att.Desc_Pros = {
-    "+ Precision sight picture",
+    "autostat.holosight",
+    "autostat.zoom",
 }
-att.Desc_Cons = {
-    "- Visible glint"
-}
+att.Desc_Neutrals = {"bo.desc"}
+
+
 att.AutoStats = true
 att.Slot = "bo1_wascope"
 

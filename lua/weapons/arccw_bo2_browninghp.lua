@@ -27,16 +27,13 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 36
-SWEP.DamageMin = 20 -- damage done at maximum range
-SWEP.Range = 60 -- in METRES
-SWEP.Penetration = 6
-SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 250 -- projectile or phys bullet muzzle velocity
--- IN M/S
+SWEP.Damage = 38
+SWEP.DamageMin = 5
+SWEP.RangeMin = 15
+SWEP.Range = 75
 
-SWEP.CanFireUnderwater = true
+SWEP.Penetration = 4
+SWEP.DamageType = DMG_BULLET
 
 SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
@@ -47,8 +44,8 @@ SWEP.Primary.ClipSize = 13 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 20
 SWEP.ReducedClipSize = 8
 
-SWEP.Recoil = 0.6
-SWEP.RecoilSide = 0.3
+SWEP.Recoil = 0.7
+SWEP.RecoilSide = 0.4
 SWEP.RecoilRise = 2
 
 SWEP.Delay = 60 / 600 -- 60 / RPM.
@@ -65,9 +62,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_pistol"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 3.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 250 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 8
+SWEP.HipDispersion = 150
+SWEP.MoveDispersion = 100
 
 SWEP.ShootWhileSprint = false
 
@@ -165,25 +162,27 @@ SWEP.Attachments = {
         },
     },
     { --2
+        Hidden = true,
         PrintName = "Underbarrel",
-        Slot = {"foregrip_pistol", "style_pistol"},
+        Slot = {"foregrip"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0, 0, 0), -- offset that the attachment will be relative to the bone
+            vpos = Vector(5, 0, 0.1),
             vang = Angle(0, 0, 0),
         },
     },
     { --3
         PrintName = "Tactical",
-        Slot = {"bo1_tacpistol"},
+        Slot = {"bo1_tacpistol", "tac_pistol"},
         VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(4, 0, 0.2),
+            vpos = Vector(4, 0, 0),
             vang = Angle(0, 0, 0),
             wpos = Vector(8.5, 2, -2.9),
             wang = Angle(-5, -2, 177.5)
         },
+        MergeSlots = {2},
     },
     { --4
         PrintName = "Ammo Type",

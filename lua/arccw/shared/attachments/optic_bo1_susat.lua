@@ -1,15 +1,14 @@
-att.PrintName = "SUSAT (BO1)"
+att.PrintName = "SUSAT (4x)"
 att.Icon = Material("entities/acwatt_optic_bo1_acog.png", "mips smooth")
-att.Description = "Black Ops 1 SUSAT scope. Medium range combat scope produced in the UK for improved precision at medium ranges. Includes optional integrated iron sights on top. Allows for Magnification between 2x and 4x"
-
-att.SortOrder = 111
-
+att.Description = "Medium range combat scope produced in the UK for improved precision at medium ranges."
 att.Desc_Pros = {
     "autostat.holosight",
     "autostat.zoom",
 }
-att.Desc_Cons = {
-}
+att.Desc_Neutrals = {"bo.desc"}
+
+att.SortOrder = 4
+
 att.AutoStats = true
 att.Slot = "optic"
 
@@ -28,9 +27,9 @@ att.AdditionalSights = {
 }
 
 att.Holosight = true
-att.HolosightReticle = Material("hud/scopes/bo1_acog_cross.png", "mips smooth")
+att.HolosightReticle = Material("hud/scopes/bo1_susat.png", "mips smooth")
 att.HolosightNoFlare = true
-att.HolosightSize = 17.5
+att.HolosightSize = 12.5
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo1_susat_hsp.mdl"
 att.Colorable = true
@@ -38,7 +37,5 @@ att.Colorable = true
 att.HolosightBlackbox = true
 
 att.HolosightMagnification = 4
-att.HolosightMagnificationMin = 2
-att.HolosightMagnificationMax = 4
 
 att.Mult_SightTime = 1.1

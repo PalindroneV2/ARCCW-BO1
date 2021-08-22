@@ -1,8 +1,8 @@
-att.PrintName = "Barrett Scope (BO2)"
+att.PrintName = "Barrett Scope (12x)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
-att.Description = "American high powered scope for the Barret M82. 4x to 8x Magnification"
+att.Description = "American high powered scope for the Barret M82."
 
-att.SortOrder = 151
+att.SortOrder = 12
 
 att.Desc_Pros = {
     "+ Precision sight picture",
@@ -44,7 +44,7 @@ att.Colorable = true
 
 att.HolosightBlackbox = true
 att.HolosightMagnification = 8
-att.HolosightMagnificationMin = 4
-att.HolosightMagnificationMax = 8
+att.HolosightMagnificationMin = 8
+att.HolosightMagnificationMax = 12
 
 att.Mult_SightTime = 1.125

@@ -1,5 +1,12 @@
 L = {}
 
+L["bo.desc"] = "This attachment is from the Black Ops pack."
+
+L["bo1.automatic"] = "Enables Automatic firemode"
+L["bo1.enablemuzzle"] = "Enables Muzzle slot"
+L["bo1.pythonsnub"] = "Disables Optic and Tactical slot"
+L["bo1.speedloader"] = "Reloads entire cylinder at once"
+
 L["bo1.m1911.hardballer"] = "Only available in Nickel finish"
 L["bo1.m1911.worn"] = "Not available for Modern slide and frames"
 

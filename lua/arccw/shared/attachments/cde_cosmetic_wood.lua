@@ -1,15 +1,7 @@
 att.PrintName = "Wood Furniture"
 att.Icon = Material("entities/acwatt_m16_stock.png", "mips smooth")
 att.Description = "Patrolling the Mojave makes you wish for a nuclear winter."
-att.Desc_Pros = {
-    "+ Only cosmetic.",
-}
-att.Desc_Cons = {
-    "- Only cosmetic.",
-}
-att.Desc_Neutrals = {
-    " Only Cosmetic"
-}
+
 att.Desc_Neutrals = {
     " Replicate the look of the the original Service Rifle from Fallout: New Vegas to access this attachment!"
 }

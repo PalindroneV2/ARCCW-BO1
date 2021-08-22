@@ -34,15 +34,12 @@ SWEP.WorldModelOffset = {
 SWEP.ViewModelFOV = 60
 
 SWEP.Damage = 50
-SWEP.DamageMin = 25 -- damage done at maximum range
-SWEP.Range = 75 -- in METRES
-SWEP.Penetration = 3
-SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 250 -- projectile or phys bullet muzzle velocity
--- IN M/S
+SWEP.DamageMin = 5
+SWEP.RangeMin = 7
+SWEP.Range = 75
 
-SWEP.CanFireUnderwater = true
+SWEP.Penetration = 5
+SWEP.DamageType = DMG_BULLET
 
 SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
@@ -53,8 +50,8 @@ SWEP.Primary.ClipSize = 8 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 30
 SWEP.ReducedClipSize = 6
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.3
+SWEP.Recoil = 1.2
+SWEP.RecoilSide = 0.4
 SWEP.RecoilRise = 1
 
 SWEP.Delay = 60 / 600 -- 60 / RPM.

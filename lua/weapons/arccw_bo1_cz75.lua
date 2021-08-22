@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
 
-SWEP.PrintName = "CZ75"
+SWEP.PrintName = "CZ 75"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "A high capacity czech pistol inpsired by the Browning Hi-Power. The most common pistol in the Czech Republic, owned by civilians, law enforcement and military alike."
 SWEP.Trivia_Manufacturer = "CZUB"
@@ -26,16 +26,13 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 35
-SWEP.DamageMin = 21 -- damage done at maximum range
-SWEP.Range = 55 -- in METRES
-SWEP.Penetration = 5
-SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 315 -- projectile or phys bullet muzzle velocity
--- IN M/S
+SWEP.Damage = 38
+SWEP.DamageMin = 6
+SWEP.RangeMin = 15
+SWEP.Range = 75
 
-SWEP.CanFireUnderwater = true
+SWEP.Penetration = 4
+SWEP.DamageType = DMG_BULLET
 
 SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
@@ -46,11 +43,11 @@ SWEP.Primary.ClipSize = 12 -- 18 in EXT
 SWEP.ExtendedClipSize = 40 -- 56 in EXT
 SWEP.ReducedClipSize = 6
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.3
+SWEP.Recoil = 0.8
+SWEP.RecoilSide = 0.5
 SWEP.RecoilRise = 1
 
-SWEP.Delay = 60 / 625 -- 60 / RPM.
+SWEP.Delay = 60 / 600 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -66,9 +63,9 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 5.25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 220 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 130
+SWEP.AccuracyMOA = 5
+SWEP.HipDispersion = 180
+SWEP.MoveDispersion = 80
 
 SWEP.ShootWhileSprint = false
 
@@ -199,7 +196,7 @@ SWEP.Attachments = {
     },
     { --4
         PrintName = "Magazine",
-        DefaultAttName = "9x19mm 12rnd Mag",
+        DefaultAttName = "Standard Magazine",
         Slot = "bo1_czext"
     },
     { --5
@@ -234,19 +231,19 @@ end
 
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
-    local auto = wep.Attachments[1].Installed == "bo1_fcg_czauto"
+    local auto = wep.Attachments[1].Installed == "bo1_cz75_auto"
 
     if pap and !auto then
         return "Calamity"
     elseif pap and auto then
         return "Calamity Jane"
     elseif auto and !pap then
-        return "CZ75 Auto"
+        return "CZ 75 Automatic"
     end
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim, data)
-    local ext = wep.Attachments[4].Installed == "ammo_bo1_cz_ext"
+    local ext = wep.Attachments[4].Installed == "bo1_cz75_extmag"
 
     if ext then
         return anim .. "_ext"
@@ -257,13 +254,8 @@ SWEP.Hook_TranslateAnimation = function(wep, anim, data)
 end
 
 SWEP.Hook_GetCapacity = function(wep, cap)
-    local ext = wep.Attachments[4].Installed == "ammo_bo1_cz_ext"
-    local pap = wep:GetBuff_Override("PackAPunch")
-
-    if pap and !ext then
-        return 40
-    elseif pap and ext then
-        return 56
+    if wep:GetBuff_Override("PackAPunch") then
+        return wep.Attachments[4].Installed == "bo1_cz75_extmag" and 56 or 40
     end
 end
 

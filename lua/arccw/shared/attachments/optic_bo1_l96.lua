@@ -1,15 +1,16 @@
-att.PrintName = "Farview (BO1)"
+att.PrintName = "Farview (16x)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
-att.Description = "High Power Scope for the L115A1 AWM."
+att.Description = "High-power scope for the L115A1 AWM."
 
-att.SortOrder = 150
+att.SortOrder = 1000
 
 att.Desc_Pros = {
-    "+ Precision sight picture",
+    "autostat.holosight",
+    "autostat.zoom",
 }
 att.Desc_Cons = {
-    "- Visible glint"
 }
+
 att.AutoStats = true
 att.Slot = "bo1_awm"
 
@@ -35,14 +36,14 @@ att.ScopeGlint = false
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/psg1_scope.png")
 att.HolosightNoFlare = true
-att.HolosightSize = 17.5
+att.HolosightSize = 15
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo1_farview_hsp.mdl"
 att.Colorable = true
 
 att.HolosightBlackbox = true
-att.HolosightMagnification = 8
-att.HolosightMagnificationMin = 4
-att.HolosightMagnificationMax = 8
+att.HolosightMagnification = 10
+att.HolosightMagnificationMin = 10
+att.HolosightMagnificationMax = 16
 
 att.Mult_SightTime = 1.125

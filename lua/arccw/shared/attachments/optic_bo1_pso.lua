@@ -1,15 +1,15 @@
-att.PrintName = "PSO-1 (BO1)"
+att.PrintName = "PSO-1 (6x)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
-att.Description = "Scope designed for the Dragunov SVD-63. Magnification of 4-6x"
+att.Description = "Scope designed for the Dragunov SVD-63."
 
-att.SortOrder = 150
+att.SortOrder = 6
 
 att.Desc_Pros = {
-    "+ Precision sight picture",
+    "autostat.holosight",
+    "autostat.zoom",
 }
-att.Desc_Cons = {
-    "- Visible glint"
-}
+att.Desc_Neutrals = {"bo.desc"}
+
 att.AutoStats = true
 att.Slot = "bo1_pso"
 

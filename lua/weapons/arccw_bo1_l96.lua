@@ -67,7 +67,7 @@ SWEP.ManualAction = true
 
 SWEP.AccuracyMOA = 0.1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 800 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.MoveDispersion = 100
 
 SWEP.Primary.Ammo = "SniperPenetratedRound" -- what ammo type the gun uses
 SWEP.MagID = "hs338" -- the magazine pool this gun draws from

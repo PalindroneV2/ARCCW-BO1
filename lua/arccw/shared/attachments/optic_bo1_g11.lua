@@ -1,8 +1,8 @@
-att.PrintName = "G11 Scope (BO1)"
+att.PrintName = "G11 Scope (1.5x)"
 att.Icon = Material("entities/acwatt_optic_bo1_g11.png", "mips smooth")
-att.Description = "Black Ops 1 G11 Scope. Medium range combat scope for improved precision at longer ranges."
+att.Description = "Medium range combat scope made specifically for the G11."
 
-att.SortOrder = 110
+att.SortOrder = 1000
 
 att.Desc_Pros = {
     "autostat.holosight",
@@ -10,6 +10,7 @@ att.Desc_Pros = {
 }
 att.Desc_Cons = {
 }
+
 att.AutoStats = true
 att.Slot = "g11_optic"
 
@@ -25,15 +26,15 @@ att.AdditionalSights = {
 }
 
 att.Holosight = true
-att.HolosightReticle = Material("hud/scopes/bo1_aug_crosshair.png", "mips smooth")
+att.HolosightReticle = Material("hud/scopes/bo1_g11.png", "mips smooth")
 att.HolosightNoFlare = true
-att.HolosightSize = 17.5
+att.HolosightSize = 20
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo1_g11_hsp.mdl"
 att.Colorable = true
 
 att.HolosightBlackbox = true
 
-att.HolosightMagnification = 3
+att.HolosightMagnification = 1.5
 
-att.Mult_SightTime = 1.1
+att.Mult_SightTime = 1.05

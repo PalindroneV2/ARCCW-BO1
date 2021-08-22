@@ -1,15 +1,15 @@
-att.PrintName = "Trijicon ACOG 6x48 (BO2)"
+att.PrintName = "Trijicon ACOG 6x48 (6x)"
 att.Icon = Material("entities/acwatt_optic_bo2_acog.png", "mips smooth")
 att.Description = "Black Ops 2 ACOG Scope. Medium range combat scope for improved precision at longer ranges."
 
-att.SortOrder = 112
+att.SortOrder = 6
 
 att.Desc_Pros = {
     "autostat.holosight",
     "autostat.zoom",
 }
-att.Desc_Cons = {
-}
+att.Desc_Neutrals = {"bo.desc"}
+
 att.AutoStats = true
 att.Slot = "optic"
 
@@ -36,6 +36,6 @@ att.Colorable = true
 
 att.HolosightBlackbox = true
 
-att.HolosightMagnification = 4
+att.HolosightMagnification = 6
 
 att.Mult_SightTime = 1.1

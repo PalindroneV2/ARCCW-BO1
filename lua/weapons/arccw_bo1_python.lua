@@ -29,15 +29,12 @@ SWEP.WorldModelOffset = {
 SWEP.ViewModelFOV = 60
 
 SWEP.Damage = 65
-SWEP.DamageMin = 40 -- damage done at maximum range
-SWEP.Range = 100 -- in METRES
-SWEP.Penetration = 2
-SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 315 -- projectile or phys bullet muzzle velocity
--- IN M/S
+SWEP.DamageMin = 15
+SWEP.RangeMin = 10
+SWEP.Range = 100
 
-SWEP.CanFireUnderwater = true
+SWEP.Penetration = 4
+SWEP.DamageType = DMG_BULLET
 
 SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
@@ -48,8 +45,8 @@ SWEP.Primary.ClipSize = 6 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 12
 SWEP.ReducedClipSize = 6
 
-SWEP.Recoil = 1
-SWEP.RecoilSide = 0.75
+SWEP.Recoil = 1.5
+SWEP.RecoilSide = 1
 SWEP.RecoilRise = 1
 
 SWEP.Delay = 60 / 300 -- 60 / RPM.
@@ -70,8 +67,8 @@ SWEP.NPCWeaponType = {
 SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 2 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 220 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 130
+SWEP.HipDispersion = 300 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 120
 
 SWEP.ShootWhileSprint = false
 
@@ -115,8 +112,8 @@ SWEP.CaseBones = {}
 SWEP.ShotgunReload = true
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.175, 3, 0.9),
-    Ang = Angle(-0.5, -0.05, 0),
+    Pos = Vector(-2.15, 4, 0.95),
+    Ang = Angle(-0.5, 0, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -153,7 +150,7 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 1}
         },
         AttPosMods = {
-            [3] = {
+            [4] = {
                 vpos = Vector(3.25, 0, 0.15),
             }
         },
@@ -175,10 +172,10 @@ SWEP.Attachments = {
         PrintName = "Optic",
         Slot = {"optic", "optic_lp", "bo1_lp_optic"},
         Bone = "tag_weapon",
-        VMScale = Vector(1, 1, 1),
-        WMScale = Vector(1, 1, 1),
+        VMScale = Vector(1.5, 1.5, 1.5),
+        WMScale = Vector(1.5, 1.5, 1.5),
         Offset = {
-            vpos = Vector(6, -0.025, 2.85),
+            vpos = Vector(6, -0.025, 2.75),
             vang = Angle(0, 0, 0),
             wpos = Vector(7.9, 2, -3.2),
             wang = Angle(-5, -2, 177.5)
@@ -189,9 +186,20 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         Slot = "bo1_python_barrel",
     },
-    { --1
+    {
+        Hidden = true,
+        PrintName = "Underbarrel",
+        Slot = {"foregrip"},
+        Bone = "tag_weapon",
+        Offset = {
+            vpos = Vector(6, 0, 1.5),
+            vang = Angle(0, 0, 0),
+        },
+        ExcludeFlags = {"python_snub"},
+    },
+    {
         PrintName = "Tactical",
-        Slot = {"bo1_tacpistol"},
+        Slot = {"bo1_tacpistol", "tac_pistol"},
         Bone = "tag_weapon",
         VMScale = Vector(0.75, 0.75, 0.75),
         WMScale = Vector(0.75, 0.75, 0.75),
@@ -199,20 +207,22 @@ SWEP.Attachments = {
             vpos = Vector(9.5, 0, 1.65),
             vang = Angle(0, 0, 0),
         },
+        MergeSlots = {3},
+        ExcludeFlags = {"python_snub"},
     },
     {
         PrintName = "Cylinder",
         Slot = "bo1_cylinder"
     },
-    { --2
+    {
         PrintName = "Ammo Type",
         Slot = {"ammo_pap"}
     },
-    { --3
+    {
         PrintName = "Perk",
         Slot = "bo1_perk"
     },
-    { --4
+    {
         PrintName = "Charm",
         Slot = "charm",
         Bone = "j_gun",

@@ -26,16 +26,13 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 30
-SWEP.DamageMin = 22 -- damage done at maximum range
-SWEP.Range = 55 -- in METRES
-SWEP.Penetration = 5
-SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 315 -- projectile or phys bullet muzzle velocity
--- IN M/S
+SWEP.Damage = 40
+SWEP.DamageMin = 10
+SWEP.RangeMin = 10
+SWEP.Range = 60
 
-SWEP.CanFireUnderwater = true
+SWEP.Penetration = 4
+SWEP.DamageType = DMG_BULLET
 
 SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
@@ -45,7 +42,7 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 8 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 15
 
-SWEP.Recoil = 0.65
+SWEP.Recoil = 0.8
 SWEP.RecoilSide = 0.3
 SWEP.RecoilRise = 1
 
@@ -207,9 +204,21 @@ SWEP.Attachments = {
         },
         RequireFlags = {"hush_puppy"}
     },
+    {
+        Hidden = true,
+        PrintName = "Underbarrel",
+        Slot = {"foregrip"},
+        Bone = "tag_weapon",
+        Offset = {
+            vpos = Vector(2.5, 0, 0.25),
+            vang = Angle(0, 0, 0),
+            wpos = Vector(7.238, 1.9, -2.622),
+            wang = Angle(90, 0, 0)
+        },
+    },
     { --3
         PrintName = "Tactical",
-        Slot = {"bo1_tacpistol"},
+        Slot = {"bo1_tacpistol", "tac_pistol"},
         Bone = "tag_weapon",
         VMScale = Vector(0.75, 0.75, 0.75),
         WMScale = Vector(0.75, 0.75, 0.75),
@@ -219,6 +228,7 @@ SWEP.Attachments = {
             wpos = Vector(7.9, 2, -3.2),
             wang = Angle(-5, -2, 177.5)
         },
+        MergeSlots = {3},
     },
     { --4
         PrintName = "Ammo Type",
@@ -250,17 +260,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 end
 
-/*SWEP.Hook_TranslateAnimation = function(wep, anim, data)
-    if wep:Clip1() == 0 then
-        return anim .. "_empty"
-    end
-end*/
-
 SWEP.Animations = {
-    ["idle"] = {
-        Source = "idle",
-        Time = 1 / 30,
-    },
+    ["idle"] = false, -- ASP has no empty idle so this locks it back
     ["draw"] = {
         Source = "draw",
         Time = 0.5,

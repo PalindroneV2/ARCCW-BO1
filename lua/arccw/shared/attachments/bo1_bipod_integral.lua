@@ -1,14 +1,9 @@
-att.PrintName = "Bipod (BO1)"
+att.PrintName = "Integrated Bipod"
 att.Icon = Material("entities/acwatt_bo1_awm_bipod.png", "mips smooth")
-att.Description = "Bipod designed specifically for this weapon. More egronomic than regular bipods."
+att.Description = "A bipod integrated onto the weapon. Deploying it allows for accurate and stable shooting."
 
-att.SortOrder = 100
+att.SortOrder = 1000
 
-att.Desc_Pros = {
-    "+ Bipod",
-}
-att.Desc_Cons = {
-}
 att.AutoStats = true
 att.Slot = "bo1_bipod"
 att.ActivateElements = {"bo1_bipod"}
@@ -18,9 +13,7 @@ att.BO1_Bipod = true
 att.Free = true
 
 att.Bipod = true
-att.Mult_BipodRecoil = 0.15
-att.Mult_BipodDispersion = 0.25
+att.Mult_BipodRecoil = 0.1
+att.Mult_BipodDispersion = 0.05
 
-att.Mult_SightTime = 1.1
 att.Mult_HipDispersion = 1.1
-att.Mult_SpeedMult = 0.95

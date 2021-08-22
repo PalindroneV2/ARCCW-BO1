@@ -1,15 +1,14 @@
 att.PrintName = "PK-AV (4x)"
 att.Icon = Material("entities/acwatt_optic_bo1_acog.png", "mips smooth")
-att.Description = "Scope designed for Soviet rifles. Magnification of 4x"
-
-att.SortOrder = 150
-
+att.Description = "Medium range optic with Soviet-style mount."
 att.Desc_Pros = {
-    "+ Precision sight picture",
+    "autostat.holosight",
+    "autostat.zoom",
 }
-att.Desc_Cons = {
-    "- Visible glint"
-}
+att.Desc_Neutrals = {"bo.desc"}
+
+att.SortOrder = 4
+
 att.AutoStats = true
 att.Slot = "bo1_pso"
 
