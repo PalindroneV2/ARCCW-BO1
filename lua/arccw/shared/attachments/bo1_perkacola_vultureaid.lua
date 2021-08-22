@@ -2,6 +2,7 @@ att.PrintName = "Vulture Aid"
 att.Icon = Material("entities/acwatt_perk_scavenger.png", "mips smooth")
 att.Description = "I was hoping for some insight, I was looking far too hard.\nI was searching for the wrong thing, now I don't know where to start!\nI spy with my little eyes, something beginning with V!\nIt's Vulture Aid, and it's not too late!\n\nGet Vulture Aid!"
 att.Desc_Pros = {
+    "bo1.perkacola.active",
     "bo1.perkacola.vultureaid",
 }
 att.Desc_Cons = {

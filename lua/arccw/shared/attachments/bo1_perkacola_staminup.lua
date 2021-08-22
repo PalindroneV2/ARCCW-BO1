@@ -2,7 +2,8 @@ att.PrintName = "Stamin-Up"
 att.Icon = Material("entities/acwatt_perk_staminup.png", "mips smooth")
 att.Description = "Babe, you know you want me! Let's run the extra mile!\nI'll open your eyes and I'll make you see! I'll make it worth your while!\n\nSounds like it's Staaaaamin-Up time!"
 att.Desc_Pros = {
-    "bo1.perkacola.staminup"
+    "bo1.perkacola.active",
+    "bo1.perkacola.staminup",
 }
 att.Desc_Cons = {
 }
@@ -18,7 +19,7 @@ hook.Add("Move", "ArcCW_BO1_StaminUp", function(ply, mv)
     local wep = ply:GetActiveWeapon()
     if not IsValid(wep) or not wep.ArcCW or not wep:GetBuff_Override("BO1_StaminUp") then return end
 
-    local max = mv:GetMaxSpeed()
+    local max = ply:GetMaxSpeed()
     local s = ply.ArcCW_LastTickSpeedMult or 1
     mv:SetMaxSpeed(max * s * 1.1)
     mv:SetMaxClientSpeed(max * s * 1.1)
