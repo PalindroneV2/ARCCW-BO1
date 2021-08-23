@@ -215,10 +215,10 @@ SWEP.Attachments = {
     },
     { --5
         Hidden = true,
-        Slot = {"bipod"},
+        Slot = {"bo2_dong"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(21, 0, 1.75),
+            vpos = Vector(16, -0.75, 1.75),
             vang = Angle(0, 0, 0),
         },
     },

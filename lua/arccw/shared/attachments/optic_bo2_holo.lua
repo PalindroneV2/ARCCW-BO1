@@ -1,4 +1,4 @@
-att.PrintName = "EOTech EXPS3 (RDS)"
+att.PrintName = "EOTech EXPS3 (HOLO)"
 att.Icon = Material("entities/acwatt_optic_bo2_holo.png", "mips smooth")
 att.Description = "Black Ops 2 Holographic Sight. Standard holographic sight. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons."
 

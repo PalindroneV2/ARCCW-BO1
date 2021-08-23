@@ -388,6 +388,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if mag then
         vm:SetBodygroup(1, 1)
+        vm:SetBodygroup(6, 1)
     end
 end
 

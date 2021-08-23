@@ -1,8 +1,10 @@
 att.PrintName = "Alternative Iron Sights"
-att.AbbrevName = "Alt. Iron Sightsw"
+att.AbbrevName = "Alt. Iron Sights"
 att.Icon = Material("entities/acwatt_optic_bo1_irons.png", "mips smooth")
 att.Description = "You will aim with sights of iron, and you will like it."
 
+
+att.Desc_Neutrals = {"bo.desc"}
 att.SortOrder = 1000
 att.Free = true
 
