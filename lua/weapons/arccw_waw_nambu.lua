@@ -27,7 +27,7 @@ SWEP.MirrorVMWM = true
 SWEP.ViewModelFOV = 70
 
 SWEP.Damage = 28
-SWEP.DamageMin = 20 -- damage done at maximum range
+SWEP.DamageMin = 16 -- damage done at maximum range
 SWEP.Range = 50 -- in METRES
 SWEP.Penetration = 2
 SWEP.DamageType = DMG_BULLET
@@ -91,8 +91,8 @@ SWEP.SightedSpeedMult = 0.75
 SWEP.SightTime = 0.175
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-5.35, -12.535, 2.42),
-    Ang = Angle(0, 0., 0),
+    Pos = Vector(-5.35, -5, 2.25),
+    Ang = Angle(0.5, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
