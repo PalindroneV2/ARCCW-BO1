@@ -241,7 +241,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Finish",
-        DefaultAttName = "Black Ops 1",
+        DefaultAttName = "Standard Issue",
         Slot = "bo1_m1911_finish",
         FreeSlot = true,
     },

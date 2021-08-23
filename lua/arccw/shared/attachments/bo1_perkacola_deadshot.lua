@@ -16,7 +16,7 @@ att.Mult_Sway = 0.1
 
 att.Hook_BulletHit = function(wep, data)
     if data.tr.HitGroup == HITGROUP_HEAD then
-        data.damage = data.damage * 1.5
+        data.damage = data.damage * 2
     end
 end
 

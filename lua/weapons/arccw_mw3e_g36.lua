@@ -262,7 +262,7 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0.5, 0, 0),
         ExcludeFlags = {"mg36"},
-        MergeSlots = {13},
+        --MergeSlots = {13},
         --CorrectivePos = Vector(-0.39, 0, -0.3525),
         --CorrectiveAng = Angle(0.5, 0, 0),
     }, --1
@@ -356,22 +356,6 @@ SWEP.Attachments = {
             wang = Angle(-175, -175, 0)
         },
     }, --12
-    {
-        Hidden = true,
-        Slot = {"g11_optic"}, -- what kind of attachments can fit here, can be string or table
-        VMScale = Vector(1, 1, 1),
-        Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
-        Offset = {
-            vpos = Vector(2.25, -0.095, 3.625), -- 4.6 offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 0),
-            wpos = Vector(5.5, 1.2, -6),
-            wang = Angle(172.5, 181.75, 0)
-        },
-        InstalledEles = {"mount"},
-        CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0.5, 0, 0),
-        ExcludeFlags = {"mg36"},
-    }, --13
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
