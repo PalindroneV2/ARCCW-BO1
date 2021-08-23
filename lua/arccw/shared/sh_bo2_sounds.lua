@@ -413,6 +413,39 @@ sound.Add({
 })
 
 sound.Add({
+    name = "ArcCW_BO2.Mk48_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_generic_lmg/fire_mk48.wav",
+    }
+})
+
+sound.Add({
+    name = "ArcCW_BO2.Mk48_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_generic_lmg/mech_mk48.wav",
+    }
+})
+
+sound.Add({
+    name = "ArcCW_BO2.Mk48_LFE",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "weapons/arccw/bo2_generic_lmg/lfe_mk48.wav",
+    }
+})
+
+sound.Add({
     name = "ArcCW_BO2.LMG_Dist",
     channel = CHAN_WEAPON,
     volume = 1.0,
