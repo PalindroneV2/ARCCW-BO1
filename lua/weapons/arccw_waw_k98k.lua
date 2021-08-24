@@ -187,9 +187,11 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle", "waw_rifgren", "waw_bayonet"},
+        VMScale = Vector(2, 1.125, 1.125),
+        WMScale = Vector(2, 1.125, 1.125),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(26.1, 0, 1), -- offset that the attachment will be relative to the bone
+            vpos = Vector(28, 0, 1), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(0, 0, 0),
             wang = Angle(0, 0, 0)
@@ -241,7 +243,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(-2, -0.8, -0.5),
+            vpos = Vector(-2, -0.8, 0),
             vang = Angle(0, 0, 0),
         },
     }, --8
