@@ -126,8 +126,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 SWEP.ActivePos = Vector(2, -6, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(12, -7.5, -1)
-SWEP.SprintAng = Angle(-15, 60, 15)
+SWEP.SprintPos = Vector(6, -6, -2)
+SWEP.SprintAng = Angle(0, 30, 0)
 
 SWEP.CustomizePos = Vector(18, -5, -3)
 SWEP.CustomizeAng = Angle(15, 40, 25)

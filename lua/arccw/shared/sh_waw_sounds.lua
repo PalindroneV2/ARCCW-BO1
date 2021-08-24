@@ -227,6 +227,84 @@ sound.Add( {
     }
 } )
 
+-- KAR98K Main --
+
+-- MOSIN Main --
+
+sound.Add( {
+    name = "ArcCW_WAW.K98_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/waw_kar98k/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.K98_Mech",
+    channel = CHAN_USER_BASE + 6,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/waw_kar98k/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.K98_Up",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/waw_kar98k/up.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.K98_Back",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/waw_kar98k/back.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.K98_Fwd",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/waw_kar98k/fwd.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.K98_Rechamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/waw_kar98k/rechamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.K98_Eject",
+    channel = CHAN_USER_BASE + 1,
+    volume = 0.5,
+    level = 20,
+    sound = {
+        "weapons/arccw/waw_kar98k/eject.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.K98_Bullet",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "weapons/arccw/waw_kar98k/in1.wav",
+        "weapons/arccw/waw_kar98k/in2.wav",
+    }
+} )
+
 -- MOSIN Main --
 
 sound.Add( {
