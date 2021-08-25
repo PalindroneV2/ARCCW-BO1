@@ -81,9 +81,9 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 SWEP.ShootSound = "ArcCW_BO2.Peace_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.MSMC_Sil"
 SWEP.DistantShootSound = {
-    "weapons/arccw/bo2_generic_smg/dist1.wav",
-    "weapons/arccw/bo2_generic_smg/dist2.wav",
-    "weapons/arccw/bo2_generic_smg/dist3.wav"
+    "^weapons/arccw/bo2_generic_smg/dist1.wav",
+    "^weapons/arccw/bo2_generic_smg/dist2.wav",
+    "^weapons/arccw/bo2_generic_smg/dist3.wav"
 }
 
 SWEP.MuzzleEffect = "muzzleflash_smg"

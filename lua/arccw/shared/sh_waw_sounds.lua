@@ -6,7 +6,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_dist/waw_rifle.wav",
+        "^weapons/arccw/waw_dist/waw_rifle.wav",
     }
 } )
 sound.Add( {
@@ -15,7 +15,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_dist/waw_sniper_st.wav",
+        "^weapons/arccw/waw_dist/waw_sniper_st.wav",
     }
 } )
 
@@ -28,7 +28,7 @@ sound.Add( {
     level = 100,
     ----pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_garand/fire.wav",
+        "^weapons/arccw/waw_garand/fire.wav",
     }
 } )
 sound.Add( {
@@ -38,7 +38,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_garand/in.wav",
+        "^weapons/arccw/waw_garand/in.wav",
     }
 } )
 sound.Add( {
@@ -48,7 +48,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_garand/out.wav",
+        "^weapons/arccw/waw_garand/out.wav",
     }
 } )
 sound.Add( {
@@ -58,7 +58,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_garand/close.wav",
+        "^weapons/arccw/waw_garand/close.wav",
     }
 } )
 sound.Add( {
@@ -67,7 +67,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_garand/pull.wav",
+        "^weapons/arccw/waw_garand/pull.wav",
     }
 } )
 sound.Add( {
@@ -77,7 +77,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_garand/ping.wav",
+        "^weapons/arccw/waw_garand/ping.wav",
     }
 } )
 
@@ -90,7 +90,7 @@ sound.Add( {
     level = 100,
     ----pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_g43/fire.wav",
+        "^weapons/arccw/waw_g43/fire.wav",
     }
 } )
 sound.Add( {
@@ -100,7 +100,7 @@ sound.Add( {
     level = 100,
     ----pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_g43/sil.wav",
+        "^weapons/arccw/waw_g43/sil.wav",
     }
 } )
 sound.Add( {
@@ -110,7 +110,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_g43/mech.wav",
+        "^weapons/arccw/waw_g43/mech.wav",
     }
 } )
 sound.Add( {
@@ -120,7 +120,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_g43/in.wav",
+        "^weapons/arccw/waw_g43/in.wav",
     }
 } )
 sound.Add( {
@@ -130,7 +130,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_g43/tap.wav",
+        "^weapons/arccw/waw_g43/tap.wav",
     }
 } )
 sound.Add( {
@@ -140,7 +140,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_g43/out.wav",
+        "^weapons/arccw/waw_g43/out.wav",
     }
 } )
 sound.Add( {
@@ -150,7 +150,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_g43/back.wav",
+        "^weapons/arccw/waw_g43/back.wav",
     }
 } )
 sound.Add( {
@@ -160,7 +160,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_g43/fwd.wav",
+        "^weapons/arccw/waw_g43/fwd.wav",
     }
 } )
 
@@ -173,7 +173,7 @@ sound.Add( {
     level = 100,
     ----pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_carbine/fire.wav",
+        "^weapons/arccw/waw_carbine/fire.wav",
     }
 } )
 sound.Add( {
@@ -183,7 +183,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_carbine/in.wav",
+        "^weapons/arccw/waw_carbine/in.wav",
     }
 } )
 sound.Add( {
@@ -193,7 +193,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_carbine/futz.wav",
+        "^weapons/arccw/waw_carbine/futz.wav",
     }
 } )
 sound.Add( {
@@ -203,7 +203,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_carbine/out.wav",
+        "^weapons/arccw/waw_carbine/out.wav",
     }
 } )
 sound.Add( {
@@ -213,7 +213,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_carbine/mech.wav",
+        "^weapons/arccw/waw_carbine/mech.wav",
     }
 } )
 sound.Add( {
@@ -223,7 +223,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_carbine/charge.wav",
+        "^weapons/arccw/waw_carbine/charge.wav",
     }
 } )
 
@@ -237,7 +237,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_kar98k/fire.wav",
+        "^weapons/arccw/waw_kar98k/fire.wav",
     }
 } )
 sound.Add( {
@@ -246,7 +246,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_kar98k/mech.wav",
+        "^weapons/arccw/waw_kar98k/mech.wav",
     }
 } )
 sound.Add( {
@@ -255,7 +255,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_kar98k/up.wav",
+        "^weapons/arccw/waw_kar98k/up.wav",
     }
 } )
 sound.Add( {
@@ -264,7 +264,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_kar98k/back.wav",
+        "^weapons/arccw/waw_kar98k/back.wav",
     }
 } )
 sound.Add( {
@@ -273,7 +273,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_kar98k/fwd.wav",
+        "^weapons/arccw/waw_kar98k/fwd.wav",
     }
 } )
 sound.Add( {
@@ -282,7 +282,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_kar98k/rechamber.wav",
+        "^weapons/arccw/waw_kar98k/rechamber.wav",
     }
 } )
 sound.Add( {
@@ -291,7 +291,7 @@ sound.Add( {
     volume = 0.5,
     level = 20,
     sound = {
-        "weapons/arccw/waw_kar98k/eject.wav",
+        "^weapons/arccw/waw_kar98k/eject.wav",
     }
 } )
 sound.Add( {
@@ -300,8 +300,8 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_kar98k/in1.wav",
-        "weapons/arccw/waw_kar98k/in2.wav",
+        "^weapons/arccw/waw_kar98k/in1.wav",
+        "^weapons/arccw/waw_kar98k/in2.wav",
     }
 } )
 
@@ -313,7 +313,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_mosin/fire.wav",
+        "^weapons/arccw/waw_mosin/fire.wav",
     }
 } )
 sound.Add( {
@@ -322,7 +322,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_mosin/mech.wav",
+        "^weapons/arccw/waw_mosin/mech.wav",
     }
 } )
 sound.Add( {
@@ -331,7 +331,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_mosin/up.wav",
+        "^weapons/arccw/waw_mosin/up.wav",
     }
 } )
 sound.Add( {
@@ -340,7 +340,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_mosin/back.wav",
+        "^weapons/arccw/waw_mosin/back.wav",
     }
 } )
 sound.Add( {
@@ -349,7 +349,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_mosin/fwd.wav",
+        "^weapons/arccw/waw_mosin/fwd.wav",
     }
 } )
 sound.Add( {
@@ -358,7 +358,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_mosin/rechamber.wav",
+        "^weapons/arccw/waw_mosin/rechamber.wav",
     }
 } )
 sound.Add( {
@@ -367,7 +367,7 @@ sound.Add( {
     volume = 0.5,
     level = 20,
     sound = {
-        "weapons/arccw/waw_mosin/eject.wav",
+        "^weapons/arccw/waw_mosin/eject.wav",
     }
 } )
 sound.Add( {
@@ -376,7 +376,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "weapons/arccw/waw_mosin/bullet.wav",
+        "^weapons/arccw/waw_mosin/bullet.wav",
     }
 } )
 
@@ -389,10 +389,10 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bopack_stg44/stg44_fire1.wav",
-        "weapons/arccw/bopack_stg44/stg44_fire2.wav",
-        "weapons/arccw/bopack_stg44/stg44_fire3.wav",
-        "weapons/arccw/bopack_stg44/stg44_fire4.wav",
+        "^weapons/arccw/bopack_stg44/stg44_fire1.wav",
+        "^weapons/arccw/bopack_stg44/stg44_fire2.wav",
+        "^weapons/arccw/bopack_stg44/stg44_fire3.wav",
+        "^weapons/arccw/bopack_stg44/stg44_fire4.wav",
     }
 } )
 sound.Add( {
@@ -412,7 +412,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bopack_stg44/out.wav",
+        "^weapons/arccw/bopack_stg44/out.wav",
     }
 } )
 sound.Add( {
@@ -422,7 +422,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bopack_stg44/in.wav",
+        "^weapons/arccw/bopack_stg44/in.wav",
     }
 } )
 sound.Add( {
@@ -432,7 +432,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bopack_stg44/back.wav",
+        "^weapons/arccw/bopack_stg44/back.wav",
     }
 } )
 sound.Add( {
@@ -442,7 +442,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bopack_stg44/fwd.wav",
+        "^weapons/arccw/bopack_stg44/fwd.wav",
     }
 } )
 sound.Add( {
@@ -452,7 +452,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bopack_stg44/waw/fire_r.wav",
+        "^weapons/arccw/bopack_stg44/waw/fire_r.wav",
     }
 } )
 sound.Add( {
@@ -462,7 +462,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bopack_stg44/waw/mech.wav",
+        "^weapons/arccw/bopack_stg44/waw/mech.wav",
     }
 } )
 sound.Add( {
@@ -472,7 +472,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bopack_stg44/waw/in.wav",
+        "^weapons/arccw/bopack_stg44/waw/in.wav",
     }
 } )
 sound.Add( {
@@ -482,7 +482,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bopack_stg44/waw/futz.wav",
+        "^weapons/arccw/bopack_stg44/waw/futz.wav",
     }
 } )
 sound.Add( {
@@ -492,7 +492,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bopack_stg44/waw/out.wav",
+        "^weapons/arccw/bopack_stg44/waw/out.wav",
     }
 } )
 sound.Add( {
@@ -502,7 +502,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/bopack_stg44/waw/charge.wav",
+        "^weapons/arccw/bopack_stg44/waw/charge.wav",
     }
 } )
 
@@ -515,7 +515,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_shotgun/fire_trench.wav",
+        "^weapons/arccw/waw_shotgun/fire_trench.wav",
     }
 } )
 sound.Add( {
@@ -525,7 +525,7 @@ volume = 1,
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_shotgun/mech_trench.wav",
+        "^weapons/arccw/waw_shotgun/mech_trench.wav",
     }
 } )
 sound.Add( {
@@ -535,7 +535,7 @@ volume = 1,
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_shotgun/fire_double.wav",
+        "^weapons/arccw/waw_shotgun/fire_double.wav",
     }
 } )
 sound.Add( {
@@ -545,7 +545,7 @@ volume = 1,
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_shotgun/mech_double.wav",
+        "^weapons/arccw/waw_shotgun/mech_double.wav",
     }
 } )
 
@@ -558,7 +558,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_rifgren/click.wav",
+        "^weapons/arccw/waw_rifgren/click.wav",
     }
 } )
 sound.Add( {
@@ -568,7 +568,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_rifgren/futz.wav",
+        "^weapons/arccw/waw_rifgren/futz.wav",
     }
 } )
 sound.Add( {
@@ -578,7 +578,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_rifgren/load.wav",
+        "^weapons/arccw/waw_rifgren/load.wav",
     }
 } )
 sound.Add( {
@@ -588,7 +588,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_rifgren/remove.wav",
+        "^weapons/arccw/waw_rifgren/remove.wav",
     }
 } )
 
@@ -601,7 +601,7 @@ sound.Add( {
     level = 100,
     ----pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_bar/fire.wav",
+        "^weapons/arccw/waw_bar/fire.wav",
     }
 } )
 sound.Add( {
@@ -611,7 +611,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_bar/mech.wav",
+        "^weapons/arccw/waw_bar/mech.wav",
     }
 } )
 sound.Add( {
@@ -621,7 +621,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_bar/in.wav",
+        "^weapons/arccw/waw_bar/in.wav",
     }
 } )
 sound.Add( {
@@ -631,7 +631,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_bar/out.wav",
+        "^weapons/arccw/waw_bar/out.wav",
     }
 } )
 sound.Add( {
@@ -641,7 +641,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_bar/tap.wav",
+        "^weapons/arccw/waw_bar/tap.wav",
     }
 } )
 sound.Add( {
@@ -651,7 +651,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_bar/charge.wav",
+        "^weapons/arccw/waw_bar/charge.wav",
     }
 } )
 
@@ -664,7 +664,7 @@ sound.Add( {
     level = 100,
     ----pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_fg42/fire.wav",
+        "^weapons/arccw/waw_fg42/fire.wav",
     }
 } )
 sound.Add( {
@@ -674,7 +674,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_fg42/mech.wav",
+        "^weapons/arccw/waw_fg42/mech.wav",
     }
 } )
 sound.Add( {
@@ -684,7 +684,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_fg42/in.wav",
+        "^weapons/arccw/waw_fg42/in.wav",
     }
 } )
 sound.Add( {
@@ -694,7 +694,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_fg42/out.wav",
+        "^weapons/arccw/waw_fg42/out.wav",
     }
 } )
 sound.Add( {
@@ -704,7 +704,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_fg42/futz.wav",
+        "^weapons/arccw/waw_fg42/futz.wav",
     }
 } )
 sound.Add( {
@@ -714,7 +714,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_fg42/back.wav",
+        "^weapons/arccw/waw_fg42/back.wav",
     }
 } )
 sound.Add( {
@@ -724,7 +724,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_fg42/fwd.wav",
+        "^weapons/arccw/waw_fg42/fwd.wav",
     }
 } )
 
@@ -737,7 +737,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_mg42/fire.wav",
+        "^weapons/arccw/waw_mg42/fire.wav",
     }
 } )
 sound.Add( {
@@ -747,7 +747,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_mg42/in.wav",
+        "^weapons/arccw/waw_mg42/in.wav",
     }
 } )
 sound.Add( {
@@ -757,7 +757,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_mg42/jimmy.wav",
+        "^weapons/arccw/waw_mg42/jimmy.wav",
     }
 } )
 sound.Add( {
@@ -767,7 +767,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_mg42/out.wav",
+        "^weapons/arccw/waw_mg42/out.wav",
     }
 } )
 sound.Add( {
@@ -777,7 +777,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_mg42/charge.wav",
+        "^weapons/arccw/waw_mg42/charge.wav",
     }
 } )
 sound.Add( {
@@ -787,7 +787,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_mg42/pull.wav",
+        "^weapons/arccw/waw_mg42/pull.wav",
     }
 } )
 
@@ -800,7 +800,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_mp40/fire.wav",
+        "^weapons/arccw/waw_mp40/fire.wav",
     }
 } )
 sound.Add( {
@@ -810,7 +810,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_mp40/mech.wav",
+        "^weapons/arccw/waw_mp40/mech.wav",
     }
 } )
 sound.Add( {
@@ -820,7 +820,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_mp40/mag_in.wav",
+        "^weapons/arccw/waw_mp40/mag_in.wav",
     }
 } )
 sound.Add( {
@@ -830,7 +830,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_mp40/mag_out.wav",
+        "^weapons/arccw/waw_mp40/mag_out.wav",
     }
 } )
 sound.Add( {
@@ -840,7 +840,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_mp40/charge.wav",
+        "^weapons/arccw/waw_mp40/charge.wav",
     }
 } )
 
@@ -853,7 +853,7 @@ sound.Add( {
     level = 100,
     ----pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_thompson/fire.wav",
+        "^weapons/arccw/waw_thompson/fire.wav",
     }
 } )
 sound.Add( {
@@ -863,7 +863,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_thompson/in.wav",
+        "^weapons/arccw/waw_thompson/in.wav",
     }
 } )
 sound.Add( {
@@ -873,7 +873,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_thompson/out.wav",
+        "^weapons/arccw/waw_thompson/out.wav",
     }
 } )
 sound.Add( {
@@ -883,7 +883,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_thompson/charge.wav",
+        "^weapons/arccw/waw_thompson/charge.wav",
     }
 } )
 
@@ -896,7 +896,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_ppsh/fire_mech.wav",
+        "^weapons/arccw/waw_ppsh/fire_mech.wav",
     }
 } )
 sound.Add( {
@@ -906,7 +906,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_ppsh/mech.wav",
+        "^weapons/arccw/waw_ppsh/mech.wav",
     }
 } )
 sound.Add( {
@@ -916,7 +916,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_dist/waw_ppsh_dist.wav",
+        "^weapons/arccw/waw_dist/waw_ppsh_dist.wav",
     }
 } )
 sound.Add( {
@@ -926,7 +926,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_ppsh/mag_in.wav",
+        "^weapons/arccw/waw_ppsh/mag_in.wav",
     }
 } )
 sound.Add( {
@@ -936,7 +936,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_ppsh/mag_tap.wav",
+        "^weapons/arccw/waw_ppsh/mag_tap.wav",
     }
 } )
 sound.Add( {
@@ -946,7 +946,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_ppsh/mag_out.wav",
+        "^weapons/arccw/waw_ppsh/mag_out.wav",
     }
 } )
 sound.Add( {
@@ -956,7 +956,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_ppsh/bolt_fwd.wav",
+        "^weapons/arccw/waw_ppsh/bolt_fwd.wav",
     }
 } )
 
@@ -968,7 +968,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
-    sound = {"weapons/arccw/bo1_m1911/fire_waw.wav"}
+    sound = {"^weapons/arccw/bo1_m1911/fire_waw.wav"}
 } )
 sound.Add( {
     name = "ArcCW_WAW.M1911_RingOff",
@@ -976,7 +976,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
-    sound = {"weapons/arccw/bo1_m1911/ringoff_waw.wav"}
+    sound = {"^weapons/arccw/bo1_m1911/ringoff_waw.wav"}
 } )
 
 sound.Add( {
@@ -986,7 +986,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_tt33/fire.wav",
+        "^weapons/arccw/waw_tt33/fire.wav",
     }
 } )
 sound.Add( {
@@ -996,7 +996,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_tt33/fire_dist.wav",
+        "^weapons/arccw/waw_tt33/fire_dist.wav",
     }
 } )
 
@@ -1006,27 +1006,27 @@ sound.Add({
     name = "ArcCW_WAW.P38_Fire",
     channel = CHAN_STATIC,
     level = 100,
-    sound = "weapons/arccw/waw_p38/fire.wav"
+    sound = "^weapons/arccw/waw_p38/fire.wav"
 })
 sound.Add({
     name = "ArcCW_WAW.P38_In",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/waw_p38/in.wav"
+    sound = "^weapons/arccw/waw_p38/in.wav"
 })
 
 sound.Add({
     name = "ArcCW_WAW.P38_Out",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/waw_p38/out.wav"
+    sound = "^weapons/arccw/waw_p38/out.wav"
 })
 
 sound.Add({
     name = "ArcCW_WAW.P38_Slide",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/waw_p38/slide.wav"
+    sound = "^weapons/arccw/waw_p38/slide.wav"
 })
 
 sound.Add({
@@ -1035,7 +1035,7 @@ sound.Add({
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
-    sound = "weapons/arccw/pap/fusion.wav"
+    sound = "^weapons/arccw/pap/fusion.wav"
 })
 
 -- SW Model 27 main --
@@ -1047,7 +1047,7 @@ sound.Add( {
     level = 100,
     ----pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_357/fire.wav",
+        "^weapons/arccw/waw_357/fire.wav",
     }
 } )
 sound.Add( {
@@ -1057,7 +1057,7 @@ sound.Add( {
     level = 100,
     ----pitch = {95, 110},
     sound = {
-        "weapons/arccw/waw_357/dist.wav",
+        "^weapons/arccw/waw_357/dist.wav",
     }
 } )
 
@@ -1069,59 +1069,59 @@ sound.Add({
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
-    sound = "weapons/arccw/waw_dg2/fire.wav"
+    sound = "^weapons/arccw/waw_dg2/fire.wav"
 })
 sound.Add({
     name = "ArcCW_BO1.DG2_Last",
     channel = CHAN_STATIC,
     level = 80,
-    sound = "weapons/arccw/waw_dg2/last.wav"
+    sound = "^weapons/arccw/waw_dg2/last.wav"
 })
 sound.Add({
     name = "ArcCW_BO1.DG2_In",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/waw_dg2/in.wav"
+    sound = "^weapons/arccw/waw_dg2/in.wav"
 })
 
 sound.Add({
     name = "ArcCW_BO1.DG2_Out",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/waw_dg2/out.wav"
+    sound = "^weapons/arccw/waw_dg2/out.wav"
 })
 
 sound.Add({
     name = "ArcCW_BO1.DG2_Back",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/waw_dg2/bback.wav"
+    sound = "^weapons/arccw/waw_dg2/bback.wav"
 })
 
 sound.Add({
     name = "ArcCW_BO1.DG2_Fwd",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/waw_dg2/bfwd.wav"
+    sound = "^weapons/arccw/waw_dg2/bfwd.wav"
 })
 
 sound.Add({
     name = "ArcCW_BO1.DG2_On",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/waw_dg2/on.wav"
+    sound = "^weapons/arccw/waw_dg2/on.wav"
 })
 
 sound.Add({
     name = "ArcCW_BO1.DG2_Off",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/waw_dg2/off.wav"
+    sound = "^weapons/arccw/waw_dg2/off.wav"
 })
 
 sound.Add({
     name = "ArcCW_BO1.DG2_Impact",
     channel = CHAN_USER_BASE + 5,
     level = 70,
-    sound = "weapons/arccw/waw_dg2/splash.wav"
+    sound = "^weapons/arccw/waw_dg2/splash.wav"
 })

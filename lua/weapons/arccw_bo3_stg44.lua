@@ -450,7 +450,7 @@ SWEP.Hook_GetDistantShootSound = function(wep, distancesound)
     elseif sndatt == "stg44_dods_sound" then
         return ""
     elseif mp then
-        return "weapons/arccw/waw_dist/waw_9mm.wav"
+        return "^weapons/arccw/waw_dist/waw_9mm.wav"
     end
 end
 

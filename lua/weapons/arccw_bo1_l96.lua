@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "L115A1"
 SWEP.Trivia_Class = "Sniper Rifle"
-SWEP.Trivia_Desc = "A high-caliber sniper rifle designed for cold-weather police and military units. Known for holding the record of the longest range sniper shot in history."
+SWEP.Trivia_Desc = "A high-caliber sniper rifle designed for cold-weather police and military units. Known for once holding the record of the longest range sniper shot in history."
 SWEP.Trivia_Manufacturer = "Accuracy International"
 SWEP.Trivia_Calibre = ".338 Lapua"
 SWEP.Trivia_Mechanism = "Bolt-Action"

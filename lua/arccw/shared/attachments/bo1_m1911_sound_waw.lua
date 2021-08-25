@@ -17,6 +17,6 @@ end
 
 att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then
-        return "weapons/arccw/bo1_m1911/ringoff_waw.wav"
+        return "ArcCW_WAW.M1911_RingOff"
     end
 end

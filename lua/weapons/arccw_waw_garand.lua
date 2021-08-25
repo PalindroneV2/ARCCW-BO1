@@ -5,7 +5,11 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M1 Garand"
 SWEP.Trivia_Class = "Battle Rifle"
-SWEP.Trivia_Desc = "What does a battle rifle have in common with a microwave? They both go 'ping' when they're done. American semi-automatic battle rifle using an en-bloc 8-round magazine which gave US Troops an advantage against the more commonplace bolt-action rifles wielded by their enemies during World War 2."
+SWEP.Trivia_Desc = [[
+    "What does a battle rifle have in common with a microwave? They both go 'ping' when they're done."
+    
+    American semi-automatic battle rifle using an en-bloc 8-round magazine which gave US Troops an advantage against the more commonplace bolt-action rifles wielded by their enemies during World War 2.
+]]
 SWEP.Trivia_Manufacturer = "Springfield Armory"
 SWEP.Trivia_Calibre = ".30-06 Springfield"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
@@ -77,7 +81,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_WAW.Garand_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
-SWEP.DistantShootSound = "weapons/arccw/waw_dist/waw_rifle.wav"
+SWEP.DistantShootSound = "^weapons/arccw/waw_dist/waw_rifle.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -318,7 +322,7 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 7 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = "weapons/arccw/waw_garand/mech.wav", t = 0 }}
+        SoundTable = {{ s = "^weapons/arccw/waw_garand/mech.wav", t = 0 }}
     },
     ["fire_empty"] = {
         Source = {"fire_empty"},
@@ -326,14 +330,14 @@ SWEP.Animations = {
         ShellEjectAt = 0,
          SoundTable = {
             {s = "ArcCW_WAW.Garand_Ping", t = 0},
-            {s = "weapons/arccw/waw_garand/mech_last.wav", t = 1 / 30}
+            {s = "^weapons/arccw/waw_garand/mech_last.wav", t = 1 / 30}
         },
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = "weapons/arccw/waw_garand/mech.wav", t = 0 }}
+        SoundTable = {{ s = "^weapons/arccw/waw_garand/mech.wav", t = 0 }}
     },
     ["fire_iron_empty"] = {
         Source = {"fire_ads_empty"},
@@ -341,7 +345,7 @@ SWEP.Animations = {
         ShellEjectAt = 0,
         SoundTable = {
             {s = "ArcCW_WAW.Garand_Ping", t = 0},
-            {s = "weapons/arccw/waw_garand/mech_last.wav", t = 1 / 30},
+            {s = "^weapons/arccw/waw_garand/mech_last.wav", t = 1 / 30},
         },
     },
     ["reload"] = {
