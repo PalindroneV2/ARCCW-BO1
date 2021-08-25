@@ -17,7 +17,8 @@ SWEP.Slot = 3
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_waw_mosin.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_waw_mosin.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_waw_mosin.mdl"
+SWEP.MirrorWorldModel = "models/weapons/arccw/w_waw_mosin.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-6.5, 2, -5),
