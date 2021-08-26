@@ -526,8 +526,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_WAW.STG44_MagOut", t = 0.2},
             {s = "ArcCW_WAW.STG44_Futz", t = 0.9},
-            {s = "ArcCW_WAW.STG44_MagIn", t = 1},
-            {s = "ArcCW_WAW.STG44_Charge", t = 1.6},
+            {s = "ArcCW_WAW.STG44_MagIn", t = 1.15},
+            {s = "ArcCW_WAW.STG44_Charge", t = 1.75},
             /*
             {s = "ArcCW_BO3.STG44_MagOut", t = 0.2},
             {s = "ArcCW_BO3.STG44_MagIn", t = 1},

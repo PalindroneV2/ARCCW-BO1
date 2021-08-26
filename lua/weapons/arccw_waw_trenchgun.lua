@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "M1897 Trenchgun"
 SWEP.Trivia_Class = "Shotgun"
 SWEP.Trivia_Desc = [[
-    American pump-action shotgun that saw extensive mmilitary use in World War 1. During World War 2 it saw reduced service and was eventually replaced by the M37 Ithaca. 
+    American pump-action shotgun that saw extensive military use in World War 1. During World War 2 it saw reduced service and was eventually replaced by the M37 Ithaca. 
     
     It was the first shotgun designed to be slam-fired and inspred the Ithaca design directly.
 ]]
@@ -57,7 +57,7 @@ SWEP.MaxRecoilBlowback = 1.5
 SWEP.ShotgunReload = true
 SWEP.ManualAction = true
 
-SWEP.Delay = 60 / 312 -- 60 / RPM.
+SWEP.Delay = 60 / 325 -- 60 / RPM.
 SWEP.Num = 8 -- number of shots per trigger pull.
 SWEP.RunawayBurst = false
 SWEP.Firemodes = {
@@ -82,9 +82,9 @@ SWEP.Primary.Ammo = "buckshot" -- what ammo type the gun uses
 SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_WAW.TrenchGun_Fire"
+SWEP.ShootSound = "^weapons/arccw/waw_shotgun/wpn_shtgun_st_f.wav"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
-SWEP.DistantShootSound = {"^weapons/arccw/bo1_generic_shotgun/ringoff_f.wav", "^weapons/arccw/bo1_generic_shotgun/ringoff_r.wav"}
+SWEP.DistantShootSound = "^weapons/arccw/waw_dist/waw_rifle.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_shotgun"
 SWEP.ShellModel = "models/shells/shell_12gauge.mdl"
@@ -283,7 +283,10 @@ SWEP.Animations = {
         Source = {
             "fire",
         },
-        Time = 9 / 35,
+        Time = 11 / 35,
+        SoundTable = {
+            {s = "weapons/arccw/waw_shotgun/wpn_shtgun_st_act.wav", t = 0 / 35},
+        },
     },
     ["bash"] = {
         Source = {
@@ -301,59 +304,62 @@ SWEP.Animations = {
         Source = {
             "fire_ads",
         },
-        Time = 9 / 35,
+        Time = 11 / 35,
+        SoundTable = {
+            {s = "weapons/arccw/waw_shotgun/wpn_shtgun_st_act.wav", t = 0 / 35},
+        },
     },
     ["reload"] = {
         Source = "reload",
-        Time = 91 / 40,
+        Time = 70 / 40,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 40 / 40},
-            {s = "ArcCW_BO1.MK_Back", t = 67 / 40},
-            {s = "ArcCW_BO1.MK_Fwd", t = 71 / 40},
+            {s = {"weapons/arccw/waw_shotgun/shotgun_shell_00.wav", "weapons/arccw/waw_shotgun/shotgun_shell_01.wav", "weapons/arccw/waw_shotgun/shotgun_shell_02.wav"}, t = 40 / 40},
+            {s = "weapons/arccw/waw_shotgun/shotgun_pull.wav", t = 67 / 40},
+            {s = "weapons/arccw/waw_shotgun/shotgun_push.wav", t = 71 / 40},
         },
     },
     ["reload_empty"] = {
         Source = "reload",
-        Time = 91 / 40,
+        Time = 70 / 40,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 40 / 40},
-            {s = "ArcCW_BO1.MK_Back", t = 67 / 40},
-            {s = "ArcCW_BO1.MK_Fwd", t = 71 / 40},
+            {s = {"weapons/arccw/waw_shotgun/shotgun_shell_00.wav", "weapons/arccw/waw_shotgun/shotgun_shell_01.wav", "weapons/arccw/waw_shotgun/shotgun_shell_02.wav"}, t = 40 / 40},
+            {s = "weapons/arccw/waw_shotgun/shotgun_pull.wav", t = 67 / 40},
+            {s = "weapons/arccw/waw_shotgun/shotgun_push.wav", t = 71 / 40},
         },
     },
     ["cycle"] = {
         Source = {
             "pump",
         },
-        Time = 27 / 35,
+        Time = 35 / 35,
         ShellEjectAt = 8 / 35,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 8 / 35},
-            {s = "ArcCW_BO1.MK_Fwd", t = 15 / 35},
+            {s = "weapons/arccw/waw_shotgun/shotgun_pull.wav", t = 8 / 35},
+            {s = "weapons/arccw/waw_shotgun/shotgun_push.wav", t = 16 / 35},
         },
     },
     ["cycle_iron"] = {
         Source = {
             "pump",
         },
-        Time = 27 / 35,
+        Time = 35 / 35,
         ShellEjectAt = 8 / 35,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 8 / 35},
-            {s = "ArcCW_BO1.MK_Fwd", t = 15 / 35},
+            {s = "weapons/arccw/waw_shotgun/shotgun_pull.wav", t = 8 / 35},
+            {s = "weapons/arccw/waw_shotgun/shotgun_push.wav", t = 16 / 35},
         },
     },
     ["sgreload_start"] = {
         Source = "reload_start",
-        Time = 55 / 40,
+        Time = 35 / 40,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.5,
@@ -361,12 +367,12 @@ SWEP.Animations = {
         RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
         MinProgress = 21 / 40,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 21 / 40},
+            {s = {"weapons/arccw/waw_shotgun/shotgun_shell_00.wav", "weapons/arccw/waw_shotgun/shotgun_shell_01.wav", "weapons/arccw/waw_shotgun/shotgun_shell_02.wav"}, t = 15 / 40},
         },
     },
     ["sgreload_insert"] = {
         Source = "reload_loop",
-        Time = 39 / 40,
+        Time = 25 / 40,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
         LHIK = true,
@@ -374,29 +380,29 @@ SWEP.Animations = {
         LHIKOut = 0,
         MinProgress = 21 / 40,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 20 / 40},
+            {s = {"weapons/arccw/waw_shotgun/shotgun_shell_00.wav", "weapons/arccw/waw_shotgun/shotgun_shell_01.wav", "weapons/arccw/waw_shotgun/shotgun_shell_02.wav"}, t = 10 / 40},
         },
     },
     ["sgreload_finish"] = {
         Source = "reload_end",
-        Time = 35 / 40,
+        Time = 60 / 40,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 1,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 8 / 40},
-            {s = "ArcCW_BO1.MK_Fwd", t = 12 / 40},
+            {s = "weapons/arccw/waw_shotgun/shotgun_pull.wav", t = 12 / 40},
+            {s = "weapons/arccw/waw_shotgun/shotgun_push.wav", t = 16 / 40},
         },
     },
     ["sgreload_finish_empty"] = {
         Source = "reload_end",
-        Time = 35 / 40,
+        Time = 60 / 40,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 1,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 8 / 40},
-            {s = "ArcCW_BO1.MK_Fwd", t = 12 / 40},
+            {s = "weapons/arccw/waw_shotgun/shotgun_pull.wav", t = 12 / 40},
+            {s = "weapons/arccw/waw_shotgun/shotgun_push.wav", t = 16 / 40},
         },
     },
 }
