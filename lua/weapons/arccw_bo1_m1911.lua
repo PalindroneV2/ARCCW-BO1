@@ -194,18 +194,6 @@ SWEP.Attachments = {
         },
     },
     {
-        Hidden = true,
-        PrintName = "Underbarrel",
-        Slot = {"foregrip"},
-        Bone = "tag_weapon",
-        Offset = {
-            vpos = Vector(3, 0.1, -0.1),
-            vang = Angle(0, 0, 0),
-            wpos = Vector(7.238, 1.9, -2.622),
-            wang = Angle(90, 0, 0)
-        },
-    },
-    {
         PrintName = "Tactical",
         Slot = {"bo1_tacpistol", "tac_pistol"},
         VMScale = Vector(0.75, 0.75, 0.75),
@@ -216,7 +204,6 @@ SWEP.Attachments = {
             wpos = Vector(8.5, 2, -2.9),
             wang = Angle(-5, -2, 177.5)
         },
-        MergeSlots = {4},
     },
     {
         PrintName = "Ammo Type",

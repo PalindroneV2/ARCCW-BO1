@@ -278,7 +278,7 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 35 / 35,
+        Time = 0.86,
         ShellEjectAt = 0,
         SoundTable = {
             {s = "weapons/arccw/waw_ptrs41/mech.wav", t = 0 / 35},
@@ -286,7 +286,7 @@ SWEP.Animations = {
     },
     ["fire_iron"] = {
         Source = "fire_ads",
-        Time = 35 / 35,
+        Time = 0.86,
         ShellEjectAt = 0,
         SoundTable = {
             {s = "weapons/arccw/waw_ptrs41/mech.wav", t = 0 / 35},
@@ -294,7 +294,7 @@ SWEP.Animations = {
     },
     ["fire_empty"] = {
         Source = {"fire_last"},
-        Time = 35 / 35,
+        Time = 0.16,
         ShellEjectAt = 0,
         SoundTable = {
             {s = "weapons/arccw/waw_ptrs41/mech_last.wav", t = 0 / 35},
@@ -302,7 +302,7 @@ SWEP.Animations = {
     },
     ["fire_iron_empty"] = {
         Source = "fire_ads_last",
-        Time = 35 / 35,
+        Time = 0.16,
         ShellEjectAt = 0,
         SoundTable = {
             {s = "weapons/arccw/waw_ptrs41/mech_last.wav", t = 0 / 35},
