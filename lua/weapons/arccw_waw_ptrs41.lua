@@ -82,9 +82,9 @@ SWEP.MagID = "ptrs41" -- the magazine pool this gun draws from
 SWEP.ShootVol = 110 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO2.DSR50_Shoot"
+SWEP.ShootSound = "^weapons/arccw/waw_ptrs41/fire_stereo.wav"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
-SWEP.DistantShootSound = {"^weapons/arccw/bo1_l96/ringoff_00.wav", "^weapons/arccw/bo1_l96/ringoff_01.wav"}
+SWEP.DistantShootSound = {"^weapons/arccw/waw_ptrs41/dist_mono.wav"}
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -278,23 +278,35 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 7 / 35,
+        Time = 35 / 35,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "weapons/arccw/waw_ptrs41/mech.wav", t = 0 / 35},
+        },
     },
     ["fire_iron"] = {
         Source = "fire_ads",
-        Time = 7 / 35,
+        Time = 35 / 35,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "weapons/arccw/waw_ptrs41/mech.wav", t = 0 / 35},
+        },
     },
     ["fire_empty"] = {
         Source = {"fire_last"},
-        Time = 7 / 35,
+        Time = 35 / 35,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "weapons/arccw/waw_ptrs41/mech_last.wav", t = 0 / 35},
+        },
     },
     ["fire_iron_empty"] = {
         Source = "fire_ads_last",
-        Time = 7 / 35,
+        Time = 35 / 35,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "weapons/arccw/waw_ptrs41/mech_last.wav", t = 0 / 35},
+        },
     },
     ["reload"] = {
         Source = "reload",
@@ -303,8 +315,9 @@ SWEP.Animations = {
         Checkpoints = {33, 55},
         FrameRate = 30,
         SoundTable = {
-            {s = "ArcCW_BO2.Sniper_ClipOut", t = 0.5},
-            {s = "ArcCW_BO2.Sniper_ClipIn", t = 1.9},
+            {s = "weapons/arccw/waw_ptrs41/open.wav", t = 0.7},
+            {s = "weapons/arccw/waw_ptrs41/in.wav", t = 1.6},
+            {s = "weapons/arccw/waw_ptrs41/close.wav", t = 2.25},
         },
         LHIK = true,
         LHIKIn = 0.5,
@@ -317,10 +330,11 @@ SWEP.Animations = {
         Checkpoints = {33, 55, 88},
         FrameRate = 30,
         SoundTable = {
-            {s = "ArcCW_BO2.Sniper_ClipOut", t = 0.5},
-            {s = "ArcCW_BO2.Sniper_ClipIn", t = 1.9},
-            {s = "ArcCW_BO2.Sniper_BoltBack", t = 2.9},
-            {s = "ArcCW_BO2.Sniper_BoltFwd", t = 3.1},
+            {s = "weapons/arccw/waw_ptrs41/open.wav", t = 0.7},
+            {s = "weapons/arccw/waw_ptrs41/in.wav", t = 1.6},
+            {s = "weapons/arccw/waw_ptrs41/close.wav", t = 2.1},
+            {s = "weapons/arccw/waw_ptrs41/pull.wav", t = 2.9},
+            {s = "weapons/arccw/waw_ptrs41/release.wav", t = 3.1},
         },
         LHIK = true,
         LHIKIn = 0.5,

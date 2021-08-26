@@ -342,14 +342,14 @@ SWEP.Animations = {
         Source = {
             "fire",
         },
-        Time = 9 / 10,
+        Time = 3 / 10,
         ShellEjectAt = 0.15,
     },
     ["fire_iron"] = {
         Source = {
             "fire_ads",
         },
-        Time = 9 / 10,
+        Time = 3 / 10,
         ShellEjectAt = 0.15,
     },
     ["reload"] = {
@@ -357,7 +357,7 @@ SWEP.Animations = {
         Time = 54 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = "ArcCW_BO2.Shotgun_Shell", t = 21 / 30},
+            {s = "ArcCW_BO2.Shotgun_Shell", t = 17 / 30},
             {s = "ArcCW_BO2.870_Back", t = 40 / 30},
             {s = "ArcCW_BO2.870_Fwd", t = 44 / 30},
         },
@@ -367,7 +367,7 @@ SWEP.Animations = {
         Time = 54 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = "ArcCW_BO2.Shotgun_Shell", t = 21 / 30},
+            {s = "ArcCW_BO2.Shotgun_Shell", t = 17 / 30},
             {s = "ArcCW_BO2.870_Back", t = 40 / 30},
             {s = "ArcCW_BO2.870_Fwd", t = 44 / 30},
         },
