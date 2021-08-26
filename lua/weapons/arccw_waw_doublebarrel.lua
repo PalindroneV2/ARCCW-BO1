@@ -99,7 +99,7 @@ SWEP.Primary.Ammo = "buckshot" -- what ammo type the gun uses
 SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "^weapons/arccw/waw_shotgun/wpn_dbshot_st_f.wav"
+SWEP.ShootSound = "ArcCW_WAW.DBS_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
 SWEP.DistantShootSound = "^weapons/arccw/waw_dist/waw_rifle.wav"
 
@@ -319,7 +319,7 @@ SWEP.Animations = {
             "fire",},
         Time = 9 / 10,
         SoundTable = {
-            {s = "weapons/arccw/waw_shotgun/wpn_dbshot_st_act.wav", t = 0 / 35},
+            {s = "ArcCW_WAW.DBS_Mech", t = 0 / 35},
         },
     },
     ["fire_iron"] = {
@@ -328,7 +328,7 @@ SWEP.Animations = {
         },
         Time = 9 / 10,
         SoundTable = {
-            {s = "weapons/arccw/waw_shotgun/wpn_dbshot_st_act.wav", t = 0 / 35},
+            {s = "ArcCW_WAW.DBS_Mech", t = 0 / 35},
         },
     },
     ["reload"] = {
@@ -339,11 +339,11 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_click.wav", t = 10 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_break.wav", t = 20 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_shake_1brl.wav", t = 40 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_shell_in_1.wav", t = 60 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_close.wav", t = 77 / 30},
+            {s = "ArcCW_WAW.DBS_Click", t = 10 / 30},
+            {s = "ArcCW_WAW.DBS_Break", t = 20 / 30},
+            {s = "ArcCW_WAW.DBS_1Out", t = 40 / 30},
+            {s = "ArcCW_WAW.DBS_Shell1", t = 60 / 30},
+            {s = "ArcCW_WAW.DBS_Close", t = 77 / 30},
         },
     },
     ["reload_empty"] = {
@@ -354,12 +354,12 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_click.wav", t = 10 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_break.wav", t = 20 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_shake.wav", t = 32 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_shell_in_1.wav", t = 71 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_shell_in_2.wav", t = 77 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_close.wav", t = 90 / 30},
+            {s = "ArcCW_WAW.DBS_Click", t = 10 / 30},
+            {s = "ArcCW_WAW.DBS_Break", t = 20 / 30},
+            {s = "ArcCW_WAW.DBS_Shake", t = 32 / 30},
+            {s = "ArcCW_WAW.DBS_Shell1", t = 71 / 30},
+            {s = "ArcCW_WAW.DBS_Shell2", t = 77 / 30},
+            {s = "ArcCW_WAW.DBS_Close", t = 90 / 30},
         },
     },
     ["reload_ssg"] = {
@@ -388,18 +388,6 @@ SWEP.Animations = {
             {s = "ArcCW_WAW.SSG_Shell", t = 16 / (30 / 2.25)},
             {s = "ArcCW_WAW.SSG_Close", t = 28 / (30 / 2.25)},
         },
-    },
-    ["enter_sprint"] = {
-        Source = "idle",
-        Time = 1 / 30
-    },
-    ["idle_sprint"] = {
-        Source = "idle",
-        Time = 1 / 30
-    },
-    ["exit_sprint"] = {
-        Source = "idle",
-        Time = 1 / 30
     },
 
     -- GRIP --
@@ -435,7 +423,7 @@ SWEP.Animations = {
         },
         Time = 9 / 10,
         SoundTable = {
-            {s = "weapons/arccw/waw_shotgun/wpn_dbshot_st_act.wav", t = 0 / 35},
+            {s = "ArcCW_WAW.DBS_Mech", t = 0 / 35},
         },
     },
     ["fire_iron_grip"] = {
@@ -444,7 +432,7 @@ SWEP.Animations = {
         },
         Time = 9 / 10,
         SoundTable = {
-            {s = "weapons/arccw/waw_shotgun/wpn_dbshot_st_act.wav", t = 0 / 35},
+            {s = "ArcCW_WAW.DBS_Mech", t = 0 / 35},
         },
     },
     ["reload_grip"] = {
@@ -455,11 +443,11 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_click.wav", t = 10 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_break.wav", t = 20 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_shake_1brl.wav", t = 40 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_shell_in_1.wav", t = 60 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_close.wav", t = 77 / 30},
+            {s = "ArcCW_WAW.DBS_Click", t = 10 / 30},
+            {s = "ArcCW_WAW.DBS_Break", t = 20 / 30},
+            {s = "ArcCW_WAW.DBS_1Out", t = 40 / 30},
+            {s = "ArcCW_WAW.DBS_Shell1", t = 60 / 30},
+            {s = "ArcCW_WAW.DBS_Close", t = 77 / 30},
         },
     },
     ["reload_empty_grip"] = {
@@ -470,12 +458,12 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_click.wav", t = 10 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_break.wav", t = 20 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_shake.wav", t = 32 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_shell_in_1.wav", t = 71 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_shell_in_2.wav", t = 77 / 30},
-            {s = "weapons/arccw/waw_shotgun/gr_dbshot_close.wav", t = 90 / 30},
+            {s = "ArcCW_WAW.DBS_Click", t = 10 / 30},
+            {s = "ArcCW_WAW.DBS_Break", t = 20 / 30},
+            {s = "ArcCW_WAW.DBS_Shake", t = 32 / 30},
+            {s = "ArcCW_WAW.DBS_Shell1", t = 71 / 30},
+            {s = "ArcCW_WAW.DBS_Shell2", t = 77 / 30},
+            {s = "ArcCW_WAW.DBS_Close", t = 90 / 30},
         },
     },
     ["reload_ssg_grip"] = {

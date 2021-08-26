@@ -82,7 +82,7 @@ SWEP.Primary.Ammo = "buckshot" -- what ammo type the gun uses
 SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "^weapons/arccw/waw_shotgun/wpn_shtgun_st_f.wav"
+SWEP.ShootSound = "ArcCW_WAW.TrenchGun_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
 SWEP.DistantShootSound = "^weapons/arccw/waw_dist/waw_rifle.wav"
 
@@ -285,7 +285,7 @@ SWEP.Animations = {
         },
         Time = 11 / 35,
         SoundTable = {
-            {s = "weapons/arccw/waw_shotgun/wpn_shtgun_st_act.wav", t = 0 / 35},
+            {s = "ArcCW_WAW.TrenchGun_Mech", t = 0 / 35},
         },
     },
     ["bash"] = {
@@ -306,7 +306,7 @@ SWEP.Animations = {
         },
         Time = 11 / 35,
         SoundTable = {
-            {s = "weapons/arccw/waw_shotgun/wpn_shtgun_st_act.wav", t = 0 / 35},
+            {s = "ArcCW_WAW.TrenchGun_Mech", t = 0 / 35},
         },
     },
     ["reload"] = {
@@ -317,9 +317,9 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = {"weapons/arccw/waw_shotgun/shotgun_shell_00.wav", "weapons/arccw/waw_shotgun/shotgun_shell_01.wav", "weapons/arccw/waw_shotgun/shotgun_shell_02.wav"}, t = 40 / 40},
-            {s = "weapons/arccw/waw_shotgun/shotgun_pull.wav", t = 67 / 40},
-            {s = "weapons/arccw/waw_shotgun/shotgun_push.wav", t = 71 / 40},
+            {s = "ArcCW_WAW.Trenchgun_Shell", t = 40 / 40},
+            {s = "ArcCW_WAW.TrenchGun_Pull", t = 67 / 40},
+            {s = "ArcCW_WAW.TrenchGun_Push", t = 71 / 40},
         },
     },
     ["reload_empty"] = {
@@ -330,9 +330,9 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = {"weapons/arccw/waw_shotgun/shotgun_shell_00.wav", "weapons/arccw/waw_shotgun/shotgun_shell_01.wav", "weapons/arccw/waw_shotgun/shotgun_shell_02.wav"}, t = 40 / 40},
-            {s = "weapons/arccw/waw_shotgun/shotgun_pull.wav", t = 67 / 40},
-            {s = "weapons/arccw/waw_shotgun/shotgun_push.wav", t = 71 / 40},
+            {s = "ArcCW_WAW.Trenchgun_Shell", t = 40 / 40},
+            {s = "ArcCW_WAW.TrenchGun_Pull", t = 67 / 40},
+            {s = "ArcCW_WAW.TrenchGun_Push", t = 71 / 40},
         },
     },
     ["cycle"] = {
@@ -342,8 +342,8 @@ SWEP.Animations = {
         Time = 35 / 35,
         ShellEjectAt = 8 / 35,
         SoundTable = {
-            {s = "weapons/arccw/waw_shotgun/shotgun_pull.wav", t = 8 / 35},
-            {s = "weapons/arccw/waw_shotgun/shotgun_push.wav", t = 16 / 35},
+            {s = "ArcCW_WAW.TrenchGun_Pull", t = 8 / 35},
+            {s = "ArcCW_WAW.TrenchGun_Push", t = 16 / 35},
         },
     },
     ["cycle_iron"] = {
@@ -353,8 +353,8 @@ SWEP.Animations = {
         Time = 35 / 35,
         ShellEjectAt = 8 / 35,
         SoundTable = {
-            {s = "weapons/arccw/waw_shotgun/shotgun_pull.wav", t = 8 / 35},
-            {s = "weapons/arccw/waw_shotgun/shotgun_push.wav", t = 16 / 35},
+            {s = "ArcCW_WAW.TrenchGun_Pull", t = 8 / 35},
+            {s = "ArcCW_WAW.TrenchGun_Push", t = 16 / 35},
         },
     },
     ["sgreload_start"] = {
@@ -367,7 +367,7 @@ SWEP.Animations = {
         RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
         MinProgress = 21 / 40,
         SoundTable = {
-            {s = {"weapons/arccw/waw_shotgun/shotgun_shell_00.wav", "weapons/arccw/waw_shotgun/shotgun_shell_01.wav", "weapons/arccw/waw_shotgun/shotgun_shell_02.wav"}, t = 15 / 40},
+            {s = "ArcCW_WAW.Trenchgun_Shell", t = 15 / 40},
         },
     },
     ["sgreload_insert"] = {
@@ -380,7 +380,7 @@ SWEP.Animations = {
         LHIKOut = 0,
         MinProgress = 21 / 40,
         SoundTable = {
-            {s = {"weapons/arccw/waw_shotgun/shotgun_shell_00.wav", "weapons/arccw/waw_shotgun/shotgun_shell_01.wav", "weapons/arccw/waw_shotgun/shotgun_shell_02.wav"}, t = 10 / 40},
+            {s = "ArcCW_WAW.Trenchgun_Shell", t = 10 / 40},
         },
     },
     ["sgreload_finish"] = {
@@ -390,8 +390,8 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 1,
         SoundTable = {
-            {s = "weapons/arccw/waw_shotgun/shotgun_pull.wav", t = 12 / 40},
-            {s = "weapons/arccw/waw_shotgun/shotgun_push.wav", t = 16 / 40},
+            {s = "ArcCW_WAW.TrenchGun_Pull", t = 12 / 40},
+            {s = "ArcCW_WAW.TrenchGun_Push", t = 16 / 40},
         },
     },
     ["sgreload_finish_empty"] = {
@@ -401,8 +401,8 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 1,
         SoundTable = {
-            {s = "weapons/arccw/waw_shotgun/shotgun_pull.wav", t = 12 / 40},
-            {s = "weapons/arccw/waw_shotgun/shotgun_push.wav", t = 16 / 40},
+            {s = "ArcCW_WAW.TrenchGun_Pull", t = 12 / 40},
+            {s = "ArcCW_WAW.TrenchGun_Push", t = 16 / 40},
         },
     },
 }

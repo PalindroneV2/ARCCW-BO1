@@ -229,8 +229,6 @@ sound.Add( {
 
 -- KAR98K Main --
 
--- MOSIN Main --
-
 sound.Add( {
     name = "ArcCW_WAW.K98_Fire",
     channel = CHAN_STATIC,
@@ -380,6 +378,81 @@ sound.Add( {
     }
 } )
 
+-- PTRS-41 MAIN --
+
+sound.Add( {
+    name = "ArcCW_WAW.PTRS_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_ptrs41/fire_stereo.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.PTRS_Mech",
+    channel = CHAN_USER_BASE + 6,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_ptrs41/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.PTRS_Mech2",
+    channel = CHAN_USER_BASE + 6,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_ptrs41/mech_last.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.PTRS_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_ptrs41/open.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.PTRS_Close",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_ptrs41/close.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.PTRS_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_ptrs41/fwd.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.PTRS_Pull",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_ptrs41/pull.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.PTRS_Release",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_ptrs41/release.wav",
+    }
+} )
+
 --- StG-44 ---
 
 sound.Add( {
@@ -508,6 +581,112 @@ sound.Add( {
 
 -- WAW SHOTGUNS --
 
+-- DOUBLE BARREL MAIN --
+
+sound.Add( {
+    name = "ArcCW_WAW.DBS_Fire",
+    channel = CHAN_STATIC,
+    volume = 1,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_shotgun/wpn_dbshot_st_f.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.SawnOff_Fire",
+    channel = CHAN_STATIC,
+    volume = 1,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_shotgun/wpn_dbsawshot_st_f.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.DBS_Mech",
+    channel = CHAN_USER_BASE + 2,
+    volume = 1,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_shotgun/wpn_dbshot_st_act.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_WAW.DBS_Click",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_shotgun/gr_dbshot_click.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.DBS_Break",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_shotgun/gr_dbshot_break.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.DBS_Shake",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_shotgun/gr_dbshot_shake.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.DBS_1Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_shotgun/gr_dbshot_shake.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.DBS_Shell1",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_shotgun/gr_dbshot_shell_in_1.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.DBS_Shell2",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_shotgun/gr_dbshot_shell_in_2.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.DBS_Close",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_shotgun/gr_dbshot_close.wav",
+    }
+} )
+
+-- TRENCH GUN MAIN --
+
 sound.Add( {
     name = "ArcCW_WAW.TrenchGun_Fire",
     channel = CHAN_STATIC,
@@ -515,37 +694,50 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/waw_shotgun/fire_trench.wav",
+        "^weapons/arccw/waw_shotgun/wpn_shtgun_st_f.wav",
     }
 } )
 sound.Add( {
     name = "ArcCW_WAW.Trenchgun_Mech",
     channel = CHAN_USER_BASE + 2,
-volume = 1,
+    volume = 1,
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/waw_shotgun/mech_trench.wav",
+        "^weapons/arccw/waw_shotgun/wpn_shtgun_st_act.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_WAW.Trenchgun_Shell",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_shotgun/shotgun_shell_00.wav",
+        "^weapons/arccw/waw_shotgun/shotgun_shell_01.wav",
+        "^weapons/arccw/waw_shotgun/shotgun_shell_02.wav",
     }
 } )
 sound.Add( {
-    name = "ArcCW_WAW.DBS_Fire",
-    channel = CHAN_STATIC,
-volume = 1,
+    name = "ArcCW_WAW.Trenchgun_Pull",
+    channel = CHAN_ITEM,
+    volume = 1.0,
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/waw_shotgun/fire_double.wav",
+        "^weapons/arccw/waw_shotgun/shotgun_pull.wav",
     }
 } )
 sound.Add( {
-    name = "ArcCW_WAW.DBS_Mech",
-    channel = CHAN_USER_BASE + 2,
-volume = 1,
+    name = "ArcCW_WAW.Trenchgun_Push",
+    channel = CHAN_ITEM,
+    volume = 1.0,
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/waw_shotgun/mech_double.wav",
+        "^weapons/arccw/waw_shotgun/shotgun_push.wav",
     }
 } )
 

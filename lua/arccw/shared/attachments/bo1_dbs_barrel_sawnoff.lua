@@ -1,6 +1,6 @@
 att.PrintName = "Sawed-Off Barrel"
 att.Icon = Material("entities/acwatt_m16a2_hg.png", "mips smooth")
-att.Description = "Cut down barrel. Bigger spread. Lower Range. Fire both barrels at once.."
+att.Description = "Cut down barrel. Bigger spread. Lower Range. Fire both barrels at once."
 
 att.SortOrder = 105
 
@@ -22,3 +22,7 @@ att.Mult_SightedSpeedMult = 1.5
 att.Mult_SightTime = 0.75
 att.Mult_AccuracyMOA = 1.75
 att.Override_MuzzleEffectAttachment = 2
+
+att.Hook_GetShootSound = function(wep, sound)
+    return "ArcCW_WAW.SawnOff_Fire"
+end
