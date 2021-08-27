@@ -202,6 +202,14 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 end
 
+SWEP.Hook_NameChange = function(wep, name)
+    local papcamo = wep:GetBuff_Override("PackAPunch")
+
+    if wep.Attachments[1].Installed == "bo2_acidkit" and papcamo then
+        return "Vitriolic Withering"
+    end
+end
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
