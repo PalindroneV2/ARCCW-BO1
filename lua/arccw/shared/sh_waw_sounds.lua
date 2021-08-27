@@ -235,16 +235,25 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "^weapons/arccw/waw_kar98k/fire.wav",
+        "^weapons/arccw/waw_kar98k/ringoff.wav",
     }
 } )
 sound.Add( {
     name = "ArcCW_WAW.K98_Mech",
-    channel = CHAN_USER_BASE + 6,
+    channel = CHAN_STATIC,
     volume = 1.0,
     level = 100,
     sound = {
         "^weapons/arccw/waw_kar98k/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.K98_Ringoff",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_kar98k/ringoff.wav",
     }
 } )
 sound.Add( {
