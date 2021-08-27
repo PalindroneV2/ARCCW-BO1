@@ -317,7 +317,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {
             "fire",},
-        Time = 9 / 10,
+        Time = 3 / 10,
         SoundTable = {
             {s = "ArcCW_WAW.DBS_Mech", t = 0 / 35},
         },
@@ -326,7 +326,7 @@ SWEP.Animations = {
         Source = {
             "fire_ads",
         },
-        Time = 9 / 10,
+        Time = 3 / 10,
         SoundTable = {
             {s = "ArcCW_WAW.DBS_Mech", t = 0 / 35},
         },
@@ -421,7 +421,7 @@ SWEP.Animations = {
         Source = {
             "fire_grip",
         },
-        Time = 9 / 10,
+        Time = 3 / 10,
         SoundTable = {
             {s = "ArcCW_WAW.DBS_Mech", t = 0 / 35},
         },
@@ -430,7 +430,7 @@ SWEP.Animations = {
         Source = {
             "fire_ads_grip",
         },
-        Time = 9 / 10,
+        Time = 3 / 10,
         SoundTable = {
             {s = "ArcCW_WAW.DBS_Mech", t = 0 / 35},
         },
