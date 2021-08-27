@@ -1,10 +1,11 @@
 att.PrintName = "M1911 Hardballer Slide"
 att.AbbrevName = "Hardballer Slide"
 
-att.Icon = Material("entities/acwatt_1911_shiny2.png", "smooth mips")
-att.Description = "An aftermarket extended length slide in nickel finish.\nNo pity. No pain. No fear."
-
-att.Desc_Neutrals = {"bo1.m1911.hardballer"}
+att.Icon = Material("entities/acwatt_1911_bo1.png", "smooth mips")
+att.Description = [[
+    An aftermarket extended length slide.
+    No pity. No pain. No fear.
+]]
 
 att.Slot = "m1911_slide"
 att.Free = true

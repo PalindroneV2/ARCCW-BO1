@@ -1,7 +1,7 @@
 att.PrintName = "M1911A1 Ring Hammer"
 att.AbbrevName = "Ring Hammer"
 
-att.Icon = Material("entities/acwatt_1911_meu1.png", "smooth mips")
+att.Icon = Material("entities/acwatt_1911_bo3.png", "smooth mips")
 att.Description = "Improved seared ring hammer that slightly increases accuracy."
 
 att.Free = true

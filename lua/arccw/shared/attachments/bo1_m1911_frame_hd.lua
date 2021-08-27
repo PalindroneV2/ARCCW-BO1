@@ -1,6 +1,6 @@
 att.PrintName = "M1911A1 Modern Frame"
 att.AbbrevName = "Modern Frame"
-att.Icon = Material("entities/acwatt_1911_bo3_1.png", "smooth mips")
+att.Icon = Material("entities/acwatt_1911_bo3.png", "smooth mips")
 att.Description = "Modern frame with modern conveniences.\nImproved trigger and hammer provide more accurate shooting."
 
 att.Free = true

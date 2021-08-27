@@ -10,7 +10,7 @@ att.Desc_Neutrals = {"bo.desc"}
 att.SortOrder = 4
 
 att.AutoStats = true
-att.Slot = "optic"
+att.Slot = {"optic", "bo1_acog"}
 
 att.Model = "models/weapons/arccw/atts/bo1_acog.mdl"
 

@@ -1,5 +1,5 @@
 att.PrintName = [[Heavy 18.9" Barrel]]
-att.Icon = Material("entities/acwatt_m16a2_hg.png", "mips smooth")
+att.Icon = Material("entities/acwatt_bo2_longbarrel.png", "mips smooth")
 att.Description = "Heavy Machine Gun barrel at the standard 18.9 inches."
 
 att.SortOrder = 107

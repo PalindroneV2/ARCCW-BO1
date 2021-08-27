@@ -1,5 +1,5 @@
 att.PrintName = "M27 IAR"
-att.Icon = Material("entities/acwatt_m16a2_hg.png", "mips smooth")
+att.Icon = Material("entities/acwatt_bo2_longbarrel.png", "mips smooth")
 att.Description = "Longer, heavier barel and extended handguard increase range and reduce imprecision as well as recoil, at the cost of sight time."
 
 att.SortOrder = 100

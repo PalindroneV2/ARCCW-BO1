@@ -1,5 +1,5 @@
 att.PrintName = "WA 2000 Ammo Carrier"
-att.Icon = Material("entities/acwatt_bo1_fcg_rapid.png", "mips smooth")
+att.Icon = Material("entities/acwatt_bo1_dualmag.png", "mips smooth")
 att.Description = "A sleeve that carries spare shells. Somehow boosts your reload speed."
 att.Desc_Pros = {
 }

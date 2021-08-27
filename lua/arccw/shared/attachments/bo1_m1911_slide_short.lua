@@ -1,7 +1,7 @@
 att.PrintName = "M1911A1 Officer Slide"
 att.AbbrevName = "Officer Slide"
 
-att.Icon = Material("entities/acwatt_1911_meu2.png", "smooth mips")
+att.Icon = Material("entities/acwatt_1911_bo2.png", "smooth mips")
 att.Description = "Shortened slide used by officers, hence its name."
 
 att.Slot = "m1911_slide"

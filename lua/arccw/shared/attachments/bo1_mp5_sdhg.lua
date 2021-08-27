@@ -1,5 +1,5 @@
 att.PrintName = "MP5SD Handguard"
-att.Icon = Material("entities/acwatt_m16a2_hg.png", "mips smooth")
+att.Icon = Material("entities/acwatt_bo2_longbarrel.png", "mips smooth")
 att.Description = "MP5SD's round ribbed handguard without the suppressor."
 
 att.SortOrder = 100

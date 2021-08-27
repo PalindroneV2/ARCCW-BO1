@@ -78,7 +78,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_BO1.Olympia_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
-SWEP.DistantShootSound = {"^weapons/arccw/bo1_mk/ringoff_f.wav", "^weapons/arccw/bo1_mk/ringoff_r.wav"}
+SWEP.DistantShootSound = {"^weapons/arccw/bo1_generic_shotgun/ringoff_f.wav", "^weapons/arccw/bo1_generic_shotgun/ringoff_r.wav"}
 
 SWEP.MuzzleEffect = "muzzleflash_shotgun"
 SWEP.ShellModel = "models/shells/shell_12gauge.mdl"
@@ -168,7 +168,7 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
-        Bone = "tag_weapon",
+        Bone = "tag_barrel_le",
         Offset = {
             vpos = Vector(-1, -0.65, 0.75), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
@@ -193,8 +193,16 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if wep:GetState() == ArcCW.STATE_CUSTOMIZE then
         vm:SetBodygroup(0,1)
+        vm:SetBodygroup(1,1)
+        if wep.Attachments[1].Installed == "bo2_acidkit" then
+            vm:SetBodygroup(1,3)
+        end
     else
         vm:SetBodygroup(0,0)
+        vm:SetBodygroup(1,0)
+        if wep.Attachments[1].Installed == "bo2_acidkit" then
+            vm:SetBodygroup(1,2)
+        end
     end
 
     if wep.Attachments[1].Installed == "bo2_acidkit" then

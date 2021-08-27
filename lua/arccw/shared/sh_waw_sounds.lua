@@ -235,10 +235,10 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "^weapons/arccw/waw_mosin/mono_00.wav",
-        "^weapons/arccw/waw_mosin/mono_01.wav",
-        "^weapons/arccw/waw_mosin/mono_02.wav",
-        "^weapons/arccw/waw_mosin/mono_03.wav",
+        "^weapons/arccw/waw_kar98k/mono_00.wav",
+        "^weapons/arccw/waw_kar98k/mono_01.wav",
+        "^weapons/arccw/waw_kar98k/mono_02.wav",
+        "^weapons/arccw/waw_kar98k/mono_03.wav",
     }
 } )
 sound.Add( {

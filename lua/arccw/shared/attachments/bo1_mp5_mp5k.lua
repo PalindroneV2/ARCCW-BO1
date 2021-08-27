@@ -1,5 +1,5 @@
 att.PrintName = "MP5K Conversion"
-att.Icon = Material("entities/acwatt_m16a2_hg.png", "mips smooth")
+att.Icon = Material("entities/acwatt_bo2_longbarrel.png", "mips smooth")
 att.Description = "Short-barreled MP5 variant equipped with a foregrip by default which improves recoil control slightly. Reduced weight improves sight time, sighted movement speed, and overall movement speed. Accuracy and range decrease due to the shorter barrel."
 
 att.SortOrder = 98

@@ -173,13 +173,13 @@ SWEP.Attachments = {
         PrintName = "Slide",
         DefaultAttName = "Standard Slide",
         Slot = "m1911_slide",
-        FreeSlot = true,
+        DefaultAttIcon = Material("entities/acwatt_1911_bo2.png"),
     },
     {
         PrintName = "Frame",
         DefaultAttName = "Standard Frame",
         Slot = "m1911_frame",
-        FreeSlot = true,
+        DefaultAttIcon = Material("entities/acwatt_1911_bo2.png"),
     },
     {
         PrintName = "Muzzle",
@@ -231,39 +231,41 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Issue",
         Slot = "bo1_m1911_finish",
         FreeSlot = true,
+        DefaultAttIcon = Material("entities/acwatt_1911_bo2.png"),
     },
     {
         PrintName = "Sound",
         DefaultAttName = "Black Ops 1",
         Slot = "bo1_m1911_sound",
         FreeSlot = true,
+        DefaultAttIcon = Material("entities/acwatt_bo1_generic.png"),
     },
 }
 
 local slide_info = {
     -- {{no finish, nickel, worn}, irons, compensator}
-    ["default"] = {{0, 1, 2}, 0, 1},
-    ["bo1_m1911_slide_short"] = {{5, 6, 7}, 3, 2},
-    ["bo1_m1911_slide_hd"] = {{3, 4}, 2, 1},
-    ["bo1_m1911_slide_short_hd"] = {{8, 9}, 4, 2},
-    ["bo1_m1911_slide_hardballer"] = {{10}, 5, 3},
+    ["default"] = {{0}, 0, 1},
+    ["bo1_m1911_slide_short"] = {{2}, 2, 2},
+    ["bo1_m1911_slide_hd"] = {{1}, 1, 1},
+    ["bo1_m1911_slide_short_hd"] = {{3}, 3, 2},
+    ["bo1_m1911_slide_hardballer"] = {{4}, 4, 3},
 }
 local frame_info = {
     -- {{no finish, nickel, worn}, hammer}
-    ["default"] = {{0, 1, 2}, 0},
-    ["bo1_m1911_frame_hd"] = {{3, 4}, 1},
-    ["bo1_m1911_frame_hammer"] = {{0, 1, 2}, 1},
+    ["default"] = {{0}, 0},
+    ["bo1_m1911_frame_hd"] = {{1}, 1},
+    ["bo1_m1911_frame_hammer"] = {{0}, 1},
 }
 local finish_info = {
     ["bo1_m1911_finish_nickel"] = 2,
-    ["bo1_m1911_finish_worn"] = 3,
+    ["bo1_m1911_finish_worn"] = 1,
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local slide = slide_info[wep.Attachments[1].Installed] or slide_info["default"]
     local frame = frame_info[wep.Attachments[2].Installed] or frame_info["default"]
-    local finish = finish_info[wep.Attachments[9].Installed] or 1
+    local finish = finish_info[wep.Attachments[8].Installed] or 0
 
     vm:SetBodygroup(0, frame[1][finish] or frame[1][1]) -- Frame
     vm:SetBodygroup(1, slide[1][finish] or slide[1][1]) -- Slide
@@ -274,13 +276,20 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local pap = wep:GetBuff_Override("PackAPunch")
     local sally = wep.Attachments[6].Installed == "ammo_1911_pap"
 
-    if finish == 2 and (pap or sally) then
-        return vm:SetSkin(3)
-    elseif pap then
-        return vm:SetSkin(2)
-    elseif pap then
-        return vm:SetSkin(1)
+    if finish == 2 then
+        vm:SetSkin(1)
+        if (pap or sally) then
+            vm:SetSkin(5)
+        end
+    elseif finish == 1 then
+        vm:SetSkin(2)
+        if (pap or sally) then
+            vm:SetSkin(4)
+        end
+    elseif pap or sally then
+        vm:SetSkin(3)
     end
+
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim, data)

@@ -1,7 +1,7 @@
 att.PrintName = "M1911A1 Modern Slide"
 att.AbbrevName = "Modern Slide"
 
-att.Icon = Material("entities/acwatt_1911_bo3_2.png", "smooth mips")
+att.Icon = Material("entities/acwatt_1911_bo3.png", "smooth mips")
 att.Description = "Modernized slide that uses polymer materials to slightly reduce weight."
 
 att.Slot = "m1911_slide"

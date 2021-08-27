@@ -1,5 +1,5 @@
 att.PrintName = "RIS 14.5 in. Barrel"
-att.Icon = Material("entities/acwatt_m16a2_hg.png", "mips smooth")
+att.Icon = Material("entities/acwatt_bo2_longbarrel.png", "mips smooth")
 att.Description = "Carbine length 14.5 inch barrel with a quad-rail RIS handguard with rail covers."
 
 att.SortOrder = 91

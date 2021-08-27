@@ -1,5 +1,5 @@
 att.PrintName = [[Kurz 12.5" Barrel]]
-att.Icon = Material("entities/acwatt_m16a2_hg.png", "mips smooth")
+att.Icon = Material("entities/acwatt_bo2_longbarrel.png", "mips smooth")
 att.Description = "Lighter 12.5 inch barrel reduces sight time at the cost of reduced range, stronger recoil, and increased imprecision."
 
 att.SortOrder = 107

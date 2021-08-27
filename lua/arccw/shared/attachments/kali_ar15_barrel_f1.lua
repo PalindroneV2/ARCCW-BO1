@@ -1,5 +1,5 @@
 att.PrintName = "FAMAS F1 14.5 in. Barrel"
-att.Icon = Material("entities/acwatt_m16a2_hg.png", "mips smooth")
+att.Icon = Material("entities/acwatt_bo2_longbarrel.png", "mips smooth")
 att.Description = "Short 14.5 inch barrel that adds FAMAS furniture to the weapon. Whatever maniac created this had too much free time on their hands."
 
 att.SortOrder = 89
