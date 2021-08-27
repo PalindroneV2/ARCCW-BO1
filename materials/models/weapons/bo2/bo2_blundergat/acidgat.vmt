@@ -18,4 +18,5 @@
 	"$detail" "models/weapons/bo2/bo2_blundergat/ember"
 	$detailblendmode "4"
 	"$detailblendfactor" "1"
+	"$detailscale" "5"
 }
