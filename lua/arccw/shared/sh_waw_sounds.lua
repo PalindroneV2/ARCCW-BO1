@@ -431,7 +431,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "^weapons/arccw/waw_ptrs41/fwd.wav",
+        "^weapons/arccw/waw_ptrs41/in.wav",
     }
 } )
 sound.Add( {
@@ -651,7 +651,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/waw_shotgun/gr_dbshot_shake.wav",
+        "^weapons/arccw/waw_shotgun/gr_dbshot_shake_1brl.wav",
     }
 } )
 sound.Add( {
@@ -722,7 +722,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Trenchgun_Pull",
-    channel = CHAN_ITEM,
+    channel = CHAN_STATIC,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -732,7 +732,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ArcCW_WAW.Trenchgun_Push",
-    channel = CHAN_ITEM,
+    channel = CHAN_STATIC,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},

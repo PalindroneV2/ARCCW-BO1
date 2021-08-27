@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/bo2/bo2_blundergat/ember"
+	$blendtintbybasealpha  "1"
+	"$selfillum" "1"
+//	"$bumpmap" "models/weapons/bo2/bo2_blundergat/armor_n"
+}
