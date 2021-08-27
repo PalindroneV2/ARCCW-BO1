@@ -2222,6 +2222,124 @@ sound.Add( {
     }
 } )
 
+-- M202 FLASH --
+
+sound.Add( {
+    name = "ArcCW_BO1.M202_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_m202/fire1.wav",
+        "^weapons/arccw/bo1_m202/fire2.wav",
+        "^weapons/arccw/bo1_m202/fire3.wav",
+        "^weapons/arccw/bo1_m202/fire4.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.M202_Mech",
+    channel = CHAN_USER_BASE + 2,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_m202/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.M202_FlipSight",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_m202/flip_sight.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.M202_Select",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_m202/select1.wav",
+        "^weapons/arccw/bo1_m202/select2.wav",
+        "^weapons/arccw/bo1_m202/select3.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.M202_Start",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_m202/start.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.M202_Start",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_m202/start.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.M202_Tap",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_m202/tap.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.M202_Up",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_m202/up.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.M202_Down",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_m202/down.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.M202_Ground",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_m202/ground.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.M202_Blast",
+    channel = CHAN_USER_BASE + 1,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_m202/blast.wav",
+    }
+} )
+
 -- RAYGUN --
 
 sound.Add({
