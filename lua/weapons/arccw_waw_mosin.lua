@@ -80,7 +80,7 @@ SWEP.ShootVol = 115 -- volume of shoot sound
 
 SWEP.ShootSound = "ArcCW_WAW.Mosin_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
-SWEP.DistantShootSound = "ArcCW_WAW.Rifle_RingOff"
+SWEP.DistantShootSound = "ArcCW_WAW.Mosin_Ringoff"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"

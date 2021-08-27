@@ -320,8 +320,20 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     sound = {
-        "^weapons/arccw/waw_mosin/fire.wav",
+        "^weapons/arccw/waw_mosin/mono_00.wav",
+        "^weapons/arccw/waw_mosin/mono_01.wav",
+        "^weapons/arccw/waw_mosin/mono_02.wav",
+        "^weapons/arccw/waw_mosin/mono_03.wav",
     }
+} )
+sound.Add( {
+name = "ArcCW_WAW.Mosin_Ringoff",
+channel = CHAN_WEAPON,
+volume = 1.0,
+level = 100,
+sound = {
+    "^weapons/arccw/waw_mosin/ringoff.wav",
+}
 } )
 sound.Add( {
     name = "ArcCW_WAW.Mosin_Mech",
