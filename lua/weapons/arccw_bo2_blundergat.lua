@@ -170,7 +170,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_barrel_le",
         Offset = {
-            vpos = Vector(-1, -0.65, 0.75), -- offset that the attachment will be relative to the bone
+            vpos = Vector(7.5, -0.5, -0.5), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
     }, --5
@@ -286,7 +286,7 @@ SWEP.Animations = {
     },
     ["fire_iron_empty"] = {
         Source = {
-            "fire_ads_last",
+            "fire_last_ads",
         },
         Time = 0.233,
     },
@@ -298,10 +298,11 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 1.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Olympia_Switch", t = 14 / 40},
-            {s = "ArcCW_BO1.Olympia_Open", t = 32 / 40},
-            {s = "ArcCW_BO1.Olympia_Shell", t = 78 / 40},
-            {s = "ArcCW_BO1.Olympia_Close", t = 106 / 40},
+            {s = "ArcCW_BO1.Olympia_Switch", t = 10 / 40},
+            {s = "ArcCW_BO1.Olympia_Open", t = 15 / 40},
+            {s = "ArcCW_BO1.Olympia_Shell", t = 45 / 40},
+            {s = "ArcCW_BO1.Olympia_Switch", t = 60 / 40},
+            {s = "ArcCW_BO1.Olympia_Close", t = 90 / 40},
         },
     },
     ["reload_empty"] = {
@@ -312,11 +313,11 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 1.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Olympia_Switch", t = 14 / 40},
-            {s = "ArcCW_BO1.Olympia_Open", t = 32 / 40},
-            {s = "ArcCW_BO1.Olympia_Shell", t = 78 / 40},
-            {s = "ArcCW_BO1.Olympia_Shell", t = 113 / 40},
-            {s = "ArcCW_BO1.Olympia_Close", t = 145 / 40},
+            {s = "ArcCW_BO1.Olympia_Switch", t = 10 / 40},
+            {s = "ArcCW_BO1.Olympia_Open", t = 15 / 40},
+            {s = "ArcCW_BO1.Olympia_Shell", t = 45 / 40},
+            {s = "ArcCW_BO1.Olympia_Switch", t = 60 / 40},
+            {s = "ArcCW_BO1.Olympia_Close", t = 90 / 40},
         },
     },
     ["enter_sprint"] = {

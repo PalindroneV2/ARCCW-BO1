@@ -6,6 +6,7 @@ att.Description = "Modernized slide that uses polymer materials to slightly redu
 
 att.Slot = "m1911_slide"
 att.Free = true
+att.ActivateElements = {"slide_modern"}
 
 att.AutoStats = true
 

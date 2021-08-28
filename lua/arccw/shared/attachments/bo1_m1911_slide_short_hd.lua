@@ -7,7 +7,7 @@ att.Description = "Modernized short slide that is both more compact and less hea
 att.Slot = "m1911_slide"
 att.Free = true
 
-att.ActivateElements = {"slide_short"}
+att.ActivateElements = {"slide_short_modern"}
 
 att.AutoStats = true
 

@@ -111,8 +111,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.575, 3, 1),
-    Ang = Angle(0.125, -0.2, 0),
+    Pos = Vector(-2.56, 3, 1),
+    Ang = Angle(0.1, -0.15, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -145,6 +145,29 @@ SWEP.AttachmentElements = {
     },
     ["ammo_1911_pap"] = {
         NameChange = "C-3000 B1AT-CH35",
+    },
+    ["slide_short_modern"] = {
+        NameChange = "Colt Commander",
+        NameChange_Priority = -1,
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(4.5, 0.1, 1.05),
+            },
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-2.53, 3, 0.925),
+            Ang = Angle(0, -0.1, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
+        },
+    },
+    ["slide_modern"] = {
+        Override_IronSightStruct = {
+            Pos = Vector(-2.53, 3, 0.925),
+            Ang = Angle(0, -0.1, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
+        },
     },
     ["slide_short"] = {
         NameChange = "Colt Commander",
