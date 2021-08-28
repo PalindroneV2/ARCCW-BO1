@@ -1,6 +1,6 @@
-att.PrintName = "Colt 3x20 (3x)"
-att.Icon = Material("entities/acwatt_optic_bo1_acog.png", "mips smooth")
-att.Description = "Medium range combat scope for improved precision at longer ranges."
+att.PrintName = "ELCAN C79 (2x)"
+att.Icon = Material("entities/acwatt_optic_bocw_elcan.png", "mips smooth")
+att.Description = "Short range combat scope for improved precision at slightly longer ranges."
 att.Desc_Pros = {
     "autostat.holosight",
     "autostat.zoom",
@@ -12,11 +12,11 @@ att.SortOrder = 4
 att.AutoStats = true
 att.Slot = {"optic", "bo1_acog"}
 
-att.Model = "models/weapons/arccw/atts/bo1_acog.mdl"
+att.Model = "models/weapons/arccw/atts/bocw_elcan.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.025, 8, -1),
+        Pos = Vector(0, 9, -1.3),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         IgnoreExtra = true
@@ -24,15 +24,15 @@ att.AdditionalSights = {
 }
 
 att.Holosight = true
-att.HolosightReticle = Material("hud/scopes/bo1_acog_cross.png", "mips smooth")
+att.HolosightReticle = Material("hud/scopes/bocw_elcan_cross.png", "mips smooth")
 att.HolosightNoFlare = true
 att.HolosightSize = 17.5
 att.HolosightBone = "holosight"
-att.HolosightPiece = "models/weapons/arccw/atts/bo1_acog_hsp.mdl"
+att.HolosightPiece = "models/weapons/arccw/atts/bocw_elcan_hsp.mdl"
 att.Colorable = true
 
 att.HolosightBlackbox = true
 
-att.HolosightMagnification = 3
+att.HolosightMagnification = 2
 
 att.Mult_SightTime = 1.1

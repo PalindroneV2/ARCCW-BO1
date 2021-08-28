@@ -11,6 +11,8 @@ att.AutoStats = true
 att.Slot = {"bo2_blundergat_kit"}
 att.GivesFlags = {"acidgat"}
 
+att.Hidden = true -- REMOVE THIS WHEN THE ACID KIT IS READY.
+
 att.Override_ClipSize = 3
 att.Override_Num = 1
 att.Override_Firemodes = {
