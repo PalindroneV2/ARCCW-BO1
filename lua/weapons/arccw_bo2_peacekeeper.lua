@@ -252,6 +252,11 @@ SWEP.Attachments = {
     }, --10
 }
 
+SWEP.RejectAttachments = {
+    ["ub_bo2_pdwgrip"] = true,
+    ["ub_bo2_angledgrip"] = true,
+}
+
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")

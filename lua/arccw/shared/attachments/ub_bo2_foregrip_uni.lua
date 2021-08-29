@@ -7,7 +7,6 @@ att.SortOrder = 97
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "con.light"
 }
 
 att.AutoStats = true
