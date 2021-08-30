@@ -454,21 +454,21 @@ SWEP.Animations = {
         Time = 1,
         LHIK = true,
         LHIKIn = 0.2,
-        LHIKOut = 0.25,
+        LHIKOut = 1,
     },
     ["holster"] = {
         Source = "holster",
         Time = 0.75,
         LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
+        LHIKIn = 1,
+        LHIKOut = 1,
     },
     ["ready"] = {
         Source = "first_draw",
         Time = 1.5,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
+        LHIK = false,
+        LHIKIn = 1,
+        LHIKOut = 1,
         SoundTable = {
             {s = "ArcCW_BO1.AK_Charge", t = 22 / 35}
         },
@@ -504,8 +504,8 @@ SWEP.Animations = {
         Framerate = 35,
         Checkpoints = {28, 38, 69},
         LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIKIn = 0.25,
+        LHIKOut = 1.45,
         SoundTable = {
             {s = "ArcCW_BO1.AK_MagOut", t = 21 / 35},
             {s = "ArcCW_BO1.AK_MagIn", t = 63 / 35},
