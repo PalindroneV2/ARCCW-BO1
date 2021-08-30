@@ -7,7 +7,7 @@ att.Description = [[
     No pity. No pain. No fear.
 ]]
 
-att.Slot = "m1911_slide"
+att.Slot = {"m1911_slide", "m1911_slide_cw"}
 att.Free = true
 
 att.ActivateElements = {"slide_hardballer"}

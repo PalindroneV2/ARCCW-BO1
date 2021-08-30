@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/bocw/bocw_m1911/bullets"
+	"$bumpmap" "models/weapons/bocw/bocw_m1911/bullets_n"
+	
+	$phong "1"
+	$phongboost "0.5"
+	$phongexponent  "20"
+	$phongfresnelranges "[.1 .5 1]"
+	$phongalbedotint "0"
+
+	"$envmap" "env_cubemap"					
+	"$envmaptint" "[ .075 .075 .075 ]"					
+	"$envmapFresnel" "1"
+
+	$nocull 1
+}
