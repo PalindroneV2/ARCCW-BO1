@@ -478,8 +478,8 @@ SWEP.Animations = {
         Framerate = 35,
         Checkpoints = {28, 38, 69},
         LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIKIn = 0.25,
+        LHIKOut = 1.45,
         SoundTable = {
             {s = "ArcCW_BO1.AK_MagOut", t = 21 / 35},
             {s = "ArcCW_BO1.AK_MagIn", t = 63 / 35},
