@@ -309,8 +309,8 @@ SWEP.Animations = {
         Time = 50 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
-        LHIKIn = 1,
-        LHIKOut = 0.75,
+        LHIKIn = 0.25,
+        LHIKOut = 0.65,
         SoundTable = {
             {s = "ArcCW_BO1.ASP_Out", t = 8 / 30},
             {s = "ArcCW_BO1.ASP_In", t = 25 / 30}
@@ -321,7 +321,7 @@ SWEP.Animations = {
         Time = 54 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
-        LHIKIn = 1,
+        LHIKIn = 0.25,
         LHIKOut = 0.75,
         SoundTable = {
             {s = "ArcCW_BO1.ASP_Out", t = 8 / 30},
@@ -331,14 +331,20 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "idle",
-        Time = 1 / 60
+        Time = 1 / 60,
+        LHIK = true,
+        LHIKIn = 0.25,
+        LHIKOut = 0.05,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 30 / 40
+        Time = 30 / 40,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.025,
     },
     ["exit_sprint"] = {
         Source = "idle",
-        Time = 1 / 60
+        Time = 1 / 60,
     },
 }
