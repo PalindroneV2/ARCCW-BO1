@@ -425,7 +425,6 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local iron1 = wep:GetBuff_Override("AltIrons")
     local iron2 = wep:GetBuff_Override("AltIrons2")
-    local irons = iron1 or iron2
     local optic = wep.Attachments[2].Installed
 
     local hand = 0
