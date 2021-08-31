@@ -108,7 +108,7 @@ SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
     Pos = Vector(-2.77, -2, -0.05),
-    Ang = Angle(1.15, 0, 0),
+    Ang = Angle(1.15, 0.01, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -172,12 +172,25 @@ SWEP.AttachmentElements = {
                 }
             }
         },
-        ExcludeFlags = {"car15_irons"},
+        ExcludeFlags = {"ar15_alttop"},
     },
-    ["car15_irons"] = {
+    ["troy_irons"] = {
         Override_IronSightStruct = {
-            Pos = Vector(-2.775, -2, 0.4),
-            Ang = Angle(-0.1, 0, 0),
+            Pos = Vector(-2.765, -2, 0.4),
+            Ang = Angle(-0.1, 0.01, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
+        },
+        AttPosMods = {
+            [2] = {
+                vpos = Vector(2.5, 0, 3.625),
+            }
+        },
+    },
+    ["usgi_irons"] = {
+        Override_IronSightStruct = {
+            Pos = Vector(-2.765, -2, 0.25),
+            Ang = Angle(0.3, 0.01, 0),
             Magnification = 1.1,
             CrosshairInSights = false,
         },
@@ -417,7 +430,9 @@ end
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")
-    local irons = wep:GetBuff_Override("AltIrons")
+    local iron1 = wep:GetBuff_Override("AltIrons")
+    local iron2 = wep:GetBuff_Override("AltIrons2")
+    local irons = iron1 or iron2
     local Sling = wep.Attachments[16].Installed
     local optic = wep.Attachments[2].Installed
     local camo = 0
@@ -432,10 +447,18 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif Sling then vm:SetBodygroup(3, 1)
     end
 
-    if irons then
+    if iron1 then
         vm:SetBodygroup(2,1)
         if optic then
-            vm:SetBodygroup(2,2)
+            vm:SetBodygroup(2,3)
+            vm:SetBodygroup(0,1)
+        end
+    end
+
+    if iron2 then
+        vm:SetBodygroup(2,2)
+        if optic then
+            vm:SetBodygroup(2,3)
             vm:SetBodygroup(0,1)
         end
     end

@@ -13,6 +13,6 @@ att.Desc_Cons = {
     "- No carry handle"
 }
 att.Slot = "car15_irons"
-att.GivesFlags = {"name_a4"}
+att.GivesFlags = {"ar15_alttop", "troy_irons"}
 att.ExcludeFlags = {"flattop", "flattop2"}
 att.AltIrons = true

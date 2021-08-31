@@ -1,7 +1,7 @@
 VertexLitGeneric
 {
     $baseTexture "models\weapons\bo1\bo1_m16\m16a2"
-    $bumpmap "models\weapons\bo1\bo1_m16\flat_normal"
+	"$bumpmap" "models/weapons/cde/kali_ar15/Parts_A2_N"
 
     $phong                      		1
 	$phongexponent                      "20"

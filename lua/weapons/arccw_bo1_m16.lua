@@ -175,13 +175,27 @@ SWEP.AttachmentElements = {
                 }
             }
         },
-        ExcludeFlags = {"car15_irons"},
+        ExcludeFlags = {"ar15_alttop"},
     },
-    ["car15_irons"] = {
+    ["troy_irons"] = {
         Override_IronSightStruct = {
-            Pos = Vector(-2.875, -2, 0.45),
+            Pos = Vector(-2.87, -2, 0.45),
             Ang = Angle(-0.3, 0, 0),
             Magnification = 1.1,
+            CrosshairInSights = false,
+        },
+        AttPosMods = {
+            [2] = {
+                vpos = Vector(3, 0.025, 3.6),
+            },
+        },
+    },
+    ["usgi_irons"] = {
+        Override_IronSightStruct = {
+            Pos = Vector(-2.8575, -2, 0.35),
+            Ang = Angle(0, 0.01, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
         },
         AttPosMods = {
             [2] = {
@@ -409,7 +423,9 @@ end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local irons = wep:GetBuff_Override("AltIrons")
+    local iron1 = wep:GetBuff_Override("AltIrons")
+    local iron2 = wep:GetBuff_Override("AltIrons2")
+    local irons = iron1 or iron2
     local optic = wep.Attachments[2].Installed
 
     local hand = 0
@@ -441,8 +457,15 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         end
     end
 
-    if irons then
+    if iron1 then
         vm:SetBodygroup(2,1)
+        if optic then
+            vm:SetBodygroup(2,2)
+            vm:SetBodygroup(0,1)
+        end
+    end
+    if iron2 then
+        vm:SetBodygroup(2,3)
         if optic then
             vm:SetBodygroup(2,2)
             vm:SetBodygroup(0,1)

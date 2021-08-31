@@ -1,4 +1,4 @@
-att.PrintName = "KAC Battle Sights"
+att.PrintName = "USGI Flip-Up Sights"
 att.Icon = Material("entities/acwatt_optic_bo1_irons.png", "mips smooth")
 att.Description = "You will aim with sights of iron, and you will like it."
 
