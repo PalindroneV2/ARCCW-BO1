@@ -444,7 +444,7 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Slot = {"kali_stock"},
-        DefaultAttName = "No Stock",
+        DefaultAttName = "Buffer Tube",
         RandomChance = 10,
         --Installed = "bo1_solider_stock"
     }, --9

@@ -3,22 +3,25 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Gewehr 43"
+SWEP.PrintName = "SVT-40"
 SWEP.Trivia_Class = "Battle Rifle"
-SWEP.Trivia_Desc = "World War 2 era German Semi-Automatic rifle successor of the G41(W) made to catch up with the SVT-38 and subsequently the SVT-40."
-SWEP.Trivia_Manufacturer = "Walther"
-SWEP.Trivia_Calibre = "7.92x57mm Mauser"
+SWEP.Trivia_Desc = [[
+    World War 2 era Soviet Semi-Automatic Rifle, which began use as teh SVT-38 during the Winter War. It was notable for being one of the most wide-spread semi-automatic rifles of the war, second only to the M1 Garand.
+    The rather extensive use of this rifle prompted the development of German produced self-loading rifles, such as the G-41(W) and the G-43.
+    An select-fire version, the AVT-40, saw development to supplement the Red Army's shortage of machine guns.
+]]
+SWEP.Trivia_Manufacturer = "Tula Arms"
+SWEP.Trivia_Calibre = "7.62x54mmR"
 SWEP.Trivia_Mechanism = "Gas-Operated"
-SWEP.Trivia_Country = "Nazi Germany"
-SWEP.Trivia_Year = 1943
+SWEP.Trivia_Country = "USSR"
+SWEP.Trivia_Year = 1940
 
 SWEP.Slot = 3
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_waw_g43.mdl"
-SWEP.WorldModel = "models/weapons/arccw/w_waw_g43.mdl"
-SWEP.MirrorWorldModel = "models/weapons/arccw/w_waw_g43.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_waw_svt40.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_waw_svt40.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-6.75, 3, -3),
@@ -105,8 +108,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-1.9375, -6, 0.5),
-    Ang = Angle(0.05, -0.0875, 0),
+    Pos = Vector(-1.225, -3, 1.75),
+    Ang = Angle(-0.5, 1.175, 0),
     Magnification = 1.25,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -118,10 +121,10 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(1.5, -3, 0)
+SWEP.ActivePos = Vector(1.5, 3, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(1.5, -3, -1)
+SWEP.SprintPos = Vector(1.5, 3, -1)
 SWEP.SprintAng = Angle(-10, 20, 0)
 
 SWEP.CustomizePos = Vector(17, -6, -2)
@@ -140,7 +143,7 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
     ["mount"] = {
         VMBodygroups = {
-            {ind = 1, bg = 1}
+            {ind = 1, bg = 2}
         },
         VMElements = {
             {
@@ -160,10 +163,16 @@ SWEP.AttachmentElements = {
             {ind = 3, bg = 1},
         }
     },
-    ["waw_bayonet"] = {
+    ["waw_aperture"] = {
         VMBodygroups = {
-            {ind = 2, bg = 2}
-        }
+            {ind = 1, bg = 1}
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-1.16, 0, 1),
+            Ang = Angle(-0.5, 1.23, 0),
+            Magnification = 1.25,
+            CrosshairInSights = false,
+        },
     },
 }
 
@@ -174,7 +183,7 @@ SWEP.Attachments = {
         Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(5.5, 0, 2.05), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(-7, 0, 2.05), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(4.5, 1.35, -5.4),
             wang = Angle(171, 179, 0)
@@ -250,7 +259,7 @@ SWEP.Attachments = {
     }, --8
     {
         Hidden = true,
-        Slot = {"waw_zf4_scope_1"},
+        Slot = {"waw_zf4_scope_1", "waw_aperture"},
         Bone = "j_gun",
         VMScale = Vector(1, 1, 1),
         Offset = {
@@ -279,15 +288,6 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-
-    if wep:Clip1() == 0 then
-        return anim .. "_empty"
-    end
-
-    if wep.Attachments[2].Installed == "muzz_waw_bayonet" and anim == "bash" then
-        return "bash_bayo"
-    end
-
 end
 
 SWEP.Animations = {
@@ -313,16 +313,6 @@ SWEP.Animations = {
         LHIKIn = 0.25,
         LHIKOut = 0.25,
     },
-    /*
-    ["bash"] = {
-        Source = "swipe",
-        Time = 30 / 30,
-    },
-    ["bash_bayo"] = {
-        Source = "stab",
-        Time = 60 / 30,
-    },
-    */
     ["holster"] = {
         Source = "holster",
         Time = 0.5,
@@ -353,7 +343,7 @@ SWEP.Animations = {
         SoundTable = {{ s = "ArcCW_WAW.G43_Mech", t = 1 / 30 }}
     },
     ["fire_empty"] = {
-        Source = {"fire_last"},
+        Source = {"fire"},
         Time = 7 / 30,
         ShellEjectAt = 0,
          SoundTable = {
@@ -367,7 +357,7 @@ SWEP.Animations = {
         SoundTable = {{ s = "ArcCW_WAW.G43_Mech", t = 1 / 30 }}
     },
     ["fire_iron_empty"] = {
-        Source = {"fire_last"},
+        Source = {"fire_ads"},
         Time = 7 / 30,
         ShellEjectAt = 0,
         SoundTable = {

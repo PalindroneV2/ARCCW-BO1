@@ -88,11 +88,10 @@ SWEP.DistantShootSound = {
 }
 
 SWEP.MuzzleEffect = "muzzleflash_1"
-/*
-SWEP.ShellModel = "models/shells/shell_762nato.mdl"
-SWEP.ShellScale = 0.75
+SWEP.ShellModel = nil
+SWEP.ShellScale = 0
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556"
-*/
+
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = nil -- which attachment to put the case effect on
@@ -184,6 +183,10 @@ SWEP.AttachmentElements = {
         NamePriority = 10,
         NameChange = "FSIRT",
     },
+}
+
+SWEP.RejectAttachments = {
+    ["ub_bo2_heavygrip"] = true,
 }
 
 SWEP.Attachments = {
@@ -281,9 +284,6 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     end
 end
 
-SWEP.RejectAttachments = {
-}
-
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
@@ -311,7 +311,6 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
         SoundTable = {
             { s = "ArcCW_BO1.M60_Action", t = 0 },
         }
@@ -319,7 +318,6 @@ SWEP.Animations = {
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
         SoundTable = {
             { s = "ArcCW_BO1.M60_Action", t = 0 },
         }
@@ -385,7 +383,6 @@ SWEP.Animations = {
     ["fire_grip"] = {
         Source = {"fire_grip"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
         SoundTable = {
             { s = "ArcCW_BO1.M60_Action", t = 0 },
         }
@@ -393,7 +390,6 @@ SWEP.Animations = {
     ["fire_iron_grip"] = {
         Source = {"fire_ads_grip"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
         SoundTable = {
             { s = "ArcCW_BO1.M60_Action", t = 0 },
         }

@@ -1,12 +1,12 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\waw\waw_svt40\svt40"
+	$basetexture	"models\weapons\waw\waw_optics\aperture"
 	$bumpmap	"models\weapons\waw\normalmap"
 
 	$phong                      		1
 	$phongexponent                      "20"
 	$phongboost                         "0.5"
-	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongfresnelranges         "[0.1 0.2 0.2]"
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
 

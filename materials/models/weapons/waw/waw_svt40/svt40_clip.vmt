@@ -1,6 +1,6 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\waw\waw_mosin\mosin"
+	$basetexture	"models\weapons\waw\waw_svt40\svt40"
 	$bumpmap	"models\weapons\waw\normalmap"
 
 	$phong                      		1

@@ -115,11 +115,11 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(3, -3, 0)
+SWEP.ActivePos = Vector(2, -3, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(6, -3, -2)
-SWEP.SprintAng = Angle(-7.036, 45.016, 0)
+SWEP.SprintPos = Vector(3, -3, -2)
+SWEP.SprintAng = Angle(-10, 20, 0)
 
 SWEP.CustomizePos = Vector(17, -3, -2)
 SWEP.CustomizeAng = Angle(15, 40, 20)
