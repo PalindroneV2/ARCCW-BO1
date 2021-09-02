@@ -11,7 +11,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = {"waw_zf4_scope_1"}
+att.Slot = {"waw_zf4_scope"}
 
 att.Model = "models/weapons/arccw/atts/waw_zf4.mdl"
 att.ModelOffset = Vector(0, 0, 0)

@@ -250,7 +250,7 @@ SWEP.Attachments = {
     }, --8
     {
         Hidden = true,
-        Slot = {"waw_zf4_scope_1"},
+        Slot = {"waw_zf4_scope"},
         Bone = "j_gun",
         VMScale = Vector(1, 1, 1),
         Offset = {

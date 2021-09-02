@@ -233,6 +233,11 @@ SWEP.Attachments = {
             vang = Angle(0, 0, 90),
         },
     }, --5
+    { --7
+        PrintName = "Fire Group",
+        Slot = {"bo1_fcg","bo2_fcg_fullauto"},
+        DefaultAttName = "Standard FCG"
+    },
     {
         PrintName = "Magazine",
         Slot = {"bo1_extmag"},
@@ -260,6 +265,13 @@ SWEP.Attachments = {
 
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
+
+    if wep.Attachments[6].Installed == "bo2_fcg_fullauto" then
+        if pap then
+            return "Widdershins RC-2"
+        end
+        return "M2 Carbine"
+    end
 
     if pap then return "Widdershins RC-1" end
 end
@@ -295,12 +307,8 @@ end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
 
-    local ext = wep.Attachments[6].Installed == "ammo_extmag" --5
+    local ext = wep.Attachments[7].Installed == "ammo_extmag" --5
     if ext then return anim .. "_ext" end
-
-    if wep:Clip1() == 0 then
-        return anim .. "_empty"
-    end
 
     if wep.Attachments[2].Installed == "muzz_waw_bayonet" and anim == "bash" then
         return "bash_bayo"
@@ -309,7 +317,7 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
 end
 
 SWEP.Hook_GetCapacity = function(wep, cap)
-    local ext = wep.Attachments[6].Installed == "ammo_extmag" --5
+    local ext = wep.Attachments[7].Installed == "ammo_extmag" --5
     local pap = wep:GetBuff_Override("PackAPunch")
 
     if pap then

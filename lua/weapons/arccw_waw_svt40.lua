@@ -79,9 +79,9 @@ SWEP.MagID = "g43" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_WAW.G43_Fire"
+SWEP.ShootSound = "ArcCW_WAW.SVT_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_WAW.G43_Sil"
-SWEP.DistantShootSound = "^weapons/arccw/waw_dist/waw_rifle.wav"
+SWEP.DistantShootSound = "ArcCW_WAW.SVT_RingOff"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -127,7 +127,7 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(1.5, 3, -1)
 SWEP.SprintAng = Angle(-10, 20, 0)
 
-SWEP.CustomizePos = Vector(17, -6, -2)
+SWEP.CustomizePos = Vector(17, 3, -2)
 SWEP.CustomizeAng = Angle(15, 40, 25)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
@@ -156,12 +156,6 @@ SWEP.AttachmentElements = {
                 }
             },
         },
-    },
-    ["waw_rifgren"] = {
-        VMBodygroups = {
-            {ind = 2, bg = 1},
-            {ind = 3, bg = 1},
-        }
     },
     ["waw_aperture"] = {
         VMBodygroups = {
@@ -196,11 +190,11 @@ SWEP.Attachments = {
     { --2
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle", "waw_rifgren"}, -- "waw_bayonet" not ready
+        Slot = {"muzzle"}, -- "waw_bayonet" not ready
         VMScale = Vector (2, 1.5, 1.5),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(22, 0, 0.75), -- offset that the attachment will be relative to the bone
+            vpos = Vector(25, 0, 0.25), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(0, 0, 0),
             wang = Angle(0, 0, 0)
@@ -239,6 +233,11 @@ SWEP.Attachments = {
             vang = Angle(0, 0, 90),
         },
     }, --5
+    { --7
+        PrintName = "Fire Group",
+        Slot = {"bo1_fcg","bo2_fcg_fullauto"},
+        DefaultAttName = "Standard FCG"
+    },
     {
         PrintName = "Ammo Type",
         Slot = {"ammo_pap"}
@@ -259,7 +258,7 @@ SWEP.Attachments = {
     }, --8
     {
         Hidden = true,
-        Slot = {"waw_zf4_scope_1", "waw_aperture"},
+        Slot = {"waw_zf4_scope", "waw_aperture"},
         Bone = "j_gun",
         VMScale = Vector(1, 1, 1),
         Offset = {
@@ -274,16 +273,23 @@ SWEP.Attachments = {
 }
 
 SWEP.Hook_NameChange = function(wep, name)
-    local pap = wep.Attachments[6].Installed == "ammo_papunch"
+    local pap = wep:GetBuff_Override("PackAPunch")
+
+    if wep.Attachments[6].Installed == "bo2_fcg_fullauto" then
+        if pap then
+            return "Accelerated Voltage Tornado"
+        end
+        return "AVT-40"
+    end
 
     if pap then
-        return "G115 Compressor"
+        return "Soviet Visceral Terminator"
     end
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[6].Installed == "ammo_papunch"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
     if papcamo then return vm:SetSkin(1) end
 end
 
@@ -340,28 +346,28 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 7 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = "ArcCW_WAW.G43_Mech", t = 1 / 30 }}
+        SoundTable = {{ s = "ArcCW_WAW.SVT_Mech", t = 1 / 30 }}
     },
     ["fire_empty"] = {
         Source = {"fire"},
         Time = 7 / 30,
         ShellEjectAt = 0,
          SoundTable = {
-            {s = "ArcCW_WAW.G43_Mech", t = 1 / 30}
+            {s = "ArcCW_WAW.SVT_Mech", t = 1 / 30}
         },
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = "ArcCW_WAW.G43_Mech", t = 1 / 30 }}
+        SoundTable = {{ s = "ArcCW_WAW.SVT_Mech", t = 1 / 30 }}
     },
     ["fire_iron_empty"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
         ShellEjectAt = 0,
         SoundTable = {
-            {s = "ArcCW_WAW.G43_Mech", t = 1 / 30},
+            {s = "ArcCW_WAW.SVT_Mech", t = 1 / 30},
         },
     },
     ["reload"] = {
@@ -376,7 +382,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_WAW.G43_Out", t = 10 / 35},
             {s = "ArcCW_WAW.G43_In", t = 45 / 35},
-            {s = "ArcCW_WAW.G43_Tap", t = 52 / 35},
+            --{s = "ArcCW_WAW.G43_Tap", t = 52 / 35},
         },
     },
     ["reload_empty"] = {
@@ -391,110 +397,9 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_WAW.G43_Out", t = 24 / 35},
             {s = "ArcCW_WAW.G43_In", t = 60 / 35},
-            {s = "ArcCW_WAW.G43_Tap", t = 64 / 30},
-            {s = "ArcCW_WAW.G43_Back", t = 102 / 35},
+            --{s = "ArcCW_WAW.G43_Tap", t = 64 / 30},
+            --{s = "ArcCW_WAW.G43_Back", t = 102 / 35},
             {s = "ArcCW_WAW.G43_Fwd", t = 106 / 35},
         },
     },
-
-    -- M7 GRENADE LAUNCHER --
-    ["idle_ubgl"] = {
-        Source = "idle_glsetup",
-        Time = 1 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
-    },
-    ["idle_ubgl_empty"] = {
-        Source = "idle_glsetup_empty",
-        Time = 1 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
-    },
-    ["enter_ubgl"] = {
-        Source = "glsetup_in",
-        Time = 80 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
-        SoundTable = {
-            {s = "ArcCW_WAW.RGren_Futz", t = 34 / 30},
-            {s = "ArcCW_WAW.RGren_Load", t = 40 / 30},
-            {s = "ArcCW_WAW.RGren_Click", t = 41 / 30},
-        }
-    },
-    ["exit_ubgl"] = {
-        Source = "glsetup_out",
-        Time = 90 / 40,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
-        SoundTable = {
-            {s = "ArcCW_WAW.RGren_Click", t = 24 / 40},
-            {s = "ArcCW_WAW.RGren_Remove", t = 36 / 40},
-            {s = "ArcCW_WAW.RGren_Futz", t = 38 / 40},
-        }
-    },
-    /*["enter_ubgl_empty"] = {
-        Source = "glsetup_in",
-        Time = 19 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
-    },
-    ["exit_ubgl_empty"] = {
-        Source = "glsetup_out",
-        Time = 10 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
-    },*/
-    ["fire_ubgl"] = {
-        Source = "fire_glsetup",
-        Time = 7 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
-        TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
-        TPAnimStartTime = 0,
-    },
-    ["reload_ubgl"] = {
-        Source = "reload_glsetup",
-        Time = 64 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        TPAnimStartTime = 0.1,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
-        SoundTable = {
-            {s = "ArcCW_WAW.RGren_Futz", t = 16 / 30},
-            {s = "ArcCW_WAW.RGren_Load", t = 19 / 30},
-            {s = "ArcCW_WAW.RGren_Click", t = 24 / 30},
-        }
-    },
-    /*["enter_sprint_glsetup"] = {
-        Source = "idle_glsetup",
-        Time = 10 / 30
-    },
-    ["idle_sprint_glsetup"] = {
-        Source = "idle_glsetup",
-        Time = 30 / 40
-    },
-    ["exit_sprint_glsetup"] = {
-        Source = "idle_glsetup",
-        Time = 10 / 30
-    },
-    ["enter_sprint_empty"] = {
-        Source = "idle_empty",
-        Time = 10 / 30
-    },
-    ["idle_sprint_empty"] = {
-        Source = "idle_empty",
-        Time = 30 / 40
-    },
-    ["exit_sprint_empty"] = {
-        Source = "idle_empty",
-        Time = 10 / 30
-    },*/
 }
