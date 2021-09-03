@@ -292,16 +292,10 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 56 / 35,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["holster"] = {
         Source = "holster",
         Time = 1.25,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["ready"] = {
         Source = "first_draw",
@@ -310,9 +304,6 @@ SWEP.Animations = {
             {s = "ArcCW_BO2.Sniper_BoltBack", t = 0.1},
             {s = "ArcCW_BO2.Sniper_BoltFwd", t = 0.75},
         },
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
     },
     ["fire"] = {
         Source = {"shoot"},
@@ -334,9 +325,6 @@ SWEP.Animations = {
             {s = "ArcCW_BO2.Sniper_ClipOut", t = 0.2},
             {s = "ArcCW_BO2.Sniper_ClipIn", t = 1.75},
         },
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -350,9 +338,6 @@ SWEP.Animations = {
             {s = "ArcCW_BO2.Sniper_BoltBack", t = 2.25},
             {s = "ArcCW_BO2.Sniper_BoltFwd", t = 2.5},
         },
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
     },
     ["reload_ext"] = {
         Source = "reload_ext",
@@ -364,9 +349,6 @@ SWEP.Animations = {
             {s = "ArcCW_BO2.Sniper_ClipOut", t = 0.2},
             {s = "ArcCW_BO2.Sniper_ClipIn", t = 1.75},
         },
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
     },
     ["reload_empty_ext"] = {
         Source = "reload_empty_ext",
@@ -380,9 +362,6 @@ SWEP.Animations = {
             {s = "ArcCW_BO2.Sniper_BoltBack", t = 2.25},
             {s = "ArcCW_BO2.Sniper_BoltFwd", t = 2.5},
         },
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
     },
     ["enter_sprint"] = {
         Source = "sprint_in",

@@ -254,20 +254,23 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 30 / 30,
+        LHIK = true,
+        LHIKIn = 0.15,
+        LHIKOut = 0.5,
     },
     ["holster"] = {
         Source = "holster",
         Time = 24 / 30,
         LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
+        LHIKIn = 0.3,
+        LHIKOut = 0.1,
     },
     ["ready"] = {
         Source = "first_draw",
         Time = 60 / 30,
         SoundTable = {
             {s = "ArcCW_BO1.Python_Spin", t = 16 / 30},
-            {s = "ArcCW_BO1.Python_Close", t = 40 / 30},
+            {s = "ArcCW_BO1.Python_Close", t = 40 / 30}, -- im keeping this because i think it looks cool
         }
     },
     ["fire"] = {
@@ -309,8 +312,8 @@ SWEP.Animations = {
         Source = "reload_out_snap",
         Time = 33 / 30,
         LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
+        LHIKIn = 0,
+        LHIKOut = 0.6,
         SoundTable = {
             {s = "ArcCW_BO1.Python_Close", t = 8 / 30},
         },
@@ -320,7 +323,7 @@ SWEP.Animations = {
         Time = 33 / 30,
         LHIK = true,
         LHIKIn = 0.2,
-        LHIKOut = 0.2,
+        LHIKOut = 0.6,
         SoundTable = {
             {s = "ArcCW_BO1.Python_Close", t = 8 / 30},
         },
@@ -355,11 +358,17 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "idle",
-        Time = 3 / 30
+        Time = 3 / 30,
+        LHIK = true,
+        LHIKIn = 0.85,
+        LHIKOut = 0.25,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 30 / 30
+        Time = 30 / 30,
+        LHIK = true,
+        LHIKIn = 1,
+        LHIKOut = 0.4,
     },
     ["exit_sprint"] = {
         Source = "idle",

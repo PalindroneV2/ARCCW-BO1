@@ -312,7 +312,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
         LHIKIn = 1,
-        LHIKOut = 0.75,
+        LHIKOut = 0.4,
         SoundTable = {
             {s = "ArcCW_BO2.Pistol_MagOut", t = 0.25},
             {s = "ArcCW_BO2.Pistol_MagIn", t = 1}
