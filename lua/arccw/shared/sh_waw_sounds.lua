@@ -18,6 +18,15 @@ sound.Add( {
         "^weapons/arccw/waw_dist/waw_sniper_st.wav",
     }
 } )
+sound.Add( {
+    name = "ArcCW_WAW.SVT_RingOff",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_dist/waw_svt40.wav",
+    }
+} )
 
 --- Garand Main ---
 
@@ -78,6 +87,29 @@ sound.Add( {
     --pitch = {95, 110},
     sound = {
         "^weapons/arccw/waw_garand/ping.wav",
+    }
+} )
+
+-- SVT-40 MAIN --
+
+sound.Add( {
+    name = "ArcCW_WAW.SVT_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_svt40/fire_v2.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.SVT_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_svt40/mech.wav",
     }
 } )
 

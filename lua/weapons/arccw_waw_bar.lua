@@ -84,9 +84,9 @@ SWEP.ShootSoundSilenced = "ArcCW_WAW.G43_Sil"
 SWEP.DistantShootSound = "^weapons/arccw/waw_dist/waw_rifle.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
-SWEP.ShellModel = "models/shells/shell_9mm.mdl"
+SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 90
-SWEP.ShellScale = 1.75
+SWEP.ShellScale = 1.5
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
@@ -124,8 +124,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.ActivePos = Vector(1, -5, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(1, -5, -2)
-SWEP.SprintAng = Angle(-7.036, 45.016, 0)
+SWEP.SprintPos = Vector(1, -5, -1)
+SWEP.SprintAng = Angle(-10, 20, 0)
 
 SWEP.CustomizePos = Vector(17, -3, -2)
 SWEP.CustomizeAng = Angle(15, 40, 20)

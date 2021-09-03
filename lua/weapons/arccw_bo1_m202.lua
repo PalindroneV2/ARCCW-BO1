@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M202A1 FLASH"
 SWEP.Trivia_Class = "Rocket Launcher"
-SWEP.Trivia_Desc = "An American designed to replace World War II era flamethrowers that had remained the standard incendiary devices for the US Military until well into the 60s. It can carry 4 rockets."
+SWEP.Trivia_Desc = "An American design to replace World War II era flamethrowers that had remained the standard incendiary devices for the US Military until well into the 60s. It can carry 4 rockets."
 SWEP.Trivia_Manufacturer = "Ordnance Development Division"
 SWEP.Trivia_Calibre = "66mm Incendiary Rockets"
 SWEP.Trivia_Mechanism = "Rocket Propelled Grenade"
@@ -78,7 +78,7 @@ SWEP.Primary.Ammo = "RPG_Rocket" -- what ammo type the gun uses
 SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO1.RPG_Fire"
+SWEP.ShootSound = "ArcCW_BO1.M202_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
 
 SWEP.MuzzleEffect = "muzzleflash_shotgun"
@@ -195,22 +195,22 @@ SWEP.Animations = {
         Time = 1 / 35,
     },
     ["draw"] = {
-        Source = "draw_out",
-        Time = 25 / 35,
+        Source = "draw",
+        Time = 60 / 35,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
     },
     ["holster"] = {
-        Source = "holster_out",
-        Time = 25 / 35,
+        Source = "holster",
+        Time = 45 / 35,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
     },
     ["ready"] = {
-        Source = "draw_out",
-        Time = 25 / 35,
+        Source = "draw",
+        Time = 60 / 35,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
@@ -220,6 +220,9 @@ SWEP.Animations = {
             "fire",
         },
         Time = 15 / 35,
+        SoundTable = {
+            {s = "ArcCW_BO1.M202_Mech", t = 0 / 30}
+        },
     },
     ["idle_sight"] = {
         Source = {"idle_sight"},
@@ -230,19 +233,26 @@ SWEP.Animations = {
             "fire_sight",
         },
         Time = 15 / 35,
+        SoundTable = {
+            {s = "ArcCW_BO1.M202_Mech", t = 0 / 30}
+        },
     },
     ["reload"] = {
         Source = "reload",
-        Time = 93 / 30,
+        Time = 6.96,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
-        MinProgress = 0.1,
+        --MinProgress = 0.1,
         SoundTable = {
-            {s = "ArcCW_BO1.RPG_Slide", t = 25 / 30},
-            {s = "ArcCW_BO1.RPG_Futz", t = 33 / 30},
-            {s = "ArcCW_BO1.RPG_Latch", t = 40 / 30},
+            {s = "ArcCW_BO1.M202_FlipSight", t = 12 / 30},
+            {s = "ArcCW_BO1.M202_Down", t = 40 / 30},
+            {s = "ArcCW_BO1.M202_Tap", t = 55 / 30},
+            {s = "ArcCW_BO1.M202_Start", t = 113 / 30},
+            {s = "ArcCW_BO1.M202_Up", t = 140 / 30},
+            {s = "ArcCW_BO1.M202_Ground", t = 165 / 30},
+            {s = "ArcCW_BO1.M202_FlipSight", t = 175 / 30},
         },
     },
     ["enter_sprint"] = {

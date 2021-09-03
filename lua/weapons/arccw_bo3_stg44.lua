@@ -317,7 +317,7 @@ SWEP.Attachments = {
     },
     {--15
         Hidden = true,
-        Slot = {"waw_zf4_scope_1"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"waw_zf4_scope"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon",
         VMScale = Vector(1.25, 1.25, 1.25),
         Offset = {

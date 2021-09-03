@@ -170,9 +170,6 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.RejectAttachments = {
-}
-
 SWEP.Attachments = {
     { --1
         PrintName = "Optic", -- print name
@@ -407,7 +404,7 @@ SWEP.Animations = {
         Time = 1 / 30,
     },
     ["draw_grip"] = {
-        Source = "first_draw_grip",
+        Source = "draw_grip",
         Time = 0.83,
         LHIK = true,
         LHIKIn = 0.2,

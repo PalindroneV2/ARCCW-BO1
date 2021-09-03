@@ -18,13 +18,13 @@ att.Mult_SightTime = 0.75
 att.Mult_HipDispersion = 1.2
 att.Mult_SpeedMult = 0.95
 
-att.GivesFlags = {"bo2_foregrip"}
+att.GivesFlags = {"hk416_taclight"}
 att.Slot = {"foregrip", "bo1_uniforegrip"}
 att.ModelOffset = Vector(-16, -2.625, 3.6)
 
 att.LHIK = true
 
-att.Model = "models/weapons/arccw/atts/bo2_foregrip.mdl"
+att.Model = "models/weapons/arccw/atts/bo2_taclight_grip.mdl"
 
 att.Override_HoldtypeActive = "smg"
 att.Override_HoldtypeSights = "smg"
@@ -51,7 +51,7 @@ att.ToggleStats = {
 }
 
 att.DrawFunc = function(wep, element)
-    if table.HasValue(wep:GetWeaponFlags(), "integral") then
+    if table.HasValue(wep:GetWeaponFlags(), "realgrip") then
         element.Model:SetBodygroup(0,0)
     else
         element.Model:SetBodygroup(0,1)

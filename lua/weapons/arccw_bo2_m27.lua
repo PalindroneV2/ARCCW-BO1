@@ -178,7 +178,7 @@ SWEP.AttachmentElements = {
             CrosshairInSights = false,
         },
     },
-    ["bo2_foregrip"] = {
+    ["hk416_taclight"] = {
         VMBodygroups = {
             {ind = 4, bg = 1},
         },
@@ -204,7 +204,7 @@ SWEP.AttachmentElements = {
         },
     },
     ["ammo_papunch"] = {
-        NamePriority = 4,
+        NamePriority = 5,
         NameChange = "Mystifier",
     },
     ["name_a4"] = {
@@ -216,7 +216,7 @@ SWEP.AttachmentElements = {
         },
     },
     ["m27iar"] = {
-        NamePriority = 2,
+        NamePriority = -1,
         NameChange = "M27 IAR",
         ExcludeFlags = {"papname1"},
         AttPosMods = {
@@ -229,7 +229,7 @@ SWEP.AttachmentElements = {
         },
     },
     ["416C"] = {
-        NamePriority = 1,
+        NamePriority = -1,
         NameChange = "HK416C",
         ExcludeFlags = {"papname1"},
         AttPosMods = {
@@ -318,8 +318,8 @@ SWEP.Attachments = {
             wpos = Vector(11, 0.8, -2.5),
             wang = Angle(172.5, -180, 0),
         },
-        GivesFlags = {"integral"},
         MergeSlots = {5,6},
+        GivesFlags = {"realgrip"},
     }, --4
     {
         Hidden = true,

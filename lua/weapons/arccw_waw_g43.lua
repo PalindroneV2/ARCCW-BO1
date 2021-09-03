@@ -118,11 +118,11 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(3, -3, 0)
+SWEP.ActivePos = Vector(1.5, -3, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(6, -3, -2)
-SWEP.SprintAng = Angle(-7.036, 45.016, 0)
+SWEP.SprintPos = Vector(1.5, -3, -1)
+SWEP.SprintAng = Angle(-10, 20, 0)
 
 SWEP.CustomizePos = Vector(17, -6, -2)
 SWEP.CustomizeAng = Angle(15, 40, 25)
@@ -250,7 +250,7 @@ SWEP.Attachments = {
     }, --8
     {
         Hidden = true,
-        Slot = {"waw_zf4_scope_1"},
+        Slot = {"waw_zf4_scope"},
         Bone = "j_gun",
         VMScale = Vector(1, 1, 1),
         Offset = {
