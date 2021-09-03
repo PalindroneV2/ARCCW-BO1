@@ -21,6 +21,7 @@ att.Mult_SpeedMult = 0.95
 att.GivesFlags = {"hk416_taclight"}
 att.Slot = {"foregrip", "bo1_uniforegrip"}
 att.ModelOffset = Vector(-16, -2.625, 3.6)
+att.ModelBodygroups = "000"
 
 att.LHIK = true
 
@@ -52,8 +53,8 @@ att.ToggleStats = {
 
 att.DrawFunc = function(wep, element)
     if table.HasValue(wep:GetWeaponFlags(), "realgrip") then
-        element.Model:SetBodygroup(0,0)
-    else
         element.Model:SetBodygroup(0,1)
+    else
+        element.Model:SetBodygroup(0,0)
     end
 end

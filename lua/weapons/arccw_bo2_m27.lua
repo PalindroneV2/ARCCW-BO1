@@ -331,6 +331,7 @@ SWEP.Attachments = {
             wpos = Vector(17, 1.15, -3.8),
             wang = Angle(170, -180, 0),
         },
+        GivesFlags = {"realgrip"},
     }, --5
     {
         Hidden = true,
@@ -342,6 +343,7 @@ SWEP.Attachments = {
             wpos = Vector(15, 1.15, -3.5),
             wang = Angle(170, -180, 0),
         },
+        GivesFlags = {"realgrip"},
     }, --6
     {
         PrintName = "Tactical",
