@@ -34,8 +34,8 @@ SWEP.ViewModelFOV = 60
 SWEP.DefaultBodygroups = "0000000"
 SWEP.DefaultSkin = 0
 
-SWEP.Damage = 90
-SWEP.DamageMin = 40 -- damage done at maximum range
+SWEP.Damage = 100
+SWEP.DamageMin = 50 -- damage done at maximum range
 SWEP.Range = 100 -- in METRES
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BUCKSHOT
@@ -131,7 +131,7 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(15, 3, -2)
+SWEP.CustomizePos = Vector(15, 3, 0)
 SWEP.CustomizeAng = Angle(15, 40, 20)
 
 SWEP.HolsterPos = Vector(0.532, -6, 0)
@@ -145,6 +145,11 @@ SWEP.AttachmentElements = {
         NamePriority = 10,
         NameChange = "Mist-Maker", -- Refitted-870 Mechanical Cranium Sequencer
     },
+    ["rail"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 1},
+        },
+    },
 }
 
 SWEP.ExtraSightDist = 5
@@ -156,34 +161,34 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(6, 0, 3.35), -- offset that the attachment will be relative to the bone
+            vpos = Vector(0, -0.015, 3.95), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(12.5, 1.3, -7),
-            wang = Angle(172.5, 180, 0)
         },
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
+        InstalledEles = {"rail"}
     }, --1
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = "muzzle_shotgun",
         Bone = "tag_weapon",
-        VMScale = Vector(1, 1, 1),
+        VMScale = Vector(1.25, 1.25, 1.25),
+        WMScale = Vector(1.25, 1.25, 1.25),
         Offset = {
-            vpos = Vector(23.5, 0, 2.5), -- offset that the attachment will be relative to the bone
+            vpos = Vector(14, 0, 2.5), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
     }, --2
     {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
-        Bone = "tag_pump",
+        Bone = "j_pump",
         Offset = {
-            vpos = Vector(-1.5, 0, 2.75),
+            vpos = Vector(-6.5, -0.25, 0.35),
             vang = Angle(0, 0, 0),
         },
         SlideAmount = false
@@ -194,27 +199,28 @@ SWEP.Attachments = {
         VMScale = Vector(0.95, 0.95, 0.95),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(12.5, -0.8, 2.8),
-            vang = Angle(0, 0, 120),
+            vpos = Vector(10, 0, 3.85),
+            vang = Angle(0, 0, 180),
         },
     }, --5
-    {
-        PrintName = "Stock",
-        Slot = "bo1_stock",
-        DefaultAttName = "No Stock",
-    }, --6
-    { --7
+    { --6
         PrintName = "Proficiency",
         Slot = {"bo2_fastmag"},
         DefaultAttName = "Standard"
     },
     {
         PrintName = "Ammo Type",
-        Slot = {"ammo_pap_pumpsg"},
-    }, --8
+        Slot = {"ammo_pap_sg", "bo2_ksg_buckshot"},
+    }, --7
     {
         PrintName = "Perk",
         Slot = "bo1_perk",
+    }, --8
+    {
+        PrintName = "Sound",
+        Slot = "bo2_ksg_sound",
+        DefaultAttName = "Black Ops 2",
+        DefaultAttIcon = Material("entities/acwatt_bo2_logo.png"),
     }, --9
     {
         PrintName = "Charm",
@@ -241,20 +247,53 @@ end
 
 SWEP.Hook_SelectReloadAnimation = function(wep, curanim)
     local fastmag = wep:GetBuff_Override("BO1_FastMag")
+    local mw3 = wep:GetBuff_Override("AltSound")
+
     if fastmag then
+        if mw3 then
+            return curanim .. "_fast_mw3"
+        end
         return curanim .. "_fast"
     end
-
-    if curanim == "sgreload_insert" and fastmag then
-        return "sgreload_insert_fast"
+    if mw3 then
+        return curanim .. "_mw3"
     end
 end
 
-/*
+
 SWEP.Hook_SelectInsertAnimation = function(wep, data)
     local fastmag = wep:GetBuff_Override("BO1_FastMag")
+    local mw3 = wep:GetBuff_Override("AltSound")
+    local pap = wep:GetBuff_Override("PackAPunch")
+
+    if fastmag then
+        if mw3 then
+            if pap then
+                return {count = 14, anim = "sgreload_insert_fast_mw3"}
+            end
+            return {count = 2, anim = "sgreload_insert_fast_mw3"}
+        end
+        if pap then
+            return {count = 14, anim = "sgreload_insert_fast"}
+        end
+        return {count = 2, anim = "sgreload_insert_fast"}
+    end
+
+    if mw3 then
+        if pap then
+            return {count = 7, anim = "sgreload_insert_mw3"}
+        end
+        return {count = 1, anim = "sgreload_insert_mw3"}
+    end
 end
-*/
+
+SWEP.Hook_TranslateAnimation = function(wep, anim)
+    local mw3 = wep:GetBuff_Override("AltSound")
+
+    if mw3 then
+        return anim .. "_mw3"
+    end
+end
 
 SWEP.Animations = {
     ["idle"] = {
@@ -277,7 +316,7 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 2,
+        Time = 1.75,
         SoundTable = {
             {s = "ArcCW_BO2.Shotgun_Back", t = 14 / 30},
             {s = "ArcCW_BO2.Shotgun_Fwd", t = 21 / 30}
@@ -288,14 +327,12 @@ SWEP.Animations = {
             "fire",
         },
         Time = 3 / 10,
-        ShellEjectAt = 0.15,
     },
     ["fire_iron"] = {
         Source = {
             "fire_ads",
         },
         Time = 3 / 10,
-        ShellEjectAt = 0.15,
     },
     ["cycle"] = {
         Source = {
@@ -307,6 +344,7 @@ SWEP.Animations = {
             {s = "ArcCW_BO2.Shotgun_Back", t = 2 / 30},
             {s = "ArcCW_BO2.Shotgun_Fwd", t = 9 / 30},
         },
+        ShellEjectAt = 0.15,
     },
     ["cycle_iron"] = {
         Source = {
@@ -314,7 +352,7 @@ SWEP.Animations = {
             "pump_ads_2",
         },
         Time = 20 / 35,
-        --ShellEjectAt = 0.3,
+        ShellEjectAt = 0.15,
         SoundTable = {
             {s = "ArcCW_BO2.Shotgun_Back", t = 2 / 30},
             {s = "ArcCW_BO2.Shotgun_Fwd", t = 9 / 30},
@@ -406,6 +444,116 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO2.Shotgun_Back", t = 8 / 30},
             {s = "ArcCW_BO2.Shotgun_Fwd", t = 12 / 30},
+        },
+    },
+
+    -- MW3 SOUNDS --
+
+    ["ready_mw3"] = {
+        Source = "first_draw",
+        Time = 1.75,
+        SoundTable = {
+            {s = "ArcCW_MW3E.KSG_Back", t = 14 / 30},
+            {s = "ArcCW_MW3E.KSG_Fwd", t = 21 / 30}
+        },
+    },
+    ["cycle_mw3"] = {
+        Source = {
+            "pump",
+        },
+        Time = 20 / 35,
+        --ShellEjectAt = 0.3,
+        SoundTable = {
+            {s = "ArcCW_MW3E.KSG_Back", t = 2 / 30},
+            {s = "ArcCW_MW3E.KSG_Fwd", t = 9 / 30},
+        },
+        ShellEjectAt = 0.15,
+    },
+    ["cycle_iron_mw3"] = {
+        Source = {
+            "pump_ads",
+            "pump_ads_2",
+        },
+        Time = 20 / 35,
+        ShellEjectAt = 0.15,
+        SoundTable = {
+            {s = "ArcCW_MW3E.KSG_Back", t = 2 / 30},
+            {s = "ArcCW_MW3E.KSG_Fwd", t = 9 / 30},
+        },
+    },
+
+    ["sgreload_start_mw3"] = {
+        Source = "reload_in",
+        Time = 40 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
+        MinProgress = 1,
+        SoundTable = {
+            {s = "ArcCW_MW3E.KSG_In", t = 21 / 30},
+        },
+    },
+    ["sgreload_insert_mw3"] = {
+        Source = "reload_loop",
+        Time = 26 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnimStartTime = 0.3,
+        MinProgress = 15 / 30,
+        SoundTable = {
+            {s = "ArcCW_MW3E.KSG_In", t = 10 / 30},
+        },
+    },
+    ["sgreload_finish_mw3"] = {
+        Source = "reload_out",
+        Time = 30 / 30,
+        SoundTable = {
+            {s = "ArcCW_MW3E.KSG_Back", t = 8 / 30},
+            {s = "ArcCW_MW3E.KSG_Fwd", t = 12 / 30},
+        },
+    },
+    ["sgreload_finish_empty_mw3"] = {
+        Source = "reload_out",
+        Time = 30 / 30,
+        SoundTable = {
+            {s = "ArcCW_MW3E.KSG_Back", t = 8 / 30},
+            {s = "ArcCW_MW3E.KSG_Fwd", t = 12 / 30},
+        },
+    },
+    --MW3 fast
+    ["sgreload_start_fast_mw3"] = {
+        Source = "fast_in",
+        Time = 40 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        RestoreAmmo = 2, -- loads a shell since the first reload has a shell in animation
+        MinProgress = 1,
+        SoundTable = {
+            {s = "ArcCW_MW3E.KSG_In", t = 21 / 30},
+        },
+    },
+    ["sgreload_insert_fast_mw3"] = {
+        Source = "fast_loop",
+        Time = 26 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnimStartTime = 0.3,
+        MinProgress = 15 / 30,
+        RestoreAmmo = 2,
+        SoundTable = {
+            {s = "ArcCW_MW3E.KSG_In", t = 10 / 30},
+        },
+    },
+    ["sgreload_finish_fast_mw3"] = {
+        Source = "fast_out",
+        Time = 30 / 30,
+        SoundTable = {
+            {s = "ArcCW_MW3E.KSG_Back", t = 8 / 30},
+            {s = "ArcCW_MW3E.KSG_Fwd", t = 12 / 30},
+        },
+    },
+    ["sgreload_finish_empty_fast_mw3"] = {
+        Source = "fast_out",
+        Time = 30 / 30,
+        SoundTable = {
+            {s = "ArcCW_MW3E.KSG_Back", t = 8 / 30},
+            {s = "ArcCW_MW3E.KSG_Fwd", t = 12 / 30},
         },
     },
 }

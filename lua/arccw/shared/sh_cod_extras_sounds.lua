@@ -509,3 +509,59 @@ sound.Add( {
         "^weapons/arccw/mw3e_deagle/lift.wav",
     }
 } )
+
+-- MW3E KSG --
+
+sound.Add({
+    name = "ArcCW_MW3E.KSG_Fire",
+    channel = CHAN_STATIC,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_ksg/fire.wav",
+    }
+})
+sound.Add( {
+    name = "ArcCW_MW3E.KSG_Fwd",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_ksg/fwd.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.KSG_Back",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_ksg/back.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.KSG_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_ksg/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.KSG_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_ksg/lift.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.KSG_PickShell",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_ksg/pick_shell.wav",
+    }
+} )
