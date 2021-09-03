@@ -185,7 +185,7 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
         InstalledEles = {"mount"},
-        MergeSlots = {9}
+        MergeSlots = {10}
     },
     { --2
         PrintName = "Muzzle",
@@ -258,7 +258,7 @@ SWEP.Attachments = {
     }, --8
     {
         Hidden = true,
-        Slot = {"waw_zf4_scope", "waw_aperture"},
+        Slot = {"waw_zf4_scope", "waw_svt_scope", "waw_aperture"},
         Bone = "j_gun",
         VMScale = Vector(1, 1, 1),
         Offset = {

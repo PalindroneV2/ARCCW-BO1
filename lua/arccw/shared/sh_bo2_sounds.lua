@@ -344,6 +344,16 @@ sound.Add({
     }
 })
 sound.Add({
+    name = "ArcCW_BO2.KSG_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo2_generic_shotgun/fire_870.wav",
+    }
+})
+sound.Add({
     name = "ArcCW_BO2.1216_Fire",
     channel = CHAN_STATIC,
     volume = 1.0,

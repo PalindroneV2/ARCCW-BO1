@@ -78,10 +78,10 @@ SWEP.ShootSound = "ArcCW_BO2.BHP_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.Pistol_Sil"
 SWEP.DistantShootSound = "ArcCW_BO2.Pistol_RingOff"
 
-SWEP.MuzzleEffect = "muzzleflash_pistol"
-SWEP.ShellModel = "models/shells/shell_9mm.mdl"
-SWEP.ShellScale = 1.5
-SWEP.ShellPitch = 90
+SWEP.MuzzleEffect = "muzzleflash_smg"
+SWEP.ShellModel = "models/shells/shell_556.mdl"
+SWEP.ShellScale = 1
+SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
