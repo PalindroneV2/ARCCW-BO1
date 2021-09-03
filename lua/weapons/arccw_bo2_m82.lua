@@ -256,23 +256,14 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 1.86,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["holster"] = {
         Source = "holster",
         Time = 1.45,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["ready"] = {
         Source = "draw",
         Time = 1.86,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["fire"] = {
         Source = {"shoot"},
@@ -295,7 +286,7 @@ SWEP.Animations = {
             {s = "ArcCW_BO2.Sniper_ClipIn", t = 1.9},
         },
         LHIK = true,
-        LHIKIn = 0.5,
+        LHIKIn = 0.25,
         LHIKOut = 0.5,
     },
     ["reload_empty"] = {
@@ -312,7 +303,7 @@ SWEP.Animations = {
         },
         LHIK = true,
         LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIKOut = 1.6,
     },
     ["enter_sprint"] = {
         Source = "sprint_in",

@@ -229,14 +229,14 @@ SWEP.Animations = {
         Time = 1,
         LHIK = true,
         LHIKIn = 0.25,
-        LHIKOut = 0.25,
+        LHIKOut = 0.5,
     },
     ["holster"] = {
         Source = "holster",
         Time = 1,
         LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
+        LHIKIn = 0.5,
+        LHIKOut = 0,
     },
     ["ready"] = {
         Source = "first_draw",
@@ -267,7 +267,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.2,
-        LHIKOut = 1.5,
+        LHIKOut = 1,
         SoundTable = {
             {s = "ArcCW_BO1.Olympia_Switch", t = 14 / 40},
             {s = "ArcCW_BO1.Olympia_Open", t = 32 / 40},
@@ -281,7 +281,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.2,
-        LHIKOut = 1.5,
+        LHIKOut = 0.8,
         SoundTable = {
             {s = "ArcCW_BO1.Olympia_Switch", t = 14 / 40},
             {s = "ArcCW_BO1.Olympia_Open", t = 32 / 40},

@@ -229,14 +229,14 @@ SWEP.Animations = {
         Time = 1.1,
         LHIK = true,
         LHIKIn = 0.2,
-        LHIKOut = 0.25,
+        LHIKOut = 0.1,
     },
     ["ready"] = {
         Source = "first_draw",
         Time = 50 / 35,
         LHIK = true,
         LHIKIn = 0.2,
-        LHIKOut = 0.2,
+        LHIKOut = 0.95,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Back", t = 28 / 35},
             {s = "ArcCW_BO1.MK_Fwd", t = 30 / 35},
