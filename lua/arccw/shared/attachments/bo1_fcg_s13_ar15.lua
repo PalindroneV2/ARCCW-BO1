@@ -1,4 +1,4 @@
-att.PrintName = "S-1-3 FCG"
+att.PrintName = "A2 S-1-3 FCG"
 att.Icon = Material("entities/acwatt_fcg_s13.png", "mips smooth")
 att.Description = "Firemode conversion allowing for 3-round burst and semi-auto fire modes."
 att.Desc_Pros = {
@@ -9,8 +9,8 @@ att.Desc_Cons = {
     "- Burst Delay"
 }
 att.AutoStats = true
-att.Slot = "bo1_fcg_burst"
-att.GivesFlags = {"bo1_3burst"}
+att.Slot = "fcg_m16a2"
+att.GivesFlags = {"a2top"}
 att.SortOrder = 101
 
 att.Override_Firemodes = {

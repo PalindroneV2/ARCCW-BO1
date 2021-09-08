@@ -527,7 +527,7 @@ SWEP.Hook_NameChange = function(wep, name)
     end
 
     local fcg = 0
-    if sear == "bo1_fcg_s13" then fcg = 1
+    if sear == "bo1_fcg_s13_ar15" then fcg = 1
     elseif sear == "kali_fcg_funswitch" then fcg = 2
     elseif sear == "kali_fcg_funswitch_2" then fcg = 3
     elseif sear == "kali_fcg_a4" then fcg = 4
@@ -981,7 +981,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local kacirons = wep:GetBuff_Override("AltIrons2")
 
     local fcg = 0
-    if wep.Attachments[1].Installed == "bo1_fcg_s13" then
+    if wep.Attachments[1].Installed == "bo1_fcg_s13_ar15" then
         fcg = 1
     elseif wep.Attachments[1].Installed == "kali_fcg_funswitch" then
         fcg = 1
@@ -1156,7 +1156,7 @@ SWEP.Hook_GetCapacity = function(wep, cap)
     elseif barrel == "kali_ar15_barrel_patriot" then length = 5
     end
     local fcg = 0
-    if sear == "bo1_fcg_s13" then fcg = 1
+    if sear == "bo1_fcg_s13_ar15" then fcg = 1
     elseif sear == "kali_fcg_funswitch" then fcg = 2
     elseif sear == "kali_fcg_funswitch_2" then fcg = 3
     elseif sear == "kali_fcg_a4" then fcg = 4

@@ -5,12 +5,10 @@ SWEP.AdminOnly = false
 
 
 -- This one is so yall are aware.
-SWEP.PrintName = "SIG 556"
+SWEP.PrintName = "IWI X95"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = [[
-    Import version of the SG 550 series of rifles with modifications that allow them to take STANAG magazines.
-
-    Equipped with a Magpul MOE Stock and modified for military use with a 3 round burst mode.
+    Israeli bullpup carbine in 5.56mm NATO.
 ]]
 SWEP.Trivia_Manufacturer = "SIG-Sauer"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
@@ -22,9 +20,9 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_bo2_sig556.mdl"
-SWEP.WorldModel = "models/weapons/arccw/w_bo2_sig556.mdl"
-SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_sig556.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_bo2_mtar.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_bo2_mtar.mdl"
+SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_mtar.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-4.25, 3.5, -7.15),
@@ -60,12 +58,11 @@ SWEP.SightedSpeedMult = 0.5
 SWEP.SightTime = 0.3
 SWEP.VisualRecoilMult = 0.25
 
-SWEP.Delay = 60 / 700 -- 60 / RPM.
+SWEP.Delay = 60 / 750 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        Mode = -3,
-        RunawayBurst = true,
+        Mode = 2,
     },
     {
         Mode = 1,
@@ -91,8 +88,7 @@ SWEP.MagID = "hk416" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
---SWEP.FirstShootSound = "ArcCW_BO2.M27_Fire"
-SWEP.ShootSound = "ArcCW_BO2.SIG556_Fire"
+SWEP.ShootSound = "ArcCW_BO2.MTAR_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.M27_Sil"
 SWEP.DistantShootSound = {
     "^weapons/arccw/bo2_generic_ar/dist/0.wav",
@@ -122,8 +118,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.025, 3, 0.325),
-    Ang = Angle(0, 0.025, 0),
+    Pos = Vector(-1.6, 3, 0.6),
+    Ang = Angle(0, 0.05, 0),
     Magnification = 1.25,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -135,10 +131,10 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(1, 3, 0.5)
+SWEP.ActivePos = Vector(1, 1, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(0, 3, 0)
+SWEP.SprintPos = Vector(0, 1, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(15, 3, -2)
@@ -173,6 +169,11 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 1},
         },
     },
+    ["bo2_irlaser"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 1},
+        },
+    },
 }
 
 SWEP.Attachments = {
@@ -182,7 +183,7 @@ SWEP.Attachments = {
         Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(4, 0, 3.9), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(0, 0, 3), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
         InstalledEles = {"mount"},
@@ -193,10 +194,10 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = "muzzle",
-        VMScale = Vector(1.5, 1.5, 1.5),
+        VMScale = Vector(1, 1, 1),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(27.25, 0, 2), -- offset that the attachment will be relative to the bone
+            vpos = Vector(12, 0, 0.825), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(0, 0, 0),
             wang = Angle(0, 0, 0)
@@ -223,7 +224,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         WMScale = Vector(0.85, 0.85, 0.85),
         Offset = {
-            vpos = Vector(12.5, 0, 0.6), -- offset that the attachment will be relative to the bone
+            vpos = Vector(5, 0, -0.65), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(15, 1.125, -4.25),
             wang = Angle(175, -179, -1.5),
@@ -232,31 +233,21 @@ SWEP.Attachments = {
     { --5
         PrintName = "Tactical",
         Slot = {"bo1_tacprimary"},
-        VMScale = Vector(1, 1, 1),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(17, -1.35, 2.5), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 90),
-            wpos = Vector(19, 0.5, -5.5),
-            wang = Angle(-5, 0, 85)
+            vpos = Vector(6, 1.55, 1.5), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, -110),
         },
+        MergeSlots = {11},
     },
     {
         PrintName = "Magazine",
         DefaultAttName = "Standard Mag.",
         Slot = "bo1_mag",
     }, --6
-    /*
-    { --6
-        PrintName = "Stock",
-        Slot = {"bo1_stock", "bo1_mp5stock"},
-        DefaultAttName = "No Stock",
-        Installed = "bo1_solid_stock"
-    },
-    */
     { --7
         PrintName = "Fire Group",
-        Slot = {"bo1_fcg","bo2_fcg_fullauto"},
+        Slot = {"bo1_fcg", "bo1_fcg_burst"},
         DefaultAttName = "Standard FCG"
     },
     { --8
@@ -273,10 +264,19 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(4.5, -0.75, 2.5),
+            vpos = Vector(-4.25, -0.75, 0.5),
             vang = Angle(0, 0, 0),
             wpos = Vector(4.8, 1.7, -2.5),
             wang = Angle(-175, -175, 0)
+        },
+    },
+    { --11
+        Hidden = true,
+        Slot = {"bo1_tac_mtar"},
+        Bone = "j_gun",
+        Offset = {
+            vpos = Vector(0, 0, 0),
+            vang = Angle(0, 0, 0),
         },
     },
 }
@@ -284,16 +284,32 @@ SWEP.Attachments = {
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
 
-    if pap then return "Rift Breaker" end
+    if pap then return "Malevolent Redeemer" end
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
 
     local papcamo = wep:GetBuff_Override("PackAPunch")
+
     if papcamo then
         vm:SetSkin(3)
     end
+
+    if wep:GetState() == ArcCW.STATE_CUSTOMIZE then
+        vm:SetBodygroup(0,1)
+        vm:SetBodygroup(1,2)
+        if wep:GetBuff_Override("BO1_FastMag") then
+            vm:SetBodygroup(1,3)
+        end
+    else
+        vm:SetBodygroup(0,0)
+        vm:SetBodygroup(1,0)
+        if wep:GetBuff_Override("BO1_FastMag") then
+            vm:SetBodygroup(1,1)
+        end
+    end
+
 end
 
 
@@ -407,7 +423,7 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.8},
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
             {s = "ArcCW_BO2.AR_MagIn", t = 1.25}
         },
         MinProgress = 1.4,
@@ -420,7 +436,7 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.8},
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
             {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
             {s = "ArcCW_BO2.AR_Back", t = 2.05},
             {s = "ArcCW_BO2.AR_Fwd", t = 2.2},
@@ -428,7 +444,7 @@ SWEP.Animations = {
         MinProgress = 2.0,
     },
     ["reload_fast"] = {
-        Source = "reload_fast",
+        Source = "fast",
         Time = 1.79,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
@@ -436,13 +452,13 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.6},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.15}
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.1}
         },
         MinProgress = 1.4
     },
     ["reload_empty_fast"] = {
-        Source = "reload_empty_fast",
+        Source = "fast_empty",
         Time = 2.3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
@@ -450,9 +466,10 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.6},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
-            {s = "ArcCW_BO2.AR_Fwd", t = 1.9},
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.1},
+            {s = "ArcCW_BO2.AR_Back", t = 1.8},
+            {s = "ArcCW_BO2.AR_Fwd", t = 1.95},
         },
         MinProgress = 2.0,
     },
@@ -540,7 +557,7 @@ SWEP.Animations = {
         Time = 2.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.6},
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
             {s = "ArcCW_BO2.AR_MagIn", t = 1.25}
         },
         MinProgress = 1.4,
@@ -550,7 +567,7 @@ SWEP.Animations = {
         Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.8},
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
             {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
             {s = "ArcCW_BO2.AR_Back", t = 2.05},
             {s = "ArcCW_BO2.AR_Fwd", t = 2.1},
@@ -558,23 +575,23 @@ SWEP.Animations = {
         MinProgress = 2.0,
     },
     ["reload_m203_fast"] = {
-        Source = "reload_gl_fast",
+        Source = "fast_gl",
         Time = 2.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.6},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25}
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.1}
         },
     },
     ["reload_empty_m203_fast"] = {
-        Source = "reload_empty_gl_fast",
+        Source = "fast_empty_gl",
         Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.6},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.1},
             {s = "ArcCW_BO2.AR_Back", t = 1.8},
-            {s = "ArcCW_BO2.AR_Fwd", t = 1.9},
+            {s = "ArcCW_BO2.AR_Fwd", t = 1.95},
         },
     },
     ["enter_sprint_m203"] = {

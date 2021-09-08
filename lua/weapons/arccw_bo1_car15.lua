@@ -381,7 +381,7 @@ SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
     local m635 = wep.Attachments[12].Installed == "ammo_car15_9mm"
     local s13 = 0
-    if wep.Attachments[10].Installed == "bo1_fcg_s13" then s13 = 1
+    if wep.Attachments[10].Installed == "bo1_fcg_s13_ar15" then s13 = 1
     elseif wep.Attachments[10].Installed == "bo1_fcg_s16" then s13 = 1
     end
     local irons = wep:GetBuff_Override("AltIrons")
