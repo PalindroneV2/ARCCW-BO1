@@ -26,8 +26,8 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 45
-SWEP.DamageMin = 35 -- damage done at maximum range
+SWEP.Damage = 37.5
+SWEP.DamageMin = 30 -- damage done at maximum range
 SWEP.Range = 165 -- in METRES
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
@@ -66,7 +66,7 @@ SWEP.AccuracyMOA = 1.65 -- accuracy in Minutes of Angle. There are 60 MOA in a d
 SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 200
 
-SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
+SWEP.Primary.Ammo = "smg1" -- what ammo type the gun uses
 SWEP.MagID = "rpk" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
