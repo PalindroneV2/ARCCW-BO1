@@ -120,6 +120,26 @@ sound.Add( {
     }
 } )
 sound.Add( {
+    name = "ArcCW_BO2.Vector_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo2_generic_smg/fire_vector.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO2.Chicom_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo2_generic_smg/fire_chicom.wav",
+    }
+} )
+sound.Add( {
     name = "ArcCW_BO2.EVO3_Fire",
     channel = CHAN_STATIC,
     volume = 1.0,
@@ -147,6 +167,16 @@ sound.Add( {
     --pitch = {95, 110},
     sound = {
         "^weapons/arccw/bo2_generic_smg/fire_pdw.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO2.MSMC_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo2_generic_smg/fire_msmc.wav",
     }
 } )
 sound.Add( {
@@ -241,6 +271,16 @@ sound.Add( {
     --pitch = {95, 110},
     sound = {
         "^weapons/arccw/bo2_generic_ar/fire_mtar.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO2.Type95_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo2_generic_ar/fire_type95.wav",
     }
 } )
 sound.Add( {

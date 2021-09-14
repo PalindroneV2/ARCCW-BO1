@@ -20,7 +20,7 @@ att.Mult_SpeedMult = 0.95
 
 att.GivesFlags = {"bo2_foregrip"}
 att.Slot = {"foregrip", "bo1_uniforegrip"}
-att.ModelOffset = Vector(-16, -2.875, 3.75)
+att.ModelOffset = Vector(-16, -2.825, 3.75)
 
 att.LHIK = true
 

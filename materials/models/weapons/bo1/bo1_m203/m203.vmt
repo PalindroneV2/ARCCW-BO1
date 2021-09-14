@@ -4,7 +4,7 @@
 	//$color2 "[0.5 0.5 0.5]"
 	$blendtintbybasealpha  "1"
 	"$bumpmap" "models/weapons/bo1/bo1_m203/m203_n"
-	$detail "models\weapons\bo1\black"
+	$detail "models\weapons\bo1\black_detail"
 	$detailblendmode 0
 	$detailblendscale 1
 
@@ -18,4 +18,5 @@
 	$envmap 	env_cubemap
 	$envmaptint   "[0.05 0.05 0.05]"
 	$envmapfresnel "1"
+	"$nocull" "1"
 }

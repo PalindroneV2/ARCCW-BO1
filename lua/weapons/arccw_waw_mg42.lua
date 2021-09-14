@@ -193,19 +193,6 @@ SWEP.Attachments = {
         CorrectiveAng = Angle(0.35, 0, 0),
     }, --1
     {
-        PrintName = "Muzzle",
-        DefaultAttName = "Standard Muzzle",
-        Slot = "bo1_muzzle",
-        VMScale = Vector(2, 2, 2),
-        Bone = "tag_weapon",
-        Offset = {
-            vpos = Vector(34, 0, -0.3), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 0),
-            wpos = Vector(25.4, 2.5, -5.75),
-            wang = Angle(176, 185, 90)
-        },
-    }, --2
-    {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
         Bone = "tag_weapon",
@@ -269,16 +256,10 @@ SWEP.Attachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[7].Installed == "ammo_papunch"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then
         return vm:SetSkin(1)
-    end
-end
-
-SWEP.Hook_TranslateAnimation = function(wep, anim, data)
-    if wep:Clip1() == 0 then
-        return anim .. "_empty"
     end
 end
 

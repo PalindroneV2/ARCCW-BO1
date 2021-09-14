@@ -840,6 +840,69 @@ sound.Add( {
     }
 } )
 
+-- DP28 Main -- 
+
+sound.Add( {
+    name = "ArcCW_WAW.DP28_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_dp28/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.DP28_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_dp28/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.DP28_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_dp28/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.DP28_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_dp28/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.DP28_Tap",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_dp28/tap.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.DP28_Land",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_dp28/land.wav",
+    }
+} )
+
 -- BAR Main --
 
 sound.Add( {
