@@ -1155,6 +1155,79 @@ sound.Add( {
     }
 } )
 
+--- MP40 Main ---
+
+sound.Add( {
+    name = "ArcCW_WAW.Type100_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_type100/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Type100_Sup",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_type100/sup.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Type100_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 0.5,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_type100/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Type100_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_type100/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Type100_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_type100/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Type100_Tap",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_type100/tap.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Type100_Bolt",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_type100/charge.wav",
+    }
+} )
+
 --- Thompson Main ---
 
 sound.Add( {

@@ -22,8 +22,8 @@ SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_scorpion.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     scale = 1,
-    pos        =    Vector(-9, 4.5, -4.5),
-    ang        =    Angle(-10, -1, 180),
+    pos        =    Vector(-5.5, 4.5, -6.5),
+    ang        =    Angle(-7, 1.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
@@ -119,8 +119,8 @@ SWEP.IronSightStruct = {
 }
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "smg"
-SWEP.HoldtypeSights = "smg"
+SWEP.HoldtypeActive = "ar2"
+SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
