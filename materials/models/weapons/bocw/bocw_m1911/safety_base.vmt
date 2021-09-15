@@ -14,6 +14,10 @@
 	"$envmaptint" "[ .05 .05 .05 ]"					
 	"$envmapFresnel" "1"
 
+	$detail "models/weapons/bo1/gunmetal"
+	$detailblendmode 0
+	"$detailblendfactor" "1"
+
 	$nocull 1
 }
 

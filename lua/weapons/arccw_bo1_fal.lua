@@ -148,9 +148,14 @@ SWEP.AttachmentElements = {
             {ind = 4, bg = 2},
         },
     },
-    ["solid_stock"] = {
+    ["solider_stock"] = {
         VMBodygroups = {
             {ind = 5, bg = 1},
+        },
+    },
+    ["solid_stock"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 3},
         },
     },
     ["light_stock"] = {
@@ -162,16 +167,44 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 2, bg = 1}
         },
+        ExcludeFlags = {"oswfal"}
     },
     ["parafal"] = {
         VMBodygroups = {
-            {ind = 3, bg = 1}
+            {ind = 3, bg = 1},
         },
         AttPosMods = {
             [3] = {
                 vpos = Vector(18.5, 0, 2.25),
             }
         }
+    },
+    ["oswfal"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 3},
+            {ind = 3, bg = 2},
+        },
+        AttPosMods = {
+            [1] = {
+                vpos = Vector(0.5, 0, 3.85),
+            },
+            [3] = {
+                vpos = Vector(21.25, 0, 2.15),
+            },
+            [5] = {
+                vpos = Vector(10, 0, 1.7),
+            },
+            [8] = {
+                vpos = Vector(12, 1, 2.9),
+                vang = Angle(0, 0, -90),
+            },
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-2.22, 1.75, 0.25),
+            Ang = Angle(0.1, 0.025, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
+        },
     },
 }
 
@@ -193,6 +226,11 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         DefaultAttName = "21 in. Standard Barrel",
         Slot = {"fal_barrel"},
+        Bone = "j_gun",
+        Offset = {
+            vpos = Vector(0, 0, 0), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+        },
     }, --2
     {
         PrintName = "Muzzle",
@@ -213,8 +251,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(7.95, 0, 1), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(12.5, 1.15, -4),
-            wang = Angle(-9, -1, 180),
         },
         MergeSlots = {5,6,7}
     }, --4
@@ -225,8 +261,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(12, 0, 1.6), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(16, 1.125, -5.125),
-            wang = Angle(-9, -1, 180),
         },
     }, --5
     {
@@ -236,8 +270,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(14, 0, 1.6), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(19, 1.125, -5.6),
-            wang = Angle(-9, -1, 180),
         },
     }, --6
     {
@@ -252,15 +284,13 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(15, 0.825, 2.25), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, -105),
-            wpos = Vector(18, 0.25, -5.725),
-            wang = Angle(-9, -1, 90)
         },
     }, --8
     {
         PrintName = "Stock",
-        Slot = {"bo1_stock"},
+        Slot = {"bo1_stocks_all"},
         DefaultAttName = "No Stock",
-        Installed = "bo1_solid_stock"
+        Installed = "bo1_solider_stock"
     }, --9
     {
         PrintName = "FCG",
@@ -288,8 +318,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(-2, -0.75, 2.5),
             vang = Angle(0, 0, 0),
-            wpos = Vector(5, 1.5, -3.5),
-            wang = Angle(-9, -1, 180)
         },
     },
 }
@@ -301,17 +329,29 @@ SWEP.RejectAttachments = {
 SWEP.Hook_NameChange = function(wep, data)
     local pap = wep:GetBuff_Override("PackAPunch")
     local para = wep.Attachments[9].Installed == "bo1_light_stock" and wep.Attachments[2].Installed == "bo1_barrel_fal_para"
+    local osw = wep.Attachments[2].Installed == "bo1_barrel_fal_osw"
 
-    if pap then
-        if para then
-            return "EPC WN 4ME"
-        end
-        return "EPC WN"
-    end
+    oname = "FN FAL"
 
     if para then
-        return "FN FAL Para"
+        oname = "FN FAL Para"
     end
+
+    if osw then
+        oname = "FN FAL OSW"
+    end
+
+    if pap then
+        oname = "EPC WN"
+        if para then
+            oname = "EPC WN 4ME"
+        end
+        if osw then
+            oname = "WN Obliterator"
+        end
+    end
+
+    return oname
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
@@ -329,6 +369,13 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         if papcamo then
             return vm:SetSkin(k + 1)
         end
+    end
+
+    local optic = wep.Attachments[1].Installed
+    local osw = wep.Attachments[2].Installed == "bo1_barrel_fal_osw"
+
+    if optic and osw then
+        vm:SetBodygroup(2, 2)
     end
 end
 

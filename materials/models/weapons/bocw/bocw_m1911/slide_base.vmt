@@ -10,6 +10,10 @@
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
 
+	$detail "models/weapons/bo1/gunmetal"
+	$detailblendmode 1
+	"$detailblendfactor" "0.005"
+
 	"$envmap" "env_cubemap"					
 	"$envmaptint" "[ .05 .05 .05 ]"					
 	"$envmapFresnel" "1"
