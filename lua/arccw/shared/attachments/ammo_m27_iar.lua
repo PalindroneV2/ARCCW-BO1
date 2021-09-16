@@ -10,6 +10,7 @@ att.Slot = {"bo2_m27_ammo"}
 
 att.ActivateElements = {"iarmag"}
 att.GivesFlags = {"m27mag"}
+att.BO1_ExtMag = true
 
 att.SortOrder = 98
 

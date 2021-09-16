@@ -397,7 +397,7 @@ SWEP.Attachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[11].Installed == "ammo_papunch"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then return vm:SetSkin(3) end
 end
@@ -407,6 +407,16 @@ SWEP.Hook_GetShootSound = function(wep, sound)
         return "ArcCW_BO2.M27_Sil"
     end
 end
+
+SWEP.Hook_GetCapacity = function(wep, cap)
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local ext = wep:GetBuff_Override("BO1_ExtMag")
+
+    if pap and ext then
+        return 100
+    end
+end
+
 
 SWEP.Animations = {
     ["idle"] = {
