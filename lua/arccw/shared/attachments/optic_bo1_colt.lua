@@ -12,11 +12,11 @@ att.SortOrder = 4
 att.AutoStats = true
 att.Slot = {"optic", "bo1_acog"}
 
-att.Model = "models/weapons/arccw/atts/bo1_acog.mdl"
+att.Model = "models/weapons/arccw/atts/bo1_coltscope.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.025, 8, -1),
+        Pos = Vector(-0.025, 8, -1.06),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         IgnoreExtra = true
@@ -28,7 +28,7 @@ att.HolosightReticle = Material("hud/scopes/bo1_acog_cross.png", "mips smooth")
 att.HolosightNoFlare = true
 att.HolosightSize = 17.5
 att.HolosightBone = "holosight"
-att.HolosightPiece = "models/weapons/arccw/atts/bo1_acog_hsp.mdl"
+att.HolosightPiece = "models/weapons/arccw/atts/bo1_coltscope_hsp.mdl"
 att.Colorable = true
 
 att.HolosightBlackbox = true

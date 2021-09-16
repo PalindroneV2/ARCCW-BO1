@@ -14,15 +14,15 @@ att.AutoStats = true
 att.Slot = {"optic", "bo1_acog"}
 
 att.Model = "models/weapons/arccw/atts/bo2_acog.mdl"
-att.ModelOffset = Vector(0, 0, -0.15)
+att.ModelOffset = Vector(0, 0, -0.125)
 att.OffsetAng = Angle(0, 0, 0)
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 7, -1),
+        Pos = Vector(0, 7, -1.035),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
-        IgnoreExtra = true
+        IgnoreExtra = true,
     },
 }
 
