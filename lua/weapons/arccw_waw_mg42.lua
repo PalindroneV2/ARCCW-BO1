@@ -202,7 +202,7 @@ SWEP.Attachments = {
             wpos = Vector(16, 1.125, -5.125),
             wang = Angle(-9, -1, 180),
         },
-        MergeSlots = {4}
+        MergeSlots = {3}
     }, --3
     {
         Hidden = true,

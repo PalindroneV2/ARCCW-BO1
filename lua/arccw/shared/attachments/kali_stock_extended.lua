@@ -9,6 +9,8 @@ att.AutoStats = true
 
 att.SortOrder = 99
 att.Slot = {"kali_stock"}
+att.Ingore = true
+att.Hidden = true
 
 att.Mult_Recoil = 0.65
 att.Mult_RecoilSide = 0.65
@@ -16,4 +18,4 @@ att.Mult_MoveDispersion = 1.1
 att.Mult_SightTime = 1.1
 att.Mult_SightedSpeedMult = 0.95
 
-att.GivesFlags = {"solid_stock"}
+att.GivesFlags = {"gen2_extended"}

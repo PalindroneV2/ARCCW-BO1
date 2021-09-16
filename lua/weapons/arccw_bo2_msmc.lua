@@ -207,7 +207,7 @@ SWEP.Attachments = {
             vpos = Vector(5.5, -0.01, 0.1), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
-        MergeSlots = {11},
+        MergeSlots = {10},
     },
     { --4
         PrintName = "Tactical",

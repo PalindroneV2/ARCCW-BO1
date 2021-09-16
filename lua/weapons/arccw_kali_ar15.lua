@@ -95,7 +95,7 @@ SWEP.CamAttachment = 4
 
 SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.3
+SWEP.SightTime = 0.4
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
@@ -346,6 +346,66 @@ SWEP.AttachmentElements = {
             },
         },
     },
+    ["full_stock"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 1}
+        },
+    },
+    ["gen2_collapsed"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 2}
+        },
+    },
+    ["gen2_extended"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 3}
+        },
+    },
+    ["gen1_collapsed"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 4}
+        },
+    },
+    ["gen1_extended"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 5}
+        },
+    },
+    ["wire_collapsed"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 6}
+        },
+    },
+    ["wire_extended"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 7}
+        },
+    },
+    ["gen3_collapsed"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 8}
+        },
+    },
+    ["gen3_extended"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 9}
+        },
+    },
+    ["magpul_collapsed"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 10}
+        },
+    },
+    ["magpul_extended"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 11}
+        },
+    },
+    ["famas_stock"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 12}
+        },
+    },
 }
 
 SWEP.Attachments = {
@@ -536,11 +596,11 @@ SWEP.Hook_NameChange = function(wep, name)
     end
     local stock = 0
     if stocka == "kali_stock_full" then stock = 1
-    elseif stocka == "kali_stock_collapsed" then stock = 2
-    elseif stocka == "kali_stock_extended" then stock = 3
-    elseif stocka == "kali_stock_half_ext" then stock = 4
-    elseif stocka == "kali_stock_wire" then stock = 5
-    elseif stocka == "kali_stock_cm901_ext" then stock = 6
+    elseif stocka == "kali_stock_gen2" then stock = 2
+    elseif stocka == "kali_stock_gen1" then stock = 3
+    elseif stocka == "kali_stock_wire" then stock = 4
+    elseif stocka == "kali_stock_gen3" then stock = 5
+    elseif stocka == "kali_stock_magpul" then stock = 6
     elseif stocka == "kali_stock_famas" then stock = 7
     end
     local truepatriot = 0
@@ -959,22 +1019,6 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(3, 4)
     end
 
-    local stock = 0
-    local stocka = wep.Attachments[9].Installed
-    if stocka == "kali_stock_full" then stock = 1
-    elseif stocka == "kali_stock_collapsed" then stock = 2
-    elseif stocka == "kali_stock_extended" then stock = 3
-    elseif stocka == "kali_stock_half_ext" then stock = 4
-    elseif stocka == "kali_stock_wire" then stock = 5
-    elseif stocka == "kali_stock_cm901_ext" then stock = 6
-    elseif stocka == "kali_stock_magpul_ext" then stock = 7
-    elseif stocka == "kali_stock_famas" then stock = 8
-    end
-
-    for k = stock, stock do
-        vm:SetBodygroup(4, k)
-    end
-
     local optic = wep.Attachments[2].Installed
     local sling = wep.Attachments[15].Installed == "kali_ar15_sling"
     local troyirons = wep:GetBuff_Override("AltIrons")
@@ -1134,13 +1178,12 @@ SWEP.Hook_GetCapacity = function(wep, cap)
 
     local stock = 0
     if stocka == "kali_stock_full" then stock = 1
-    elseif stocka == "kali_stock_collapsed" then stock = 2
-    elseif stocka == "kali_stock_extended" then stock = 3
-    elseif stocka == "kali_stock_half_ext" then stock = 4
-    elseif stocka == "kali_stock_wire" then stock = 5
-    elseif stocka == "kali_stock_cm901_ext" then stock = 6
-    elseif stocka == "kali_stock_magpul_ext" then stock = 7
-    elseif stocka == "kali_stock_famas" then stock = 8
+    elseif stocka == "kali_stock_gen2" then stock = 2
+    elseif stocka == "kali_stock_gen1" then stock = 3
+    elseif stocka == "kali_stock_wire" then stock = 4
+    elseif stocka == "kali_stock_gen3" then stock = 5
+    elseif stocka == "kali_stock_magpul" then stock = 6
+    elseif stocka == "kali_stock_famas" then stock = 7
     end
 
     local length = 0

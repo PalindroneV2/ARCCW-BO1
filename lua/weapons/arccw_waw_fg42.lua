@@ -123,8 +123,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.ActivePos = Vector(1, 4, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(1, 4, -2)
-SWEP.SprintAng = Angle(-7.036, 45.016, 0)
+SWEP.SprintPos = Vector(1, 4, 0)
+SWEP.SprintAng = Angle(-7, 20, 0)
 
 SWEP.CustomizePos = Vector(16, 4, -2)
 SWEP.CustomizeAng = Angle(15, 40, 25)
@@ -255,11 +255,11 @@ SWEP.Attachments = {
     }, --8
     {
         Hidden = true,
-        Slot = {"waw_zf4_scope_1"},
+        Slot = {"waw_zf4_scope"},
         Bone = "j_gun",
         VMScale = Vector(1, 1, 1),
         Offset = {
-            vpos = Vector(0.25, 0.15, 1.25), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(0, 0.15, 1.25), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
         CorrectivePos = Vector(0, 0, 0),
