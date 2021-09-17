@@ -1342,6 +1342,38 @@ sound.Add( {
     }
 } )
 
+-- LMG RINGOFF --
+sound.Add( {
+    name = "ArcCW_BO1.LMG_RingoffST",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_hk21/lmg_ringoff_st.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.LMG_RingoffL",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_hk21/lmg_ringoff_l.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.LMG_RingoffR",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_hk21/lmg_ringoff_r.wav",
+    }
+} )
+
 --- HK21 Main ---
 
 sound.Add( {
@@ -1355,16 +1387,6 @@ sound.Add( {
         "^weapons/arccw/bo1_hk21/fire2.wav",
         "^weapons/arccw/bo1_hk21/fire3.wav",
         "^weapons/arccw/bo1_hk21/fire4.wav",
-    }
-} )
-sound.Add( {
-    name = "ArcCW_BO1.HK21_Dist",
-    channel = CHAN_WEAPON,
-    volume = 1.0,
-    level = 100,
-    --pitch = {95, 110},
-    sound = {
-        "^weapons/arccw/bo1_hk21/dist.wav",
     }
 } )
 sound.Add( {

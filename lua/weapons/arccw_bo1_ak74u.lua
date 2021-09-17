@@ -27,7 +27,7 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.DefaultBodygroups = "000000"
+SWEP.DefaultBodygroups = "00000000"
 
 SWEP.Damage = 45
 SWEP.DamageMin = 30 -- damage done at maximum range
@@ -129,7 +129,7 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(13, 1, -2.5)
+SWEP.CustomizePos = Vector(14, 2, -1)
 SWEP.CustomizeAng = Angle(15, 40, 15)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
@@ -143,12 +143,23 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
+    ["bo2_altirons"] = {
+        VMBodygroups = {
+            {ind = 7, bg = 1},
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-2.545, 0, 0.75),
+            Ang = Angle(0.5, 0.01, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
+        },
+    },
     ["mount"] = {
         VMBodygroups = {
             {ind = 2, bg = 1},
             {ind = 3, bg = 1},
         },
-        ExcludeFlags = {"cobrakai"},
+        ExcludeFlags = {"cobrakai", "bo2_altirons"},
     },
     ["cobrakai"] = {
         VMBodygroups = {
@@ -201,7 +212,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = "optic", -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic", "bo2_altirons"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(0.25, 0, 3.55), -- 4.6 offset that the attachment will be relative to the bone

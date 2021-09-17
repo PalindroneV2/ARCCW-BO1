@@ -104,7 +104,7 @@ SWEP.ProceduralIronFire = true
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-4.3, -5, 2.35),
+    Pos = Vector(-4.3, 0, 2.35),
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
 }
@@ -174,16 +174,15 @@ SWEP.Attachments = {
     { --1
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {"optic_sniper", "optic"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"bo1_susat"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(5, 0, 3.65),
+            vpos = Vector(5, 0, 3.5),
             vang = Angle(0, 0, 0),
-            wpos = Vector(7.5, 0.5, -6.5),
-            wang = Angle(167.5, 180, 0)
         },
-        MergeSlots = {2},
-        InstalledEles = {"mount"},
+        MergeSlots = {2,11},
+        CorrectivePos = Vector(0, 0, 0),
+        CorrectiveAng = Angle(0.5, 0.05, 0),
     },
     { --2
         Hidden = true,
@@ -270,6 +269,18 @@ SWEP.Attachments = {
             wpos = Vector(10.25, 1, -4.75),
             wang = Angle(-12, 0, -180)
         },
+    },
+    {
+        Hidden = true,
+        Slot = {"optic_sniper", "optic"},
+        Bone = "tag_weapon",
+        Offset = {
+            vpos = Vector(5, 0, 3.65),
+            vang = Angle(0, 0, 0),
+        },
+        InstalledEles = {"mount"},
+        CorrectivePos = Vector(0, 0, 0),
+        CorrectiveAng = Angle(0.5, 0.05, 0),
     },
 }
 

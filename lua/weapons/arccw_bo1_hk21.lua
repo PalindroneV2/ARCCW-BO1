@@ -74,7 +74,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_BO1.HK21_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
---SWEP.DistantShootSound = "ArcCW_BO1.G3_RingOff"
+SWEP.DistantShootSound = "ArcCW_BO1.LMG_RingoffST"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -202,7 +202,8 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = "muzzle",
-        VMScale = Vector(1.25, 1.25, 1.25),
+        VMScale = Vector(1.5, 1.25, 1.25),
+        WMScale = Vector(1.5, 1.25, 1.25),
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(29, 0, 2.5), -- offset that the attachment will be relative to the bone
@@ -341,6 +342,14 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     end
 end
 
+SWEP.Hook_SelectReloadAnimation = function(wep, curanim)
+    local small = wep.Attachments[9].Installed == "bo1_ammo_hk21_30rnd"
+
+    if small then
+        return curanim .. "_small"
+    end
+end
+
 SWEP.Hook_GetCapacity = function(wep, cap)
     local pap = wep:GetBuff_Override("PackAPunch")
     local small = wep.Attachments[9].Installed == "bo1_ammo_hk21_30rnd"
@@ -382,8 +391,8 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.HK21_Pull", t = 47 / 30},
-            {s = "ArcCW_BO1.HK21_Release", t = 52 / 30},
+            {s = "ArcCW_BO1.HK21_Pull", t = 40 / 30},
+            {s = "ArcCW_BO1.HK21_Release", t = 45 / 30},
         },
     },
     ["fire"] = {
@@ -408,8 +417,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO1.HK21_Out", t = 27 / 35},
             --{s = "ArcCW_BO1.G3_Futz", t = 97 / 35},
-            {s = "ArcCW_BO1.HK21_In", t = 100 / 35},
-            --{s = "ArcCW_BO1.M60_Bonk", t = 120 / 35}
+            {s = "ArcCW_BO1.HK21_Out", t = 100 / 35},
+            {s = "ArcCW_BO1.HK21_In", t = 110 / 35}
         },
     },
     ["reload_empty"] = {
@@ -424,8 +433,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO1.HK21_Out", t = 27 / 35},
             --{s = "ArcCW_BO1.G3_Futz", t = 97 / 35},
-            {s = "ArcCW_BO1.HK21_In", t = 100 / 35},
-            --{s = "ArcCW_BO1.M60_Bonk", t = 120 / 35},
+            {s = "ArcCW_BO1.HK21_Out", t = 100 / 35},
+            {s = "ArcCW_BO1.HK21_In", t = 110 / 35},
             {s = "ArcCW_BO1.HK21_Pull", t = 152 / 35},
             {s = "ArcCW_BO1.HK21_Release", t = 157 / 35},
         },
@@ -444,6 +453,7 @@ SWEP.Animations = {
             --{s = "ArcCW_BO1.G3_Futz", t = 100 / 35},
             {s = "ArcCW_BO1.HK21_In", t = 100 / 35}
         },
+        MinProgress = 110 / 30,
     },
     ["reload_empty_small"] = {
         Source = "reload_empty_small",
@@ -461,6 +471,7 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.HK21_Pull", t = 145 / 35},
             {s = "ArcCW_BO1.HK21_Release", t = 150 / 35},
         },
+        MinProgress = 125 / 30,
     },
     ["enter_sprint"] = {
         Source = "sprint_in",

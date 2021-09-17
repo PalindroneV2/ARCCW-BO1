@@ -351,6 +351,32 @@ SWEP.AttachmentElements = {
             {ind = 4, bg = 1}
         },
     },
+    ["gen2_stock"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 2}
+        },
+    },
+    ["gen1_stock"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 5}
+        },
+    },
+    ["wire_stock"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 7}
+        },
+    },
+    ["gen3_stock"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 9}
+        },
+    },
+    ["magpul_stock"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 11}
+        },
+    },
+    /*
     ["gen2_collapsed"] = {
         VMBodygroups = {
             {ind = 4, bg = 2}
@@ -401,6 +427,7 @@ SWEP.AttachmentElements = {
             {ind = 4, bg = 11}
         },
     },
+    */
     ["famas_stock"] = {
         VMBodygroups = {
             {ind = 4, bg = 12}
