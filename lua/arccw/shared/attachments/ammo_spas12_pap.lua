@@ -36,7 +36,9 @@ att.Mult_Damage = 2.5
 att.Mult_DamageMin = 2.5
 att.Mult_Penetration = 2.5
 
-att.Override_MuzzleEffect = "pap_muzzle"
+att.Override_MuzzleEffect = "pap_heavy_flame"
+
+att.Override_PhysTracerProfile = 5
 
 att.AttachSound = "weapons/arccw/pap/pap_jingle.wav"
 

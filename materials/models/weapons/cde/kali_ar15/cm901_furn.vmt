@@ -12,10 +12,10 @@ VertexlitGeneric
 	$normalmapalphaphongmask    	1
 
 	"$detail" "models\weapons\bo1\black_detail"
-	"$detailblendfactor" "1.15"
+	"$detailblendfactor" "1.2"
 	$detailblendmode 0
 
 	"$envmap" "env_cubemap"					
-	"$envmaptint" "[ .01 .01 .01 ]"					
+	"$envmaptint" "[ .005 .005 .005 ]"					
 	"$envmapFresnel" "1"
 }

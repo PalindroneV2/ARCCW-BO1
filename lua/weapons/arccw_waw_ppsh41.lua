@@ -110,8 +110,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(0.95, -5.5, 1.35),
-    Ang = Angle(-0.475, -0.1, 0),
+    Pos = Vector(-1.3125, 3, 1.35),
+    Ang = Angle(-0.475, -0.185, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -123,13 +123,13 @@ SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
-SWEP.ActivePos = Vector(4, -2, 0)
+SWEP.ActivePos = Vector(1, 3, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(10, -2, -2)
-SWEP.SprintAng = Angle(-7.036, 45.016, 0)
+SWEP.SprintPos = Vector(4, 3, -2)
+SWEP.SprintAng = Angle(-7, 20, 0)
 
-SWEP.CustomizePos = Vector(17, -3, -2)
+SWEP.CustomizePos = Vector(13, 2, 0)
 SWEP.CustomizeAng = Angle(15, 40, 20)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
@@ -160,6 +160,24 @@ SWEP.AttachmentElements = {
                 }
             },
         },
+        ExcludeFlags = {"waw_aperture"},
+    },
+    ["ppsh_35"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 1},
+        },
+    },
+    ["waw_aperture"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 1},
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-1.3125, 2, 1.1),
+            Ang = Angle(-2.5, -0.225, 0),
+            Magnification = 1.25,
+            CrosshairInSights = false,
+            SwitchToSound = "", -- sound that plays when switching to this sight
+        },
     },
 }
 
@@ -167,7 +185,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = "optic", -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic", "waw_aperture"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(1.75, 0, 2.25), -- 4.6 offset that the attachment will be relative to the bone
@@ -207,6 +225,10 @@ SWEP.Attachments = {
         PrintName = "FCG",
         Slot = {"bo1_fcg"}
     },
+    { --4
+        PrintName = "Magazine",
+        Slot = {"waw_ppsh_ammo"}
+    },
     {
         PrintName = "Ammo Type",
         Slot = {"ammo_pap"}
@@ -231,16 +253,29 @@ SWEP.Attachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[5].Installed == "ammo_papunch"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then
         return vm:SetSkin(1)
     end
 end
 
-SWEP.Hook_TranslateAnimation = function(wep, anim, data)
-    if wep:Clip1() == 0 then
-        return anim .. "_empty"
+SWEP.Hook_SelectReloadAnimation = function(wep, curanim)
+
+    if wep:GetBuff_Override("BO1_FastMag") then
+        if curanim == "reload" then
+            return "fast"
+        end
+        if curanim == "reload_empty" then
+            return "fast_empty"
+        end
+    end
+end
+
+
+SWEP.Hook_GetCapacity = function(wep, cap)
+    if wep.Attachments[5].Installed == "ammo_waw_ppsh_stick" and wep:GetBuff_Override("PackAPunch") then
+        return 65
     end
 end
 
@@ -324,6 +359,37 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
+        Time = 3.5,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        Framerate = 30,
+        Checkpoints = {28, 38, 69},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+        SoundTable = {
+            {s = "ArcCW_WAW.PPSh_MagOut", t = 16 / 35},
+            {s = "ArcCW_WAW.PPSh_MagIn", t = 53 / 35},
+            {s = "ArcCW_WAW.PPSh_MagTap", t = 60 / 35},
+            {s = "ArcCW_WAW.PPSh_Bolt", t = 90 / 35},
+        },
+    },
+
+    ["fast"] = {
+        Source = "fast",
+        Time = 2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        Framerate = 30,
+        Checkpoints = {28, 38, 69},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+        SoundTable = {
+            {s = "ArcCW_WAW.PPSh_MagOut", t = 15 / 30},
+            {s = "ArcCW_WAW.PPSh_MagIn", t = 45 / 30}
+        },
+    },
+    ["fast_empty"] = {
+        Source = "fast_empty",
         Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Framerate = 30,

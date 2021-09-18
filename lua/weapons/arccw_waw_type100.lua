@@ -245,7 +245,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(-2.5, -1.3, 0),
+            vpos = Vector(-2, -0.65, 0.55),
             vang = Angle(0, 0, 0),
         },
     }, --7

@@ -12,7 +12,7 @@ att.Desc_Cons = {
 }
 att.AutoStats = true
 
-att.SortOrder = 94
+att.SortOrder = 99
 att.Slot = {"kali_stock"}
 
 /*

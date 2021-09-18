@@ -24,7 +24,9 @@ att.Mult_Penetration = 2.5
 
 att.AttachSound = "weapons/arccw/pap/pap_jingle.wav"
 
-att.Override_MuzzleEffect = "pap_muzzle"
+att.Override_MuzzleEffect = "pap_heavy_flame"
+
+att.Override_PhysTracerProfile = 5
 
 att.Hook_FireBullets = function(wep, data)
   wep:EmitSound("PAP_Effect")
