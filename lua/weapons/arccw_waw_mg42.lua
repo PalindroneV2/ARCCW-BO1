@@ -193,6 +193,17 @@ SWEP.Attachments = {
         CorrectiveAng = Angle(0.35, 0, 0),
     }, --1
     {
+        PrintName = "Muzzle",
+        Slot = {"muzzle"},
+        Bone = "tag_weapon",
+        VMScale = Vector(2.5, 1.5, 1.5),
+        WMScale = Vector(2.5, 1.5, 1.5),
+        Offset = {
+            vpos = Vector(34, 0, -0.3), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+        },
+    }, --4
+    {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
         Bone = "tag_weapon",
@@ -202,7 +213,7 @@ SWEP.Attachments = {
             wpos = Vector(16, 1.125, -5.125),
             wang = Angle(-9, -1, 180),
         },
-        MergeSlots = {3}
+        MergeSlots = {4}
     }, --3
     {
         Hidden = true,

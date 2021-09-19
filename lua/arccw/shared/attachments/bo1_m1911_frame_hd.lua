@@ -5,6 +5,7 @@ att.Description = "Modern frame with modern conveniences.\nImproved trigger and 
 
 att.Free = true
 att.Slot = {"m1911_frame", "m1911_frame_cw"}
+att.GivesFlags = {"frame_bo3"}
 
 att.AutoStats = true
 

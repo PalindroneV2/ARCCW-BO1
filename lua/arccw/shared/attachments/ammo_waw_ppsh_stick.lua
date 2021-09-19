@@ -19,5 +19,7 @@ att.BO1_FastMag = true
 
 att.Mult_ReloadTime = 0.9
 att.Mult_SightTime = 0.9
+att.Mult_SpeedMult = 1.1
+att.Mult_SightedSpeedMult = 1.2
 att.Mult_DrawTime = 0.75
 att.Mult_HolsterTime = 0.75
