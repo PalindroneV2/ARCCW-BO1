@@ -299,15 +299,15 @@ SWEP.Animations = {
         Source = {
             "fire",
         },
-        Time = 9 / 10,
-        ShellEjectAt = 0.15,
+        Time = 9 / 35,
+        ShellEjectAt = 0.1,
     },
     ["fire_iron"] = {
         Source = {
             "fire_ads",
         },
-        Time = 9 / 10,
-        ShellEjectAt = 0.15,
+        Time = 9 / 35,
+        ShellEjectAt = 0.1,
     },
     ["reload"] = {
         Source = "reload_pap",

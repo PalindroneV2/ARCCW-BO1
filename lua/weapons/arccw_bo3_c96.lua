@@ -285,12 +285,12 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 8 / 30,
+        Time = 8 / 35,
         ShellEjectAt = 1 / 30,
     },
     ["fire_iron"] = {
         Source = "fire_ads",
-        Time = 8 / 30,
+        Time = 8 / 35,
         ShellEjectAt = 1 / 30,
     },
     ["fire_iron_scope"] = {

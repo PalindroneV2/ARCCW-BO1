@@ -840,6 +840,59 @@ sound.Add( {
     }
 } )
 
+-- Type 99 Main -- 
+
+sound.Add( {
+    name = "ArcCW_WAW.Type99_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_type99/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Type99_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_type99/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Type99_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_type99/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Type99_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_type99/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Type99_Charge",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_type99/charge.wav",
+    }
+} )
+
 -- DP28 Main -- 
 
 sound.Add( {

@@ -78,7 +78,7 @@ SWEP.MagID = "dp28" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_WAW.DP28_Fire"
+SWEP.ShootSound = "ArcCW_WAW.Type99_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_WAW.G43_Sil"
 SWEP.DistantShootSound = "ArcCW_WAW.SVT_RingOff"
 
@@ -120,16 +120,16 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0.5, 3, 1)
+SWEP.ActivePos = Vector(0.5, 0, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(0.5, 3, 0)
+SWEP.SprintPos = Vector(0.5, 0, 0)
 SWEP.SprintAng = Angle(-10, 20, 0)
 
 SWEP.InBipodPos = Vector(2, -2, 2)
 SWEP.InBipodMult = Vector(-1, -1, -1)
 
-SWEP.CustomizePos = Vector(17, 3, -2)
+SWEP.CustomizePos = Vector(17, 4, 0)
 SWEP.CustomizeAng = Angle(15, 40, 25)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
@@ -315,28 +315,28 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 7 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = "ArcCW_WAW.DP28_Mech", t = 1 / 30 }}
+        SoundTable = {{ s = "ArcCW_WAW.Type99_Mech", t = 1 / 30 }}
     },
     ["fire_empty"] = {
         Source = {"fire"},
         Time = 7 / 30,
         ShellEjectAt = 0,
          SoundTable = {
-            {s = "ArcCW_WAW.DP28_Mech", t = 1 / 30}
+            {s = "ArcCW_WAW.Type99_Mech", t = 1 / 30}
         },
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = "ArcCW_WAW.DP28_Mech", t = 1 / 30 }}
+        SoundTable = {{ s = "ArcCW_WAW.Type99_Mech", t = 1 / 30 }}
     },
     ["fire_iron_empty"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
         ShellEjectAt = 0,
         SoundTable = {
-            {s = "ArcCW_WAW.DP28_Mech", t = 1 / 30},
+            {s = "ArcCW_WAW.Type99_Mech", t = 1 / 30},
         },
     },
     ["reload"] = {
@@ -349,10 +349,8 @@ SWEP.Animations = {
         LHIKIn = 0.75,
         LHIKOut = 0.75,
         SoundTable = {
-            {s = "ArcCW_WAW.DP28_Out", t = 30 / 35},
-            {s = "ArcCW_WAW.DP28_Land", t = 50 / 35},
-            {s = "ArcCW_WAW.DP28_In", t = 70 / 35},
-            {s = "ArcCW_WAW.DP28_Tap", t = 90 / 35},
+            {s = "ArcCW_WAW.Type99_Out", t = 30 / 35},
+            {s = "ArcCW_WAW.Type99_In", t = 90 / 35},
         },
     },
     ["reload_empty"] = {
@@ -365,11 +363,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 1.75,
         SoundTable = {
-            {s = "ArcCW_WAW.DP28_Out", t = 30 / 35},
-            {s = "ArcCW_WAW.DP28_Land", t = 50 / 35},
-            {s = "ArcCW_WAW.DP28_In", t = 70 / 35},
-            {s = "ArcCW_WAW.DP28_Tap", t = 90 / 35},
-            {s = "ArcCW_WAW.G43_Back", t = 130 / 35},
+            {s = "ArcCW_WAW.Type99_Out", t = 30 / 35},
+            {s = "ArcCW_WAW.Type99_In", t = 90 / 35},
+            {s = "ArcCW_WAW.Type99_Charge", t = 130 / 35},
         },
     },
     ["bash"] = {
@@ -380,7 +376,7 @@ SWEP.Animations = {
     },
     ["bash_2"] = {
         Source = "stab",
-        Time = 1,
+        Time = 2,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,
     },
