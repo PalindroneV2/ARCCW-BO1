@@ -123,7 +123,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.ActivePos = Vector(1, 3, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
-/* 
+/*
 --angled
 SWEP.ActivePos = Vector(-0.5, 3, 0)
 SWEP.ActiveAng = Angle(1, 0, -5)
@@ -533,7 +533,7 @@ SWEP.Attachments = {
         Slot = {"kali_stock"},
         DefaultAttName = "Buffer Tube",
         RandomChance = 10,
-        --Installed = "bo1_solider_stock"
+        --Installed = "bo1_stock_heavy"
     }, --9
     {
         PrintName = "Magazine",
@@ -1303,9 +1303,9 @@ local FNV_EE_Sound = function(self, wep, sound)
         elseif barrel == "kali_ar15_barrel_risc" then length = 2
         end
     local stock = 0
-        if stocka == "bo1_solider_stock" then stock = 1
-        elseif stocka == "bo1_solid_stock" then stock = 2
-        elseif stocka == "bo1_light_stock" then stock = 3
+        if stocka == "bo1_stock_heavy" then stock = 1
+        elseif stocka == "bo1_stock_medium" then stock = 2
+        elseif stocka == "bo1_stock_light" then stock = 3
         end
 
     FNV_EE_Trigger(self, wep, sound)

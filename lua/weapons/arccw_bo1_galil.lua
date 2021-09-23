@@ -284,7 +284,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"bo1_stock", "bo1_mp5stock"},
         DefaultAttName = "No Stock",
-        Installed = "bo1_light_stock"
+        Installed = "bo1_stock_light"
     }, --8
     { --9
         PrintName = "FCG",

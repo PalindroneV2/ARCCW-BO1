@@ -241,7 +241,7 @@ SWEP.AttachmentElements = {
 SWEP.RejectAttachments = {
     ["ub_bo1_foregrip_uni"] = false,
     ["ub_bo2_foregrip_uni"] = true,
-    ["bo1_solid_stock"] = true,
+    ["bo1_stock_medium"] = true,
     ["mw3e_g36_mgbarrel"] = true,
 }
 
@@ -329,7 +329,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"bo1_stock"},
         DefaultAttName = "No Stock",
-        Installed = "bo1_light_stock",
+        Installed = "bo1_stock_light",
     }, --8
     {
         PrintName = "FCG",
@@ -370,7 +370,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif wep.Attachments[3].Installed == "mw3e_g36_mgbarrel" then barrel = 3
     end
 
-    local stock = wep.Attachments[8].Installed == "bo1_light_stock"
+    local stock = wep.Attachments[8].Installed == "bo1_stock_light"
     local bipod = wep:GetBuff_Override("BO1_Bipod")
     local optic = wep.Attachments[1].Installed
 

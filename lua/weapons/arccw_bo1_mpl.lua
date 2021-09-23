@@ -219,7 +219,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"bo1_stock"},
         DefaultAttName = "No Stock",
-        InstalledEles = "bo1_light_stock",
+        InstalledEles = "bo1_stock_light",
     },
     { --6
         PrintName = "Magazine",
@@ -257,7 +257,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local papcamo = wep.Attachments[8].Installed == "ammo_papunch"
     local dualmag = wep.Attachments[6].Installed == "ammo_dualmag"
     local lc10 = wep.Attachments[7].Installed == "bo1_fcg_rapid_lc10"
-    local wire = wep.Attachments[5].Installed == "bo1_light_stock"
+    local wire = wep.Attachments[5].Installed == "bo1_stock_light"
 
     if dualmag then vm:SetBodygroup(1, 1) end
 
@@ -273,7 +273,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local stock = wep.Attachments[5].Installed == "bo1_light_stock"
+    local stock = wep.Attachments[5].Installed == "bo1_stock_light"
     local dmag = wep.Attachments[6].Installed == "ammo_dualmag"
 
     if stock and !dmag then

@@ -332,7 +332,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"bo1_stock", "bo1_mp5stock"},
         DefaultAttName = "No Stock",
-        Installed = "bo1_solider_stock"
+        Installed = "bo1_stock_heavy"
     }, --8
     {
         PrintName = "FCG",
@@ -373,7 +373,7 @@ SWEP.Attachments = {
 
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep.Attachments[11].Installed == "ammo_papunch"
-    local stock = wep.Attachments[8].Installed == "bo1_solider_stock"
+    local stock = wep.Attachments[8].Installed == "bo1_stock_heavy"
     local hk33 = wep.Attachments[10].Installed == "bo1_ammo_g3_556"
 
     local barrel = wep.Attachments[2].Installed
@@ -479,7 +479,7 @@ SWEP.RejectAttachments = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[11].Installed == "ammo_papunch"
-    local stock = wep.Attachments[8].Installed == "bo1_solider_stock"
+    local stock = wep.Attachments[8].Installed == "bo1_stock_heavy"
     local bipod = wep.Attachments[4].Installed == "bo1_bipod_integral"
     local scope = wep.Attachments[1].Installed
 

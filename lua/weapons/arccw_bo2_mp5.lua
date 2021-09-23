@@ -334,7 +334,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"bo1_stocks_all"},
         DefaultAttName = "No Stock",
-        InstalledEles = "bo1_light_stock",
+        InstalledEles = "bo1_stock_light",
     },
     { --8
         PrintName = "Magazine",
@@ -373,7 +373,7 @@ SWEP.Attachments = {
 
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep.Attachments[10].Installed == "ammo_papunch"
-    local sstock = wep.Attachments[7].Installed == "bo1_solider_stock"
+    local sstock = wep.Attachments[7].Installed == "bo1_stock_heavy"
     local mp5sd = wep.Attachments[2].Installed == "supp_bo1_mp5"
     local mp5k = wep.Attachments[2].Installed == "bo1_mp5_mp5k"
 
@@ -433,9 +433,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     local stock = 0
-    if wep.Attachments[7].Installed == "bo1_light_stock" then stock = 1
-    elseif wep.Attachments[7].Installed == "bo1_solid_stock" then stock = 2
-    elseif wep.Attachments[7].Installed == "bo1_solider_stock" then stock = 3
+    if wep.Attachments[7].Installed == "bo1_stock_light" then stock = 1
+    elseif wep.Attachments[7].Installed == "bo1_stock_medium" then stock = 2
+    elseif wep.Attachments[7].Installed == "bo1_stock_heavy" then stock = 3
     end
 
     for k = stock, stock do
@@ -447,7 +447,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local stock = wep.Attachments[7].Installed == "bo1_solid_stock"
+    local stock = wep.Attachments[7].Installed == "bo1_stock_medium"
     local dual = wep.Attachments[8].Installed == "ammo_dualmag"
 
     local hand = 0

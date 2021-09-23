@@ -246,7 +246,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"bo1_stock", "bo1_mp5stock"},
         DefaultAttName = "No Stock",
-        Installed = "bo1_solid_stock"
+        Installed = "bo1_stock_medium"
     },
     { --7
         PrintName = "Fire Group",
@@ -282,7 +282,7 @@ SWEP.Attachments = {
 }
 
 SWEP.RejectAttachments = {
-    ["bo1_light_stock"] = true,
+    ["bo1_stock_light"] = true,
     ["cde_cosmetic_od"] = true,
     ["cde_cosmetic_red"] = true,
     ["cde_cosmetic_wood"] = true,

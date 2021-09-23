@@ -356,7 +356,7 @@ SWEP.RejectAttachments = {
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep.Attachments[10].Installed == "ammo_papunch"
     local ak74 = wep.Attachments[8].Installed == "ammo_ak_74"
-    local light = wep.Attachments[7].Installed == "bo1_light_stock"
+    local light = wep.Attachments[7].Installed == "bo1_stock_light"
 
     cal = "M"
     stock = ""
@@ -388,9 +388,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         end
     end
 
-    local light = wep.Attachments[7].Installed == "bo1_light_stock"
-    local solid = wep.Attachments[7].Installed == "bo1_solid_stock"
-    local solider = wep.Attachments[7].Installed == "bo1_solider_stock"
+    local light = wep.Attachments[7].Installed == "bo1_stock_light"
+    local solid = wep.Attachments[7].Installed == "bo1_stock_medium"
+    local solider = wep.Attachments[7].Installed == "bo1_stock_heavy"
     local bake = wep.Attachments[8].Installed == "ammo_ak_74"
 
     if bake then

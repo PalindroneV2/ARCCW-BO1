@@ -248,7 +248,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local stock = wep.Attachments[4].Installed == "bo1_solid_stock"
+    local stock = wep.Attachments[4].Installed == "bo1_stock_medium"
     local ext = wep.Attachments[6].Installed == "ammo_bo1_mac11_ext"
 
     if stock and !ext then

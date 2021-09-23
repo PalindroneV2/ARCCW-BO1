@@ -290,7 +290,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"bo1_stocks_all"},
         DefaultAttName = "No Stock",
-        Installed = "bo1_solider_stock"
+        Installed = "bo1_stock_heavy"
     }, --9
     {
         PrintName = "FCG",
@@ -328,7 +328,7 @@ SWEP.RejectAttachments = {
 
 SWEP.Hook_NameChange = function(wep, data)
     local pap = wep:GetBuff_Override("PackAPunch")
-    local para = wep.Attachments[9].Installed == "bo1_light_stock" and wep.Attachments[2].Installed == "bo1_barrel_fal_para"
+    local para = wep.Attachments[9].Installed == "bo1_stock_light" and wep.Attachments[2].Installed == "bo1_barrel_fal_para"
     local osw = wep.Attachments[2].Installed == "bo1_barrel_fal_osw"
 
     oname = "FN FAL"

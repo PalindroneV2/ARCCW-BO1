@@ -164,7 +164,7 @@ SWEP.AttachmentElements = {
 SWEP.ExtraSightDist = 3
 
 SWEP.RejectAttachments = {
-    ["bo1_light_stock"] = true,
+    ["bo1_stock_light"] = true,
 }
 
 SWEP.Attachments = {
@@ -235,7 +235,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"bo1_stock"},
         DefaultAttName = "No Stock",
-        Installed = "bo1_solid_stock",
+        Installed = "bo1_stock_medium",
     },
     { --8
         PrintName = "Ammo Type",

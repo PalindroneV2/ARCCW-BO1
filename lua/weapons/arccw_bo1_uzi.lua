@@ -260,7 +260,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local stock = wep.Attachments[5].Installed == "bo1_solid_stock"
+    local stock = wep.Attachments[5].Installed == "bo1_stock_medium"
 
     if stock then
         return anim .. "_grip"

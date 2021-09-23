@@ -266,7 +266,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"bo1_mp5stock", "bo1_stock"}, --Slot = {"bo1_stock", "bo1_mp5stock"},
         DefaultAttName = "No Stock",
-        Installed = "bo1_solider_stock"
+        Installed = "bo1_stock_heavy"
     }, --7
     {
         PrintName = "FCG",
@@ -333,9 +333,9 @@ SWEP.RejectAttachments = {
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep.Attachments[10].Installed == "ammo_papunch"
     local stock = 0
-    if wep.Attachments[7].Installed == "bo1_light_stock" then stock = 1
-    elseif wep.Attachments[7].Installed == "bo1_solid_stock" then stock = 2
-    elseif wep.Attachments[7].Installed == "bo1_solider_stock" then stock = 3
+    if wep.Attachments[7].Installed == "bo1_stock_light" then stock = 1
+    elseif wep.Attachments[7].Installed == "bo1_stock_medium" then stock = 2
+    elseif wep.Attachments[7].Installed == "bo1_stock_heavy" then stock = 3
     end
 
     if pap then

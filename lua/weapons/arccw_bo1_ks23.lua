@@ -209,7 +209,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = "bo1_stock",
         DefaultAttName = "No Stock",
-        Installed = "bo1_solid_stock",
+        Installed = "bo1_stock_medium",
         ExcludeFlags = {"doom_ee"},
     }, --5
     {
@@ -237,7 +237,7 @@ SWEP.Attachments = {
 }
 
 SWEP.RejectAttachments = {
-    ["bo1_light_stock"] = true,
+    ["bo1_stock_light"] = true,
 }
 
 SWEP.Hook_NameChange = function(wep, name)

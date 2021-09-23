@@ -161,7 +161,7 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.RejectAttachments = {
-    ["bo1_solid_stock"] = true,
+    ["bo1_stock_medium"] = true,
     ["optic_bo1_psg1"] = true,
 }
 
@@ -252,7 +252,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local stock = wep.Attachments[4].Installed == "bo1_light_stock"
+    local stock = wep.Attachments[4].Installed == "bo1_stock_light"
     local dmag = wep.Attachments[5].Installed == "ammo_bo1_spectre_ext"
 
     if stock and !dmag then

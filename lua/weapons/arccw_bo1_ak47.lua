@@ -294,7 +294,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"bo1_stock", "bo1_mp5stock"},
         DefaultAttName = "No Stock",
-        Installed = "bo1_solid_stock",
+        Installed = "bo1_stock_medium",
     },
     { --9
         PrintName = "Caliber",
@@ -359,7 +359,7 @@ SWEP.Attachments = {
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
     local ak74 = wep.Attachments[9].Installed == "ammo_ak_74"
-    local light = wep.Attachments[8].Installed == "bo1_light_stock"
+    local light = wep.Attachments[8].Installed == "bo1_stock_light"
 
     caliber = "47"
     stock = ""

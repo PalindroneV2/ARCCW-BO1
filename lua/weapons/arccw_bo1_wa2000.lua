@@ -159,7 +159,7 @@ SWEP.AttachmentElements = {
 SWEP.ExtraSightDist = 3
 
 SWEP.RejectAttachments = {
-    ["bo1_light_stock"] = true,
+    ["bo1_stock_light"] = true,
 }
 
 SWEP.Attachments = {

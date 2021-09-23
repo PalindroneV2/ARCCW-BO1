@@ -178,7 +178,7 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.RejectAttachments = {
-    ["bo1_light_stock"] = true,
+    ["bo1_stock_light"] = true,
     ["optic_bo1_pso"] = true,
 }
 
@@ -257,7 +257,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"bo1_stock"},
         DefaultAttName = "No Stock",
-        Installed = "bo1_solid_stock",
+        Installed = "bo1_stock_medium",
     },
     {
         PrintName = "FCG",

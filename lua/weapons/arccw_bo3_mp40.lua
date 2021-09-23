@@ -254,7 +254,7 @@ SWEP.Attachments = {
 }
 
 SWEP.RejectAttachments = {
-    ["bo1_solid_stock"] = true,
+    ["bo1_stock_medium"] = true,
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
