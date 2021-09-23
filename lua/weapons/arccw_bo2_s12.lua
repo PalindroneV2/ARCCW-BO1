@@ -223,7 +223,7 @@ SWEP.Attachments = {
     }, --5
     {
         PrintName = "Magazine",
-        DefaultAttName = "Standard Mag.",
+        DefaultAttName = "Standard Magazine",
         Slot = "bo1_mag",
     }, --6
     { --6
