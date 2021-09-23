@@ -293,7 +293,7 @@ SWEP.Attachments = {
         Installed = "bo1_stock_heavy"
     }, --9
     {
-        PrintName = "FCG",
+        PrintName = "Fire Group",
         Slot = {"bo1_fcg"}
     }, --10
     {

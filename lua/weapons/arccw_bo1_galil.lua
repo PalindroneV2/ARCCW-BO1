@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "IMI Galil ARM"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "An israeli assault rifle inspired by the AK/Valmet platform firing the 5,56mm NATO round."
+SWEP.Trivia_Desc = "An israeli assault rifle inspired by the AK/Valmet platform firing the 5.56mm NATO round."
 SWEP.Trivia_Manufacturer = "IMI"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
@@ -287,7 +287,7 @@ SWEP.Attachments = {
         Installed = "bo1_stock_light"
     }, --8
     { --9
-        PrintName = "FCG",
+        PrintName = "Fire Group",
         Slot = {"bo1_fcg"}
     },
     {

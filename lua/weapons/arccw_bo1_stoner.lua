@@ -237,13 +237,13 @@ SWEP.Attachments = {
         Installed = "bo1_stock_heavy"
     }, --7
     {
-        PrintName = "FCG",
+        PrintName = "Fire Group",
         Slot = {"bo1_fcg"}
     }, --8
     {
         PrintName = "Magazine",
         Slot = {"bo1_stoner_ammo"},
-        DefaultAttName = "STANAG 5,56mm 30rnd Mag"
+        DefaultAttName = "STANAG 5.56mm 30rnd Mag"
     }, --9
     {
         PrintName = "Ammo Type",

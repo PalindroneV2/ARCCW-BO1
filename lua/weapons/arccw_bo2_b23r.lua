@@ -208,7 +208,7 @@ SWEP.Attachments = {
         MergeSlots = {3}
     },
     {
-        PrintName = "FCG",
+        PrintName = "Fire Group",
         Slot = {"bo1_fcg"},
     },--5
     {

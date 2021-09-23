@@ -231,7 +231,7 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Magazine",
     },
     { --7
-        PrintName = "FCG",
+        PrintName = "Fire Group",
         Slot = {"bo1_fcg"}
     },
     { --8

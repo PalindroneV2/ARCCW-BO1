@@ -196,7 +196,7 @@ SWEP.Attachments = {
         ExcludeFlags = {"doom_ee"},
     },
     {
-        PrintName = "FCG",
+        PrintName = "Fire Group",
         Slot = {"fcg_diamatti"},
         ExcludeFlags = {"doom_ee"},
     },--5

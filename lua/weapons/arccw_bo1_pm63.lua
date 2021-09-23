@@ -206,7 +206,7 @@ SWEP.Attachments = {
         DefaultAttName = "No Stock",
     },
     { --5
-        PrintName = "FCG",
+        PrintName = "Fire Group",
         Slot = {"bo1_fcg"}
     },
     { --6

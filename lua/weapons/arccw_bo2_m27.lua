@@ -364,13 +364,13 @@ SWEP.Attachments = {
         DefaultAttName = "No Stock",
     }, --8
     {
-        PrintName = "FCG",
+        PrintName = "Fire Group",
         Slot = {"bo1_fcg"}
     }, --9
     {
         PrintName = "Magazine",
         Slot = {"bo2_m27_ammo"},
-        DefaultAttName = "5,56mm NATO 30rnd"
+        DefaultAttName = "5.56mm NATO 30rnd"
     }, --10
     {
         PrintName = "Ammo Type",

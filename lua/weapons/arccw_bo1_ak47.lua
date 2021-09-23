@@ -302,7 +302,7 @@ SWEP.Attachments = {
         DefaultAttName = "30rnd 7.62x39mm Steel"
     },
     {
-        PrintName = "FCG",
+        PrintName = "Fire Group",
         Slot = {"bo1_fcg"}
     }, --10
     { --11

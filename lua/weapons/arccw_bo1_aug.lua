@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "AUG"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "An austrian assault rifle firing the 5,56mm NATO round Using a bullpup configuration to keep it a compact size. It usually comes with a unique integrated scope."
+SWEP.Trivia_Desc = "An austrian assault rifle firing the 5.56mm NATO round Using a bullpup configuration to keep it a compact size. It usually comes with a unique integrated scope."
 SWEP.Trivia_Manufacturer = "Steyr"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
@@ -268,7 +268,7 @@ SWEP.Attachments = {
         },
     },
     { --8
-        PrintName = "FCG",
+        PrintName = "Fire Group",
         Slot = {"bo1_fcg"}
     },
     { --9

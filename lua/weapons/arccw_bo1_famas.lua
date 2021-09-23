@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "FAMAS Valorisé"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "A french assault rifle firing the 5,56mm NATO round Using a bullpup configuration to keep it a compact size."
+SWEP.Trivia_Desc = "A french assault rifle firing the 5.56mm NATO round Using a bullpup configuration to keep it a compact size."
 SWEP.Trivia_Manufacturer = "GIAT Industries"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
@@ -261,7 +261,7 @@ SWEP.Attachments = {
         },
     },
     { --8
-        PrintName = "FCG",
+        PrintName = "Fire Group",
         Slot = {"bo1_fcg", "fcg_famas"}
     },
     { --9
