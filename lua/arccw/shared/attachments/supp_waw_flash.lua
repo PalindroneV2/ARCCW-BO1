@@ -19,6 +19,6 @@ att.IsMuzzleDevice = true
 
 att.Mult_ShootPitch = 1.1
 att.Mult_ShootVol = 0.75
-att.Mult_Range = 2
+att.Mult_Range = 0.9
 
-att.Add_BarrelLength = 15
+att.Add_BarrelLength = 5

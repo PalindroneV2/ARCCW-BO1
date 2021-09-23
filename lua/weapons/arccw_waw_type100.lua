@@ -205,7 +205,6 @@ SWEP.Attachments = {
     }, --2
     {
         PrintName = "Underbarrel",
-        DefaultAttName = "Standard Muzzle",
         Slot = {"foregrip"},
         Bone = "tag_weapon",
         Offset = {
