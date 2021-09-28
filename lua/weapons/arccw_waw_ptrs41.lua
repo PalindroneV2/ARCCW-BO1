@@ -34,7 +34,11 @@ SWEP.DefaultBodygroups = "00010000000"
 
 SWEP.Damage = 500
 SWEP.DamageMin = 200 -- damage done at maximum range
-SWEP.Range = 1000 -- in METRES
+SWEP.Range = 600 -- in METRES
+SWEP.RangeMin = 100
+
+SWEP.HullSize = 16
+
 SWEP.Penetration = 40
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -52,6 +56,7 @@ SWEP.ExtendedClipSize = 20
 SWEP.Recoil = 5
 SWEP.RecoilSide = 3
 SWEP.RecoilRise = 2
+
 SWEP.SpeedMult = 0.8
 SWEP.SightedSpeedMult = 0.15
 SWEP.SightTime = 0.65
@@ -341,3 +346,14 @@ SWEP.Animations = {
         LHIKOut = 0.5,
     },
 }
+
+SWEP.Hook_PostFireBullets = function(wep)
+    local owner = wep:GetOwner()
+    if owner:IsPlayer() and not wep:InBipod() then
+        local ang = owner:GetAngles()
+        local dir = ang:Forward()
+        dir.z = 0
+        dir:Normalize()
+        owner:SetVelocity(dir * (owner:IsOnGround() and -300 or -100))
+    end
+end
