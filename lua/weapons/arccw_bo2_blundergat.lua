@@ -76,9 +76,9 @@ SWEP.Primary.Ammo = "buckshot" -- what ammo type the gun uses
 SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO1.Olympia_Fire"
+SWEP.ShootSound = "ArcCW_BO2.Blundergat_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
-SWEP.DistantShootSound = {"^weapons/arccw/bo1_generic_shotgun/ringoff_f.wav", "^weapons/arccw/bo1_generic_shotgun/ringoff_r.wav"}
+--SWEP.DistantShootSound = {"^weapons/arccw/bo1_generic_shotgun/ringoff_f.wav", "^weapons/arccw/bo1_generic_shotgun/ringoff_r.wav"}
 
 SWEP.MuzzleEffect = "muzzleflash_shotgun"
 SWEP.ShellModel = "models/shells/shell_12gauge.mdl"
@@ -298,11 +298,9 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 1.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Olympia_Switch", t = 10 / 40},
-            {s = "ArcCW_BO1.Olympia_Open", t = 15 / 40},
-            {s = "ArcCW_BO1.Olympia_Shell", t = 45 / 40},
-            {s = "ArcCW_BO1.Olympia_Switch", t = 60 / 40},
-            {s = "ArcCW_BO1.Olympia_Close", t = 90 / 40},
+            {s = "ArcCW_BO2.Blundergat_Open", t = 10 / 40},
+            {s = "ArcCW_BO2.Blundergat_Insert", t = 45 / 40},
+            {s = "ArcCW_BO2.Blundergat_Close", t = 90 / 40},
         },
     },
     ["reload_empty"] = {
@@ -313,11 +311,9 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 1.5,
         SoundTable = {
-            {s = "ArcCW_BO1.Olympia_Switch", t = 10 / 40},
-            {s = "ArcCW_BO1.Olympia_Open", t = 15 / 40},
-            {s = "ArcCW_BO1.Olympia_Shell", t = 45 / 40},
-            {s = "ArcCW_BO1.Olympia_Switch", t = 60 / 40},
-            {s = "ArcCW_BO1.Olympia_Close", t = 90 / 40},
+            {s = "ArcCW_BO2.Blundergat_Open", t = 10 / 40},
+            {s = "ArcCW_BO2.Blundergat_Insert", t = 45 / 40},
+            {s = "ArcCW_BO2.Blundergat_Close", t = 90 / 40},
         },
     },
     ["enter_sprint"] = {

@@ -81,9 +81,9 @@ SWEP.MagID = "makarov" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO2.357_Fire"
+SWEP.ShootSound = "ArcCW_BO2.NMA_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.Pistol_Sil"
-SWEP.DistantShootSound = "ArcCW_BO1.Python_RingOff"
+--SWEP.DistantShootSound = "ArcCW_BO1.Python_RingOff"
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
@@ -201,8 +201,11 @@ SWEP.Animations = {
         Time = 1 / 30,
     },
     ["draw"] = {
-        Source = "draw",
-        Time = 30 / 30,
+        Source = "first_draw",
+        Time = 20 / 30,
+        SoundTable = {
+            {s = "ArcCW_BO2.NMA_Deploy", t = 1 / 60},
+        }
     },
     ["holster"] = {
         Source = "holster",
@@ -215,8 +218,7 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 27 / 30,
         SoundTable = {
-            {s = "ArcCW_BO1.Makarov_Slide_Back", t = 16 / 30},
-            {s = "ArcCW_BO1.Makarov_Slide_Fwd", t = 21 / 30}
+            {s = "ArcCW_BO2.NMA_Deploy", t = 1 / 60},
         }
     },
     ["fire"] = {

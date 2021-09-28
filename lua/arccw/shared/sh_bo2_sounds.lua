@@ -80,6 +80,12 @@ sound.Add({
         "^weapons/arccw/bo1_python/fire_bo2.wav",
     }
 })
+sound.Add({
+    name = "ArcCW_BO2.NMA_Fire",
+    channel = CHAN_STATIC,
+    level = 100,
+    sound = "^weapons/arccw/bo1_python/fire_nma.wav"
+})
 
 sound.Add({
     name = "ArcCW_BO2.Judge_Fire",
@@ -88,6 +94,14 @@ sound.Add({
     sound = {
         "^weapons/arccw/bo1_python/fire_judge.wav",
     }
+})
+sound.Add({
+    name = "ArcCW_BO2.NMA_Deploy",
+    channel = CHAN_ITEM,
+    level = 100,
+    sound = {
+        "^weapons/arccw/bo1_python/first_draw_nma.wav",
+    },
 })
 sound.Add({
     name = "ArcCW_BO2.Judge_Empty",
@@ -475,6 +489,50 @@ sound.Add({
     sound = "^weapons/arccw/bo2_generic_shotgun/fwd_870.wav"
 })
 
+-- BO2 BLUNDERGAT --
+
+sound.Add({
+    name = "ArcCW_BO2.Blundergat_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo2_blundergat/fire.wav",
+    }
+})
+sound.Add({
+    name = "ArcCW_BO2.Acidgat_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo2_blundergat/acid_shot.wav",
+    }
+})
+sound.Add({
+    name = "ArcCW_BO2.Blundergat_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 70,
+    sound = "^weapons/arccw/bo2_blundergat/open.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.Blundergat_Insert",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 70,
+    sound = "^weapons/arccw/bo2_blundergat/insert.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.Blundergat_Close",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 70,
+    sound = "^weapons/arccw/bo2_blundergat/close.wav"
+})
+
 -- GENERIC BO2 LMG --
 
 sound.Add({
@@ -648,4 +706,52 @@ sound.Add({
     channel = CHAN_ITEM,
     level = 70,
     sound = "^weapons/arccw/bo2_generic_sniper/fly_sniper_bf.wav"
+})
+
+-- Raygun MK2 --
+
+sound.Add({
+    name = "ArcCW_BO2.RGMK2_Fire",
+    channel = CHAN_STATIC,
+    level = 100,
+    sound = {
+        "^weapons/arccw/bo2_raygunmk2/fire1.wav",
+        "^weapons/arccw/bo2_raygunmk2/fire2.wav",
+        "^weapons/arccw/bo2_raygunmk2/fire3.wav",
+    }
+})
+sound.Add({
+    name = "ArcCW_BO2.RGMK2_In",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_raygunmk2/in.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.RGMK2_Out",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_raygunmk2/out.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.RGMK2_Raise",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_raygunmk2/raise.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.RGMK2_Switch",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_raygunmk2/switch.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO2.RGMK2_Impact",
+    channel = CHAN_USER_BASE + 1,
+    level = 70,
+    sound = {
+        "^weapons/arccw/bo2_raygunmk2/imp1.wav",
+        "^weapons/arccw/bo2_raygunmk2/imp2.wav",
+        "^weapons/arccw/bo2_raygunmk2/imp3.wav"
+    }
 })
