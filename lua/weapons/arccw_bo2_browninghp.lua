@@ -63,8 +63,8 @@ SWEP.NPCWeaponType = "weapon_pistol"
 SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 8
-SWEP.HipDispersion = 150
-SWEP.MoveDispersion = 100
+SWEP.HipDispersion = 180
+SWEP.MoveDispersion = 120
 
 SWEP.ShootWhileSprint = false
 

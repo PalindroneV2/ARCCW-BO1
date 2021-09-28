@@ -1,4 +1,5 @@
-att.PrintName = "8rnd .44 Magnum"
+att.PrintName = "Desert Eagle Mark XIX .44 Magnum Conversion"
+att.AbbrevName = ".44 Magnum"
 att.Icon = Material("entities/acwatt_bo1_ext_mag.png", "mips smooth")
 att.Description = ".44 Magnum conversion for the Desert Eagle. More power means more recoil. Bigger cartridges means one less bullet in your mag. Slight improvement to penetration and accuracy due to the better ballistics of .44 Magnum"
 att.Desc_Pros = {

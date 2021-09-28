@@ -28,10 +28,10 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 44
-SWEP.DamageMin = 22
+SWEP.Damage = 47
+SWEP.DamageMin = 9
 SWEP.RangeMin = 5
-SWEP.Range = 60
+SWEP.Range = 90
 
 SWEP.Penetration = 5
 SWEP.DamageType = DMG_BULLET
@@ -40,7 +40,7 @@ SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
-SWEP.ChamberSize = 0 -- how many rounds can be chambered.
+SWEP.ChamberSize = 1 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 12 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 24
 

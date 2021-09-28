@@ -15,8 +15,8 @@ att.Slot = "bo1_python_barrel"
 att.GivesFlags = {"python_snub"}
 att.ActivateElements = {"python_snub"}
 
-att.Mult_Range = 0.5
-att.Mult_Recoil = 1.5
+att.Mult_Range = 0.75
+att.Mult_Recoil = 1.25
 att.Mult_SightTime = 0.75
 att.Mult_AccuracyMOA = 2
 

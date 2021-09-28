@@ -29,9 +29,11 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultSkin = 1
 
-SWEP.Damage = 33
-SWEP.DamageMin = 28 -- damage done at maximum range
-SWEP.Range = 60 -- in METRES
+SWEP.Damage = 36
+SWEP.DamageMin = 15
+SWEP.RangeMin = 10
+SWEP.Range = 100
+
 SWEP.Penetration = 3
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -44,15 +46,15 @@ SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
-SWEP.ChamberSize = 0 -- how many rounds can be chambered.
+SWEP.ChamberSize = 1 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 15 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 36
 
-SWEP.Recoil = 0.3
+SWEP.Recoil = 0.75
 SWEP.RecoilSide = 0.3
 SWEP.RecoilRise = 1
 
-SWEP.Delay = 60 / 1100 -- 60 / RPM.
+SWEP.Delay = 60 / 700 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -66,9 +68,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_pistol"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 3.25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 250 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 3 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 220 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 100
 
 SWEP.ShootWhileSprint = false
 
@@ -232,7 +234,7 @@ SWEP.RejectAttachments = {
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
     local doompistol = wep:GetBuff_Override("DOOM_EE")
-    local m93r = wep.Attachments[5].Installed == "cde_fcg_93r"
+    local m93r = wep.Attachments[5].Installed == "cde_93r_burst"
 
     local gunname = wep.PrintName
 
@@ -259,7 +261,7 @@ end
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")
-    local m93r = wep.Attachments[5].Installed == "cde_fcg_93r"
+    local m93r = wep.Attachments[5].Installed == "cde_93r_burst"
 
     if m93r then
         vm:SetSkin(0)

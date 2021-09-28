@@ -37,7 +37,7 @@ SWEP.DamageMin = 200 -- damage done at maximum range
 SWEP.Range = 600 -- in METRES
 SWEP.RangeMin = 100
 
-SWEP.HullSize = 16
+SWEP.HullSize = 8
 
 SWEP.Penetration = 40
 SWEP.DamageType = DMG_BULLET
@@ -53,8 +53,8 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 5 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 20
 
-SWEP.Recoil = 5
-SWEP.RecoilSide = 3
+SWEP.Recoil = 6
+SWEP.RecoilSide = 4
 SWEP.RecoilRise = 2
 
 SWEP.SpeedMult = 0.8
@@ -78,7 +78,7 @@ SWEP.NPCWeaponType = {
 SWEP.NPCWeight = 75
 
 SWEP.AccuracyMOA = 1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 1000 -- inaccuracy added by hip firing.
+SWEP.HipDispersion = 1500 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 250
 
 SWEP.Primary.Ammo = "SniperPenetratedRound" -- what ammo type the gun uses

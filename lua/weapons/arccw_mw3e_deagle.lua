@@ -27,9 +27,11 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 60
-SWEP.DamageMin = 55 -- damage done at maximum range
-SWEP.Range = 75 -- in METRES
+SWEP.Damage = 55
+SWEP.DamageMin = 36
+SWEP.RangeMin = 15
+SWEP.Range = 75
+
 SWEP.Penetration = 3
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -42,13 +44,13 @@ SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
-SWEP.ChamberSize = 0 -- how many rounds can be chambered.
+SWEP.ChamberSize = 1 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 9 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 18
 
-SWEP.Recoil = 1.25
+SWEP.Recoil = 1.5
 SWEP.RecoilSide = 1.25
-SWEP.RecoilRise = 1.25
+SWEP.RecoilRise = 1
 SWEP.VisualRecoilMult = 0.75
 
 SWEP.Delay = 60 / 300 -- 60 / RPM.
@@ -171,17 +173,6 @@ SWEP.Attachments = {
         },
     },
     { --3
-        PrintName = "Underbarrel",
-        Slot = {"foregrip"},
-        Bone = "tag_weapon",
-        Offset = {
-            vpos = Vector(2.5, 0.1, -0.3),
-            vang = Angle(0, 0, 0),
-            wpos = Vector(7.238, 1.9, -2.622),
-            wang = Angle(90, 0, 0)
-        },
-    },
-    { --4
         PrintName = "Tactical",
         Slot = {"bo1_tacpistol", "tac_pistol"},
         VMScale = Vector(0.75, 0.75, 0.75),
@@ -191,11 +182,24 @@ SWEP.Attachments = {
             vpos = Vector(3.6, 0.315, 0.3),
             vang = Angle(0, 0, 0),
         },
+        MergeSlots = {4},
+    },
+    { --4
+        Hidden = true,
+        --PrintName = "Underbarrel",
+        Slot = {"foregrip"},
+        Bone = "tag_weapon",
+        Offset = {
+            vpos = Vector(4, 0.1, 0.3),
+            vang = Angle(0, 0, 0),
+            wpos = Vector(7.238, 1.9, -2.622),
+            wang = Angle(90, 0, 0)
+        },
     },
     { --5
         PrintName = "Caliber",
         Slot = {"mw3e_ammo_deagle"},
-        DefaultAttName = "9rnd .357 Magnum",
+        DefaultAttName = ".357 Magnum",
     },
     { --5
         PrintName = "Ammo Type",

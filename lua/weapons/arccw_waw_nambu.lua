@@ -26,9 +26,11 @@ SWEP.WorldModelOffset = {
 SWEP.MirrorVMWM = true
 SWEP.ViewModelFOV = 70
 
-SWEP.Damage = 28
-SWEP.DamageMin = 16 -- damage done at maximum range
-SWEP.Range = 50 -- in METRES
+SWEP.Damage = 30
+SWEP.DamageMin = 9
+SWEP.RangeMin = 15
+SWEP.Range = 60
+
 SWEP.Penetration = 2
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -42,8 +44,8 @@ SWEP.ReducedClipSize = 6
 
 SWEP.PhysBulletMuzzleVelocity = 900
 
-SWEP.Recoil = 0.56
-SWEP.RecoilSide = 0.2
+SWEP.Recoil = 0.25
+SWEP.RecoilSide = 0.3
 SWEP.RecoilRise = 0.1
 
 SWEP.Delay = 60 / 600 -- 60 / RPM.

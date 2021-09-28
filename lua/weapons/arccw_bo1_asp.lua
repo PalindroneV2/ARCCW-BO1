@@ -27,9 +27,9 @@ SWEP.WorldModelOffset = {
 SWEP.ViewModelFOV = 60
 
 SWEP.Damage = 40
-SWEP.DamageMin = 20
-SWEP.RangeMin = 10
-SWEP.Range = 60
+SWEP.DamageMin = 14
+SWEP.RangeMin = 8
+SWEP.Range = 90
 
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
