@@ -4,9 +4,9 @@ SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "PTRS-41"
-SWEP.Trivia_Class = "Anti-Materiel Precision Rifle"
+SWEP.Trivia_Class = "Antimateriel Rifle"
 SWEP.Trivia_Desc = [[
-    Russian anti-materiel rifle. Made for destroying armored vehicles and tanks. It's devastating anti-tank power comes at the cost of a massive 2 meter length and weight that makes it unable to be fired from the shoulder.
+    Russian anti-materiel rifle made for destroying armored vehicles and tanks. It's devastating anti-tank power comes at the cost of a massive 2 meter length and weight that makes it unable to be fired from the shoulder.
 ]]
 SWEP.Trivia_Manufacturer = "Many"
 SWEP.Trivia_Calibre = "14.5x144mm"
@@ -32,10 +32,10 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "00010000000"
 
-SWEP.Damage = 175
-SWEP.DamageMin = 120 -- damage done at maximum range
-SWEP.Range = 1400 -- in METRES
-SWEP.Penetration = 20
+SWEP.Damage = 500
+SWEP.DamageMin = 200 -- damage done at maximum range
+SWEP.Range = 1000 -- in METRES
+SWEP.Penetration = 40
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 853 -- projectile or phys bullet muzzle velocity
@@ -50,10 +50,10 @@ SWEP.Primary.ClipSize = 5 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 20
 
 SWEP.Recoil = 5
-SWEP.RecoilSide = 2
+SWEP.RecoilSide = 3
 SWEP.RecoilRise = 2
-SWEP.SpeedMult = 0.5
-SWEP.SightedSpeedMult = 0.35
+SWEP.SpeedMult = 0.8
+SWEP.SightedSpeedMult = 0.15
 SWEP.SightTime = 0.65
 
 SWEP.Delay = 60 / 75 -- 60 / RPM.
@@ -73,7 +73,7 @@ SWEP.NPCWeaponType = {
 SWEP.NPCWeight = 75
 
 SWEP.AccuracyMOA = 1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
+SWEP.HipDispersion = 1000 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 250
 
 SWEP.Primary.Ammo = "SniperPenetratedRound" -- what ammo type the gun uses
