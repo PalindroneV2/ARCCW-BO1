@@ -161,21 +161,6 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.Attachments = {
-    { --1
-        PrintName = "Optic", -- print name
-        DefaultAttName = "Iron Sights",
-        Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
-        Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
-        Offset = {
-            vpos = Vector(-2, 0, 1.85), -- 4.6 offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 0),
-            wpos = Vector(4.5, 1.35, -5.4),
-            wang = Angle(171, 179, 0)
-        },
-        CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(3, 0, 0),
-        InstalledEles = {"mount"},
-    },
     {
         PrintName = "Muzzle",
         Slot = "waw_bayonet",
@@ -192,7 +177,7 @@ SWEP.Attachments = {
             wang = Angle(172.5, -179, -1.5),
         },
         ExcludeFlags = {"waw_muzzgren"},
-        MergeSlots = {4},
+        MergeSlots = {3},
     }, --3
     {
         Hidden = true,
@@ -233,7 +218,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(-4, -0.8, -0.5),
+            vpos = Vector(5.5, -0.8, -0.65),
             vang = Angle(0, 0, 0),
         },
     }, --8
@@ -349,7 +334,8 @@ SWEP.Animations = {
         LHIKIn = 0.75,
         LHIKOut = 0.75,
         SoundTable = {
-            {s = "ArcCW_WAW.Type99_Out", t = 30 / 35},
+            {s = "ArcCW_WAW.BAR_Out", t = 30 / 35},
+            {s = "ArcCW_WAW.Type99_Out", t = 45 / 35},
             {s = "ArcCW_WAW.Type99_In", t = 90 / 35},
         },
     },
@@ -363,7 +349,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 1.75,
         SoundTable = {
-            {s = "ArcCW_WAW.Type99_Out", t = 30 / 35},
+            {s = "ArcCW_WAW.BAR_Out", t = 30 / 35},
+            {s = "ArcCW_WAW.Type99_Out", t = 45 / 35},
             {s = "ArcCW_WAW.Type99_In", t = 90 / 35},
             {s = "ArcCW_WAW.Type99_Charge", t = 130 / 35},
         },

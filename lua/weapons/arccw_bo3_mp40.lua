@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "MP40"
+SWEP.PrintName = "MP40 (BO3)"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = [[
     "Picture this scene. Europe, World War II. A band of plucky heores captured by the germans, but they've got a cunning plan. Darkness falls and they make their escape. Nazi guards firing fruitlessly into the night and the weapon they're using...
@@ -148,10 +148,6 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["ammo_papunch"] = {
-        TrueNameChange = "The Afterburner",
-        NameChange = "The Afterburner",
-    },
     ["light_stock"] = {
         VMBodygroups = {
             {ind = 2, bg = 1},
@@ -265,7 +261,15 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 end
 
-SWEP.Hook_TranslateAnimation = function(wep, anim, data)
+SWEP.Hook_NameChange = function(wep, name)
+    local papcamo = wep:GetBuff_Override("PackAPunch")
+
+    gunname = "MP40"
+    if papcamo then
+        gunname = "The Afterburner"
+    end
+
+    return gunname
 end
 
 SWEP.Animations = {
