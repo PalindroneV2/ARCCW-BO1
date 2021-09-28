@@ -212,7 +212,8 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         DefaultAttName = "Cut-off Stock",
-        Slot = "bo1_mp5stock",
+        Slot = "bo1_stock_h",
+        Installed = "bo1_stock_heavy",
         ExcludeFlags = {"doom_ee"},
     },
     {
