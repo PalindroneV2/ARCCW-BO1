@@ -27,9 +27,9 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 30
-SWEP.DamageMin = 25 -- damage done at maximum range
-SWEP.Range = 80 -- in METRES
+SWEP.Damage = 27
+SWEP.DamageMin = 18 -- damage done at maximum range
+SWEP.Range = 75 -- in METRES
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -44,8 +44,8 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 60
 
-SWEP.Recoil = 0.25
-SWEP.RecoilSide = 0.35
+SWEP.Recoil = 0.15
+SWEP.RecoilSide = 0.25
 SWEP.RecoilRise = 0.25
 SWEP.VisualRecoilMult = 1
 
@@ -66,9 +66,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_smg1"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 3.2 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 200
+SWEP.AccuracyMOA = 3 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 400 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 100
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
 SWEP.MagID = "ak74" -- the magazine pool this gun draws from
@@ -91,8 +91,8 @@ SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 4
 
-SWEP.SpeedMult = 0.95
-SWEP.SightedSpeedMult = 0.5
+SWEP.SpeedMult = 0.975
+SWEP.SightedSpeedMult = 0.75
 SWEP.SightTime = 0.2
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
@@ -228,7 +228,8 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Magazine",
-        Slot = {"bo1_extmag"}
+        DefaultAttName = "Standard Magazine",
+        Slot = {"waw_type100_mag"}
     }, --5 --3
     {
         PrintName = "Ammo Type",

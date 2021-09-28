@@ -27,9 +27,9 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 42
-SWEP.DamageMin = 30 -- damage done at maximum range
-SWEP.Range = 90 -- in METRES
+SWEP.Damage = 36
+SWEP.DamageMin = 32 -- damage done at maximum range
+SWEP.Range = 100 -- in METRES
 SWEP.Penetration = 7
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -40,12 +40,12 @@ SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
-SWEP.ChamberSize = 0 -- how many rounds can be chambered.
+SWEP.ChamberSize = 1 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 15 -- DefaultClip is automatically set.
 
-SWEP.Recoil = 0.6
-SWEP.RecoilSide = 0.35
-SWEP.RecoilRise = 0.35
+SWEP.Recoil = 0.5
+SWEP.RecoilSide = 0.3
+SWEP.RecoilRise = 0.25
 
 SWEP.Delay = 60 / 750-- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -63,9 +63,9 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 1.75 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 200
+SWEP.AccuracyMOA = 1.25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 80
 
 SWEP.Primary.Ammo = "smg1" -- what ammo type the gun uses
 SWEP.MagID = "m1carbine" -- the magazine pool this gun draws from
@@ -87,9 +87,9 @@ SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 3
 
-SWEP.SpeedMult = 0.85
-SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.3
+SWEP.SpeedMult = 0.975
+SWEP.SightedSpeedMult = 0.75
+SWEP.SightTime = 0.25
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
@@ -164,7 +164,7 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 1}
         }
     },
-    ["ammo_extmag"] = {
+    ["extmag"] = {
         VMBodygroups = {
             {ind = 1, bg = 1}
         },
@@ -240,8 +240,8 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Magazine",
-        Slot = {"bo1_extmag"},
-        DefaultAttName = ".30 Carbine 15rnd mag",
+        Slot = {"waw_carbine_mag"},
+        DefaultAttName = "Standard Magazine",
     },--6
     {
         PrintName = "Ammo Type",

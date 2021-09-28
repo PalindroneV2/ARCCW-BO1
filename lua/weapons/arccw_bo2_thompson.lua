@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "M1921AC Thompson"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = [[
-    American Submachine Gun in .45 ACP. The design was finalized too late for the Great War, but it found commercial success in the civilian market and infamy due to it's use by gangsters. Eventually the U.S. Military would fully adopt the Thompson as their standard SMG and would see service in World War 2.
+    Interwar American Submachine Gun in .45 ACP. The design was finalized too late for the Great War, but it found commercial success in the civilian market and infamy due to it's use by gangsters.
 
     "Part sinner, part saint. An incredible gun that spits unbelievable tales. But the most amazing thing is that they're all true."
 ]]
@@ -36,7 +36,7 @@ SWEP.DefaultBodygroups = "000000"
 
 SWEP.Damage = 45
 SWEP.DamageMin = 25 -- damage done at maximum range
-SWEP.Range = 100 -- in METRES
+SWEP.Range = 60 -- in METRES
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -51,9 +51,9 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 50 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 100
 
-SWEP.Recoil = 0.25
-SWEP.RecoilSide = 0.35
-SWEP.RecoilRise = 0.25
+SWEP.Recoil = 0.6
+SWEP.RecoilSide = 0.6
+SWEP.RecoilRise = 0.5
 SWEP.VisualRecoilMult = 1
 
 SWEP.Delay = 60 / 900 -- 60 / RPM.
@@ -75,8 +75,8 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 2.75 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 550 -- inaccuracy added by hip firing.
+SWEP.AccuracyMOA = 5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
@@ -99,9 +99,9 @@ SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 3
 
-SWEP.SpeedMult = 0.95
+SWEP.SpeedMult = 0.94
 SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.2
+SWEP.SightTime = 0.3
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",

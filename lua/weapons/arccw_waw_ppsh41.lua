@@ -30,8 +30,8 @@ SWEP.ViewModelFOV = 60
 SWEP.DefaultBodygroups = "000000"
 
 SWEP.Damage = 30
-SWEP.DamageMin = 25 -- damage done at maximum range
-SWEP.Range = 80 -- in METRES
+SWEP.DamageMin = 21 -- damage done at maximum range
+SWEP.Range = 90 -- in METRES
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -48,7 +48,7 @@ SWEP.ExtendedClipSize = 115
 SWEP.ReducedClipSize = 35
 
 SWEP.Recoil = 0.25
-SWEP.RecoilSide = 0.35
+SWEP.RecoilSide = 0.4
 SWEP.RecoilRise = 0.25
 SWEP.VisualRecoilMult = 1
 
@@ -71,7 +71,7 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 3 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 8 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 550 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
@@ -227,6 +227,7 @@ SWEP.Attachments = {
     },
     { --4
         PrintName = "Magazine",
+        DefaultAttName = "Standard Magazine",
         Slot = {"waw_ppsh_ammo"}
     },
     {
@@ -274,7 +275,7 @@ end
 
 
 SWEP.Hook_GetCapacity = function(wep, cap)
-    if wep.Attachments[5].Installed == "ammo_waw_ppsh_stick" and wep:GetBuff_Override("PackAPunch") then
+    if wep.Attachments[5].Installed == "waw_ppsh_stick" and wep:GetBuff_Override("PackAPunch") then
         return 65
     end
 end

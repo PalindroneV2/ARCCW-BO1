@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "M1A1 Thompson"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = [[
-    American Submachine Gun in .45 ACP. The design was finalized too late for the Great War, but it found commercial success in the civilian market and infamy due to it's use by gangsters. Eventually the U.S. Military would fully adopt the Thompson as their standard SMG and would see service in World War 2.
+    American Submachine Gun in .45 ACP. It is a simplified design of the M1921 Thompson adopted for use in World War II.
 
     "Part sinner, part saint. An incredible gun that spits unbelievable tales. But the most amazing thing is that they're all true."
 ]]
@@ -35,7 +35,7 @@ SWEP.DefaultBodygroups = "000000"
 
 SWEP.Damage = 45
 SWEP.DamageMin = 25 -- damage done at maximum range
-SWEP.Range = 100 -- in METRES
+SWEP.Range = 60 -- in METRES
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -50,9 +50,9 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 60
 
-SWEP.Recoil = 0.25
-SWEP.RecoilSide = 0.35
-SWEP.RecoilRise = 0.25
+SWEP.Recoil = 0.7
+SWEP.RecoilSide = 0.7
+SWEP.RecoilRise = 0.5
 SWEP.VisualRecoilMult = 1
 
 SWEP.Delay = 60 / 700 -- 60 / RPM.
@@ -74,9 +74,9 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 2.75 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 550 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 4 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 400 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 100
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
 SWEP.MagID = "m1a1tommy" -- the magazine pool this gun draws from
@@ -99,9 +99,9 @@ SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 3
 
-SWEP.SpeedMult = 0.95
+SWEP.SpeedMult = 0.96
 SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.2
+SWEP.SightTime = 0.25
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
@@ -207,7 +207,6 @@ SWEP.Attachments = {
     }, --2
     {
         PrintName = "Underbarrel",
-        DefaultAttName = "No underbarrel",
         Slot = "foregrip",
         Bone = "tag_weapon",
         Offset = {
@@ -236,6 +235,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Magazine",
+        DefaultAttName = "Standard Magazine",
         Slot = {"waw_thompson_ammo"}
     }, --6 --4
     {
@@ -263,7 +263,7 @@ SWEP.Attachments = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[8].Installed == "ammo_papunch"
-    local drum = wep.Attachments[7].Installed == "ammo_waw_thompson_drum"
+    local drum = wep.Attachments[7].Installed == "waw_thompson_drum"
 
     if papcamo then
         vm:SetSkin(1)
@@ -274,13 +274,13 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim, data)
-    local drum = wep.Attachments[7].Installed == "ammo_waw_thompson_drum" --5
+    local drum = wep.Attachments[7].Installed == "waw_thompson_drum" --5
     if drum then return anim .. "_drum" end
 end
 
 SWEP.Hook_GetCapacity = function(wep, cap)
-    local drum = wep.Attachments[7].Installed == "ammo_waw_thompson_drum" --5
-    local stick = wep.Attachments[7].Installed == "ammo_waw_thompson_20" --5
+    local drum = wep.Attachments[7].Installed == "waw_thompson_drum" --5
+    local stick = wep.Attachments[7].Installed == "waw_thompson_stick" --5
     local pap = wep.Attachments[8].Installed == "ammo_papunch" --5
 
     if drum and pap then
