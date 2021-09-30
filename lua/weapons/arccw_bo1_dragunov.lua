@@ -81,8 +81,9 @@ SWEP.MagID = "svd" -- the magazine pool this gun draws from
 SWEP.ShootVol = 110 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO2.SVD_Shoot"
-SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
+SWEP.ShootSound = "ArcCW_BO2.Ballista_Fire"
+SWEP.ShootSoundSilenced = "ArcCW_BO2.Ballista_Sil"
+SWEP.DistantShootSound = {"^weapons/arccw/bo2_generic_sniper/dist/flux_l.wav", "^weapons/arccw/bo2_generic_sniper/dist/flux_r.wav"}
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_556.mdl"

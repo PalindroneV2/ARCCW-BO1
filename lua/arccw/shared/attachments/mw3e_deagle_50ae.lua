@@ -1,7 +1,7 @@
 att.PrintName = "Desert Eagle Mark XIX .50 AE Conversion"
 att.AbbrevName = ".50 Action Express"
 att.Icon = Material("entities/acwatt_bo1_ext_mag.png", "mips smooth")
-att.Description = ".50 Action Express conversion for the Desert Eagle. More power means more recoil. Bigger cartridges means one less bullet in your mag. Slight improvement to penetration and accuracy due to the better ballistics of .44 Magnum"
+att.Description = ".50 Action Express conversion for the Desert Eagle. More power means more recoil. The biggest possible cardtridge means two less bullets in your mag. Slight improvement to penetration and accuracy due to the better ballistics of .50 AE"
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

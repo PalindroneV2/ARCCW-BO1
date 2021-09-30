@@ -70,7 +70,7 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 75
 
-SWEP.AccuracyMOA = 1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 2 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 250
 
@@ -80,9 +80,9 @@ SWEP.MagID = "svd" -- the magazine pool this gun draws from
 SWEP.ShootVol = 110 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO2.DSR50_Shoot"
-SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
-SWEP.DistantShootSound = {"^weapons/arccw/bo1_l96/ringoff_00.wav", "^weapons/arccw/bo1_l96/ringoff_01.wav"}
+SWEP.ShootSound = "ArcCW_BO2.DSR50_Fire"
+SWEP.ShootSoundSilenced = "ArcCW_BO2.Ballista_Sil"
+SWEP.DistantShootSound = {"^weapons/arccw/bo2_generic_sniper/dist/flux_l.wav", "^weapons/arccw/bo2_generic_sniper/dist/flux_r.wav"}
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_556.mdl"

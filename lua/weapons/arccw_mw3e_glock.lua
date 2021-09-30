@@ -355,52 +355,27 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 1.5 * 1.25,
+        Time = 1.299 * 1.15,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_MW3E.Glock_MagOut", t = 0.25 * 1.25},
-            {s = "ArcCW_MW3E.Glock_MagIn", t = 1 * 1.25}
+            {s = "ArcCW_MW3E.Glock_MagOut", t = 0.25 * 1.15},
+            {s = "ArcCW_MW3E.Glock_MagIn", t = 1 * 1.15}
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 2 * 1.25,
+        Time = 1.533 * 1.15,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_MW3E.Glock_MagOut", t = 0.25 * 1.25},
-            {s = "ArcCW_MW3E.Glock_MagIn", t = 1 * 1.25},
-            {s = "ArcCW_MW3E.Glock_SlideFwd", t = 1.5 * 1.25}
-        },
-    },
-    ["reload_fast"] = {
-        Source = "reload_fast",
-        Time = 1.5 * 1.25,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
-        SoundTable = {
-            {s = "ArcCW_MW3E.Glock_MagOut", t = 0.25 * 1.25},
-            {s = "ArcCW_MW3E.Glock_MagIn", t = 1 * 1.25}
-        },
-    },
-    ["reload_empty_fast"] = {
-        Source = "reload_empty_fast",
-        Time = 2 * 1.25,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
-        SoundTable = {
-            {s = "ArcCW_MW3E.Glock_MagOut", t = 0.25 * 1.25},
-            {s = "ArcCW_MW3E.Glock_MagIn", t = 1 * 1.25},
-            {s = "ArcCW_MW3E.Glock_SlideFwd", t = 1.5 * 1.25}
+            {s = "ArcCW_MW3E.Glock_MagOut", t = 0.25 * 1.15},
+            {s = "ArcCW_MW3E.Glock_MagIn", t = 1 * 1.15},
+            {s = "ArcCW_MW3E.Glock_SlideFwd", t = 1.3 * 1.15}
         },
     },
     ["enter_sprint"] = {

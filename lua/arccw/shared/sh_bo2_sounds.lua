@@ -667,45 +667,65 @@ sound.Add({
 -- GENERIC BO2 SNIPER --
 
 sound.Add({
-    name = "ArcCW_BO2.SVD_Shoot",
+    name = "ArcCW_BO2.Ballista_Fire",
     channel = CHAN_STATIC,
     level = 100,
-    sound = "^weapons/arccw/bo2_generic_sniper/wpn_ballista_fire_plr.wav"
+    sound = "^weapons/arccw/bo2_generic_sniper/fire_ballista.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.Ballista_Sil",
+    channel = CHAN_STATIC,
+    level = 100,
+    sound = "^weapons/arccw/bo2_generic_sniper/sil_ballista.wav"
 })
 
 sound.Add({
-    name = "ArcCW_BO2.DSR50_Shoot",
+    name = "ArcCW_BO2.DSR50_Fire",
     channel = CHAN_STATIC,
     level = 100,
-    sound = "^weapons/arccw/bo2_generic_sniper/wpn_dsr_fire_plr.wav"
+    sound = "^weapons/arccw/bo2_generic_sniper/fire_dsr.wav"
 })
 
 sound.Add({
     name = "ArcCW_BO2.Sniper_ClipIn",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "^weapons/arccw/bo2_generic_sniper/fly_sniper_mag_in.wav"
+    sound = "^weapons/arccw/bo2_generic_sniper/in.wav"
 })
 
 sound.Add({
     name = "ArcCW_BO2.Sniper_ClipOut",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "^weapons/arccw/bo2_generic_sniper/fly_sniper_mag_out.wav"
+    sound = "^weapons/arccw/bo2_generic_sniper/out.wav"
 })
 
 sound.Add({
     name = "ArcCW_BO2.Sniper_BoltBack",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "^weapons/arccw/bo2_generic_sniper/fly_sniper_bb.wav"
+    sound = "^weapons/arccw/bo2_generic_sniper/bolt_back.wav"
 })
 
 sound.Add({
     name = "ArcCW_BO2.Sniper_BoltFwd",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "^weapons/arccw/bo2_generic_sniper/fly_sniper_bf.wav"
+    sound = "^weapons/arccw/bo2_generic_sniper/bolt_forward.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO2.Sniper_BoltDown",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_generic_sniper/bolt_down.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO2.Sniper_BoltUp",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_generic_sniper/bolt_up.wav"
 })
 
 -- Raygun MK2 --
