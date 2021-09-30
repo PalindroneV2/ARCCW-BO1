@@ -210,7 +210,7 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
         GivesFlags = {"r870_rails","r870_mcs"},
-        MergeSlots = {10}
+        MergeSlots = {11}
     }, --1
     {
         PrintName = "Muzzle",
@@ -248,14 +248,19 @@ SWEP.Attachments = {
         Slot = "bo1_stock",
         DefaultAttName = "No Stock",
     }, --6
+    { --6
+        PrintName = "Proficiency",
+        Slot = {"bo2_fastmag"},
+        DefaultAttName = "Standard"
+    },
     { --7
         PrintName = "Shell Holder",
         Slot = {"bo2_r870_shells"}
     },
     {
         PrintName = "Ammo Type",
-        Slot = {"ammo_pap_pumpsg"},
-    }, --8
+        Slot = {"ammo_pap_sg"},
+    }, --7
     {
         PrintName = "Perk",
         Slot = "bo1_perk",
@@ -286,12 +291,12 @@ SWEP.Attachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[7].Installed == "ammo_pap_pumpsg"
+    local pap = wep:GetBuff_Override("PackAPunch")
     local wood = wep.Attachments[11].Installed == "bo1_cosmetic_wood"
 
-    if papcamo and wood then
+    if pap and wood then
         vm:SetSkin(3)
-    elseif papcamo and !wood then
+    elseif pap and !wood then
         vm:SetSkin(2)
     end
 end
@@ -300,7 +305,7 @@ SWEP.Hook_NameChange = function(wep, name)
     local optics = wep.Attachments[1].Installed
     local irons = wep.Attachments[10].Installed
     local mcs = optics or irons
-    local pap = wep.Attachments[7].Installed == "ammo_pap_pumpsg"
+    local pap = wep:GetBuff_Override("PackAPunch")
 
     if mcs and !pap then
         return "Remington M870 MCS"
@@ -308,6 +313,29 @@ SWEP.Hook_NameChange = function(wep, name)
         return "Refitted-870"
     elseif mcs and pap then
         return "Refitted-870 MCS"
+    end
+end
+
+SWEP.Hook_SelectInsertAnimation = function(wep, data)
+    local fastmag = wep:GetBuff_Override("BO1_FastMag")
+    local pap = wep:GetBuff_Override("PackAPunch")
+
+    if fastmag then
+        if pap then
+            return {count = 16, anim = "sgreload_insert_fast"}
+        end
+        return {count = 2, anim = "sgreload_insert_fast"}
+    end
+    if pap then
+        return {count = 16, anim = "sgreload_insert"}
+    end
+end
+
+SWEP.Hook_SelectReloadAnimation = function(wep, curanim)
+    local fastmag = wep:GetBuff_Override("BO1_FastMag")
+
+    if fastmag then
+        return curanim .. "_fast"
     end
 end
 
@@ -351,26 +379,6 @@ SWEP.Animations = {
         },
         Time = 3 / 10,
         ShellEjectAt = 0.15,
-    },
-    ["reload"] = {
-        Source = "reload_pap",
-        Time = 54 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        SoundTable = {
-            {s = "ArcCW_BO2.Shotgun_Shell", t = 17 / 30},
-            {s = "ArcCW_BO2.870_Back", t = 40 / 30},
-            {s = "ArcCW_BO2.870_Fwd", t = 44 / 30},
-        },
-    },
-    ["reload_empty"] = {
-        Source = "reload_pap",
-        Time = 54 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        SoundTable = {
-            {s = "ArcCW_BO2.Shotgun_Shell", t = 17 / 30},
-            {s = "ArcCW_BO2.870_Back", t = 40 / 30},
-            {s = "ArcCW_BO2.870_Fwd", t = 44 / 30},
-        },
     },
     ["cycle"] = {
         Source = {
@@ -422,7 +430,30 @@ SWEP.Animations = {
             {s = "ArcCW_BO2.870_Fwd", t = 12 / 30},
         },
     },
-    ["sgreload_finish_empty"] = {
+
+    --RELOADS
+
+    ["sgreload_start"] = {
+        Source = "reload_in",
+        Time = 40 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
+        MinProgress = 1,
+        SoundTable = {
+            {s = "ArcCW_BO2.Shotgun_Shell", t = 21 / 30},
+        },
+    },
+    ["sgreload_insert"] = {
+        Source = "reload_loop",
+        Time = 26 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnimStartTime = 0.3,
+        MinProgress = 15 / 30,
+        SoundTable = {
+            {s = "ArcCW_BO2.Shotgun_Shell", t = 10 / 30},
+        },
+    },
+    ["sgreload_finish"] = {
         Source = "reload_out",
         Time = 30 / 30,
         SoundTable = {
@@ -430,6 +461,40 @@ SWEP.Animations = {
             {s = "ArcCW_BO2.870_Fwd", t = 12 / 30},
         },
     },
+
+    --FAST
+
+    ["sgreload_start_fast"] = {
+        Source = "reload_in_fast",
+        Time = 40 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        RestoreAmmo = 2, -- loads a shell since the first reload has a shell in animation
+        MinProgress = 1,
+        SoundTable = {
+            {s = "ArcCW_BO2.Shotgun_Shell", t = 21 / 30},
+        },
+    },
+    ["sgreload_insert_fast"] = {
+        Source = "reload_loop_fast",
+        Time = 26 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnimStartTime = 0.3,
+        MinProgress = 15 / 30,
+        SoundTable = {
+            {s = "ArcCW_BO2.Shotgun_Shell", t = 10 / 30},
+        },
+    },
+    ["sgreload_finish_fast"] = {
+        Source = "reload_out_fast",
+        Time = 30 / 30,
+        SoundTable = {
+            {s = "ArcCW_BO2.870_Back", t = 8 / 30},
+            {s = "ArcCW_BO2.870_Fwd", t = 12 / 30},
+        },
+    },
+
+    -- SPRINT
+
     ["enter_sprint"] = {
         Source = "sprint_in",
         Time = 10 / 30

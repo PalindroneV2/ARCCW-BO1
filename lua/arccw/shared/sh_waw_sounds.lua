@@ -41,6 +41,26 @@ sound.Add( {
     }
 } )
 sound.Add( {
+    name = "ArcCW_WAW.Garand_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_garand/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Garand_Mech2",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_garand/mech_last.wav",
+    }
+} )
+sound.Add( {
     name = "ArcCW_WAW.Garand_In",
     channel = CHAN_ITEM,
     volume = 1.0,

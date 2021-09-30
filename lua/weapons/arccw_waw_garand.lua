@@ -81,7 +81,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_WAW.Garand_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
-SWEP.DistantShootSound = "^weapons/arccw/waw_dist/waw_rifle.wav"
+SWEP.DistantShootSound = "ArcCW_WAW.Rifle_RingOff"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -322,7 +322,7 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 7 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = "^weapons/arccw/waw_garand/mech.wav", t = 0 }}
+        SoundTable = {{ s = "ArcCW_WAW.Garand_Mech", t = 0 }}
     },
     ["fire_empty"] = {
         Source = {"fire_empty"},
@@ -330,14 +330,14 @@ SWEP.Animations = {
         ShellEjectAt = 0,
          SoundTable = {
             {s = "ArcCW_WAW.Garand_Ping", t = 0},
-            {s = "^weapons/arccw/waw_garand/mech_last.wav", t = 1 / 30}
+            {s = "ArcCW_WAW.Garand_Mech2", t = 1 / 30}
         },
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = "^weapons/arccw/waw_garand/mech.wav", t = 0 }}
+        SoundTable = {{ s = "ArcCW_WAW.Garand_Mech", t = 0 }}
     },
     ["fire_iron_empty"] = {
         Source = {"fire_ads_empty"},
@@ -345,7 +345,7 @@ SWEP.Animations = {
         ShellEjectAt = 0,
         SoundTable = {
             {s = "ArcCW_WAW.Garand_Ping", t = 0},
-            {s = "^weapons/arccw/waw_garand/mech_last.wav", t = 1 / 30},
+            {s = "ArcCW_WAW.Garand_Mech2", t = 1 / 30},
         },
     },
     ["reload"] = {

@@ -158,7 +158,7 @@ SWEP.AttachmentElements = {
     },
     ["mount"] = {
         VMBodygroups = {
-            {ind = 2, bg = 2},
+            {ind = 2, bg = 4},
         },
     },
     ["cover"] = {
@@ -174,6 +174,28 @@ SWEP.AttachmentElements = {
         Override_IronSightStruct = {
             Pos = Vector(-2.825, 0, -0.1),
             Ang = Angle(0.1, 0.025, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
+        },
+    },
+    ["usgi_irons"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 2},
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-2.825, 0, 0.4),
+            Ang = Angle(-0.9, 0.03, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
+        },
+    },
+    ["acr_irons"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 3},
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-2.825, 0, 0.1),
+            Ang = Angle(0, 0.03, 0),
             Magnification = 1.1,
             CrosshairInSights = false,
         },
@@ -278,7 +300,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {"optic", "bo2_altirons"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic", "bo2_altirons", "bo2_m27_irons"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(2.25, 0, 3.75), -- 4.6 offset that the attachment will be relative to the bone

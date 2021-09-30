@@ -5,7 +5,7 @@ att.Description = "You will aim with sights of iron, and you will like it."
 
 
 att.Desc_Neutrals = {"bo.desc"}
-att.SortOrder = 1000
+att.SortOrder = 101
 att.Free = true
 
 att.Slot = "bo2_altirons"

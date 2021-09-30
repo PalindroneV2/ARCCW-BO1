@@ -162,9 +162,14 @@ SWEP.AttachmentElements = {
             {ind = 3, bg = 1},
         },
     },
-    ["rail"] = {
+    ["bo2_altirons"] = {
         VMBodygroups = {
             {ind = 2, bg = 1}
+        },
+    },
+    ["rail"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 2}
         },
     },
     ["papname1"] = {
@@ -177,7 +182,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic", "bo2_altirons"}, -- what kind of attachments can fit here, can be string or table
         VMScale = Vector(0.9, 0.9, 0.9),
         Bone = "j_reload_cover", -- relevant bone any attachments will be mostly referring to
         Offset = {

@@ -263,8 +263,8 @@ end
 
 SWEP.Hook_SelectInsertAnimation = function(wep, data)
     local fastmag = wep:GetBuff_Override("BO1_FastMag")
-    local mw3 = wep:GetBuff_Override("AltSound")
     local pap = wep:GetBuff_Override("PackAPunch")
+    local mw3 = wep:GetBuff_Override("AltSound")
 
     if fastmag then
         if mw3 then

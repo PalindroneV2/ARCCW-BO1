@@ -155,7 +155,7 @@ SWEP.AttachmentElements = {
     },
     ["ammo_papunch"] = {
         NamePriority = 10,
-        NameChange = "PAP DSR",
+        NameChange = "Dead Specimen Reactor 5000",
     },
     ["muzzledev"] = {
         VMBodygroups = {
