@@ -11,7 +11,7 @@ att.Desc_Pros = {
 att.Desc_Neutrals = {"bo.desc"}
 
 att.AutoStats = true
-att.Slot = {"optic_sniper", "bo1_sniper_scope"}
+att.Slot = {"bo1_sniper_scope", "bo1_hendsoldt"}
 
 att.Model = "models/weapons/arccw/atts/bo1_hensoldt.mdl"
 att.ModelOffset = Vector(0, -0.1, 0)

@@ -4,7 +4,7 @@
 	$blendtintbybasealpha  "1"
 	"$bumpmap" "models/weapons/bo2/bo2_ballista/ballista_n"
 
-	$detail "models/weapons/bo1/gunmetal"
+	$detail "models/weapons/bo1/tan"
 	$detailblendmode "0"
 	"$detailblendfactor" "1"
 
