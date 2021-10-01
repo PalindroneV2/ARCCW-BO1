@@ -56,14 +56,11 @@ SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.65
 SWEP.SightTime = 0.25
 
-SWEP.Delay = 60 / 700 -- 60 / RPM.
+SWEP.Delay = 60 / 535 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 1,
-    },
-    {
-        Mode = 2,
     },
     {
         Mode = 0
@@ -75,7 +72,7 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 1.2 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 200
 
@@ -116,8 +113,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.5, 3, 0.75),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-2.425, 3, 0.5),
+    Ang = Angle(0, 0.03, 0),
     Magnification = 1.25,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -135,8 +132,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(15, 3, -2)
-SWEP.CustomizeAng = Angle(15, 40, 20)
+SWEP.CustomizePos = Vector(15, 3, 0)
+SWEP.CustomizeAng = Angle(15, 40, 30)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -151,7 +148,7 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
     ["bo1_m320"] = {
         VMBodygroups = {
-            {ind = 3, bg = 1},
+            {ind = 3, bg = 2},
         },
     },
     ["bo2_fastmags"] = {
@@ -161,7 +158,7 @@ SWEP.AttachmentElements = {
     },
     ["mount"] = {
         VMBodygroups = {
-            {ind = 2, bg = 2},
+            {ind = 2, bg = 1},
         },
     },
 }
@@ -173,7 +170,7 @@ SWEP.Attachments = {
         Slot = {"optic"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(0, -0.02, 3.75), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(2, 0, 3.), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
         InstalledEles = {"mount"},
@@ -187,7 +184,7 @@ SWEP.Attachments = {
         VMScale = Vector(1,1,1),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(21, 0, 2.05), -- offset that the attachment will be relative to the bone
+            vpos = Vector(15.25, 0, 1.15), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
     },
@@ -208,9 +205,8 @@ SWEP.Attachments = {
         Hidden = true,
         Slot = {"foregrip", "bipod"},
         Bone = "tag_weapon",
-        WMScale = Vector(0.85, 0.85, 0.85),
         Offset = {
-            vpos = Vector(9, 0, 1.75), -- offset that the attachment will be relative to the bone
+            vpos = Vector(9, 0, -1), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
     },
@@ -220,13 +216,13 @@ SWEP.Attachments = {
         VMScale = Vector(1, 1, 1),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(11, 0.9, 2.85), -- offset that the attachment will be relative to the bone
+            vpos = Vector(9, 1.1, 1.2), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, -90),
         },
     },
     { --7
         PrintName = "Fire Group",
-        Slot = {"bo1_fcg"},
+        Slot = {"bo2_fcg_fullauto"},
         DefaultAttName = "Standard FCG"
     },
     {
@@ -248,7 +244,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(0, -0.75, 2.5),
+            vpos = Vector(2, -0.8, 1.25),
             vang = Angle(0, 0, 0),
         },
     },
@@ -257,7 +253,7 @@ SWEP.Attachments = {
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
 
-    if pap then return "WN Obliterator" end
+    if pap then return "SM1L3R" end
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
@@ -270,24 +266,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if wep:GetState() == ArcCW.STATE_CUSTOMIZE then
         vm:SetBodygroup(0,1)
-        vm:SetBodygroup(1,2)
-        vm:SetBodygroup(2,1)
-        if wep:GetBuff_Override("BO1_FastMag") then
-            vm:SetBodygroup(1,3)
-        end
-        if wep.Attachments[1].Installed then
-            vm:SetBodygroup(2, 2)
-        end
     else
         vm:SetBodygroup(0,0)
-        vm:SetBodygroup(1,0)
-        vm:SetBodygroup(2,0)
-        if wep:GetBuff_Override("BO1_FastMag") then
-            vm:SetBodygroup(1,1)
-        end
-        if wep.Attachments[1].Installed then
-            vm:SetBodygroup(2, 2)
-        end
     end
 end
 
@@ -376,8 +356,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.7},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25}
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.25},
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.5},
         },
     },
     ["reload_empty"] = {
@@ -390,10 +370,10 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.7},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
-            {s = "ArcCW_BO2.AR_Back", t = 1.8},
-            {s = "ArcCW_BO2.AR_Fwd", t = 1.95}
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.25},
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.5},
+            {s = "ArcCW_BO2.AR_Back", t = 2.15},
+            {s = "ArcCW_BO2.AR_Fwd", t = 2.30}
         },
     },
     ["reload_fast"] = {
