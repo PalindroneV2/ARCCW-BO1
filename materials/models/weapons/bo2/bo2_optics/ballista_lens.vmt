@@ -1,6 +1,6 @@
 "VertexLitGeneric"
 {
-	$basetexture	"models\weapons\bo2\bo2_optics\ballista_lens_c"
+	$basetexture	"models\weapons\bo2\bo2_optics\ballista_lens"
 	"$translucent" "0"
 	$bumpmap	"models\weapons\bo2\bo2_optics\ballista_lens_n"
 	
