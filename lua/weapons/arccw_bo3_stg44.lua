@@ -454,6 +454,12 @@ SWEP.Hook_GetDistantShootSound = function(wep, distancesound)
     end
 end
 
+SWEP.Hook_TranslateAnimation = function(wep, anim)
+    local sndatt = wep.Attachments[14].Installed
+
+    if sndatt then return "nomech_" .. anim end
+end
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
@@ -547,5 +553,18 @@ SWEP.Animations = {
     ["exit_sprint"] = {
         Source = "sprint_out",
         Time = 10 / 30
+    },
+
+    --NOMECH--
+
+    ["nomech_fire"] = {
+        Source = {"fire"},
+        Time = 6 / 30,
+        ShellEjectAt = 0,
+    },
+    ["nomech_fire_iron"] = {
+        Source = {"fire_ads"},
+        Time = 6 / 30,
+        ShellEjectAt = 0,
     },
 }

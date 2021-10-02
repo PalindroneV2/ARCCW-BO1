@@ -14,6 +14,6 @@ att.Free = true
 
 att.Bipod = true
 att.Mult_BipodRecoil = 0.1
-att.Mult_BipodDispersion = 0.05
+att.Mult_BipodDispersion = 0.1
 
 att.Mult_HipDispersion = 1.1

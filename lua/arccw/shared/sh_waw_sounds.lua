@@ -547,7 +547,7 @@ sound.Add( {
 sound.Add( {
     name = "ArcCW_BO3.STG44_DOD",
     channel = CHAN_STATIC,
-    volume = 1.0,
+    volume = 0.5,
     level = 100,
     --pitch = {95, 110},
     sound = {
@@ -607,8 +607,8 @@ sound.Add( {
 sound.Add( {
     name = "ArcCW_WAW.STG44_Mech",
     channel = CHAN_USER_BASE,
-    volume = 1.0,
-    level = 100,
+    volume = 0.75,
+    level = 70,
     --pitch = {95, 110},
     sound = {
         "^weapons/arccw/bopack_stg44/waw/mech.wav",
