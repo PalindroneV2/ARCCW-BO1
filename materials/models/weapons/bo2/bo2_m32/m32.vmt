@@ -1,13 +1,13 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/bo2/bo2_hamr/parts"
+	"$basetexture" "models/weapons/bo2/bo2_m32/m32"
 	$blendtintbybasealpha  "1"
-	"$bumpmap" "models/weapons/bo2/bo2_hamr/parts_n"
+	"$bumpmap" "models/weapons/bo2/bo2_m32/m32_n"
 
 	"$detail" "models/weapons/bo1/gunmetal"
 	$detailblendmode 0
 	"$detailscale" "10"
-	"$detailblendfactor" "1"
+	"$detailblendfactor" "0.1"
 
 	$phong                      		1
 	$phongexponent                      "20"

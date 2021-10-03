@@ -441,8 +441,11 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
+            {s = "ArcCW_BO1.M14_Futz", t = 0.4},
             {s = "ArcCW_BO1.M14_MagOut", t = 0.5},
-            {s = "ArcCW_BO1.M14_MagIn", t = 1.75}
+            {s = "ArcCW_BO1.M14_Futz", t = 1.5},
+            {s = "ArcCW_BO1.M14_MagIn", t = 1.75},
+            {s = "ArcCW_BO1.M14_Tap", t = 1.85},
         },
     },
     ["reload_empty"] = {
@@ -455,10 +458,13 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
+            {s = "ArcCW_BO1.M14_Futz", t = 0.4},
             {s = "ArcCW_BO1.M14_MagOut", t = 0.5},
+            {s = "ArcCW_BO1.M14_Futz", t = 1.5},
             {s = "ArcCW_BO1.M14_MagIn", t = 1.75},
+            {s = "ArcCW_BO1.M14_Tap", t = 1.85},
             {s = "ArcCW_BO1.M14_BoltBack", t = 2.25},
-            {s = "ArcCW_BO1.M14_BoltFwd", t = 2.4}
+            {s = "ArcCW_BO1.M14_BoltFwd", t = 2.4},
         },
     },
     ["enter_sprint"] = {
@@ -522,8 +528,11 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
+            {s = "ArcCW_BO1.M14_Futz", t = 0.4},
             {s = "ArcCW_BO1.M14_MagOut", t = 0.5},
+            {s = "ArcCW_BO1.M14_Futz", t = 1.5},
             {s = "ArcCW_BO1.M14_MagIn", t = 1.75},
+            {s = "ArcCW_BO1.M14_Tap", t = 1.85},
         },
     },
     ["reload_empty_grip"] = {
@@ -536,10 +545,13 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
+            {s = "ArcCW_BO1.M14_Futz", t = 0.4},
             {s = "ArcCW_BO1.M14_MagOut", t = 0.5},
+            {s = "ArcCW_BO1.M14_Futz", t = 1.5},
             {s = "ArcCW_BO1.M14_MagIn", t = 1.75},
-            {s = "ArcCW_BO1.M14_BoltFwd", t = 2.25},
-            {s = "ArcCW_BO1.M14_BoltBack", t = 2.4}
+            {s = "ArcCW_BO1.M14_Tap", t = 1.85},
+            {s = "ArcCW_BO1.M14_BoltBack", t = 2.25},
+            {s = "ArcCW_BO1.M14_BoltFwd", t = 2.4},
         },
     },
     ["enter_sprint_grip"] = {
@@ -603,8 +615,11 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
+            {s = "ArcCW_BO1.M14_Futz", t = 0.4},
             {s = "ArcCW_BO1.M14_MagOut", t = 0.5},
+            {s = "ArcCW_BO1.M14_Futz", t = 1.5},
             {s = "ArcCW_BO1.M14_MagIn", t = 1.75},
+            {s = "ArcCW_BO1.M14_Tap", t = 1.85},
         },
     },
     ["reload_empty_gl"] = {
@@ -617,10 +632,13 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
+            {s = "ArcCW_BO1.M14_Futz", t = 0.4},
             {s = "ArcCW_BO1.M14_MagOut", t = 0.5},
+            {s = "ArcCW_BO1.M14_Futz", t = 1.5},
             {s = "ArcCW_BO1.M14_MagIn", t = 1.75},
-            {s = "ArcCW_BO1.M14_BoltFwd", t = 2.25},
-            {s = "ArcCW_BO1.M14_BoltBack", t = 2.4}
+            {s = "ArcCW_BO1.M14_Tap", t = 1.85},
+            {s = "ArcCW_BO1.M14_BoltBack", t = 2.25},
+            {s = "ArcCW_BO1.M14_BoltFwd", t = 2.4},
         },
     },
     ["enter_sprint_gl"] = {
@@ -684,8 +702,11 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
+            {s = "ArcCW_BO1.M14_Futz", t = 0.4},
             {s = "ArcCW_BO1.M14_MagOut", t = 0.5},
+            {s = "ArcCW_BO1.M14_Futz", t = 1.5},
             {s = "ArcCW_BO1.M14_MagIn", t = 1.75},
+            {s = "ArcCW_BO1.M14_Tap", t = 1.85},
         },
     },
     ["reload_empty_mk"] = {
@@ -698,10 +719,13 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
+            {s = "ArcCW_BO1.M14_Futz", t = 0.4},
             {s = "ArcCW_BO1.M14_MagOut", t = 0.5},
+            {s = "ArcCW_BO1.M14_Futz", t = 1.5},
             {s = "ArcCW_BO1.M14_MagIn", t = 1.75},
-            {s = "ArcCW_BO1.M14_BoltFwd", t = 2.25},
-            {s = "ArcCW_BO1.M14_BoltBack", t = 2.4}
+            {s = "ArcCW_BO1.M14_Tap", t = 1.85},
+            {s = "ArcCW_BO1.M14_BoltBack", t = 2.25},
+            {s = "ArcCW_BO1.M14_BoltFwd", t = 2.4},
         },
     },
     ["enter_sprint_mk"] = {

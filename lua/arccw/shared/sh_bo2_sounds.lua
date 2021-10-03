@@ -578,13 +578,13 @@ sound.Add({
 })
 
 sound.Add({
-    name = "ArcCW_BO2.LSAT_Fire",
+    name = "ArcCW_BO2.HAMR_Fire",
     channel = CHAN_STATIC,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bo2_generic_lmg/fire_lsat.wav",
+        "^weapons/arccw/bo2_generic_lmg/fire_hamr.wav",
     }
 })
 

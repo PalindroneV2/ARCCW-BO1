@@ -10,9 +10,9 @@
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
 
-	$detail "models/weapons/bo1/gunmetal"
+	$detail "models/weapons/bo1/black_detail"
 	$detailblendmode 0
-	"$detailblendfactor" "1.5"
+	"$detailblendfactor" "1"
 	$detailscale 1
 
 	"$envmap" "env_cubemap"					

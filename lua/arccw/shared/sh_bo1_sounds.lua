@@ -711,6 +711,16 @@ sound.Add( {
         "^weapons/arccw/bo1_m14/futz.wav",
     }
 } )
+sound.Add( {
+    name = "ArcCW_BO1.M14_Tap",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_m14/tap.wav",
+    }
+} )
 
 --- MP5 Main ---
 
