@@ -5,10 +5,10 @@ SWEP.AdminOnly = false
 
 
 -- This one is so yall are aware.
-SWEP.PrintName = "QBZ-95-1"
-SWEP.Trivia_Class = "Assault Rifle"
+SWEP.PrintName = "QJB-95-1"
+SWEP.Trivia_Class = "Light Machine Gun"
 SWEP.Trivia_Desc = [[
-    Chinese bullpup rifle standard for the People's Liberation Army.
+    Chinese bullpup rifle in Light Squad Weapon configuration standard for the People's Liberation Army.
 ]]
 SWEP.Trivia_Manufacturer = "Norinco"
 SWEP.Trivia_Calibre = "5.8x42mm DBP10"
@@ -20,9 +20,9 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_bo2_type95.mdl"
-SWEP.WorldModel = "models/weapons/arccw/w_bo2_type95.mdl"
-SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_type95.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_bo2_qbb.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_bo2_qbb.mdl"
+SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_qbb.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-7, 3.5, -6.5),
@@ -154,7 +154,7 @@ SWEP.DefaultBodygroups = "0000000"
 SWEP.DefaultWMBodygroups = "0000000"
 
 SWEP.AttachmentElements = {
-    ["bo1_m320"] = {
+    ["bo1_bipod"] = {
         VMBodygroups = {
             {ind = 3, bg = 1},
         },
@@ -162,11 +162,6 @@ SWEP.AttachmentElements = {
     ["mount"] = {
         VMBodygroups = {
             {ind = 2, bg = 1},
-        },
-    },
-    ["bo2_fastmags"] = {
-        VMBodygroups = {
-            {ind = 1, bg = 1},
         },
     },
 }
@@ -194,35 +189,21 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(15.1, 0, 1.2), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(0, 0, 0),
-            wang = Angle(0, 0, 0)
         },
     },
     { --3
         PrintName = "Underbarrel",
-        Slot = {"ubgl", "bo1_m320"},
+        Slot = {"bo1_bipod"},
         Bone = "tag_weapon",
-        VMScale = Vector(1.2, 1, 1),
-        WMScale = Vector(1.2, 1, 1),
-        Offset = {
-            vpos = Vector(7.95, 0, 1.175), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 0),
-            wpos = Vector(11.25, 1.15, -3.25),
-            wang = Angle(172, -181, -1.5),
-        },
-        InstalledEles = {"heat"},
         MergeSlots = {4}
     },
     { --4
         Hidden = true,
         Slot = {"foregrip", "bipod"},
         Bone = "tag_weapon",
-        WMScale = Vector(0.85, 0.85, 0.85),
         Offset = {
             vpos = Vector(6, 0, -0.85), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(15, 1.125, -4.25),
-            wang = Angle(175, -179, -1.5),
         },
     },
     { --5
@@ -260,8 +241,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(-3.5, -0.75, 1.5),
             vang = Angle(0, 0, 0),
-            wpos = Vector(4.8, 1.7, -2.5),
-            wang = Angle(-175, -175, 0)
         },
     },
 }
@@ -269,7 +248,7 @@ SWEP.Attachments = {
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
 
-    if pap then return "Strain 95" end
+    if pap then return "Quick Body Breaker" end
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
@@ -283,53 +262,12 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if wep:GetState() == ArcCW.STATE_CUSTOMIZE then
         vm:SetBodygroup(0,1)
-        vm:SetBodygroup(1,2)
-        if wep:GetBuff_Override("BO1_FastMag") then
-            vm:SetBodygroup(1,3)
-        end
+        vm:SetBodygroup(1,1)
     else
         vm:SetBodygroup(0,0)
         vm:SetBodygroup(1,0)
-        if wep:GetBuff_Override("BO1_FastMag") then
-            vm:SetBodygroup(1,1)
-        end
     end
 
-end
-
-
-SWEP.Hook_TranslateAnimation = function(wep, anim)
-
-    local attthing
-    if wep:GetBuff_Override("BO1_UBGL") then attthing = 1
-    end
-
-    if anim == "enter_ubgl" then
-        if attthing == 1 then
-            return "in_glsetup"
-        end
-    elseif anim == "exit_ubgl" then
-        if attthing == 1 then
-            return "out_glsetup"
-        end
-    end
-
-    if attthing == 1 and wep:GetInUBGL() then
-        return anim .. "_glsetup"
-    elseif attthing == 1 then
-        return anim .. "_m203"
-    end
-end
-
-SWEP.Hook_SelectReloadAnimation = function(wep, curanim)
-    local fastmag = wep:GetBuff_Override("BO1_FastMag")
-
-    if curanim == "reload" and fastmag then
-        return curanim .. "_fast"
-    end
-    if curanim == "reload_empty" and fastmag then
-        return curanim .. "_fast"
-    end
 end
 
 SWEP.Animations = {
@@ -337,34 +275,9 @@ SWEP.Animations = {
         Source = "idle",
         Time = 1 / 30,
     },
-    ["idle_empty"] = {
-        Source = "idle_empty",
-        Time = 1 / 30,
-    },
     ["draw"] = {
         Source = "draw",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
-    },
-    ["holster"] = {
-        Source = "holster",
-        Time = 0.75,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
-    },
-    ["draw_empty"] = {
-        Source = "draw_empty",
-        Time = 1,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
-    },
-    ["holster_empty"] = {
-        Source = "holster_empty",
-        Time = 0.75,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.25,
@@ -385,18 +298,8 @@ SWEP.Animations = {
         Time = 5 / 30,
         ShellEjectAt = 0,
     },
-    ["fire_empty"] = {
-        Source = {"fire_last"},
-        Time = 5 / 30,
-        ShellEjectAt = 0,
-    },
     ["fire_iron"] = {
         Source = {"fire_ads"},
-        Time = 5 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_iron_empty"] = {
-        Source = {"fire_last_ads"},
         Time = 5 / 30,
         ShellEjectAt = 0,
     },
@@ -428,36 +331,6 @@ SWEP.Animations = {
         },
         MinProgress = 2.0,
     },
-    ["reload_fast"] = {
-        Source = "fast",
-        Time = 1.79,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LHIK = true,
-        Mult = 1.25,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
-        SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.1}
-        },
-        MinProgress = 1.4
-    },
-    ["reload_empty_fast"] = {
-        Source = "fast_empty",
-        Time = 2.3,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LHIK = true,
-        Mult = 1.25,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
-        SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.1},
-            {s = "ArcCW_BO2.AR_Back", t = 1.8},
-            {s = "ArcCW_BO2.AR_Fwd", t = 1.95},
-        },
-        MinProgress = 2.0,
-    },
     ["enter_sprint"] = {
         Source = "sprint_in",
         Time = 10 / 30
@@ -480,179 +353,6 @@ SWEP.Animations = {
     },
     ["exit_sprint_empty"] = {
         Source = "sprint_out_empty",
-        Time = 10 / 30
-    },
-
--- UBGL OUT ANIMS ---------------------------------------------------------------
-
-    ["idle_m203"] = {
-        Source = "idle_gl",
-        Time = 1 / 30,
-    },
-    ["draw_m203"] = {
-        Source = "draw_gl",
-        Time = 1,
-    },
-    ["holster_m203"] = {
-        Source = "holster_gl",
-        Time = 0.75,
-    },
-    ["idle_m203_empty"] = {
-        Source = "idle_empty_gl",
-        Time = 1 / 30,
-    },
-    ["draw_m203_empty"] = {
-        Source = "draw_empty_gl",
-        Time = 1,
-    },
-    ["holster_m203_empty"] = {
-        Source = "holster_empty_gl",
-        Time = 0.75,
-    },
-    ["ready_m203"] = {
-        Source = "first_draw_gl",
-        Time = 1,
-        SoundTable = {
-            {s = "ArcCW_BO2.AR_Back", t = 0.2},
-            {s = "ArcCW_BO2.AR_Fwd", t = 0.4}
-        }
-    },
-    ["fire_m203"] = {
-        Source = {"fire_gl"},
-        Time = 5 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_iron_m203"] = {
-        Source = {"fire_ads_gl"},
-        Time = 5 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_empty_m203"] = {
-        Source = {"fire_last_gl"},
-        Time = 5 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_iron_m203"] = {
-        Source = {"fire_last_ads_gl"},
-        Time = 5 / 30,
-        ShellEjectAt = 0,
-    },
-    ["reload_m203"] = {
-        Source = "reload_gl",
-        Time = 2.5,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25}
-        },
-        MinProgress = 1.4,
-    },
-    ["reload_empty_m203"] = {
-        Source = "reload_empty_gl",
-        Time = 3,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
-            {s = "ArcCW_BO2.AR_Back", t = 2.05},
-            {s = "ArcCW_BO2.AR_Fwd", t = 2.1},
-        },
-        MinProgress = 2.0,
-    },
-    ["reload_m203_fast"] = {
-        Source = "fast_gl",
-        Time = 2.5,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.1}
-        },
-    },
-    ["reload_empty_m203_fast"] = {
-        Source = "fast_empty_gl",
-        Time = 3,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.1},
-            {s = "ArcCW_BO2.AR_Back", t = 1.8},
-            {s = "ArcCW_BO2.AR_Fwd", t = 1.95},
-        },
-    },
-    ["enter_sprint_m203"] = {
-        Source = "sprint_in_gl",
-        Time = 10 / 30
-    },
-    ["idle_sprint_m203"] = {
-        Source = "sprint_loop_gl",
-        Time = 30 / 40
-    },
-    ["exit_sprint_m203"] = {
-        Source = "sprint_out_gl",
-        Time = 10 / 30
-    },
-    ["enter_sprint_m203_empty"] = {
-        Source = "sprint_in_empty_gl",
-        Time = 10 / 30
-    },
-    ["idle_sprint_m203_empty"] = {
-        Source = "sprint_loop_empty_gl",
-        Time = 30 / 40
-    },
-    ["exit_sprint_m203_empty"] = {
-        Source = "sprint_out_empty_gl",
-        Time = 10 / 30
-    },
-
--- UBGL IN ANIMS -----------------------------------------------------------------
-
-    ["enter_ubgl"] = {
-        Source = "idle_glsetup",
-        Time = 0 / 30,
-    },
-    ["exit_ubgl"] = {
-        Source = "idle_glsetup",
-        Time = 0 / 30
-    },
-    ["idle_glsetup"] = {
-        Source = "idle_glsetup",
-        Time = 1 / 30,
-    },
-    ["in_glsetup"] = {
-        Source = "glsetup_in",
-        Time = 0.5,
-    },
-    ["out_glsetup"] = {
-        Source = "glsetup_out",
-        Time = 0.5,
-    },
-    ["fire_glsetup"] = {
-        Source = "fire_glsetup",
-        Time = 0.7,
-        TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
-        TPAnimStartTime = 0,
-    },
-    ["reload_glsetup"] = {
-        Source = "reload_glsetup",
-        Time = 96 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        TPAnimStartTime = 0.1,
-        SoundTable = {
-            {s = "ArcCW_BO1.M203_40mmOut", t = 18 / 30},
-            {s = "ArcCW_BO1.M203_40mmIn", t = 48 / 30},
-            {s = "ArcCW_BO1.M203_Close", t = 62 / 30},
-        }
-    },
-    ["enter_sprint_glsetup"] = {
-        Source = "sprint_in_glsetup",
-        Time = 10 / 30
-    },
-    ["idle_sprint_glsetup"] = {
-        Source = "sprint_loop_glsetup",
-        Time = 30 / 40
-    },
-    ["exit_sprint_glsetup"] = {
-        Source = "sprint_out_glsetup",
         Time = 10 / 30
     },
 }
