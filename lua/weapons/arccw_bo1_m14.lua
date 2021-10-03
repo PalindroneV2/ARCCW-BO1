@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M14"
+SWEP.PrintName = "M14E2"
 SWEP.Trivia_Class = "Battle Rifle"
 SWEP.Trivia_Desc = "A traditional battle rifle designed by the United States for its military. Based on the M1 Garand, the M14 now uses detachable 20 round box magazines. Was soon replaced by the M16 rifle which offered much better performance in full-auto and was much lighter."
 SWEP.Trivia_Manufacturer = "Springfield Armory"
@@ -118,10 +118,10 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(1, 3, 0.5)
+SWEP.ActivePos = Vector(0, 3, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(0, 3, 0.5)
+SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(15, 4, -2)
@@ -150,16 +150,22 @@ SWEP.AttachmentElements = {
         },
 
     },
+    ["bo1_bipod"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 3},
+        },
+
+    },
     ["bo1_m203"] = {
         VMBodygroups = {
             {ind = 3, bg = 1},
-            {ind = 4, bg = 3},
+            {ind = 4, bg = 4},
         },
 
     },
     ["bo1_mk"] = {
         VMBodygroups = {
-            {ind = 4, bg = 4},
+            {ind = 4, bg = 5},
         },
 
     },
@@ -251,7 +257,7 @@ SWEP.Attachments = {
     },
     {
         Hidden = true,
-        Slot = {"bo1_foregrip", "bo1_sling", "bo1_mk", "bo1_m203"},
+        Slot = {"bo1_foregrip", "bo1_sling", "bo1_mk", "bo1_m203", "bo1_bipod"},
     }, --6
     {
         PrintName = "Tactical",

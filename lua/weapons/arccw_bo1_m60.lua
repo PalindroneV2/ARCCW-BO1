@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M60"
+SWEP.PrintName = "M60E3"
 SWEP.Trivia_Class = "Light Machine Gun"
 SWEP.Trivia_Desc = "The U.S. Military's standard general purpose machine gun adopted in 1957. Nicknamed the Pig due to it's huge size and appetite for ammo."
 SWEP.Trivia_Manufacturer = "U.S. Ordnance"
@@ -148,18 +148,18 @@ SWEP.BarrelLength = 30
 
 SWEP.ExtraSightDist = 5
 
---SWEP.DefaultPoseParams = {["idle"] = 0.5}
+SWEP.DefaultBodygroups = "000100000"
 
 SWEP.AttachmentElements = {
     ["bo1_foregrip"] = {
         VMBodygroups = {
-            {ind = 3, bg = 2},
+            {ind = 4, bg = 1},
         },
 
     },
     ["bo1_bipod"] = {
         VMBodygroups = {
-            {ind = 3, bg = 1},
+            {ind = 3, bg = 2},
         },
     },
     ["bo2_altirons"] = {
@@ -205,13 +205,13 @@ SWEP.Attachments = {
     }, --2
     { --3
         PrintName = "Underbarrel",
-        Slot = {"foregrip", "bo1_bipod"},
+        Slot = {"foregrip", "bo1_bipod", "bo1_foregrip"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(8, 0, 0), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
-        MergeSlots = {4,5},
+        MergeSlots = {4},
     }, --3
     { --4
         Hidden = true,
@@ -222,10 +222,6 @@ SWEP.Attachments = {
             vang = Angle(0, 0, 0),
         },
     }, --4
-    { --5
-        Hidden = true,
-        Slot = {"bo1_foregrip"},
-    }, --5
     { --6
         PrintName = "Tactical",
         Slot = {"bo1_tacprimary"},
