@@ -46,16 +46,16 @@ SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 45
-SWEP.ReducedClipSize = 20
+SWEP.Primary.ClipSize = 75 -- DefaultClip is automatically set.
+SWEP.ExtendedClipSize = 150
+SWEP.ReducedClipSize = 30
 
 SWEP.Recoil = 0.5
 SWEP.RecoilSide = 0.35
 SWEP.RecoilRise = 0.5
-SWEP.SpeedMult = 0.95
-SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.3
+SWEP.SpeedMult = 0.875
+SWEP.SightedSpeedMult = 0.4
+SWEP.SightTime = 0.45
 SWEP.VisualRecoilMult = 0.25
 
 SWEP.Delay = 60 / 650 -- 60 / RPM.
@@ -83,7 +83,7 @@ SWEP.HipDispersion = 600 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
 SWEP.Primary.Ammo = "smg1" -- what ammo type the gun uses
-SWEP.MagID = "hk416" -- the magazine pool this gun draws from
+SWEP.MagID = "qbb" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
@@ -118,8 +118,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.535, 3, 0.775),
-    Ang = Angle(0.2, 0.025, 0),
+    Pos = Vector(-2.535, 3, 0.5),
+    Ang = Angle(0.1, 0.025, 0),
     Magnification = 1.25,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -138,7 +138,7 @@ SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(15, 3, -2)
-SWEP.CustomizeAng = Angle(15, 40, 20)
+SWEP.CustomizeAng = Angle(15, 40, 30)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -173,12 +173,12 @@ SWEP.Attachments = {
         Slot = {"optic"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(0-2, 0, 3.85), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(-1.25, 0, 3.79), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0.5, 0, 0)
+        CorrectiveAng = Angle(0.5, 0.5, 0)
     },
     { --2
         PrintName = "Muzzle",
@@ -187,7 +187,7 @@ SWEP.Attachments = {
         VMScale = Vector(1, 1, 1),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(15.1, 0, 1.2), -- offset that the attachment will be relative to the bone
+            vpos = Vector(24, 0, 1.2), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
     },
@@ -202,7 +202,7 @@ SWEP.Attachments = {
         Slot = {"foregrip", "bipod"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(6, 0, -0.85), -- offset that the attachment will be relative to the bone
+            vpos = Vector(8, 0, -0.7), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
     },
@@ -284,7 +284,7 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 1,
+        Time = 1.46,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
@@ -305,29 +305,31 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 2.5,
+        Time = 3.36,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25}
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.95},
+            {s = "ArcCW_BO2.AR_MagIn", t = 2.10},
         },
         MinProgress = 1.4,
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 3,
+        Time = 4.03,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
-            {s = "ArcCW_BO2.AR_Back", t = 2.05},
-            {s = "ArcCW_BO2.AR_Fwd", t = 2.2},
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.95},
+            {s = "ArcCW_BO2.AR_MagIn", t = 2.10},
+            {s = "ArcCW_BO2.AR_Back", t = 2.5},
+            {s = "ArcCW_BO2.AR_Fwd", t = 2.65},
         },
         MinProgress = 2.0,
     },

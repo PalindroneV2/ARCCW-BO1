@@ -3,7 +3,7 @@
 	"$basetexture" "models/weapons/bo2/bo2_trit/tritium_white"
 	"$bumpmap" "models/weapons/bo2/bo2_trit/tritium_n"
 
-	$color2 "[0 255 0]"
-	"$selfillum" "1"
 	"$translucent" "1"
+	"$selfillum" "0"
+	"$selfillummask" "models/weapons/bo2/bo2_trit/tritium_white"
 }

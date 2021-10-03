@@ -15,4 +15,5 @@ VertexlitGeneric
 	$envmaptint "[0.4 0.4 0.5]"
 	$envmapfresnel "[ 1 1 1 ]"
 
+	"$nocull" "1"
 }
