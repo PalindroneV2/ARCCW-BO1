@@ -10,7 +10,7 @@ SWEP.Trivia_Desc = "Patterson fire a warning shot!"
 SWEP.Trivia_Manufacturer = "Milkor"
 SWEP.Trivia_Calibre = "40x46mm HE"
 SWEP.Trivia_Mechanism = "Spring-Loaded"
-SWEP.Trivia_Country = "USA"
+SWEP.Trivia_Country = "South Africa"
 SWEP.Trivia_Year = 1983
 
 SWEP.Slot = 4
@@ -124,8 +124,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(15, 3, -2)
-SWEP.CustomizeAng = Angle(15, 40, 20)
+SWEP.CustomizePos = Vector(15, 3, 0)
+SWEP.CustomizeAng = Angle(15, 40, 30)
 
 SWEP.HolsterPos = Vector(0.532, -6, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -148,7 +148,7 @@ SWEP.Attachments = {
         Slot = {"bo1_reddots"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(3, 0, 3.4),
+            vpos = Vector(6.5, -0.02, 4.75),
             vang = Angle(0, 0, 0),
         },
         SlideAmount = false,
@@ -174,11 +174,12 @@ SWEP.Attachments = {
     {
         Hidden = true,
         Slot = "bo2_m32_sight",
-        Bone = "j_gun",
+        Bone = "tag_weapon",
         Offset = {
             vpos = Vector(0, 0, 0),
             vang = Angle(0, 0, 0),
         },
+        Installed = "optic_bo2_m32"
     },
 }
 
@@ -187,7 +188,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local papcamo = wep.Attachments[3].Installed == "ammo_pap_launcher"
 
     if papcamo then
-        vm:SetSkin(3)
+        vm:SetSkin(2)
     end
 
     if (wep:GetState() == ArcCW.STATE_CUSTOMIZE) then
@@ -218,39 +219,49 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 34 / 35,
+        Time = 1.76,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
+        SoundTable = {
+            {s = "ArcCW_BO2.M32_Raise", t = 0.5},
+        },
     },
     ["fire"] = {
         Source = {
             "fire",
         },
-        Time = 15 / 35,
+        Time = 0.366,
+        SoundTable = {
+            {s = "ArcCW_BO2.M32_Turn", t = 0.01},
+        },
     },
     ["fire_iron"] = {
         Source = {
-            "fire",
+            "fire_ads",
         },
-        Time = 15 / 35,
+        Time = 0.366,
+        SoundTable = {
+            {s = "ArcCW_BO2.M32_Turn", t = 0.01},
+        },
     },
-    /*
     ["reload"] = {
         Source = "reload",
-        Time = 117 / 35,
+        Time = 174 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.M203_Open", t = 11 / 35},
-            {s = "ArcCW_BO1.M203_40mmOut", t = 30 / 35},
-            {s = "ArcCW_BO1.M203_40mmIn", t = 65 / 35},
-            {s = "ArcCW_BO1.M203_Close", t = 93 / 35},
+            {s = "ArcCW_BO2.M32_Open", t = 0.3},
+            {s = "ArcCW_BO1.M203_40mmOut", t = 0.8},
+            {s = "ArcCW_BO2.M32_Rotate", t = 0.8},
+            {s = "ArcCW_BO2.M32_Turn", t = 2},
+            {s = "ArcCW_BO2.M32_In", t = 3},
+            {s = "ArcCW_BO2.M32_In", t = 4},
+            {s = "ArcCW_BO2.M32_Close", t = 4.5},
         },
     },
-    */
     ["sgreload_start"] = {
         Source = "reload_in",
         Time = 3.49,
@@ -259,12 +270,13 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
-        MinProgress = 1.2,
+        MinProgress = 3,
         SoundTable = {
-            {s = "ArcCW_BO1.M203_Open", t = 0.5},
+            {s = "ArcCW_BO2.M32_Open", t = 0.5},
             {s = "ArcCW_BO1.M203_40mmOut", t = 1},
-            {s = "ArcCW_BO1.M203_40mmIn", t = 2},
-            {s = "ArcCW_BO1.M203_40mmIn", t = 3},
+            {s = "ArcCW_BO2.M32_Rotate", t = 1},
+            {s = "ArcCW_BO2.M32_Turn", t = 2},
+            {s = "ArcCW_BO2.M32_In", t = 3},
         },
     },
     ["sgreload_insert"] = {
@@ -277,7 +289,7 @@ SWEP.Animations = {
         LHIKOut = 0.2,
         MinProgress = 16 / 30,
         SoundTable = {
-            {s = "ArcCW_BO1.M203_40mmIn", t = 0.5},
+            {s = "ArcCW_BO2.M32_In", t = 0.5},
         },
     },
     ["sgreload_finish"] = {
@@ -287,7 +299,7 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.M203_Close", t = 0.1},
+            {s = "ArcCW_BO2.M32_Close", t = 0.1},
         },
     },
     ["enter_sprint"] = {

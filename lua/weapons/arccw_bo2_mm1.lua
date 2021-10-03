@@ -223,10 +223,11 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.M203_Open", t = 11 / 35},
-            {s = "ArcCW_BO1.M203_40mmOut", t = 30 / 35},
-            {s = "ArcCW_BO1.M203_40mmIn", t = 65 / 35},
-            {s = "ArcCW_BO1.M203_Close", t = 93 / 35},
+            {s = "ArcCW_BO2.M32_Open", t = 05 / 35},
+            {s = "ArcCW_BO1.M203_40mmOut", t = 25 / 35},
+            {s = "ArcCW_BO2.M32_Rotate", t = 25 / 35},
+            {s = "ArcCW_BO2.M32_In", t = 58 / 35},
+            {s = "ArcCW_BO2.M32_Close", t = 85 / 35},
         },
     },
     ["enter_sprint"] = {

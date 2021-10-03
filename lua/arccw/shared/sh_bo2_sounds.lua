@@ -760,6 +760,51 @@ sound.Add({
     sound = "^weapons/arccw/bo2_generic_sniper/bolt_up.wav"
 })
 
+-- BO2 M32 LAUNCHER --
+
+sound.Add({
+    name = "ArcCW_BO2.M32_In",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_m32/loading.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.M32_Close",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_m32/close.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.M32_Open",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_m32/open.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.M32_Raise",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_m32/raise.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.M32_Rotate",
+    channel = CHAN_USER_BASE,
+    level = 70,
+    sound = "^weapons/arccw/bo2_m32/rotate.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.M32_Switch",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_m32/switch.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.M32_Turn",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_m32/turn.wav"
+})
+
 -- Raygun MK2 --
 
 sound.Add({
