@@ -565,3 +565,93 @@ sound.Add( {
         "^weapons/arccw/mw3e_ksg/pick_shell.wav",
     }
 } )
+
+-- COD 4 M4/M16
+
+sound.Add( {
+    name = "ArcCW_COD4E.M4M16_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_m4m16/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_COD4E.M4M16_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_m4m16/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_COD4E.M4M16_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_m4m16/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_COD4E.M4M16_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_m4m16/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_COD4E.M4M16_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_m4m16/lift.wav",
+    }
+} )
+
+-- COD4 M203
+
+
+sound.Add( {
+    name = "ArcCW_COD4E.M203_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_m203/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_COD4E.M203_Load",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_m203/load.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_COD4E.M203_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_m203/open.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_COD4E.M203_Close",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_m203/close.wav",
+    }
+} )

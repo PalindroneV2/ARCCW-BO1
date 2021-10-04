@@ -1,0 +1,5 @@
+"UnlitGeneric" 
+{ 
+    "$basetexture" "arccw/weaponicons/arccw_cod4_m4m16" 
+    "$translucent" 1 
+} 

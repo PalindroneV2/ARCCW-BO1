@@ -7,7 +7,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = "bo1_m203"
+att.Slot = "cod4e_m203"
 att.GivesFlags = {"ubanims", "m4anims"}
 att.ExcludeFlags = {"kali_barrel_short"}
 att.BO1_UBGL = true
@@ -44,7 +44,7 @@ att.UBGL_NPCFire = function(wep, ubgl)
 
     wep:FireRocket("arccw_m203_he_bo1", 4000)
 
-    wep:EmitSound("ArcCW_BO1.M203_Fire", 100)
+    wep:EmitSound("ArcCW_COD4E.M203_Fire", 100)
 
     wep:SetClip2(wep:Clip2() - 1)
 
@@ -58,7 +58,7 @@ att.UBGL_Fire = function(wep, ubgl)
 
     wep:FireRocket("arccw_m203_he_bo1", 4000)
 
-    wep:EmitSound("ArcCW_BO1.M203_Fire", 100)
+    wep:EmitSound("ArcCW_COD4E.M203_Fire", 100)
 
     wep:SetClip2(wep:Clip2() - 1)
 
