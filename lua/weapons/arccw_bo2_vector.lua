@@ -59,6 +59,7 @@ SWEP.Firemodes = {
     {
         Mode = -2,
         PrintName = "Hyper Burst",
+        PostBurstDelay = 0.112,
     },
     {
         Mode = 1,

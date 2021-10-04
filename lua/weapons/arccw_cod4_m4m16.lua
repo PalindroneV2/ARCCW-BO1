@@ -5,11 +5,11 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Colt M16A4"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "3 round burst rifle."
+SWEP.Trivia_Desc = "United States Military standard issue rifle chambered in 5.56mm NATO. The modularity of the platform lets many variants of the weapon exist in several roles."
 SWEP.Trivia_Manufacturer = "Colt"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
-SWEP.Trivia_Country = "United States of America"
+SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1964
 
 SWEP.Slot = 2
@@ -57,6 +57,7 @@ SWEP.Firemodes = {
     {
         Mode = -3,
         RunawayBurst = true,
+        PostBurstDelay = 0.2,
     },
     {
         Mode = 1,
@@ -210,7 +211,7 @@ SWEP.Attachments = {
         Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
         Bone = "j_gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(3.5, 0, 3.3), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(3, 0, 3.3), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
         InstalledEles = {"mount"},

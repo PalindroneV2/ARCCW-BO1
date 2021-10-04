@@ -57,6 +57,7 @@ SWEP.Firemodes = {
     {
         Mode = -3,
         RunawayBurst = true,
+        PostBurstDelay = 0.112,
     },
     {
         Mode = 1,

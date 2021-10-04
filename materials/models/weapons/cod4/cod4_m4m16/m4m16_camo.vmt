@@ -1,7 +1,10 @@
 VertexlitGeneric
 {
 	$basetexture	"models\weapons\cod4\cod4_m4m16\m4m16"
-	$bumpmap	"models\weapons\waw\normalmap"
+
+	$detail "models\weapons\bo1\black_detail"
+	$detailblendmode 0
+	"$detailblendfactor" "1"
 
 	$phong                      		1
 	$phongexponent                      "20"
