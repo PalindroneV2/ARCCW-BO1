@@ -11,8 +11,6 @@ att.AutoStats = true
 att.Slot = {"bo2_blundergat_kit"}
 att.GivesFlags = {"acidgat"}
 
-att.Hidden = true -- REMOVE THIS WHEN THE ACID KIT IS READY.
-
 att.Override_ClipSize = 3
 att.Override_Num = 1
 att.Override_Firemodes = {
@@ -30,4 +28,8 @@ att.Hook_ModifyRPM = function(wep, delay)
 end
 
 att.SortOrder = 100
-att.Override_ShootEntity = "arccw_bo1_raygun_bolt"
+att.Override_ShootEntity = "arccw_bo2_blundergat_dart"
+
+att.Hook_GetShootSound = function(wep, fsound)
+    if fsound == wep.ShootSound or sound == wep.FirstShootSound then return "ArcCW_BO2.Acidgat_Fire" end
+end

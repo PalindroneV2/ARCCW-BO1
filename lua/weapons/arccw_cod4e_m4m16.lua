@@ -201,24 +201,6 @@ SWEP.AttachmentElements = {
             {ind = 3, bg = 3},
         },
     },
-    ["heat_hand"] = {
-        AttPosMods = {
-            [9] = {
-                vpos = Vector(12, 0.6, 2.25),
-            },
-        },
-    },
-    /*
-    ["m4anims"] = {
-        Override_IronSightStruct = {
-            Pos = Vector(-2.81, -2, 0.1),
-            Ang = Angle(0, 0.025, 0),
-            Magnification = 1.1,
-            CrosshairInSights = false,
-            SwitchToSound = "", -- sound that plays when switching to this sight
-        },
-    },
-    */
 }
 
 SWEP.Attachments = {
