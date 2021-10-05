@@ -87,13 +87,14 @@ SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 4
 
-SWEP.Recoil = 1.5
+SWEP.Recoil = 1
 SWEP.RecoilSide = 1
 SWEP.RecoilRise = 1
+SWEP.VisualRecoilMult = 0.25
 SWEP.SpeedMult = 0.85
 SWEP.SightedSpeedMult = 0.5
 SWEP.SightTime = 0.3
-SWEP.VisualRecoilMult = 0
+SWEP.VisualRecoilMult = 0.25
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",

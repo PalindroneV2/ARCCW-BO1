@@ -19,3 +19,5 @@ att.Mult_RecoilSide = 1.15
 att.Mult_SpeedMult = 1.05
 att.Mult_SightTime = 0.9
 att.Mult_AccuracyMOA = 1.25
+
+att.Override_MuzzleEffectAttachment = 3

@@ -7,8 +7,9 @@ att.SortOrder = 1000
 att.AutoStats = true
 att.Slot = "bo1_bipod"
 att.ActivateElements = {"bo1_bipod"}
-att.ExcludeFlags = {"g36c"}
+att.ExcludeFlags = {"g36c", "g3k", "g3k_ris", "sd_barrel"}
 att.BO1_Bipod = true
+att.HideIfBlocked = true
 
 att.Free = true
 

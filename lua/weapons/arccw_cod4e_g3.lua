@@ -41,6 +41,11 @@ SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
+SWEP.Recoil = 1.5
+SWEP.RecoilSide = 1
+SWEP.RecoilRise = 1
+SWEP.VisualRecoilMult = 0.25
+
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 20 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 30
@@ -74,8 +79,8 @@ SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_COD4E.M4M16_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
+SWEP.ShootSound = "ArcCW_COD4E.G3_Fire"
+SWEP.ShootSoundSilenced = "ArcCW_COD4E.M4M16_Sil"
 SWEP.DistantShootSound = "weapons/arccw/bo1_m16/ringoff_f.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
@@ -83,7 +88,7 @@ SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 90
 SWEP.ShellScale = 1.5
 
-SWEP.MuzzleEffectAttachment = 3 -- which attachment to put the muzzle on
+SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 3
 SWEP.CamAttachment = 4
@@ -101,10 +106,11 @@ SWEP.ProceduralRegularFire = false
 SWEP.ProceduralIronFire = false
 
 SWEP.CaseBones = {}
+SWEP.DefaultSkin = 0
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.76, -2, 0),
-    Ang = Angle(0.7, 0.025, 0),
+    Pos = Vector(-2.335, 0, 1),
+    Ang = Angle(-0.3, 0.025, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -116,10 +122,10 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0, 3, 0)
+SWEP.ActivePos = Vector(0, 3, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(0, 3, 0)
+SWEP.SprintPos = Vector(0, 3, 0.5)
 SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(15, 4, 0)
@@ -136,26 +142,53 @@ SWEP.BarrelLength = 30
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["cod4e_m203"] = {
+    ["ris"] = {
         VMBodygroups = {
-            {ind = 2, bg = 2},
+            {ind = 2, bg = 1},
+        },
+        AttPosMods = {
+            [5] = {
+                vpos = Vector(11, 0, 1.5),
+            },
         },
     },
     ["g3k"] = {
         VMBodygroups = {
             {ind = 2, bg = 2},
+            {ind = 4, bg = 3},
         },
         AttPosMods = {
             [2] = {
-                vpos = Vector(20.5, 0, 2.3),
+                vpos = Vector(18.25, 0, 2.3),
             },
         },
-        Override_IronSightStruct = {
-            Pos = Vector(-2.76, -2, -0.025),
-            Ang = Angle(0.9, 0.025, 0),
-            Magnification = 1.1,
-            CrosshairInSights = false,
-            SwitchToSound = "", -- sound that plays when switching to this sight
+    },
+    ["g3k_ris"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 3},
+            {ind = 4, bg = 3},
+        },
+        AttPosMods = {
+            [2] = {
+                vpos = Vector(18.25, 0, 2.3),
+            },
+            [5] = {
+                vpos = Vector(11, 0, 1.5),
+            },
+        },
+    },
+    ["sd_barrel"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 4},
+            {ind = 4, bg = 3},
+        },
+        AttPosMods = {
+            [2] = {
+                vpos = Vector(18.25, 0, 2.3),
+            },
+            [5] = {
+                vpos = Vector(11, 0, 1.5),
+            },
         },
     },
     ["stock_l"] = {
@@ -179,10 +212,10 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic"}, -- what kind of attachments can fit here, can be string or table
         Bone = "j_gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(3, 0, 3.3), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(2, 0, 4.325), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
         InstalledEles = {"mount"},
@@ -196,9 +229,11 @@ SWEP.Attachments = {
         VMScale = Vector(1, 1.125, 1.125),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(24, 0, 2.3), -- offset that the attachment will be relative to the bone
+            vpos = Vector(25, 0, 2.3), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
+        ExcludeFlags = {"sd_barrel"},
+        HideIfBlocked = true,
     }, --2
     {
         PrintName = "Handguard",
@@ -224,7 +259,7 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(9, 0, 1.575), -- offset that the attachment will be relative to the bone
+            vpos = Vector(11, 0, 1.25), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(13.75, 1.15, -4.1),
             wang = Angle(170, -180, 0),
@@ -236,7 +271,7 @@ SWEP.Attachments = {
     }, --6
     {
         Hidden = true,
-        Slot = {"bipod"},
+        Slot = {"bipod", "bo1_bipod"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(12, 0, 1.575), -- offset that the attachment will be relative to the bone
@@ -266,7 +301,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"bo1_stocks_all"},
         DefaultAttName = "No Stock",
-        Installed = "bo1_stock_heavy",
+        Installed = "bo1_stock_medium",
     }, --10
     {
         PrintName = "Ammo Type",
@@ -292,10 +327,27 @@ SWEP.Attachments = {
 
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
+    local barrel = 0
+    if wep.Attachments[3].Installed == "cod4_g3_barrel_g3k" then barrel = 1
+    elseif wep.Attachments[3].Installed == "cod4_g3_barrel_g3k_ris" then barrel = 1
+    elseif wep.Attachments[3].Installed == "cod4_g3_barrel_sd" then barrel = 2
+    end
 
     local brand = "HK "
     local model = "G3"
     local alt = "A4"
+
+    if barrel == 1 then
+        model = "G3K"
+    end
+
+    if wep.Attachments[10].Installed == "bo1_stock_heavy" then
+        alt = "A3"
+    end
+
+    if barrel == 2 then
+        alt = "SD"
+    end
 
     if pap then
         brand = "G"
@@ -312,6 +364,12 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if wep.Attachments[1].Installed then
         vm:SetBodygroup(1, 1)
+    end
+    if wep:GetBuff_Override("BO1_UBGL") then
+        vm:SetBodygroup(4, 2)
+    end
+    if wep:GetBuff_Override("BO1_Bipod") then
+        vm:SetBodygroup(4, 1)
     end
 
     if papcamo then
@@ -382,31 +440,30 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 2,
+        Time = 3.23,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 37,
-        Checkpoints = {28, 38, 69},
+        Framerate = 30,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_COD4E.M4M16_MagOut", t = 0.15},
-            {s = "ArcCW_COD4E.M4M16_MagIn", t = 1.1}
+            {s = "ArcCW_COD4E.G3_MagOut", t = 0.15},
+            {s = "ArcCW_COD4E.G3_MagIn", t = 1.75}
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 2.5,
+        Time = 4.46,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 37,
-        Checkpoints = {28, 38, 69},
+        Framerate = 30,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_COD4E.M4M16_MagOut", t = 0.15},
-            {s = "ArcCW_COD4E.M4M16_MagIn", t = 1.1},
-            {s = "ArcCW_COD4E.M4M16_Chamber", t = 1.65}
+            {s = "ArcCW_COD4E.G3_Chamber", t = 0.1},
+            {s = "ArcCW_COD4E.G3_MagOut", t = 0.9},
+            {s = "ArcCW_COD4E.G3_MagIn", t = 2.45},
+            {s = "ArcCW_COD4E.G3_Chamber", t = 3.5}
         },
     },
     ["enter_sprint"] = {
@@ -461,31 +518,30 @@ SWEP.Animations = {
     },
     ["reload_m203"] = {
         Source = "reload_gl",
-        Time = 2,
+        Time = 3.23,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 37,
-        Checkpoints = {28, 38, 69},
+        Framerate = 30,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_COD4E.M4M16_MagOut", t = 0.5},
-            {s = "ArcCW_COD4E.M4M16_MagIn", t = 1.1}
+            {s = "ArcCW_COD4E.G3_MagOut", t = 0.15},
+            {s = "ArcCW_COD4E.G3_MagIn", t = 1.75}
         },
     },
     ["reload_empty_m203"] = {
         Source = "reload_empty_gl",
-        Time = 2.5,
+        Time = 4.46,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 37,
-        Checkpoints = {28, 38, 69},
+        Framerate = 30,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_COD4E.M4M16_MagOut", t = 0.5},
-            {s = "ArcCW_COD4E.M4M16_MagIn", t = 1.1},
-            {s = "ArcCW_COD4E.M4M16_Chamber", t = 1.65}
+            {s = "ArcCW_COD4E.G3_Chamber", t = 0.1},
+            {s = "ArcCW_COD4E.G3_MagOut", t = 0.9},
+            {s = "ArcCW_COD4E.G3_MagIn", t = 2.45},
+            {s = "ArcCW_COD4E.G3_Chamber", t = 3.5}
         },
     },
     ["enter_sprint_m203"] = {
