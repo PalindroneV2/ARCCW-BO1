@@ -32,7 +32,7 @@ if SERVER then
         self:PhysicsInit( SOLID_VPHYSICS )
         self:SetMoveType( MOVETYPE_VPHYSICS )
         self:DrawShadow(false)
-        self:GetPhysicsObject():EnableGravity(false)
+        --self:GetPhysicsObject():EnableGravity(false)
 
         if (self:GetPhysicsObject():IsValid()) then
             self:GetPhysicsObject():Wake()
@@ -47,7 +47,7 @@ if SERVER then
     end
 
     function ENT:Think()
-        self:GetPhysicsObject():SetVelocity( self:GetPhysicsObject():GetVelocity() + self:GetAngles():Forward() * 1500 + self:GetAngles():Up() * -9.81 * 5 )
+        self:GetPhysicsObject():AddVelocity(Vector(0, 0, math.Rand(100, 110))) -- gravity counterforce
     end
 
     function ENT:PhysicsCollide(data, physobj)
@@ -68,8 +68,30 @@ if SERVER then
         if self.Owner:IsValid() then
             attacker = self.Owner
         end
+        -- simulate AP damage on vehicles, mainly simfphys
+        local tgt = data.HitEntity
+        while IsValid(tgt) do
+            if tgt.GetParent and IsValid(tgt:GetParent()) then
+                tgt = tgt:GetParent()
+            elseif tgt.GetBaseEnt and IsValid(tgt:GetBaseEnt()) then
+                tgt = tgt:GetBaseEnt()
+            else
+                break
+            end
+        end
 
-        util.BlastDamage(self, attacker, self:GetPos(), 250, 150)
+        if IsValid(tgt) then
+            local dmg = DamageInfo()
+            dmg:SetAttacker(attacker)
+            dmg:SetInflictor(self)
+            dmg:SetDamageType(DMG_BLAST)
+            dmg:SetDamage(3000)
+            dmg:SetDamagePosition(data.HitPos)
+            dmg:SetDamageForce(self:GetForward() * 3000)
+            tgt:TakeDamageInfo(dmg)
+        end
+
+        util.BlastDamage(self, attacker, self:GetPos(), self.Radius, self.Damage)
 
         if self:WaterLevel() >= 1 then
             util.Effect( "WaterSurfaceExplosion", effectdata )

@@ -32,7 +32,7 @@ if SERVER then
         self:PhysicsInit( SOLID_VPHYSICS )
         self:SetMoveType( MOVETYPE_VPHYSICS )
         self:DrawShadow(false)
-        self:GetPhysicsObject():EnableGravity(false)
+        --self:GetPhysicsObject():EnableGravity(false)
 
         if (self:GetPhysicsObject():IsValid()) then
             self:GetPhysicsObject():Wake()
@@ -47,18 +47,10 @@ if SERVER then
     end
 
     function ENT:Think()
-        self:GetPhysicsObject():SetVelocity( self:GetAngles():Forward() * 3000 )
+        self:GetPhysicsObject():AddVelocity(Vector(0, 0, 100)) -- gravity counterforce
     end
 
     function ENT:PhysicsCollide(data, physobj)
-        /*
-        util.BlastDamage(self, self.Owner, self:GetPos(), self.Radius, self.Damage)
-        EffectData():SetOrigin(self:GetPos())
-        EffectData():SetNormal(data.HitNormal)
-        ParticleEffect("Explosion", self:GetPos(), Angle(0,0,0))
-        self:EmitSound("phx/kaboom.wav")
-        self:Remove()
-        */
         if !self:IsValid() then return end
         local effectdata = EffectData()
             effectdata:SetOrigin( self:GetPos() )
@@ -69,7 +61,7 @@ if SERVER then
             attacker = self.Owner
         end
 
-        util.BlastDamage(self, attacker, self:GetPos(), 250, 150)
+        util.BlastDamage(self, attacker, self:GetPos(), self.Radius, self.Damage)
 
         if self:WaterLevel() >= 1 then
             util.Effect( "WaterSurfaceExplosion", effectdata )

@@ -31,13 +31,14 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
 
-SWEP.Damage = 30
-SWEP.DamageMin = 15 -- damage done at maximum range
-SWEP.Range = 350 -- in METRES
+SWEP.Damage = 200
+SWEP.DamageMin = 200
+SWEP.Range = 10
+
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = "arccw_bo1_m202rocket" -- entity to fire, if any
-SWEP.MuzzleVelocity = 500 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 3000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
@@ -70,8 +71,8 @@ SWEP.NPCWeaponType = {"weapon_rpg"}
 SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.HipDispersion = 1000 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 250
 
 SWEP.Primary.Ammo = "RPG_Rocket" -- what ammo type the gun uses
 
@@ -92,9 +93,9 @@ SWEP.CaseEffectAttachment = nil -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 2
 SWEP.CamAttachment = 2
 
-SWEP.SpeedMult = 0.95
-SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.5
+SWEP.SpeedMult = 0.84
+SWEP.SightedSpeedMult = 0.25
+SWEP.SightTime = 0.75
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",

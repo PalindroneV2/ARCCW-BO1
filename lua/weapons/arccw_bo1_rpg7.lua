@@ -30,13 +30,14 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
 
-SWEP.Damage = 30
-SWEP.DamageMin = 15 -- damage done at maximum range
-SWEP.Range = 350 -- in METRES
+SWEP.Damage = 500
+SWEP.DamageMin = 500
+SWEP.Range = 10
+
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = "arccw_bo1_rpgrocket" -- entity to fire, if any
-SWEP.MuzzleVelocity = 500 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 5000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
@@ -47,8 +48,8 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 1 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 3
 
-SWEP.Recoil = 2
-SWEP.RecoilSide = 2
+SWEP.Recoil = 3
+SWEP.RecoilSide = 3
 SWEP.MaxRecoilBlowback = 2
 SWEP.RecoilPunch = 2
 SWEP.RecoilPunchBackMax = 2
@@ -68,9 +69,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = {"weapon_rpg"}
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 10 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 1000 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 500
+SWEP.AccuracyMOA = 25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 600 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 400
 
 SWEP.Primary.Ammo = "RPG_Rocket" -- what ammo type the gun uses
 
@@ -91,9 +92,9 @@ SWEP.CaseEffectAttachment = nil -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 2
 SWEP.CamAttachment = 2
 
-SWEP.SpeedMult = 0.9
-SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.5
+SWEP.SpeedMult = 0.85
+SWEP.SightedSpeedMult = 0.25
+SWEP.SightTime = 0.75
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
