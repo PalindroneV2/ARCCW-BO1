@@ -2,22 +2,28 @@ att.PrintName = "Ludicrous Gibs!"
 att.Icon = Material("entities/acwatt_bo1_doom_ee.png", "mips smooth")
 att.Description = "Rip and Tear until it is done."
 att.Desc_Pros = {
+    "bo1.doom",
+    "bo1.doom.rpg.pro",
 }
 att.Desc_Cons = {
-    " -Slower Rockets",
-    " -Blocks all other attachments",
+    "bo1.doom.rpg.con.1",
+    "bo1.doom.rpg.con.2",
 }
-att.AutoStats = true
+att.AutoStats = false
 att.Slot = {"bo1_perk_doomrpg"}
 att.GivesFlags = {"doom_ee"}
 
 att.DOOM_EE = true
 
-att.Mult_HipDispersion = 0
-att.Mult_MoveDispersion = 0
+att.Override_Damage = 150
+att.Override_DamageMin = 150
+att.Override_HipDispersion = 0
+att.Override_MoveDispersion = 0
+att.Override_JumpDispersion = 0
 att.Mult_Recoil = 0
-att.Mult_SpeedMult = 3
-att.Mult_SightedSpeedMult = 3
+att.Override_SpeedMult = 1
+att.Override_SightedSpeedMult = 1
+att.Override_MuzzleVelocity = 500
 
 att.Add_BarrelLength = -100
 

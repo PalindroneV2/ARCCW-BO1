@@ -27,13 +27,13 @@ if SERVER then
         self:SetHealth(1)
         self:SetModel("models/props_phx/gibs/flakgib1.mdl")
         self:SetNoDraw( false )
-        
+
         self:SetSolid( SOLID_VPHYSICS )
         self:PhysicsInit( SOLID_VPHYSICS )
         self:SetMoveType( MOVETYPE_VPHYSICS )
         self:DrawShadow(false)
         self:GetPhysicsObject():EnableGravity(false)
-        
+
         if (self:GetPhysicsObject():IsValid()) then
             self:GetPhysicsObject():Wake()
         end
@@ -47,7 +47,7 @@ if SERVER then
     end
 
     function ENT:Think()
-        self:GetPhysicsObject():SetVelocity( self:GetAngles():Forward() * 11500000 )
+        self:GetPhysicsObject():SetVelocity( self:GetAngles():Forward() * 10000 )
     end
 
     function ENT:PhysicsCollide(data, physobj)

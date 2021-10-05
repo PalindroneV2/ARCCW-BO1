@@ -18,3 +18,9 @@ L["bo1.perkacola.vultureaid"] = "Killing enemies drops ammo for this weapon"
 L["bo1.perkacola.juggernog"] = "Reduce damage taken by 25%"
 L["bo1.perkacola.phdflopper.1"] = "Immune to fall and explosive damage"
 L["bo1.perkacola.phdflopper.2"] = "Landing from a fall creates an explosion"
+
+L["bo1.doom"] = "DOOM-style controls"
+L["bo1.doom.rpg.pro"] = "Allows blast jumping"
+L["bo1.doom.rpg.con.1"] = "Rockets are slower"
+L["bo1.doom.rpg.con.2"] = "Rockets do less damage"
+
