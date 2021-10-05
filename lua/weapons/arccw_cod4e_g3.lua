@@ -3,21 +3,21 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Colt M16A4"
+SWEP.PrintName = "HK G3A4"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "United States Military standard issue rifle chambered in 5.56mm NATO. The modularity of the platform lets many variants of the weapon exist in several roles."
-SWEP.Trivia_Manufacturer = "Colt"
-SWEP.Trivia_Calibre = "5.56x45mm NATO"
-SWEP.Trivia_Mechanism = "Gas-Operated"
-SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 1964
+SWEP.Trivia_Desc = "German Army standard issue rifle chambered in 7.62mm NATO. The power of the cardtridge makes it difficult to control in full-auto."
+SWEP.Trivia_Manufacturer = "Heckler & Koch"
+SWEP.Trivia_Calibre = "7.62x51mm NATO"
+SWEP.Trivia_Mechanism = "Roller-Delayed Blowback"
+SWEP.Trivia_Country = "Germany"
+SWEP.Trivia_Year = 1958
 
 SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_cod4_m4m16.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_cod4_m4m16.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_cod4_g3.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_cod4_g3.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-4, 3.5, -5.25),
@@ -28,13 +28,13 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "00000000"
 
-SWEP.Damage = 40
-SWEP.DamageMin = 30 -- damage done at maximum range
-SWEP.Range = 120 -- in METRES
-SWEP.Penetration = 8
+SWEP.Damage = 55
+SWEP.DamageMin = 45 -- damage done at maximum range
+SWEP.Range = 175 -- in METRES
+SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 900 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 800 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
@@ -42,16 +42,10 @@ SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 45
-SWEP.ReducedClipSize = 20
+SWEP.Primary.ClipSize = 20 -- DefaultClip is automatically set.
+SWEP.ExtendedClipSize = 30
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.35
-SWEP.RecoilRise = 0.75
-SWEP.VisualRecoilMult = 0.25
-
-SWEP.Delay = 60 / 900 -- 60 / RPM.
+SWEP.Delay = 60 / 700-- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -65,15 +59,17 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.NPCWeaponType = {"weapon_ar2", "weapon_smg1"}
+SWEP.NPCWeaponType = {
+    "weapon_ar2",
+    "weapon_crossbow",
+}
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 1.25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 550 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 1.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 200
 
-SWEP.Primary.Ammo = "smg1" -- what ammo type the gun uses
-SWEP.MagID = "m16a1" -- the magazine pool this gun draws from
+SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
 
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
@@ -92,7 +88,7 @@ SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 3
 SWEP.CamAttachment = 4
 
-SWEP.SpeedMult = 0.95
+SWEP.SpeedMult = 0.9
 SWEP.SightedSpeedMult = 0.5
 SWEP.SightTime = 0.3
 
@@ -135,7 +131,7 @@ SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
 SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
 SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
-SWEP.BarrelLength = 25
+SWEP.BarrelLength = 30
 
 SWEP.ExtraSightDist = 5
 
@@ -206,8 +202,8 @@ SWEP.Attachments = {
     }, --2
     {
         PrintName = "Handguard",
-        DefaultAttName = "A4 Barrel",
-        Slot = "cod4_m4m16_barrel",
+        DefaultAttName = "G3 Barrel",
+        Slot = "cod4_g3_barrel",
     }, --3
     {
         PrintName = "Underbarrel",
@@ -297,35 +293,14 @@ SWEP.Attachments = {
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
 
-    local brand = "Colt "
-    local model = "M16"
+    local brand = "HK "
+    local model = "G3"
     local alt = "A4"
 
-    if wep.Attachments[9].Installed == "bo2_fcg_fullauto" then
-        alt = "A3"
-    end
-    if wep.Attachments[3].Installed == "cod4_m4m16_m4_barrel" then
-        model = "M4"
-        alt = " Carbine"
-        if wep.Attachments[9].Installed == "bo2_fcg_fullauto" then
-            alt = "A1"
-        end
-    end
-
     if pap then
-        brand = ""
-        model = "Skull"
-        alt = "splitter"
-        if wep:GetBuff_Override("BO1_UBGL") then
-            alt = "crusher"
-        end
-        if wep.Attachments[3].Installed == "cod4_m4m16_m4_barrel" then
-            model = "Xeno Matter 4000"
-            alt = ""
-            if wep.Attachments[9].Installed == "bo2_fcg_fullauto" then
-                model = "Predator"
-            end
-        end
+        brand = "G"
+        model = "115"
+        alt = " Perforator"
     end
 
     return brand .. model .. alt
@@ -335,16 +310,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")
 
-    if wep.Attachments[3].Installed == "cod4_m4m16_m4_barrel" then
-        vm:SetBodygroup(4, 2)
-        vm:SetBodygroup(1, 1)
-    end
     if wep.Attachments[1].Installed then
-        vm:SetBodygroup(1, 2)
-    end
-
-    if wep:GetBuff_Override("BO1_UBGL") then
-        vm:SetBodygroup(4, 1)
+        vm:SetBodygroup(1, 1)
     end
 
     if papcamo then
