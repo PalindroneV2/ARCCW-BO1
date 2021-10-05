@@ -68,9 +68,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = {"weapon_rpg"}
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 10 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 1000 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 500
 
 SWEP.Primary.Ammo = "RPG_Rocket" -- what ammo type the gun uses
 
@@ -91,8 +91,8 @@ SWEP.CaseEffectAttachment = nil -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 2
 SWEP.CamAttachment = 2
 
-SWEP.SpeedMult = 0.95
-SWEP.SightedSpeedMult = 0.75
+SWEP.SpeedMult = 0.9
+SWEP.SightedSpeedMult = 0.5
 SWEP.SightTime = 0.5
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag

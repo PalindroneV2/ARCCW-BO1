@@ -70,6 +70,12 @@ if SERVER then
         end
 
         util.BlastDamage(self, attacker, self:GetPos(), 250, 150)
+        if attacker:IsPlayer() then
+            local dist = attacker:GetPos():Distance(self:GetPos())
+            if dist <= 128 then
+                attacker:SetVelocity((attacker:GetPos() - self:GetPos()):GetNormalized() * 750 * (1 - dist / 128))
+            end
+        end
 
         if self:WaterLevel() >= 1 then
             util.Effect( "WaterSurfaceExplosion", effectdata )
@@ -84,8 +90,13 @@ end
 
 function ENT:Draw()
     self:DrawModel()
-    /*cam.Start3D() -- Start the 3D function so we can draw onto the screen.
-        render.SetMaterial( Material("effects/blueflare1") ) -- Tell render what material we want, in this case the flash from the gravgun
-        render.DrawSprite( self:GetPos(), math.random(30, 45), math.random(30, 45), Color(0, 255, 66) ) -- Draw the sprite in the middle of the map, at 16x16 in it's original colour with full alpha.
-    cam.End3D()*/
 end
+
+hook.Add("EntityTakeDamage", "ArcCW_BO1_DoomRocket", function(ply, dmginfo)
+    if not ply:IsPlayer() then return end
+    local ent = dmginfo:GetInflictor()
+    if ent:GetClass() == "arccw_bo1_doomrocket" and ent:GetOwner() == ply then
+        dmginfo:ScaleDamage(0.15)
+        dmginfo:SetDamageType(bit.bor(dmginfo:GetDamageType(), DMG_BLAST) - DMG_BLAST)
+    end
+end)
