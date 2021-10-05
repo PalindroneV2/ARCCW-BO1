@@ -579,6 +579,16 @@ sound.Add( {
 } )
 
 sound.Add( {
+    name = "ArcCW_COD4E.M4M16_Sil",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_m4m16/Sil.wav",
+    }
+} )
+
+sound.Add( {
     name = "ArcCW_COD4E.M4M16_Chamber",
     channel = CHAN_ITEM,
     volume = 1.0,
@@ -612,6 +622,55 @@ sound.Add( {
     level = 100,
     sound = {
         "^weapons/arccw/cod4_m4m16/lift.wav",
+    }
+} )
+
+-- COD 4 G3
+
+sound.Add( {
+    name = "ArcCW_COD4E.G3_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_g3/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_COD4E.G3_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_g3/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_COD4E.G3_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_g3/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_COD4E.G3_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_g3/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_COD4E.G3_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_g3/lift.wav",
     }
 } )
 

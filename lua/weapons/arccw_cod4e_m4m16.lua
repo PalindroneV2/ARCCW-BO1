@@ -81,7 +81,7 @@ SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_COD4E.M4M16_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
+SWEP.ShootSoundSilenced = "ArcCW_COD4E.M4M16_Sil"
 SWEP.DistantShootSound = "weapons/arccw/bo1_m16/ringoff_f.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
@@ -169,6 +169,23 @@ SWEP.AttachmentElements = {
             SwitchToSound = "", -- sound that plays when switching to this sight
         },
     },
+    ["mk18_barrel"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 3},
+        },
+        AttPosMods = {
+            [2] = {
+                vpos = Vector(15.5, 0, 2.3),
+            },
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-2.76, -2, -0.025),
+            Ang = Angle(0.9, 0.025, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
+            SwitchToSound = "", -- sound that plays when switching to this sight
+        },
+    },
     ["stock_l"] = {
         VMBodygroups = {
             {ind = 3, bg = 1},
@@ -208,7 +225,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic"}, -- what kind of attachments can fit here, can be string or table
         Bone = "j_gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(3, 0, 3.3), -- 4.6 offset that the attachment will be relative to the bone
@@ -330,11 +347,17 @@ SWEP.Hook_NameChange = function(wep, name)
     if wep.Attachments[9].Installed == "bo2_fcg_fullauto" then
         alt = "A3"
     end
-    if wep.Attachments[3].Installed == "cod4_m4m16_m4_barrel" then
+    if wep.Attachments[3].Installed then
         model = "M4"
         alt = " Carbine"
+        if wep:GetBuff_Override("BO1_UBGL") and wep:GetBuff_Override("Silencer") then
+            alt = " SOPMOD"
+        end
         if wep.Attachments[9].Installed == "bo2_fcg_fullauto" then
             alt = "A1"
+            if wep:GetBuff_Override("BO1_UBGL") and wep:GetBuff_Override("Silencer") then
+                alt = "A1 SOPMOD"
+            end
         end
     end
 
@@ -345,7 +368,7 @@ SWEP.Hook_NameChange = function(wep, name)
         if wep:GetBuff_Override("BO1_UBGL") then
             alt = "crusher"
         end
-        if wep.Attachments[3].Installed == "cod4_m4m16_m4_barrel" then
+        if wep.Attachments[3].Installed then
             model = "Xeno Matter 4000"
             alt = ""
             if wep.Attachments[9].Installed == "bo2_fcg_fullauto" then
@@ -361,16 +384,20 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")
 
-    if wep.Attachments[3].Installed == "cod4_m4m16_m4_barrel" then
-        vm:SetBodygroup(4, 2)
-        vm:SetBodygroup(1, 1)
-    end
-    if wep.Attachments[1].Installed then
-        vm:SetBodygroup(1, 2)
-    end
-
     if wep:GetBuff_Override("BO1_UBGL") then
         vm:SetBodygroup(4, 1)
+        vm:SetBodygroup(1, 1)
+    end
+
+    if wep.Attachments[3].Installed then
+        vm:SetBodygroup(4, 2)
+        if wep:GetBuff_Override("BO1_UBGL") then
+            vm:SetBodygroup(4, 1)
+        end
+        vm:SetBodygroup(1, 2)
+    end
+    if wep.Attachments[1].Installed then
+        vm:SetBodygroup(1, 3)
     end
 
     if papcamo then
@@ -528,7 +555,7 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_COD4E.M4M16_MagOut", t = 0.5},
+            {s = "ArcCW_COD4E.M4M16_MagOut", t = 0.15},
             {s = "ArcCW_COD4E.M4M16_MagIn", t = 1.1}
         },
     },
@@ -542,7 +569,7 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_COD4E.M4M16_MagOut", t = 0.5},
+            {s = "ArcCW_COD4E.M4M16_MagOut", t = 0.15},
             {s = "ArcCW_COD4E.M4M16_MagIn", t = 1.1},
             {s = "ArcCW_COD4E.M4M16_Chamber", t = 1.65}
         },
