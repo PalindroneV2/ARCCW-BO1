@@ -228,11 +228,11 @@ SWEP.Attachments = {
     }, --6
     { --6
         PrintName = "Fire Group",
-        Slot = {"bo1_fcg"}
+        Slot = {"bo1_fcg","bo2_fcg_fullauto"}
     },
     {
         PrintName = "Ammo Type",
-        Slot = {"ammo_spas12_pap"},
+        Slot = {"ammo_packpunch"},
     }, --7
     {
         PrintName = "Perk",
@@ -254,7 +254,7 @@ SWEP.Attachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[8].Installed == "ammo_spas12_pap"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then
         return vm:SetSkin(2)

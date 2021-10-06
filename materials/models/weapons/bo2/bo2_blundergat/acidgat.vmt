@@ -1,7 +1,6 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/weapons/bo2/bo2_blundergat/acid"
-	$blendtintbybasealpha  "1"
 	"$bumpmap" "models/weapons/bo2/bo2_blundergat/acid_n"
 
 	$phong                      		1
@@ -19,4 +18,6 @@
 	$detailblendmode "4"
 	"$detailblendfactor" "1"
 	"$detailscale" "5"
+	"$selfillum" "1"
+	"$selfillummask" "models/weapons/bo2/bo2_blundergat/ember"s
 }

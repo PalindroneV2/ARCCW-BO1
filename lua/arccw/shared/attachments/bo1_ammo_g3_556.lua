@@ -41,10 +41,15 @@ att.Override_Firemodes = {
 
 att.Override_MuzzleEffect = "muzzleflash_4"
 
-att.Hook_GetShootSound = function(wep, sound)
-  wep.DistantShootSound = {
-    "weapons/arccw/bo1_aug/ringoff_f.wav",
-    "weapons/arccw/bo1_aug/ringoff_r.wav"
-  }
-  return "ArcCW_BO1.AUG_Fire"
+att.Hook_GetShootSound = function(wep, fsound)
+  if fsound == wep.ShootSound or sound == wep.FirstShootSound then return "ArcCW_BO1.AUG_Fire" end
+end
+
+att.Hook_GetDistantShootSound = function(wep, distancesound)
+  if distancesound == wep.DistantShootSound then
+    return {
+      "weapons/arccw/bo1_aug/ringoff_f.wav",
+      "weapons/arccw/bo1_aug/ringoff_r.wav"
+    }
+  end
 end

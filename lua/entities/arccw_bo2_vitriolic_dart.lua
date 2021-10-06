@@ -53,7 +53,7 @@ if SERVER then
                 EffectData():SetOrigin(self:GetPos())
                 EffectData():SetNormal(self:GetForward())
                 ParticleEffect("raygun_splash", self:GetPos(), Angle(0,0,0))
-                self:EmitSound("ArcCW_BO2.Acidgat_Fire")
+                self:EmitSound("phx/kaboom.wav")
                 self:Remove()
             end
         else

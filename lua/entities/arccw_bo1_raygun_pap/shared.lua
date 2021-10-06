@@ -47,7 +47,7 @@ if SERVER then
     end
 
     function ENT:Think()
-        self:GetPhysicsObject():SetVelocity( self:GetAngles():Forward() * 11500000 )
+        self:GetPhysicsObject():SetVelocity( self:GetAngles():Forward() * 10000 )
     end
 
     function ENT:PhysicsCollide(data, physobj)

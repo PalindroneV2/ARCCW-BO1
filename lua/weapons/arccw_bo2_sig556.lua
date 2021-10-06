@@ -92,7 +92,6 @@ SWEP.MagID = "hk416" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
---SWEP.FirstShootSound = "ArcCW_BO2.M27_Fire"
 SWEP.ShootSound = "ArcCW_BO2.SIG556_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.M27_Sil"
 SWEP.DistantShootSound = {
@@ -123,8 +122,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.025, 3, 0.325),
-    Ang = Angle(0, 0.025, 0),
+    Pos = Vector(-3.035, 3, 0.325),
+    Ang = Angle(0, 0.01, 0),
     Magnification = 1.25,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight

@@ -14,9 +14,5 @@
 	$envmap 	env_cubemap
 	$envmaptint   "[0.05 0.05 0.05]"
 	$envmapfresnel "1"
-
-	"$detail" "models/weapons/bo2/bo2_blundergat/red_ember"
-	$detailblendmode "4"
-	"$detailblendfactor" "1"
-	"$selfillum" "1"
+	
 }

@@ -75,7 +75,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_BO1.HK21_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
---SWEP.DistantShootSound = "ArcCW_BO1.HK21_Dist"
+SWEP.DistantShootSound = "^weapons/arccw/bo1_m16/ringoff_f.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -580,6 +580,11 @@ end
 SWEP.Hook_GetShootSound = function(wep, sound)
     if wep.Attachments[3].Installed and wep:GetBuff_Override("Silencer") then
         return "ArcCW_BO1.FAL_Sil"
+    end
+end
+SWEP.Hook_GetDistantShootSound = function(wep, distancesound)
+    if distancesound == wep.DistantShootSound and wep:GetBuff_Override("Silencer") then
+        return ""
     end
 end
 
