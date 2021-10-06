@@ -1,6 +1,6 @@
 att.PrintName = "PDW Foregrip (BO2)"
 att.Icon = Material("entities/acwatt_bo2_foregrip.png", "mips smooth")
-att.Description = "Vertical foregrip that goes under the weapon's handguard."
+att.Description = "Vertical foregrip that goes under the weapon's handguard. Improves hip fire handling and recoil."
 
 att.SortOrder = 97
 
@@ -12,11 +12,11 @@ att.Desc_Cons = {
 
 att.AutoStats = true
 
-att.Mult_Recoil = 0.875
+att.Mult_HipDispersion = 0.9
+att.Mult_Recoil = 0.9
 
-att.Mult_SightTime = 0.8
-att.Mult_HipDispersion = 1.15
-att.Mult_SpeedMult = 0.95
+att.Mult_SightTime = 1.15
+att.Mult_SpeedMult = 0.98
 
 att.GivesFlags = {"bo2_foregrip"}
 att.Slot = {"foregrip", "bo1_uniforegrip"}

@@ -1,4 +1,4 @@
-att.PrintName = "Ergo Foregrip (BO1)"
+att.PrintName = "Ergonomic Foregrip (BO1)"
 att.Icon = Material("entities/acwatt_bo1_foregrip.png", "mips smooth")
 att.Description = "Vertical foregrip that goes under the weapon's handguard."
 
@@ -19,9 +19,9 @@ att.LHIK = true
 att.Model = "models/weapons/arccw/atts/bo1_ub_foregrip.mdl"
 
 att.Mult_Recoil = 0.85
+att.Mult_SightTime = 0.85
 
-att.Mult_SightTime = 0.75
-att.Mult_HipDispersion = 1.2
+att.Mult_HipDispersion = 1.15
 att.Mult_SpeedMult = 0.95
 
 att.Override_HoldtypeActive = "smg"

@@ -12,11 +12,13 @@ att.Desc_Cons = {
 
 att.AutoStats = true
 
-att.Mult_Recoil = 0.8
+att.Mult_Recoil = 0.9
+att.Mult_HipDispersion = 0.75
 
-att.Mult_SightTime = 1.1
-att.Mult_HipDispersion = 1.3
-att.Mult_SpeedMult = 0.925
+att.Mult_SightTime = 1.25
+att.Mult_MoveDispersion = 1.25
+
+att.Mult_SpeedMult = 0.95
 
 att.GivesFlags = {"bo2_foregrip"}
 att.Slot = {"foregrip", "bo1_uniforegrip"}
