@@ -27,9 +27,11 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 36
-SWEP.DamageMin = 27 -- damage done at maximum range
-SWEP.Range = 80 -- in METRES
+SWEP.Damage = 34
+SWEP.DamageMin = 11 -- damage done at maximum range
+SWEP.Range = 120 -- in METRES
+SWEP.RangeMin = 25
+
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -45,11 +47,11 @@ SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 50
 SWEP.ReducedClipSize = 20
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.35
+SWEP.Recoil = 0.55
+SWEP.RecoilSide = 0.3
 SWEP.RecoilRise = 0.75
 
-SWEP.Delay = 60 / 700 -- 60 / RPM.
+SWEP.Delay = 60 / 800 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -57,7 +59,7 @@ SWEP.Firemodes = {
     },
     {
         Mode = -3,
-        RunawayBurst = true,
+        RunawayBurst = false,
     },
     {
         Mode = 1,
@@ -72,9 +74,9 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 2.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 550 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 1.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 280 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 100
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
 SWEP.MagID = "mp5" -- the magazine pool this gun draws from
@@ -374,7 +376,7 @@ SWEP.Attachments = {
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep.Attachments[10].Installed == "ammo_papunch"
     local sstock = wep.Attachments[7].Installed == "bo1_stock_heavy"
-    local mp5sd = wep.Attachments[2].Installed == "supp_bo1_mp5"
+    local mp5sd = wep.Attachments[2].Installed == "bo1_mp5_sd"
     local mp5k = wep.Attachments[2].Installed == "bo1_mp5_mp5k"
 
     if mp5k then
@@ -412,7 +414,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local optic = wep.Attachments[1].Installed
 
     local hand = 0
-    if wep.Attachments[2].Installed == "supp_bo1_mp5" then hand = 1
+    if wep.Attachments[2].Installed == "bo1_mp5_sd" then hand = 1
     elseif wep.Attachments[2].Installed == "bo1_mp5_sdhg" then hand = 1
     elseif wep.Attachments[2].Installed == "bo1_mp5_rishg" then hand = 2
     elseif wep.Attachments[2].Installed == "bo1_mp5_mp5k" then hand = 3
@@ -451,7 +453,7 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     local dual = wep.Attachments[8].Installed == "ammo_dualmag"
 
     local hand = 0
-    if wep.Attachments[2].Installed == "supp_bo1_mp5" then hand = 1
+    if wep.Attachments[2].Installed == "bo1_mp5_sd" then hand = 1
     elseif wep.Attachments[2].Installed == "bo1_mp5_sdhg" then hand = 1
     elseif wep.Attachments[2].Installed == "bo1_mp5_rishg" then hand = 1
     elseif wep.Attachments[2].Installed == "bo1_mp5_mp5k" then hand = 2
@@ -494,7 +496,7 @@ end
 
 SWEP.Hook_GetCapacity = function(wep, cap)
     local pap = wep:GetBuff_Override("PackAPunch")
-    local mm10 = wep.Attachments[8].Installed == "ammo_bo1_mp5_10mm"
+    local mm10 = wep.Attachments[8].Installed == "bo1_mp5_10mm"
 
     if pap and mm10 then
         return 40

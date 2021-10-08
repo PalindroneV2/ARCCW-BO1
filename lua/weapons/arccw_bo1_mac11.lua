@@ -26,9 +26,11 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000"
 
-SWEP.Damage = 32
-SWEP.DamageMin = 22 -- damage done at maximum range
-SWEP.Range = 50 -- in METRES
+SWEP.Damage = 35
+SWEP.DamageMin = 4
+SWEP.Range = 70
+SWEP.RangeMin = 5
+
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -39,14 +41,14 @@ SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
-SWEP.ChamberSize = 0-- how many rounds can be chambered.
+SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 16 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 40
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.35
+SWEP.Recoil = 0.35
+SWEP.RecoilSide = 0.65
 SWEP.RecoilRise = 0.75
-SWEP.VisualRecoilMult = 0.2
+SWEP.VisualRecoilMult = 1
 
 SWEP.Delay = 60 / 1200 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -67,9 +69,9 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 550 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 9 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 200 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 100
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
 SWEP.MagID = "uzi" -- the magazine pool this gun draws from
@@ -211,7 +213,7 @@ SWEP.Attachments = {
     { --6
         PrintName = "Magazine",
         Slot = {"bo1_mac11_mag"},
-        DefaultAttName = ".380 ACP 16rnd Mag",
+        DefaultAttName = "Standard Magazine",
     },
     { --7
         PrintName = "Ammo Type",
@@ -238,7 +240,7 @@ SWEP.Attachments = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[7].Installed == "ammo_papunch"
-    local ext = wep.Attachments[6].Installed == "ammo_bo1_mac11_ext"
+    local ext = wep.Attachments[6].Installed == "bo1_mac11_extmag"
 
     if ext then vm:SetBodygroup(1, 1) end
 
@@ -249,7 +251,7 @@ end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     local stock = wep.Attachments[4].Installed == "bo1_stock_medium"
-    local ext = wep.Attachments[6].Installed == "ammo_bo1_mac11_ext"
+    local ext = wep.Attachments[6].Installed == "bo1_mac11_extmag"
 
     if stock and !ext then
         return anim .. "_stock"
@@ -262,7 +264,7 @@ end
 
 SWEP.Hook_GetCapacity = function(wep, cap)
     local pap = wep:GetBuff_Override("PackAPunch")
-    local ext = wep.Attachments[6].Installed == "ammo_bo1_mac11_ext"
+    local ext = wep.Attachments[6].Installed == "bo1_mac11_extmag"
 
     if ext and pap then return 56 end
 end

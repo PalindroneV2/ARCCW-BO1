@@ -20,7 +20,7 @@ att.Mult_Recoil = 1.25
 att.Mult_SightTime = 0.75
 att.Mult_AccuracyMOA = 2
 
-att.Mult_HipDispersion = 0.75
-att.Mult_MoveDispersion = 0.75
+att.Mult_HipDispersion = 0.5
+att.Mult_MoveDispersion = 0.5
 att.Mult_DrawTime = 0.75
 att.Mult_HolsterTime = 0.75

@@ -19,10 +19,9 @@ att.Override_MuzzleEffect = "muzzleflash_suppressed"
 att.IsMuzzleDevice = true
 
 att.Mult_ShootVol = 0.75
-att.Mult_AccuracyMOA = 0.9
-att.Mult_Range = 1.05
+att.Mult_AccuracyMOA = 0.75
 
-att.Mult_SightTime = 1.05
-att.Mult_HipDispersion = 1.05
+att.Mult_SightTime = 1.1
+att.Mult_HipDispersion = 1.15
 
 att.Add_BarrelLength = 4

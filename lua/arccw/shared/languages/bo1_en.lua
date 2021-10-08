@@ -1,6 +1,7 @@
 L = {}
 
 L["bo.desc"] = "This attachment is from the Black Ops pack."
+L["bo.cosmetic"] = "This is a cosmetic attachment."
 
 L["bo1.automatic"] = "Enables Automatic firemode"
 L["bo1.burst"] = "Enables Burst firemode"

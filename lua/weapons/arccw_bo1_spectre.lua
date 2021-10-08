@@ -27,9 +27,11 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 35
-SWEP.DamageMin = 29 -- damage done at maximum range
-SWEP.Range = 80 -- in METRES
+SWEP.Damage = 36
+SWEP.DamageMin = 9 -- damage done at maximum range
+SWEP.Range = 100 -- in METRES
+SWEP.RangeMin = 20
+
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -45,8 +47,8 @@ SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 45
 SWEP.ReducedClipSize = 12
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.35
+SWEP.Recoil = 0.45
+SWEP.RecoilSide = 0.45
 SWEP.RecoilRise = 0.75
 
 SWEP.Delay = 60 / 850 -- 60 / RPM.
@@ -69,9 +71,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_smg1"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 3.2 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 550 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 4 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 300 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 80
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
 SWEP.MagID = "ak74" -- the magazine pool this gun draws from
@@ -242,7 +244,7 @@ SWEP.Attachments = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[7].Installed == "ammo_papunch"
-    local dualmag = wep.Attachments[5].Installed == "ammo_bo1_spectre_ext"
+    local dualmag = wep.Attachments[5].Installed == "bo1_spectre_extmag"
 
     if dualmag then vm:SetBodygroup(1, 1) end
 
@@ -253,7 +255,7 @@ end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     local stock = wep.Attachments[4].Installed == "bo1_stock_light"
-    local dmag = wep.Attachments[5].Installed == "ammo_bo1_spectre_ext"
+    local dmag = wep.Attachments[5].Installed == "bo1_spectre_extmag"
 
     if stock and !dmag then
         return anim .. "_stock"
@@ -266,7 +268,7 @@ end
 
 SWEP.Hook_GetCapacity = function(wep, cap)
     local pap = wep:GetBuff_Override("PackAPunch")
-    local ext = wep.Attachments[5].Installed == "ammo_bo1_spectre_ext"
+    local ext = wep.Attachments[5].Installed == "bo1_spectre_extmag"
 
     if ext and pap then return 75 end
 end

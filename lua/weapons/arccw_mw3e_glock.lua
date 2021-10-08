@@ -29,7 +29,7 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultSkin = 0
 
-SWEP.Damage = 32
+SWEP.Damage = 34
 SWEP.DamageMin = 10
 SWEP.RangeMin = 10
 SWEP.Range = 90
@@ -50,8 +50,8 @@ SWEP.ChamberSize = 0  -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 17 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 42
 
-SWEP.Recoil = 0.65
-SWEP.RecoilSide = 0.5
+SWEP.Recoil = 0.6
+SWEP.RecoilSide = 0.35
 SWEP.RecoilRise = 1
 
 SWEP.Delay = 60 / 1200 -- 60 / RPM.
@@ -61,7 +61,8 @@ SWEP.Firemodes = {
         Mode = 1
     },
     {
-        Mode = 2
+        Mode = 2,
+        Mult_RecoilSide = 2,
     },
     {
         Mode = 0

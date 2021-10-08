@@ -1,5 +1,5 @@
-att.PrintName = "Type 100/44 40rnd Stick Magazine"
-att.AbbrevName = "40rnd Stick Magazine"
+att.PrintName = "Type 100/44 Extended Magazine"
+att.AbbrevName = "Extended Magazine"
 att.Icon = Material("entities/acwatt_bo1_ext_mag.png", "mips smooth")
 att.Description = "A larger magazine for your weapon."
 att.Desc_Pros = {

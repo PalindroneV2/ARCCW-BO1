@@ -29,9 +29,11 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "000000"
 
-SWEP.Damage = 30
-SWEP.DamageMin = 21 -- damage done at maximum range
-SWEP.Range = 90 -- in METRES
+SWEP.Damage = 27
+SWEP.DamageMin = 4
+SWEP.Range = 100
+SWEP.RangeMin = 10
+
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -47,8 +49,8 @@ SWEP.Primary.ClipSize = 71 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 115
 SWEP.ReducedClipSize = 35
 
-SWEP.Recoil = 0.25
-SWEP.RecoilSide = 0.4
+SWEP.Recoil = 0.3
+SWEP.RecoilSide = 0.35
 SWEP.RecoilRise = 0.25
 SWEP.VisualRecoilMult = 1
 
@@ -71,9 +73,9 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 8 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 550 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 12 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 400 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 120
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
 SWEP.MagID = "ak74" -- the magazine pool this gun draws from
@@ -97,7 +99,7 @@ SWEP.CamAttachment = 3
 
 SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.2
+SWEP.SightTime = 0.4
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
