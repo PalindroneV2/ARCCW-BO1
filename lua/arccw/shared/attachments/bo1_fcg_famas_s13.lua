@@ -2,11 +2,9 @@ att.PrintName = "FAMAS F1 S-1-3 FCG"
 att.Icon = Material("entities/acwatt_fcg_s13.png", "mips smooth")
 att.Description = "Firemode conversion allowing for 3-round burst and semi-auto fire modes. Added weight from the carry handle improves recoil control."
 att.Desc_Pros = {
-    "+ Burst Fire mode allows for ammunition",
-    "conservation"
+    "bo1.burst"
 }
 att.Desc_Cons = {
-    "- Burst Delay"
 }
 att.AutoStats = true
 att.Slot = "fcg_famas"
@@ -20,7 +18,7 @@ att.Mult_SightedSpeedMult = 1.05
 att.Override_Firemodes = {
     {
         Mode = -3,
-        PostBurstDelay = 0.2,
+        PostBurstDelay = 0.15,
         RunawayBurst = true,
     },
     {

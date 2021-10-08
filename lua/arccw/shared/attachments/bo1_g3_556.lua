@@ -1,4 +1,5 @@
-att.PrintName = "STANAG 5.56mm 30rnd"
+att.PrintName = "G3A4 5.56x45mm Conversion"
+att.AbbrevName = "5.56x45mm Conversion"
 att.Icon = Material("entities/acwatt_bo1_ext_mag.png", "mips smooth")
 att.Description = "Your battle rifle has been converted to fire standard 5.56mm NATO rounds. The lighter ammunition improves reload times slightly. The lower power of the ammunition means it doesn't go as far and does less damage to targets but improves recoil control."
 att.Desc_Pros = {

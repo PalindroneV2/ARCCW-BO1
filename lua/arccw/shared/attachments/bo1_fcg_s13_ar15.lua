@@ -2,13 +2,13 @@ att.PrintName = "A2 S-1-3 FCG"
 att.Icon = Material("entities/acwatt_fcg_s13.png", "mips smooth")
 att.Description = "Firemode conversion allowing for 3-round burst and semi-auto fire modes."
 att.Desc_Pros = {
-    "+ Burst Fire mode allows for ammunition",
-    "conservation"
+    "bo1.burst"
 }
 att.Desc_Cons = {
-    "- Burst Delay"
 }
 att.AutoStats = true
+att.Free = true
+
 att.Slot = "fcg_m16a2"
 att.GivesFlags = {"a2top"}
 att.SortOrder = 101
@@ -16,7 +16,7 @@ att.SortOrder = 101
 att.Override_Firemodes = {
     {
         Mode = -3,
-        PostBurstDelay = 0.2,
+        PostBurstDelay = 0.1,
         RunawayBurst = true,
     },
     {
@@ -26,6 +26,8 @@ att.Override_Firemodes = {
         Mode = 0
     }
 }
+att.Mult_Recoil = 0.85
+att.Mult_HipDispersion = 0.9
 
 att.Hook_Compatible = function(wep)
     local auto = false

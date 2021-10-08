@@ -1195,7 +1195,7 @@ SWEP.RejectAttachments = {
 SWEP.Hook_GetCapacity = function(wep, cap)
     local pap = wep:GetBuff_Override("PackAPunch")
     local m635 = wep.Attachments[10].Installed == "ammo_kali_ar15_9mm"
-    local mag20 = wep.Attachments[10].Installed == "ammo_bo1_ar15_20"
+    local mag20 = wep.Attachments[10].Installed == "bo1_ar15_mag20"
     local mag100 = wep.Attachments[10].Installed == "ammo_kali_ar15_patriot"
     local patriot = wep.Attachments[4].Installed == "kali_ar15_barrel_patriot"
     local stocka = wep.Attachments[9].Installed
@@ -1288,7 +1288,7 @@ end
 /*
 local FNV_EE_Trigger = SWEP.FNV_EE_Trigger
 local FNV_EE_Sound = function(self, wep, sound)
-    local mag20 = wep.Attachments[11].Installed == "ammo_bo1_ar15_20"
+    local mag20 = wep.Attachments[11].Installed == "bo1_ar15_mag20"
     local wood = wep.Attachments[14].Installed == "bo1_cosmetic_wood"
     local length = 0
         if barrel == "kali_ar15_barrel_a2" then length = 1

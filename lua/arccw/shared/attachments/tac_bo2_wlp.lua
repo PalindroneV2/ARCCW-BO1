@@ -4,12 +4,15 @@ att.Description = "Tacical laser and weapon light. Tighter aim when firing from 
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "- Visible Laser Sight",
-    "- Visible Light Beam"
+    "Visible Laser Sight",
+    "Visible Light Beam"
 }
 att.AutoStats = true
 att.Slot = {"tac_pistol", "bo2_wlp", "bo1_tacall", "bo1_tacpistol"}
 att.GivesFlags = {"bo1_laser"}
+
+att.Mult_SpeedMult = 0.99
+att.Mult_SightTime = 1.1
 
 att.Model = "models/weapons/arccw/atts/bo2_wlp.mdl"
 att.ModelOffset = Vector(0, 0, -1)
@@ -24,12 +27,12 @@ att.ColorOptionsTable = {Color(255, 0, 0)}
 
 att.Flashlight = false
 att.FlashlightFOV = 50
-att.FlashlightFarZ = 512 -- how far it goes
-att.FlashlightNearZ = 1 -- how far away it starts
+att.FlashlightFarZ = 1024 -- how far it goes
+att.FlashlightNearZ = 32 -- how far away it starts
 att.FlashlightAttenuationType = ArcCW.FLASH_ATT_LINEAR -- LINEAR, CONSTANT, QUADRATIC are available
 att.FlashlightColor = Color(255, 255, 255)
 att.FlashlightTexture = "effects/flashlight001"
-att.FlashlightBrightness = 4
+att.FlashlightBrightness = 2
 att.FlashlightBone = "light"
 
 att.ToggleStats = {

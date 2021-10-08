@@ -337,7 +337,7 @@ SWEP.Attachments = {
     {
         PrintName = "Magazine",
         Slot = {"bo1_ar15_mag"},
-        DefaultAttName = "5.56mm NATO 30rnd",
+        DefaultAttName = "Standard Magazine",
     }, --11
     { --12
         PrintName = "Ammo Type",
@@ -379,8 +379,8 @@ SWEP.Hook_NameChange = function(wep, name)
     end
     local irons = wep.Attachments[1].Installed
     local hand = 0
-    if wep.Attachments[4].Installed == "m16_hand_a2" then hand = 1
-    elseif wep.Attachments[4].Installed == "m16_hand_a4" then hand = 1
+    if wep.Attachments[4].Installed == "bo1_m16_hand_a2" then hand = 1
+    elseif wep.Attachments[4].Installed == "bo1_m16_hand_a4" then hand = 1
     end
     local tube = wep:GetBuff_Override("BO1_UBGL")
 
@@ -428,9 +428,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local optic = wep.Attachments[2].Installed
 
     local hand = 0
-    if wep.Attachments[4].Installed == "m16_hand_heat" then hand = 1
-    elseif wep.Attachments[4].Installed == "m16_hand_a2" then hand = 2
-    elseif wep.Attachments[4].Installed == "m16_hand_a4" then hand = 3
+    if wep.Attachments[4].Installed == "bo1_m16_hand_heat" then hand = 1
+    elseif wep.Attachments[4].Installed == "bo1_m16_hand_a2" then hand = 2
+    elseif wep.Attachments[4].Installed == "bo1_m16_hand_a4" then hand = 3
     end
     local tube = wep:GetBuff_Override("BO1_UBGL")
 
@@ -514,7 +514,7 @@ end
 
 SWEP.Hook_GetCapacity = function(wep, cap)
     local pap = wep:GetBuff_Override("PackAPunch")
-    local mag20 = wep.Attachments[11].Installed == "ammo_bo1_ar15_20"
+    local mag20 = wep.Attachments[11].Installed == "bo1_ar15_mag20"
 
     if pap and mag20 then
         return 35

@@ -358,7 +358,7 @@ SWEP.Attachments = {
 
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
-    local ak74 = wep.Attachments[9].Installed == "ammo_ak_74"
+    local ak74 = wep.Attachments[9].Installed == "bo1_ak47_545"
     local light = wep.Attachments[8].Installed == "bo1_stock_light"
 
     caliber = "47"
@@ -396,7 +396,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         end
     end
 
-    local mag = wep.Attachments[9].Installed == "ammo_ak_74"
+    local mag = wep.Attachments[9].Installed == "bo1_ak47_545"
 
     if mag then
         vm:SetBodygroup(1, 1)
@@ -437,7 +437,7 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
 end
 
 SWEP.Hook_GetShootSound = function(wep, sound)
-    local bake = wep.Attachments[9].Installed == "ammo_ak_74"
+    local bake = wep.Attachments[9].Installed == "bo1_ak47_545"
     if bake then
         if wep.Attachments[2].Installed and wep:GetBuff_Override("Silencer") then
             return "ArcCW_BO1.M16_Sil"
@@ -450,7 +450,7 @@ SWEP.Hook_GetDistantShootSound = function(wep, distancesound)
 
     if wep:GetBuff_Override("Silencer") then return end
 
-    local bake = wep.Attachments[9].Installed == "ammo_ak_74"
+    local bake = wep.Attachments[9].Installed == "bo1_ak47_545"
     if bake then
         return "ArcCW_BO1.AK74u_Ringoff"
     end

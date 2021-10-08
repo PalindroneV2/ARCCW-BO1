@@ -5,12 +5,7 @@ att.Description = "The M16A1 heatshield handguard usually with an M203 attached 
 att.SortOrder = 99
 att.Free = true
 
-att.Desc_Pros = {
-    "+ Looks cooler if you like it",
-}
-att.Desc_Cons = {
-    "- Aesthetics provide no real performance upgrades.",
-    "- Has no effect if the M203 is aready on.",
-}
+att.Desc_Neutrals = {"bo.cosmetic"}
+
 att.Slot = "m16_hand"
 att.GivesFlags = {"heat_hand"}
