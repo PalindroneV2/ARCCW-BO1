@@ -13,9 +13,9 @@ att.BO1_UBFG = true
 att.AutoStats = true
 
 att.Mult_Recoil = 0.85
+att.Mult_RecoilSide = 0.75
 
-att.Mult_SightTime = 0.75
-att.Mult_HipDispersion = 1.2
+att.Mult_HipDispersion = 1.15
 att.Mult_SpeedMult = 0.95
 
 att.GivesFlags = {"hk416_taclight"}

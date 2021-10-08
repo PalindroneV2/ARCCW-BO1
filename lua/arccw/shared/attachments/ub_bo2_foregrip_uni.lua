@@ -21,9 +21,9 @@ att.LHIK = true
 att.Model = "models/weapons/arccw/atts/bo2_foregrip.mdl"
 
 att.Mult_Recoil = 0.85
+att.Mult_RecoilSide = 0.75
 
-att.Mult_SightTime = 0.75
-att.Mult_HipDispersion = 1.2
+att.Mult_HipDispersion = 1.15
 att.Mult_SpeedMult = 0.95
 
 att.Override_HoldtypeActive = "smg"
