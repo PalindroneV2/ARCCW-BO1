@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "HK G11"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "Experimental german assault rifle for special operations which fired caseless rounds. Reseaarch into the weapons system was dropped in 1990 in favor fo the more conventional G36 rifle."
+SWEP.Trivia_Desc = "Experimental german assault rifle for special operations which fired caseless rounds. Research into the weapons system was dropped in 1990 in favor of the more conventional G36 rifle."
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
 SWEP.Trivia_Calibre = "4.73×33mm Caseless"
 SWEP.Trivia_Mechanism = "Gas-Operated"
