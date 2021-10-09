@@ -30,12 +30,12 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
 
-SWEP.Damage = 30
-SWEP.DamageMin = 15 -- damage done at maximum range
+SWEP.Damage = 150
+SWEP.DamageMin = 150
 SWEP.Range = 350 -- in METRES
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
-SWEP.ShootEntity = "arccw_m203_he_bo1" -- entity to fire, if any
+SWEP.ShootEntity = "arccw_bo1_40mm_he" -- entity to fire, if any
 SWEP.MuzzleVelocity = 30000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
@@ -47,15 +47,14 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 12 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 24
 
-SWEP.Recoil = 2
-SWEP.RecoilSide = 2
+SWEP.Recoil = 1.5
+SWEP.RecoilSide = 1.5
 SWEP.MaxRecoilBlowback = 2
 
 SWEP.Delay = 60 / 300 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        PrintName = "SEMI",
         Mode = 1,
     },
     {
@@ -69,6 +68,7 @@ SWEP.NPCWeight = 0
 SWEP.AccuracyMOA = 20 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
+SWEP.SightsDispersion = 150
 
 SWEP.Primary.Ammo = "SMG1_Grenade" -- what ammo type the gun uses
 
