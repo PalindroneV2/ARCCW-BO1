@@ -70,7 +70,7 @@ SWEP.NPCWeaponType = {"weapon_rpg"}
 SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 600 -- inaccuracy added by hip firing.
+SWEP.HipDispersion = 1500 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 400
 
 SWEP.Primary.Ammo = "RPG_Rocket" -- what ammo type the gun uses
@@ -92,7 +92,7 @@ SWEP.CaseEffectAttachment = nil -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 2
 SWEP.CamAttachment = 2
 
-SWEP.SpeedMult = 0.85
+SWEP.SpeedMult = 0.88
 SWEP.SightedSpeedMult = 0.25
 SWEP.SightTime = 0.75
 

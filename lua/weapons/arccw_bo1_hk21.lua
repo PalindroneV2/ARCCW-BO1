@@ -4,8 +4,8 @@ SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "HK21"
-SWEP.Trivia_Class = "Light Machine Gun"
-SWEP.Trivia_Desc = "G3 battle rifle converted into a light machine gun."
+SWEP.Trivia_Class = "General-Purpose Machine Gun"
+SWEP.Trivia_Desc = "Accurate machine gun based on the G3 design."
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Roller-Delayed Blowback"
@@ -26,10 +26,13 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 45
-SWEP.DamageMin = 35 -- damage done at maximum range
-SWEP.Range = 150 -- in METRES
-SWEP.Penetration = 10
+-- 50dmg within 170m
+SWEP.Damage = 65
+SWEP.DamageMin = 32 -- damage done at maximum range
+SWEP.Range = 400 -- in METRES
+SWEP.RangeMin = 40
+
+SWEP.Penetration = 15
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 800 -- projectile or phys bullet muzzle velocity
@@ -43,7 +46,7 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 80 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 160
 
-SWEP.Delay = 60 / 900-- 60 / RPM.
+SWEP.Delay = 60 / 900 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -62,9 +65,10 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 2 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 200
+SWEP.AccuracyMOA = 2.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 900 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 150
+SWEP.SightsDispersion = 50
 
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
 SWEP.MagID = "fnfal" -- the magazine pool this gun draws from
@@ -86,13 +90,14 @@ SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 4
 
-SWEP.Recoil = 1.5
-SWEP.RecoilSide = 1
+SWEP.Recoil = 1.6
+SWEP.RecoilSide = 1.25
 SWEP.RecoilRise = 1
-SWEP.SpeedMult = 0.75
-SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.3
-SWEP.VisualRecoilMult = 0
+
+SWEP.SpeedMult = 0.85
+SWEP.SightedSpeedMult = 0.25
+SWEP.SightTime = 0.4
+SWEP.VisualRecoilMult = 0.25
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
@@ -269,7 +274,7 @@ SWEP.Attachments = {
     {
         PrintName = "Magazine",
         Slot = {"bo1_hk21_ammo"},
-        DefaultAttName = "HK 7.62mm 80rnd Drum"
+        DefaultAttName = "Standard Magazine"
     }, --9
     {
         PrintName = "Ammo Type",

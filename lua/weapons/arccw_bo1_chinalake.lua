@@ -29,12 +29,12 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
 
-SWEP.Damage = 30
-SWEP.DamageMin = 15 -- damage done at maximum range
+SWEP.Damage = 250
+SWEP.DamageMin = 250
 SWEP.Range = 350 -- in METRES
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
-SWEP.ShootEntity = "arccw_m203_he_bo1" -- entity to fire, if any
+SWEP.ShootEntity = "arccw_bo1_40mm_he" -- entity to fire, if any
 SWEP.MuzzleVelocity = 30000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 

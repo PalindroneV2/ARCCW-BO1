@@ -2,7 +2,7 @@ att.PrintName = "Tishina (HE)(BO1)"
 att.Icon = Material("entities/acwatt_ubgl_ak_gp25.png", "mips smooth")
 att.Description = "Selectable Grenade Launcher equipped under the AK-74u's handguard. Double tap +ZOOM to equip/dequip."
 att.Desc_Pros = {
-    "+ Selectable Grenade Launcher.",
+    "bo.ubgl",
 }
 att.Desc_Cons = {
 }
@@ -41,7 +41,7 @@ att.UBGL_NPCFire = function(wep, ubgl)
 
     wep:PlayAnimation("fire_glsetup")
 
-    wep:FireRocket("arccw_tishina_he_bo1", 4000)
+    wep:FireRocket("arccw_bo1_tishina_he", 4000)
 
     wep:EmitSound("ArcCW_BO1.M203_Fire", 100)
 
@@ -55,7 +55,7 @@ att.UBGL_Fire = function(wep, ubgl)
 
     wep:PlayAnimation("fire_glsetup")
 
-    wep:FireRocket("arccw_tishina_he_bo1", 4000)
+    wep:FireRocket("arccw_bo1_tishina_he", 4000)
 
     wep:EmitSound("ArcCW_BO1.M203_Fire", 100)
 
