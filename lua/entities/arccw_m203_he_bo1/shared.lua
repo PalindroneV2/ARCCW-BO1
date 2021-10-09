@@ -1,25 +1,25 @@
-AddCSLuaFile()
-
 ENT.Type 				= "anim"
 ENT.Base 				= "base_entity"
-ENT.PrintName 			= "Base Projectile"
+ENT.PrintName 			= "40mm HE (BO1)"
+ENT.Author 				= ""
+ENT.Information 		= ""
 
 ENT.Spawnable 			= false
 
+
+AddCSLuaFile()
+
 ENT.Model = "models/weapons/arccw/item/bo1_40mm.mdl"
 ENT.Ticks = 0
-ENT.FuseTime = 0
+ENT.FuseTime = 0.1
 ENT.Defused = false
-ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 
-ENT.Drag = true
-ENT.Gravity = true
-ENT.DragCoefficient = 0.25
-
-ENT.Damage = 150
-ENT.Radius = 300
+if CLIENT then
+    killicon.Add( "arccw_m203_he_bo1", "arccw/weaponicons/ubs/m203", Color( 255, 255, 255, 255 ) )
+end
 
 if SERVER then
+
     function ENT:Initialize()
         local pb_vert = 1
         local pb_hor = 1
@@ -29,12 +29,14 @@ if SERVER then
         local phys = self:GetPhysicsObject()
         if phys:IsValid() then
             phys:Wake()
-            phys:EnableDrag(self.Drag)
-            phys:SetDragCoefficient(self.DragCoefficient)
-            phys:EnableGravity(self.Gravity)
         end
 
         self.SpawnTime = CurTime()
+
+        timer.Simple(0.1, function()
+            if !IsValid(self) then return end
+            self:SetCollisionGroup(COLLISION_GROUP_PROJECTILE)
+        end)
     end
 
     function ENT:Think()
@@ -42,6 +44,36 @@ if SERVER then
             self:Remove()
         end
     end
+
+    else
+
+    /*function ENT:Think()
+        if self.Ticks % 5 == 0 then
+            local emitter = ParticleEmitter(self:GetPos())
+
+            if !self:IsValid() or self:WaterLevel() > 0 then return end
+            if !IsValid(emitter) then return end
+
+            local smoke = emitter:Add("particle/particle_smokegrenade", self:GetPos())
+            smoke:SetVelocity( VectorRand() * 25 )
+            smoke:SetGravity( Vector(math.Rand(-5, 5), math.Rand(-5, 5), math.Rand(-20, -25)) )
+            smoke:SetDieTime( math.Rand(1, 1.5) )
+            smoke:SetStartAlpha( 100 )
+            smoke:SetEndAlpha( 0 )
+            smoke:SetStartSize( 0 )
+            smoke:SetEndSize( 50 )
+            smoke:SetRoll( math.Rand(-180, 180) )
+            smoke:SetRollDelta( math.Rand(-0.2,0.2) )
+            smoke:SetColor( 113, 113, 113 )
+            smoke:SetAirResistance( 5 )
+            smoke:SetPos( self:GetPos() )
+            smoke:SetLighting( false )
+            emitter:Finish()
+        end
+
+        self.Ticks = self.Ticks + 1
+    end*/
+
 end
 
 function ENT:Detonate()
@@ -64,7 +96,7 @@ function ENT:Detonate()
         attacker = self.Owner
     end
 
-    util.BlastDamage(self, attacker, self:GetPos(), self.Radius, self.DamageOverride or self.Damage)
+    util.BlastDamage(self, attacker, self:GetPos(), 300, 150)
 
     self:FireBullets({
         Attacker = attacker,
@@ -82,21 +114,21 @@ function ENT:Detonate()
 end
 
 function ENT:PhysicsCollide(colData, collider)
-    if self:WaterLevel() >= 0.01 then
+	if self:WaterLevel() >= 0.01 then
         self:Defuse()
     end
     if CurTime() - self.SpawnTime >= self.FuseTime then
-        self:Detonate()
-    else
-        self:Defuse()
-    end
+		self:Detonate()
+	else
+		self:Defuse()
+	end
 end
 
 function ENT:Defuse()
-    self.Defused = true
-    self.Defused_RemoveIn = 5
-    self.Defused_When = CurTime()
-    --self:Remove()
+	self.Defused = true
+	self.Defused_RemoveIn = 5
+	self.Defused_When = CurTime()
+	--self:Remove()
 end
 
 function ENT:Draw()

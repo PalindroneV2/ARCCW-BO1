@@ -2,7 +2,7 @@ att.PrintName = "Rifle Grenade Launcher (HE)(BO1)"
 att.Icon = Material("entities/acwatt_muzz_waw_rifgren.png", "mips smooth")
 att.Description = "Selectable Grenade Launcher equipped at the rifle's muzzle. Double tap +ZOOM to equip/dequip."
 att.Desc_Pros = {
-    "bo.ubgl",
+    "+ Selectable Grenade Launcher.",
 }
 att.Desc_Cons = {
 }
@@ -41,7 +41,7 @@ att.UBGL_Fire = function(wep, ubgl)
 
     wep:PlayAnimation("fire_ubgl")
 
-    wep:FireRocket("arccw_waw_m7gren", 3000)
+    wep:FireRocket("arccw_waw_he_m7gren", 30000)
 
     wep:EmitSound("ArcCW_BO1.M203_Fire", 100)
 

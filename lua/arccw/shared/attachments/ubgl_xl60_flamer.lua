@@ -2,7 +2,7 @@ att.PrintName = "Flamethrower (BO1)"
 att.Icon = Material("entities/acwatt_ubgl_xl60_flamer.png", "mips smooth")
 att.Description = "Selectable Flamethrower equipped under the rifle's handguard. Double tap +ZOOM to equip/dequip."
 att.Desc_Pros = {
-    "bo.ubgl",
+    "+ Selectable Grenade Launcher.",
 }
 att.Desc_Cons = {
 }

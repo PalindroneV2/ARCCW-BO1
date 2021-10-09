@@ -2,7 +2,7 @@ att.PrintName = "M203 (HE)(BO1)"
 att.Icon = Material("entities/acwatt_ubgl_bo1_m203.png", "mips smooth")
 att.Description = "Selectable Grenade Launcher equipped under the rifle's handguard. Double tap +ZOOM to equip/dequip."
 att.Desc_Pros = {
-    "bo.ubgl",
+    "+ Selectable Grenade Launcher.",
 }
 att.Desc_Cons = {
 }
@@ -42,7 +42,7 @@ att.UBGL_NPCFire = function(wep, ubgl)
 
     wep:PlayAnimation("fire_glsetup")
 
-    wep:FireRocket("arccw_bo1_m203_he", 4000)
+    wep:FireRocket("arccw_m203_he_bo1", 4000)
 
     wep:EmitSound("ArcCW_BO1.M203_Fire", 100)
 
@@ -56,7 +56,7 @@ att.UBGL_Fire = function(wep, ubgl)
 
     wep:PlayAnimation("fire_glsetup")
 
-    wep:FireRocket("arccw_bo1_m203_he", 4000)
+    wep:FireRocket("arccw_m203_he_bo1", 4000)
 
     wep:EmitSound("ArcCW_BO1.M203_Fire", 100)
 

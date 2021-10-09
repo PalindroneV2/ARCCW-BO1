@@ -2,7 +2,7 @@ att.PrintName = "Combine Launcher (HE)(BO2)"
 att.Icon = Material("entities/acwatt_ubgl_m27_m320.png", "mips smooth")
 att.Description = "Selectable Grenade Launcher special made by the Combine for their MP7s. Double tap +ZOOM to equip/dequip."
 att.Desc_Pros = {
-    "bo.ubgl",
+    "+ Selectable Grenade Launcher.",
 }
 att.Desc_Cons = {
 }
@@ -41,7 +41,7 @@ att.UBGL_NPCFire = function(wep, ubgl)
 
     wep:PlayAnimation("fire_glsetup")
 
-    wep:FireRocket("arccw_bo1_25mm_he", 4000)
+    wep:FireRocket("arccw_25mm_he_bo1", 4000)
 
     wep:EmitSound("ArcCW_BO1.M203_Fire", 100)
 
@@ -55,7 +55,7 @@ att.UBGL_Fire = function(wep, ubgl)
 
     wep:PlayAnimation("fire_glsetup")
 
-    wep:FireRocket("arccw_bo1_25mm_he", 4000)
+    wep:FireRocket("arccw_25mm_he_bo1", 4000)
 
     wep:EmitSound("ArcCW_BO1.M203_Fire", 100)
 

@@ -30,11 +30,9 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "00010000000"
 
-SWEP.Damage = 250
-SWEP.DamageMin = 120 -- damage done at maximum range
-SWEP.Range = 500 -- in METRES
-SWEP.RangeMin = 50
-
+SWEP.Damage = 200
+SWEP.DamageMin = 115 -- damage done at maximum range
+SWEP.Range = 1000 -- in METRES
 SWEP.Penetration = 20
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -52,10 +50,9 @@ SWEP.ExtendedClipSize = 20
 SWEP.Recoil = 5
 SWEP.RecoilSide = 2
 SWEP.RecoilRise = 2
-
-SWEP.SpeedMult = 0.8
-SWEP.SightedSpeedMult = 0.25
-SWEP.SightTime = 0.5
+SWEP.SpeedMult = 0.7
+SWEP.SightedSpeedMult = 0.35
+SWEP.SightTime = 0.4
 
 SWEP.Delay = 60 / 416 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -73,8 +70,8 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 75
 
-SWEP.AccuracyMOA = 1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 1200 -- inaccuracy added by hip firing.
+SWEP.AccuracyMOA = 2 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 250
 
 SWEP.Primary.Ammo = "SniperPenetratedRound" -- what ammo type the gun uses
