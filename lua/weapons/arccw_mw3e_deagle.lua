@@ -139,9 +139,16 @@ SWEP.HolsterAng = Angle(37.5, 0, 0)
 SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
 SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
+SWEP.DefaultBodygroups = "00000000"
+
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
         NameChange = "Goldfinger",
+    },
+    ["bocw_deagle"] = {
+        VMBodygroups = {
+            {ind = 0, bg = 1}
+        },
     },
 }
 
@@ -159,6 +166,7 @@ SWEP.Attachments = {
         },
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
+        ExcludeFlags = {"top_laser", "cw_handcannon"},
     }, --1
     { --2
         PrintName = "Muzzle",
@@ -171,6 +179,7 @@ SWEP.Attachments = {
             vpos = Vector(7.4, 0.315, 1.05),
             vang = Angle(0, 0, 0),
         },
+        ExcludeFlags = {"cw_handcannon"},
     },
     { --3
         PrintName = "Tactical",
@@ -182,19 +191,7 @@ SWEP.Attachments = {
             vpos = Vector(3.6, 0.315, 0.3),
             vang = Angle(0, 0, 0),
         },
-        MergeSlots = {4},
-    },
-    { --4
-        Hidden = true,
-        --PrintName = "Underbarrel",
-        Slot = {"foregrip"},
-        Bone = "tag_weapon",
-        Offset = {
-            vpos = Vector(4, 0.1, 0.3),
-            vang = Angle(0, 0, 0),
-            wpos = Vector(7.238, 1.9, -2.622),
-            wang = Angle(90, 0, 0)
-        },
+        MergeSlots = {9,10},
     },
     { --5
         PrintName = "Caliber",
@@ -223,8 +220,28 @@ SWEP.Attachments = {
     },
     { --9
         PrintName = "Cosmetic",
-        Slot = {"cde_cosmetic", "cde_cosmetic_silver", "cde_cosmetic_steel"},
+        Slot = {"cde_cosmetic", "cde_cosmetic_silver", "cde_cosmetic_steel", "cde_cosmetic_handcannon"},
         FreeSlot = true,
+    },
+    { --10
+        Hidden = true,
+        Slot = {"bocw_deagle_laser"},
+        Bone = "j_bolt",
+        VMScale = Vector(1, 1, 1),
+        Offset = {
+            vpos = Vector(-0.5, 0.375, -3.675),
+            vang = Angle(0, 0, 0),
+        },
+    },
+    { --10
+        Hidden = true,
+        Slot = {"mw3e_deagle_laser"},
+        Bone = "j_gun",
+        VMScale = Vector(1, 1, 1),
+        Offset = {
+            vpos = Vector(-2, 0.275, -2.1),
+            vang = Angle(0, 0, 0),
+        },
     },
 }
 
@@ -236,10 +253,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")
     local camo = 0
-    if wep.Attachments[9].Installed == "cde_cosmetic_silver" then camo = 1
-    elseif wep.Attachments[9].Installed == "cde_cosmetic_steel" then camo = 2
-    elseif wep.Attachments[9].Installed == "cde_cosmetic_od" then camo = 3
-    elseif wep.Attachments[9].Installed == "cde_cosmetic_red" then camo = 4
+    if wep.Attachments[8].Installed == "cde_cosmetic_silver" then camo = 1
+    elseif wep.Attachments[8].Installed == "cde_cosmetic_steel" then camo = 2
+    elseif wep.Attachments[8].Installed == "cde_cosmetic_od" then camo = 3
+    elseif wep.Attachments[8].Installed == "cde_cosmetic_red" then camo = 4
+    elseif wep.Attachments[8].Installed == "cde_cosmetic_handcannon" then camo = 0
     end
 
     for k = camo, camo do
@@ -247,6 +265,12 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
     if papcamo then
         vm:SetSkin(5)
+    end
+end
+
+SWEP.Hook_TranslateAnimation = function(wep, anim)
+    if wep.Attachments[8].Installed == "cde_cosmetic_handcannon" then
+        return anim .. "_cw"
     end
 end
 
@@ -343,5 +367,40 @@ SWEP.Animations = {
     ["exit_sprint_empty"] = {
         Source = "sprint_out_empty",
         Time = 10 / 30
+    },
+
+    -- ANNIHILATOR --
+
+    ["fire_cw"] = {
+        Source = {"fire"},
+        Time = 8 / 30,
+        ShellEjectAt = 1 / 30,
+        SoundTable = {
+            {s = "ArcCW_BOCW.Eagle_Mech", t = 1 / 30},
+        },
+    },
+    ["fire_empty_cw"] = {
+        Source = "fire_last",
+        Time = 8 / 30,
+        ShellEjectAt = 1 / 30,
+        SoundTable = {
+            {s = "ArcCW_BOCW.Eagle_Mech", t = 1 / 30},
+        },
+    },
+    ["fire_iron_cw"] = {
+        Source = "fire_ads",
+        Time = 8 / 30,
+        ShellEjectAt = 1 / 30,
+        SoundTable = {
+            {s = "ArcCW_BOCW.Eagle_Mech", t = 1 / 30},
+        },
+    },
+    ["fire_iron_empty_cw"] = {
+        Source = "fire_last",
+        Time = 8 / 30,
+        ShellEjectAt = 1 / 30,
+        SoundTable = {
+            {s = "ArcCW_BOCW.Eagle_Mech", t = 1 / 30},
+        },
     },
 }

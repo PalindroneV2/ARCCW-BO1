@@ -473,6 +473,22 @@ sound.Add({
         "^weapons/arccw/mw3e_deagle/fire_50.wav",
     }
 })
+sound.Add({
+    name = "ArcCW_BOCW.Eagle_Fire",
+    channel = CHAN_STATIC,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_deagle/fire_cw.wav",
+    }
+})
+sound.Add({
+    name = "ArcCW_BOCW.Eagle_Mech",
+    channel = CHAN_WEAPON,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_deagle/act_cw.wav",
+    }
+})
 sound.Add( {
     name = "ArcCW_MW3E.Eagle_SlideFwd",
     channel = CHAN_ITEM,
