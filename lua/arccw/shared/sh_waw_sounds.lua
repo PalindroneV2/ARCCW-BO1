@@ -1112,6 +1112,139 @@ sound.Add( {
     }
 } )
 
+--- BROWNING M1919 ---
+
+sound.Add( {
+    name = "ArcCW_WAW.M1919_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_BeltContact",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/b_contact.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_BeltGrab",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/b_grab.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_BeltPress",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/b_press.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_BeltRaise",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/b_raise.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_BeltRemove",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/b_remove.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_BeltToss",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/b_toss.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_Bonk",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/bonk.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_Charge",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/charge.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_Close",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/close.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/open.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_Start",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/start.wav",
+    }
+} )
+
 --- MG42 Main ---
 
 sound.Add( {

@@ -16,4 +16,6 @@ att.Mult_AccuracyMOA = 3
 
 att.Override_Jamming = true
 att.Override_HeatLockout = true
-att.Override_HeatCapacity = 200
+att.Override_HeatCapacity = 400
+att.Mult_HeatDissipation = 5
+att.Mult_HeatDelayTime = 5
