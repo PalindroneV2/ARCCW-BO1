@@ -134,7 +134,6 @@ SWEP.HoldtypeSights = "ar2"
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
 SWEP.ActivePos = Vector(0, 3, 0)
---SWEP.ActivePos = Vector(5, -8, 2)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.InBipodPos = Vector(0, 0, -4)
@@ -210,7 +209,7 @@ SWEP.Attachments = {
         VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(6, 0.45, 1.25), -- offset that the attachment will be relative to the bone
+            vpos = Vector(5, 1.25, 0.25), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, -90),
             wpos = Vector(16, 1.4, -5.3),
             wang = Angle(-4, 0, 85)
@@ -234,7 +233,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(-2.5, -0.85, 0.5),
+            vpos = Vector(0, -1, 0.5),
             vang = Angle(0, 0, 0),
             wpos = Vector(5.25, 2, -3.9),
             wang = Angle(-175, -175, 0)

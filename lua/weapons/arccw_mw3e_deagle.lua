@@ -115,7 +115,6 @@ SWEP.IronSightStruct = {
     Ang = Angle(0.7, 0.05, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
-    SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
 SWEP.HoldtypeHolstered = "normal"
@@ -148,6 +147,12 @@ SWEP.AttachmentElements = {
     ["bocw_deagle"] = {
         VMBodygroups = {
             {ind = 0, bg = 1}
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-2, 3, 0.75),
+            Ang = Angle(0.45, 0.05, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
         },
     },
 }
