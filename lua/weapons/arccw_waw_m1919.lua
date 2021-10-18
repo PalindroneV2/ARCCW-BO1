@@ -21,8 +21,8 @@ SWEP.WorldModel = "models/weapons/arccw/c_waw_30cal.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     scale = 1,
-    pos        =    Vector(-17.5, 1, -10.5),
-    ang        =    Angle(-7, 0, 180),
+    pos        =    Vector(7, 4, -8),
+    ang        =    Angle(-10, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
@@ -256,9 +256,9 @@ SWEP.Hook_NameChange = function(wep, name)
 
     if sting then
         if pap then
-            return "ANM41 Venom"
+            return "AN/M41 Venom"
         end
-        return "ANM2 Stinger"
+        return "AN/M2 Stinger"
     end
 
     if pap then

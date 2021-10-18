@@ -17,8 +17,8 @@ SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/arccw/c_bo2_svu.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-6, 4.75, -7),
-    ang        =    Angle(-6, -2.5, 180),
+    pos        =    Vector(-11, 4.75, -5.5),
+    ang        =    Angle(-6, 1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.WorldModel = "models/weapons/arccw/w_bo2_svu.mdl"
@@ -104,9 +104,9 @@ SWEP.ProceduralIronFire = true
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.35, 0, 0.75),
-    Ang = Angle(0, 0.015, 0),
-    Magnification = 1.1,
+    Pos = Vector(-3.33, -1, 0.3),
+    Ang = Angle(0, 0.035, 0),
+    Magnification = 1.25,
     CrosshairInSights = true,
 }
 
@@ -133,20 +133,27 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.BarrelLength = 50
 
+SWEP.DefaultBodygroups = "00100000"
+
 SWEP.AttachmentElements = {
     ["bo1_bipod"] = {
         VMBodygroups = {
-            {ind = 2, bg = 1}
+            {ind = 3, bg = 1}
         }
     },
     ["ubrail"] = {
         VMBodygroups = {
-            {ind = 2, bg = 2}
+            {ind = 3, bg = 2}
         }
+    },
+    ["rail"] = {
+        VMBodygroups = {
+            {ind = 2, bg = 0}
+        },
     },
     ["bo2_fastmag"] = {
         VMBodygroups = {
-            {ind = 3, bg = 1}
+            {ind = 4, bg = 1}
         },
     },
     ["ammo_papunch"] = {

@@ -456,8 +456,10 @@ end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     local sndatt = wep.Attachments[14].Installed
+    local mp40 = wep.Attachments[10].Installed == "ammo_stg44_9mm"
 
     if sndatt then return "nomech_" .. anim end
+    if mp40 then return "mpmech_" .. anim end
 end
 
 SWEP.Animations = {
@@ -566,5 +568,24 @@ SWEP.Animations = {
         Source = {"fire_ads"},
         Time = 6 / 30,
         ShellEjectAt = 0,
+    },
+
+    --MPMECH--
+
+    ["mpmech_fire"] = {
+        Source = {"fire"},
+        Time = 6 / 30,
+        ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_WAW.MP40_Mech", t = 1 / 30},
+        },
+    },
+    ["mpmech_fire_iron"] = {
+        Source = {"fire_ads"},
+        Time = 6 / 30,
+        ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_WAW.MP40_Mech", t = 1 / 30},
+        },
     },
 }
