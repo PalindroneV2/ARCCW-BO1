@@ -712,6 +712,12 @@ sound.Add({
 })
 
 sound.Add({
+    name = "ArcCW_BO2.SVU_Fire",
+    channel = CHAN_STATIC,
+    level = 100,
+    sound = "^weapons/arccw/bo2_generic_sniper/fire_svu.wav"
+})
+sound.Add({
     name = "ArcCW_BO2.DSR50_Fire",
     channel = CHAN_STATIC,
     level = 100,

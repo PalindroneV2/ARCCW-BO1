@@ -3,35 +3,35 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FN Ballista"
+SWEP.PrintName = "OTs-03 SVU-AS"
 SWEP.Trivia_Class = "Sniper Rifle"
-SWEP.Trivia_Desc = "A high-caliber sniper rifle designed for cold-weather police and military units. Known for once holding the record of the longest range sniper shot in history."
-SWEP.Trivia_Manufacturer = "FN Herstal"
-SWEP.Trivia_Calibre = ".338 Lapua"
-SWEP.Trivia_Mechanism = "Bolt-Action"
-SWEP.Trivia_Country = "Belgium"
-SWEP.Trivia_Year = 2012
+SWEP.Trivia_Desc = "A modern bullpup configuration of the classic Dragunov SVD."
+SWEP.Trivia_Manufacturer = "KPB Instrument Design Bureau"
+SWEP.Trivia_Calibre = "7.62×54mmR"
+SWEP.Trivia_Mechanism = "Gas-Operated"
+SWEP.Trivia_Country = "Russia"
+SWEP.Trivia_Year = 1994
 
 SWEP.Slot = 3
 
-SWEP.ViewModel = "models/weapons/arccw/c_bo2_ballista.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_bo2_svu.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-6, 4.75, -7),
     ang        =    Angle(-6, -2.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
-SWEP.WorldModel = "models/weapons/arccw/w_bo2_ballista.mdl"
-SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_ballista.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_bo2_svu.mdl"
+SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_svu.mdl"
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 120
-SWEP.DamageMin = 110 -- damage done at maximum range
-SWEP.Range = 2000 -- in METRES
-SWEP.Penetration = 12
+SWEP.Damage = 75
+SWEP.DamageMin = 45 -- damage done at maximum range
+SWEP.Range = 150 -- in METRES
+SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 1000 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 830 -- projectile or phys bullet muzzle velocitys
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
@@ -39,18 +39,17 @@ SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 8 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 15
+SWEP.Primary.ClipSize = 10 -- DefaultClip is automatically set.
+SWEP.ExtendedClipSize = 18
 SWEP.ReducedClipSize = 5
 
-SWEP.Recoil = 4
-SWEP.RecoilSide = 2
+SWEP.Recoil = 2.5
+SWEP.RecoilSide = 1.5
 
-SWEP.Delay = 60 / 45 -- 60 / RPM.
+SWEP.Delay = 60 / 416 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        PrintName = "BOLT",
         Mode = 1,
     },
     {
@@ -64,19 +63,19 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.ManualAction = true
+SWEP.ManualAction = false
 
 SWEP.AccuracyMOA = 0.1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 800 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 100
 
-SWEP.Primary.Ammo = "SniperPenetratedRound" -- what ammo type the gun uses
-SWEP.MagID = "hs338" -- the magazine pool this gun draws from
+SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
+SWEP.MagID = "svu" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 140 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO2.Ballista_Fire"
+SWEP.ShootSound = "ArcCW_BO2.SVU_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.Ballista_Sil"
 SWEP.DistantShootSound = {"^weapons/arccw/bo2_generic_sniper/dist/flux_l.wav", "^weapons/arccw/bo2_generic_sniper/dist/flux_r.wav"}
 
@@ -105,10 +104,10 @@ SWEP.ProceduralIronFire = true
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-4.115, 0, 0.75),
+    Pos = Vector(-3.35, 0, 0.75),
     Ang = Angle(0, 0.015, 0),
     Magnification = 1.1,
-    CrosshairInSights = false,
+    CrosshairInSights = true,
 }
 
 SWEP.HoldtypeHolstered = "passive"
@@ -122,11 +121,6 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.SprintPos = Vector(0, 1, 0.5)
 SWEP.SprintAng = Angle(0, 0, 0)
-
-/*
-SWEP.SprintPos = Vector(4, 2, 2)
-SWEP.SprintAng = Angle(-15, 30.016, 0)
-*/
 
 SWEP.HolsterPos = Vector(0.532, -6, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -142,27 +136,22 @@ SWEP.BarrelLength = 50
 SWEP.AttachmentElements = {
     ["bo1_bipod"] = {
         VMBodygroups = {
-            {ind = 3, bg = 1}
+            {ind = 2, bg = 1}
         }
     },
     ["ubrail"] = {
         VMBodygroups = {
-            {ind = 3, bg = 2}
+            {ind = 2, bg = 2}
         }
     },
     ["bo2_fastmag"] = {
         VMBodygroups = {
-            {ind = 4, bg = 1}
+            {ind = 3, bg = 1}
         },
     },
     ["ammo_papunch"] = {
         NamePriority = 10,
-        NameChange = "Infused Arbalest",
-    },
-    ["rail"] = {
-        VMBodygroups = {
-            {ind = 2, bg = 1}
-        },
+        NameChange = "Shadowy Veil Utilizer",
     },
 }
 
@@ -172,24 +161,24 @@ SWEP.Attachments = {
     { --1
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {"bo2_ballista_scope"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"bo2_svu_scope"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(5, 0, 4.5),
+            vpos = Vector(4, 0, 6.5),
             vang = Angle(0, 0, 0),
         },
         MergeSlots = {2},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0.5, 0.05, 0),
         InstalledEles = {"rail"},
-        Installed = "optic_bo2_ballista"
+        --Installed = "optic_bo2_svu"
     },
     { --2
         Hidden = true,
         Slot = {"optic_sniper", "optic"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(5, 0, 3.225),
+            vpos = Vector(1.5, 0, 4.125),
             vang = Angle(0, 0, 0),
         },
         CorrectivePos = Vector(0, 0, 0),
@@ -204,7 +193,7 @@ SWEP.Attachments = {
         Slot = "muzzle",
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(29, 0, 2.1),
+            vpos = Vector(20, 0, 2.05),
             vang = Angle(0, 0, 0),
         },
     },
@@ -213,7 +202,7 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(18.25, 0, 0.9),
+            vpos = Vector(8, 0, 1),
             vang = Angle(0, 0, 0),
         },
         MergeSlots = {5},
@@ -228,8 +217,8 @@ SWEP.Attachments = {
         Slot = {"bo1_tacprimary"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(18.5, 1, 2),
-            vang = Angle(0, 0, -90),
+            vpos = Vector(8.5, 0, 3.6),
+            vang = Angle(0, 0, 180),
         },
     },
     { --7
@@ -251,7 +240,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(5, -0.8, 2),
+            vpos = Vector(-0.95, -0.8, 2),
             vang = Angle(0, 0, 0),
         },
     },
@@ -312,93 +301,53 @@ SWEP.Animations = {
         Source = "fire_ads",
         Time = 7 / 30,
     },
-    ["cycle"] = {
-        Source = "cycle",
-        Time = 35 / 30, -- 45 / 30 ; 30 / 30
-        ShellEjectAt = 0.5,
-        SoundTable = {
-            {s = "ArcCW_BO2.Sniper_BoltUp", t = 6 / 30}, -- 9 / 30 ; 6 / 30
-            {s = "ArcCW_BO2.Sniper_BoltBack", t = 10 / 30}, -- 15 / 30 ; 10 / 30
-            {s = "ArcCW_BO2.Sniper_BoltFwd", t = 20 / 30}, -- 30 / 30 ; 20 / 30
-            {s = "ArcCW_BO2.Sniper_BoltDown", t = 24 / 30}, -- 36 / 30 ; 24 / 30
-        },
-    },
-    ["cycle_iron"] = {
-        Source = "cycle_ads",
-        Time = 35 / 30, -- 45 / 30 ; 30 / 30
-        ShellEjectAt = 0.5,
-        SoundTable = {
-            {s = "ArcCW_BO2.Sniper_BoltUp", t = 6 / 30}, -- 9 / 30 ; 6 / 30
-            {s = "ArcCW_BO2.Sniper_BoltBack", t = 10 / 30}, -- 15 / 30 ; 10 / 30
-            {s = "ArcCW_BO2.Sniper_BoltFwd", t = 20 / 30}, -- 30 / 30 ; 20 / 30
-            {s = "ArcCW_BO2.Sniper_BoltDown", t = 24 / 30}, -- 36 / 30 ; 24 / 30
-        },
-    },
     ["reload"] = {
         Source = "reload",
-        Time = 120 / 30,
+        Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Checkpoints = {33, 55},
         FrameRate = 30,
         SoundTable = {
-            {s = "ArcCW_BO2.Sniper_ClipOut", t = 27 / 30},
-            {s = "ArcCW_BO2.Sniper_ClipIn", t = 80 / 30},
+            {s = "ArcCW_BO2.Sniper_ClipOut", t = 0.4},
+            {s = "ArcCW_BO2.Sniper_ClipIn", t = 1.75},
         },
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-        MinProgress = 90 / 30
+        MinProgress = 2,
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 173 / 30,
+        Time = 4,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Checkpoints = {33, 55, 88},
         FrameRate = 30,
         SoundTable = {
-            {s = "ArcCW_BO2.Sniper_BoltUp", t = 9 / 30},
-            {s = "ArcCW_BO2.Sniper_BoltBack", t = 13 / 30},
-            {s = "ArcCW_BO2.Sniper_ClipOut", t = 60 / 30},
-            {s = "ArcCW_BO2.Sniper_ClipIn", t = 113 / 30},
-            {s = "ArcCW_BO2.Sniper_BoltFwd", t = 155 / 30},
-            {s = "ArcCW_BO2.Sniper_BoltDown", t = 159 / 30},
+            {s = "ArcCW_BO2.Sniper_ClipOut", t = 0.4},
+            {s = "ArcCW_BO2.Sniper_ClipIn", t = 1.75},
+            {s = "ArcCW_BO2.Sniper_BoltBack", t = 2.25},
+            {s = "ArcCW_BO2.Sniper_BoltFwd", t = 2.45},
         },
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-        MinProgress = 160 / 30
+        MinProgress = 2.6,
     },
     ["fast"] = {
         Source = "fast",
-        Time = 120 / 35,
+        Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 30,
         SoundTable = {
-            {s = "ArcCW_BO2.Sniper_ClipOut", t = 27 / 35},
-            {s = "ArcCW_BO2.Sniper_ClipIn", t = 80 / 35},
+            {s = "ArcCW_BO2.Sniper_ClipOut", t = 0.4},
+            {s = "ArcCW_BO2.Sniper_ClipIn", t = 1.75},
         },
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-        MinProgress = 90 / 35
+        MinProgress = 2,
     },
     ["fast_empty"] = {
         Source = "fast_empty",
-        Time = 173 / 35,
+        Time = 4,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 30,
         SoundTable = {
-            {s = "ArcCW_BO2.Sniper_BoltUp", t = 9 / 35},
-            {s = "ArcCW_BO2.Sniper_BoltBack", t = 13 / 35},
-            {s = "ArcCW_BO2.Sniper_ClipOut", t = 60 / 35},
-            {s = "ArcCW_BO2.Sniper_ClipIn", t = 121 / 35},
-            {s = "ArcCW_BO2.Sniper_BoltFwd", t = 155 / 35},
-            {s = "ArcCW_BO2.Sniper_BoltDown", t = 159 / 35},
+            {s = "ArcCW_BO2.Sniper_ClipOut", t = 0.4},
+            {s = "ArcCW_BO2.Sniper_ClipIn", t = 1.75},
+            {s = "ArcCW_BO2.Sniper_BoltBack", t = 2.25},
+            {s = "ArcCW_BO2.Sniper_BoltFwd", t = 2.45},
         },
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-        MinProgress = 160 / 35
+        MinProgress = 2.6,
     },
     ["enter_sprint"] = {
         Source = "sprint_in",

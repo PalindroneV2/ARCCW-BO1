@@ -1,0 +1,18 @@
+"VertexLitGeneric"
+{
+	$basetexture	"models\weapons\bo2\bo2_optics\svu_lens"
+	"$translucent" "0"
+	$bumpmap	"models\weapons\bo2\bo2_optics\ballista_lens_n"
+	
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" 1
+	"$envmapcontrast" 0.9
+	"$envmaptint" "[ 0.1 0 0 ]"
+
+	"$phong" 			"1"
+	"$phongexponent" 		"0"
+	"$phongboost" 			"1.5"
+	"$halflambert"			"1"
+	"$phongalbedotint"		"1"
+	"$PhongExponentTexture"		"models\weapons\bo2\bo2_optics\svu_lens_s"
+}
