@@ -107,7 +107,7 @@ SWEP.IronSightStruct = {
     Pos = Vector(-3.33, -1, 0.3),
     Ang = Angle(0, 0.035, 0),
     Magnification = 1.25,
-    CrosshairInSights = true,
+    CrosshairInSights = false,
 }
 
 SWEP.HoldtypeHolstered = "passive"

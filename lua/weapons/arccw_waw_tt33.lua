@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
 
-SWEP.PrintName = "TT-33"
+SWEP.PrintName = "Tokarev TT-33"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "A soviet pistol designed shortly before World War II, and served as the standard issue pistol for the Soviets during the war until it was replaced by the Makarov PM."
 SWEP.Trivia_Manufacturer = "Tula Arms Plant"
