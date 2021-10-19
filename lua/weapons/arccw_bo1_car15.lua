@@ -163,12 +163,12 @@ SWEP.AttachmentElements = {
     ["mount"] = {
         VMElements = {
             {
-                Model = "models/weapons/arccw/item/bo1_ak_rail.mdl",
+                Model = "models/weapons/arccw/item/bo2_rail.mdl",
                 Bone = "tag_weapon",
-                Scale = Vector(0.35, 0.35, 0.375),
+                Scale = Vector(0.45, 0.375, 0.375),
                 Offset = {
-                    pos = Vector(3.5, 0.3, 3.65),
-                    ang = Angle(0, 90, 0),
+                    pos = Vector(3.5, 0, 4.5),
+                    ang = Angle(0, 0, 0),
                 }
             }
         },

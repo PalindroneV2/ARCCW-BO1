@@ -108,8 +108,8 @@ SWEP.CaseBones = {
 }
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-1.2, -5, 1),
-    Ang = Angle(-0.1, -0.075, 0),
+    Pos = Vector(-1.2, -5, 1.05),
+    Ang = Angle(-0.65, -0.085, 0),
     Magnification = 1.25,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -121,14 +121,14 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(1.5, -5, 0)
+SWEP.ActivePos = Vector(1.5, -4, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(5, -5, -2)
+SWEP.SprintPos = Vector(5, -4, -2)
 SWEP.SprintAng = Angle(0, 30, 0)
 
 SWEP.CustomizePos = Vector(16, -3, 0)
-SWEP.CustomizeAng = Angle(15, 40, 25)
+SWEP.CustomizeAng = Angle(15, 40, 30)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -164,6 +164,26 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 1},
         },
     },
+    ["notbipod"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 2},
+        },
+        VMElements = {
+            {
+                Model = "models/weapons/arccw/item/bo2_rail.mdl",
+                Bone = "tag_weapon",
+                Offset = {
+                    pos = Vector(6, 0, -0.3),
+                    ang = Angle(0, 0, 180),
+                }
+            },
+        },
+    },
+    ["bo1_bipod"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 1},
+        },
+    },
 }
 
 SWEP.Attachments = {
@@ -187,11 +207,11 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle", "waw_rifgren", "waw_bayonet"},
-        VMScale = Vector(2, 1.125, 1.125),
-        WMScale = Vector(2, 1.125, 1.125),
+        VMScale = Vector(1.75, 1.1, 1.1),
+        WMScale = Vector(2, 1.1, 1.1),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(28, 0, 1), -- offset that the attachment will be relative to the bone
+            vpos = Vector(29.25, 0, 1.075), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(0, 0, 0),
             wang = Angle(0, 0, 0)
@@ -202,22 +222,16 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(5, 0, -0.4), -- offset that the attachment will be relative to the bone
+            vpos = Vector(5.5, 0, -0.4), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(17.5, 1.125, -4.6),
             wang = Angle(172.5, -179, -1.5),
         },
+        InstalledEles = {"notbipod"}
     }, --3
     {
         Hidden = true,
-        Slot = {"bipod"},
-        Bone = "tag_weapon",
-        Offset = {
-            vpos = Vector(19, 0, 0.5), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 0),
-            wpos = Vector(18.25, 1.125, -5),
-            wang = Angle(172.5, -179, -1.5),
-        },
+        Slot = {"bo1_bipod"},
     }, --4
     {
         PrintName = "Tactical",
@@ -243,14 +257,14 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(-2, -0.8, 0),
+            vpos = Vector(-0.5, -0.85, 0),
             vang = Angle(0, 0, 0),
         },
     }, --8
     {
         Hidden = true,
-        Slot = "waw_ger_scope",
-        Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
+        Slot = "waw_jap_scope",
+        Bone = "j_gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(0, 0, 0), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
@@ -327,8 +341,8 @@ SWEP.Animations = {
         LHIKOut = 0.25,
     },
     ["ready"] = {
-        Source = "first_draw",
-        Time = 64 / 30,
+        Source = "draw",
+        Time = 0.75,
         LHIK = true,
         LHIKIn = 0.25,
         LHIKOut = 0.25,

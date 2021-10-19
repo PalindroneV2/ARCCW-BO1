@@ -13,7 +13,7 @@ att.AutoStats = true
 att.Slot = {"optic", "bo1_acog", "bo1_susat"}
 
 att.Model = "models/weapons/arccw/atts/bo1_susat.mdl"
-att.ModelOffset = Vector(0, 0, -0.125)
+att.ModelOffset = Vector(1, 0, -0.125)
 
 att.GivesFlags = {"susat_norail"}
 
@@ -30,11 +30,12 @@ att.AdditionalSights = {
             Holosight = true,
             HolosightMagnification = 4,
             HolosightNoFlare = true,
-            HolosightSize = 12.5,
+            HolosightSize = 10,
             HolosightBlackbox = true,
             HolosightReticle = Material("hud/scopes/bo1_susat.png", "mips smooth"),
             HolosightPiece = "models/weapons/arccw/atts/bo1_susat_hsp.mdl",
         },
+        CrosshairInSights = false,
     },
     {
         Pos = Vector(-0.005, 8, -2.675),

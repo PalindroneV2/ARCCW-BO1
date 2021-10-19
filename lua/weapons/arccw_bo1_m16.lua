@@ -166,12 +166,12 @@ SWEP.AttachmentElements = {
     ["mount"] = {
         VMElements = {
             {
-                Model = "models/weapons/arccw/item/bo1_ak_rail.mdl",
+                Model = "models/weapons/arccw/item/bo2_rail.mdl",
                 Bone = "tag_weapon",
-                Scale = Vector(0.35, 0.35, 0.375),
+                Scale = Vector(0.45, 0.375, 0.375),
                 Offset = {
-                    pos = Vector(3.5, 0.3, 3.65),
-                    ang = Angle(0, 90, 0),
+                    pos = Vector(3.5, 0, 4.5),
+                    ang = Angle(0, 0, 0),
                 }
             }
         },
@@ -252,7 +252,7 @@ SWEP.Attachments = {
         Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(3.5, 0.025, 4.8), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(3.5, 0, 4.875), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(5.5, 1.4, -6.25),
             wang = Angle(175, 180, -2.5)

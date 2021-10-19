@@ -177,7 +177,7 @@ SWEP.Attachments = {
         Slot = {"bo1_susat"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(5, 0, 3.5),
+            vpos = Vector(4, 0, 3.5),
             vang = Angle(0, 0, 0),
         },
         MergeSlots = {2,11},
