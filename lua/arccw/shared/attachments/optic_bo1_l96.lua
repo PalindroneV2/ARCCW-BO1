@@ -34,9 +34,9 @@ att.AdditionalSights = {
 att.ScopeGlint = false
 
 att.Holosight = true
-att.HolosightReticle = Material("hud/scopes/psg1_scope.png")
+att.HolosightReticle = Material("hud/scopes/bo1_l96.png")
 att.HolosightNoFlare = true
-att.HolosightSize = 15
+att.HolosightSize = 16
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo1_farview_hsp.mdl"
 att.Colorable = true

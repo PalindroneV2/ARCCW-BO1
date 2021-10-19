@@ -23,13 +23,14 @@ att.AdditionalSights = {
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         IgnoreExtra = true,
+        CrosshairInSights = false,
     },
 }
 
 att.Holosight = true
-att.HolosightReticle = Material("hud/scopes/bo1_acog_cross.png", "mips smooth")
+att.HolosightReticle = Material("hud/scopes/bo2_acog.png", "mips smooth")
 att.HolosightNoFlare = true
-att.HolosightSize = 15
+att.HolosightSize = 11
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo2_acog_hsp.mdl"
 att.Colorable = true

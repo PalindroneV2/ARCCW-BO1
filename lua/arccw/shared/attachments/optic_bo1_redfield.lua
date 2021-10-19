@@ -28,9 +28,9 @@ att.AdditionalSights = {
 }
 
 att.Holosight = true
-att.HolosightReticle = Material("hud/scopes/psg1_scope.png")
+att.HolosightReticle = Material("hud/scopes/bo1_l96.png")
 att.HolosightNoFlare = true
-att.HolosightSize = 12
+att.HolosightSize = 12.5
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo1_redfield_hsp.mdl"
 att.Colorable = true
