@@ -124,7 +124,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(1.5, 1, 2)
+SWEP.ActivePos = Vector(1.5, 0, 2)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.SprintPos = Vector(10, 0, -2)
@@ -361,8 +361,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_WAW.Mosin_Up", t = 5 / 30},
             {s = "ArcCW_WAW.Mosin_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.Mosin_Back", t = 20 / 30},
-            {s = "ArcCW_WAW.Mosin_Up", t = 22 / 30},
+            {s = "ArcCW_WAW.Mosin_Fwd", t = 20 / 30},
+            {s = "ArcCW_WAW.Mosin_Down", t = 22 / 30},
         },
     },
     ["fire_iron"] = {
@@ -377,8 +377,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_WAW.Mosin_Up", t = 5 / 30},
             {s = "ArcCW_WAW.Mosin_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.Mosin_Back", t = 20 / 30},
-            {s = "ArcCW_WAW.Mosin_Up", t = 22 / 30},
+            {s = "ArcCW_WAW.Mosin_Fwd", t = 20 / 30},
+            {s = "ArcCW_WAW.Mosin_Down", t = 22 / 30},
         },
     },
     ["reload"] = {
@@ -393,9 +393,9 @@ SWEP.Animations = {
             {s = "ArcCW_WAW.Mosin_Up", t = 0.15 * 1.25},
             {s = "ArcCW_WAW.Mosin_Back", t = 0.3 * 1.25},
             {s = "ArcCW_WAW.Mosin_Rechamber", t = 0.5 * 1.25},
-            {s = "ArcCW_WAW.Mosin_Back", t = 1.67 * 1.25},
+            {s = "ArcCW_WAW.Mosin_Fwd", t = 1.67 * 1.25},
             {s = "ArcCW_WAW.Mosin_Eject", t = 1.69 * 1.25},
-            {s = "ArcCW_WAW.Mosin_Up", t = 1.71 * 1.25},
+            {s = "ArcCW_WAW.Mosin_Down", t = 1.71 * 1.25},
         },
     },
 
@@ -436,8 +436,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_WAW.Mosin_Up", t = 5 / 30},
             {s = "ArcCW_WAW.Mosin_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.Mosin_Back", t = 20 / 30},
-            {s = "ArcCW_WAW.Mosin_Up", t = 25 / 30},
+            {s = "ArcCW_WAW.Mosin_Fwd", t = 20 / 30},
+            {s = "ArcCW_WAW.Mosin_Down", t = 25 / 30},
         },
     },
     ["fire_iron_snipe"] = {
@@ -486,7 +486,7 @@ SWEP.Animations = {
         LHIKOut = 4,
         SoundTable = {
             {s = "ArcCW_WAW.Mosin_Fwd", t = 5 / 30},
-            {s = "ArcCW_WAW.Mosin_Up", t = 10 / 30},
+            {s = "ArcCW_WAW.Mosin_Down", t = 10 / 30},
         },
     },
     ["sgreload_finish_empty"] = {
@@ -497,7 +497,7 @@ SWEP.Animations = {
         LHIKOut = 4,
         SoundTable = {
             {s = "ArcCW_WAW.Mosin_Fwd", t = 5 / 30},
-            {s = "ArcCW_WAW.Mosin_Up", t = 10 / 30},
+            {s = "ArcCW_WAW.Mosin_Down", t = 10 / 30},
         },
     },
 

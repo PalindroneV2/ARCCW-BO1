@@ -345,8 +345,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_WAW.K98_Up", t = 5 / 30},
             {s = "ArcCW_WAW.K98_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.K98_Back", t = 20 / 30},
-            {s = "ArcCW_WAW.K98_Up", t = 22 / 30},
+            {s = "ArcCW_WAW.K98_Fwd", t = 15 / 30},
+            {s = "ArcCW_WAW.K98_Down", t = 17 / 30},
         },
     },
     ["fire_iron"] = {
@@ -361,8 +361,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_WAW.K98_Up", t = 5 / 30},
             {s = "ArcCW_WAW.K98_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.K98_Back", t = 20 / 30},
-            {s = "ArcCW_WAW.K98_Up", t = 22 / 30},
+            {s = "ArcCW_WAW.K98_Fwd", t = 15 / 30},
+            {s = "ArcCW_WAW.K98_Down", t = 17 / 30},
         },
     },
     ["reload"] = {
@@ -377,9 +377,9 @@ SWEP.Animations = {
             {s = "ArcCW_WAW.K98_Up", t = 0.15 * 1.25},
             {s = "ArcCW_WAW.K98_Back", t = 0.3 * 1.25},
             {s = "ArcCW_WAW.K98_Rechamber", t = 0.5 * 1.25},
-            {s = "ArcCW_WAW.K98_Back", t = 1.67 * 1.25},
+            {s = "ArcCW_WAW.K98_Fwd", t = 1.67 * 1.25},
             {s = "ArcCW_WAW.K98_Eject", t = 1.69 * 1.25},
-            {s = "ArcCW_WAW.K98_Up", t = 1.71 * 1.25},
+            {s = "ArcCW_WAW.K98_Down", t = 1.71 * 1.25},
         },
     },
 
@@ -420,8 +420,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_WAW.K98_Up", t = 5 / 30},
             {s = "ArcCW_WAW.K98_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.K98_Back", t = 20 / 30},
-            {s = "ArcCW_WAW.K98_Up", t = 25 / 30},
+            {s = "ArcCW_WAW.K98_Fwd", t = 20 / 30},
+            {s = "ArcCW_WAW.K98_Down", t = 25 / 30},
         },
     },
     ["fire_iron_scope"] = {
@@ -470,7 +470,7 @@ SWEP.Animations = {
         LHIKOut = 4,
         SoundTable = {
             {s = "ArcCW_WAW.K98_Fwd", t = 5 / 30},
-            {s = "ArcCW_WAW.K98_Up", t = 10 / 30},
+            {s = "ArcCW_WAW.K98_Down", t = 10 / 30},
         },
     },
     ["sgreload_finish_empty"] = {
@@ -481,7 +481,7 @@ SWEP.Animations = {
         LHIKOut = 4,
         SoundTable = {
             {s = "ArcCW_WAW.K98_Fwd", t = 5 / 30},
-            {s = "ArcCW_WAW.K98_Up", t = 10 / 30},
+            {s = "ArcCW_WAW.K98_Down", t = 10 / 30},
         },
     },
 

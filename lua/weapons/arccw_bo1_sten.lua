@@ -78,10 +78,9 @@ SWEP.MagID = "ak74" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
---SWEP.FirstShootSound = "ArcCW_WAW.MP40_Fire"
 SWEP.ShootSound = "ArcCW_BO1.Kiparis_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.Pistol_Sil"
-SWEP.DistantShootSound = "weapons/arccw/waw_dist/waw_9mm.wav"
+SWEP.DistantShootSound = "^weapons/arccw/waw_dist/waw_9mm.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_smg"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
@@ -248,7 +247,7 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "draw",
-        Time = 1.75,
+        Time = 0.5,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,

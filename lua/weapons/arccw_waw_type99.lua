@@ -80,7 +80,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_WAW.Type99_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_WAW.G43_Sil"
-SWEP.DistantShootSound = "ArcCW_WAW.SVT_RingOff"
+SWEP.DistantShootSound = "^weapons/arccw/waw_dist/waw_svt40.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"

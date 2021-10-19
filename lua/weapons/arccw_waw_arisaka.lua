@@ -74,11 +74,11 @@ SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 200
 
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
-SWEP.MagID = "k98" -- the magazine pool this gun draws from
+SWEP.MagID = "Arisaka" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
 
-SWEP.ShootSound = "ArcCW_WAW.K98_Fire"
+SWEP.ShootSound = "ArcCW_WAW.Arisaka_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
 SWEP.DistantShootSound = "ArcCW_WAW.K98_Ringoff"
 
@@ -190,7 +190,7 @@ SWEP.Attachments = {
     { --1
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(5.5, 0, 1.65), -- 4.6 offset that the attachment will be relative to the bone
@@ -199,7 +199,7 @@ SWEP.Attachments = {
             wang = Angle(171, 179, 0)
         },
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0, 0, 0),
+        CorrectiveAng = Angle(1.5, 0, 0),
         InstalledEles = {"mount"},
         MergeSlots = {9}
     },
@@ -227,7 +227,8 @@ SWEP.Attachments = {
             wpos = Vector(17.5, 1.125, -4.6),
             wang = Angle(172.5, -179, -1.5),
         },
-        InstalledEles = {"notbipod"}
+        InstalledEles = {"notbipod"},
+        MergeSlots = {4}
     }, --3
     {
         Hidden = true,
@@ -350,33 +351,33 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
         Time = 7 / 30,
-        {s = "ArcCW_WAW.K98_Mech", t = 0 / 30},
+        {s = "ArcCW_WAW.Arisaka_Mech", t = 0 / 30},
     },
     ["cycle"] = {
         Source = {"cycle"},
         Time = 28 / 30,
         ShellEjectAt = 10 / 30,
         SoundTable = {
-            {s = "ArcCW_WAW.K98_Up", t = 5 / 30},
-            {s = "ArcCW_WAW.K98_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.K98_Back", t = 20 / 30},
-            {s = "ArcCW_WAW.K98_Up", t = 22 / 30},
+            {s = "ArcCW_WAW.Arisaka_Up", t = 5 / 30},
+            {s = "ArcCW_WAW.Arisaka_Back", t = 10 / 30},
+            {s = "ArcCW_WAW.Arisaka_Fwd", t = 20 / 30},
+            {s = "ArcCW_WAW.Arisaka_Down", t = 22 / 30},
         },
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
-        {s = "ArcCW_WAW.K98_Mech", t = 1 / 30},
+        {s = "ArcCW_WAW.Arisaka_Mech", t = 1 / 30},
     },
     ["cycle_ads"] = {
         Source = {"cycle_ads"},
         Time = 28 / 30,
         ShellEjectAt = 10 / 30,
         SoundTable = {
-            {s = "ArcCW_WAW.K98_Up", t = 5 / 30},
-            {s = "ArcCW_WAW.K98_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.K98_Back", t = 20 / 30},
-            {s = "ArcCW_WAW.K98_Up", t = 22 / 30},
+            {s = "ArcCW_WAW.Arisaka_Up", t = 5 / 30},
+            {s = "ArcCW_WAW.Arisaka_Back", t = 10 / 30},
+            {s = "ArcCW_WAW.Arisaka_Fwd", t = 20 / 30},
+            {s = "ArcCW_WAW.Arisaka_Down", t = 22 / 30},
         },
     },
     ["reload"] = {
@@ -388,12 +389,12 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 4,
         SoundTable = {
-            {s = "ArcCW_WAW.K98_Up", t = 0.15 * 1.25},
-            {s = "ArcCW_WAW.K98_Back", t = 0.3 * 1.25},
+            {s = "ArcCW_WAW.Arisaka_Up", t = 0.15 * 1.25},
+            {s = "ArcCW_WAW.Arisaka_Back", t = 0.3 * 1.25},
             {s = "ArcCW_WAW.K98_Rechamber", t = 0.5 * 1.25},
-            {s = "ArcCW_WAW.K98_Back", t = 1.67 * 1.25},
+            {s = "ArcCW_WAW.Arisaka_Fwd", t = 1.67 * 1.25},
             {s = "ArcCW_WAW.K98_Eject", t = 1.69 * 1.25},
-            {s = "ArcCW_WAW.K98_Up", t = 1.71 * 1.25},
+            {s = "ArcCW_WAW.Arisaka_Down", t = 1.71 * 1.25},
         },
     },
 
@@ -425,23 +426,23 @@ SWEP.Animations = {
     ["fire_scope"] = {
         Source = {"fire_scope"},
         Time = 7 / 30,
-        {s = "ArcCW_WAW.K98_Mech", t = 1 / 30},
+        {s = "ArcCW_WAW.Arisaka_Mech", t = 1 / 30},
     },
     ["cycle_scope"] = {
         Source = {"cycle_scope"},
         Time = 30 / 30,
         ShellEjectAt = 10 / 30,
         SoundTable = {
-            {s = "ArcCW_WAW.K98_Up", t = 5 / 30},
-            {s = "ArcCW_WAW.K98_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.K98_Back", t = 20 / 30},
-            {s = "ArcCW_WAW.K98_Up", t = 25 / 30},
+            {s = "ArcCW_WAW.Arisaka_Up", t = 5 / 30},
+            {s = "ArcCW_WAW.Arisaka_Back", t = 10 / 30},
+            {s = "ArcCW_WAW.Arisaka_Fwd", t = 20 / 30},
+            {s = "ArcCW_WAW.Arisaka_Down", t = 25 / 30},
         },
     },
     ["fire_iron_scope"] = {
         Source = {"fire_scope"},
         Time = 7 / 30,
-        {s = "ArcCW_WAW.K98_Mech", t = 1 / 30},
+        {s = "ArcCW_WAW.Arisaka_Mech", t = 1 / 30},
     },
     ["cycle_iron_scope"] = {
         Source = {"cycle_scope"},
@@ -458,9 +459,9 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 4,
         SoundTable = {
-            {s = "ArcCW_WAW.K98_Up", t = 5 / 30},
-            {s = "ArcCW_WAW.K98_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.K98_Bullet", t = 27 / 30},
+            {s = "ArcCW_WAW.Arisaka_Up", t = 5 / 30},
+            {s = "ArcCW_WAW.Arisaka_Back", t = 10 / 30},
+            {s = "ArcCW_WAW.Arisaka_Insert", t = 35 / 30},
         },
     },
     ["sgreload_insert"] = {
@@ -473,7 +474,7 @@ SWEP.Animations = {
         LHIKOut = 4,
         MinProgress = 3 / 30,
         SoundTable = {
-            {s = "ArcCW_WAW.K98_Bullet", t = 3 / 30},
+            {s = "ArcCW_WAW.Arisaka_Insert", t = 3 / 30},
         }
     },
     ["sgreload_finish"] = {
@@ -483,8 +484,8 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 4,
         SoundTable = {
-            {s = "ArcCW_WAW.K98_Fwd", t = 5 / 30},
-            {s = "ArcCW_WAW.K98_Up", t = 10 / 30},
+            {s = "ArcCW_WAW.Arisaka_Fwd", t = 5 / 30},
+            {s = "ArcCW_WAW.Arisaka_Down", t = 10 / 30},
         },
     },
     ["sgreload_finish_empty"] = {
@@ -494,8 +495,8 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 4,
         SoundTable = {
-            {s = "ArcCW_WAW.K98_Fwd", t = 5 / 30},
-            {s = "ArcCW_WAW.K98_Up", t = 10 / 30},
+            {s = "ArcCW_WAW.Arisaka_Fwd", t = 5 / 30},
+            {s = "ArcCW_WAW.Arisaka_Down", t = 10 / 30},
         },
     },
 

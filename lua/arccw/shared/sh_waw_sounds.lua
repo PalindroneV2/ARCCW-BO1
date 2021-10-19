@@ -367,6 +367,90 @@ sound.Add( {
     }
 } )
 
+-- ARISAKA --
+
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_Mech",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_FireSnp",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/fire_sniper.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_MechSnp",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/mech_sniper.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_Up",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/up.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_Down",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/down.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_Back",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/back.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_Fwd",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/fwd.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_Insert",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/in.wav",
+    }
+} )
+
 -- MOSIN Main --
 
 sound.Add( {
