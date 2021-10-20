@@ -3,22 +3,26 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Arisaka Type 99"
+SWEP.PrintName = "Springfield M1903A1"
 SWEP.Trivia_Class = "Rifle"
-SWEP.Trivia_Desc = "The standard infantry rifle of the Imperial Japanese Army and Nacy during the second World War."
-SWEP.Trivia_Manufacturer = "Nagoya Arsenal"
-SWEP.Trivia_Calibre = "7.7x58mm Arisaka"
+SWEP.Trivia_Desc = [[
+    American bolt action rifle rifle using that was used as the standard infantry rifle in the Great War and remained in specialized roles such as snipers during World War II.
+
+    This variant specifically saw much more use by the US Marines during the second world war rather than the more modern M1903A4.
+]]
+SWEP.Trivia_Manufacturer = "Springfield Armory"
+SWEP.Trivia_Calibre = ".30-06 Springfield"
 SWEP.Trivia_Mechanism = "Bolt Action"
-SWEP.Trivia_Country = "Imperial Japan"
-SWEP.Trivia_Year = 1939
+SWEP.Trivia_Country = "USA"
+SWEP.Trivia_Year = 1903
 
 SWEP.Slot = 3
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_waw_arisaka.mdl"
-SWEP.WorldModel = "models/weapons/arccw/w_waw_arisaka.mdl"
-SWEP.MirrorWorldModel = "models/weapons/arccw/w_waw_arisaka.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_waw_springfield.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_waw_springfield.mdl"
+SWEP.MirrorWorldModel = "models/weapons/arccw/w_waw_springfield.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-7, 2.5, -3),
@@ -74,11 +78,11 @@ SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 200
 
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
-SWEP.MagID = "Arisaka" -- the magazine pool this gun draws from
+SWEP.MagID = "Springfield" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
 
-SWEP.ShootSound = "ArcCW_WAW.Arisaka_Fire"
+SWEP.ShootSound = "ArcCW_WAW.Garand_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
 SWEP.DistantShootSound = "ArcCW_WAW.K98_Ringoff"
 
@@ -121,10 +125,10 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(1.5, -4, 0)
+SWEP.ActivePos = Vector(1.5, -2, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(5, -4, -2)
+SWEP.SprintPos = Vector(5, -2, -2)
 SWEP.SprintAng = Angle(0, 30, 0)
 
 SWEP.CustomizePos = Vector(16, -3, 0)
@@ -141,7 +145,7 @@ SWEP.BarrelLength = 30
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    /*["mount"] = {
+    ["mount"] = {
         VMElements = {
             {
                 Model = "models/weapons/arccw/item/bo1_ak_rail.mdl",
@@ -153,7 +157,15 @@ SWEP.AttachmentElements = {
                 }
             },
         },
-    },*/
+        VMBodygroups = {
+            {ind = 4, bg = 1},
+        },
+    },
+    ["waw_unertl"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 1},
+        },
+    },
     ["waw_rifgren"] = {
         VMBodygroups = {
             {ind = 2, bg = 2},
@@ -164,24 +176,17 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 1},
         },
     },
-    ["notbipod"] = {
-        VMBodygroups = {
-            {ind = 4, bg = 2},
-        },
+    ["ubthing"] = {
         VMElements = {
             {
                 Model = "models/weapons/arccw/item/bo2_rail.mdl",
                 Bone = "tag_weapon",
+                Scale = Vector(0.4, 0.4, 0.4),
                 Offset = {
                     pos = Vector(6, 0, -0.3),
                     ang = Angle(0, 0, 180),
                 }
             },
-        },
-    },
-    ["bo1_bipod"] = {
-        VMBodygroups = {
-            {ind = 4, bg = 1},
         },
     },
 }
@@ -201,7 +206,7 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(1.5, 0, 0),
         InstalledEles = {"mount"},
-        MergeSlots = {9}
+        MergeSlots = {8}
     },
     { --2
         PrintName = "Muzzle",
@@ -211,7 +216,7 @@ SWEP.Attachments = {
         WMScale = Vector(2, 1.1, 1.1),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(29.25, 0, 1.075), -- offset that the attachment will be relative to the bone
+            vpos = Vector(26, 0, 1.175), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(0, 0, 0),
             wang = Angle(0, 0, 0)
@@ -227,13 +232,8 @@ SWEP.Attachments = {
             wpos = Vector(17.5, 1.125, -4.6),
             wang = Angle(172.5, -179, -1.5),
         },
-        InstalledEles = {"notbipod"},
-        MergeSlots = {4}
+        InstalledEles = {"ubthing"},
     }, --3
-    {
-        Hidden = true,
-        Slot = {"bo1_bipod"},
-    }, --4
     {
         PrintName = "Tactical",
         Slot = {"bo1_tacprimary"},
@@ -243,15 +243,15 @@ SWEP.Attachments = {
             vpos = Vector(15, 0.6, 0.75), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, -90),
         },
-    }, --5
+    }, --4
     {
         PrintName = "Ammo Type",
         Slot = {"ammo_pap"}
-    }, --6
+    }, --5
     {
         PrintName = "Perk",
         Slot = {"bo1_perk"}
-    }, --7
+    }, --6
     {
         PrintName = "Charm",
         Slot = "charm",
@@ -261,10 +261,10 @@ SWEP.Attachments = {
             vpos = Vector(-0.5, -0.85, 0),
             vang = Angle(0, 0, 0),
         },
-    }, --8
+    }, --7
     {
         Hidden = true,
-        Slot = "waw_jap_scope",
+        Slot = "waw_spring_scope",
         Bone = "j_gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(0, 0, 0), -- 4.6 offset that the attachment will be relative to the bone
@@ -272,44 +272,42 @@ SWEP.Attachments = {
         },
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
-    },--9
+    },--8
 }
 
 SWEP.Hook_NameChange = function(wep, name)
-    local pap = wep.Attachments[6].Installed == "ammo_papunch"
-    local snipe = wep.Attachments[9].Installed == "optic_waw_kogaku"
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local snipe = wep.Attachments[8].Installed == "optic_waw_unertl"
 
     if pap and snipe then
-        return "Daito"
+        return "Treespotter"
     elseif pap and !snipe then
-        return "Shoto"
+        return "Krautspotter"
     end
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[6].Installed == "ammo_papunch"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then return vm:SetSkin(1) end
 
     if wep:Clip2() == 1 then vm:SetBodygroup(3,1) end
 
-    if !wep:GetInUBGL() then vm:SetBodygroup(3,0) end
+    if wep:GetState() == ArcCW.STATE_CUSTOMIZE then
+        vm:SetBodygroup(1,0)
+    else
+        vm:SetBodygroup(0,1)
+    end
 
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
 
-    local pap = wep.Attachments[6].Installed == "ammo_papunch"
-    local snipe = 0
-    if wep.Attachments[9].Installed == "optic_waw_kogaku" then snipe = 1 end
+    local pap = wep:GetBuff_Override("PackAPunch")
 
     if wep.Attachments[2].Installed == "muzz_waw_bayonet" and anim == "bash" then
         return "bash_bayo"
-    end
-
-    if snipe == 1 then
-        return anim .. "_scope"
     end
 
     if (anim == "sgreload_start") and snipe == 1 and pap then
@@ -365,12 +363,12 @@ SWEP.Animations = {
         },
     },
     ["fire_iron"] = {
-        Source = {"fire_ads"},
+        Source = {"fire"},
         Time = 7 / 30,
         {s = "ArcCW_WAW.Arisaka_Mech", t = 1 / 30},
     },
     ["cycle_ads"] = {
-        Source = {"cycle_ads"},
+        Source = {"cycle"},
         Time = 28 / 30,
         ShellEjectAt = 10 / 30,
         SoundTable = {
@@ -398,57 +396,7 @@ SWEP.Animations = {
         },
     },
 
-    ["idle_scope"] = {
-        Source = "idle_scope",
-        Time = 1 / 30,
-    },
-    ["draw_scope"] = {
-        Source = "draw_scope",
-        Time = 0.75,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
-    },
-    ["holster_scope"] = {
-        Source = "holster_scope",
-        Time = 0.5,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
-    },
-    ["ready_scope"] = {
-        Source = "first_draw_scope",
-        Time = 31 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
-    },
-    ["fire_scope"] = {
-        Source = {"fire_scope"},
-        Time = 7 / 30,
-        {s = "ArcCW_WAW.Arisaka_Mech", t = 1 / 30},
-    },
-    ["cycle_scope"] = {
-        Source = {"cycle_scope"},
-        Time = 30 / 30,
-        ShellEjectAt = 10 / 30,
-        SoundTable = {
-            {s = "ArcCW_WAW.Arisaka_Up", t = 5 / 30},
-            {s = "ArcCW_WAW.Arisaka_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.Arisaka_Fwd", t = 20 / 30},
-            {s = "ArcCW_WAW.Arisaka_Down", t = 25 / 30},
-        },
-    },
-    ["fire_iron_scope"] = {
-        Source = {"fire_scope"},
-        Time = 7 / 30,
-        {s = "ArcCW_WAW.Arisaka_Mech", t = 1 / 30},
-    },
-    ["cycle_iron_scope"] = {
-        Source = {"cycle_scope"},
-        Time = 25 / 30,
-        ShellEjectAt = 3 / 30,
-    },
+    --SGRELOAD--
     ["sgreload_start"] = {
         Source = "reload_in",
         Time = 60 / 30,
@@ -500,6 +448,7 @@ SWEP.Animations = {
         },
     },
 
+    --BAYONET--
     ["bash"] = {
         Source = "swipe",
         Time = 30 / 30,
@@ -537,9 +486,9 @@ SWEP.Animations = {
         LHIKIn = 0.25,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_WAW.RGren_Futz", t = 34 / 30},
-            {s = "ArcCW_WAW.RGren_Load", t = 40 / 30},
-            {s = "ArcCW_WAW.RGren_Click", t = 41 / 30},
+            {s = "ArcCW_WAW.RGren_Futz", t = 24 / 30},
+            {s = "ArcCW_WAW.RGren_Load", t = 30 / 30},
+            {s = "ArcCW_WAW.RGren_Click", t = 31 / 30},
         }
     },
     ["exit_ubgl"] = {
