@@ -112,8 +112,8 @@ SWEP.CaseBones = {
 }
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-1.2, -5, 1.05),
-    Ang = Angle(-0.65, -0.085, 0),
+    Pos = Vector(-2.15, -3, 2.1),
+    Ang = Angle(0.1, -0.05, 0),
     Magnification = 1.25,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -258,7 +258,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(-0.5, -0.85, 0),
+            vpos = Vector(-0.5, -0.85, 0.25),
             vang = Angle(0, 0, 0),
         },
     }, --7
