@@ -82,7 +82,7 @@ SWEP.MagID = "Springfield" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
 
-SWEP.ShootSound = "ArcCW_WAW.Garand_Fire"
+SWEP.ShootSound = "ArcCW_WAW.Springfield_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
 SWEP.DistantShootSound = "ArcCW_WAW.K98_Ringoff"
 
@@ -349,7 +349,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
         Time = 7 / 30,
-        {s = "ArcCW_WAW.Arisaka_Mech", t = 0 / 30},
+        {s = "ArcCW_WAW.Springfield_Mech", t = 0 / 30},
     },
     ["cycle"] = {
         Source = {"cycle"},
@@ -365,7 +365,7 @@ SWEP.Animations = {
     ["fire_iron"] = {
         Source = {"fire"},
         Time = 7 / 30,
-        {s = "ArcCW_WAW.Arisaka_Mech", t = 1 / 30},
+        {s = "ArcCW_WAW.Springfield_Mech", t = 1 / 30},
     },
     ["cycle_ads"] = {
         Source = {"cycle"},

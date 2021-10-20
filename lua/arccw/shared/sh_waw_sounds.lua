@@ -367,6 +367,36 @@ sound.Add( {
     }
 } )
 
+-- Springfield --
+
+sound.Add( {
+    name = "ArcCW_WAW.Springfield_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_springfield/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Springfield_Mech",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_springfield/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Springfield_FireSnp",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_springfield/fire_snp.wav",
+    }
+} )
+
 -- ARISAKA --
 
 sound.Add( {

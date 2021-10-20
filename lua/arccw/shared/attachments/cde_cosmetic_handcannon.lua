@@ -1,6 +1,6 @@
 att.PrintName = "Annihilator Handcannon"
 att.Icon = Material("entities/acwatt_m16_stock.png", "mips smooth")
-att.Description = "Heavily modified Desert Eagle with an integral compensator and custom explosive rounds. Iron sights on top."
+att.Description = "Heavily modified Desert Eagle with an integral compensator and custom explosive rounds that offer no penetration. The rear sights are also gone."
 
 att.AutoStats = true
 att.Free = true
@@ -18,6 +18,7 @@ att.Mult_ShootPitch = 1.25
 att.Mult_SightTime = 1.25
 att.Mult_SightedSpeedMult = 0.95
 att.Mult_SpeedMult = 0.99
+att.Mult_Penetration = 0
 
 att.Mult_AccuracyMOA = 0.75
 att.Mult_Recoil = 0.9
