@@ -144,7 +144,7 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
     ["nocover"] = {
         VMBodygroups = {
-            {ind = 4, bg = 3},
+            {ind = 4, bg = 2},
         },
     },
     ["cod4e_m203"] = {
@@ -240,7 +240,7 @@ SWEP.Attachments = {
         VMScale = Vector(1, 1, 1),
         WMScale = Vector(1, 1, 1),
         Offset = {
-            vpos = Vector(6.75, 0, 1.175), -- offset that the attachment will be relative to the bone
+            vpos = Vector(6.75, 0, 1), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(11, 1.25, -3.5),
             wang = Angle(170.5, -180, 0),
@@ -252,7 +252,7 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(9, 0, 1.575), -- offset that the attachment will be relative to the bone
+            vpos = Vector(9, 0, 1.45), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(13.75, 1.15, -4.1),
             wang = Angle(170, -180, 0),
