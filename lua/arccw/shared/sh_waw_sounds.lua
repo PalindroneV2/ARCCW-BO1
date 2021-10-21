@@ -1829,3 +1829,47 @@ sound.Add({
     level = 70,
     sound = "^weapons/arccw/waw_dg2/splash.wav"
 })
+
+--- WAW ZOMBIE --
+
+sound.Add({
+    name = "ArcCW_WAW.Zombie_Attack",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_zombie/attack/0.wav",
+        "^weapons/arccw/waw_zombie/attack/1.wav",
+        "^weapons/arccw/waw_zombie/attack/2.wav",
+        "^weapons/arccw/waw_zombie/attack/3.wav",
+        "^weapons/arccw/waw_zombie/attack/4.wav",
+        "^weapons/arccw/waw_zombie/attack/5.wav",
+        "^weapons/arccw/waw_zombie/attack/6.wav",
+        "^weapons/arccw/waw_zombie/attack/7.wav",
+        "^weapons/arccw/waw_zombie/attack/8.wav",
+    }
+})
+
+sound.Add({
+    name = "ArcCW_WAW.Zombie_Draw",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_zombie/behind_03.wav",
+    }
+})
+
+
+sound.Add({
+    name = "ArcCW_WAW.Zombie_FirstDraw",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_zombie/behind_04.wav",
+    }
+})

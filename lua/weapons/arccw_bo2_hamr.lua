@@ -131,6 +131,9 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.ActivePos = Vector(1, 3, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
+SWEP.InBipodPos = Vector(0, 0, -0.5)
+SWEP.InBipodAng = Angle(0, 0, 0)
+
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
@@ -258,7 +261,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetSkin(3)
     end
 
-    if (wep:GetState() == ArcCW.STATE_CUSTOMIZE) or (wep:InBipod()) then
+    if (wep:GetState() == ArcCW.STATE_CUSTOMIZE) then
         vm:SetBodygroup(0,1)
         vm:SetBodygroup(1,1)
     else

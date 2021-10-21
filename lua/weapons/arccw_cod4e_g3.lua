@@ -20,7 +20,7 @@ SWEP.ViewModel = "models/weapons/arccw/c_cod4_g3.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_cod4_g3.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-4, 3.5, -5.25),
+    pos        =    Vector(-4, 3.5, -6),
     ang        =    Angle(-9, -1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -450,6 +450,7 @@ SWEP.Animations = {
             {s = "ArcCW_COD4E.G3_MagOut", t = 0.15},
             {s = "ArcCW_COD4E.G3_MagIn", t = 1.75}
         },
+        MinProgress = 2.5,
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -465,6 +466,7 @@ SWEP.Animations = {
             {s = "ArcCW_COD4E.G3_MagIn", t = 2.45},
             {s = "ArcCW_COD4E.G3_Chamber", t = 3.5}
         },
+        MinProgress = 4,
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
@@ -528,6 +530,7 @@ SWEP.Animations = {
             {s = "ArcCW_COD4E.G3_MagOut", t = 0.15},
             {s = "ArcCW_COD4E.G3_MagIn", t = 1.75}
         },
+        MinProgress = 2.5,
     },
     ["reload_empty_m203"] = {
         Source = "reload_empty_gl",
@@ -543,6 +546,7 @@ SWEP.Animations = {
             {s = "ArcCW_COD4E.G3_MagIn", t = 2.45},
             {s = "ArcCW_COD4E.G3_Chamber", t = 3.5}
         },
+        MinProgress = 4,
     },
     ["enter_sprint_m203"] = {
         Source = "sprint_in_gl",

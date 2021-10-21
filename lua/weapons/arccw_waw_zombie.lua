@@ -75,10 +75,16 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 0.5,
+        SoundTable = {
+            {s = "ArcCW_WAW.Zombie_Draw", t = 0}
+        },
     },
     ["ready"] = {
         Source = "draw",
         Time = 1,
+        SoundTable = {
+            {s = "ArcCW_WAW.Zombie_FirstDraw", t = 0}
+        },
     },
     ["holster"] = {
         Source = "holster",
@@ -87,6 +93,9 @@ SWEP.Animations = {
     ["bash"] = {
         Source = {"attack"},
         Time = 0.75,
+        SoundTable = {
+            {s = "ArcCW_WAW.Zombie_Attack", t = 0}
+        },
     },
 }
 

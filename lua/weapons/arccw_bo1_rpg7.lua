@@ -115,7 +115,7 @@ SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "rpg"
 SWEP.HoldtypeSights = "rpg"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 
 SWEP.ActivePos = Vector(0, 0, 0.25)
 SWEP.ActiveAng = Angle(0, 0, 0)
@@ -194,6 +194,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     if wep:Clip1() == 0 then vm:SetBodygroup(1,1) end
 
     if wep:GetBuff_Override("DOOM_EE") then
+        vm:SetBodygroup(1,0)
         vm:SetBodygroup(2,1)
         wep.ActivePos = Vector(-0.5, 1, 0.25)
         wep.ActiveAng = Angle(0, 0, 0)
@@ -280,7 +281,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload_out",
         Time = 93 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_RPG,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
