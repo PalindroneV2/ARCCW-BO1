@@ -690,6 +690,64 @@ sound.Add( {
     }
 } )
 
+-- COD4 M249
+
+sound.Add( {
+    name = "ArcCW_COD4E.M249_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_m249/fire_st.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_COD4E.M249_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_m249/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_COD4E.M249_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_m249/open.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_COD4E.M249_Close",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_m249/close.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_COD4E.M249_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_m249/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_COD4E.M249_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_m249/out.wav",
+    }
+} )
+
 -- COD4 M203
 
 
