@@ -26,8 +26,8 @@ SWEP.WorldModelOffset = {
 SWEP.MirrorVMWM = true
 SWEP.ViewModelFOV = 70
 
-SWEP.Damage = 30
-SWEP.DamageMin = 9
+SWEP.Damage = 25
+SWEP.DamageMin = 10
 SWEP.RangeMin = 15
 SWEP.Range = 60
 

@@ -26,7 +26,7 @@ SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_ballista.mdl"
 SWEP.ViewModelFOV = 60
 
 SWEP.Damage = 120
-SWEP.DamageMin = 110 -- damage done at maximum range
+SWEP.DamageMin = 90 -- damage done at maximum range
 SWEP.Range = 2000 -- in METRES
 SWEP.Penetration = 12
 SWEP.DamageType = DMG_BULLET

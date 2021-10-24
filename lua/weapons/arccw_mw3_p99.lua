@@ -27,8 +27,8 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 37
-SWEP.DamageMin = 16
+SWEP.Damage = 30
+SWEP.DamageMin = 15
 SWEP.RangeMin = 10
 SWEP.Range = 100
 

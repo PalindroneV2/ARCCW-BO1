@@ -29,7 +29,7 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultSkin = 1
 
-SWEP.Damage = 36
+SWEP.Damage = 35
 SWEP.DamageMin = 15
 SWEP.RangeMin = 10
 SWEP.Range = 100

@@ -29,8 +29,8 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
 
-SWEP.Damage = 65
-SWEP.DamageMin = 20 -- damage done at maximum range
+SWEP.Damage = 35
+SWEP.DamageMin = 15 -- damage done at maximum range
 SWEP.Range = 25 -- in METRES
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT

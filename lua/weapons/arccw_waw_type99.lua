@@ -30,8 +30,8 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 46
-SWEP.DamageMin = 39 -- damage done at maximum range
+SWEP.Damage = 45
+SWEP.DamageMin = 40 -- damage done at maximum range
 SWEP.Range = 120 -- in METRES
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET

@@ -1,7 +1,7 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
-SWEP.AdminOnly = false
+SWEP.AdminOnly = true
 
 SWEP.PrintName = "Blundergat"
 SWEP.Trivia_Class = "Wonder Weapon"
@@ -30,8 +30,8 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "000000000"
 
-SWEP.Damage = 100
-SWEP.DamageMin = 75 -- damage done at maximum range
+SWEP.Damage = 50
+SWEP.DamageMin = 40 -- damage done at maximum range
 SWEP.Range = 50 -- in METRES
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT

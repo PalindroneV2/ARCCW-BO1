@@ -28,8 +28,8 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "00000"
 
-SWEP.Damage = 35
-SWEP.DamageMin = 25 -- damage done at maximum range
+SWEP.Damage = 30
+SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.Range = 80 -- in METRES
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
