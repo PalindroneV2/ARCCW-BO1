@@ -1,6 +1,6 @@
 att.PrintName = "HK 7.62mm 10rnd"
 att.Icon = Material("entities/acwatt_bo1_ext_mag.png", "mips smooth")
-att.Description = "A shorter magazine loaded with specialized 7.62mm rounds with improved ballistics. The smaller size of the magazine allows for quicker reloads and shorter ADS times."
+att.Description = "A shorter magazine loaded with specialized 7.62mm NATO rounds with improved ballistics and damage on target. The smaller size of the magazine allows for quicker reloads and shorter ADS times."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -18,3 +18,5 @@ att.Mult_Range = 1.50
 att.Mult_AccuracyMOA = 0.95
 att.Mult_ReloadTime = 0.875
 att.Override_ClipSize = 10
+att.Mult_Damage = 1.75
+att.Mult_DamageMin = 1.25

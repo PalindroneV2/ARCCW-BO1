@@ -11,8 +11,8 @@ VertexlitGeneric
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
 
-    $detail "models/weapons/bo1/blue"
+    $detail "models/weapons/bo1/blueshift"
     $detailblendmode 2
-    "$detailblendfactor" "1"
+    "$detailblendfactor" "0.5"
 
 }

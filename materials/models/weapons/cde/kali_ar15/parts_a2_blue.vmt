@@ -18,9 +18,9 @@
 
 	"$PhongAlbedoTint" "1"
 
-    $detail "models/weapons/bo1/blue"
-    $detailblendmode 2
-    "$detailblendfactor" "1"
+    $detail "models/weapons/bo1/blueshift"
+    $detailblendmode 1
+    "$detailblendfactor" "0.3"
 
 }
 

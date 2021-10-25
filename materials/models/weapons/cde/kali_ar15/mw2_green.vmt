@@ -14,5 +14,6 @@ VertexlitGeneric
     $detail "models/weapons/bo1/od_green"
     $detailblendmode 2
     "$detailblendfactor" "0.25"
+	"$detailscale" "10"
 
 }

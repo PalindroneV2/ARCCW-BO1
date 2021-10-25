@@ -246,8 +246,13 @@ SWEP.Attachments = {
             vpos = Vector(9.15, 0, 0-0.375), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
-        InstalledEles = {"bottom_rail"}
+        InstalledEles = {"bottom_rail"},
+        MergeSlots = {5},
     }, --4
+    {
+        Hidden = true,
+        Slot = "bo1_bipod"
+    }, --5
     {
         PrintName = "Tactical",
         Slot = {"bo1_tacprimary"},

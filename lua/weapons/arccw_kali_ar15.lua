@@ -149,19 +149,24 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["20_mag"] = {
+    ["40_mag"] = {
         VMBodygroups = {
             {ind = 1, bg = 1}
         },
     },
-    ["m635"] = {
+    ["20_mag"] = {
         VMBodygroups = {
             {ind = 1, bg = 2}
         },
     },
-    ["patriot_mag"] = {
+    ["m635"] = {
         VMBodygroups = {
             {ind = 1, bg = 3}
+        },
+    },
+    ["patriot_mag"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 4}
         },
     },
     ["bo1_m203"] = {
@@ -441,6 +446,7 @@ SWEP.Attachments = {
         Slot = {"fcg_m16a2", "bo1_fcg", "fcg_kali"},
         DefaultAttName = "A1 Receiver",
         RandomChance = 3,
+        Installed = "kali_fcg_funswitch"
     }, --1
     {
         PrintName = "Optic", -- print name
@@ -480,6 +486,7 @@ SWEP.Attachments = {
         DefaultAttName = "M16A1 20 in. Barrel",
         Slot = {"kali_barrel"},
         RandomChance = 5,
+        Installed = "kali_ar15_barrel_727"
     }, --4
     {
         PrintName = "Underbarrel",
@@ -533,7 +540,7 @@ SWEP.Attachments = {
         Slot = {"kali_stock"},
         DefaultAttName = "Buffer Tube",
         RandomChance = 10,
-        --Installed = "bo1_stock_heavy"
+        Installed = "kali_stock_gen2"
     }, --9
     {
         PrintName = "Magazine",
@@ -551,7 +558,7 @@ SWEP.Attachments = {
     }, --12
     {
         PrintName = "Cosmetic",
-        Slot = {"kali_wood", "cde_cosmetic", "cde_cosmetic_tan"},
+        Slot = {"kali_wood", "cde_cosmetic", "cde_cosmetic_tan", "kali_cosmetic"},
         DefaultAttName = "Black Finish",
         FreeSlot = true,
     }, -- 13
@@ -590,7 +597,7 @@ SWEP.Hook_NameChange = function(wep, name)
     local wood = wep.Attachments[13].Installed == "cde_cosmetic_wood"
     local green = wep.Attachments[13].Installed == "cde_cosmetic_od"
     local sling = wep.Attachments[15].Installed == "kali_ar15_sling"
-    local altirons = wep:GetBuff_Override("AltIrons")
+    local troyirons = wep:GetBuff_Override("AltIrons")
 
     local ris = 0
     local length = 0
@@ -603,6 +610,9 @@ SWEP.Hook_NameChange = function(wep, name)
     elseif barrel == "kali_ar15_barrel_xm" then length = 3
     elseif barrel == "kali_ar15_barrel_727" then length = 4
     elseif barrel == "kali_ar15_barrel_ris" then
+        length = 4
+        ris = 1
+    elseif barrel == "kali_ar15_barrel_mw19" then
         length = 4
         ris = 1
     elseif barrel == "kali_ar15_barrel_patriot" then length = 5
@@ -802,7 +812,7 @@ SWEP.Hook_NameChange = function(wep, name)
                 model = "4"
                 alteration = "A1"
                 wep.Trivia_Desc = "Improvement of the M4 Carbine firing in full auto. This is the current United States Army standard rifle having mostly replaced the M16A4."
-                if sling and altirons then
+                if sling and troyirons then
                     prefix = ""
                     model = "Commando"
                     alteration = ""
@@ -999,6 +1009,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local tube = wep:GetBuff_Override("BO1_UBGL") --wep.Attachments[5].Installed == "ubgl_m16_m203"
     local key = wep:GetBuff_Override("BO1_UBMK") --wep.Attachments[5].Installed == "ubgl_aug_mk"
     local ubgl = wep.Attachments[5].Installed
+    local optic = wep.Attachments[2].Installed
+    local sling = wep.Attachments[15].Installed == "kali_ar15_sling"
+    local troyirons = wep:GetBuff_Override("AltIrons")
+    local kacirons = wep:GetBuff_Override("AltIrons2")
+    local altirons = troyirons or kacirons
 
     if ubgl != (tube or key) then
         vm:SetBodygroup(2,2)
@@ -1023,12 +1038,15 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         barrel = 8
     elseif wep.Attachments[4].Installed == "kali_ar15_barrel_ris" then
         barrel = 9
-    elseif wep.Attachments[4].Installed == "kali_ar15_barrel_risc" then
+    elseif wep.Attachments[4].Installed == "kali_ar15_barrel_mw19" then
         barrel = 10
-    elseif wep.Attachments[4].Installed == "kali_ar15_barrel_f1" then
+    elseif wep.Attachments[4].Installed == "kali_ar15_barrel_risc" then
         barrel = 11
+    elseif wep.Attachments[4].Installed == "kali_ar15_barrel_f1" then
+        barrel = 12
     end
 
+    /*
     for k = barrel, barrel do
         vm:SetBodygroup(2,k)
         if barrel <= 2 and tube then
@@ -1041,15 +1059,62 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             end
         end
     end
+    */
+
+    vm:SetBodygroup(2,barrel)
+
+    if barrel <= 2 and tube then
+        vm:SetBodygroup(2,1)
+    end
+
+    if barrel == 11 and tube then
+        vm:SetBodygroup(3,2)
+    end
+
+    if barrel == 3 and altirons then
+        vm:SetBodygroup(7, 2)
+        if troyirons then
+            vm:SetBodygroup(8, 1)
+        end
+        if kacirons then
+            vm:SetBodygroup(8, 3)
+        end
+    end
+
+    if barrel > 3 then
+        vm:SetBodygroup(7, 1)
+        if barrel == 6 then
+            vm:SetBodygroup(7, 4)
+        end
+        if barrel == 9 and altirons then
+            vm:SetBodygroup(7, 3)
+        end
+        if barrel == 11 and altirons then
+            vm:SetBodygroup(7, 3)
+        end
+    end
+
+    if barrel == 10 then
+        vm:SetBodygroup(7, 4)
+        vm:SetBodygroup(8, 3)
+        if troyirons then
+            vm:SetBodygroup(8, 1)
+        end
+        if kacirons then
+            vm:SetBodygroup(8, 3)
+        end
+        if optic then
+            vm:SetBodygroup(8, 0)
+        end
+    end
+
+    if barrel == 12 then vm:SetBodygroup(7, 4) end
+
+    ---BARREL END--
 
     if key and barrel <= 3 then
         vm:SetBodygroup(3, 4)
     end
-
-    local optic = wep.Attachments[2].Installed
-    local sling = wep.Attachments[15].Installed == "kali_ar15_sling"
-    local troyirons = wep:GetBuff_Override("AltIrons")
-    local kacirons = wep:GetBuff_Override("AltIrons2")
 
     local fcg = 0
     if wep.Attachments[1].Installed == "bo1_fcg_s13_ar15" then
@@ -1074,7 +1139,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             Magnification = 1.1,
             CrosshairInSights = false,
         }
-        if barrel == 11 then
+        if barrel == 12 then
             vm:SetBodygroup(0,2)
             vm:SetBodygroup(5,0)
             wep.IronSightStruct = {
@@ -1087,7 +1152,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
                 vm:SetBodygroup(5,4)
             end
         end
-        if barrel == 10 then
+        if barrel == 11 then
             wep.IronSightStruct = {
                 Pos = Vector(-2.765, -2, 0.25),
                 Ang = Angle(-0.05, 0.0125, 0),
@@ -1097,12 +1162,12 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         end
         if optic then
             vm:SetBodygroup(5,1)
-            if barrel == 11 then
+            if barrel == 12 then
                 vm:SetBodygroup(5,5)
             end
         end
         if fcg == 2 then
-            if barrel == 11 then
+            if barrel == 12 then
                 vm:SetBodygroup(5,0)
             else
                 vm:SetBodygroup(5,4)
@@ -1112,7 +1177,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
                     Magnification = 1.1,
                     CrosshairInSights = false,
                 }
-                if barrel == 10 then
+                if barrel == 11 then
                     wep.IronSightStruct = {
                         Pos = Vector(-2.765, -2, -0.035),
                         Ang = Angle(0.95, 0.0125, 0),
@@ -1120,7 +1185,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
                         CrosshairInSights = false,
                     }
                     if optic then
-                        vm:SetBodygroup(7,0)
+                        vm:SetBodygroup(8,0)
                     end
                 end
             end
@@ -1132,7 +1197,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
                     Magnification = 1.1,
                     CrosshairInSights = false,
                 }
-                if barrel == 10 then
+                if barrel == 9 or barrel == 11 then
+                    vm:SetBodygroup(8,2)
                     wep.IronSightStruct = {
                         Pos = Vector(-2.765, -2, 0.25),
                         Ang = Angle(-0.05, 0.0125, 0),
@@ -1140,7 +1206,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
                         CrosshairInSights = false,
                     }
                     if optic then
-                        vm:SetBodygroup(7,0)
+                        vm:SetBodygroup(8,0)
                     end
                 end
             end
@@ -1152,7 +1218,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
                     Magnification = 1.1,
                     CrosshairInSights = false,
                 }
-                if barrel == 10 then
+                if barrel == 9 or barrel == 11 then
+                    vm:SetBodygroup(8,4)
                     wep.IronSightStruct = {
                         Pos = Vector(-2.765, -2, 0.275),
                         Ang = Angle(-0.1, 0.0125, 0),
@@ -1160,26 +1227,27 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
                         CrosshairInSights = false,
                     }
                     if optic then
-                        vm:SetBodygroup(7,0)
+                        vm:SetBodygroup(8,0)
                     end
                 end
             end
             if optic then
                 vm:SetBodygroup(5,0)
-                if barrel == 11 then
+                if barrel == 12 then
                     vm:SetBodygroup(5,5)
                 end
             end
         end
     end
 
-    if sling and (troyirons or optic) then vm:SetBodygroup(6,2) end
+    if sling and altirons then vm:SetBodygroup(6,2) end
 
     local camo = 0
     if wep.Attachments[13].Installed == "cde_cosmetic_wood" then camo = 2
     elseif wep.Attachments[13].Installed == "cde_cosmetic_od" then camo = 4
     elseif wep.Attachments[13].Installed == "cde_cosmetic_tan" then camo = 6
     elseif wep.Attachments[13].Installed == "cde_cosmetic_red" then camo = 8
+    elseif wep.Attachments[13].Installed == "cde_cosmetic_blue" then camo = 10
     end
 
     for k = camo, camo do
@@ -1195,7 +1263,8 @@ SWEP.RejectAttachments = {
 SWEP.Hook_GetCapacity = function(wep, cap)
     local pap = wep:GetBuff_Override("PackAPunch")
     local m635 = wep.Attachments[10].Installed == "ammo_kali_ar15_9mm"
-    local mag20 = wep.Attachments[10].Installed == "ammo_bo1_ar15_20"
+    local mag20 = wep.Attachments[10].Installed == "ammo_kali_ar15_40"
+    local mag40 = wep.Attachments[10].Installed == "ammo_bo1_ar15_20"
     local mag100 = wep.Attachments[10].Installed == "ammo_kali_ar15_patriot"
     local patriot = wep.Attachments[4].Installed == "kali_ar15_barrel_patriot"
     local stocka = wep.Attachments[9].Installed
@@ -1240,6 +1309,8 @@ SWEP.Hook_GetCapacity = function(wep, cap)
         return 50
     elseif pap and mag20 then
         return 36
+    elseif pap and mag40 then
+        return 80
     elseif pap and mag100 and !patriot and stock != 0 then
         return 150
     elseif pap and mag100 and patriot and stock == 0 then

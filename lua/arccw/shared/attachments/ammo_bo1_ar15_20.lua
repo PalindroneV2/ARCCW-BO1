@@ -13,3 +13,4 @@ att.GivesFlags = {"mag_20"}
 
 att.SortOrder = 99
 att.Override_ClipSize = 20
+att.Mult_ReloadTime = 0.9

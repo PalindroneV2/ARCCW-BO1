@@ -22,6 +22,7 @@ att.Mult_RecoilSide = 0.95
 att.Mult_SightTime = 1.15
 att.Mult_AccuracyMOA = 0.5
 
+
 att.Override_Firemodes = {
   {
     Mode = 1,
