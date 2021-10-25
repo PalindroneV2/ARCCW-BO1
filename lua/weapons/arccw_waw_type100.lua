@@ -301,14 +301,14 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "draw",
-        Time = 1.75,
+        Time = 1,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 7 / 30,
+        Time = 60 / 800,
         ShellEjectAt = 0,
         SoundTable = {
             {s = "ArcCW_WAW.Type100_Mech", t = 1 / 30},
@@ -316,7 +316,7 @@ SWEP.Animations = {
     },
     ["fire_iron"] = {
         Source = {"fire"},
-        Time = 7 / 30,
+        Time = 60 / 800,
         ShellEjectAt = 0,
         SoundTable = {
             {s = "ArcCW_WAW.Type100_Mech", t = 1 / 30},
