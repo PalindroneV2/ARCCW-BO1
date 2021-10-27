@@ -21,8 +21,8 @@ SWEP.ViewModel = "models/weapons/arccw/c_bo3_rk5.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo3_rk5.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1.025,
-    pos        =    Vector(-9.5, 3, -3.5),
+    scale = 0.95,
+    pos        =    Vector(-15, 3.5, -3.4),
     ang        =    Angle(-6, -2.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -210,29 +210,22 @@ SWEP.Attachments = {
         PrintName = "Fire Group",
         Slot = {"bo1_fcg"},
     },--5
-    {
-        PrintName = "Magazine",
-        Slot = {"bo1_mag"},
-        DefaultAttName = "Standard Magazine"
-    },--6
-    { --7
+    { --6
         PrintName = "Ammo Type",
         Slot = {"ammo_pap"}
     },
-    { --8
+    { --7
         PrintName = "Perk",
         Slot = "bo1_perk"
     },
-    { --9
+    { --8
         PrintName = "Charm",
         Slot = "charm",
-        Bone = "j_bolt",
+        Bone = "tag_bolt_animate",
         VMScale = Vector(0.55, 0.55, 0.55),
         Offset = {
-            vpos = Vector(5, -0.5, -0.45),
+            vpos = Vector(4.6, -0.4, -0.2),
             vang = Angle(0, 0, 0),
-            wpos = Vector(8.5, 2.5, -4),
-            wang = Angle(-5, -2, 177.5)
         },
     },
 }
@@ -242,31 +235,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then
-        wep.Firemodes = {
-            {
-                Mode = 2,
-            },
-            {
-                Mode = 1
-            },
-            {
-                Mode = 0
-            }
-        }
-        return vm:SetSkin(2)
-    else
-        wep.Firemodes = {
-            {
-                Mode = -3,
-                RunawayBurst = true,
-            },
-            {
-                Mode = 1
-            },
-            {
-                Mode = 0
-            }
-        }
+        vm:SetSkin(1)
     end
 
     if wep.Attachments[5].Installed == "bo1_fcg_rapid" then vm:SetBodygroup(0,1) end
