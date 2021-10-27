@@ -788,3 +788,53 @@ sound.Add( {
         "^weapons/arccw/cod4_m203/close.wav",
     }
 } )
+
+--COD4 1911
+
+sound.Add( {
+    name = "ArcCW_COD4E.1911_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_1911/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_COD4E.1911_Sil",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_1911/sil.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_COD4E.1911_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_1911/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_COD4E.1911_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_1911/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_COD4E.1911_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/cod4_1911/out.wav",
+    }
+} )

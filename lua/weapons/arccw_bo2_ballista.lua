@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "FN Ballista"
 SWEP.Trivia_Class = "Sniper Rifle"
-SWEP.Trivia_Desc = "A high-caliber sniper rifle designed for cold-weather police and military units. Known for once holding the record of the longest range sniper shot in history."
+SWEP.Trivia_Desc = "A belgian high-caliber sniper rifle designed as a competitor to the Remington MSR and the AWM."
 SWEP.Trivia_Manufacturer = "FN Herstal"
 SWEP.Trivia_Calibre = ".338 Lapua"
 SWEP.Trivia_Mechanism = "Bolt-Action"
@@ -17,7 +17,7 @@ SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/arccw/c_bo2_ballista.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-6, 4.75, -7),
+    pos        =    Vector(-5, 4.75, -6.5),
     ang        =    Angle(-6, -2.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }

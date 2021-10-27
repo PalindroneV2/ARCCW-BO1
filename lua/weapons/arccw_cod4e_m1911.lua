@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
 SWEP.AdminOnly = false
 
 
-SWEP.PrintName = "Colt M1911A1"
+SWEP.PrintName = "Custom 1911-A1 (COD4)"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = [[
     This handgun is a staple of firearm design. It would come to influence many future semi-automatic handguns.
@@ -12,9 +12,9 @@ SWEP.Trivia_Desc = [[
 
     The pistol that forgot to become obsolete.
 
-    (Cold War Model)
+    (COD 4 Model)
 ]]
-SWEP.Trivia_Manufacturer = "Colt"
+SWEP.Trivia_Manufacturer = "Springfield Armory"
 SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Short Recoil"
 SWEP.Trivia_Country = "USA"
@@ -24,12 +24,12 @@ SWEP.Slot = 1
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/c_cde_m1911.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_cde_m1911.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_cod4_m1911.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_cod4_m1911.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     scale = 1.05,
-    pos        =    Vector(-9.75, 3, -3.75),
+    pos        =    Vector(-8.75, 3, -4.25),
     ang        =    Angle(-6, -2.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -82,9 +82,9 @@ SWEP.MagID = "m1911" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO1.M1911_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO2.Pistol_Sil"
-SWEP.DistantShootSound = "ArcCW_BO1.M1911_RingOff"
+SWEP.ShootSound = "ArcCW_COD4E.1911_Fire"
+SWEP.ShootSoundSilenced = "ArcCW_COD4E.1911_Sil"
+SWEP.DistantShootSound = "ArcCW_WAW.M1911_RingOff"
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
@@ -113,8 +113,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.5575, 3, 0.975),
-    Ang = Angle(0.1, -0.15, 0),
+    Pos = Vector(-2.475, 3, 1.6),
+    Ang = Angle(-1.35, -0.075, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -129,10 +129,10 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 SWEP.ActivePos = Vector(1, 3, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(13, 0, -2)
-SWEP.CustomizeAng = Angle(15, 40, 15)
+SWEP.CustomizePos = Vector(13, 2, 0)
+SWEP.CustomizeAng = Angle(15, 40, 20)
 
-SWEP.SprintPos = Vector(0, 3, 0)
+SWEP.SprintPos = Vector(0, 3, 0.5)
 SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(0, -4, -5)
@@ -142,67 +142,20 @@ SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
 SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.AttachmentElements = {
-    ["ammo_papunch"] = {
-        NameChange = "Pain",
-    },
-    ["ammo_1911_pap"] = {
-        NameChange = "C-3000 B1AT-CH35",
-    },
-    ["slide_modern"] = {
-        Override_IronSightStruct = {
-            Pos = Vector(-2.535, 3, 0.95),
-            Ang = Angle(0.175, -0.1, 0),
-            Magnification = 1.1,
-            CrosshairInSights = false,
-        },
-        AttPosMods = {
-            [3] = {
-                vpos = Vector(5.9, 0.1, 0.95),
-            }
-        },
-    },
-    ["slide_mid"] = {
-        AttPosMods = {
-            [3] = {
-                vpos = Vector(7, 0.1, 1),
-            }
-        },
-    },
-    ["slide_hardballer"] = {
-        NameChange = "AMT Hardballer",
-        NameChange_Priority = -1,
-        AttPosMods = {
-            [3] = {
-                vpos = Vector(8, 0.1, 1),
-            }
-        },
-    },
 }
 
 SWEP.ExtraSightDist = 2
 
 SWEP.Attachments = {
     {
-        PrintName = "Slide",
-        DefaultAttName = "Standard Slide",
-        Slot = {"m1911_slide_cw"},
-        DefaultAttIcon = Material("entities/acwatt_1911_bo2.png"),
-    },
-    {
-        PrintName = "Frame",
-        DefaultAttName = "Standard Frame",
-        Slot = {"m1911_frame_cw"},
-        DefaultAttIcon = Material("entities/acwatt_1911_bo2.png"),
-    },
-    {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle", "1911_barrel"},
+        Slot = {"muzzle"},
         VMScale = Vector(1, 0.75, 0.75),
         WMScale = Vector(1, 0.75, 0.75),
         Bone = "tag_Weapon",
         Offset = {
-            vpos = Vector(5.6, 0.1, 0.975),
+            vpos = Vector(5.325, 0.3, 1.1),
             vang = Angle(0, 0, 0),
         },
     },
@@ -212,10 +165,8 @@ SWEP.Attachments = {
         VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(3, 0, 0.2),
+            vpos = Vector(2.5, 0.3, 0.5),
             vang = Angle(0, 0, 0),
-            wpos = Vector(8.5, 2, -2.9),
-            wang = Angle(-5, -2, 177.5)
         },
     },
     {
@@ -233,80 +184,39 @@ SWEP.Attachments = {
         VMScale = Vector(0.55, 0.55, 0.55),
         FreeSlot = true,
         Offset = {
-            vpos = Vector(5, -0.3, -0.85),
+            vpos = Vector(5, 0, -0.4),
             vang = Angle(0, 0, 0),
             wpos = Vector(8.5, 2.5, -4),
             wang = Angle(-5, -2, 177.5)
         },
     },
-    {
-        PrintName = "Finish",
-        DefaultAttName = "Standard Issue",
-        Slot = "bo1_m1911_finish",
-        FreeSlot = true,
-        DefaultAttIcon = Material("entities/acwatt_1911_bo2.png"),
-    },
-    {
-        PrintName = "Sound",
-        DefaultAttName = "Black Ops 1",
-        Slot = "bo1_m1911_sound",
-        FreeSlot = true,
-        DefaultAttIcon = Material("entities/acwatt_bo1_generic.png"),
-    },
-}
-
-local slide_info = {
-    -- {{no finish, nickel, worn}, compensator}
-    ["default"] = {{0}, 1},
-    ["bocw_m1911_slide_mid"] = {{1}, 2},
-    ["bo1_m1911_slide_hardballer"] = {{2}, 3},
-    ["bo1_m1911_slide_hd"] = {{3}, 1},
-}
-local frame_info = {
-    -- {{no finish, nickel, worn}, hammer}
-    ["default"] = {{0}},
-    ["bo1_m1911_frame_hd"] = {{1}},
-}
-local finish_info = {
-    ["bo1_m1911_finish_nickel"] = 2,
-    ["bo1_m1911_finish_worn"] = 1,
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local slide = slide_info[wep.Attachments[1].Installed] or slide_info["default"]
-    local frame = frame_info[wep.Attachments[2].Installed] or frame_info["default"]
-    local finish = finish_info[wep.Attachments[8].Installed] or 0
-
-    vm:SetBodygroup(0, frame[1][finish] or frame[1][1]) -- Frame
-    vm:SetBodygroup(1, slide[1][finish] or slide[1][1]) -- Slide
-    vm:SetBodygroup(2, (wep.Attachments[3].Installed == "bo1_m1911_comp_bo3") and slide[2] or 0) -- Compensator
-
     local pap = wep:GetBuff_Override("PackAPunch")
-    local sally = wep.Attachments[6].Installed == "ammo_1911_pap"
+    local sally = wep.Attachments[4].Installed == "ammo_1911_pap"
 
-    if finish == 2 then
+    if pap or sally then
         vm:SetSkin(1)
-    elseif finish == 1 then
-        vm:SetSkin(2)
-    elseif pap or sally then
-        vm:SetSkin(3)
     end
-
 end
 
-SWEP.Hook_TranslateAnimation = function(wep, anim, data)
-    local bo2 = wep.Attachments[9].Installed == "bo1_m1911_sound_bo2"
-    local cod4 = wep.Attachments[9].Installed == "bo1_m1911_sound_cod4"
-    local eclip = wep:Clip1() == 0
+SWEP.Hook_NameChange = function(wep, name)
+    local pap = wep.Attachments[3].Installed == "ammo_papunch"
+    local sally = wep.Attachments[3].Installed == "ammo_1911_pap"
 
-    if bo2 then
-        return anim .. "_bo2"
-    elseif cod4 then
-        return anim .. "_cod4"
-    elseif eclip and !bo2 then
-        return anim .. "_empty"
+    gunname = "Custom 1911-A1"
+
+    if sally then
+        gunname = "C-3000 B1AT-CH35"
     end
+
+    if pap then
+        gunname = "Pain"
+    end
+
+    return gunname
 end
 
 SWEP.Animations = {
@@ -347,92 +257,33 @@ SWEP.Animations = {
         LHIKOut = 0.25,
     },
     ["ready"] = {
-        Source = "first_draw",
-        Time = 1,
-        SoundTable = {
-            {s = "ArcCW_BO1.M1911_Slide_Back", t = 0.2},
-            {s = "ArcCW_BO1.M1911_Slide_Fwd", t = 0.8}
-        }
-    },
-    ["ready_bo2"] = {
-        Source = "first_draw",
-        Time = 1,
-        SoundTable = {
-            {s = "ArcCW_BO2.Pistol_SlideBack", t = 0.2},
-            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 0.8}
-        }
+        Source = "draw",
+        Time = 0.5,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 8 / 30,
+        Time = 5 / 30,
         ShellEjectAt = 1 / 30,
     },
     ["fire_empty"] = {
         Source = "fire_last",
-        Time = 8 / 30,
+        Time = 5 / 30,
         ShellEjectAt = 1 / 30,
     },
     ["fire_iron"] = {
         Source = "fire_ads",
-        Time = 8 / 30,
+        Time = 5 / 30,
         ShellEjectAt = 1 / 30,
     },
     ["fire_iron_empty"] = {
         Source = "fire_last",
-        Time = 8 / 30,
+        Time = 5 / 30,
         ShellEjectAt = 1 / 30,
     },
     ["reload"] = {
-        Source = "reload",
-        Time = 1.5,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
-        SoundTable = {
-            {s = "ArcCW_BO1.M1911_Out", t = 0.25},
-            {s = "ArcCW_BO1.M1911_In", t = 1}
-        },
-    },
-    ["reload_empty"] = {
-        Source = "reload_empty",
-        Time = 2,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
-        SoundTable = {
-            {s = "ArcCW_BO1.M1911_Out", t = 0.25},
-            {s = "ArcCW_BO1.M1911_In", t = 1},
-            {s = "ArcCW_BO1.M1911_Slide_Fwd", t = 1.5}
-        },
-    },
-    ["reload_bo2"] = {
-        Source = "reload",
-        Time = 1.5,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
-        SoundTable = {
-            {s = "ArcCW_BO2.Pistol_MagOut", t = 0.25},
-            {s = "ArcCW_BO2.Pistol_MagIn", t = 1}
-        },
-    },
-    ["reload_empty_bo2"] = {
-        Source = "reload_empty",
-        Time = 2,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
-        SoundTable = {
-            {s = "ArcCW_BO2.Pistol_MagOut", t = 0.25},
-            {s = "ArcCW_BO2.Pistol_MagIn", t = 1},
-            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 1.5}
-        },
-    },
-    ["reload_cod4"] = {
         Source = "reload",
         Time = 1.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
@@ -444,7 +295,7 @@ SWEP.Animations = {
             {s = "ArcCW_COD4E.1911_In", t = 1}
         },
     },
-    ["reload_empty_cod4"] = {
+    ["reload_empty"] = {
         Source = "reload_empty",
         Time = 2,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,

@@ -18,10 +18,10 @@ SWEP.ViewModel = "models/weapons/arccw/c_cod4_m249.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_cod4_m249.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-8, 4.75, -8.25),
+    pos        =    Vector(-4.75, 4, -7.75),
     ang        =    Angle(-5, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   0.9
+    scale   =   1.25
 }
 SWEP.ViewModelFOV = 60
 
@@ -129,7 +129,7 @@ SWEP.IronSightStruct = {
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
-SWEP.HoldtypeSights = "rpg"
+SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
@@ -193,6 +193,11 @@ SWEP.AttachmentElements = {
     ["para_barrel"] = {
         VMBodygroups = {
             {ind = 2, bg = 1}
+        },
+        AttPosMods = {
+            [2] = {
+                vpos = Vector(19, 0, 2.25),
+            },
         },
     },
     ["bo1_bipod"] = {
