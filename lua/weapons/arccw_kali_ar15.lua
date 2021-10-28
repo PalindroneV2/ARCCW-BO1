@@ -446,7 +446,7 @@ SWEP.Attachments = {
         Slot = {"fcg_m16a2", "bo1_fcg", "fcg_kali"},
         DefaultAttName = "A1 Receiver",
         RandomChance = 3,
-        Installed = "kali_fcg_funswitch"
+        --Installed = "kali_fcg_funswitch"
     }, --1
     {
         PrintName = "Optic", -- print name
@@ -486,7 +486,7 @@ SWEP.Attachments = {
         DefaultAttName = "M16A1 20 in. Barrel",
         Slot = {"kali_barrel"},
         RandomChance = 5,
-        Installed = "kali_ar15_barrel_727"
+        --Installed = "kali_ar15_barrel_727"
     }, --4
     {
         PrintName = "Underbarrel",
@@ -540,7 +540,7 @@ SWEP.Attachments = {
         Slot = {"kali_stock"},
         DefaultAttName = "Buffer Tube",
         RandomChance = 10,
-        Installed = "kali_stock_gen2"
+        --Installed = "kali_stock_gen2"
     }, --9
     {
         PrintName = "Magazine",
@@ -783,7 +783,7 @@ SWEP.Hook_NameChange = function(wep, name)
                 prefix = "M"
                 model = "4"
                 alteration = " Carbine"
-                wep.Trivia_Desc = "M16A2 Carbine variant derivative of the XM4 using the recent Colt M933 flat upper receiver still firing in 3 round bursts. Part of the Colt Commando family."
+                wep.Trivia_Desc = "M16A2 Carbine variant derivative of the XM4 using the recent Colt M901 flat upper receiver still firing in 3 round bursts. Part of the Colt Commando family."
             end
         elseif k == 3 then
             if fcg == 0 then
@@ -828,7 +828,7 @@ SWEP.Hook_NameChange = function(wep, name)
                 prefix = "M"
                 model = "4"
                 alteration = " Carbine"
-                wep.Trivia_Desc = "M16A2 Carbine variant derivative of the XM4 using the recent Colt M933 flat upper receiver still firing in 3 round bursts. Part of the Colt Commando family."
+                wep.Trivia_Desc = "M16A2 Carbine variant derivative of the XM4 using the recent Colt M901 flat upper receiver still firing in 3 round bursts. Part of the Colt Commando family."
             end
         elseif k == 4 then
             if fcg == 0 then
@@ -845,7 +845,7 @@ SWEP.Hook_NameChange = function(wep, name)
                 alteration = ""
                 wep.Trivia_Desc = [[
                     M16A2 Carbine variant still firing in 3 round bursts. Part of the Colt Commando family.
-                    This is the configuration that eventually enters service as the M4 Carbine until flat top uppers from the M933 are introduced as the standard for all infantry rifles.
+                    This is the configuration that eventually enters service as the M4 Carbine until flat top uppers from the M901 are introduced as the standard for all infantry rifles.
                 ]]
                 if ris == 1 then
                     wep.Trivia_Desc = "M16A2 Carbine variant still firing in 3 round bursts. Part of the Colt Commando family. This one has a modern quad rail RIS handguard, probably aftermarket or retro-fitted military surplus."
@@ -882,7 +882,7 @@ SWEP.Hook_NameChange = function(wep, name)
                 prefix = "M"
                 model = "4"
                 alteration = " Carbine"
-                wep.Trivia_Desc = "M16A2 Carbine variant derivative of the XM4 using the recent Colt M933 flat upper receiver still firing in 3 round bursts. Part of the Colt Commando family."
+                wep.Trivia_Desc = "M16A2 Carbine variant derivative of the XM4 using the recent Colt M901 flat upper receiver still firing in 3 round bursts. Part of the Colt Commando family."
             end
         elseif k == 5 then
             prefix = "M"
@@ -915,7 +915,7 @@ SWEP.Hook_NameChange = function(wep, name)
                 alteration = ""
                 wep.Trivia_Desc = [[
                     M16A2 Carbine variant still firing in 3 round bursts. Part of the Colt Commando family.
-                    This is the configuration that eventually enters service as the M4 Carbine until flat top uppers from the M933 are introduced as the standard for all infantry rifles.
+                    This is the configuration that eventually enters service as the M4 Carbine until flat top uppers from the M901 are introduced as the standard for all infantry rifles.
                 ]]
                 if ris == 1 then
                     wep.Trivia_Desc = [[
@@ -958,7 +958,7 @@ SWEP.Hook_NameChange = function(wep, name)
                 prefix = "M"
                 model = "4"
                 alteration = " Carbine"
-                wep.Trivia_Desc = "M16A2 Carbine variant derivative of the XM4 using the recent Colt M933 flat upper receiver still firing in 3 round bursts. Part of the Colt Commando family."
+                wep.Trivia_Desc = "M16A2 Carbine variant derivative of the XM4 using the recent Colt M901 flat upper receiver still firing in 3 round bursts. Part of the Colt Commando family."
             end
         elseif k == 7 then
             if fcg == 1 or fcg == 3 then
@@ -1236,6 +1236,15 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
                 if barrel == 12 then
                     vm:SetBodygroup(5,5)
                 end
+            end
+        end
+
+        if fcg == 2 then
+            if barrel == 3 and optic then
+                vm:SetBodygroup(7, 2)
+            end
+            if (barrel == 9 or barrel == 11) and optic then
+                vm:SetBodygroup(7,3)
             end
         end
     end
