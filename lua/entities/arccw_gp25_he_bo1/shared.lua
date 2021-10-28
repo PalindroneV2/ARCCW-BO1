@@ -11,7 +11,7 @@ AddCSLuaFile()
 
 ENT.Model = "models/weapons/arccw/item/bo1_40mm_gp25.mdl"
 ENT.Ticks = 0
-ENT.FuseTime = 0.1
+ENT.FuseTime = 0.05
 ENT.Defused = false
 
 if CLIENT then

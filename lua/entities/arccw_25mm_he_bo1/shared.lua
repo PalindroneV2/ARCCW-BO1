@@ -11,7 +11,7 @@ AddCSLuaFile()
 
 ENT.Model = "models/Items/AR2_Grenade.mdl"
 ENT.Ticks = 0
-ENT.FuseTime = 0.1
+ENT.FuseTime = 0.05
 ENT.Defused = false
 
 if CLIENT then

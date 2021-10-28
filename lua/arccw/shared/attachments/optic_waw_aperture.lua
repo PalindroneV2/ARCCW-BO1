@@ -12,3 +12,4 @@ att.Desc_Cons = {
 
 att.Slot = "waw_aperture"
 att.GivesFlags = {"waw_aperture", "waw_crosshair"}
+att.WAW_Aperture = true
