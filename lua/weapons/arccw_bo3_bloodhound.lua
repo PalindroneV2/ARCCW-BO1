@@ -234,14 +234,14 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 30 / 30,
+        Time = 15 / 30,
         LHIK = true,
         LHIKIn = 0.15,
         LHIKOut = 0.5,
     },
     ["holster"] = {
         Source = "holster",
-        Time = 24 / 30,
+        Time = 15 / 30,
         LHIK = true,
         LHIKIn = 0.3,
         LHIKOut = 0.1,
@@ -299,7 +299,7 @@ SWEP.Animations = {
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 30 / 30,
+        Time = 20 / 30,
         LHIK = true,
         LHIKIn = 1,
         LHIKOut = 0.4,
