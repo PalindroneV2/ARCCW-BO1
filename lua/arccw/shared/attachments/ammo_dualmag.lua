@@ -6,10 +6,10 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = {"bo1_mag", "bo1_dualmag"}
+att.Slot = {"bo1_mag", "bo1_dualmag", "bo3_mags"}
 
 att.ExcludeFlags = {"mp5k", "ubanims"}
-att.GivesFlags = {"bo1_dual_mag", "bo2_fastmags"}
+att.GivesFlags = {"bo1_dual_mag", "bo2_fastmags", "bo1_fastmags", "fastmag"}
 att.BO1_FastMag = true
 
 att.Mult_ReloadTime = 0.75
