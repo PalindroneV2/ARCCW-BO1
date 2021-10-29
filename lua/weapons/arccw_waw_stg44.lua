@@ -439,7 +439,7 @@ SWEP.Animations = {
         },
     },
     ["fire_empty"] = {
-        Source = {"fire_empty"},
+        Source = {"fire_last"},
         Time = 6 / 30,
         ShellEjectAt = 0,
         SoundTable = {
@@ -447,7 +447,7 @@ SWEP.Animations = {
         },
     },
     ["fire_iron_empty"] = {
-        Source = {"fire_ads_empty"},
+        Source = {"fire_last"},
         Time = 6 / 30,
         ShellEjectAt = 0,
         SoundTable = {
@@ -497,12 +497,12 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["nomech_fire_empty"] = {
-        Source = {"fire_empty"},
+        Source = {"fire_last"},
         Time = 6 / 30,
         ShellEjectAt = 0,
     },
     ["nomech_fire_iron_empty"] = {
-        Source = {"fire_ads"},
+        Source = {"fire_last"},
         Time = 6 / 30,
         ShellEjectAt = 0,
     },
