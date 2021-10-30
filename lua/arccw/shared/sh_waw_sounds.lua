@@ -1765,6 +1765,100 @@ sound.Add( {
     }
 } )
 
+-- WAW LAUNCHERS --
+
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Woosh",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/front_00.wav",
+        "^weapons/arccw/waw_launchers/front_01.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Down",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/down.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Ground",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/ground.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Start",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/start.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Tap",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/tap.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Up",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/up.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Impact",
+    channel = CHAN_USER_BASE + 5,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/blast.wav",
+    }
+} )
+
 -- WUNDERWAFFE DG2 --
 
 sound.Add({

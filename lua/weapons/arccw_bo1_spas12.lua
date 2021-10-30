@@ -27,7 +27,7 @@ SWEP.WorldModelOffset = {
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_spas12.mdl"
 SWEP.ViewModelFOV = 60
 
-SWEP.DefaultBodygroups = "001000000"
+SWEP.DefaultBodygroups = "002000000"
 
 SWEP.Damage = 20
 SWEP.DamageMin = 10 -- damage done at maximum range
@@ -47,9 +47,9 @@ SWEP.Primary.ClipSize = 8 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 24
 SWEP.ReducedClipSize = 6
 
-SWEP.Recoil = 2
-SWEP.RecoilSide = 2
-SWEP.MaxRecoilBlowback = 2
+SWEP.Recoil = 2.5
+SWEP.RecoilSide = 2.5
+SWEP.MaxRecoilBlowback = 2.5
 
 SWEP.ShotgunReload = true
 
@@ -135,18 +135,17 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.AttachmentElements = {
     ["spas12_pap"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
         NamePriority = 10,
         NameChange = "SPAZ-24",
     },
-    ["spas_stockon"] = {
+    ["stock_l"] = {
         VMBodygroups = {
             {ind = 2, bg = 0},
         },
     },
-    ["spas_stockoff"] = {
+    ["stock_m"] = {
         VMBodygroups = {
-            {ind = 2, bg = 2},
+            {ind = 2, bg = 1},
         }
     },
     ["mount"] = {
@@ -184,7 +183,7 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
         InstalledEles = {"mount"},
-        ExcludeFlags = {"folded"}
+        ExcludeFlags = {"stock_l"}
     }, --1
     {
         PrintName = "Muzzle",
@@ -222,8 +221,8 @@ SWEP.Attachments = {
     }, --4
     {
         PrintName = "Stock",
-        Slot = "spas12_stock",
-        DefaultAttName = "Unfolded Stock",
+        Slot = "bo1_stock_lm",
+        DefaultAttName = "No Stock",
         GivesFlags = {"notfolded"}
     }, --5
     { --6

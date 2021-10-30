@@ -236,13 +236,14 @@ SWEP.Attachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[5].Installed == "ammo_papunch"
-    local snub = wep.Attachments[2].Installed == "bo1_barrel_python_snub"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
+    local snub = wep.Attachments[2].Installed == "bo1_python_snub"
 
-    if papcamo and !snub then
-        return vm:SetSkin(2)
-    elseif papcamo and snub then
-        return vm:SetSkin(3)
+    if papcamo then
+        vm:SetSkin(2)
+        if snub then
+            vm:SetSkin(3)
+        end
     end
 end
 

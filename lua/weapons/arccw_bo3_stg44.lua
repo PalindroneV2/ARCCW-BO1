@@ -360,17 +360,29 @@ SWEP.Hook_NameChange = function(wep, name)
     elseif length == "bo3_stg44_supp" then barrel = 2
     end
 
-    if barrel == 1 and !mp44 and !pap then
-        return "StG-44C"
-    elseif barrel == 1 and mp44 and !pap then
-        return "MP-44C/9"
-    elseif barrel == 2 and !mp44 and !pap then
-        return "StG-44SD"
-    elseif barrel == 2 and mp44 and !pap then
-        return "MP-44SD/9"
-    elseif pap then
-        return "Spatz-447+"
+    local gunname = "StG-44"
+
+    if pap then
+        gunname = "Spatz-447+"
     end
+
+    if mp44 then
+        gunname = "MP-44/9"
+    end
+
+    if barrel == 1 then
+        gunname = "StG-44C"
+        if mp44 then
+            gunname = "MP-44C/9"
+        end
+    elseif barrel == 2 then
+        gunname = "StG-44SD"
+        if mp44 then
+            gunname = "MP-44SD/9"
+        end
+    end
+
+    return gunname
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)

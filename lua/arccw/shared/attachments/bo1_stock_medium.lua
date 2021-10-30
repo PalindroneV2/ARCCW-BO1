@@ -8,7 +8,7 @@ att.Desc_Cons = {
 att.AutoStats = true
 
 att.SortOrder = 3
-att.Slot = {"bo1_stock", "bo1_stock_m", "bo1_stocks_all"}
+att.Slot = {"bo1_stock", "bo1_stock_m", "bo1_stocks_all", "bo1_stock_lm", "bo1_stock_mh"}
 
 att.Mult_Recoil = 0.7
 att.Mult_RecoilSide = 0.7

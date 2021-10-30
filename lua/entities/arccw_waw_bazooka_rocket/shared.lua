@@ -1,6 +1,6 @@
 ENT.Type 				= "anim"
 ENT.Base 				= "base_anim"
-ENT.PrintName 			= "DOOM Rocket (BO1)"
+ENT.PrintName 			= "Bazooka Rocket (BO1)"
 ENT.Author 				= ""
 ENT.Information 		= ""
 
@@ -13,7 +13,7 @@ ENT.Ticks = 0
 ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 
 if CLIENT then
-    killicon.Add( "arccw_bo1_doomrocket", "arccw/weaponicons/arccw_bo1_rpg7", Color( 255, 255, 255, 255 ) )
+    killicon.Add( "arccw_waw_bazooka_rocket", "arccw/weaponicons/arccw_waw_bazooka", Color( 255, 255, 255, 255 ) )
 end
 
 if SERVER then
@@ -25,14 +25,14 @@ if SERVER then
         self.Class = self:GetClass()
 
         self:SetHealth(1)
-        self:SetModel("models/weapons/arccw/item/bo1_rpgrocket.mdl")
+        self:SetModel("models/weapons/arccw/item/waw_bazooka_rocket.mdl")
         self:SetNoDraw( false )
 
         self:SetSolid( SOLID_VPHYSICS )
         self:PhysicsInit( SOLID_VPHYSICS )
         self:SetMoveType( MOVETYPE_VPHYSICS )
         self:DrawShadow(false)
-        self:GetPhysicsObject():EnableGravity(false)
+        --self:GetPhysicsObject():EnableGravity(false)
 
         if (self:GetPhysicsObject():IsValid()) then
             self:GetPhysicsObject():Wake()
@@ -47,7 +47,7 @@ if SERVER then
     end
 
     function ENT:Think()
-        self:GetPhysicsObject():SetVelocity( self:GetAngles():Forward() * 500 )
+        self:GetPhysicsObject():AddVelocity(Vector(0, 0, math.Rand(100, 110))) -- gravity counterforce
     end
 
     function ENT:PhysicsCollide(data, physobj)
@@ -68,21 +68,37 @@ if SERVER then
         if self.Owner:IsValid() then
             attacker = self.Owner
         end
-
-        util.BlastDamage(self, attacker, self:GetPos(), 250, 150)
-        if attacker:IsPlayer() then
-            local dist = attacker:GetPos():Distance(self:GetPos())
-            if dist <= 128 then
-                attacker:SetVelocity((attacker:GetPos() - self:GetPos()):GetNormalized() * 750 * (1 - dist / 128))
+        -- simulate AP damage on vehicles, mainly simfphys
+        local tgt = data.HitEntity
+        while IsValid(tgt) do
+            if tgt.GetParent and IsValid(tgt:GetParent()) then
+                tgt = tgt:GetParent()
+            elseif tgt.GetBaseEnt and IsValid(tgt:GetBaseEnt()) then
+                tgt = tgt:GetBaseEnt()
+            else
+                break
             end
         end
+
+        if IsValid(tgt) then
+            local dmg = DamageInfo()
+            dmg:SetAttacker(attacker)
+            dmg:SetInflictor(self)
+            dmg:SetDamageType(DMG_BLAST)
+            dmg:SetDamage(3000)
+            dmg:SetDamagePosition(data.HitPos)
+            dmg:SetDamageForce(self:GetForward() * 3000)
+            tgt:TakeDamageInfo(dmg)
+        end
+
+        util.BlastDamage(self, attacker, self:GetPos(), self.Radius, self.Damage)
 
         if self:WaterLevel() >= 1 then
             util.Effect( "WaterSurfaceExplosion", effectdata )
             self:EmitSound("weapons/underwater_explode3.wav", 125, 100, 1, CHAN_AUTO)
         else
             util.Effect( "Explosion", effectdata)
-            self:EmitSound("ArcCW_BO1.DOOMRPG_Impact")
+            self:EmitSound("phx/kaboom.wav", 125, 100, 1, CHAN_AUTO)
         end
         self:Remove()
     end
@@ -90,13 +106,10 @@ end
 
 function ENT:Draw()
     self:DrawModel()
+    /*
+    cam.Start3D() -- Start the 3D function so we can draw onto the screen.
+        render.SetMaterial( Material("particles/bo1/raygun_ring.vmt") ) -- Tell render what material we want, in this case the flash from the gravgun
+        render.DrawSprite( self:GetPos(), 10, 10, Color(0, 255, 66) ) -- Draw the sprite in the middle of the map, at 16x16 in it's original colour with full alpha.
+    cam.End3D()
+    */
 end
-
-hook.Add("EntityTakeDamage", "ArcCW_BO1_DoomRocket", function(ply, dmginfo)
-    if not ply:IsPlayer() then return end
-    local ent = dmginfo:GetInflictor()
-    if ent:GetClass() == "arccw_bo1_doomrocket" and ent:GetOwner() == ply then
-        dmginfo:ScaleDamage(0.15)
-        dmginfo:SetDamageType(bit.bor(dmginfo:GetDamageType(), DMG_BLAST) - DMG_BLAST)
-    end
-end)

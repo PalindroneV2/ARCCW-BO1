@@ -1,6 +1,6 @@
 ENT.Type 				= "anim"
 ENT.Base 				= "base_anim"
-ENT.PrintName 			= "DOOM Rocket (BO1)"
+ENT.PrintName 			= "S5 Rocket (BO1)"
 ENT.Author 				= ""
 ENT.Information 		= ""
 
