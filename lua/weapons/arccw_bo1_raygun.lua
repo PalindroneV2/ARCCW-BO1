@@ -33,7 +33,7 @@ SWEP.Range = 200 -- in METRES
 SWEP.Penetration = 0
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = "arccw_bo1_raygun_bolt"
-SWEP.MuzzleVelocity = 999999 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 4000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.CanFireUnderwater = false

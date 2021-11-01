@@ -19,10 +19,10 @@ SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_ithaca.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(0, 3, -6),
+    pos        =    Vector(0.25, 3, -6.1),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   1
+    scale   =   1.05,
 }
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_ithaca.mdl"
 SWEP.ViewModelFOV = 60

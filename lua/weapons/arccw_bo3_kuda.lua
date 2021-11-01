@@ -20,8 +20,8 @@ SWEP.ViewModel = "models/weapons/arccw/c_bo3_kuda.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo3_kuda.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1,
-    pos        =    Vector(-4.5, 4, -4),
+    scale = 1.125,
+    pos        =    Vector(-9.1, 4, -3.7),
     ang        =    Angle(-10, -1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -119,8 +119,8 @@ SWEP.IronSightStruct = {
 }
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "smg"
-SWEP.HoldtypeSights = "smg"
+SWEP.HoldtypeActive = "ar2"
+SWEP.HoldtypeSights = "ar2"
 
 SWEP.DefaultBodygroups = "0000000000"
 

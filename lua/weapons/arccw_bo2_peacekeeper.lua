@@ -21,8 +21,8 @@ SWEP.WorldModel = "models/weapons/arccw/w_bo2_peacekeeper.mdl"
 SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_peacekeeper.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1.1,
-    pos        =    Vector(-4.5, 3.75, -5),
+    scale = 1.2,
+    pos        =    Vector(-4.75, 3.75, -5),
     ang        =    Angle(-10, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }

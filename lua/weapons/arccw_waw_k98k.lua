@@ -24,7 +24,7 @@ SWEP.WorldModelOffset = {
     pos        =    Vector(-7, 2.5, -3),
     ang        =    Angle(-15, 1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   0.9
+    scale   =   1
 }
 SWEP.ViewModelFOV = 60
 

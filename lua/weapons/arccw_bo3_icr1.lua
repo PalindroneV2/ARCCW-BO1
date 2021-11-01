@@ -21,9 +21,9 @@ SWEP.WorldModel = "models/weapons/arccw/w_bo3_icr1.mdl"
 SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo3_icr1.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1.1,
-    pos        =    Vector(-4.5, 4.5, -4.9),
-    ang        =    Angle(-10, 3, 180),
+    scale = 1.15,
+    pos        =    Vector(-9, 4.5, -3),
+    ang        =    Angle(-11, 3, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
@@ -53,7 +53,7 @@ SWEP.Recoil = 0.35
 SWEP.RecoilSide = 0.25
 SWEP.RecoilRise = 0.5
 
-SWEP.Delay = 60 / 900 -- 60 / RPM.
+SWEP.Delay = 60 / 650 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {

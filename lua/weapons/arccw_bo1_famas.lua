@@ -19,8 +19,8 @@ SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_famas.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-8, 3.5, -4.75),
-    ang        =    Angle(-10, 0, 180),
+    pos        =    Vector(-8, 3.5, -5.5),
+    ang        =    Angle(-9, -0.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale   =   1
 }
@@ -118,8 +118,8 @@ SWEP.IronSightStruct = {
 }
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "smg"
-SWEP.HoldtypeSights = "smg"
+SWEP.HoldtypeActive = "ar2"
+SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 

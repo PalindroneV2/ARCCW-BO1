@@ -22,7 +22,7 @@ SWEP.WorldModelOffset = {
     pos        =    Vector(0.75, 3.25, -4.25),
     ang        =    Angle(-12.5, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   1
+    scale   =   1.05,
 }
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_ks23.mdl"
 SWEP.ViewModelFOV = 60
@@ -135,7 +135,7 @@ SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
 SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.AttachmentElements = {
-    ["solid_stock"] = {
+    ["stock_h"] = {
         VMBodygroups = {
             {ind = 2, bg = 1},
         }
@@ -207,9 +207,9 @@ SWEP.Attachments = {
     }, --4
     {
         PrintName = "Stock",
-        Slot = "bo1_stock",
+        Slot = "bo1_stock_h",
         DefaultAttName = "No Stock",
-        Installed = "bo1_stock_medium",
+        Installed = "bo1_stock_heavy",
         ExcludeFlags = {"doom_ee"},
     }, --5
     {
@@ -237,7 +237,6 @@ SWEP.Attachments = {
 }
 
 SWEP.RejectAttachments = {
-    ["bo1_stock_light"] = true,
 }
 
 SWEP.Hook_NameChange = function(wep, name)
