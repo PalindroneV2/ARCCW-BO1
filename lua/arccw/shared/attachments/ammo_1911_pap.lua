@@ -10,7 +10,7 @@ att.AutoStats = true
 att.Slot = {"ammo_1911_pap"}
 
 att.MagReducer = true
-att.ActivateElements = {"reducedmag"}
+att.ActivateElements = {"reducedmag", "pap_starting"}
 att.AdminOnly = true
 att.PackAPunch = true
 

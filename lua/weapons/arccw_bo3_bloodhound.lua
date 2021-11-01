@@ -145,7 +145,7 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
         NamePriority = 10,
-        NameChange = "Cobra",
+        NameChange = "Bone Grinder",
     },
     ["barrel_mid"] = {
         VMBodygroups = {
@@ -156,6 +156,9 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 1, bg = 2}
         },
+    },
+    ["pap_starting"] = {
+        NameChange = "Meat Wagon",
     },
 }
 
@@ -188,7 +191,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Ammo Type",
-        Slot = {"ammo_pap"}
+        Slot = {"ammo_pap", "ammo_1911_pap"}
     },
     {
         PrintName = "Perk",
@@ -220,7 +223,7 @@ SWEP.Attachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[4].Installed == "ammo_papunch"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then
         vm:SetSkin(1)
