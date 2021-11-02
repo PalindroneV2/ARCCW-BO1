@@ -33,9 +33,14 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
 
-SWEP.Damage = 45
-SWEP.DamageMin = 25 -- damage done at maximum range
-SWEP.Range = 75 -- in METRES
+SWEP.Damage = 20
+SWEP.DamageMin = 3
+SWEP.Range = 40
+SWEP.RangeMin = 5
+
+SWEP.HullSize = 4
+SWEP.BodyDamageMults = {[HITGROUP_HEAD] = 1,}
+
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -73,9 +78,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_shotgun"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 27.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 50 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 400 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 50
 
 SWEP.Primary.Ammo = "buckshot" -- what ammo type the gun uses
 
@@ -341,6 +346,7 @@ SWEP.Animations = {
         },
         Time = 35 / 35,
         ShellEjectAt = 8 / 35,
+        MinProgress = 0.75,
         SoundTable = {
             {s = "ArcCW_WAW.TrenchGun_Pull", t = 8 / 35},
             {s = "ArcCW_WAW.TrenchGun_Push", t = 16 / 35},
@@ -352,6 +358,7 @@ SWEP.Animations = {
         },
         Time = 35 / 35,
         ShellEjectAt = 8 / 35,
+        MinProgress = 0.75,
         SoundTable = {
             {s = "ArcCW_WAW.TrenchGun_Pull", t = 8 / 35},
             {s = "ArcCW_WAW.TrenchGun_Push", t = 16 / 35},

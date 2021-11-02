@@ -25,9 +25,11 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 50
-SWEP.DamageMin = 40 -- damage done at maximum range
-SWEP.Range = 150 -- in METRES
+SWEP.Damage = 75
+SWEP.DamageMin = 38 -- damage done at maximum range
+SWEP.Range = 300
+SWEP.RangeMin = 30
+
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -43,10 +45,10 @@ SWEP.Primary.ClipSize = 100 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 250
 SWEP.ReducedClipSize = 75
 
-SWEP.Recoil = 1.25
+SWEP.Recoil = 1.4
 SWEP.RecoilSide = 1
 SWEP.RecoilRise = 0.75
-SWEP.VisualRecoilMult = 0
+SWEP.VisualRecoilMult = 0.5
 
 SWEP.Delay = 60 / 550-- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -65,9 +67,10 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_ar2"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 3 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 6 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 700 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 250
+SWEP.MoveDispersion = 200
+SWEP.SightsDispersion = 80
 
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
 SWEP.MagID = "m60" -- the magazine pool this gun draws from
@@ -89,9 +92,10 @@ SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 4
 
-SWEP.SpeedMult = 0.7
-SWEP.SightedSpeedMult = 0.5
+SWEP.SpeedMult = 0.8
+SWEP.SightedSpeedMult = 0.25
 SWEP.SightTime = 0.75
+SWEP.ShootSpeedMult = 0.75
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
      [0] = "j_bullets0",
