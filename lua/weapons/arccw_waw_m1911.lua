@@ -28,7 +28,7 @@ SWEP.ViewModel = "models/weapons/arccw/c_waw_m1911.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_waw_m1911.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1.05,
+    scale   =   1.1,
     pos        =    Vector(-6.5, 3, -4.75),
     ang        =    Angle(-6, -2.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
@@ -132,8 +132,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.CustomizePos = Vector(13, 2, 0)
 SWEP.CustomizeAng = Angle(15, 40, 20)
 
-SWEP.SprintPos = Vector(0, 3, 0)
-SWEP.SprintAng = Angle(0, 0, 0)
+SWEP.SprintPos = Vector(3, 3, 0)
+SWEP.SprintAng = Angle(-7.5, 20, -10)
 
 SWEP.HolsterPos = Vector(0, -4, -5)
 SWEP.HolsterAng = Angle(37.5, 0, 0)
