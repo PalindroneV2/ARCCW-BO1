@@ -138,7 +138,7 @@ SWEP.SprintAng = Angle(0, 0, 0)
 SWEP.CustomizePos = Vector(15, 3, -2)
 SWEP.CustomizeAng = Angle(15, 40, 30)
 
-SWEP.InBipodPos = Vector(0, 0, -0.5)
+SWEP.InBipodPos = Vector(-5, 5, -1)
 SWEP.InBipodAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
@@ -312,9 +312,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.95},
-            {s = "ArcCW_BO2.AR_MagIn", t = 2.10},
+            {s = "ArcCW_BO1.RPK_MagOut", t = 0.3},
+            {s = "ArcCW_BO1.RPK_Futz", t = 1.95},
+            {s = "ArcCW_BO1.RPK_MagIn", t = 2.4},
         },
         MinProgress = 1.4,
     },
@@ -326,11 +326,11 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.95},
-            {s = "ArcCW_BO2.AR_MagIn", t = 2.10},
-            {s = "ArcCW_BO2.AR_Back", t = 2.5},
-            {s = "ArcCW_BO2.AR_Fwd", t = 2.65},
+            {s = "ArcCW_BO1.RPK_MagOut", t = 0.3},
+            {s = "ArcCW_BO1.RPK_Futz", t = 1.95},
+            {s = "ArcCW_BO1.RPK_MagIn", t = 2.4},
+            {s = "ArcCW_BO2.AR_Back", t = 2.75},
+            {s = "ArcCW_BO2.AR_Fwd", t = 2.9},
         },
         MinProgress = 2.0,
     },

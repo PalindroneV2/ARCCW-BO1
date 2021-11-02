@@ -129,6 +129,7 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.Bipod_Integral = true
 SWEP.BipodDispersion = 0.1
 SWEP.BipodRecoil = 0.1
+
 /*
 SWEP.InBipodPos = Vector(0, 0, 0)
 SWEP.InBipodAng = Angle(0, 0, 0)
