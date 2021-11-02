@@ -2254,6 +2254,73 @@ sound.Add( {
     }
 } )
 
+-- Crossbow --
+
+sound.Add( {
+    name = "ArcCW_BO1.Crossbow_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_crossbow/fire1.wav",
+        "^weapons/arccw/bo1_crossbow/fire2.wav",
+        "^weapons/arccw/bo1_crossbow/fire3.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Crossbow_Dist",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_crossbow/dist_00.wav",
+        "^weapons/arccw/bo1_crossbow/dist_01.wav",
+        "^weapons/arccw/bo1_crossbow/dist_02.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Crossbow_Draw",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_crossbow/draw.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Crossbow_Futz",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_crossbow/futz.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Crossbow_Latch",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_crossbow/latch.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Crossbow_Bolt",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_crossbow/lay_bolt.wav",
+    }
+} )
+
 -- M202 FLASH --
 
 sound.Add( {
