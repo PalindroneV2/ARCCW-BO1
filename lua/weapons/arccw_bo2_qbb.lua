@@ -290,8 +290,8 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_Back", t = 0.2},
-            {s = "ArcCW_BO2.AR_Fwd", t = 0.4}
+            {s = "ArcCW_BO2.LMG_Back", t = 0.2},
+            {s = "ArcCW_BO2.LMG_Fwd", t = 0.4}
         }
     },
     ["fire"] = {
@@ -329,8 +329,8 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.RPK_MagOut", t = 0.3},
             {s = "ArcCW_BO1.RPK_Futz", t = 1.95},
             {s = "ArcCW_BO1.RPK_MagIn", t = 2.4},
-            {s = "ArcCW_BO2.AR_Back", t = 2.75},
-            {s = "ArcCW_BO2.AR_Fwd", t = 2.9},
+            {s = "ArcCW_BO2.LMG_Back", t = 2.75},
+            {s = "ArcCW_BO2.LMG_Fwd", t = 2.9},
         },
         MinProgress = 2.0,
     },

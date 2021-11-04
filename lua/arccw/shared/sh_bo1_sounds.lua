@@ -739,6 +739,16 @@ sound.Add( {
     }
 } )
 sound.Add( {
+    name = "ArcCW_BO1.MP5_Sil",
+    channel = CHAN_STATIC,
+    volume = 1.25,
+    level = 100,
+    pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo2_mp5/sil.wav",
+    }
+} )
+sound.Add( {
     name = "ArcCW_BO1.MP5_MagIn",
     channel = CHAN_ITEM,
     volume = 1.0,
@@ -1566,6 +1576,50 @@ sound.Add({
     channel = CHAN_ITEM + 1,
     level = 70,
     sound = "^weapons/arccw/bo1_wa2000/scope.wav"
+})
+
+-- Dragunov SVD main -- 
+
+sound.Add({
+    name = "ArcCW_BO1.SVD_Fire",
+    channel = CHAN_STATIC,
+    level = 100,
+    sound = "^weapons/arccw/bo1_dragunov/fire.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.SVD_ClipIn",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo1_dragunov/in.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.SVD_ClipOut",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo1_dragunov/out.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.SVD_Back",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo1_dragunov/back.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.SVD_Fwd",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo1_dragunov/fwd.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO1.SVD_Scope",
+    channel = CHAN_USER_BASE + 1,
+    level = 70,
+    sound = "^weapons/arccw/bo1_dragunov/scope.wav"
 })
 
 -- AWSM --

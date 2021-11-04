@@ -343,7 +343,7 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO2.MP7_Charge", t = 10 / 30},
+            {s = "ArcCW_BO1.Kiparis_Bolt", t = 10 / 30},
         },
     },
     ["fire"] = {
@@ -365,8 +365,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 10 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 36 / 30}
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 36 / 30}
         },
     },
     ["reload_empty"] = {
@@ -378,9 +378,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 10 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 36 / 30},
-            {s = "ArcCW_BO2.MP7_Charge", t = 50 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 36 / 30},
+            {s = "ArcCW_BO1.Kiparis_Bolt", t = 50 / 30},
         },
     },
     ["reload_fast"] = {
@@ -392,8 +392,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 10 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 36 / 30}
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 36 / 30}
         },
     },
     ["reload_empty_fast"] = {
@@ -405,8 +405,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 10 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 36 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 36 / 30},
             {s = "ArcCW_BO1.M16_Button", t = 50 / 30},
         },
     },
@@ -472,8 +472,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 10 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 36 / 30}
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 36 / 30}
         },
     },
     ["reload_empty_grip"] = {
@@ -485,9 +485,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 10 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 36 / 30},
-            {s = "ArcCW_BO2.MP7_Charge", t = 50 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 36 / 30},
+            {s = "ArcCW_BO1.Kiparis_Bolt", t = 50 / 30},
         },
     },
     ["reload_grip_fast"] = {
@@ -499,8 +499,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 10 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 36 / 30}
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 36 / 30}
         },
     },
     ["reload_empty_grip_fast"] = {
@@ -512,8 +512,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 10 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 36 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 36 / 30},
             {s = "ArcCW_BO1.M16_Button", t = 50 / 30},
         },
     },

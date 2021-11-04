@@ -329,8 +329,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 16 / 30},
-            {s = "ArcCW_BO2.AR_MagIn", t = 47 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 16 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 47 / 30},
         },
         MinProgress = 2,
     },
@@ -344,8 +344,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 16 / 30},
-            {s = "ArcCW_BO2.AR_MagIn", t = 47 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 16 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 47 / 30},
             {s = "ArcCW_BO2.AR_Fwd", t = 65 / 30},
         },
         MinProgress = 2.5,
@@ -359,8 +359,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 10 / 30},
-            {s = "ArcCW_BO2.AR_MagIn", t = 30 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 30 / 30},
         },
         MinProgress = 1.5,
     },
@@ -373,8 +373,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 10 / 30},
-            {s = "ArcCW_BO2.AR_MagIn", t = 30 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 30 / 30},
             {s = "ArcCW_BO2.AR_Fwd", t = 45 / 30},
         },
         MinProgress = 2,

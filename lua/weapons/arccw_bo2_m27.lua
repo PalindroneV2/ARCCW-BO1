@@ -505,8 +505,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
             {s = "ArcCW_BO2.AR_MagIn", t = 40 / 35},
-            {s = "ArcCW_BO2.AR_Charge", t = 55 / 35},
-            --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
+            {s = "ArcCW_BO2.AR_Back", t = 55 / 35},
+            {s = "ArcCW_BO2.AR_Fwd", t = 60 / 35},
         },
     },
     ["enter_sprint"] = {
@@ -586,8 +586,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
             {s = "ArcCW_BO2.AR_MagIn", t = 40 / 35},
-            {s = "ArcCW_BO2.AR_Charge", t = 55 / 35},
-            --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
+            {s = "ArcCW_BO2.AR_Back", t = 55 / 35},
+            {s = "ArcCW_BO2.AR_Fwd", t = 60 / 35},
         },
     },
     ["enter_sprint_m203"] = {
@@ -721,8 +721,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
             {s = "ArcCW_BO2.AR_MagIn", t = 40 / 35},
-            {s = "ArcCW_BO2.AR_Charge", t = 55 / 35},
-            --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
+            {s = "ArcCW_BO2.AR_Back", t = 55 / 35},
+            {s = "ArcCW_BO2.AR_Fwd", t = 60 / 35},
         },
     },
     ["enter_sprint_grip"] = {

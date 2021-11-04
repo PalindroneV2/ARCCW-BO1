@@ -424,7 +424,8 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25}
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
+            {s = "ArcCW_BO1.M14_Tap", t = 1.5},
         },
         MinProgress = 1.4,
     },
@@ -438,6 +439,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
             {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
+            {s = "ArcCW_BO1.M14_Tap", t = 1.5},
             {s = "ArcCW_BO2.AR_Back", t = 2.05},
             {s = "ArcCW_BO2.AR_Fwd", t = 2.2},
         },
@@ -558,7 +560,8 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25}
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
+            {s = "ArcCW_BO1.M14_Tap", t = 1.5},
         },
         MinProgress = 1.4,
     },
@@ -569,6 +572,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
             {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
+            {s = "ArcCW_BO1.M14_Tap", t = 1.5},
             {s = "ArcCW_BO2.AR_Back", t = 2.05},
             {s = "ArcCW_BO2.AR_Fwd", t = 2.1},
         },

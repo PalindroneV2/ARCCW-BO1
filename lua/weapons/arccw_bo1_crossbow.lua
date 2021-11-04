@@ -225,13 +225,6 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
     },
-    ["ready"] = {
-        Source = "draw",
-        Time = 25 / 35,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
-    },
     ["fire"] = {
         Source = {
             "fire_last",
@@ -268,6 +261,37 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
+        Time = 10 / 30
+    },
+
+    ["idle_empty"] = {
+        Source = "idle_empty",
+        Time = 1 / 35,
+    },
+    ["draw_empty"] = {
+        Source = "draw_empty",
+        Time = 25 / 35,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+    },
+    ["holster_empty"] = {
+        Source = "holster_empty",
+        Time = 25 / 35,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+    },
+    ["enter_sprint_empty"] = {
+        Source = "sprint_in_empty",
+        Time = 10 / 30
+    },
+    ["idle_sprint_empty"] = {
+        Source = "sprint_loop_empty",
+        Time = 30 / 30
+    },
+    ["exit_sprint_empty"] = {
+        Source = "sprint_out_empty",
         Time = 10 / 30
     },
 }

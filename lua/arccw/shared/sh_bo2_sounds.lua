@@ -434,7 +434,7 @@ sound.Add({
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bo2_generic_shotgun/fire_870.wav",
+        "^weapons/arccw/bo2_generic_shotgun/fire_ksg.wav",
     }
 })
 sound.Add({
