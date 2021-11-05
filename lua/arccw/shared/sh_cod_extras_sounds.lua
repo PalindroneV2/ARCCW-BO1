@@ -349,6 +349,16 @@ sound.Add( {
     }
 } )
 
+sound.Add( {
+    name = "ArcCW_MW3E.Mech_Sniper",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_mech/sniper",
+    }
+} )
+
 -- MW3E G36 -- 
 
 sound.Add( {
@@ -444,6 +454,64 @@ sound.Add( {
     level = 100,
     sound = {
         "^weapons/arccw/mw3e_Glock/lift.wav",
+    }
+} )
+
+--MW3E RSASS--
+
+sound.Add( {
+    name = "ArcCW_MW3E.RSASS_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_RSASS/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.RSASS_Sil",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_RSASS/sil.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_MW3E.RSASS_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_RSASS/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.RSASS_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_RSASS/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.RSASS_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_RSASS/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.RSASS_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_RSASS/lift.wav",
     }
 } )
 

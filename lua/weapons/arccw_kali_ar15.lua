@@ -95,7 +95,7 @@ SWEP.CamAttachment = 4
 
 SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.4
+SWEP.SightTime = 0.3
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
@@ -433,9 +433,14 @@ SWEP.AttachmentElements = {
             {ind = 4, bg = 11}
         },
     },
-    ["famas_stock"] = {
+    ["sniper_stock"] = {
         VMBodygroups = {
             {ind = 4, bg = 12}
+        },
+    },
+    ["famas_stock"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 13}
         },
     },
 }
