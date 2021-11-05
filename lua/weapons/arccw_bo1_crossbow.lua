@@ -45,6 +45,8 @@ SWEP.TracerWidth = 3
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 1 -- DefaultClip is automatically set.
 
+SWEP.CanFireUnderwater = true
+
 SWEP.Recoil = 2
 SWEP.RecoilSide = 2
 SWEP.MaxRecoilBlowback = 2

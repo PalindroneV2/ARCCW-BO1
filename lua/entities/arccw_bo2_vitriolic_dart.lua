@@ -67,7 +67,7 @@ if SERVER then
         self.Stuck = true
 
         local tgt = data.HitEntity
-        if tgt:IsNPC() or tgt:IsNextBot() or tgt:IsWorld() or (tgt:IsPlayer() and tgt ~= self:GetOwner()) then
+        if tgt:IsNPC() or tgt:IsNextBot() or IsValid(tgt:GetPhysicsObject()) or (tgt:IsPlayer() and tgt ~= self:GetOwner()) then
             timer.Simple(0, function()
                 self:SetSolid(SOLID_NONE)
                 self:SetMoveType(MOVETYPE_NONE)

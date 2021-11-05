@@ -29,21 +29,22 @@ if SERVER then
         self:SetNoDraw( false )
 
         self:SetSolid( SOLID_VPHYSICS )
-        self:PhysicsInit( SOLID_VPHYSICS )
+        self:PhysicsInitSphere( 1 )
         self:SetMoveType( MOVETYPE_VPHYSICS )
         self:DrawShadow(false)
-        self:GetPhysicsObject():EnableGravity(false)
 
         if (self:GetPhysicsObject():IsValid()) then
             self:GetPhysicsObject():Wake()
+            self:GetPhysicsObject():SetBuoyancyRatio(0)
         end
 
-        --util.SpriteTrail(self, 0, Color( 66 , 255 , 0 ), false, 3, 6, 0.1, 1, "effects/laser1.vmt")
+        util.SpriteTrail(self, 0, Color( 66 , 255 , 0 ), false, 3, 1, 0.1, 1, "trails/tube.vmt")
 
         timer.Simple(0.1, function()
             if !IsValid(self) then return end
             self:SetCollisionGroup(COLLISION_GROUP_PROJECTILE)
         end)
+        self:GetPhysicsObject():SetVelocity( self:GetAngles():Forward() * 2000 )
     end
 
     function ENT:Think()
@@ -66,8 +67,12 @@ if SERVER then
                 end
                 self:Remove()
             end
-        else
-            self:GetPhysicsObject():SetVelocity( self:GetAngles():Forward() * 2000 )
+            if self:GetSolid() == SOLID_VPHYSICS then return
+            elseif !self.AttachToWorld and (!IsValid(self:GetParent())) or (IsValid(self:GetParent()) and self:GetParent():GetSolid() != SOLID_VPHYSICS and (self:GetParent():Health() <= 0)) then
+                self:SetParent()
+                self:PhysicsInit(SOLID_VPHYSICS)
+                self:PhysWake()
+            end
         end
     end
 
@@ -77,12 +82,29 @@ if SERVER then
         self.Stuck = true
 
         local tgt = data.HitEntity
-        if tgt:IsNPC() or tgt:IsNextBot() or tgt:IsWorld() or (tgt:IsPlayer() and tgt ~= self:GetOwner()) then
+        hp = tgt:Health()
+        local dmginfo = DamageInfo()
+        dmginfo:SetDamageType(DMG_NEVERGIB)
+        dmginfo:SetDamage(125)
+        dmginfo:SetAttacker(self:GetOwner())
+        dmginfo:SetInflictor(self)
+        tgt:TakeDamageInfo(dmginfo)
+        print(hp .. dmginfo:GetDamage())
+        local angles = self:GetAngles()
+        if IsValid(tgt:GetPhysicsObject()) then
             timer.Simple(0, function()
-                self:SetSolid(SOLID_NONE)
-                self:SetMoveType(MOVETYPE_NONE)
-                if not tgt:IsWorld() then
-                    self:SetParent(tgt)
+                self:SetAngles(angles)
+                self:SetPos(data.HitPos)
+                self:GetPhysicsObject():Sleep()
+                if tgt:IsWorld() or (IsValid(tgt)) then
+                    self:SetSolid(SOLID_NONE)
+                    self:SetMoveType(MOVETYPE_NONE)
+                    if !tgt:IsWorld() then
+                        self:SetParent(tgt)
+                        self:GetParent():DontDeleteOnRemove(self)
+                    else
+                        self.AttachToWorld = true
+                    end
                 end
             end)
         end
