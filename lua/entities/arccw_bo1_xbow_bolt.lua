@@ -87,7 +87,6 @@ if SERVER then
         dmginfo:SetAttacker(self:GetOwner())
         dmginfo:SetInflictor(self)
         tgt:TakeDamageInfo(dmginfo)
-        print(hp .. dmginfo:GetDamage())
         local angles = self:GetAngles()
         if IsValid(tgt:GetPhysicsObject()) then
             timer.Simple(0, function()
