@@ -22,10 +22,10 @@ SWEP.ViewModel = "models/weapons/arccw/c_cod4_m40a3.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_cod4_m40a3.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-5.5, 3.5, -5),
-    ang        =    Angle(-10, 1, 180),
+    pos        =    Vector(-3, 5, -6),
+    ang        =    Angle(-9, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   0.9
+    scale   =   1.1
 }
 SWEP.ViewModelFOV = 60
 
@@ -79,9 +79,8 @@ SWEP.MagID = "m40" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
 
-SWEP.ShootSound = "ArcCW_WAW.Springfield_Fire"
+SWEP.ShootSound = "ArcCW_COD4E.M40_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
-SWEP.DistantShootSound = "ArcCW_WAW.K98_Ringoff"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -109,8 +108,8 @@ SWEP.CaseBones = {
 }
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.15, -3, 2.1),
-    Ang = Angle(0.1, -0.05, 0),
+    Pos = Vector(-4.2, 0, 2.1),
+    Ang = Angle(0.1, 0, 0),
     Magnification = 1.25,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -133,9 +132,6 @@ SWEP.CustomizeAng = Angle(15, 40, 30)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
-
-SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
-SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.BarrelLength = 30
 
@@ -162,7 +158,7 @@ SWEP.AttachmentElements = {
         },
     },
     ["papname1"] = {
-        SightTime = 25 / 40
+        Mult_SightTime = 25 / 40
     },
 }
 
@@ -189,7 +185,7 @@ SWEP.Attachments = {
         WMScale = Vector(2, 1.1, 1.1),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(26, 0, 1.175), -- offset that the attachment will be relative to the bone
+            vpos = Vector(23, 0, 1.6), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(0, 0, 0),
             wang = Angle(0, 0, 0)
@@ -229,7 +225,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(-0.5, -0.85, 0.25),
+            vpos = Vector(-4, -0.85, 1),
             vang = Angle(0, 0, 0),
         },
     }, --7
@@ -300,33 +296,25 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
         Time = 7 / 30,
-        {s = "ArcCW_WAW.Springfield_Mech", t = 0 / 30},
     },
     ["cycle"] = {
         Source = {"cycle"},
         Time = 28 / 30,
         ShellEjectAt = 10 / 30,
         SoundTable = {
-            {s = "ArcCW_WAW.Arisaka_Up", t = 5 / 30},
-            {s = "ArcCW_WAW.Arisaka_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.Arisaka_Fwd", t = 20 / 30},
-            {s = "ArcCW_WAW.Arisaka_Down", t = 22 / 30},
+            {s = "ArcCW_COD4E.M40_Chamber", t = 5 / 30},
         },
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
-        {s = "ArcCW_WAW.Springfield_Mech", t = 1 / 30},
     },
     ["cycle_ads"] = {
         Source = {"cycle"},
         Time = 28 / 30,
         ShellEjectAt = 10 / 30,
         SoundTable = {
-            {s = "ArcCW_WAW.Arisaka_Up", t = 5 / 30},
-            {s = "ArcCW_WAW.Arisaka_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.Arisaka_Fwd", t = 20 / 30},
-            {s = "ArcCW_WAW.Arisaka_Down", t = 22 / 30},
+            {s = "ArcCW_COD4E.M40_Chamber", t = 5 / 30},
         },
     },
 
@@ -341,9 +329,8 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 4,
         SoundTable = {
-            {s = "ArcCW_WAW.Arisaka_Up", t = 5 / 30},
-            {s = "ArcCW_WAW.Arisaka_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.Arisaka_Insert", t = 35 / 30},
+            {s = "ArcCW_COD4E.M40_Start", t = 5 / 30},
+            {s = "ArcCW_COD4E.M40_In", t = 35 / 30},
         },
     },
     ["sgreload_insert"] = {
@@ -356,7 +343,7 @@ SWEP.Animations = {
         LHIKOut = 4,
         MinProgress = 3 / 30,
         SoundTable = {
-            {s = "ArcCW_WAW.Arisaka_Insert", t = 3 / 30},
+            {s = "ArcCW_COD4E.M40_In", t = 3 / 30},
         }
     },
     ["sgreload_insert_pap"] = {
@@ -369,7 +356,7 @@ SWEP.Animations = {
         LHIKOut = 4,
         MinProgress = 3 / 30,
         SoundTable = {
-            {s = "ArcCW_WAW.Arisaka_Insert", t = 3 / 30},
+            {s = "ArcCW_COD4E.M40_In", t = 3 / 30},
         }
     },
     ["sgreload_finish"] = {
@@ -379,8 +366,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 4,
         SoundTable = {
-            {s = "ArcCW_WAW.Arisaka_Fwd", t = 5 / 30},
-            {s = "ArcCW_WAW.Arisaka_Down", t = 10 / 30},
+            {s = "ArcCW_COD4E.M40_End", t = 5 / 30},
         },
     },
     ["sgreload_finish_empty"] = {
@@ -390,8 +376,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 4,
         SoundTable = {
-            {s = "ArcCW_WAW.Arisaka_Fwd", t = 5 / 30},
-            {s = "ArcCW_WAW.Arisaka_Down", t = 10 / 30},
+            {s = "ArcCW_COD4E.M40_End", t = 5 / 30},
         },
     },
     ["enter_sprint"] = {
