@@ -650,6 +650,61 @@ sound.Add( {
     }
 } )
 
+-- MW3E Striker --
+
+sound.Add({
+    name = "ArcCW_MW3E.Striker_Fire",
+    channel = CHAN_STATIC,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_Striker/fire.wav",
+    }
+})
+sound.Add({
+    name = "ArcCW_MW3E.Striker_Sil",
+    channel = CHAN_STATIC,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_Striker/sil.wav",
+    }
+})
+sound.Add( {
+    name = "ArcCW_MW3E.Striker_Button",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_Striker/button.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.Striker_Shell",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_Striker/shell.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.Striker_End",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_Striker/end.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.Striker_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_Striker/lift.wav",
+    }
+} )
+
 -- COD 4 M4/M16
 
 sound.Add( {
