@@ -36,7 +36,8 @@ att.HolosightPiece = "models/weapons/arccw/atts/mw3_rsass_hsp.mdl"
 att.Colorable = true
 
 att.HolosightBlackbox = true
-
 att.HolosightMagnification = 4
+att.HolosightMagnificationMin = 2
+att.HolosightMagnificationMax = 8
 
 att.Mult_SightTime = 1.1

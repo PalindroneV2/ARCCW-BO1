@@ -37,7 +37,7 @@ att.Colorable = true
 
 att.HolosightBlackbox = true
 att.HolosightMagnification = 6
-att.HolosightMagnificationMin = 6
-att.HolosightMagnificationMax = 12
+att.HolosightMagnificationMin = 2
+att.HolosightMagnificationMax = 16
 
 att.Mult_SightTime = 1.125

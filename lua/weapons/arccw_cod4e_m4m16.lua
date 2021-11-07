@@ -1,9 +1,9 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
+SWEP.Category = "ArcCW - MW Extras" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Colt M16A4"
+SWEP.PrintName = "Colt M16A4 (COD4)"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "United States Military standard issue rifle chambered in 5.56mm NATO. The modularity of the platform lets many variants of the weapon exist in several roles."
 SWEP.Trivia_Manufacturer = "Colt"

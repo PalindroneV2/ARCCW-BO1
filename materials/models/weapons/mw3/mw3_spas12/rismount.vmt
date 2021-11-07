@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\bo1\red"
+	$basetexture	"models\weapons\mw3\mw3_spas12\rismount"
 	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models\weapons\waw\normalmap"
+	$bumpmap	"models\weapons\mw3\mw3_spas12\rismount_n"
 
 	$detail "models\weapons\bo1\black_detail"
 	$detailblendmode 0

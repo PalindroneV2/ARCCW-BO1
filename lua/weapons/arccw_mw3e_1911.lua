@@ -1,7 +1,7 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = false -- this obviously has to be set to true
 SWEP.AutoSpawnable = false
-SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
+SWEP.Category = "ArcCW - MW Extras" -- edit this if you like
 SWEP.AdminOnly = false
 
 

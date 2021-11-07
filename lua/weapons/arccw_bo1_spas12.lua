@@ -253,14 +253,22 @@ SWEP.Attachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[7].Installed == "ammo_spas12_pap"
-    local off = wep.Attachments[5].Installed == "spas12_stock_off"
-    local folded = wep.Attachments[5].Installed == "spas12_stock_on"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
+    local folded = wep.Attachments[5].Installed == "bo1_stock_light"
 
-    if papcamo and folded then
-        return vm:SetSkin(2)
-    elseif papcamo and (!off or off) then
-        return vm:SetSkin(3)
+    if papcamo then
+        vm:SetSkin(3)
+        if folded then
+            vm:SetSkin(2)
+        end
+    end
+end
+
+SWEP.Hook_SelectInsertAnimation = function(wep, data)
+    local pap = wep:GetBuff_Override("PackAPunch")
+
+    if pap then
+        return {count = 24, anim = "sgreload_insert_pap"}
     end
 end
 
@@ -335,30 +343,21 @@ SWEP.Animations = {
         },
     },
     ["sgreload_start"] = {
-        Source = "reload_in2",
-        Time = 30 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0,
-        SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 40 / 30},
-        },
-    },
-    ["sgreload_start_empty"] = {
         Source = "reload_in",
         Time = 54 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0,
+        RestoreAmmo = 1,
+        MinProgress = 40 / 30,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Shell", t = 40 / 30},
         },
     },
     ["sgreload_insert"] = {
         Source = "reload_loop",
-        Time = 24 / 30,
+        Time = 26 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
         LHIK = true,
@@ -367,21 +366,24 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO1.MK_Shell", t = 10 / 30},
         },
+        MinProgress = 15 / 30,
+    },
+    ["sgreload_insert_pap"] = {
+        Source = "reload_loop",
+        Time = 26 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnimStartTime = 0.3,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
+        SoundTable = {
+            {s = "ArcCW_BO1.MK_Shell", t = 10 / 30},
+        },
+        MinProgress = 15 / 30,
     },
     ["sgreload_finish"] = {
         Source = "reload_out",
-        Time = 24 / 30,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 1,
-        SoundTable = {
-            {s = "ArcCW_BO1.SPAS_Back", t = 8 / 30},
-            {s = "ArcCW_BO1.SPAS_Fwd", t = 12 / 30},
-        },
-    },
-    ["sgreload_finish_empty"] = {
-        Source = "reload_out",
-        Time = 24 / 30,
+        Time = 26 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 1,

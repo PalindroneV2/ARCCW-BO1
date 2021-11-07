@@ -1,6 +1,6 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
+SWEP.Category = "ArcCW - MW Extras" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "M40A3"
@@ -173,7 +173,7 @@ SWEP.Attachments = {
             vang = Angle(0, 0, 0),
         },
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(1.5, 0, 0),
+        CorrectiveAng = Angle(0.5, 0.5, 0),
         InstalledEles = {"mount"},
         MergeSlots = {8}
     },
@@ -302,7 +302,7 @@ SWEP.Animations = {
         Time = 28 / 30,
         ShellEjectAt = 10 / 30,
         SoundTable = {
-            {s = "ArcCW_COD4E.M40_Chamber", t = 5 / 30},
+            {s = "ArcCW_COD4E.M40_Chamber", t = 1 / 30},
         },
     },
     ["fire_iron"] = {
@@ -314,7 +314,7 @@ SWEP.Animations = {
         Time = 28 / 30,
         ShellEjectAt = 10 / 30,
         SoundTable = {
-            {s = "ArcCW_COD4E.M40_Chamber", t = 5 / 30},
+            {s = "ArcCW_COD4E.M40_Chamber", t = 1 / 30},
         },
     },
 

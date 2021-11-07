@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "QCW-05"
+SWEP.PrintName = "Chicom CQB"
 SWEP.Trivia_Class = "Personal Defense Weapon"
 SWEP.Trivia_Desc = "A Chinese PDW that operatres in 4-round bursts."
 SWEP.Trivia_Manufacturer = "Jianshe Industry"
@@ -150,10 +150,6 @@ SWEP.BarrelLength = 10
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["ammo_papunch"] = {
-        NamePriority = 10,
-        NameChange = "PAPCHICOM",
-    },
     ["bo2_fastmag"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
@@ -259,6 +255,18 @@ SWEP.Attachments = {
         },
     },
 }
+
+SWEP.Hook_NameChange = function(wep, name)
+    local pap = wep:GetBuff_Override("PackAPunch")
+
+    local gunname = "QCW-05"
+
+    if pap then
+        gunname = "Cataclysmic Quadruple Burst"
+    end
+
+    return gunname
+end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm

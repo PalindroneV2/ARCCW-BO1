@@ -389,7 +389,7 @@ SWEP.Hook_NameChange = function(wep, name)
     local m607 = wep.Attachments[4].Installed == "car15_hand_a1"
 
     local brand = "Colt "
-    local model = "Commando"
+    local model = "XM177E2"
 
     for k = s13, s13 do
         if m607 then

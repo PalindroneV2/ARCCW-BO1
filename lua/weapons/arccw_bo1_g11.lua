@@ -60,6 +60,10 @@ SWEP.Firemodes = {
         PostBurstDelay = 0.112,
     },
     {
+        Mode = 2,
+        Mult_RPM = 460 / 2100,
+    },
+    {
         Mode = 1,
     },
     {
@@ -309,6 +313,22 @@ SWEP.Animations = {
         LHIKOut = 0.25,
     },
     ["ready"] = {
+        Source = "first_draw",
+        Time = 95 / 30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.25,
+        SoundTable = {
+            {s = "ArcCW_BO1.G11_Spin1", t = 23 / 35},
+            {s = "ArcCW_BO1.G11_Spin2", t = 26 / 35},
+            {s = "ArcCW_BO1.G11_Spin3", t = 29 / 35},
+            {s = "ArcCW_BO1.G11_Spin1", t = 43 / 35},
+            {s = "ArcCW_BO1.G11_Spin2", t = 46 / 35},
+            {s = "ArcCW_BO1.G11_Spin3", t = 49 / 35},
+            {s = "ArcCW_BO1.G11_Tap", t = 65 / 35},
+        },
+    },
+    ["fix"] = {
         Source = "first_draw",
         Time = 95 / 30,
         LHIK = true,

@@ -462,7 +462,7 @@ sound.Add( {
 sound.Add( {
     name = "ArcCW_MW3E.RSASS_Fire",
     channel = CHAN_STATIC,
-    volume = 1.0,
+    volume = 0.5,
     level = 100,
     sound = {
         "^weapons/arccw/mw3e_RSASS/fire.wav",
@@ -702,6 +702,45 @@ sound.Add( {
     level = 100,
     sound = {
         "^weapons/arccw/mw3e_Striker/lift.wav",
+    }
+} )
+
+-- MW3E SPAS 12 --
+
+sound.Add( {
+    name = "ArcCW_MW3E.SPAS12_Back",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_SPAS12/back.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.SPAS12_Shell",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_SPAS12/loop.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.SPAS12_Fwd",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_SPAS12/fwd.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.SPAS12_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_SPAS12/lift.wav",
     }
 } )
 

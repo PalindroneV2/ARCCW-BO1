@@ -192,7 +192,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(13, 0.21, 4.35),
+            vpos = Vector(17.5, 0, 3.875),
             vang = Angle(0, 0, 0),
         },
     },
@@ -208,10 +208,10 @@ SWEP.Attachments = {
     { --4
         PrintName = "Tactical",
         Slot = {"bo1_tacprimary"},
-        VMScale = Vector(1, 1, 1),
+        VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(9, 0.21, 4.85), -- offset that the attachment will be relative to the bone
+            vpos = Vector(9.5, -1.5, 4.5), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 180),
         },
     },

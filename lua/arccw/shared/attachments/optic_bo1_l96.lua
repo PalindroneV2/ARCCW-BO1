@@ -42,8 +42,8 @@ att.HolosightPiece = "models/weapons/arccw/atts/bo1_farview_hsp.mdl"
 att.Colorable = true
 
 att.HolosightBlackbox = true
-att.HolosightMagnification = 10
-att.HolosightMagnificationMin = 10
-att.HolosightMagnificationMax = 16
+att.HolosightMagnification = 6
+att.HolosightMagnificationMin = 2
+att.HolosightMagnificationMax = 12
 
 att.Mult_SightTime = 1.125

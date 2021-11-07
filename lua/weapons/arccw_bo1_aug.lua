@@ -293,6 +293,28 @@ SWEP.Attachments = {
     },
 }
 
+
+SWEP.Hook_NameChange = function(wep, name)
+    local A1 = wep.Attachments[6].Installed == "optic_bo1_aug"
+    local pap = wep:GetBuff_Override("PackAPunch")
+
+    local gunname = "AUG"
+    local alt = " A2"
+
+    if A1 then
+        alt = " A1"
+    end
+
+    if pap then
+        alt = "-M3NT"
+        if wep:GetBuff_Override("BO1_UBMK") then
+            alt = "-50M3"
+        end
+    end
+
+    return gunname .. alt
+end
+
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")

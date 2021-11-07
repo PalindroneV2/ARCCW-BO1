@@ -41,6 +41,6 @@ att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/waw_zf4_hsp.mdl"
 att.Colorable = true
 att.HolosightBlackbox = true
-att.HolosightMagnification = 4
+att.HolosightMagnification = 2.5
 
 att.Mult_SightTime = 1.1

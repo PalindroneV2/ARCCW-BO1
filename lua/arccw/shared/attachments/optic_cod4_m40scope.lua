@@ -35,7 +35,8 @@ att.HolosightPiece = "models/weapons/arccw/atts/cod4_m40_hsp.mdl"
 att.Colorable = true
 
 att.HolosightBlackbox = true
-
-att.HolosightMagnification = 8
+att.HolosightMagnification = 6
+att.HolosightMagnificationMin = 2
+att.HolosightMagnificationMax = 12
 
 att.Mult_SightTime = 1.1
