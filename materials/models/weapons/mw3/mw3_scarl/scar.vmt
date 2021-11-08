@@ -1,0 +1,22 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/mw3/mw3_scarl/scarl"
+	$blendtintbybasealpha  "1"
+	"$bumpmap" "models/weapons/mw3/mw3_scarl/scarl_n"
+	$phong                      		1
+	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	$detail "models/weapons/bo1/black_detail"
+	"$detailblendfactor" "0.5"
+	$detailblendmode 0
+	$detailscale 1
+
+	"$envmap" "env_cubemap"					
+	"$envmaptint" "[ .005 .005 .005 ]"					
+	"$envmapFresnel" "1"
+	"$nocull" "1"
+}

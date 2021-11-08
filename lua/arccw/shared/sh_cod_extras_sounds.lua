@@ -515,6 +515,65 @@ sound.Add( {
     }
 } )
 
+--MW3E SCARL--
+
+sound.Add( {
+    name = "ArcCW_MW3E.SCARL_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_SCARL/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_MW3E.SCARL_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_SCARL/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.SCARL_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_SCARL/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.SCARL_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_SCARL/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.SCARL_Hit",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_SCARL/hit.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_MW3E.SCARL_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_SCARL/lift.wav",
+    }
+} )
+
 -- MW3E DEAGLE SOUND --
 
 sound.Add({
