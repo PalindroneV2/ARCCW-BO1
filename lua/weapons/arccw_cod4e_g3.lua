@@ -135,9 +135,6 @@ SWEP.CustomizeAng = Angle(15, 40, 30)
 SWEP.HolsterPos = Vector(3, 0, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
 
-SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
-SWEP.BarrelOffsetHip = Vector(2, 0, -2)
-
 SWEP.BarrelLength = 30
 
 SWEP.ExtraSightDist = 5
@@ -222,6 +219,7 @@ SWEP.Attachments = {
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0.5, 0, 0),
+        MergeSlots = {14},
     }, --1
     {
         PrintName = "Muzzle",
@@ -324,6 +322,17 @@ SWEP.Attachments = {
             wang = Angle(-175, -175, 0)
         },
     }, --13
+    {
+        Hidden = true,
+        Slot = {"bo1_hendsoldt"},
+        Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
+        Offset = {
+            vpos = Vector(1.5, 0, 3.8), -- 4.6 offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+        },
+        CorrectivePos = Vector(0, 0, 0),
+        CorrectiveAng = Angle(0.1, 0, 0),
+    },
 }
 
 SWEP.Hook_NameChange = function(wep, name)
@@ -365,6 +374,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if wep.Attachments[1].Installed then
         vm:SetBodygroup(1, 1)
+    end
+    if wep.Attachments[14].Installed then
+        vm:SetBodygroup(1, 2)
     end
     if wep:GetBuff_Override("BO1_UBGL") then
         vm:SetBodygroup(4, 2)

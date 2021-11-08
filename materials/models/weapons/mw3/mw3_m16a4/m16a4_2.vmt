@@ -5,7 +5,7 @@ VertexlitGeneric
 	$bumpmap	"models\weapons\mw3\mw3_m16a4\m16a4_n"
 	
 	$detail "models\weapons\bo1\black_detail"
-	$detailblendfactor 0.9
+	$detailblendfactor 1.1
 	$detailblendmode 0
 
 	$phong                      		1

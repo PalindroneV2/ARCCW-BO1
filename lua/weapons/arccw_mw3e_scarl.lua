@@ -84,7 +84,7 @@ SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_MW3E.SCARL_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_COD4E.M4M16_Sil"
+SWEP.ShootSoundSilenced = "ArcCW_MW3E.M4M16_Sil"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -130,8 +130,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(15, 3, -2)
-SWEP.CustomizeAng = Angle(15, 40, 20)
+SWEP.CustomizePos = Vector(15, 3, 2)
+SWEP.CustomizeAng = Angle(15, 40, 30)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)

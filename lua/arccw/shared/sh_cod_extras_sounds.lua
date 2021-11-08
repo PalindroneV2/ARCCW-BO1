@@ -574,6 +574,74 @@ sound.Add( {
     }
 } )
 
+--MW3E M4M16--
+
+sound.Add( {
+    name = "ArcCW_MW3E.M4_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_M4M16/fire_m4.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.M16_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_M4M16/fire_m16.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.M4M16_Sil",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_M4M16/sil.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_MW3E.M4M16_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_M4M16/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.M4M16_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_M4M16/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_MW3E.M4M16_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_M4M16/out.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_MW3E.M4M16_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/mw3e_M4M16/lift.wav",
+    }
+} )
+
 -- MW3E DEAGLE SOUND --
 
 sound.Add({

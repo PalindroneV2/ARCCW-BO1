@@ -262,8 +262,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(-3.75, 0, 4.5), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(4.5, 0.8, -5.4),
-            wang = Angle(-9, -1, 180)
         },
         InstalledEles = {"rail"},
         CorrectivePos = Vector(0, 0, 0),
