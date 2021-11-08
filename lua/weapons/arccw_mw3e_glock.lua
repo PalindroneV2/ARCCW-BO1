@@ -235,6 +235,8 @@ SWEP.RejectAttachments = {
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
 
+    local gunname = "Glock 18"
+
     if pap then
         gunname = "Die Glocke"
     end

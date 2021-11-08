@@ -229,7 +229,7 @@ SWEP.Hook_NameChange = function(wep, name)
     local pap = wep.Attachments[4].Installed == "ammo_papunch"
     local sally = wep.Attachments[4].Installed == "ammo_1911_pap"
 
-    gunname = "HK USP Tactical"
+    local gunname = "HK USP Tactical"
 
     if sally then
         gunname = "Mist Kreator"
