@@ -166,7 +166,7 @@ SWEP.AttachmentElements = {
             {ind = 6, bg = 1},
         },
     },
-    ["bo2_altirons"] = {
+    ["g36_irons"] = {
         VMBodygroups = {
             {ind = 2, bg = 1},
             {ind = 7, bg = 1},
@@ -210,17 +210,17 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 1},
         },
     },
-    ["light_stock"] = {
+    ["stock_l"] = {
         VMBodygroups = {
             {ind = 5, bg = 1},
         },
     },
-    ["solid_stock"] = {
+    ["stock_m"] = {
         VMBodygroups = {
             {ind = 5, bg = 2},
         },
     },
-    ["solider_stock"] = {
+    ["stock_h"] = {
         VMBodygroups = {
             {ind = 5, bg = 3},
         },
@@ -300,7 +300,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {"optic", "bo2_altirons", "bo2_m27_irons"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic", "bo2_m27_irons"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(2.25, 0, 3.75), -- 4.6 offset that the attachment will be relative to the bone
@@ -382,7 +382,7 @@ SWEP.Attachments = {
     }, --7
     {
         PrintName = "Stock",
-        Slot = {"bo1_stock", "bo1_mp5stock"},
+        Slot = {"bo1_stocks_all"},
         DefaultAttName = "No Stock",
     }, --8
     {
