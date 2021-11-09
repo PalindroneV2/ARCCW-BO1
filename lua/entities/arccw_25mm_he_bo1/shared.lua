@@ -45,8 +45,6 @@ if SERVER then
         end
     end
 
-    else
-
     /*function ENT:Think()
         if self.Ticks % 5 == 0 then
             local emitter = ParticleEmitter(self:GetPos())

@@ -646,16 +646,13 @@ sound.Add( {
 --- StG-44 ---
 
 sound.Add( {
-    name = "ArcCW_BO3.STG44_COD4",
+    name = "ArcCW_WAW.STG44_Fire",
     channel = CHAN_STATIC,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bopack_stg44/stg44_fire1.wav",
-        "^weapons/arccw/bopack_stg44/stg44_fire2.wav",
-        "^weapons/arccw/bopack_stg44/stg44_fire3.wav",
-        "^weapons/arccw/bopack_stg44/stg44_fire4.wav",
+        "^weapons/arccw/waw_stg44/waw/fire_r.wav",
     }
 } )
 sound.Add( {
@@ -665,57 +662,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bopack_stg44/stg44_dod_fire.wav",
-    }
-} )
-sound.Add( {
-    name = "ArcCW_BO3.STG44_MagOut",
-    channel = CHAN_ITEM,
-    volume = 1.0,
-    level = 100,
-    --pitch = {95, 110},
-    sound = {
-        "^weapons/arccw/bopack_stg44/out.wav",
-    }
-} )
-sound.Add( {
-    name = "ArcCW_BO3.STG44_MagIn",
-    channel = CHAN_ITEM,
-    volume = 1.0,
-    level = 100,
-    --pitch = {95, 110},
-    sound = {
-        "^weapons/arccw/bopack_stg44/in.wav",
-    }
-} )
-sound.Add( {
-    name = "ArcCW_BO3.STG44_BoltBack",
-    channel = CHAN_ITEM,
-    volume = 1.0,
-    level = 100,
-    --pitch = {95, 110},
-    sound = {
-        "^weapons/arccw/bopack_stg44/back.wav",
-    }
-} )
-sound.Add( {
-    name = "ArcCW_BO3.STG44_BoltFwd",
-    channel = CHAN_ITEM,
-    volume = 1.0,
-    level = 100,
-    --pitch = {95, 110},
-    sound = {
-        "^weapons/arccw/bopack_stg44/fwd.wav",
-    }
-} )
-sound.Add( {
-    name = "ArcCW_WAW.STG44_Fire",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    level = 100,
-    --pitch = {95, 110},
-    sound = {
-        "^weapons/arccw/bopack_stg44/waw/fire_r.wav",
+        "^weapons/arccw/waw_stg44/stg44_dod_fire.wav",
     }
 } )
 sound.Add( {
@@ -725,7 +672,7 @@ sound.Add( {
     level = 70,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bopack_stg44/waw/mech.wav",
+        "^weapons/arccw/waw_stg44/waw/mech.wav",
     }
 } )
 sound.Add( {
@@ -735,7 +682,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bopack_stg44/waw/in.wav",
+        "^weapons/arccw/waw_stg44/waw/in.wav",
     }
 } )
 sound.Add( {
@@ -745,7 +692,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bopack_stg44/waw/futz.wav",
+        "^weapons/arccw/waw_stg44/waw/futz.wav",
     }
 } )
 sound.Add( {
@@ -755,7 +702,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bopack_stg44/waw/out.wav",
+        "^weapons/arccw/waw_stg44/waw/out.wav",
     }
 } )
 sound.Add( {
@@ -765,7 +712,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bopack_stg44/waw/charge.wav",
+        "^weapons/arccw/waw_stg44/waw/charge.wav",
     }
 } )
 
