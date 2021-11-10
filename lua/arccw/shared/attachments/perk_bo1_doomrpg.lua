@@ -13,6 +13,8 @@ att.AutoStats = false
 att.Slot = {"bo1_perk_doomrpg"}
 att.GivesFlags = {"doom_ee"}
 
+att.NoRandom = true
+
 att.DOOM_EE = true
 
 att.Override_Damage = 150

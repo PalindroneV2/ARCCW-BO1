@@ -9,6 +9,7 @@ att.Desc_Cons = {
 att.Slot = "sound_mp44"
 
 att.Free = true
+att.IgnorePickX = true
 
 att.GivesFlags = {"stg44_bo2_pap"}
 att.BO1_STG44_Sound = true

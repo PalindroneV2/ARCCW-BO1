@@ -4,6 +4,7 @@ att.Description = "Weapon now has a olive drab green finish."
 
 att.AutoStats = true
 att.Free = true
+att.IgnorePickX = true
 
 att.SortOrder = 99
 att.Slot = {"cde_cosmetic"}

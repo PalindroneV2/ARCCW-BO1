@@ -10,6 +10,8 @@ att.AutoStats = true
 att.Slot = {"bo1_perk_doomshotgun"}
 att.GivesFlags = {"doom_ee"}
 
+att.NoRandom = true
+
 att.DOOM_EE = true
 
 att.Mult_HipDispersion = 0

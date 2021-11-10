@@ -17,3 +17,4 @@ att.ExcludeFlags = {"kali_barrel_famas"}
 att.RequireFlags = {"a4top"}
 att.AltIrons2 = true
 att.HideIfBlocked = true
+att.IgnorePickX = true

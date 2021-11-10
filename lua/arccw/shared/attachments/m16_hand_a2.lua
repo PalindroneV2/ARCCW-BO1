@@ -4,6 +4,7 @@ att.Description = "The M16A2 handguard that replaced the A1 triangle handguard i
 
 att.SortOrder = 100
 att.Free = true
+att.IgnorePickX = true
 
 att.Desc_Pros = {
     "+ Looks cooler if you like it",

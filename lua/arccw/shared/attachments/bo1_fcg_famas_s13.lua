@@ -13,7 +13,7 @@ att.Slot = "fcg_famas"
 att.GivesFlags = {"f1_top", "famas_f1"}
 att.SortOrder = 100
 
-att.Mult_Recoil = 0.85
+att.Mult_Recoil = 0.8
 att.Mult_SightTime = 1.05
 att.Mult_SightedSpeedMult = 1.05
 

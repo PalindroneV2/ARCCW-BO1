@@ -6,4 +6,5 @@ att.Description = "A classy veteran look."
 att.Desc_Neutrals = {"bo1.m1911.worn"}
 
 att.Free = true
+att.IgnorePickX = true
 att.Slot = "bo1_m1911_finish"

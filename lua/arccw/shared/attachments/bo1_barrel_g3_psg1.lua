@@ -6,7 +6,6 @@ att.Description = [[
 ]]
 
 att.SortOrder = 109
-att.Free = true
 att.AutoStats = true
 
 att.Desc_Pros = {

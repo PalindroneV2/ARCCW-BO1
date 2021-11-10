@@ -3,7 +3,6 @@ att.Icon = Material("entities/acwatt_bo2_longbarrel.png", "mips smooth")
 att.Description = "Lighter 15.4 inch barrel reduces sight time at the cost of reduced range, stronger recoil, and increased imprecision. HK21 Handguard"
 
 att.SortOrder = 106
-att.Free = true
 att.AutoStats = true
 
 att.Desc_Pros = {

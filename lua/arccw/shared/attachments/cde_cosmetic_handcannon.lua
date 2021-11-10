@@ -3,7 +3,8 @@ att.Icon = Material("entities/acwatt_m16_stock.png", "mips smooth")
 att.Description = "Heavily modified Desert Eagle with an integral compensator and custom explosive rounds that offer no penetration. The rear sights are also gone."
 
 att.AutoStats = true
-att.Free = true
+att.Free = false
+att.IgnorePickX = false
 
 att.SortOrder = 100
 att.Slot = {"cde_cosmetic_handcannon"}

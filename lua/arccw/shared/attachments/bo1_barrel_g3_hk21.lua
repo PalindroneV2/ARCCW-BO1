@@ -4,7 +4,9 @@ att.Description = "Cosmetic Only Handguard Replacement."
 
 att.SortOrder = 110
 
+
 att.Free = true
+att.IgnorePickX = true
 att.AutoStats = true
 
 att.Desc_Pros = {

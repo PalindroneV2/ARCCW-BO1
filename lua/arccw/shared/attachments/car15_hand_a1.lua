@@ -4,6 +4,7 @@ att.Description = "Carbine length version of the A1 handguard that was used in t
 
 att.SortOrder = 100
 att.Free = true
+att.IgnorePickX = true
 
 att.Desc_Pros = {
     "+ Looks cooler if you like it",

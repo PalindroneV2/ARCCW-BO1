@@ -4,6 +4,7 @@ att.Description = "MP5SD's round ribbed handguard without the suppressor."
 
 att.SortOrder = 100
 att.Free = true
+att.IgnorePickX = true
 
 att.Desc_Pros = {
     "+ Looks cooler if you like it",

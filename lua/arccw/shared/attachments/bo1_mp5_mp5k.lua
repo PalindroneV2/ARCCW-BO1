@@ -3,7 +3,6 @@ att.Icon = Material("entities/acwatt_bo2_longbarrel.png", "mips smooth")
 att.Description = "Short-barreled MP5 variant equipped with a foregrip by default which improves recoil control slightly. Reduced weight improves sight time, sighted movement speed, and overall movement speed. Accuracy and range decrease due to the shorter barrel."
 
 att.SortOrder = 98
-att.Free = true
 
 att.Desc_Pros = {
 }

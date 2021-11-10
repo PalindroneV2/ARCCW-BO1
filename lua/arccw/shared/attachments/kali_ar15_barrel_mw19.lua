@@ -4,9 +4,15 @@ att.Description = "Standard 14.5 inch barrel with a RIS quad-rail handguard, rai
 
 att.SortOrder = 90
 
-att.Free = true
 att.AutoStats = true
---att.Ignore = true
+
+att.Mult_Range = 0.85
+att.Mult_Recoil = 1.1
+att.Mult_RecoilSide = 1.1
+att.Mult_SpeedMult = 1.1
+att.Mult_SightedSpeedMult = 1.1
+att.Mult_SightTime = 0.85
+att.Mult_AccuracyMOA = 1.1
 
 att.Desc_Pros = {
 }

@@ -6,6 +6,7 @@ att.Description = "KSG sounds from Modern Warfare 3"
 att.Slot = "bo2_ksg_sound"
 
 att.Free = true
+att.IgnorePickX = true
 att.AltSound = true
 
 att.Hook_GetShootSound = function(wep, sound)

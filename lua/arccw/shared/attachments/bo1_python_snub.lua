@@ -3,7 +3,6 @@ att.AbbrevName = "Snub Nose"
 att.Icon = Material("entities/acwatt_bo1_python_snub.png", "mips smooth")
 att.Description = "Short barrel that improves handling but worsens recoil and accuracy. Its small size means optics and tactical attachments cannot fit anymore."
 
-att.Free = true
 att.AutoStats = true
 
 att.Desc_Pros = {

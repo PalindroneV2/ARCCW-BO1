@@ -4,6 +4,7 @@ att.Description = "This RIS Handguard with covers allows the attachment of foreg
 
 att.SortOrder = 98
 att.Free = true
+att.IgnorePickX = true
 
 att.Desc_Pros = {
     "+ Only an aesthetic change",

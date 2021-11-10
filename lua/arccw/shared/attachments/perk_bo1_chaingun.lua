@@ -12,6 +12,8 @@ att.GivesFlags = {"doom_ee"}
 
 att.DOOM_EE = true
 
+att.NoRandom = true
+
 att.Mult_HipDispersion = 0
 att.Mult_MoveDispersion = 0
 att.Mult_Recoil = 0

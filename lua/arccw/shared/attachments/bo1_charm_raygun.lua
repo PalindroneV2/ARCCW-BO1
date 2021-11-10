@@ -10,6 +10,7 @@ att.AutoStats = true
 att.Slot = "charm"
 
 att.Free = true
+att.IgnorePickX = true
 
 att.Model = "models/weapons/arccw/atts/charmbase.mdl"
 

@@ -10,3 +10,7 @@ att.SortOrder = 101
 att.Slot = {"bo1_cosmetic_74u"}
 
 att.NoRandom = true
+
+
+att.Free = true
+att.IgnorePickX = true

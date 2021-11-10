@@ -6,6 +6,7 @@ att.SortOrder = 96
 
 att.Free = true
 att.AutoStats = true
+att.IgnorePickX = true
 
 att.Desc_Pros = {
 }

@@ -4,6 +4,7 @@ att.Description = "Carbine length heatshield handguard usually with an M203 atta
 
 att.SortOrder = 99
 att.Free = true
+att.IgnorePickX = true
 
 att.Desc_Pros = {
     "+ Looks cooler if you like it",

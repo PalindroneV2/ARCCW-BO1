@@ -4,7 +4,6 @@ att.AbbrevName = "Ring Hammer"
 att.Icon = Material("entities/acwatt_1911_bo3.png", "smooth mips")
 att.Description = "Improved seared ring hammer that slightly increases accuracy."
 
-att.Free = true
 att.Slot = "m1911_frame"
 
 att.AutoStats = true

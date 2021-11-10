@@ -9,6 +9,8 @@ att.Desc_Cons = {
     "- Burst Delay"
 }
 att.AutoStats = true
+att.Free = true
+att.IgnorePickX = true
 att.Slot = "bo1_fcg_burst"
 att.GivesFlags = {"bo1_3burst"}
 att.SortOrder = 101

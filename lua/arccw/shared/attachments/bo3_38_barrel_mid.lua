@@ -7,7 +7,6 @@ att.Description = [[
 ]]
 
 att.Slot = "bo3_38_barrel"
-att.Free = true
 
 att.ActivateElements = {"barrel_mid"}
 

@@ -20,5 +20,7 @@ att.Mult_HipDispersion = 0.85
 att.Mult_MoveDispersion = 0.75
 att.Mult_SightTime = 0.75
 
+att.Mult_ReloadTime = 0.95
+
 att.Mult_SpeedMult = 1.005
 att.Mult_SightedSpeedMult = 1.05

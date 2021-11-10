@@ -6,6 +6,7 @@ att.Description = "M1911A1 sound from Black Ops 2"
 
 att.Slot = "bo1_m1911_sound"
 att.Free = true
+att.IgnorePickX = true
 
 
 att.Hook_GetShootSound = function(wep, sound)

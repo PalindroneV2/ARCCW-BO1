@@ -15,6 +15,9 @@ att.GivesFlags = {"a2top"}
 att.SortOrder = 105
 att.HideIfBlocked = true
 
+att.Free = true
+att.IgnorePickX = true
+
 att.Override_Firemodes = {
     {
         Mode = -6,

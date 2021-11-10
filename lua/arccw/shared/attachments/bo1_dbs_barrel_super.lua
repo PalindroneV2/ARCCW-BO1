@@ -4,7 +4,6 @@ att.Description = "Rip and Tear until it is done."
 
 att.SortOrder = 105
 
-att.Free = true
 att.AutoStats = true
 
 att.Desc_Pros = {

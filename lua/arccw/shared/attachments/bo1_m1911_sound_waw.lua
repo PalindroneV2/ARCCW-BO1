@@ -6,6 +6,7 @@ att.Description = "M1911A1 sound from World at War"
 att.Slot = "bo1_m1911_sound"
 
 att.Free = true
+att.IgnorePickX = true
 
 att.Hook_GetShootSound = function(wep, sound)
     local sil = wep:GetBuff_Override("Silencer")

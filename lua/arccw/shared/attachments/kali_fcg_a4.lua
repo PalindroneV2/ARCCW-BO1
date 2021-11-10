@@ -11,6 +11,8 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = "fcg_kali"
 att.SortOrder = 103
+att.IgnorePickX = true
+att.Free = true
 
 --att.ActivateElements = {"flattop_carry"}
 att.GivesFlags = {"a4top", "flattop_carry"}
