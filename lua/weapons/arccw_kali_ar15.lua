@@ -326,6 +326,20 @@ SWEP.AttachmentElements = {
             },
         },
     },
+    ["kali_barrel_mw19"] = {
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(18.5, 0, 2.25),
+            },
+            [6] = {
+                vpos = Vector(11, 0, 1.75),
+            },
+            [8] = {
+                vpos = Vector(16, 0.75, 2.5),
+                vang = Angle(0, 0, -90),
+            },
+        },
+    },
     ["kali_barrel_risc"] = {
         AttPosMods = {
             [3] = {
