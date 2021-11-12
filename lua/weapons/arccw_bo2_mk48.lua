@@ -121,8 +121,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.735, -3, 1),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-3.735, 0, 1),
+    Ang = Angle(0, 0.02, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -134,7 +134,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(1, 0, 0.5)
+SWEP.ActivePos = Vector(0, 1, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.InBipodPos = Vector(-6, 0, -2)
