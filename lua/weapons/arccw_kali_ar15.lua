@@ -462,9 +462,10 @@ SWEP.AttachmentElements = {
 SWEP.Attachments = {
     {
         PrintName = "Receiver",
-        Slot = {"fcg_m16a2", "bo1_fcg", "fcg_kali"},
+        Slot = {"fcg_m16a2", "fcg_kali"},
         DefaultAttName = "A1 Receiver",
         RandomChance = 3,
+        FreeSlot = true,
         --Installed = "kali_fcg_funswitch"
     }, --1
     {
@@ -596,7 +597,8 @@ SWEP.Attachments = {
     {
         PrintName = "Sling",
         Slot = "kali_ar15_sling",
-        DefaultAttName = "No Sling"
+        DefaultAttName = "No Sling",
+        FreeSlot = true,
     }, --15
     {
         Hidden = true,

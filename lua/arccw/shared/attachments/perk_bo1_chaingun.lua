@@ -32,7 +32,8 @@ att.Hook_ModifyRPM = function(wep, delay)
     return 60 / 525
 end
 
-att.AttachSound = "weapons/arccw/bo1_olympia/waw_e1m1.wav"
+att.AttachSound = "weapons/arccw/doom_ee/doom_ee_on.wav"
+att.DetachSound = "weapons/arccw/doom_ee/doom_ee_off.wav"
 
 att.Hook_GetShootSound = function(wep, sound)
     return "ArcCW_BO1.Chaingun_Fire"

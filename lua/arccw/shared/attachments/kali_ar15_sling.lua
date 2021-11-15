@@ -21,3 +21,6 @@ att.ExcludeFlags = {"solider_stock"}
 att.ActivateElements = {"kali_bo1_sling"}
 
 att.AttachSound = "weapons/arccw/bo1_m16/bo_spawn.wav"
+
+att.Free = true
+att.IgnorePickX = true

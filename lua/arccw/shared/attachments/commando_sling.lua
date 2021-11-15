@@ -15,3 +15,6 @@ att.Desc_Cons = {
 att.Slot = "car15_sling"
 
 att.AttachSound = "weapons/arccw/bo1_m16/bo_spawn.wav"
+
+att.Free = true
+att.IgnorePickX = true
