@@ -57,11 +57,15 @@ SWEP.Recoil = 6
 SWEP.RecoilSide = 4
 SWEP.RecoilRise = 2
 
+SWEP.Bipod_Integral = true
+SWEP.BipodRecoil = 0.5
+SWEP.BipodDispersion = 0.1
+
 SWEP.SpeedMult = 0.8
 SWEP.SightedSpeedMult = 0.15
 SWEP.SightTime = 0.65
 
-SWEP.Delay = 60 / 75 -- 60 / RPM.
+SWEP.Delay = 60 / 65 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -94,7 +98,7 @@ SWEP.DistantShootSound = "ArcCW_WAW.Sniper_RingSt"
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 95
-SWEP.ShellScale = 2
+SWEP.ShellScale = 4
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on

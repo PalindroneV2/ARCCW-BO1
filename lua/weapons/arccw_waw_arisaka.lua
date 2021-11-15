@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Arisaka Type 99"
 SWEP.Trivia_Class = "Rifle"
-SWEP.Trivia_Desc = "The standard infantry rifle of the Imperial Japanese Army and Nacy during the second World War."
+SWEP.Trivia_Desc = "The standard infantry rifle of the Imperial Japanese Army and Navy during the second World War. Compared to other rifles of the time, it is relatively lightweight and fires a smaller cartridge."
 SWEP.Trivia_Manufacturer = "Nagoya Arsenal"
 SWEP.Trivia_Calibre = "7.7x58mm Arisaka"
 SWEP.Trivia_Mechanism = "Bolt Action"
@@ -31,8 +31,9 @@ SWEP.ViewModelFOV = 60
 SWEP.DefaultBodygroups = "0100000000"
 
 SWEP.Damage = 100
-SWEP.DamageMin = 75 -- damage done at maximum range
-SWEP.Range = 100 -- in METRES
+SWEP.DamageMin = 70
+SWEP.RangeMin = 15
+SWEP.Range = 150
 SWEP.Penetration = 7
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -47,8 +48,8 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 5 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 17
 
-SWEP.Recoil = 1
-SWEP.RecoilSide = 0.75
+SWEP.Recoil = 0.9
+SWEP.RecoilSide = 0.7
 SWEP.RecoilRise = 0.75
 SWEP.VisualRecoilMult = 0
 
@@ -57,6 +58,7 @@ SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 1,
+        PrintName = "fcg.bolt",
     },
     {
         Mode = 0
@@ -69,7 +71,7 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 1.75 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 2 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 200
 
@@ -92,9 +94,9 @@ SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 3
 
-SWEP.SpeedMult = 0.85
+SWEP.SpeedMult = 0.89
 SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.3
+SWEP.SightTime = 0.25
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 }
@@ -108,9 +110,9 @@ SWEP.CaseBones = {
 }
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-1.2, -5, 1.05),
+    Pos = Vector(-1.2, -3, 1.05),
     Ang = Angle(-0.65, -0.085, 0),
-    Magnification = 1.25,
+    Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }

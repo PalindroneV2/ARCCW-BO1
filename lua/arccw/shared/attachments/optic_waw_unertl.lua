@@ -1,9 +1,12 @@
 att.PrintName = "Unertl Scope (WAW)"
 att.Icon = Material("entities/acwatt_optic_waw_mosin.png", "mips smooth")
-att.Description = "Sniper Scope for the Springfield M1903A1."
+att.Description = "Sniper scope for the Springfield M1903A1."
 att.Desc_Pros = {
     "autostat.holosight",
     "autostat.zoom",
+}
+att.Desc_Cons = {
+    "bo1.sgreload",
 }
 att.Desc_Neutrals = {"bo.desc"}
 
@@ -11,6 +14,8 @@ att.SortOrder = 1000
 
 att.AutoStats = true
 att.Slot = "waw_spring_scope"
+
+att.Mult_AccuracyMOA = 0.5
 
 att.Model = "models/weapons/arccw/atts/waw_unertl.mdl"
 att.GivesFlags = {"waw_unertl"}
@@ -38,7 +43,6 @@ att.HolosightBlackbox = true
 
 att.HolosightMagnification = 4
 
-att.Mult_SightTime = 1.1
 att.Override_ShotgunReload = true
 
 att.Hook_GetDistantShootSound = function(wep, distancesound)

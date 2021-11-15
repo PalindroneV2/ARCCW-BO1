@@ -36,7 +36,8 @@ SWEP.DefaultBodygroups = "0100000000"
 
 SWEP.Damage = 100
 SWEP.DamageMin = 75 -- damage done at maximum range
-SWEP.Range = 100 -- in METRES
+SWEP.RangeMin = 15
+SWEP.Range = 300
 SWEP.Penetration = 7
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -51,8 +52,8 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 5 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 17
 
-SWEP.Recoil = 1
-SWEP.RecoilSide = 0.75
+SWEP.Recoil = 1.5
+SWEP.RecoilSide = 1
 SWEP.RecoilRise = 0.75
 SWEP.VisualRecoilMult = 0
 
@@ -61,6 +62,7 @@ SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 1,
+        PrintName = "fcg.bolt",
     },
     {
         Mode = 0

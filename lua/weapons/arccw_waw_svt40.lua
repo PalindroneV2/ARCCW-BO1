@@ -31,9 +31,10 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 50
+SWEP.Damage = 88
 SWEP.DamageMin = 40 -- damage done at maximum range
-SWEP.Range = 120 -- in METRES
+SWEP.RangeMin = 15
+SWEP.Range = 150 -- in METRES
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -48,8 +49,8 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 10 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 20
 
-SWEP.Recoil = 1
-SWEP.RecoilSide = 0.75
+SWEP.Recoil = 1.2
+SWEP.RecoilSide = 0.8
 SWEP.RecoilRise = 0.75
 
 SWEP.Delay = 60 / 600-- 60 / RPM.

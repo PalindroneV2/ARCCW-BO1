@@ -1,9 +1,12 @@
 att.PrintName = "ZF42 (WAW)"
 att.Icon = Material("entities/acwatt_optic_waw_mosin.png", "mips smooth")
-att.Description = "Sniper Scope for the Mauser Karabiner 98k."
+att.Description = "Sniper scope for the Mauser Karabiner 98k."
 att.Desc_Pros = {
     "autostat.holosight",
     "autostat.zoom",
+}
+att.Desc_Cons = {
+    "bo1.sgreload",
 }
 att.Desc_Neutrals = {"bo.desc"}
 
@@ -11,6 +14,8 @@ att.SortOrder = 1000
 
 att.AutoStats = true
 att.Slot = "waw_ger_scope"
+
+att.Mult_AccuracyMOA = 0.5
 
 att.Model = "models/weapons/arccw/atts/waw_zf42.mdl"
 att.GivesFlags = {"waw_zf42"}
@@ -38,7 +43,6 @@ att.HolosightBlackbox = true
 
 att.HolosightMagnification = 4
 
-att.Mult_SightTime = 1.1
 att.Override_ShotgunReload = true
 
 att.Hook_GetDistantShootSound = function(wep, distancesound)
