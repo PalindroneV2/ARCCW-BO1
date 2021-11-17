@@ -90,8 +90,8 @@ SWEP.ShootSoundSilenced = "ArcCW_WAW.G43_Sil"
 SWEP.DistantShootSound = "ArcCW_WAW.Rifle_RingOff"
 
 SWEP.MuzzleEffect = "muzzleflash_1"
-SWEP.ShellModel = "models/shells/shell_762nato.mdl"
-SWEP.ShellScale = 1.5
+SWEP.ShellModel = "models/shells/shell_556.mdl"
+SWEP.ShellScale = 1.1
 SWEP.ShellAngle = 180
 SWEP.ShellPitch = 90
 
