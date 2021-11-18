@@ -12,6 +12,7 @@ att.Desc_Neutrals = {
 att.AutoStats = true
 att.Slot = "ubgl_bo1"
 att.BO1_UBGL = true
+att.HideIfBlocked = true
 
 att.SortOrder = 90
 

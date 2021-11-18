@@ -10,6 +10,7 @@ att.AutoStats = true
 att.Slot = "bo2_mp7_combine"
 att.GivesFlags = {"mp7_combine"}
 att.RequireFlags = {"mp7_foregrip"}
+att.HideIfBlocked = true
 
 att.SortOrder = 100
 

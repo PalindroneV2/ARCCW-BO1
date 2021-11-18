@@ -13,6 +13,7 @@ att.ExcludeFlags = {"kali_barrel_short"}
 att.BO1_UBFlamer = true
 att.Ignore = true
 att.Spawnable = false
+att.HideIfBlocked = true
 
 att.SortOrder = 98
 
