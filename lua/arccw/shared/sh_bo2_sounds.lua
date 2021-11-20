@@ -485,6 +485,27 @@ sound.Add({
     sound = "^weapons/arccw/bo2_generic_shotgun/fwd.wav"
 })
 sound.Add({
+    name = "ArcCW_BO2.1216_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 70,
+    sound = "^weapons/arccw/bo2_generic_shotgun/in_1216.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.1216_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 70,
+    sound = "^weapons/arccw/bo2_generic_shotgun/out_1216.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.1216_Twist",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 70,
+    sound = "^weapons/arccw/bo2_generic_shotgun/twist_1216.wav"
+})
+sound.Add({
     name = "ArcCW_BO2.870_Back",
     channel = CHAN_ITEM,
     volume = 1.0,
