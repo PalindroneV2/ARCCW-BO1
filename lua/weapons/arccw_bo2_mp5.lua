@@ -375,34 +375,43 @@ SWEP.Hook_NameChange = function(wep, name)
     local sstock = wep.Attachments[7].Installed == "bo1_stock_heavy"
     local mp5sd = wep.Attachments[2].Installed == "supp_bo1_mp5"
     local mp5k = wep.Attachments[2].Installed == "bo1_mp5_mp5k"
+    local mm10 = wep.Attachments[8].Installed == "ammo_bo1_mp5_10mm"
 
-    if mp5k then
-        if pap then
-            return "MP115 Kollider"
-        end
-        return "HK MP5K"
-    end
+    local gunname = "HK MP5"
+    alt = "A"
+    number = "3"
 
     if mp5sd then
-        if sstock then
-            if pap then
-                return "MP115 Semiramis"
-            end
-            return "HK MP5SD2"
-        end
-        if pap then
-            return "MP115 Semiramis"
-        end
-        return "HK MP5SD3"
-    end
-
-    if pap then
-        return "MP115 Nimrod"
+        alt = "SD"
     end
 
     if sstock then
-        return "HK MP5A2"
+        number = "2"
     end
+
+    if mp5k then
+        alt = "K"
+        number = ""
+    end
+
+    if mm10 then
+        alt = "/"
+        number = "10"
+    end
+
+    if pap then
+        gunnamme = "HK MP115 "
+        alt = "Nimrod"
+        number = ""
+        if mp5k then
+            alt = "Kollider"
+        end
+        if mp5sd then
+            alt = "Semiramis"
+        end
+    end
+
+    return gunname .. alt .. number
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
