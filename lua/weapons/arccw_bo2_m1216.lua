@@ -149,7 +149,7 @@ SWEP.ExtraSightDist = 5
 
 SWEP.LastReloadNthShot = 0
 SWEP.Hook_PostFireBullets = function(wep)
-    if (wep:GetNthShot() - wep.LastReloadNthShot) % 4 == 0 then
+    if wep:Clip1() > 0 and (wep:GetNthShot() - wep.LastReloadNthShot) % 4 == 0 then
         wep:SetNeedCycle(true)
     end
 end
