@@ -8,6 +8,7 @@ L["bo1.enablemuzzle"] = "Enables Muzzle slot"
 L["bo1.pythonsnub"] = "Disables Optic and Tactical slot"
 L["bo1.speedloader.pro"] = "Reloads entire cylinder at once"
 L["bo1.speedloader.con"] = "Rounds left in cylinder are lost"
+L["bo1.speedloader2"] = "Reloads entire cylinder when empty"
 L["bo1.sgreload"] = "Reload one round at a time"
 
 L["bo1.m1911.hardballer"] = "Only available in Nickel finish"
