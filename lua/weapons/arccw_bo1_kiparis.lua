@@ -27,10 +27,10 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000"
 
-SWEP.Damage = 35
-SWEP.DamageMin = 7
-SWEP.Range = 90
-SWEP.RangeMin = 15
+SWEP.Damage = 32
+SWEP.DamageMin = 8
+SWEP.Range = 75
+SWEP.RangeMin = 20
 
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
@@ -47,7 +47,7 @@ SWEP.Primary.ClipSize = 20 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 35
 
 SWEP.Recoil = 0.3
-SWEP.RecoilSide = 0.4
+SWEP.RecoilSide = 0.3
 SWEP.RecoilRise = 0.75
 SWEP.VisualRecoilMult = 0.2
 

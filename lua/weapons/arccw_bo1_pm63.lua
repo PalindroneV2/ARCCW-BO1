@@ -29,7 +29,7 @@ SWEP.DefaultBodygroups = "0000000"
 
 SWEP.Damage = 36
 SWEP.DamageMin = 6
-SWEP.Range = 100
+SWEP.Range = 80
 SWEP.RangeMin = 15
 
 SWEP.Penetration = 4

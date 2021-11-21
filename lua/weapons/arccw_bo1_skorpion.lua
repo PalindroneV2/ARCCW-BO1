@@ -27,9 +27,9 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000"
 
-SWEP.Damage = 34
-SWEP.DamageMin = 5 -- damage done at maximum range
-SWEP.Range = 100
+SWEP.Damage = 30
+SWEP.DamageMin = 8 -- damage done at maximum range
+SWEP.Range = 80
 SWEP.RangeMin = 15
 
 SWEP.Penetration = 4
@@ -46,8 +46,8 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 20 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 35
 
-SWEP.Recoil = 0.28
-SWEP.RecoilSide = 0.3
+SWEP.Recoil = 0.22
+SWEP.RecoilSide = 0.27
 SWEP.RecoilRise = 0.75
 SWEP.VisualRecoilMult = 0.2
 
@@ -68,7 +68,7 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = {"weapon_pistol", "weapon_smg1"}
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 8 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 6 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 240 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 50
 
