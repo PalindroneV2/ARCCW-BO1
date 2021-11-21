@@ -3,8 +3,9 @@
 	"$basetexture" "models/weapons/bo1/bo1_mp5k/mp5k_c"
 	$blendtintbybasealpha  "1"
 	"$bumpmap" "models/weapons/bo1/bo1_mp5k/mp5k_n"
-	$detail "models/weapons/bo1/black"
-	$detailblendmode 0
+
+	$detail "models/weapons/bo1/black_detail"
+	$detailblendmode "0"
 	"$detailblendfactor" "0.9"
 
 	$phong                      		1
@@ -15,7 +16,7 @@
 	$normalmapalphaphongmask    	1
 
 	$envmap 	env_cubemap
-	$envmaptint   "[0.025 0.025 0.025]"
+	$envmaptint   "[0.01 0.01 0.01]"
 	$envmapfresnel "1"
 
 	"$nocull" "1"

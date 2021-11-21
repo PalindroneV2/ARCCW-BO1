@@ -52,6 +52,8 @@ SWEP.Recoil = 1.65
 SWEP.RecoilSide = 1.65
 SWEP.MaxRecoilBlowback = 1.65
 
+SWEP.ManualAction = false
+
 SWEP.Delay = 60 / 468 -- 60 / RPM.
 SWEP.Num = 8 -- number of shots per trigger pull.
 SWEP.RunawayBurst = false
@@ -108,8 +110,8 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.7, 0, 0.5),
-    Ang = Angle(00, 0, 0),
+    Pos = Vector(-2.9, 0, 1),
+    Ang = Angle(-.02, 0.03, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -122,47 +124,26 @@ SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(1, 3, 0.25)
+SWEP.ActivePos = Vector(0, 1, 0.25)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(0, 3, 0)
+SWEP.SprintPos = Vector(0, 1, 0.25)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(17, 6.5, -2)
-SWEP.CustomizeAng = Angle(15, 40, 20)
+SWEP.CustomizePos = Vector(15, 4, 0)
+SWEP.CustomizeAng = Angle(15, 40, 30)
 
 SWEP.HolsterPos = Vector(0.532, -6, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
 
 SWEP.AttachmentElements = {
     ["spas12_pap"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
         NamePriority = 10,
-        NameChange = "Synthetic Dozen",
-    },
-    ["solider_stock"] = {
-        VMBodygroups = {
-            {ind = 3, bg = 3},
-        },
-    },
-    ["solid_stock"] = {
-        VMBodygroups = {
-            {ind = 3, bg = 2},
-        },
-    },
-    ["light_stock"] = {
-        VMBodygroups = {
-            {ind = 3, bg = 1},
-        }
+        NameChange = "Mesmerizer",
     },
     ["mount"] = {
         VMBodygroups = {
-            {ind = 2, bg = 1},
-        },
-    },
-    ["bo2_fastmags"] = {
-        VMBodygroups = {
-            {ind = 1, bg = 1},
+            {ind = 1, bg = 2},
         },
     },
 }
@@ -176,7 +157,7 @@ SWEP.Attachments = {
         Slot = {"optic"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(0, 0, 2.3), -- offset that the attachment will be relative to the bone
+            vpos = Vector(2, 0, 3.75), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(12.5, 1.3, -7),
             wang = Angle(172.5, 180, 0)
@@ -213,8 +194,8 @@ SWEP.Attachments = {
         Slot = {"bo1_tacprimary"},
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(12.5, -1, 0.25), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 90),
+            vpos = Vector(9.5, 0.85, 2.6), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, -90),
         },
     }, --4
     {
@@ -253,9 +234,16 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then
-        return vm:SetSkin(2)
+        vm:SetSkin(2)
+    end
+
+    if wep:GetState() == ArcCW.STATE_CUSTOMIZE then
+        vm:SetBodygroup(0,1)
+    else
+        vm:SetBodygroup(0,0)
     end
 end
+
 
 SWEP.Hook_SelectReloadAnimation = function(wep, curanim)
     local fastmag = wep:GetBuff_Override("BO1_FastMag")
@@ -287,24 +275,6 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.25,
     },
-    ["idle_empty"] = {
-        Source = "idle_empty",
-        Time = 1 / 35,
-    },
-    ["draw_empty"] = {
-        Source = "draw_empty",
-        Time = 1,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
-    },
-    ["holster_empty"] = {
-        Source = "holster_empty",
-        Time = 1,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
-    },
     ["ready"] = {
         Source = "first_draw",
         Time = 59 / 30,
@@ -329,23 +299,27 @@ SWEP.Animations = {
         Time = 9 / 30,
         ShellEjectAt = 0,
     },
-    ["fire_empty"] = {
+    ["cycle"] = {
         Source = {
-            "fire_last",
+            "cycle",
         },
-        Time = 9 / 30,
-        ShellEjectAt = 0,
+        Time = 0.83,
+        SoundTable = {
+            {s = "ArcCW_BO2.1216_Twist", t = 0.25},
+        },
     },
-    ["fire_iron_empty"] = {
+    ["cycle_iron"] = {
         Source = {
-            "fire_ads_last",
+            "cycle_ads",
         },
-        Time = 9 / 30,
-        ShellEjectAt = 0,
+        Time = 0.83,
+        SoundTable = {
+            {s = "ArcCW_BO2.1216_Twist", t = 0.5 / 1.15},
+        },
     },
     ["reload"] = {
         Source = "reload",
-        Time = 3.5 / 1.15,
+        Time = 3.2,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
         LHIKIn = 0,
@@ -357,45 +331,45 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 4.16 / 1.15,
+        Time = 3.83,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "ArcCW_BO2.Shotgun_Back", t = 0.5 / 1.15},
-            {s = "ArcCW_BO2.1216_Out", t = 1.1 / 1.15},
-            {s = "ArcCW_BO2.1216_In", t = 2.4 / 1.15},
-            {s = "ArcCW_BO2.Shotgun_Back", t = 2.8 / 1.15},
-            {s = "ArcCW_BO2.Shotgun_Fwd", t = 3 / 1.15},
+            {s = "ArcCW_BO2.Shotgun_Back", t = 0.25},
+            {s = "ArcCW_BO2.1216_Out", t = 0.9},
+            {s = "ArcCW_BO2.1216_In", t = 2},
+            {s = "ArcCW_BO2.Shotgun_Back", t = 2.7},
+            {s = "ArcCW_BO2.Shotgun_Fwd", t = 2.9},
         },
     },
     ["reload_fast"] = {
         Source = "fast",
-        Time = (1.8 * 1.25) / 1.15,
+        Time = 2.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "ArcCW_BO2.1216_Out", t = 0.5 / 1.15},
-            {s = "ArcCW_BO2.1216_In", t = 1 / 1.15},
+            {s = "ArcCW_BO2.1216_Out", t = 0.1},
+            {s = "ArcCW_BO2.1216_In", t = 1.2},
         },
         MinProgress = 1,
     },
     ["reload_empty_fast"] = {
         Source = "fast_empty",
-        Time = (2.633 * 1.25) / 1.15,
+        Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.4,
         MinProgress = 1.8,
         SoundTable = {
-            {s = "ArcCW_BO2.1216_Out", t = 0.5 / 1.15},
-            {s = "ArcCW_BO2.1216_In", t = 1 / 1.15},
-            {s = "ArcCW_BO2.Shotgun_Back", t = 1.8 / 1.15},
-            {s = "ArcCW_BO2.Shotgun_Fwd", t = 2 / 1.15},
+            {s = "ArcCW_BO2.1216_Out", t = 0.1},
+            {s = "ArcCW_BO2.1216_In", t = 1.2},
+            {s = "ArcCW_BO2.Shotgun_Back", t = 1.6},
+            {s = "ArcCW_BO2.Shotgun_Fwd", t = 1.7},
         },
     },
     ["enter_sprint"] = {
@@ -408,18 +382,6 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 10 / 30
-    },
-    ["enter_sprint_empty"] = {
-        Source = "sprint_in_empty",
-        Time = 10 / 30
-    },
-    ["idle_sprint_empty"] = {
-        Source = "sprint_loop_empty",
-        Time = 30 / 40
-    },
-    ["exit_sprint_empty"] = {
-        Source = "sprint_out_empty",
         Time = 10 / 30
     },
 }

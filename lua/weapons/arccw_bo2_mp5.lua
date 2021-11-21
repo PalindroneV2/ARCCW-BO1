@@ -378,8 +378,8 @@ SWEP.Hook_NameChange = function(wep, name)
     local mm10 = wep.Attachments[8].Installed == "ammo_bo1_mp5_10mm"
 
     local gunname = "HK MP5"
-    alt = "A"
-    number = "3"
+    local alt = "A"
+    local number = "3"
 
     if mp5sd then
         alt = "SD"
@@ -397,6 +397,10 @@ SWEP.Hook_NameChange = function(wep, name)
     if mm10 then
         alt = "/"
         number = "10"
+        if mp5sd then
+            alt = "/10"
+            number = "SD"
+        end
     end
 
     if pap then
