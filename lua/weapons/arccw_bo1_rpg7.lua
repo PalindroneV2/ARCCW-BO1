@@ -205,10 +205,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_ShouldNotFire = function(wep)
-    if wep:GetBuff_Override("DOOM_EE") then
-        return false
-    end
-    if wep:GetState() != ArcCW.STATE_SIGHTS then
+    if !wep:GetBuff_Override("DOOM_EE") and (wep:GetState() != ArcCW.STATE_SIGHTS or wep:GetSightDelta() > 0) then
         return true
     end
 end

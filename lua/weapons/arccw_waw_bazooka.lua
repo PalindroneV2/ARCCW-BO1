@@ -75,9 +75,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = {"weapon_rpg"}
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 600 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 400
+SWEP.AccuracyMOA = 50 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 800 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 500
 
 SWEP.Primary.Ammo = "RPG_Rocket" -- what ammo type the gun uses
 
@@ -205,12 +205,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_ShouldNotFire = function(wep)
-    /*
-    if wep:GetBuff_Override("TF2_EE") then
-        return false
-    end
-    */
-    if wep:GetState() != ArcCW.STATE_SIGHTS then
+    if wep:GetState() != ArcCW.STATE_SIGHTS or wep:GetSightDelta() > 0 then
         return true
     end
 end
