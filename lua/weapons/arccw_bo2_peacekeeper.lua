@@ -148,7 +148,7 @@ SWEP.AttachmentElements = {
         NamePriority = 10,
         NameChange = "Writ of Shamash",
     },
-    ["bo2_fastmags"] = {
+    ["bo1_mag_fast"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
         },

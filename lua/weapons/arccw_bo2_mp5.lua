@@ -462,7 +462,7 @@ end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     local stock = wep.Attachments[7].Installed == "bo1_stock_medium"
-    local dual = wep.Attachments[8].Installed == "ammo_dualmag"
+    local dual = wep.Attachments[8].Installed == "bo1_mag_dual"
 
     local hand = 0
     if wep.Attachments[2].Installed == "bo1_mp5_sd" then hand = 1

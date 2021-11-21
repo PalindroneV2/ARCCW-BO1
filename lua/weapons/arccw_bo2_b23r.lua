@@ -149,7 +149,7 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 1},
         },
     },
-    ["bo1_dual_mag"] = {
+    ["bo1_mag_fast"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
         },
@@ -284,7 +284,7 @@ SWEP.Hook_TranslateAnimation = function(wep, anim, data)
     if eclip then
         return anim .. "_empty"
     end
-    local fastmag = wep.Attachments[5].Installed == "ammo_dualmag"
+    local fastmag = wep.Attachments[5].Installed == "bo1_mag_dual"
 
     if fastmag then
         return anim .. "_fast"
