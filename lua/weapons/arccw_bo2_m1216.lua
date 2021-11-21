@@ -59,11 +59,9 @@ SWEP.Num = 8 -- number of shots per trigger pull.
 SWEP.RunawayBurst = false
 SWEP.Firemodes = {
     {
-        Printname = "AUTO",
         Mode = 2,
     },
     {
-        Printname = "SEMI-AUTO",
         Mode = 1,
     },
     {
@@ -75,8 +73,8 @@ SWEP.NPCWeaponType = "weapon_shotgun"
 SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 60 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 775 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 325
+SWEP.HipDispersion = 850 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 300
 
 SWEP.Primary.Ammo = "buckshot" -- what ammo type the gun uses
 
@@ -117,7 +115,6 @@ SWEP.IronSightStruct = {
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
-
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "ar2"
@@ -150,6 +147,17 @@ SWEP.AttachmentElements = {
 
 SWEP.ExtraSightDist = 5
 
+SWEP.LastReloadNthShot = 0
+SWEP.Hook_PostFireBullets = function(wep)
+    if (wep:GetNthShot() - wep.LastReloadNthShot) % 4 == 0 then
+        wep:SetNeedCycle(true)
+    end
+end
+
+SWEP.Hook_PostReload = function(wep)
+    wep.LastReloadNthShot = wep:GetNthShot()
+end
+
 SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
@@ -173,7 +181,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         VMScale = Vector(1.5, 1.5, 1.5),
         Offset = {
-            vpos = Vector(24, 0, 0.36), -- offset that the attachment will be relative to the bone
+            vpos = Vector(21, 0, 2.6), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
     }, --2
