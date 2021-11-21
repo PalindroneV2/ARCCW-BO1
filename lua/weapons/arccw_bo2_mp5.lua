@@ -20,9 +20,9 @@ SWEP.ViewModel = "models/weapons/arccw/c_bo2_mp5.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo2_mp5.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 0.99,
-    pos        =    Vector(-5, 3.5, -7),
-    ang        =    Angle(-3, -0.75, 180),
+    scale = 1,
+    pos        =    Vector(-5, 4.5, -7.25),
+    ang        =    Angle(-5, 0.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
@@ -84,9 +84,8 @@ SWEP.MagID = "mp5" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
---SWEP.FirstShootSound = "ArcCW_BO1.MP5_Fire"
 SWEP.ShootSound = "ArcCW_BO1.MP5_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO2.Pistol_Sil"
+SWEP.ShootSoundSilenced = "ArcCW_BO1.MP5_Sil"
 
 SWEP.MuzzleEffect = "muzzleflash_smg"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
@@ -336,7 +335,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"bo1_stocks_all"},
         DefaultAttName = "No Stock",
-        InstalledEles = "bo1_stock_light",
+        Installed = "bo1_stock_light",
     },
     { --8
         PrintName = "Magazine",
@@ -378,34 +377,47 @@ SWEP.Hook_NameChange = function(wep, name)
     local sstock = wep.Attachments[7].Installed == "bo1_stock_heavy"
     local mp5sd = wep.Attachments[2].Installed == "bo1_mp5_sd"
     local mp5k = wep.Attachments[2].Installed == "bo1_mp5_mp5k"
+    local mm10 = wep.Attachments[8].Installed == "ammo_bo1_mp5_10mm"
 
-    if mp5k then
-        if pap then
-            return "MP115 Kollider"
-        end
-        return "HK MP5K"
-    end
+    local gunname = "HK MP5"
+    local alt = "A"
+    local number = "3"
 
     if mp5sd then
-        if sstock then
-            if pap then
-                return "MP115 Semiramis"
-            end
-            return "HK MP5SD2"
-        end
-        if pap then
-            return "MP115 Semiramis"
-        end
-        return "HK MP5SD3"
-    end
-
-    if pap then
-        return "MP115 Nimrod"
+        alt = "SD"
     end
 
     if sstock then
-        return "HK MP5A2"
+        number = "2"
     end
+
+    if mp5k then
+        alt = "K"
+        number = ""
+    end
+
+    if mm10 then
+        alt = "/"
+        number = "10"
+        if mp5sd then
+            alt = "/10"
+            number = "SD"
+        end
+    end
+
+    if pap then
+        gunnamme = "HK MP115 "
+        alt = "Nimrod"
+        number = ""
+        if mp5k then
+            alt = "Kollider"
+        end
+        if mp5sd then
+            alt = "Semiramis"
+        end
+    end
+
+    return gunname .. alt .. number
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)

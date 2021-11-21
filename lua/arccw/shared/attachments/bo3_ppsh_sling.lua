@@ -10,4 +10,6 @@ att.Slot = "ppsh_slingcharm"
 att.GivesFlags = {"slingcharm"}
 att.SortOrder = 100
 
+att.IgnorePickX = true
+
 att.Mult_DrawTime = 0.9

@@ -30,7 +30,7 @@ SWEP.WorldModelOffset = {
     pos        =    Vector(-4.25, 3.5, -7.15),
     ang        =    Angle(0, 1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale = 1.05
+    scale = 1.1,
 }
 SWEP.ViewModelFOV = 60
 
@@ -343,10 +343,6 @@ SWEP.Animations = {
         Source = "idle",
         Time = 1 / 30,
     },
-    ["idle_empty"] = {
-        Source = "idle_empty",
-        Time = 1 / 30,
-    },
     ["draw"] = {
         Source = "draw",
         Time = 1,
@@ -356,20 +352,6 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
-        Time = 0.75,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
-    },
-    ["draw_empty"] = {
-        Source = "draw_empty",
-        Time = 1,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
-    },
-    ["holster_empty"] = {
-        Source = "holster_empty",
         Time = 0.75,
         LHIK = true,
         LHIKIn = 0.2,
@@ -391,48 +373,36 @@ SWEP.Animations = {
         Time = 5 / 30,
         ShellEjectAt = 0,
     },
-    ["fire_empty"] = {
-        Source = {"fire_last"},
-        Time = 5 / 30,
-        ShellEjectAt = 0,
-    },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 5 / 30,
         ShellEjectAt = 0,
     },
-    ["fire_iron_empty"] = {
-        Source = {"fire_last_ads"},
-        Time = 5 / 30,
-        ShellEjectAt = 0,
-    },
     ["reload"] = {
         Source = "reload",
-        Time = 2,
+        Time = 2.63,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 37,
-        Checkpoints = {28, 38, 69},
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 0.5},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25}
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.1},
+            {s = "ArcCW_BO1.M14_Tap", t = 1.5},
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 2.5,
+        Time = 3.36,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 37,
-        Checkpoints = {28, 38, 69},
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 0.5},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
-            {s = "ArcCW_BO2.AR_Fwd", t = 1.75}
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.1},
+            {s = "ArcCW_BO1.M14_Tap", t = 1.5},
+            {s = "ArcCW_BO2.AR_Fwd", t = 2.15},
         },
     },
     ["enter_sprint"] = {
@@ -446,6 +416,35 @@ SWEP.Animations = {
     ["exit_sprint"] = {
         Source = "sprint_out",
         Time = 10 / 30
+    },
+
+    ["idle_empty"] = {
+        Source = "idle_empty",
+        Time = 1 / 30,
+    },
+    ["draw_empty"] = {
+        Source = "draw_empty",
+        Time = 1,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
+    ["holster_empty"] = {
+        Source = "holster_empty",
+        Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
+    ["fire_empty"] = {
+        Source = {"fire_last"},
+        Time = 5 / 30,
+        ShellEjectAt = 0,
+    },
+    ["fire_iron_empty"] = {
+        Source = {"fire_last_ads"},
+        Time = 5 / 30,
+        ShellEjectAt = 0,
     },
     ["enter_sprint_empty"] = {
         Source = "sprint_in_empty",
@@ -474,18 +473,6 @@ SWEP.Animations = {
         Source = "holster_gl",
         Time = 0.75,
     },
-    ["idle_m203_empty"] = {
-        Source = "idle_empty_gl",
-        Time = 1 / 30,
-    },
-    ["draw_m203_empty"] = {
-        Source = "draw_empty_gl",
-        Time = 1,
-    },
-    ["holster_m203_empty"] = {
-        Source = "holster_empty_gl",
-        Time = 0.75,
-    },
     ["ready_m203"] = {
         Source = "first_draw_gl",
         Time = 1,
@@ -504,37 +491,27 @@ SWEP.Animations = {
         Time = 5 / 30,
         ShellEjectAt = 0,
     },
-    ["fire_empty_m203"] = {
-        Source = {"fire_last_gl"},
-        Time = 5 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_iron_m203"] = {
-        Source = {"fire_last_ads_gl"},
-        Time = 5 / 30,
-        ShellEjectAt = 0,
-    },
     ["reload_m203"] = {
         Source = "reload_gl",
-        Time = 2,
+        Time = 2.63,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 37,
-        Checkpoints = {28, 38, 69},
+        LHIK = true,
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 0.5},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25}
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.1},
+            {s = "ArcCW_BO1.M14_Tap", t = 1.5},
         },
     },
     ["reload_empty_m203"] = {
         Source = "reload_empty_gl",
-        Time = 2.5,
+        Time = 3.36,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 37,
-        Checkpoints = {28, 38, 69},
+        LHIK = true,
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 0.5},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
-            {s = "ArcCW_BO2.AR_Fwd", t = 1.75}
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.1},
+            {s = "ArcCW_BO1.M14_Tap", t = 1.5},
+            {s = "ArcCW_BO2.AR_Fwd", t = 2.15},
         },
     },
     ["enter_sprint_m203"] = {
@@ -548,6 +525,30 @@ SWEP.Animations = {
     ["exit_sprint_m203"] = {
         Source = "sprint_out_gl",
         Time = 10 / 30
+    },
+
+    --M203 EMPTY--
+    ["idle_empty_m203"] = {
+        Source = "idle_empty_gl",
+        Time = 1 / 30,
+    },
+    ["draw_empty_m203"] = {
+        Source = "draw_empty_gl",
+        Time = 1,
+    },
+    ["holster_empty_m203"] = {
+        Source = "holster_empty_gl",
+        Time = 0.75,
+    },
+    ["fire_empty_m203"] = {
+        Source = {"fire_last_gl"},
+        Time = 5 / 30,
+        ShellEjectAt = 0,
+    },
+    ["fire_iron_empty_m203"] = {
+        Source = {"fire_last_ads_gl"},
+        Time = 5 / 30,
+        ShellEjectAt = 0,
     },
     ["enter_sprint_m203_empty"] = {
         Source = "sprint_in_empty_gl",

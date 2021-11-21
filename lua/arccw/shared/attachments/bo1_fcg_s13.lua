@@ -9,6 +9,10 @@ att.Slot = "bo1_fcg_burst"
 att.GivesFlags = {"bo1_3burst"}
 att.SortOrder = 101
 
+att.Mult_Recoil = 0.9
+att.Mult_SightTime = 1.05
+att.Mult_SightedSpeedMult = 1.05
+
 att.Override_Firemodes = {
     {
         Mode = -3,

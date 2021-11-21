@@ -4,7 +4,6 @@ att.Description = "Even lighter 8.3 inch inch barrel reduces sight time at the c
 
 att.SortOrder = 105
 
-att.Free = true
 att.AutoStats = true
 
 att.Desc_Pros = {

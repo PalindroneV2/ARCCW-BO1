@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/bo3/bo3_rk5/decals"
+	"$translucent" "1"
+}

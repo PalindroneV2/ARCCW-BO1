@@ -20,12 +20,13 @@ SWEP.WorldModelOffset = {
     pos        =    Vector(-6, 4.75, -7),
     ang        =    Angle(-6, -2.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
+    scale = 1.05,
 }
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_awm.mdl"
 SWEP.ViewModelFOV = 60
 
 SWEP.Damage = 120
-SWEP.DamageMin = 110 -- damage done at maximum range
+SWEP.DamageMin = 90 -- damage done at maximum range
 SWEP.Range = 2000 -- in METRES
 SWEP.Penetration = 12
 SWEP.DamageType = DMG_BULLET
@@ -65,7 +66,7 @@ SWEP.NPCWeight = 100
 
 SWEP.ManualAction = true
 
-SWEP.AccuracyMOA = 0.1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 0.05 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 800 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 100
 
@@ -177,7 +178,7 @@ SWEP.Attachments = {
         Slot = {"bo1_susat"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(5, 0, 3.5),
+            vpos = Vector(4, 0, 3.5),
             vang = Angle(0, 0, 0),
         },
         MergeSlots = {2,11},

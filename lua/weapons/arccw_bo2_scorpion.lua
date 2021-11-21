@@ -21,8 +21,8 @@ SWEP.WorldModel = "models/weapons/arccw/w_bo2_scorpion.mdl"
 SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_scorpion.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1,
-    pos        =    Vector(-5.5, 4.5, -6.5),
+    scale = 1.1,
+    pos        =    Vector(-5.5, 4.5, -6),
     ang        =    Angle(-7, 1.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -316,12 +316,12 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 7 / 30,
+        Time = 60 / 1150,
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
-        Time = 7 / 30,
+        Time = 60 / 1150,
         ShellEjectAt = 0,
     },
     ["reload"] = {
@@ -334,8 +334,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 16 / 30},
-            {s = "ArcCW_BO2.AR_MagIn", t = 47 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 16 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 47 / 30},
         },
         MinProgress = 2,
     },
@@ -349,8 +349,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 16 / 30},
-            {s = "ArcCW_BO2.AR_MagIn", t = 47 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 16 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 47 / 30},
             {s = "ArcCW_BO2.AR_Fwd", t = 65 / 30},
         },
         MinProgress = 2.5,
@@ -364,8 +364,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 10 / 30},
-            {s = "ArcCW_BO2.AR_MagIn", t = 30 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 30 / 30},
         },
         MinProgress = 1.5,
     },
@@ -378,8 +378,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 10 / 30},
-            {s = "ArcCW_BO2.AR_MagIn", t = 30 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 30 / 30},
             {s = "ArcCW_BO2.AR_Fwd", t = 45 / 30},
         },
         MinProgress = 2,

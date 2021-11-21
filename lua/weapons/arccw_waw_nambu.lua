@@ -19,15 +19,16 @@ SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/arccw/c_waw_nambu.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_waw_nambu.mdl"
 SWEP.WorldModelOffset = {
-    pos = Vector(-23, 7.125, -2.25),
+    pos = Vector(-20, 6.5, -2.5),
     ang = Angle(-10, -1.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
+    scale   =   1.1,
 }
 SWEP.MirrorVMWM = true
 SWEP.ViewModelFOV = 70
 
-SWEP.Damage = 30
-SWEP.DamageMin = 9
+SWEP.Damage = 25
+SWEP.DamageMin = 10
 SWEP.RangeMin = 15
 SWEP.Range = 60
 

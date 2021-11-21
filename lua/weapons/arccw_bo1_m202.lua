@@ -116,7 +116,7 @@ SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "rpg"
 SWEP.HoldtypeSights = "rpg"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 
 SWEP.ActivePos = Vector(0, 0, 0.25)
 SWEP.ActiveAng = Angle(0, 0, 0)
@@ -241,7 +241,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         Time = 6.96,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_RPG,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,

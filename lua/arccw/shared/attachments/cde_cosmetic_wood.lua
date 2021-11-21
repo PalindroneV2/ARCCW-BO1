@@ -7,6 +7,7 @@ att.Desc_Neutrals = {
 }
 att.AutoStats = true
 att.Free = true
+att.IgnorePickX = true
 
 att.SortOrder = 100
 att.Slot = {"kali_wood"}

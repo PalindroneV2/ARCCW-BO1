@@ -9,6 +9,7 @@ att.Desc_Cons = {
     "- Burst Delay"
 }
 att.AutoStats = true
+att.IgnorePickX = true
 att.Slot = "fcg_kali"
 att.SortOrder = 106
 

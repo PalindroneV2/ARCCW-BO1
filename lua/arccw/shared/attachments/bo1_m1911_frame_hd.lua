@@ -3,7 +3,6 @@ att.AbbrevName = "Modern Frame"
 att.Icon = Material("entities/acwatt_1911_bo3.png", "smooth mips")
 att.Description = "Modern frame with modern conveniences.\nImproved trigger and hammer provide more accurate shooting."
 
-att.Free = true
 att.Slot = {"m1911_frame", "m1911_frame_cw"}
 att.GivesFlags = {"frame_bo3"}
 

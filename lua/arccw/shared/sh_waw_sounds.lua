@@ -367,6 +367,120 @@ sound.Add( {
     }
 } )
 
+-- Springfield --
+
+sound.Add( {
+    name = "ArcCW_WAW.Springfield_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_springfield/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Springfield_Mech",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_springfield/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Springfield_FireSnp",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_springfield/fire_snp.wav",
+    }
+} )
+
+-- ARISAKA --
+
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_Mech",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_FireSnp",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/fire_sniper.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_MechSnp",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/mech_sniper.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_Up",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/up.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_Down",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/down.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_Back",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/back.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_Fwd",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/fwd.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Arisaka_Insert",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arccw/waw_arisaka/in.wav",
+    }
+} )
+
 -- MOSIN Main --
 
 sound.Add( {
@@ -532,16 +646,13 @@ sound.Add( {
 --- StG-44 ---
 
 sound.Add( {
-    name = "ArcCW_BO3.STG44_COD4",
+    name = "ArcCW_WAW.STG44_Fire",
     channel = CHAN_STATIC,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bopack_stg44/stg44_fire1.wav",
-        "^weapons/arccw/bopack_stg44/stg44_fire2.wav",
-        "^weapons/arccw/bopack_stg44/stg44_fire3.wav",
-        "^weapons/arccw/bopack_stg44/stg44_fire4.wav",
+        "^weapons/arccw/waw_stg44/waw/fire_r.wav",
     }
 } )
 sound.Add( {
@@ -551,57 +662,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bopack_stg44/stg44_dod_fire.wav",
-    }
-} )
-sound.Add( {
-    name = "ArcCW_BO3.STG44_MagOut",
-    channel = CHAN_ITEM,
-    volume = 1.0,
-    level = 100,
-    --pitch = {95, 110},
-    sound = {
-        "^weapons/arccw/bopack_stg44/out.wav",
-    }
-} )
-sound.Add( {
-    name = "ArcCW_BO3.STG44_MagIn",
-    channel = CHAN_ITEM,
-    volume = 1.0,
-    level = 100,
-    --pitch = {95, 110},
-    sound = {
-        "^weapons/arccw/bopack_stg44/in.wav",
-    }
-} )
-sound.Add( {
-    name = "ArcCW_BO3.STG44_BoltBack",
-    channel = CHAN_ITEM,
-    volume = 1.0,
-    level = 100,
-    --pitch = {95, 110},
-    sound = {
-        "^weapons/arccw/bopack_stg44/back.wav",
-    }
-} )
-sound.Add( {
-    name = "ArcCW_BO3.STG44_BoltFwd",
-    channel = CHAN_ITEM,
-    volume = 1.0,
-    level = 100,
-    --pitch = {95, 110},
-    sound = {
-        "^weapons/arccw/bopack_stg44/fwd.wav",
-    }
-} )
-sound.Add( {
-    name = "ArcCW_WAW.STG44_Fire",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    level = 100,
-    --pitch = {95, 110},
-    sound = {
-        "^weapons/arccw/bopack_stg44/waw/fire_r.wav",
+        "^weapons/arccw/waw_stg44/stg44_dod_fire.wav",
     }
 } )
 sound.Add( {
@@ -611,7 +672,7 @@ sound.Add( {
     level = 70,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bopack_stg44/waw/mech.wav",
+        "^weapons/arccw/waw_stg44/waw/mech.wav",
     }
 } )
 sound.Add( {
@@ -621,7 +682,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bopack_stg44/waw/in.wav",
+        "^weapons/arccw/waw_stg44/waw/in.wav",
     }
 } )
 sound.Add( {
@@ -631,7 +692,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bopack_stg44/waw/futz.wav",
+        "^weapons/arccw/waw_stg44/waw/futz.wav",
     }
 } )
 sound.Add( {
@@ -641,7 +702,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bopack_stg44/waw/out.wav",
+        "^weapons/arccw/waw_stg44/waw/out.wav",
     }
 } )
 sound.Add( {
@@ -651,7 +712,7 @@ sound.Add( {
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bopack_stg44/waw/charge.wav",
+        "^weapons/arccw/waw_stg44/waw/charge.wav",
     }
 } )
 
@@ -1112,6 +1173,139 @@ sound.Add( {
     }
 } )
 
+--- BROWNING M1919 ---
+
+sound.Add( {
+    name = "ArcCW_WAW.M1919_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_BeltContact",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/b_contact.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_BeltGrab",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/b_grab.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_BeltPress",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/b_press.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_BeltRaise",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/b_raise.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_BeltRemove",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/b_remove.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_BeltToss",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/b_toss.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_Bonk",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/bonk.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_Charge",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/charge.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_Close",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/close.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/open.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.M1919_Start",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_m1919/start.wav",
+    }
+} )
+
 --- MG42 Main ---
 
 sound.Add( {
@@ -1518,6 +1712,100 @@ sound.Add( {
     }
 } )
 
+-- WAW LAUNCHERS --
+
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Woosh",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/front_00.wav",
+        "^weapons/arccw/waw_launchers/front_01.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/mech.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Down",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/down.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Ground",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/ground.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Start",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/start.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Tap",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/tap.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Up",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/up.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_WAW.Launcher_Impact",
+    channel = CHAN_USER_BASE + 5,
+    volume = 1.0,
+    level = 100,
+    ----pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_launchers/blast.wav",
+    }
+} )
+
 -- WUNDERWAFFE DG2 --
 
 sound.Add({
@@ -1581,4 +1869,48 @@ sound.Add({
     channel = CHAN_USER_BASE + 5,
     level = 70,
     sound = "^weapons/arccw/waw_dg2/splash.wav"
+})
+
+--- WAW ZOMBIE --
+
+sound.Add({
+    name = "ArcCW_WAW.Zombie_Attack",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_zombie/attack/0.wav",
+        "^weapons/arccw/waw_zombie/attack/1.wav",
+        "^weapons/arccw/waw_zombie/attack/2.wav",
+        "^weapons/arccw/waw_zombie/attack/3.wav",
+        "^weapons/arccw/waw_zombie/attack/4.wav",
+        "^weapons/arccw/waw_zombie/attack/5.wav",
+        "^weapons/arccw/waw_zombie/attack/6.wav",
+        "^weapons/arccw/waw_zombie/attack/7.wav",
+        "^weapons/arccw/waw_zombie/attack/8.wav",
+    }
+})
+
+sound.Add({
+    name = "ArcCW_WAW.Zombie_Draw",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_zombie/behind_03.wav",
+    }
+})
+
+
+sound.Add({
+    name = "ArcCW_WAW.Zombie_FirstDraw",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/waw_zombie/behind_04.wav",
+    }
 })

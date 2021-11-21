@@ -20,9 +20,9 @@ SWEP.ViewModel = "models/weapons/arccw/c_bo2_m27.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo2_m27.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1.1,
-    pos        =    Vector(-4.5, 4.5, -4.9),
-    ang        =    Angle(-10, 3, 180),
+    scale = 1.25,
+    pos        =    Vector(-4.8, 4, -5.1),
+    ang        =    Angle(-8, 1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
@@ -30,8 +30,8 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000000"
 
-SWEP.Damage = 40
-SWEP.DamageMin = 32 -- damage done at maximum range
+SWEP.Damage = 30
+SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.Range = 125 -- in METRES
 SWEP.Penetration = 9
 SWEP.DamageType = DMG_BULLET
@@ -166,7 +166,7 @@ SWEP.AttachmentElements = {
             {ind = 6, bg = 1},
         },
     },
-    ["bo2_altirons"] = {
+    ["g36_irons"] = {
         VMBodygroups = {
             {ind = 2, bg = 1},
             {ind = 7, bg = 1},
@@ -210,17 +210,17 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 1},
         },
     },
-    ["light_stock"] = {
+    ["stock_l"] = {
         VMBodygroups = {
             {ind = 5, bg = 1},
         },
     },
-    ["solid_stock"] = {
+    ["stock_m"] = {
         VMBodygroups = {
             {ind = 5, bg = 2},
         },
     },
-    ["solider_stock"] = {
+    ["stock_h"] = {
         VMBodygroups = {
             {ind = 5, bg = 3},
         },
@@ -300,7 +300,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {"optic", "bo2_altirons", "bo2_m27_irons"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic", "bo2_m27_irons"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(2.25, 0, 3.75), -- 4.6 offset that the attachment will be relative to the bone
@@ -382,7 +382,7 @@ SWEP.Attachments = {
     }, --7
     {
         PrintName = "Stock",
-        Slot = {"bo1_stock", "bo1_mp5stock"},
+        Slot = {"bo1_stocks_all"},
         DefaultAttName = "No Stock",
     }, --8
     {
@@ -505,8 +505,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
             {s = "ArcCW_BO2.AR_MagIn", t = 40 / 35},
-            {s = "ArcCW_BO2.AR_Charge", t = 55 / 35},
-            --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
+            {s = "ArcCW_BO2.AR_Back", t = 55 / 35},
+            {s = "ArcCW_BO2.AR_Fwd", t = 60 / 35},
         },
     },
     ["enter_sprint"] = {
@@ -586,8 +586,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
             {s = "ArcCW_BO2.AR_MagIn", t = 40 / 35},
-            {s = "ArcCW_BO2.AR_Charge", t = 55 / 35},
-            --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
+            {s = "ArcCW_BO2.AR_Back", t = 55 / 35},
+            {s = "ArcCW_BO2.AR_Fwd", t = 60 / 35},
         },
     },
     ["enter_sprint_m203"] = {
@@ -721,8 +721,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 11 / 35},
             {s = "ArcCW_BO2.AR_MagIn", t = 40 / 35},
-            {s = "ArcCW_BO2.AR_Charge", t = 55 / 35},
-            --{s = "ArcCW_BO1.AK_BoltFwd", t = 95 / 35},
+            {s = "ArcCW_BO2.AR_Back", t = 55 / 35},
+            {s = "ArcCW_BO2.AR_Fwd", t = 60 / 35},
         },
     },
     ["enter_sprint_grip"] = {

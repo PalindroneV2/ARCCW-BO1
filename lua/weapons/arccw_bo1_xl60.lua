@@ -22,18 +22,18 @@ SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_xl60.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-5, 2.75, -4.25),
-    ang        =    Angle(-7.4, 1.5, 180),
+    pos        =    Vector(-6, 2.75, -4.25),
+    ang        =    Angle(-7.4, 0.9, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   1.0
+    scale   =   1.1
 }
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_xl60.mdl"
 SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "00000000000"
 
-SWEP.Damage = 36
-SWEP.DamageMin = 27 -- damage done at maximum range
+SWEP.Damage = 28
+SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.Range = 130 -- in METRES
 SWEP.Penetration = 7
 SWEP.DamageType = DMG_BULLET
@@ -193,7 +193,7 @@ SWEP.Attachments = {
     },
     { --3
         PrintName = "Underbarrel",
-        Slot = {"ubgl", "bo1_m203", "bo1_mk",}, --"bo1_flamer" currently sounds dont work on the flamer
+        Slot = {"ubgl", "bo1_m203", "bo1_mk"}, --"bo1_flamer" currently sounds dont work on the flamer
         Bone = "tag_weapon",
         VMScale = Vector(1, 1, 1),
         WMScale = Vector(1, 1, 1),
@@ -240,7 +240,6 @@ SWEP.Attachments = {
     { --7
         PrintName = "Fire Group",
         Slot = {"bo1_fcg"},
-        Installed = "bo1_fcg_famas_s13"
     },
     { --8
         PrintName = "Magazine",
@@ -295,12 +294,10 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif wep.Attachments[12].Installed == "bo1_cosmetic_red" then camo = 16
     end
 
-    for k = camo, camo do
-        vm:SetSkin(k)
-        if papcamo then
-            return vm:SetSkin(k + 3)
-        end
-    end
+    vm:SetSkin(camo)
+    if papcamo then
+        return vm:SetSkin(camo + 3)
+    end 
 end
 
 SWEP.Hook_GetCapacity = function(wep, cap)

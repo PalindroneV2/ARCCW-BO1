@@ -5,7 +5,6 @@ att.Icon = Material("entities/acwatt_1911_bo2.png", "smooth mips")
 att.Description = "Shortened slide used by officers, hence its name."
 
 att.Slot = "m1911_slide"
-att.Free = true
 
 att.ActivateElements = {"slide_short"}
 

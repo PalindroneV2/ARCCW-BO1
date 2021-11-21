@@ -20,14 +20,14 @@ SWEP.ViewModel = "models/weapons/arccw/c_bo1_rpk.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_rpk.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-2.75, 3.75, -6.25),
-    ang        =    Angle(-5, 1, 180),
+    pos        =    Vector(-2.75, 3.5, -6),
+    ang        =    Angle(-6, 1.1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 37.5
-SWEP.DamageMin = 30 -- damage done at maximum range
+SWEP.Damage = 35
+SWEP.DamageMin = 25 -- damage done at maximum range
 SWEP.Range = 165 -- in METRES
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
@@ -123,6 +123,9 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
+
+SWEP.InBipodPos = Vector(-5, 0, -1.5)
+SWEP.InBipodAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(20, 4, -1)
 SWEP.CustomizeAng = Angle(15, 40, 30)

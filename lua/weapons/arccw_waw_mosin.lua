@@ -21,18 +21,19 @@ SWEP.WorldModel = "models/weapons/arccw/w_waw_mosin.mdl"
 SWEP.MirrorWorldModel = "models/weapons/arccw/w_waw_mosin.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-6.5, 2, -5),
-    ang        =    Angle(-15, 0, 180),
+    pos        =    Vector(-5.5, 2, -7.5),
+    ang        =    Angle(-10, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   1
+    scale   =   0.9
 }
 SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0100000000"
 
-SWEP.Damage = 100
-SWEP.DamageMin = 75 -- damage done at maximum range
-SWEP.Range = 100 -- in METRES
+SWEP.Damage = 110
+SWEP.DamageMin = 70
+SWEP.RangeMin = 15
+SWEP.Range = 300
 SWEP.Penetration = 7
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -47,8 +48,8 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 5 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 17
 
-SWEP.Recoil = 1
-SWEP.RecoilSide = 0.75
+SWEP.Recoil = 1.5
+SWEP.RecoilSide = 1
 SWEP.RecoilRise = 0.75
 SWEP.VisualRecoilMult = 0
 
@@ -57,6 +58,7 @@ SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 1,
+        PrintName = "fcg.bolt",
     },
     {
         Mode = 0
@@ -124,10 +126,10 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(1.5, 1, 2)
+SWEP.ActivePos = Vector(1.5, -5, 2)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(10, 0, -2)
+SWEP.SprintPos = Vector(10, -5, -2)
 SWEP.SprintAng = Angle(-7.036, 45.016, 0)
 
 SWEP.CustomizePos = Vector(20, 0, 0)
@@ -361,8 +363,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_WAW.Mosin_Up", t = 5 / 30},
             {s = "ArcCW_WAW.Mosin_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.Mosin_Back", t = 20 / 30},
-            {s = "ArcCW_WAW.Mosin_Up", t = 22 / 30},
+            {s = "ArcCW_WAW.Mosin_Fwd", t = 20 / 30},
+            {s = "ArcCW_WAW.Mosin_Down", t = 22 / 30},
         },
     },
     ["fire_iron"] = {
@@ -377,8 +379,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_WAW.Mosin_Up", t = 5 / 30},
             {s = "ArcCW_WAW.Mosin_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.Mosin_Back", t = 20 / 30},
-            {s = "ArcCW_WAW.Mosin_Up", t = 22 / 30},
+            {s = "ArcCW_WAW.Mosin_Fwd", t = 20 / 30},
+            {s = "ArcCW_WAW.Mosin_Down", t = 22 / 30},
         },
     },
     ["reload"] = {
@@ -393,9 +395,9 @@ SWEP.Animations = {
             {s = "ArcCW_WAW.Mosin_Up", t = 0.15 * 1.25},
             {s = "ArcCW_WAW.Mosin_Back", t = 0.3 * 1.25},
             {s = "ArcCW_WAW.Mosin_Rechamber", t = 0.5 * 1.25},
-            {s = "ArcCW_WAW.Mosin_Back", t = 1.67 * 1.25},
+            {s = "ArcCW_WAW.Mosin_Fwd", t = 1.67 * 1.25},
             {s = "ArcCW_WAW.Mosin_Eject", t = 1.69 * 1.25},
-            {s = "ArcCW_WAW.Mosin_Up", t = 1.71 * 1.25},
+            {s = "ArcCW_WAW.Mosin_Down", t = 1.71 * 1.25},
         },
     },
 
@@ -436,8 +438,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_WAW.Mosin_Up", t = 5 / 30},
             {s = "ArcCW_WAW.Mosin_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.Mosin_Back", t = 20 / 30},
-            {s = "ArcCW_WAW.Mosin_Up", t = 25 / 30},
+            {s = "ArcCW_WAW.Mosin_Fwd", t = 20 / 30},
+            {s = "ArcCW_WAW.Mosin_Down", t = 25 / 30},
         },
     },
     ["fire_iron_snipe"] = {
@@ -486,7 +488,7 @@ SWEP.Animations = {
         LHIKOut = 4,
         SoundTable = {
             {s = "ArcCW_WAW.Mosin_Fwd", t = 5 / 30},
-            {s = "ArcCW_WAW.Mosin_Up", t = 10 / 30},
+            {s = "ArcCW_WAW.Mosin_Down", t = 10 / 30},
         },
     },
     ["sgreload_finish_empty"] = {
@@ -497,7 +499,7 @@ SWEP.Animations = {
         LHIKOut = 4,
         SoundTable = {
             {s = "ArcCW_WAW.Mosin_Fwd", t = 5 / 30},
-            {s = "ArcCW_WAW.Mosin_Up", t = 10 / 30},
+            {s = "ArcCW_WAW.Mosin_Down", t = 10 / 30},
         },
     },
 

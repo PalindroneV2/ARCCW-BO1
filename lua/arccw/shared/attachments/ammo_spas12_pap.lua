@@ -11,11 +11,11 @@ att.Slot = {"ammo_spas12_pap"}
 
 att.Override_Firemodes = {
   {
-    Printname = "AUTO",
+    PrintName = "AUTO",
     Mode = 2,
   },
   {
-    Printname = "SEMI-AUTO",
+    PrintName = "SEMI-AUTO",
     Mode = 1,
   },
   {
@@ -31,7 +31,6 @@ att.ActivateElements = {"extendedmag"}
 att.GivesFlags = {"spas12_pap"}
 
 att.SortOrder = 100
-att.Override_ShotgunReload = false
 att.Mult_Damage = 2.5
 att.Mult_DamageMin = 2.5
 att.Mult_Penetration = 2.5

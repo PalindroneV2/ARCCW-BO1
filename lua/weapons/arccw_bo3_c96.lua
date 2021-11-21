@@ -1,6 +1,6 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - World at War" -- edit this if you like
+SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
 
@@ -136,8 +136,8 @@ SWEP.SprintAng = Angle(0, 0, 0)
 SWEP.CustomizePos = Vector(13, -3, -2)
 SWEP.CustomizeAng = Angle(15, 40, 20)
 
-SWEP.HolsterPos = Vector(0, -4, -5)
-SWEP.HolsterAng = Angle(37.5, 0, 0)
+SWEP.HolsterPos = Vector(0, -3, -1)
+SWEP.HolsterAng = Angle(-5, 10, 0)
 
 SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
 SWEP.BarrelOffsetHip = Vector(2, 0, -2)

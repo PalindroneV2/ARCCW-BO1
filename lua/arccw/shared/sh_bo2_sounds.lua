@@ -434,7 +434,7 @@ sound.Add({
     level = 100,
     --pitch = {95, 110},
     sound = {
-        "^weapons/arccw/bo2_generic_shotgun/fire_870.wav",
+        "^weapons/arccw/bo2_generic_shotgun/fire_ksg.wav",
     }
 })
 sound.Add({
@@ -483,6 +483,27 @@ sound.Add({
     volume = 1.0,
     level = 70,
     sound = "^weapons/arccw/bo2_generic_shotgun/fwd.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.1216_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 70,
+    sound = "^weapons/arccw/bo2_generic_shotgun/in_1216.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.1216_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 70,
+    sound = "^weapons/arccw/bo2_generic_shotgun/out_1216.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.1216_Twist",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 70,
+    sound = "^weapons/arccw/bo2_generic_shotgun/twist_1216.wav"
 })
 sound.Add({
     name = "ArcCW_BO2.870_Back",
@@ -711,6 +732,12 @@ sound.Add({
     sound = "^weapons/arccw/bo2_generic_sniper/sil_ballista.wav"
 })
 
+sound.Add({
+    name = "ArcCW_BO2.SVU_Fire",
+    channel = CHAN_STATIC,
+    level = 100,
+    sound = "^weapons/arccw/bo2_generic_sniper/fire_svu.wav"
+})
 sound.Add({
     name = "ArcCW_BO2.DSR50_Fire",
     channel = CHAN_STATIC,

@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "QCW-05"
+SWEP.PrintName = "Chicom CQB"
 SWEP.Trivia_Class = "Personal Defense Weapon"
 SWEP.Trivia_Desc = "A Chinese PDW that operatres in 4-round bursts."
 SWEP.Trivia_Manufacturer = "Jianshe Industry"
@@ -21,8 +21,8 @@ SWEP.WorldModel = "models/weapons/arccw/w_bo2_chicom.mdl"
 SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_chicom.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1,
-    pos        =    Vector(-5.5, 4.5, -6.5),
+    scale = 1.15,
+    pos        =    Vector(-5.9, 4.5, -6),
     ang        =    Angle(-7, 1.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -152,10 +152,6 @@ SWEP.BarrelLength = 10
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["ammo_papunch"] = {
-        NamePriority = 10,
-        NameChange = "PAPCHICOM",
-    },
     ["bo2_fastmag"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
@@ -239,7 +235,8 @@ SWEP.Attachments = {
     },
     { --7
         PrintName = "Fire Group",
-        Slot = {"bo1_fcg"}
+        Slot = {"bo1_fcg","bo2_fcg_fullauto"},
+        DefaultAttName = "Standard FCG",
     },
     { --8
         PrintName = "Ammo Type",
@@ -260,6 +257,18 @@ SWEP.Attachments = {
         },
     },
 }
+
+SWEP.Hook_NameChange = function(wep, name)
+    local pap = wep:GetBuff_Override("PackAPunch")
+
+    local gunname = "QCW-05"
+
+    if pap then
+        gunname = "Cataclysmic Quadruple Burst"
+    end
+
+    return gunname
+end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
@@ -334,8 +343,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 16 / 30},
-            {s = "ArcCW_BO2.AR_MagIn", t = 47 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 16 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 47 / 30},
         },
         MinProgress = 2,
     },
@@ -349,9 +358,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 16 / 30},
-            {s = "ArcCW_BO2.AR_MagIn", t = 47 / 30},
-            {s = "ArcCW_BO2.AR_Fwd", t = 65 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 16 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 47 / 30},
+            {s = "ArcCW_BO1.Kiparis_Bolt", t = 65 / 30},
         },
         MinProgress = 2.5,
     },
@@ -364,8 +373,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 10 / 30},
-            {s = "ArcCW_BO2.AR_MagIn", t = 30 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 30 / 30},
         },
         MinProgress = 1.5,
     },
@@ -378,9 +387,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 10 / 30},
-            {s = "ArcCW_BO2.AR_MagIn", t = 30 / 30},
-            {s = "ArcCW_BO2.AR_Fwd", t = 45 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagOut", t = 10 / 30},
+            {s = "ArcCW_BO1.Kiparis_MagIn", t = 30 / 30},
+            {s = "ArcCW_BO1.Kiparis_Bolt", t = 45 / 30},
         },
         MinProgress = 2,
     },

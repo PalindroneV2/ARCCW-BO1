@@ -8,7 +8,6 @@ att.Description = [[
 ]]
 
 att.Slot = {"m1911_slide", "m1911_slide_cw"}
-att.Free = true
 
 att.ActivateElements = {"slide_hardballer"}
 

@@ -6,7 +6,6 @@ att.Description = [[
 ]]
 
 att.SortOrder = 109
-att.Free = true
 att.AutoStats = true
 
 att.Desc_Pros = {
@@ -21,6 +20,7 @@ att.Mult_Recoil = 0.95
 att.Mult_RecoilSide = 0.95
 att.Mult_SightTime = 1.15
 att.Mult_AccuracyMOA = 0.5
+
 
 att.Override_Firemodes = {
   {

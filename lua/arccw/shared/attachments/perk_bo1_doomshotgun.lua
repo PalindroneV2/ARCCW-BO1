@@ -10,6 +10,8 @@ att.AutoStats = true
 att.Slot = {"bo1_perk_doomshotgun"}
 att.GivesFlags = {"doom_ee"}
 
+att.NoRandom = true
+
 att.DOOM_EE = true
 
 att.Mult_HipDispersion = 0
@@ -40,7 +42,8 @@ att.Hook_ModifyRPM = function(wep, delay)
     return 60 / 150
 end
 
-att.AttachSound = "weapons/arccw/bo1_olympia/waw_e1m1.wav"
+att.AttachSound = "weapons/arccw/doom_ee/doom_ee_on.wav"
+att.DetachSound = "weapons/arccw/doom_ee/doom_ee_off.wav"
 
 att.Hook_GetShootSound = function(wep, sound)
     return "ArcCW_BO1.DOOMSG_Fire"

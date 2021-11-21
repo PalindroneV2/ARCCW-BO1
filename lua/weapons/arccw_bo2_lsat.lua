@@ -22,12 +22,12 @@ SWEP.WorldModelOffset = {
     pos        =    Vector(-8.25, 4.25, -6.75),
     ang        =    Angle(-5, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   1
+    scale = 1.1,
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 35
-SWEP.DamageMin = 29 -- damage done at maximum range
+SWEP.Damage = 30
+SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.Range = 150 -- in METRES
 SWEP.Penetration = 9
 SWEP.DamageType = DMG_BULLET

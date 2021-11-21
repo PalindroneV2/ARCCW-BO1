@@ -43,8 +43,8 @@ att.HolosightPiece = "models/weapons/arccw/atts/bo2_m82scope_hsp.mdl"
 att.Colorable = true
 
 att.HolosightBlackbox = true
-att.HolosightMagnification = 8
-att.HolosightMagnificationMin = 8
-att.HolosightMagnificationMax = 12
+att.HolosightMagnification = 4
+att.HolosightMagnificationMin = 2
+att.HolosightMagnificationMax = 8
 
 att.Mult_SightTime = 1.125

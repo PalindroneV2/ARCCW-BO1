@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "FN Ballista"
 SWEP.Trivia_Class = "Sniper Rifle"
-SWEP.Trivia_Desc = "A high-caliber sniper rifle designed for cold-weather police and military units. Known for once holding the record of the longest range sniper shot in history."
+SWEP.Trivia_Desc = "A belgian high-caliber sniper rifle designed as a competitor to the Remington MSR and the AWM."
 SWEP.Trivia_Manufacturer = "FN Herstal"
 SWEP.Trivia_Calibre = ".338 Lapua"
 SWEP.Trivia_Mechanism = "Bolt-Action"
@@ -17,21 +17,22 @@ SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/arccw/c_bo2_ballista.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-6, 4.75, -7),
-    ang        =    Angle(-6, -2.5, 180),
+    pos        =    Vector(-5.75, 4.75, -6),
+    ang        =    Angle(-5, -2.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
+    scale = 1.15,
 }
 SWEP.WorldModel = "models/weapons/arccw/w_bo2_ballista.mdl"
 SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_ballista.mdl"
 SWEP.ViewModelFOV = 60
 
 SWEP.Damage = 120
-SWEP.DamageMin = 110 -- damage done at maximum range
+SWEP.DamageMin = 90 -- damage done at maximum range
 SWEP.Range = 2000 -- in METRES
 SWEP.Penetration = 12
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 850 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 1000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
@@ -66,7 +67,7 @@ SWEP.NPCWeight = 100
 
 SWEP.ManualAction = true
 
-SWEP.AccuracyMOA = 0.1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 0.25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 800 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 100
 
@@ -119,6 +120,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 
 SWEP.ActivePos = Vector(0, 1, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
+
+SWEP.InBipodPos = Vector(-5, 5, -1)
 
 SWEP.SprintPos = Vector(0, 1, 0.5)
 SWEP.SprintAng = Angle(0, 0, 0)

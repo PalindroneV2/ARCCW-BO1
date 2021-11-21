@@ -1,11 +1,15 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - World at War" -- edit this if you like
+SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "StG-44"
+SWEP.PrintName = "StG-44 (BO3)"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "The first modern assault rifle, created with the intent to arm tank crewmen with better weapons than an SMG or a rifle. Hitler eventually dubbed the weapon the 'Sturmgewehr' as means for propaganda."
+SWEP.Trivia_Desc = [[
+    The first modern assault rifle, created with the intent to arm tank crewmen with better weapons than an SMG or a rifle. Hitler eventually dubbed the weapon the 'Sturmgewehr' as means for propaganda.
+
+    Model from Black Ops 3.
+]]
 SWEP.Trivia_Manufacturer = "C.G. Haenel"
 SWEP.Trivia_Calibre = "7.92x33mm Kurz"
 SWEP.Trivia_Mechanism = "Gas-Operated"
@@ -20,15 +24,15 @@ SWEP.ViewModel = "models/weapons/arccw/c_bo3_stg44_v2.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo3_stg44_v2.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-12, 4.25, -4.75),
-    ang        =    Angle(-4, 0, 180),
+    pos        =    Vector(-11.5, 4.5, -5),
+    ang        =    Angle(-4, 1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   0.925
+    scale   =   1
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 44
-SWEP.DamageMin = 34 -- damage done at maximum range
+SWEP.Damage = 35
+SWEP.DamageMin = 25 -- damage done at maximum range
 SWEP.Range = 150 -- in METRES
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
@@ -356,17 +360,29 @@ SWEP.Hook_NameChange = function(wep, name)
     elseif length == "bo3_stg44_supp" then barrel = 2
     end
 
-    if barrel == 1 and !mp44 and !pap then
-        return "StG-44C"
-    elseif barrel == 1 and mp44 and !pap then
-        return "MP-44C/9"
-    elseif barrel == 2 and !mp44 and !pap then
-        return "StG-44SD"
-    elseif barrel == 2 and mp44 and !pap then
-        return "MP-44SD/9"
-    elseif pap then
-        return "Spatz-447+"
+    local gunname = "StG-44"
+
+    if pap then
+        gunname = "Spatz-447+"
     end
+
+    if mp44 then
+        gunname = "MP-44/9"
+    end
+
+    if barrel == 1 then
+        gunname = "StG-44C"
+        if mp44 then
+            gunname = "MP-44C/9"
+        end
+    elseif barrel == 2 then
+        gunname = "StG-44SD"
+        if mp44 then
+            gunname = "MP-44SD/9"
+        end
+    end
+
+    return gunname
 end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
@@ -456,8 +472,10 @@ end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     local sndatt = wep.Attachments[14].Installed
+    local mp40 = wep.Attachments[10].Installed == "ammo_stg44_9mm"
 
     if sndatt then return "nomech_" .. anim end
+    if mp40 then return "mpmech_" .. anim end
 end
 
 SWEP.Animations = {
@@ -566,5 +584,24 @@ SWEP.Animations = {
         Source = {"fire_ads"},
         Time = 6 / 30,
         ShellEjectAt = 0,
+    },
+
+    --MPMECH--
+
+    ["mpmech_fire"] = {
+        Source = {"fire"},
+        Time = 6 / 30,
+        ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_WAW.MP40_Mech", t = 1 / 30},
+        },
+    },
+    ["mpmech_fire_iron"] = {
+        Source = {"fire_ads"},
+        Time = 6 / 30,
+        ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_WAW.MP40_Mech", t = 1 / 30},
+        },
     },
 }

@@ -12,7 +12,7 @@ att.Desc_Cons = {
 att.AutoStats = true
 
 att.Slot = {"foregrip", "bo1_uniforegrip"}
-att.ModelOffset = Vector(-17.5, -2.5, 4.25)
+att.ModelOffset = Vector(-17, -2.5, 4.25)
 
 att.LHIK = true
 

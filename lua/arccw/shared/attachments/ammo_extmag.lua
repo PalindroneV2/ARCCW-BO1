@@ -6,10 +6,10 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = {"bo1_extmag"}
+att.Slot = {"bo1_extmag", "bo3_mags"}
 
 att.ExcludeFlags = {"mp5k", "ubanims"}
-att.GivesFlags = {"bo1_extmag"}
+att.GivesFlags = {"bo1_extmag", "extmag"}
 att.BO1_ExtMag = true
 
 att.SortOrder = 100

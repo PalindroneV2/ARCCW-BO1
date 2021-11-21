@@ -23,8 +23,8 @@ SWEP.WorldModel = "models/weapons/arccw/w_waw_type99.mdl"
 SWEP.MirrorWorldModel = "models/weapons/arccw/w_waw_type99.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-6.75, 3, -3),
-    ang        =    Angle(-15, 0, 180),
+    pos        =    Vector(-7.75, 5.25, -10),
+    ang        =    Angle(-5, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale   =   1
 }
@@ -87,7 +87,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_WAW.Type99_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_WAW.G43_Sil"
-SWEP.DistantShootSound = "ArcCW_WAW.SVT_RingOff"
+SWEP.DistantShootSound = "^weapons/arccw/waw_dist/waw_svt40.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.ShellModel = "models/shells/shell_556.mdl"

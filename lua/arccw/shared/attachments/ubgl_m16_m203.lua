@@ -11,6 +11,7 @@ att.Slot = "bo1_m203"
 att.GivesFlags = {"ubanims", "m4anims"}
 att.ExcludeFlags = {"kali_barrel_short"}
 att.BO1_UBGL = true
+att.HideIfBlocked = true
 
 att.SortOrder = 100
 

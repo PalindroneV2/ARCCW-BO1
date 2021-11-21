@@ -8,7 +8,7 @@ ENT.Spawnable 			= false
 
 ENT.Model = "models/weapons/arccw/item/bo1_40mm.mdl"
 ENT.Ticks = 0
-ENT.FuseTime = 0
+ENT.FuseTime = 0.05
 ENT.Defused = false
 ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 

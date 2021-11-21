@@ -23,14 +23,15 @@ SWEP.ViewModel = "models/weapons/arccw/c_bo1_m16a1.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_m16a1.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-4, 3.5, -5.25),
-    ang        =    Angle(-9, -1, 180),
+    pos        =    Vector(-4.5, 3.5, -5.25),
+    ang        =    Angle(-9.5, -1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
+    scale = 1.1,
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 40
-SWEP.DamageMin = 32 -- damage done at maximum range
+SWEP.Damage = 30
+SWEP.DamageMin = 22 -- damage done at maximum range
 SWEP.Range = 150 -- in METRES
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
@@ -166,12 +167,12 @@ SWEP.AttachmentElements = {
     ["mount"] = {
         VMElements = {
             {
-                Model = "models/weapons/arccw/item/bo1_ak_rail.mdl",
+                Model = "models/weapons/arccw/item/bo2_rail.mdl",
                 Bone = "tag_weapon",
-                Scale = Vector(0.35, 0.35, 0.375),
+                Scale = Vector(0.45, 0.375, 0.375),
                 Offset = {
-                    pos = Vector(3.5, 0.3, 3.65),
-                    ang = Angle(0, 90, 0),
+                    pos = Vector(3.5, 0, 4.5),
+                    ang = Angle(0, 0, 0),
                 }
             }
         },
@@ -252,7 +253,7 @@ SWEP.Attachments = {
         Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(3.5, 0.025, 4.8), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(3.5, 0, 4.875), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(5.5, 1.4, -6.25),
             wang = Angle(175, 180, -2.5)
@@ -451,7 +452,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
                 vm:SetBodygroup(5,4)
             end
         end
-        if k == 2 or k == 4 then
+        if k == 2 or k == 3 then
             vm:SetBodygroup(6,1)
         end
     end

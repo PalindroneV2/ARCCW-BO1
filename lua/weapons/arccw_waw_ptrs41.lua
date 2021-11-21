@@ -23,7 +23,7 @@ SWEP.WorldModel = "models/weapons/arccw/w_waw_ptrs41.mdl"
 SWEP.MirrorWorldModel = "models/weapons/arccw/w_waw_ptrs41.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-6, 6.5, -8),
+    pos        =    Vector(-6.5, 6.5, -8.25),
     ang        =    Angle(-10, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale = 0.9
@@ -61,7 +61,7 @@ SWEP.SpeedMult = 0.75
 SWEP.SightedSpeedMult = 0.25
 SWEP.SightTime = 0.65
 
-SWEP.Delay = 60 / 75 -- 60 / RPM.
+SWEP.Delay = 60 / 65 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -94,7 +94,7 @@ SWEP.DistantShootSound = "ArcCW_WAW.Sniper_RingSt"
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 95
-SWEP.ShellScale = 2
+SWEP.ShellScale = 4
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
@@ -234,7 +234,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")
 
-    if papcamo then return vm:SetSkin(3) end
+    if papcamo then return vm:SetSkin(1) end
 end
 
 SWEP.Animations = {

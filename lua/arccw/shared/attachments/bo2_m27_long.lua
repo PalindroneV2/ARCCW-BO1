@@ -3,7 +3,6 @@ att.Icon = Material("entities/acwatt_bo2_longbarrel.png", "mips smooth")
 att.Description = "Longer, heavier barel and extended handguard increase range and reduce imprecision as well as recoil, at the cost of sight time."
 
 att.SortOrder = 100
-att.Free = true
 att.AutoStats = true
 
 att.Desc_Pros = {

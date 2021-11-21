@@ -24,15 +24,16 @@ SWEP.WorldModelOffset = {
     pos        =    Vector(-7, 2.5, -3),
     ang        =    Angle(-15, 1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   0.9
+    scale   =   1
 }
 SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0100000000"
 
-SWEP.Damage = 100
+SWEP.Damage = 105
 SWEP.DamageMin = 75 -- damage done at maximum range
-SWEP.Range = 100 -- in METRES
+SWEP.RangeMin = 15
+SWEP.Range = 300
 SWEP.Penetration = 7
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -47,8 +48,8 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 5 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 17
 
-SWEP.Recoil = 1
-SWEP.RecoilSide = 0.75
+SWEP.Recoil = 1.5
+SWEP.RecoilSide = 1
 SWEP.RecoilRise = 0.75
 SWEP.VisualRecoilMult = 0
 
@@ -57,6 +58,7 @@ SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 1,
+        PrintName = "fcg.bolt",
     },
     {
         Mode = 0
@@ -69,7 +71,7 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 1.75 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 1.25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 200
 
@@ -345,8 +347,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_WAW.K98_Up", t = 5 / 30},
             {s = "ArcCW_WAW.K98_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.K98_Back", t = 20 / 30},
-            {s = "ArcCW_WAW.K98_Up", t = 22 / 30},
+            {s = "ArcCW_WAW.K98_Fwd", t = 15 / 30},
+            {s = "ArcCW_WAW.K98_Down", t = 17 / 30},
         },
     },
     ["fire_iron"] = {
@@ -361,8 +363,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_WAW.K98_Up", t = 5 / 30},
             {s = "ArcCW_WAW.K98_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.K98_Back", t = 20 / 30},
-            {s = "ArcCW_WAW.K98_Up", t = 22 / 30},
+            {s = "ArcCW_WAW.K98_Fwd", t = 15 / 30},
+            {s = "ArcCW_WAW.K98_Down", t = 17 / 30},
         },
     },
     ["reload"] = {
@@ -377,9 +379,9 @@ SWEP.Animations = {
             {s = "ArcCW_WAW.K98_Up", t = 0.15 * 1.25},
             {s = "ArcCW_WAW.K98_Back", t = 0.3 * 1.25},
             {s = "ArcCW_WAW.K98_Rechamber", t = 0.5 * 1.25},
-            {s = "ArcCW_WAW.K98_Back", t = 1.67 * 1.25},
+            {s = "ArcCW_WAW.K98_Fwd", t = 1.67 * 1.25},
             {s = "ArcCW_WAW.K98_Eject", t = 1.69 * 1.25},
-            {s = "ArcCW_WAW.K98_Up", t = 1.71 * 1.25},
+            {s = "ArcCW_WAW.K98_Down", t = 1.71 * 1.25},
         },
     },
 
@@ -420,8 +422,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_WAW.K98_Up", t = 5 / 30},
             {s = "ArcCW_WAW.K98_Back", t = 10 / 30},
-            {s = "ArcCW_WAW.K98_Back", t = 20 / 30},
-            {s = "ArcCW_WAW.K98_Up", t = 25 / 30},
+            {s = "ArcCW_WAW.K98_Fwd", t = 20 / 30},
+            {s = "ArcCW_WAW.K98_Down", t = 25 / 30},
         },
     },
     ["fire_iron_scope"] = {
@@ -470,7 +472,7 @@ SWEP.Animations = {
         LHIKOut = 4,
         SoundTable = {
             {s = "ArcCW_WAW.K98_Fwd", t = 5 / 30},
-            {s = "ArcCW_WAW.K98_Up", t = 10 / 30},
+            {s = "ArcCW_WAW.K98_Down", t = 10 / 30},
         },
     },
     ["sgreload_finish_empty"] = {
@@ -481,7 +483,7 @@ SWEP.Animations = {
         LHIKOut = 4,
         SoundTable = {
             {s = "ArcCW_WAW.K98_Fwd", t = 5 / 30},
-            {s = "ArcCW_WAW.K98_Up", t = 10 / 30},
+            {s = "ArcCW_WAW.K98_Down", t = 10 / 30},
         },
     },
 

@@ -30,7 +30,7 @@ SWEP.WorldModelOffset = {
     pos        =    Vector(-4.25, 3.5, -7.15),
     ang        =    Angle(0, 1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale = 1.05
+    scale = 1.1,
 }
 SWEP.ViewModelFOV = 60
 
@@ -134,6 +134,9 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.ActivePos = Vector(1, 3, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
+
+SWEP.InBipodPos = Vector(0, 3, -1)
+SWEP.InBipodAng = Angle(0, 0, 0)
 
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
@@ -262,7 +265,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetSkin(3)
     end
 
-    if (wep:GetState() == ArcCW.STATE_CUSTOMIZE) or (wep:InBipod()) then
+    if (wep:GetState() == ArcCW.STATE_CUSTOMIZE) then
         vm:SetBodygroup(0,1)
         vm:SetBodygroup(1,1)
     else
@@ -348,8 +351,8 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.M14_Futz", t = 2.3},
             {s = "ArcCW_BO1.M14_MagIn", t = 2.5},
             {s = "ArcCW_BO1.M14_Tap", t = 2.6},
-            {s = "ArcCW_BO2.AR_Back", t = 3},
-            {s = "ArcCW_BO2.AR_Fwd", t = 3.15},
+            {s = "ArcCW_BO2.LMG_Back", t = 3},
+            {s = "ArcCW_BO2.LMG_Fwd", t = 3.15},
         },
         MinProgress = 4,
     },

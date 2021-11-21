@@ -18,8 +18,8 @@
 
 	"$PhongAlbedoTint" "1"
 
-    $detail "models/weapons/bo1/tan"
-    $detailblendmode 2
-    "$detailblendfactor" "0.5"
+    $detail "models/weapons/bo1/tan_dark"
+    $detailblendmode 1
+    "$detailblendfactor" "1"
 
 }

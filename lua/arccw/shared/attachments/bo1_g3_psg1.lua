@@ -1,7 +1,7 @@
 att.PrintName = "PSG-1 Marksman Magazine"
 att.AbbrevName = "Marksman Magazine"
 att.Icon = Material("entities/acwatt_bo1_ext_mag.png", "mips smooth")
-att.Description = "A shorter magazine loaded with specialized 7.62mm rounds with improved ballistics. The smaller size of the magazine allows for quicker reloads and shorter ADS times."
+att.Description = "A shorter magazine loaded with specialized 7.62mm NATO rounds with improved ballistics and damage on target. The smaller size of the magazine allows for quicker reloads and shorter ADS times."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

@@ -20,15 +20,15 @@ SWEP.ViewModel = "models/weapons/arccw/c_waw_fg42.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_waw_fg42.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-7, 4.9, -5.25),
+    pos        =    Vector(-7, 4.9, -5.4),
     ang        =    Angle(-10, 1.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   1
+    scale   =   1.1,
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 52
-SWEP.DamageMin = 46 -- damage done at maximum range
+SWEP.Damage = 40
+SWEP.DamageMin = 30 -- damage done at maximum range
 SWEP.Range = 120 -- in METRES
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
@@ -44,9 +44,9 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 20 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 64
 
-SWEP.Recoil = 1
-SWEP.RecoilSide = 0.75
-SWEP.RecoilRise = 0.75
+SWEP.Recoil = 1.5
+SWEP.RecoilSide = 1
+SWEP.RecoilRise = 1
 
 SWEP.Delay = 60 / 900-- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -68,7 +68,7 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 1.75 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 2 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 200
 
@@ -109,7 +109,7 @@ SWEP.CaseBones = {}
 SWEP.IronSightStruct = {
     Pos = Vector(-3.5125, -3, 1.025),
     Ang = Angle(-0.1, 0.025, 0),
-    Magnification = 1.25,
+    Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }

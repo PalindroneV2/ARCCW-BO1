@@ -19,10 +19,10 @@ SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/arccw/c_bo2_r870.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-2, 3.5, -6),
+    pos        =    Vector(-2, 3.5, -5.5),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   1
+    scale   =   1.15
 }
 SWEP.WorldModel = "models/weapons/arccw/c_bo2_r870.mdl"
 SWEP.ViewModelFOV = 60
@@ -367,8 +367,8 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 2,
         SoundTable = {
-            {s = "ArcCW_BO2.870_Back", t = 14 / 30},
-            {s = "ArcCW_BO2.870_Fwd", t = 21 / 30}
+            {s = "ArcCW_BO2.Shotgun_Back", t = 14 / 30},
+            {s = "ArcCW_BO2.Shotgun_Fwd", t = 21 / 30}
         },
     },
     ["fire"] = {
@@ -392,8 +392,8 @@ SWEP.Animations = {
         Time = 20 / 35,
         --ShellEjectAt = 0.3,
         SoundTable = {
-            {s = "ArcCW_BO2.870_Back", t = 2 / 30},
-            {s = "ArcCW_BO2.870_Fwd", t = 9 / 30},
+            {s = "ArcCW_BO2.Shotgun_Back", t = 2 / 30},
+            {s = "ArcCW_BO2.Shotgun_Fwd", t = 7 / 30},
         },
     },
     ["cycle_iron"] = {
@@ -403,8 +403,8 @@ SWEP.Animations = {
         Time = 20 / 35,
         --ShellEjectAt = 0.3,
         SoundTable = {
-            {s = "ArcCW_BO2.870_Back", t = 2 / 30},
-            {s = "ArcCW_BO2.870_Fwd", t = 9 / 30},
+            {s = "ArcCW_BO2.Shotgun_Back", t = 2 / 30},
+            {s = "ArcCW_BO2.Shotgun_Fwd", t = 7 / 30},
         },
     },
     ["sgreload_start"] = {
@@ -431,8 +431,8 @@ SWEP.Animations = {
         Source = "reload_out",
         Time = 30 / 30,
         SoundTable = {
-            {s = "ArcCW_BO2.870_Back", t = 8 / 30},
-            {s = "ArcCW_BO2.870_Fwd", t = 12 / 30},
+            {s = "ArcCW_BO2.Shotgun_Back", t = 8 / 30},
+            {s = "ArcCW_BO2.Shotgun_Fwd", t = 12 / 30},
         },
     },
 
@@ -462,8 +462,8 @@ SWEP.Animations = {
         Source = "reload_out",
         Time = 30 / 30,
         SoundTable = {
-            {s = "ArcCW_BO2.870_Back", t = 8 / 30},
-            {s = "ArcCW_BO2.870_Fwd", t = 12 / 30},
+            {s = "ArcCW_BO2.Shotgun_Back", t = 8 / 30},
+            {s = "ArcCW_BO2.Shotgun_Fwd", t = 12 / 30},
         },
     },
 
@@ -493,8 +493,8 @@ SWEP.Animations = {
         Source = "reload_out_fast",
         Time = 30 / 30,
         SoundTable = {
-            {s = "ArcCW_BO2.870_Back", t = 8 / 30},
-            {s = "ArcCW_BO2.870_Fwd", t = 12 / 30},
+            {s = "ArcCW_BO2.Shotgun_Back", t = 8 / 30},
+            {s = "ArcCW_BO2.Shotgun_Fwd", t = 12 / 30},
         },
     },
 

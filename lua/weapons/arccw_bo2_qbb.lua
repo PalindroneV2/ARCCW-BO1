@@ -32,8 +32,8 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 40
-SWEP.DamageMin = 32 -- damage done at maximum range
+SWEP.Damage = 29
+SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.Range = 125 -- in METRES
 SWEP.Penetration = 9
 SWEP.DamageType = DMG_BULLET
@@ -137,6 +137,9 @@ SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(15, 3, -2)
 SWEP.CustomizeAng = Angle(15, 40, 30)
+
+SWEP.InBipodPos = Vector(-5, 5, -1)
+SWEP.InBipodAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -287,8 +290,8 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_Back", t = 0.2},
-            {s = "ArcCW_BO2.AR_Fwd", t = 0.4}
+            {s = "ArcCW_BO2.LMG_Back", t = 0.2},
+            {s = "ArcCW_BO2.LMG_Fwd", t = 0.4}
         }
     },
     ["fire"] = {
@@ -309,9 +312,9 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.95},
-            {s = "ArcCW_BO2.AR_MagIn", t = 2.10},
+            {s = "ArcCW_BO1.RPK_MagOut", t = 0.3},
+            {s = "ArcCW_BO1.RPK_Futz", t = 1.95},
+            {s = "ArcCW_BO1.RPK_MagIn", t = 2.4},
         },
         MinProgress = 1.4,
     },
@@ -323,11 +326,11 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.95},
-            {s = "ArcCW_BO2.AR_MagIn", t = 2.10},
-            {s = "ArcCW_BO2.AR_Back", t = 2.5},
-            {s = "ArcCW_BO2.AR_Fwd", t = 2.65},
+            {s = "ArcCW_BO1.RPK_MagOut", t = 0.3},
+            {s = "ArcCW_BO1.RPK_Futz", t = 1.95},
+            {s = "ArcCW_BO1.RPK_MagIn", t = 2.4},
+            {s = "ArcCW_BO2.LMG_Back", t = 2.75},
+            {s = "ArcCW_BO2.LMG_Fwd", t = 2.9},
         },
         MinProgress = 2.0,
     },

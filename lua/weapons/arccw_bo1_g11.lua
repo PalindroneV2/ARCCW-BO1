@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "HK G11"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "Experimental german assault rifle for special operations which fired caseless rounds. Reseaarch into the weapons system was dropped in 1990 in favor fo the more conventional G36 rifle."
+SWEP.Trivia_Desc = "Experimental german assault rifle for special operations which fired caseless rounds. Research into the weapons system was dropped in 1990 in favor of the more conventional G36 rifle."
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
 SWEP.Trivia_Calibre = "4.73×33mm Caseless"
 SWEP.Trivia_Mechanism = "Gas-Operated"
@@ -19,8 +19,8 @@ SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_g11.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-7, 3, -8),
-    ang        =    Angle(-5, 0, 180),
+    pos        =    Vector(-7, 3, -7.4),
+    ang        =    Angle(-9, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale   =   1
 }
@@ -30,7 +30,7 @@ SWEP.ViewModelFOV = 60
 SWEP.DefaultBodygroups = "00100000000"
 
 SWEP.Damage = 27
-SWEP.DamageMin = 20 -- damage done at maximum range
+SWEP.DamageMin = 17 -- damage done at maximum range
 SWEP.Range = 150 -- in METRES
 SWEP.Penetration = 9
 SWEP.DamageType = DMG_BULLET
@@ -58,6 +58,10 @@ SWEP.Firemodes = {
         Mode = -3,
         RunawayBurst = true,
         PostBurstDelay = 0.112,
+    },
+    {
+        Mode = 2,
+        Mult_RPM = 460 / 2100,
     },
     {
         Mode = 1,
@@ -309,6 +313,22 @@ SWEP.Animations = {
         LHIKOut = 0.25,
     },
     ["ready"] = {
+        Source = "first_draw",
+        Time = 95 / 30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.25,
+        SoundTable = {
+            {s = "ArcCW_BO1.G11_Spin1", t = 23 / 35},
+            {s = "ArcCW_BO1.G11_Spin2", t = 26 / 35},
+            {s = "ArcCW_BO1.G11_Spin3", t = 29 / 35},
+            {s = "ArcCW_BO1.G11_Spin1", t = 43 / 35},
+            {s = "ArcCW_BO1.G11_Spin2", t = 46 / 35},
+            {s = "ArcCW_BO1.G11_Spin3", t = 49 / 35},
+            {s = "ArcCW_BO1.G11_Tap", t = 65 / 35},
+        },
+    },
+    ["fix"] = {
         Source = "first_draw",
         Time = 95 / 30,
         LHIK = true,

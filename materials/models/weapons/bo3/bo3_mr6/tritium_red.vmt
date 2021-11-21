@@ -1,0 +1,7 @@
+VertexlitGeneric
+{
+	"$basetexture" "models/weapons/bo1/red"
+	$color2 "[255 0 0]"
+	$selfillum 1
+	$selfillummask "models/weapons/bo1/red"
+}

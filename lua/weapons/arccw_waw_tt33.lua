@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
 
-SWEP.PrintName = "TT-33"
+SWEP.PrintName = "Tokarev TT-33"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "A soviet pistol designed shortly before World War II, and served as the standard issue pistol for the Soviets during the war until it was replaced by the Makarov PM."
 SWEP.Trivia_Manufacturer = "Tula Arms Plant"
@@ -20,13 +20,14 @@ SWEP.ViewModel = "models/weapons/arccw/c_waw_tt33.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_waw_tt33.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-9.5, 3.075, -3.5),
+    scale = 1.1,
+    pos        =    Vector(-9.25, 3.075, -4.25),
     ang        =    Angle(-6, -2.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 32
+SWEP.Damage = 30
 SWEP.DamageMin = 20
 SWEP.RangeMin = 7
 SWEP.Range = 120

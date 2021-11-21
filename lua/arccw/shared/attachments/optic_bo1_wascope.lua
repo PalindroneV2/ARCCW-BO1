@@ -32,7 +32,7 @@ att.AdditionalSights = {
 att.ScopeGlint = false
 
 att.Holosight = true
-att.HolosightReticle = Material("hud/scopes/psg1_scope.png")
+att.HolosightReticle = Material("hud/scopes/bo1_wa2000.png")
 att.HolosightNoFlare = true
 att.HolosightSize = 10
 att.HolosightBone = "holosight"
@@ -40,8 +40,8 @@ att.HolosightPiece = "models/weapons/arccw/atts/bo1_wascope_hsp.mdl"
 att.Colorable = true
 
 att.HolosightBlackbox = true
-att.HolosightMagnification = 12
-att.HolosightMagnificationMin = 8
+att.HolosightMagnification = 6
+att.HolosightMagnificationMin = 2
 att.HolosightMagnificationMax = 12
 
 att.Mult_SightTime = 1.125

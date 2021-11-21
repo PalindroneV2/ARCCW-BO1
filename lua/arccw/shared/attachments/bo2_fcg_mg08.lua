@@ -11,6 +11,7 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = "bo2_fcg_mg08"
 att.SortOrder = 99
+att.IgnorePickX = true
 
 att.Mult_RPM = 1.5
 att.Mult_Range = 0.75

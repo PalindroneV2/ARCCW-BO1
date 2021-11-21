@@ -4,7 +4,6 @@ att.Description = "Reduced length barrel. Shorter effective range, bigger spread
 
 att.SortOrder = 105
 
-att.Free = true
 att.AutoStats = true
 
 att.Desc_Pros = {

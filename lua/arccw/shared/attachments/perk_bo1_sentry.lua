@@ -8,6 +8,8 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = {"bo1_perk_minigun"}
 
+att.NoRandom = true
+
 att.Mult_HipDispersion = 1.5
 att.Mult_MoveDispersion = 1.5
 att.Mult_Recoil = 0.1

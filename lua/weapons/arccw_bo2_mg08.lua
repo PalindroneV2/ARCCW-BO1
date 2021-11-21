@@ -1,6 +1,6 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - World at War" -- edit this if you like
+SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "MG-08/15"
@@ -22,8 +22,8 @@ SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_mg08.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     scale = 1,
-    pos        =    Vector(-17.5, 1, -10.5),
-    ang        =    Angle(-7, 0, 180),
+    pos        =    Vector(-3.75, 4.25, -9.25),
+    ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60

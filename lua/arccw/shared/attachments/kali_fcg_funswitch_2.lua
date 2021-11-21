@@ -9,6 +9,7 @@ att.Desc_Cons = {
 }
 att.AutoStats = true
 att.Free = true
+att.IgnorePickX = true
 att.Slot = "fcg_kali"
 att.SortOrder = 104
 

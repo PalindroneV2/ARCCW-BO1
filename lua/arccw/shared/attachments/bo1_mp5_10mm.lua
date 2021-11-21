@@ -12,8 +12,6 @@ att.GivesFlags = {"mp5_10mm"}
 
 att.SortOrder = 99
 
-att.AddSuffix = "/10mm"
-
 att.Override_Trivia_Calibre = "10x25mm Auto"
 att.Mult_Damage = 1.2
 att.Mult_DamageMin = 1.2

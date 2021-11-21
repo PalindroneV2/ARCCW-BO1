@@ -1,0 +1,18 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/bo3/bo3_rk5/slide"
+	"$bumpmap" "models/weapons/bo3/bo3_rk5/slide_n"
+	
+	$phong                      		1
+	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.5 1 1]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	"$envmap" "env_cubemap"					
+	"$envmaptint" "[ .1 .1 .1 ]"					
+	"$envmapFresnel" "1"
+
+	"$nocull" "1"
+}

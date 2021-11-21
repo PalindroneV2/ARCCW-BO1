@@ -7,8 +7,8 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
+att.IgnorePickX = true
 att.Free = true
-
 att.Slot = "fcg_m16a2"
 att.GivesFlags = {"a2top"}
 att.SortOrder = 101

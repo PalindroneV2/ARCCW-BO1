@@ -19,8 +19,8 @@ SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_famas.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-8, 3.5, -4.75),
-    ang        =    Angle(-10, 0, 180),
+    pos        =    Vector(-8, 3.5, -5.5),
+    ang        =    Angle(-9, -0.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale   =   1
 }
@@ -29,8 +29,8 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "00000000000"
 
-SWEP.Damage = 34
-SWEP.DamageMin = 22 -- damage done at maximum range
+SWEP.Damage = 28
+SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.Range = 120 -- in METRES
 SWEP.Penetration = 9
 SWEP.DamageType = DMG_BULLET
@@ -118,8 +118,8 @@ SWEP.IronSightStruct = {
 }
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "smg"
-SWEP.HoldtypeSights = "smg"
+SWEP.HoldtypeActive = "ar2"
+SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
@@ -170,7 +170,7 @@ SWEP.AttachmentElements = {
             CrosshairInSights = false,
         },
         AttPosMods = {
-            [1] = {
+            [2] = {
                 vpos = Vector(2, -0.025, 6.5),
             }
         }
@@ -178,6 +178,12 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.Attachments = {
+    {
+        PrintName = "Frame",
+        Slot = "bo1_famas_frame",
+        DefaultAttName = "FAMAS Valorisé",
+        FreeSlot = true,
+    },
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
@@ -218,7 +224,7 @@ SWEP.Attachments = {
             wang = Angle(172.5, -180.5, -5),
         },
         InstalledEles = {"heatrail"},
-        MergeSlots = {4,5,6}
+        MergeSlots = {5,6,7}
     },
     {
         Hidden = true,
@@ -262,7 +268,7 @@ SWEP.Attachments = {
     },
     { --8
         PrintName = "Fire Group",
-        Slot = {"bo1_fcg", "fcg_famas"}
+        Slot = {"bo1_fcg", "bo1_fcg_burst"}
     },
     { --9
         PrintName = "Ammo Type",
@@ -290,8 +296,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")
     local f1 = 0
-    if wep.Attachments[8].Installed == "bo1_fcg_famas_s13" then f1 = 2 end
-    local optic = wep.Attachments[1].Installed
+    if wep.Attachments[1].Installed == "bo1_famas_f1" then f1 = 2 end
+    local optic = wep.Attachments[2].Installed
     local intbipod = wep:GetBuff_Override("BO1_Bipod")
 
     for k = f1, f1 do
@@ -318,7 +324,7 @@ end
 
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
-    local f1 = wep.Attachments[8].Installed == "bo1_fcg_famas_s13"
+    local f1 = wep.Attachments[1].Installed == "bo1_famas_f1"
 
     if pap then
         return "G16-GL35"

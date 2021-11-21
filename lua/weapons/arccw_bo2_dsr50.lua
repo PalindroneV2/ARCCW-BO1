@@ -17,9 +17,10 @@ SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/arccw/c_bo2_dsr50.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-9.25, 4.5, -6.5),
+    pos        =    Vector(-9.5, 4.5, -6.25),
     ang        =    Angle(-6, -1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
+    scale = 1.15,
 }
 SWEP.WorldModel = "models/weapons/arccw/w_bo2_dsr50.mdl"
 SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_dsr50.mdl"
@@ -31,7 +32,7 @@ SWEP.Range = 1000 -- in METRES
 SWEP.Penetration = 20
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 853 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 900 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
@@ -63,7 +64,7 @@ SWEP.NPCWeight = 100
 
 SWEP.ManualAction = true
 
-SWEP.AccuracyMOA = 0.2 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 0.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 800 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 100
 
@@ -123,8 +124,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, 1, 0.5)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.InBipodPos = Vector(-4, 5, -1.5)
-SWEP.InBipodAng = Angle(0.3, 0, 0)
+SWEP.InBipodPos = Vector(-3, 5, -1)
+SWEP.InBipodAng = Angle(0, 0, 0)
 
 /*
 SWEP.SprintPos = Vector(4, 2, 2)

@@ -21,6 +21,7 @@ SWEP.WorldModelOffset = {
     pos        =    Vector(-10, 4.5, -5),
     ang        =    Angle(-5, -1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
+    scale = 1.1,
 }
 SWEP.ViewModelFOV = 60
 
@@ -183,6 +184,7 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Muzzle",
         Slot = "muzzle",
         VMScale = Vector(1.25, 1.25, 1.25),
+        WMScale = Vector(1.25, 1.25, 1.25),
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(4.75, 0, 1.2), -- offset that the attachment will be relative to the bone

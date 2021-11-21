@@ -5,7 +5,6 @@ att.Icon = Material("entities/acwatt_1911_bo3.png", "smooth mips")
 att.Description = "Modernized short slide that is both more compact and less heavy."
 
 att.Slot = "m1911_slide"
-att.Free = true
 
 att.ActivateElements = {"slide_short_modern"}
 

@@ -21,15 +21,15 @@ SWEP.ViewModel = "models/weapons/arccw/c_bo2_fiveseven.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo2_fiveseven.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1.025,
+    scale = 1,
     pos        =    Vector(-9.5, 3, -3.85),
     ang        =    Angle(-6, -2.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 34
-SWEP.DamageMin = 20
+SWEP.Damage = 27
+SWEP.DamageMin = 18
 SWEP.RangeMin = 25
 SWEP.Range = 120
 

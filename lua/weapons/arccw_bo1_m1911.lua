@@ -26,8 +26,8 @@ SWEP.ViewModel = "models/weapons/arccw/c_bo1_m1911.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_m1911.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1.025,
-    pos        =    Vector(-9.5, 3, -3.5),
+    scale = 1.1,
+    pos        =    Vector(-9.75, 3, -3.75),
     ang        =    Angle(-6, -2.5, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -315,10 +315,13 @@ end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim, data)
     local bo2 = wep.Attachments[9].Installed == "bo1_m1911_sound_bo2"
+    local cod4 = wep.Attachments[9].Installed == "bo1_m1911_sound_cod4"
     local eclip = wep:Clip1() == 0
 
     if bo2 then
         return anim .. "_bo2"
+    elseif cod4 then
+        return anim .. "_cod4"
     elseif eclip and !bo2 then
         return anim .. "_empty"
     end
@@ -445,6 +448,31 @@ SWEP.Animations = {
             {s = "ArcCW_BO2.Pistol_MagOut", t = 0.25},
             {s = "ArcCW_BO2.Pistol_MagIn", t = 1},
             {s = "ArcCW_BO2.Pistol_SlideFwd", t = 1.5}
+        },
+    },
+    ["reload_cod4"] = {
+        Source = "reload",
+        Time = 1.5,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+        SoundTable = {
+            {s = "ArcCW_COD4E.1911_Out", t = 0.25},
+            {s = "ArcCW_COD4E.1911_In", t = 1}
+        },
+    },
+    ["reload_empty_cod4"] = {
+        Source = "reload_empty",
+        Time = 2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+        SoundTable = {
+            {s = "ArcCW_COD4E.1911_Out", t = 0.25},
+            {s = "ArcCW_COD4E.1911_In", t = 1},
+            {s = "ArcCW_COD4E.1911_Chamber", t = 1.5}
         },
     },
     ["enter_sprint"] = {

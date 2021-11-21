@@ -20,16 +20,17 @@ SWEP.ViewModel = "models/weapons/arccw/c_waw_carbine.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_waw_carbine.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-9, 3.5, -4),
+    pos        =    Vector(-9.5, 3.5, -4),
     ang        =    Angle(-10, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   1
+    scale   =   1.1,
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 36
-SWEP.DamageMin = 32 -- damage done at maximum range
-SWEP.Range = 100 -- in METRES
+SWEP.Damage = 35
+SWEP.DamageMin = 22
+SWEP.RangeMin = 30
+SWEP.Range = 150
 SWEP.Penetration = 7
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -40,7 +41,7 @@ SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
-SWEP.ChamberSize = 1 -- how many rounds can be chambered.
+SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 15 -- DefaultClip is automatically set.
 
 SWEP.Recoil = 0.5
@@ -63,8 +64,8 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 1.25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
+SWEP.AccuracyMOA = 2 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 400 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 80
 
 SWEP.Primary.Ammo = "smg1" -- what ammo type the gun uses

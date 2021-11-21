@@ -19,15 +19,15 @@ SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_spas12.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-1, 4, -6),
-    ang        =    Angle(-10, -1, 180),
+    pos        =    Vector(-1, 4, -6.2),
+    ang        =    Angle(-9, -1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   1
+    scale   =   1.05
 }
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_spas12.mdl"
 SWEP.ViewModelFOV = 60
 
-SWEP.DefaultBodygroups = "001000000"
+SWEP.DefaultBodygroups = "002000000"
 
 SWEP.Damage = 14
 SWEP.DamageMin = 4
@@ -52,9 +52,9 @@ SWEP.Primary.ClipSize = 8 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 24
 SWEP.ReducedClipSize = 6
 
-SWEP.Recoil = 2
-SWEP.RecoilSide = 2
-SWEP.MaxRecoilBlowback = 2
+SWEP.Recoil = 2.5
+SWEP.RecoilSide = 2.5
+SWEP.MaxRecoilBlowback = 2.5
 
 SWEP.ShotgunReload = true
 
@@ -121,7 +121,7 @@ SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "shotgun"
 SWEP.HoldtypeSights = "ar2"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.ActivePos = Vector(1, 3, 0.25)
 SWEP.ActiveAng = Angle(0, 0, 0)
@@ -140,18 +140,17 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.AttachmentElements = {
     ["spas12_pap"] = {
-        --VMMaterial = "models/weapons/pap/pap_blue_burn",
         NamePriority = 10,
         NameChange = "SPAZ-24",
     },
-    ["spas_stockon"] = {
+    ["stock_l"] = {
         VMBodygroups = {
             {ind = 2, bg = 0},
         },
     },
-    ["spas_stockoff"] = {
+    ["stock_m"] = {
         VMBodygroups = {
-            {ind = 2, bg = 2},
+            {ind = 2, bg = 1},
         }
     },
     ["mount"] = {
@@ -189,7 +188,7 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
         InstalledEles = {"mount"},
-        ExcludeFlags = {"folded"}
+        ExcludeFlags = {"stock_l"}
     }, --1
     {
         PrintName = "Muzzle",
@@ -227,8 +226,8 @@ SWEP.Attachments = {
     }, --4
     {
         PrintName = "Stock",
-        Slot = "spas12_stock",
-        DefaultAttName = "Unfolded Stock",
+        Slot = "bo1_stock_lm",
+        DefaultAttName = "No Stock",
         GivesFlags = {"notfolded"}
     }, --5
     { --6
@@ -259,14 +258,22 @@ SWEP.Attachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[7].Installed == "ammo_spas12_pap"
-    local off = wep.Attachments[5].Installed == "spas12_stock_off"
-    local folded = wep.Attachments[5].Installed == "spas12_stock_on"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
+    local folded = wep.Attachments[5].Installed == "bo1_stock_light"
 
-    if papcamo and folded then
-        return vm:SetSkin(2)
-    elseif papcamo and (!off or off) then
-        return vm:SetSkin(3)
+    if papcamo then
+        vm:SetSkin(3)
+        if folded then
+            vm:SetSkin(2)
+        end
+    end
+end
+
+SWEP.Hook_SelectInsertAnimation = function(wep, data)
+    local pap = wep:GetBuff_Override("PackAPunch")
+
+    if pap then
+        return {count = 24, anim = "sgreload_insert_pap"}
     end
 end
 
@@ -341,30 +348,21 @@ SWEP.Animations = {
         },
     },
     ["sgreload_start"] = {
-        Source = "reload_in2",
-        Time = 30 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0,
-        SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 40 / 30},
-        },
-    },
-    ["sgreload_start_empty"] = {
         Source = "reload_in",
         Time = 54 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0,
+        RestoreAmmo = 1,
+        MinProgress = 40 / 30,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Shell", t = 40 / 30},
         },
     },
     ["sgreload_insert"] = {
         Source = "reload_loop",
-        Time = 24 / 30,
+        Time = 26 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
         LHIK = true,
@@ -373,21 +371,24 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO1.MK_Shell", t = 10 / 30},
         },
+        MinProgress = 15 / 30,
+    },
+    ["sgreload_insert_pap"] = {
+        Source = "reload_loop",
+        Time = 26 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnimStartTime = 0.3,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
+        SoundTable = {
+            {s = "ArcCW_BO1.MK_Shell", t = 10 / 30},
+        },
+        MinProgress = 15 / 30,
     },
     ["sgreload_finish"] = {
         Source = "reload_out",
-        Time = 24 / 30,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 1,
-        SoundTable = {
-            {s = "ArcCW_BO1.SPAS_Back", t = 8 / 30},
-            {s = "ArcCW_BO1.SPAS_Fwd", t = 12 / 30},
-        },
-    },
-    ["sgreload_finish_empty"] = {
-        Source = "reload_out",
-        Time = 24 / 30,
+        Time = 26 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 1,

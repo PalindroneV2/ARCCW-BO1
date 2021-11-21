@@ -4,6 +4,7 @@ att.Description = "Having no need for your sling, but not wanting to take it off
 
 att.SortOrder = 100
 att.Free = true
+att.IgnorePickX = true
 
 att.Desc_Pros = {
     "+ Looks cooler if you like it",
@@ -14,3 +15,6 @@ att.Desc_Cons = {
 att.Slot = "car15_sling"
 
 att.AttachSound = "weapons/arccw/bo1_m16/bo_spawn.wav"
+
+att.Free = true
+att.IgnorePickX = true

@@ -20,9 +20,9 @@ SWEP.ViewModel = "models/weapons/arccw/c_bo1_wa2000.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_wa2000.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    scale = 1.025,
-    pos        =    Vector(-7, 4, -7),
-    ang        =    Angle(-10, -1.25, 180),
+    scale = 1.1,
+    pos        =    Vector(-7.1, 4, -6.5),
+    ang        =    Angle(-9.5, -1.25, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
@@ -70,7 +70,7 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 0.75 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 800 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 50
 
@@ -82,6 +82,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_BO1.WA2000_Shoot"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.FAL_Sil"
+SWEP.DistantShootSound = {"^weapons/arccw/bo2_generic_sniper/dist/flux_l.wav", "^weapons/arccw/bo2_generic_sniper/dist/flux_r.wav"}
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -273,7 +274,7 @@ end
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 1 / 35,
+        Time = 1.33,
     },
     ["draw"] = {
         Source = "draw",

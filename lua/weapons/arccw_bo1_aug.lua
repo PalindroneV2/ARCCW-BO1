@@ -19,18 +19,18 @@ SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_aug.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-8, 3.5, -4.75),
+    pos        =    Vector(-8.35, 3.5, -4.75),
     ang        =    Angle(-10, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   1
+    scale = 1.05,
 }
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_aug.mdl"
 SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "00000000000"
 
-SWEP.Damage = 40
-SWEP.DamageMin = 27 -- damage done at maximum range
+SWEP.Damage = 30
+SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.Range = 120 -- in METRES
 SWEP.Penetration = 9
 SWEP.DamageType = DMG_BULLET
@@ -292,6 +292,28 @@ SWEP.Attachments = {
         },
     },
 }
+
+
+SWEP.Hook_NameChange = function(wep, name)
+    local A1 = wep.Attachments[6].Installed == "optic_bo1_aug"
+    local pap = wep:GetBuff_Override("PackAPunch")
+
+    local gunname = "AUG"
+    local alt = " A2"
+
+    if A1 then
+        alt = " A1"
+    end
+
+    if pap then
+        alt = "-M3NT"
+        if wep:GetBuff_Override("BO1_UBMK") then
+            alt = "-50M3"
+        end
+    end
+
+    return gunname .. alt
+end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm

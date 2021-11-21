@@ -20,14 +20,14 @@ SWEP.ViewModel = "models/weapons/arccw/c_bo1_g3.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_g3.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-8.25, 4.25, -6.75),
+    pos        =    Vector(-7.5, 4.25, -7.2),
     ang        =    Angle(-5, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 55
-SWEP.DamageMin = 45 -- damage done at maximum range
+SWEP.Damage = 45
+SWEP.DamageMin = 30 -- damage done at maximum range
 SWEP.Range = 175 -- in METRES
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
@@ -128,6 +128,9 @@ SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(15, 2, -1.5)
 SWEP.CustomizeAng = Angle(15, 40, 25)
+
+SWEP.InBipodPos = Vector(0, 0, -1)
+SWEP.InBipodAng = Angle(0, 0, 10)
 
 SWEP.HolsterPos = Vector(3, 0, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -259,8 +262,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(-3.75, 0, 4.5), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(4.5, 0.8, -5.4),
-            wang = Angle(-9, -1, 180)
         },
         InstalledEles = {"rail"},
         CorrectivePos = Vector(0, 0, 0),
