@@ -72,8 +72,8 @@ if SERVER then
         util.BlastDamage(self, attacker, self:GetPos(), 250, 150)
         if attacker:IsPlayer() then
             local dist = attacker:GetPos():Distance(self:GetPos())
-            if dist <= 128 then
-                attacker:SetVelocity((attacker:GetPos() - self:GetPos()):GetNormalized() * 750 * (1 - dist / 128))
+            if dist <= 250 then
+                attacker:SetVelocity((attacker:GetPos() - self:GetPos()):GetNormalized() * 800 * (1 - dist / 250))
             end
         end
 
@@ -93,10 +93,10 @@ function ENT:Draw()
 end
 
 hook.Add("EntityTakeDamage", "ArcCW_BO1_DoomRocket", function(ply, dmginfo)
-    if not ply:IsPlayer() then return end
+    if !ply:IsPlayer() or !IsValid(dmginfo:GetInflictor()) then return end
     local ent = dmginfo:GetInflictor()
     if ent:GetClass() == "arccw_bo1_doomrocket" and ent:GetOwner() == ply then
-        dmginfo:ScaleDamage(0.15)
+        dmginfo:ScaleDamage(0.1)
         dmginfo:SetDamageType(bit.bor(dmginfo:GetDamageType(), DMG_BLAST) - DMG_BLAST)
     end
 end)
