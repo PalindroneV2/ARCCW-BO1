@@ -565,7 +565,7 @@ SWEP.Attachments = {
     {
         PrintName = "Magazine",
         Slot = {"kali_ar15_mag"},
-        DefaultAttName = "5.56mm NATO 30rnd",
+        DefaultAttName = "Standard Magazine",
         RandomChance = 0.1,
     }, --10
     {
@@ -1292,9 +1292,10 @@ SWEP.RejectAttachments = {
 
 SWEP.Hook_GetCapacity = function(wep, cap)
     local pap = wep:GetBuff_Override("PackAPunch")
-    local m635 = wep.Attachments[10].Installed == "ammo_kali_ar15_9mm"
-    local mag20 = wep.Attachments[10].Installed == "bo1_ar15_mag20"
-    local mag100 = wep.Attachments[10].Installed == "ammo_kali_ar15_patriot"
+    local m635 = wep.Attachments[10].Installed == "kali_ar15_mag_9mm"
+    local mag20 = wep.Attachments[10].Installed == "bo1_ar15_mag_20"
+    local mag40 = wep.Attachments[10].Installed == "bo1_ar15_mag_40"
+    local mag100 = wep.Attachments[10].Installed == "kali_ar15_patriot"
     local patriot = wep.Attachments[4].Installed == "kali_ar15_barrel_patriot"
     local stocka = wep.Attachments[9].Installed
     local tube = wep.Attachments[5].Installed == "ubgl_m16_m203"
