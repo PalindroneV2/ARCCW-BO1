@@ -53,8 +53,8 @@ SWEP.Primary.ClipSize = 6 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 16
 SWEP.ReducedClipSize = 4
 
-SWEP.Recoil = 2
-SWEP.RecoilSide = 2
+SWEP.Recoil = 4
+SWEP.RecoilSide = 4
 SWEP.MaxRecoilBlowback = 2
 
 SWEP.ShotgunReload = true
@@ -77,7 +77,7 @@ SWEP.NPCWeaponType = "weapon_shotgun"
 SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 45 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 450 -- inaccuracy added by hip firing.
+SWEP.HipDispersion = 350 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 100
 
 SWEP.Primary.Ammo = "buckshot" -- what ammo type the gun uses

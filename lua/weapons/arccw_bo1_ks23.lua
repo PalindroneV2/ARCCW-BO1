@@ -29,12 +29,12 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
 
-SWEP.Damage = 10
-SWEP.DamageMin = 2
+SWEP.Damage = 16
+SWEP.DamageMin = 4
 SWEP.Range = 50
 SWEP.RangeMin = 5
 
-SWEP.HullSize = 4
+SWEP.HullSize = 2
 SWEP.BodyDamageMults = {[HITGROUP_HEAD] = 1,}
 
 SWEP.Penetration = 1
@@ -51,9 +51,9 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 4 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 12
 
-SWEP.Recoil = 2
-SWEP.RecoilSide = 2
-SWEP.MaxRecoilBlowback = 2
+SWEP.Recoil = 6
+SWEP.RecoilSide = 6
+SWEP.VisualRecoilMult = 3
 
 SWEP.ShotgunReload = true
 SWEP.ManualAction = true
@@ -63,7 +63,7 @@ SWEP.Num = 16 -- number of shots per trigger pull.
 SWEP.RunawayBurst = false
 SWEP.Firemodes = {
     {
-        PrintName = "PUMP",
+        PrintName = "fcg.pump",
         Mode = 1,
     },
     {

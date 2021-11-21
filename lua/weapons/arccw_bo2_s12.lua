@@ -30,8 +30,8 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "000000000"
 
-SWEP.Damage = 10
-SWEP.DamageMin = 3
+SWEP.Damage = 13
+SWEP.DamageMin = 5
 SWEP.Range = 50
 SWEP.RangeMin = 5
 
@@ -53,9 +53,9 @@ SWEP.Primary.ClipSize = 10 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 20
 SWEP.ReducedClipSize = 5
 
-SWEP.Recoil = 2
-SWEP.RecoilSide = 2
-SWEP.MaxRecoilBlowback = 2
+SWEP.Recoil = 3
+SWEP.RecoilSide = 4
+SWEP.MaxRecoilBlowback = 4
 
 SWEP.Delay = 60 / 468 -- 60 / RPM.
 SWEP.Num = 8 -- number of shots per trigger pull.

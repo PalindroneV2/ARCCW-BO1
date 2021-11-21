@@ -28,9 +28,14 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 25
-SWEP.DamageMin = 15 -- damage done at maximum range
-SWEP.Range = 50 -- in METRES
+SWEP.Damage = 20
+SWEP.DamageMin = 12 -- damage done at maximum range
+SWEP.Range = 50
+SWEP.RangeMin = 5
+
+SWEP.HullSize = 1
+SWEP.BodyDamageMults = {[HITGROUP_HEAD] = 1,}
+
 SWEP.Penetration = 2
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -47,8 +52,8 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 5 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 5
 
-SWEP.Recoil = 1
-SWEP.RecoilSide = 0.75
+SWEP.Recoil = 1.2
+SWEP.RecoilSide = 1.2
 SWEP.RecoilRise = 1
 
 SWEP.Delay = 60 / 468 -- 60 / RPM.
@@ -69,8 +74,8 @@ SWEP.NPCWeaponType = {
 SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 30 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 220 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 130
+SWEP.HipDispersion = 250 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 150
 
 SWEP.ShootWhileSprint = false
 
@@ -94,10 +99,10 @@ SWEP.CaseEffectAttachment = nil -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 3
 
-SWEP.SightTime = 0.175
+SWEP.SightTime = 0.25
 
-SWEP.SpeedMult = 1
-SWEP.SightedSpeedMult = 0.75
+SWEP.SpeedMult = 0.98
+SWEP.SightedSpeedMult = 0.6
 
 SWEP.BarrelLength = 12
 
