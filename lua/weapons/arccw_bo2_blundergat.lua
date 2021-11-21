@@ -31,9 +31,8 @@ SWEP.ViewModelFOV = 60
 SWEP.DefaultBodygroups = "000000000"
 
 SWEP.Damage = 50
-SWEP.DamageMin = 10 -- damage done at maximum range
-SWEP.Range = 100 -- in METRES
-SWEP.RangeMin = 10
+SWEP.DamageMin = 40
+SWEP.Range = 50
 
 SWEP.HullSize = 2
 SWEP.BodyDamageMults = {[HITGROUP_HEAD] = 1,}
