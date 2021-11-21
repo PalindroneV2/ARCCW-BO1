@@ -27,9 +27,11 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 25
-SWEP.DamageMin = 15 -- damage done at maximum range
-SWEP.Range = 90 -- in METRES
+SWEP.Damage = 38
+SWEP.DamageMin = 10 -- damage done at maximum range
+SWEP.Range = 120 -- in METRES
+SWEP.RangeMin = 20
+
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -46,7 +48,7 @@ SWEP.ExtendedClipSize = 40
 SWEP.ReducedClipSize = 12
 
 SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.35
+SWEP.RecoilSide = 0.3
 SWEP.RecoilRise = 0.75
 
 SWEP.Delay = 60 / 550 -- 60 / RPM.
@@ -69,8 +71,8 @@ SWEP.NPCWeaponType = {
 SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 3 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 550 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.HipDispersion = 250 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 50
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
 SWEP.MagID = "mpl" -- the magazine pool this gun draws from
@@ -255,7 +257,7 @@ SWEP.Attachments = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[8].Installed == "ammo_papunch"
-    local dualmag = wep.Attachments[6].Installed == "ammo_dualmag"
+    local dualmag = wep.Attachments[6].Installed == "bo1_mag_dual"
     local lc10 = wep.Attachments[7].Installed == "bo1_fcg_rapid_lc10"
     local wire = wep.Attachments[5].Installed == "bo1_stock_light"
 
@@ -274,7 +276,7 @@ end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     local stock = wep.Attachments[5].Installed == "bo1_stock_light"
-    local dmag = wep.Attachments[6].Installed == "ammo_dualmag"
+    local dmag = wep.Attachments[6].Installed == "bo1_mag_dual"
 
     if stock and !dmag then
         return anim .. "_grip"

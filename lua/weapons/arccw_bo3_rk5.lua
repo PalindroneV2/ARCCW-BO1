@@ -28,7 +28,9 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 35
+SWEP.DefaultSkin = 0
+
+SWEP.Damage = 34
 SWEP.DamageMin = 10
 SWEP.RangeMin = 15
 SWEP.Range = 90
@@ -44,7 +46,7 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 15 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 45
 
-SWEP.Recoil = 0.75
+SWEP.Recoil = 0.6
 SWEP.RecoilSide = 0.35
 SWEP.RecoilRise = 1
 
@@ -57,7 +59,8 @@ SWEP.Firemodes = {
         PostBurstDelay = 0.12,
     },
     {
-        Mode = 1
+        Mode = 2,
+        Mult_RecoilSide = 2,
     },
     {
         Mode = 0
@@ -148,7 +151,7 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 1},
         },
     },
-    ["bo1_dual_mag"] = {
+    ["bo1_mag_fast"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
         },
@@ -254,7 +257,7 @@ SWEP.Hook_TranslateAnimation = function(wep, anim, data)
     if eclip then
         return anim .. "_empty"
     end
-    local fastmag = wep.Attachments[5].Installed == "ammo_dualmag"
+    local fastmag = wep.Attachments[5].Installed == "bo1_mag_dual"
 
     if fastmag then
         return anim .. "_fast"

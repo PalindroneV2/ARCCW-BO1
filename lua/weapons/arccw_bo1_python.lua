@@ -28,8 +28,8 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 50
-SWEP.DamageMin = 15
+SWEP.Damage = 65
+SWEP.DamageMin = 20
 SWEP.RangeMin = 10
 SWEP.Range = 100
 
@@ -67,8 +67,8 @@ SWEP.NPCWeaponType = {
 SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 1.75 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 300 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 120
+SWEP.HipDispersion = 400 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 150
 
 SWEP.ShootWhileSprint = false
 

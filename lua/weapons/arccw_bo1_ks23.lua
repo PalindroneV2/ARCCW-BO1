@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "KS-23"
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = "Soviet pump-action shotgun designed to be fitted with 23mm barrels originally for aircraft guns that were rejected due to manufacturing flaws."
+SWEP.Trivia_Desc = "Soviet pump-action shotgun designed to be fitted with 23mm barrels originally for aircraft guns that were rejected due to manufacturing flaws.\nUsed as riot shotguns in prisons, it is devestating in close range combat."
 SWEP.Trivia_Manufacturer = "Tula Arms"
 SWEP.Trivia_Calibre = "	23×75mmR"
 SWEP.Trivia_Mechanism = "Pump-Action"
@@ -29,9 +29,14 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
 
-SWEP.Damage = 35
-SWEP.DamageMin = 15 -- damage done at maximum range
-SWEP.Range = 25 -- in METRES
+SWEP.Damage = 16
+SWEP.DamageMin = 4
+SWEP.Range = 50
+SWEP.RangeMin = 5
+
+SWEP.HullSize = 2
+SWEP.BodyDamageMults = {[HITGROUP_HEAD] = 1,}
+
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -46,19 +51,19 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 4 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 12
 
-SWEP.Recoil = 2
-SWEP.RecoilSide = 2
-SWEP.MaxRecoilBlowback = 2
+SWEP.Recoil = 6
+SWEP.RecoilSide = 6
+SWEP.VisualRecoilMult = 3
 
 SWEP.ShotgunReload = true
 SWEP.ManualAction = true
 
 SWEP.Delay = 60 / 312 -- 60 / RPM.
-SWEP.Num = 4 -- number of shots per trigger pull.
+SWEP.Num = 16 -- number of shots per trigger pull.
 SWEP.RunawayBurst = false
 SWEP.Firemodes = {
     {
-        PrintName = "PUMP",
+        PrintName = "fcg.pump",
         Mode = 1,
     },
     {
@@ -69,9 +74,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_shotgun"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 27.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 50 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 350 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 200
 
 SWEP.Primary.Ammo = "buckshot" -- what ammo type the gun uses
 

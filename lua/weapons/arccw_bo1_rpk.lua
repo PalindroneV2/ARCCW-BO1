@@ -146,7 +146,7 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 2},
         },
     },
-    ["bo1_dual_mag"] = {
+    ["bo1_mag_fast"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
         },
@@ -371,7 +371,7 @@ end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     local drum = wep.Attachments[9].Installed == "bo1_ammo_rpk_drum"
-    local dual = wep.Attachments[9].Installed == "ammo_dualmag"
+    local dual = wep.Attachments[9].Installed == "bo1_mag_dual"
 
     if drum then
         return anim .. "_drum"

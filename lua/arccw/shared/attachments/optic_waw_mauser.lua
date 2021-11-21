@@ -4,11 +4,13 @@ att.Description = "There is a black crosshair the inner portions being colored r
 
 att.SortOrder = 100
 att.Free = true
+att.AutoStats = true
 
 att.Desc_Pros = {
+    "autostat.holosight",
+    "autostat.zoom",
 }
-att.Desc_Cons = {
-}
+att.Desc_Neutrals = {"bo.desc"}
 
 att.Slot = "bo3_mauserscope"
 att.GivesFlags = {"boomhilda"}

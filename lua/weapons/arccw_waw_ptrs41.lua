@@ -34,10 +34,10 @@ SWEP.DefaultBodygroups = "00010000000"
 
 SWEP.Damage = 500
 SWEP.DamageMin = 200 -- damage done at maximum range
-SWEP.Range = 600 -- in METRES
-SWEP.RangeMin = 100
+SWEP.Range = 500 -- in METRES
+SWEP.RangeMin = 50
 
-SWEP.HullSize = 8
+SWEP.HullSize = 4
 
 SWEP.Penetration = 40
 SWEP.DamageType = DMG_BULLET
@@ -57,12 +57,8 @@ SWEP.Recoil = 6
 SWEP.RecoilSide = 4
 SWEP.RecoilRise = 2
 
-SWEP.Bipod_Integral = true
-SWEP.BipodRecoil = 0.5
-SWEP.BipodDispersion = 0.1
-
-SWEP.SpeedMult = 0.8
-SWEP.SightedSpeedMult = 0.15
+SWEP.SpeedMult = 0.75
+SWEP.SightedSpeedMult = 0.25
 SWEP.SightTime = 0.65
 
 SWEP.Delay = 60 / 65 -- 60 / RPM.
@@ -81,7 +77,7 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 75
 
-SWEP.AccuracyMOA = 1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 2.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 1500 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 250
 

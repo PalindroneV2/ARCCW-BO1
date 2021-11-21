@@ -172,7 +172,7 @@ SWEP.AttachmentElements = {
             }
         }
     },
-    ["bo2_fastmags"] = {
+    ["bo1_mag_fast"] = {
         VMBodygroups = {
             {ind = 4, bg = 1},
         },

@@ -27,9 +27,11 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 28
-SWEP.DamageMin = 20 -- damage done at maximum range
+SWEP.Damage = 38
+SWEP.DamageMin = 9 -- damage done at maximum range
 SWEP.Range = 80 -- in METRES
+SWEP.RangeMin = 20
+
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -44,8 +46,8 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 60
 
-SWEP.Recoil = 0.325
-SWEP.RecoilSide = 0.35
+SWEP.Recoil = 0.35
+SWEP.RecoilSide = 0.4
 SWEP.RecoilRise = 0.25
 SWEP.VisualRecoilMult = 1
 
@@ -68,9 +70,9 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 3 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 550 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 200 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 80
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
 SWEP.MagID = "vector" -- the magazine pool this gun draws from
@@ -94,7 +96,8 @@ SWEP.CamAttachment = 3
 
 SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.3
+SWEP.SightTime = 0.2
+
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",

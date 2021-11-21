@@ -28,10 +28,10 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 30
-SWEP.DamageMin = 15
+SWEP.Damage = 37
+SWEP.DamageMin = 12
 SWEP.RangeMin = 15
-SWEP.Range = 75
+SWEP.Range = 100
 
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
@@ -45,7 +45,7 @@ SWEP.Primary.ClipSize = 13 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 20
 SWEP.ReducedClipSize = 8
 
-SWEP.Recoil = 0.7
+SWEP.Recoil = 0.65
 SWEP.RecoilSide = 0.4
 SWEP.RecoilRise = 2
 
@@ -64,8 +64,8 @@ SWEP.NPCWeaponType = "weapon_pistol"
 SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 8
-SWEP.HipDispersion = 180
-SWEP.MoveDispersion = 120
+SWEP.HipDispersion = 150
+SWEP.MoveDispersion = 100
 
 SWEP.ShootWhileSprint = false
 

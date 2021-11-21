@@ -376,7 +376,7 @@ SWEP.Attachments = {
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep.Attachments[11].Installed == "ammo_papunch"
     local stock = wep.Attachments[8].Installed == "bo1_stock_heavy"
-    local hk33 = wep.Attachments[10].Installed == "bo1_ammo_g3_556"
+    local hk33 = wep.Attachments[10].Installed == "bo1_g3_556"
 
     local barrel = wep.Attachments[2].Installed
     local length = 0
@@ -556,8 +556,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local shortmag = wep.Attachments[10].Installed == "bo1_ammo_g3_psg1"
-    local hk33 = wep.Attachments[10].Installed == "bo1_ammo_g3_556"
+    local shortmag = wep.Attachments[10].Installed == "bo1_g3_psg1"
+    local hk33 = wep.Attachments[10].Installed == "bo1_g3_556"
 
     if shortmag then
         return anim .. "_small"
@@ -568,8 +568,8 @@ end
 
 SWEP.Hook_GetCapacity = function(wep, cap)
     local pap = wep:GetBuff_Override("PackAPunch")
-    local hk33 = wep.Attachments[10].Installed == "bo1_ammo_g3_556"
-    local shortmag = wep.Attachments[10].Installed == "bo1_ammo_g3_psg1"
+    local hk33 = wep.Attachments[10].Installed == "bo1_g3_556"
+    local shortmag = wep.Attachments[10].Installed == "bo1_g3_psg1"
 
     if pap and hk33 then
         return 45

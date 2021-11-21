@@ -49,7 +49,12 @@ if SERVER then
     function ENT:Think()
         if self.Stuck then
             if self.DetonateTime < CurTime() then
-                util.BlastDamage(self, self.Owner, self:GetPos(), self.Radius, self.Damage)
+                dmginfo:SetAttacker(self:GetOwner())
+                dmginfo:SetInflictor(self)
+                dmginfo:SetDamage(self.Damage)
+                dmginfo:SetDamageType(DMG_ACID)
+                dmginfo:SetDamagePosition(self:GetPos())
+                util.BlastDamageInfo(dmginfo, self:GetPos(), self.Radius)
                 EffectData():SetOrigin(self:GetPos())
                 EffectData():SetNormal(self:GetForward())
                 ParticleEffect("raygun_splash", self:GetPos(), Angle(0,0,0))

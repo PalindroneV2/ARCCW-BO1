@@ -339,7 +339,7 @@ SWEP.Attachments = {
     {
         PrintName = "Magazine",
         Slot = {"car15_9mm_ammo", "bo1_ar15_mag"},
-        DefaultAttName = "5.56mm NATO 30rnd",
+        DefaultAttName = "Standard Magazine",
     }, --12
     {
         PrintName = "Ammo Type",
@@ -489,7 +489,7 @@ end
 SWEP.Hook_GetCapacity = function(wep, cap)
     local pap = wep:GetBuff_Override("PackAPunch")
     local m635 = wep.Attachments[12].Installed == "ammo_car15_9mm"
-    local mag20 = wep.Attachments[12].Installed == "ammo_bo1_ar15_20"
+    local mag20 = wep.Attachments[12].Installed == "bo1_ar15_mag20"
 
     if pap and m635 then
         return 50

@@ -30,9 +30,14 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "000000000"
 
-SWEP.Damage = 15
-SWEP.DamageMin = 8 -- damage done at maximum range
-SWEP.Range = 55 -- in METRES
+SWEP.Damage = 13
+SWEP.DamageMin = 5
+SWEP.Range = 50
+SWEP.RangeMin = 5
+
+SWEP.HullSize = 2
+SWEP.BodyDamageMults = {[HITGROUP_HEAD] = 1,}
+
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -48,9 +53,9 @@ SWEP.Primary.ClipSize = 10 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 20
 SWEP.ReducedClipSize = 5
 
-SWEP.Recoil = 2
-SWEP.RecoilSide = 2
-SWEP.MaxRecoilBlowback = 2
+SWEP.Recoil = 3
+SWEP.RecoilSide = 4
+SWEP.MaxRecoilBlowback = 4
 
 SWEP.Delay = 60 / 468 -- 60 / RPM.
 SWEP.Num = 8 -- number of shots per trigger pull.
@@ -68,9 +73,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_shotgun"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 60 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 775 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 325
+SWEP.AccuracyMOA = 40 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 200
 
 SWEP.Primary.Ammo = "buckshot" -- what ammo type the gun uses
 
@@ -156,7 +161,7 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 1},
         },
     },
-    ["bo2_fastmags"] = {
+    ["bo1_mag_fast"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
         },

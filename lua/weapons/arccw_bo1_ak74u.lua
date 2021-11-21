@@ -290,7 +290,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         Slot = "ammo_bo1_74",
         DefaultAttName = "30rnd 7.62x39mm Steel",
-        Installed = "ammo_ak_74",
+        Installed = "bo1_ak47_545",
     }, --8
     {
         PrintName = "Fire Group",
@@ -355,7 +355,7 @@ SWEP.RejectAttachments = {
 
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep.Attachments[10].Installed == "ammo_papunch"
-    local ak74 = wep.Attachments[8].Installed == "ammo_ak_74"
+    local ak74 = wep.Attachments[8].Installed == "bo1_ak47_545"
     local light = wep.Attachments[7].Installed == "bo1_stock_light"
 
     cal = "M"
@@ -391,7 +391,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local light = wep.Attachments[7].Installed == "bo1_stock_light"
     local solid = wep.Attachments[7].Installed == "bo1_stock_medium"
     local solider = wep.Attachments[7].Installed == "bo1_stock_heavy"
-    local bake = wep.Attachments[8].Installed == "ammo_ak_74"
+    local bake = wep.Attachments[8].Installed == "bo1_ak47_545"
 
     if bake then
         vm:SetBodygroup(1, 1)
@@ -411,7 +411,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_GetShootSound = function(wep, sound)
-    local bake = wep.Attachments[8].Installed == "ammo_ak_74"
+    local bake = wep.Attachments[8].Installed == "bo1_ak47_545"
     if bake then
         if wep.Attachments[2].Installed and wep:GetBuff_Override("Silencer") then
             return "ArcCW_BO1.M16_Sil"
@@ -423,7 +423,7 @@ end
 SWEP.Hook_GetDistantShootSound = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then return end
 
-    local bake = wep.Attachments[8].Installed == "ammo_ak_74"
+    local bake = wep.Attachments[8].Installed == "bo1_ak47_545"
     if bake then
         return "ArcCW_BO1.AK74u_Ringoff"
     end

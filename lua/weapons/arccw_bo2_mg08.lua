@@ -4,11 +4,11 @@ SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "MG-08/15"
-SWEP.Trivia_Class = "Medium Machine Gun"
-SWEP.Trivia_Desc = "The German Empire's standard machine gun during World War I and still in limited use during World War II."
-SWEP.Trivia_Manufacturer = "DMW"
+SWEP.Trivia_Class = "Heavy Machine Gun"
+SWEP.Trivia_Desc = "A machine gun used widely by the German Empire during WWI.\nBeing a water-cooled squad weapon, it is extremely heavy and unusable on the shoulder."
+SWEP.Trivia_Manufacturer = "Deutsche Waffen und Munitionsfabriken"
 SWEP.Trivia_Calibre = "7.92x57mm Mauser"
-SWEP.Trivia_Mechanism = "Short-Recoil. Water Cooled."
+SWEP.Trivia_Mechanism = "Short-Recoil"
 SWEP.Trivia_Country = "German Empire"
 SWEP.Trivia_Year = 1908
 
@@ -30,10 +30,14 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "000000"
 
-SWEP.Damage = 40
-SWEP.DamageMin = 30 -- damage done at maximum range
-SWEP.Range = 150 -- in METRES
-SWEP.Penetration = 6
+SWEP.Damage = 90
+SWEP.DamageMin = 40 -- damage done at maximum range
+SWEP.Range = 500
+SWEP.RangeMin = 50
+
+SWEP.HullSize = 0
+
+SWEP.Penetration = 18
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 740 -- projectile or phys bullet muzzle velocity
@@ -47,21 +51,21 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 100 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 200
 
-SWEP.Recoil = 0.8
-SWEP.RecoilSide = 0.5
+SWEP.Recoil = 1.75
+SWEP.RecoilSide = 2
 SWEP.RecoilRise = 0.5
-SWEP.SpeedMult = 0.70
-SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.4
+SWEP.VisualRecoilMult = 1.5
+
+SWEP.SpeedMult = 0.75
+SWEP.SightedSpeedMult = 0.25
+SWEP.SightTime = 0.5
+SWEP.ShootSpeedMult = 0.5
 
 SWEP.Delay = 60 / 500 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 2,
-    },
-    {
-        Mode = 1,
     },
     {
         Mode = 0
@@ -71,14 +75,15 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_ar2"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 3 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 900 -- inaccuracy added by hip firing.
+SWEP.AccuracyMOA = 10 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 2000 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 350
+SWEP.SightsDispersion = 150
 
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
 SWEP.MagID = "mg08" -- the magazine pool this gun draws from
 
-SWEP.ShootVol = 115 -- volume of shoot sound
+SWEP.ShootVol = 125 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 --SWEP.FirstShootSound = "ArcCW_WAW.MG42_Fire"
@@ -118,7 +123,7 @@ SWEP.IronSightStruct = {
 }
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "ar2"
+SWEP.HoldtypeActive = "shotgun"
 SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
@@ -128,9 +133,13 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.Bipod_Integral = true
 SWEP.BipodDispersion = 0.1
-SWEP.BipodRecoil = 0.1
+SWEP.BipodRecoil = 0.05
 
-SWEP.HeatLockout = false
+SWEP.M_Hook_Mult_SightsDispersion = function(wep, data)
+    if wep:InBipod() then
+        data.mult = 0
+    end
+end
 
 /*
 SWEP.InBipodPos = Vector(0, 0, 0)
@@ -352,3 +361,14 @@ SWEP.Animations = {
         Time = 10 / 30
     },
 }
+
+SWEP.Hook_PostFireBullets = function(wep)
+    local owner = wep:GetOwner()
+    if owner:IsPlayer() and not wep:InBipod() then
+        local ang = owner:GetAngles()
+        local dir = ang:Forward()
+        dir.z = 0
+        dir:Normalize()
+        owner:SetVelocity(dir * (owner:IsOnGround() and -50 or -5))
+    end
+end

@@ -1,6 +1,6 @@
 att.PrintName = "Wide Grip (WAW)"
 att.Icon = Material("entities/acwatt_bo1_foregrip.png", "mips smooth")
-att.Description = "Wider grip that goes under the barrels. Allows for a minor buff to handling at a minor cost of movement speed."
+att.Description = "Wider grip that goes under the barrels. Straightens recoil but is somewhat heavier."
 
 att.SortOrder = 97
 
@@ -16,6 +16,7 @@ att.GivesFlags = {"wide_grip", "ubanims"}
 
 att.IntegratedGrip = true
 
-att.Mult_Recoil = 0.95
-att.Mult_SightTime = 0.95
-att.Mult_SpeedMult = 0.975
+att.Mult_Recoil = 0.9
+att.Mult_RecoilSide = 0.5
+att.Mult_SightTime = 1.25
+att.Mult_SpeedMult = 0.99

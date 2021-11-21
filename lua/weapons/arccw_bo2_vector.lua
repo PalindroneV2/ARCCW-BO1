@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "TDI Vector"
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = "American SMG uses Glock Mags"
+SWEP.Trivia_Desc = "American SMG with a unique recoil absorption system."
 SWEP.Trivia_Manufacturer = "KRISS"
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Gas-Operated"
@@ -28,9 +28,11 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 25
-SWEP.DamageMin = 15 -- damage done at maximum range
-SWEP.Range = 100 -- in METRES
+SWEP.Damage = 32
+SWEP.DamageMin = 7
+SWEP.Range = 120 -- in METRES
+SWEP.RangeMin = 10
+
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -45,8 +47,8 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 33 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 69
 
-SWEP.Recoil = 0.25
-SWEP.RecoilSide = 0.35
+SWEP.Recoil = 0.2
+SWEP.RecoilSide = 0.4
 SWEP.RecoilRise = 0.25
 SWEP.VisualRecoilMult = 1
 
@@ -74,9 +76,9 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 3 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 550 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 6 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 320 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 80
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
 SWEP.MagID = "vector" -- the magazine pool this gun draws from

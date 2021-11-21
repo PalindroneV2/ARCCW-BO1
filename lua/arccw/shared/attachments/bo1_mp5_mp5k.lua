@@ -17,12 +17,15 @@ att.AutoStats = true
 att.Override_HoldtypeActive = "smg"
 att.Override_HoldtypeSights = "smg"
 
-att.Mult_Recoil = 0.95
+att.Mult_Recoil = 0.85
+att.Mult_RecoilSide = 1.5
+
 att.Mult_SightTime = 0.75
+att.Mult_Range = 0.75
+att.Mult_AccuracyMOA = 2
 att.Mult_HipDispersion = 1.25
-att.Mult_Range = 0.85
-att.Mult_AccuracyMOA = 1.25
-att.Mult_SpeedMult = 1.1
-att.Mult_SightedSpeedMult = 1.25
+att.Mult_MoveDispersion = 0.5
+
+att.Mult_RPM = 900 / 800
 
 att.Add_BarrelLength = -4

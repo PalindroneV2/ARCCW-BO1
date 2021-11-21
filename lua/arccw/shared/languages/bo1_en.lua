@@ -1,9 +1,12 @@
 L = {}
 
 L["bo.desc"] = "This attachment is from the Black Ops pack."
+L["bo.cosmetic"] = "This is a cosmetic attachment."
+L["bo.ubgl"] = "Underbarrel launcher"
 
-L["bo1.automatic"] = "Enables Automatic firemode"
-L["bo1.burst"] = "Enables Burst firemode"
+L["bo.nosightsdisp"] = "No sighted dispersion penalty"
+L["bo1.automatic"] = "Automatic firemode"
+L["bo1.burst"] = "Burst firemode"
 L["bo1.enablemuzzle"] = "Enables Muzzle slot"
 L["bo1.pythonsnub"] = "Disables Optic and Tactical slot"
 L["bo1.speedloader.pro"] = "Reloads entire cylinder at once"
@@ -13,6 +16,9 @@ L["bo1.sgreload"] = "Reload one round at a time"
 
 L["bo1.m1911.hardballer"] = "Only available in Nickel finish"
 L["bo1.m1911.worn"] = "Not available for Modern slide and frames"
+
+L["bo1.g935.con.1"] = "Fire rate decreases under sustained fire"
+L["bo1.g935.con.2"] = "Imprecision increases under sustained fire"
 
 L["bo1.perkacola.active"] = "When weapon is active:"
 L["bo1.perkacola.staminup"] = "+10% Global speed"

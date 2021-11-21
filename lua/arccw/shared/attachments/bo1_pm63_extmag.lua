@@ -1,4 +1,5 @@
-att.PrintName = "9x18mm 25rnd Mag"
+att.PrintName = "PM-63 RAK Extended Magazine"
+att.AbbrevName = "Extended Magazine"
 att.Icon = Material("entities/acwatt_bo1_ext_mag.png", "mips smooth")
 att.Description = "A 25 round magazine for the PM-63."
 att.Desc_Pros = {
@@ -14,3 +15,7 @@ att.GivesFlags = {"pm63_long"}
 att.SortOrder = 97
 
 att.Override_ClipSize = 25
+
+att.Mult_HipDispersion = 1.5
+att.Mult_ReloadTime = 1.15
+att.Mult_SightTime = 1.25

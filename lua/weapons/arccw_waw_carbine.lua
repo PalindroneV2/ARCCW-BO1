@@ -308,7 +308,7 @@ end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
 
-    local ext = wep.Attachments[7].Installed == "ammo_extmag" --5
+    local ext = wep.Attachments[7].Installed == "bo1_mag_ext" --5
     if ext then return anim .. "_ext" end
 
     if wep.Attachments[2].Installed == "muzz_waw_bayonet" and anim == "bash" then
@@ -318,7 +318,7 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
 end
 
 SWEP.Hook_GetCapacity = function(wep, cap)
-    local ext = wep.Attachments[7].Installed == "ammo_extmag" --5
+    local ext = wep.Attachments[7].Installed == "bo1_mag_ext" --5
     local pap = wep:GetBuff_Override("PackAPunch")
 
     if pap then

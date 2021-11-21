@@ -29,8 +29,8 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultSkin = 1
 
-SWEP.Damage = 35
-SWEP.DamageMin = 15
+SWEP.Damage = 36
+SWEP.DamageMin = 10
 SWEP.RangeMin = 10
 SWEP.Range = 100
 
@@ -287,7 +287,7 @@ SWEP.Hook_TranslateAnimation = function(wep, anim, data)
     if eclip then
         return anim .. "_empty"
     end
-    local fastmag = wep.Attachments[5].Installed == "ammo_dualmag"
+    local fastmag = wep.Attachments[5].Installed == "bo1_mag_dual"
 
     if fastmag then
         return anim .. "_fast"

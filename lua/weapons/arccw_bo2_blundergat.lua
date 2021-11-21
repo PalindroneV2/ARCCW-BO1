@@ -31,8 +31,12 @@ SWEP.ViewModelFOV = 60
 SWEP.DefaultBodygroups = "000000000"
 
 SWEP.Damage = 50
-SWEP.DamageMin = 40 -- damage done at maximum range
-SWEP.Range = 50 -- in METRES
+SWEP.DamageMin = 40
+SWEP.Range = 50
+
+SWEP.HullSize = 2
+SWEP.BodyDamageMults = {[HITGROUP_HEAD] = 1,}
+
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -56,7 +60,6 @@ SWEP.Num = 24 -- number of shots per trigger pull.
 SWEP.RunawayBurst = false
 SWEP.Firemodes = {
     {
-        Printname = "SEMI-AUTO",
         Mode = 1,
     },
     {

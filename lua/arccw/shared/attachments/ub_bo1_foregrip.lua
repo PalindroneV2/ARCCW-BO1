@@ -1,8 +1,8 @@
-att.PrintName = "Exclusive Foregrip (BO1)"
+att.PrintName = "Exclusive Foregrip"
 att.Icon = Material("entities/acwatt_bo1_foregrip.png", "mips smooth")
-att.Description = "Vertical foregrip that goes under the weapon's handguard."
+att.Description = "Weapon-specific foregrip that is more ergonomic than rail-attached grips."
 
-att.SortOrder = 97
+att.SortOrder = 1000
 
 att.Desc_Pros = {
 }
@@ -11,14 +11,14 @@ att.Desc_Cons = {
 att.BO1_UBFG = true
 
 att.AutoStats = true
+att.Free = true
 
 att.Slot = "bo1_foregrip"
 att.GivesFlags = {"ubanims", "m4anims"}
-att.InvAtt = "ub_bo1_foregrip_uni"
+
 att.IntegratedGrip = true
 
-att.Mult_Recoil = 0.85
-att.Mult_SightTime = 0.85
+att.Mult_Recoil = 0.8
+att.Mult_SightTime = 0.9
 
-att.Mult_HipDispersion = 1.15
-att.Mult_SpeedMult = 0.95
+att.Mult_HipDispersion = 1.1

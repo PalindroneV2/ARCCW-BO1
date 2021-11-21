@@ -34,9 +34,9 @@ SWEP.WorldModelOffset = {
 SWEP.ViewModelFOV = 60
 
 SWEP.Damage = 45
-SWEP.DamageMin = 25
-SWEP.RangeMin = 7
-SWEP.Range = 100
+SWEP.DamageMin = 8
+SWEP.RangeMin = 10
+SWEP.Range = 75
 
 SWEP.Penetration = 5
 SWEP.DamageType = DMG_BULLET
@@ -295,7 +295,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     vm:SetBodygroup(4, (wep.Attachments[3].Installed == "bo1_m1911_comp_bo3") and slide[3] or 0) -- Compensator
 
     local pap = wep:GetBuff_Override("PackAPunch")
-    local sally = wep.Attachments[6].Installed == "ammo_1911_pap"
+    local sally = wep.Attachments[6].Installed == "ammo_pap_1911"
 
     if finish == 2 then
         vm:SetSkin(1)

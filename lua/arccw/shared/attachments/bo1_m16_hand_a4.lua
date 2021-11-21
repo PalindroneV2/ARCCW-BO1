@@ -6,11 +6,7 @@ att.SortOrder = 98
 att.Free = true
 att.IgnorePickX = true
 
-att.Desc_Pros = {
-    "+ Only an aesthetic change",
-}
-att.Desc_Cons = {
-    "- Aesthetics provide no real performance upgrades.",
-}
+att.Desc_Neutrals = {"bo.cosmetic"}
+
 att.Slot = {"m16_hand", "car15_hand"}
 att.GivesFlags = {"ris_hand"}

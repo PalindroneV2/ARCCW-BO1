@@ -27,9 +27,11 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 25
-SWEP.DamageMin = 18 -- damage done at maximum range
-SWEP.Range = 75 -- in METRES
+SWEP.Damage = 32
+SWEP.DamageMin = 10
+SWEP.RangeMin = 10
+SWEP.Range = 75
+
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -44,8 +46,8 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 60
 
-SWEP.Recoil = 0.15
-SWEP.RecoilSide = 0.25
+SWEP.Recoil = 0.12
+SWEP.RecoilSide = 0.3
 SWEP.RecoilRise = 0.25
 SWEP.VisualRecoilMult = 1
 
@@ -66,9 +68,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_smg1"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 3 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 400 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 100
+SWEP.AccuracyMOA = 5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 150 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 50
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
 SWEP.MagID = "ak74" -- the magazine pool this gun draws from
@@ -160,7 +162,7 @@ SWEP.AttachmentElements = {
             {ind = 3, bg = 1},
         },
     },
-    ["bo1_extmag"] = {
+    ["extmag"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
         },

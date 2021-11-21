@@ -6,10 +6,12 @@ att.SortOrder = 100
 att.Free = true
 
 att.Desc_Pros = {
+    "autostat.holosight",
 }
-att.Desc_Cons = {
-}
+att.Desc_Neutrals = {"bo.desc"}
 
 att.Slot = "waw_aperture"
 att.GivesFlags = {"waw_aperture", "waw_crosshair"}
+
+att.Mult_SightTime = 1.05
 att.WAW_Aperture = true

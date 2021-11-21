@@ -27,9 +27,11 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000"
 
-SWEP.Damage = 28
-SWEP.DamageMin = 20 -- damage done at maximum range
-SWEP.Range = 75 -- in METRES
+SWEP.Damage = 30
+SWEP.DamageMin = 8 -- damage done at maximum range
+SWEP.Range = 80
+SWEP.RangeMin = 15
+
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -40,12 +42,12 @@ SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
-SWEP.ChamberSize = 0-- how many rounds can be chambered.
+SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 20 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 35
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.35
+SWEP.Recoil = 0.22
+SWEP.RecoilSide = 0.27
 SWEP.RecoilRise = 0.75
 SWEP.VisualRecoilMult = 0.2
 
@@ -66,9 +68,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = {"weapon_pistol", "weapon_smg1"}
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 550 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 6 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 240 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 50
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
 SWEP.MagID = "skorpion" -- the magazine pool this gun draws from
@@ -208,7 +210,7 @@ SWEP.Attachments = {
     { --6
         PrintName = "Magazine",
         Slot = {"bo1_skorpion_mag"},
-        DefaultAttName = "9x18mm 20rnd Mag",
+        DefaultAttName = "Standard Magazine",
     },
     { --7
         PrintName = "Ammo Type",
@@ -241,7 +243,7 @@ end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     local stock = wep.Attachments[4].Installed == "bo1_stock_light"
-    local ext = wep.Attachments[6].Installed == "ammo_bo1_skorpion_ext"
+    local ext = wep.Attachments[6].Installed == "bo1_skorpion_extmag"
 
     if stock and !ext then
         return anim .. "_stock"
@@ -254,7 +256,7 @@ end
 
 SWEP.Hook_GetCapacity = function(wep, cap)
     local pap = wep:GetBuff_Override("PackAPunch")
-    local ext = wep.Attachments[6].Installed == "ammo_bo1_skorpion_ext"
+    local ext = wep.Attachments[6].Installed == "bo1_skorpion_extmag"
 
     if ext and pap then return 55 end
 end

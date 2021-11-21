@@ -13,4 +13,4 @@ att.ActivateElements = {"cz_ext"}
 att.Override_ClipSize = 18
 att.Mult_ReloadTime = 1.15
 att.Mult_SightTime = 1.25
-att.Mult_HipDispersion = 1.5
+att.Mult_HipDispersion = 1.25

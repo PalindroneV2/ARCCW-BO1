@@ -1,7 +1,7 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
-SWEP.AdminOnly = false
+SWEP.AdminOnly = true
 
 SWEP.PrintName = "Ray Gun"
 SWEP.Trivia_Class = "Wonder Weapon"
@@ -33,7 +33,7 @@ SWEP.Range = 200 -- in METRES
 SWEP.Penetration = 0
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = "arccw_bo1_raygun_bolt"
-SWEP.MuzzleVelocity = 4000 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 10000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.CanFireUnderwater = false

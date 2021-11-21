@@ -15,8 +15,11 @@ att.SortOrder = 99
 att.Override_Trivia_Calibre = "10x25mm Auto"
 att.Mult_Damage = 1.2
 att.Mult_DamageMin = 1.2
+
 att.Mult_Penetration = 0.75
+
 att.Mult_Recoil = 1.25
 att.Mult_RecoilSide = 1.25
-att.Mult_VisualRecoilMult = 1.25
+
+att.Mult_RPM = 700 / 800
 att.Override_ClipSize = 25

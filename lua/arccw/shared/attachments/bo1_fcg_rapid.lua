@@ -9,6 +9,7 @@ att.AutoStats = true
 att.Slot = "bo1_fcg"
 att.ActivateElements = {"bo1_rapidfire"}
 att.SortOrder = 100
+
 att.Mult_RPM = 1.15
-att.Mult_AccuracyMOA = 1.15
-att.Mult_Recoil = 1.1
+att.Mult_HipDispersion = 1.1
+att.Mult_Recoil = 1.15

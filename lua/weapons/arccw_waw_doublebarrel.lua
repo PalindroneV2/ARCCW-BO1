@@ -30,8 +30,13 @@ SWEP.ViewModelFOV = 60
 SWEP.DefaultBodygroups = "010000000"
 
 SWEP.Damage = 20
-SWEP.DamageMin = 10 -- damage done at maximum range
-SWEP.Range = 100 -- in METRES
+SWEP.DamageMin = 5 -- damage done at maximum range
+SWEP.Range = 80 -- in METRES
+SWEP.RangeMin = 20
+
+SWEP.HullSize = 2
+SWEP.BodyDamageMults = {[HITGROUP_HEAD] = 1,}
+
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -90,7 +95,7 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_shotgun"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 30 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
