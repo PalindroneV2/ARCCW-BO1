@@ -14,7 +14,7 @@ att.AutoStats = true
 att.Free = true
 
 att.Slot = "bo2_intgrip"
-att.GivesFlags = {"ubanims", "mp7_foregrip"}
+att.GivesFlags = {"mp7_foregrip"}
 att.IntegratedGrip = true
 
 att.Override_HoldtypeActive = "smg"

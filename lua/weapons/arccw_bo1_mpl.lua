@@ -276,7 +276,7 @@ end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     local stock = wep.Attachments[5].Installed == "bo1_stock_light"
-    local dmag = wep.Attachments[6].Installed == "bo1_mag_dual"
+    local dmag = wep:GetBuff_Override("BO1_FastMag")
 
     if stock and !dmag then
         return anim .. "_grip"

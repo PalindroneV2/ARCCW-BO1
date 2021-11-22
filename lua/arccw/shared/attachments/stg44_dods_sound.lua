@@ -1,4 +1,5 @@
-att.PrintName = "DoD:S Sound"
+att.PrintName = "Day of Defeat: Source Sound"
+att.AbbrevName = "DoD:S Sound"
 att.Icon = Material("entities/acwatt_dods_logo.png", "smooth mips")
 att.Description = "A different shooting sound for the StG-44 based on Day of Defeat: Source."
 att.Desc_Pros = {

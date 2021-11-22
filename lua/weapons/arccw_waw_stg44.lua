@@ -364,8 +364,11 @@ end
 
 SWEP.Hook_GetDistantShootSound = function(wep, distancesound)
     local sndatt = wep.Attachments[11].Installed
+    local silbar = wep:GetBuff_Override("Silencer")
 
-    if sndatt == "stg44_bo1_sound" then
+    if silbar then
+        return ""
+    elseif sndatt == "stg44_bo1_sound" then
         return "ArcCW_BO1.AK74u_Ringoff"
     elseif sndatt == "stg44_dods_sound" then
         return ""

@@ -1,6 +1,7 @@
-att.PrintName = "Black Ops Sound"
+att.PrintName = "Black Ops Campaign Sound"
+att.PrintName = "BO1 Sound"
 att.Icon = Material("entities/acwatt_bo1_generic.png", "smooth mips")
-att.Description = "A different shooting sound for the StG-44 based on Black Ops (Campaign)."
+att.Description = "A different shooting sound for the StG-44 based on the Black Ops Campaign."
 att.Desc_Pros = {
     "+ Better sound if you think it is."
 }

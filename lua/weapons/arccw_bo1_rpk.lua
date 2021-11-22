@@ -369,9 +369,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 end
 
-SWEP.Hook_TranslateAnimation = function(wep, anim)
+SWEP.Hook_SelectReloadAnimation = function(wep, anim)
     local drum = wep.Attachments[9].Installed == "bo1_ammo_rpk_drum"
-    local dual = wep.Attachments[9].Installed == "bo1_mag_dual"
+    local dual = wep:GetBuff_Override("BO1_FastMag")
 
     if drum then
         return anim .. "_drum"
