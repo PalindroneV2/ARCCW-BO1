@@ -33,7 +33,8 @@ SWEP.Damage = 85
 SWEP.DamageMin = 65 -- damage done at maximum range
 SWEP.Range = 400 -- in METRES
 SWEP.RangeMin = 40
-SWEP.Penetration = 8
+
+SWEP.Penetration = 12
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 830 -- projectile or phys bullet muzzle velocity
@@ -51,6 +52,7 @@ SWEP.ReducedClipSize = 5
 SWEP.Recoil = 1.4
 SWEP.RecoilSide = 0.75
 SWEP.RecoilRise = 1
+
 SWEP.SpeedMult = 0.85
 SWEP.SightedSpeedMult = 0.35
 SWEP.SightTime = 0.42

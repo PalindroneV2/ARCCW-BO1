@@ -47,4 +47,4 @@ att.HolosightMagnification = 6
 att.HolosightMagnificationMin = 2
 att.HolosightMagnificationMax = 12
 
-att.Mult_SightTime = 1.125
+att.Mult_SightTime = 1.1
