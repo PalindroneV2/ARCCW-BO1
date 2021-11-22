@@ -284,7 +284,7 @@ SWEP.Hook_TranslateAnimation = function(wep, anim, data)
     if eclip then
         return anim .. "_empty"
     end
-    local fastmag = wep.Attachments[5].Installed == "bo1_mag_dual"
+    local fastmag = wep.Attachments[5].Installed == "bo1_mag_fast"
 
     if fastmag then
         return anim .. "_fast"

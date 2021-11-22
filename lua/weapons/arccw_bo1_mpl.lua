@@ -257,7 +257,7 @@ SWEP.Attachments = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep.Attachments[8].Installed == "ammo_papunch"
-    local dualmag = wep.Attachments[6].Installed == "bo1_mag_dual"
+    local dualmag = wep.Attachments[6].Installed == "bo1_mag_fast"
     local lc10 = wep.Attachments[7].Installed == "bo1_fcg_rapid_lc10"
     local wire = wep.Attachments[5].Installed == "bo1_stock_light"
 
