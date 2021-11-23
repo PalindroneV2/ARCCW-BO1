@@ -10,6 +10,9 @@ att.AutoStats = true
 att.Slot = {"bo2_blundergat_kit"}
 att.GivesFlags = {"acidgat"}
 
+att.Override_Damage = 1500
+att.Override_DamageMin = 1500
+
 att.Override_ClipSize = 3
 att.Override_Num = 1
 att.Override_Firemodes = {
