@@ -7,9 +7,10 @@ ENT.Information 		= ""
 ENT.Spawnable = false
 ENT.AdminSpawnable = false
 
-ENT.ImpactDamage = 50
+ENT.ImpactDamage = 150
 ENT.Ticks = 0
 ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
+ENT.CanPickup = true
 
 if CLIENT then
     killicon.Add( "arccw_bo1_xbow_bolt", "arccw/weaponicons/arccw_bo1_crossbow", Color( 255, 255, 255, 255 ) )
@@ -28,7 +29,7 @@ if SERVER then
         self:SetNoDraw( false )
 
         self:SetSolid( SOLID_VPHYSICS )
-        self:PhysicsInitSphere(1)
+        self:PhysicsInitBox(Vector(-3, -1, -1), Vector(3, 1, 1))
         self:SetMoveType( MOVETYPE_VPHYSICS )
         self:DrawShadow(false)
 
@@ -41,7 +42,8 @@ if SERVER then
             phys:SetMass(1) -- avoid collision damage
         end
 
-        util.SpriteTrail(self, 0, Color( 66 , 255 , 0 ), false, 3, 1, 0.1, 1, "trails/tube.vmt")
+        util.SpriteTrail(self, 0, Color(255, 255, 255), false, 3, 1, 0.25, 2, "trails/tube.vmt")
+        SafeRemoveEntityDelayed(self, 60)
     end
 
     function ENT:Think()
@@ -49,25 +51,27 @@ if SERVER then
         local effectdata = EffectData()
         effectdata:SetOrigin( self:GetPos() )
         if self.Stuck then
-            if self.DetonateTime < CurTime() then
-                util.BlastDamage(self, self:GetOwner(), self:GetPos(), self.BlastRadius, self.Damage)
-                EffectData():SetOrigin(self:GetPos())
-                EffectData():SetNormal(self:GetForward())
-                if self:WaterLevel() >= 1 then
-                    util.Effect( "WaterSurfaceExplosion", effectdata )
-                    self:EmitSound("weapons/underwater_explode3.wav", 125, 100, 1, CHAN_AUTO)
-                else
-                    util.Effect( "Explosion", effectdata)
-                    self:EmitSound("phx/kaboom.wav", 125, 100, 1, CHAN_AUTO)
-                end
-                self:Remove()
-            end
             if self:GetSolid() == SOLID_VPHYSICS then return
             elseif !self.AttachToWorld and (!IsValid(self:GetParent())) or (IsValid(self:GetParent()) and self:GetParent():GetSolid() != SOLID_VPHYSICS and (self:GetParent():Health() <= 0)) then
+                self:SetTrigger(false)
                 self:SetParent()
                 self:PhysicsInit(SOLID_VPHYSICS)
                 self:PhysWake()
             end
+        end
+    end
+
+    function ENT:StartTouch(ent)
+        if self.Stuck and self.CanPickup and ent:IsPlayer() then
+            ent:GiveAmmo(1, "xbowbolt")
+            self:Remove()
+        end
+    end
+
+    function ENT:Use(ply)
+        if self.Stuck and self.CanPickup then
+            ply:GiveAmmo(1, "xbowbolt")
+            self:Remove()
         end
     end
 
@@ -77,13 +81,13 @@ if SERVER then
         self.Stuck = true
 
         local tgt = data.HitEntity
-        hp = tgt:Health()
         local dmginfo = DamageInfo()
         dmginfo:SetDamageType(DMG_NEVERGIB)
         dmginfo:SetDamage(self.ImpactDamage)
         dmginfo:SetAttacker(self:GetOwner())
         dmginfo:SetInflictor(self)
         tgt:TakeDamageInfo(dmginfo)
+
         local angles = self:GetAngles()
         if IsValid(tgt:GetPhysicsObject()) then
             timer.Simple(0, function()
@@ -101,6 +105,8 @@ if SERVER then
                     end
                 end
             end)
+            self:SetTrigger(true)
+            self:UseTriggerBounds(true, 16)
         end
 
         self.DetonateTime = CurTime() + 2

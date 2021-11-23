@@ -36,7 +36,7 @@ SWEP.BlastRadius = 200
 
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
-SWEP.ShootEntity = "arccw_bo1_xbow_bolt" -- entity to fire, if any
+SWEP.ShootEntity = "arccw_bo1_xbow_bolt_exp" -- entity to fire, if any
 SWEP.MuzzleVelocity = 5000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
@@ -68,13 +68,13 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = {"weapon_crossbow"}
 SWEP.NPCWeight = 35
 
-SWEP.AccuracyMOA = 3 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.MoveDispersion = 100
 
 SWEP.Primary.Ammo = "XBowBolt" -- what ammo type the gun uses
 
-SWEP.ShootVol = 120 -- volume of shoot sound
+SWEP.ShootVol = 75 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_BO1.Crossbow_Fire"

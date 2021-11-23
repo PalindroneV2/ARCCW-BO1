@@ -1,9 +1,10 @@
-ENT.Base 				= "arccw_bo1_xbow_bolt"
-ENT.PrintName 			= "PAP Crossbow Bolt (BO1)"
+ENT.Base 				= "arccw_bo1_xbow_bolt_exp"
+ENT.PrintName 			= "PAP Explosive Bolt (BO1)"
 
 DEFINE_BASECLASS(ENT.Base)
 
-ENT.ImpactDamage = 500
+ENT.ImpactDamage = 125
+ENT.CanPickup = false
 
 if CLIENT then
     killicon.Add( "arccw_bo1_xbow_bolt_pap", "arccw/weaponicons/arccw_bo1_crossbow", Color( 255, 255, 255, 255 ) )
