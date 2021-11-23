@@ -123,10 +123,10 @@ SWEP.IronSightStruct = {
 }
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "shotgun"
+SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "ar2"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.ActivePos = Vector(0, 3, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
@@ -317,7 +317,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         Time = 5.83 / 1.25,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,
         Checkpoints = {28, 38, 69},
         LHIK = true,
@@ -333,7 +333,7 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         Time = 7.23 / 1.25,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,
         Checkpoints = {28, 38, 69},
         LHIK = true,
