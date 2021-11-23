@@ -7,8 +7,7 @@ ENT.Information 		= ""
 ENT.Spawnable = false
 ENT.AdminSpawnable = false
 
-ENT.Damage = 200
-ENT.Radius = 150
+ENT.ImpactDamage = 50
 ENT.Ticks = 0
 ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 
@@ -29,22 +28,20 @@ if SERVER then
         self:SetNoDraw( false )
 
         self:SetSolid( SOLID_VPHYSICS )
-        self:PhysicsInitSphere( 1 )
+        self:PhysicsInitSphere(1)
         self:SetMoveType( MOVETYPE_VPHYSICS )
         self:DrawShadow(false)
 
-        if (self:GetPhysicsObject():IsValid()) then
-            self:GetPhysicsObject():Wake()
-            self:GetPhysicsObject():SetBuoyancyRatio(0)
+        local phys = self:GetPhysicsObject()
+        if (phys:IsValid()) then
+            phys:Wake()
+            phys:EnableGravity(false)
+            phys:SetBuoyancyRatio(0)
+            phys:SetDragCoefficient(0)
+            phys:SetMass(1) -- avoid collision damage
         end
 
         util.SpriteTrail(self, 0, Color( 66 , 255 , 0 ), false, 3, 1, 0.1, 1, "trails/tube.vmt")
-
-        timer.Simple(0.1, function()
-            if !IsValid(self) then return end
-            self:SetCollisionGroup(COLLISION_GROUP_PROJECTILE)
-        end)
-        self:GetPhysicsObject():SetVelocity( self:GetAngles():Forward() * 2000 )
     end
 
     function ENT:Think()
@@ -53,7 +50,7 @@ if SERVER then
         effectdata:SetOrigin( self:GetPos() )
         if self.Stuck then
             if self.DetonateTime < CurTime() then
-                util.BlastDamage(self, self:GetOwner(), self:GetPos(), self.Radius, self.Damage)
+                util.BlastDamage(self, self:GetOwner(), self:GetPos(), self.BlastRadius, self.Damage)
                 EffectData():SetOrigin(self:GetPos())
                 EffectData():SetNormal(self:GetForward())
                 if self:WaterLevel() >= 1 then
@@ -83,7 +80,7 @@ if SERVER then
         hp = tgt:Health()
         local dmginfo = DamageInfo()
         dmginfo:SetDamageType(DMG_NEVERGIB)
-        dmginfo:SetDamage(50)
+        dmginfo:SetDamage(self.ImpactDamage)
         dmginfo:SetAttacker(self:GetOwner())
         dmginfo:SetInflictor(self)
         tgt:TakeDamageInfo(dmginfo)

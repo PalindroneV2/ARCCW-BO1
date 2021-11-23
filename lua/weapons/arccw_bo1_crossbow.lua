@@ -29,13 +29,15 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0100000000"
 
-SWEP.Damage = 150
-SWEP.DamageMin = 50 -- damage done at maximum range
-SWEP.Range = 350 -- in METRES
+SWEP.Damage = 200
+SWEP.DamageMin = 200
+
+SWEP.BlastRadius = 200
+
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = "arccw_bo1_xbow_bolt" -- entity to fire, if any
-SWEP.MuzzleVelocity = 4000 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 5000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
@@ -47,8 +49,8 @@ SWEP.Primary.ClipSize = 1 -- DefaultClip is automatically set.
 
 SWEP.CanFireUnderwater = true
 
-SWEP.Recoil = 2
-SWEP.RecoilSide = 2
+SWEP.Recoil = 1
+SWEP.RecoilSide = 0.5
 SWEP.MaxRecoilBlowback = 2
 
 SWEP.Delay = 60 / 300 -- 60 / RPM.
@@ -66,7 +68,7 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = {"weapon_crossbow"}
 SWEP.NPCWeight = 35
 
-SWEP.AccuracyMOA = 2.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 3 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
@@ -79,7 +81,7 @@ SWEP.ShootSound = "ArcCW_BO1.Crossbow_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
 SWEP.DistantShootSound = "ArcCW_BO1.Crossbow_Dist"
 
-SWEP.MuzzleEffect = "muzzleflash_shotgun"
+SWEP.MuzzleEffect = nil --"muzzleflash_shotgun"
 SWEP.ShellModel = "models/shells/shell_12gauge.mdl"
 SWEP.ShellPitch = 100
 SWEP.ShellSounds = ArcCW.ShotgunShellSoundsTable

@@ -40,7 +40,7 @@ SWEP.BodyDamageMults = {[HITGROUP_HEAD] = 1,}
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 2000 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 2500 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X

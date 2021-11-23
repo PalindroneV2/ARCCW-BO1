@@ -29,7 +29,7 @@ if SERVER then
         self:SetNoDraw( false )
 
         self:SetSolid( SOLID_VPHYSICS )
-        self:PhysicsInit( SOLID_VPHYSICS )
+        self:PhysicsInitSphere(1)
         self:SetMoveType( MOVETYPE_VPHYSICS )
         self:DrawShadow(false)
 
@@ -37,6 +37,7 @@ if SERVER then
         if (phys:IsValid()) then
             phys:Wake()
             phys:EnableGravity(false)
+            phys:SetBuoyancyRatio(0)
             phys:SetMass(1) -- avoid collision damage
         end
 
@@ -44,41 +45,37 @@ if SERVER then
     end
 
     function ENT:Think()
-        if self.Stuck then
-            if self.DetonateTime < CurTime() then
-                local dmginfo = DamageInfo()
-                dmginfo:SetAttacker(self:GetOwner())
-                dmginfo:SetInflictor(self)
-                dmginfo:SetDamage(self.Damage)
-                dmginfo:SetDamageType(DMG_ACID + DMG_GENERIC) -- poison headcrabs
-                dmginfo:SetDamagePosition(self:GetPos())
-                --util.BlastDamageInfo(dmginfo, self:GetPos(), self.Radius)
+        if self.Stuck and self.DetonateTime < CurTime() then
+            local dmginfo = DamageInfo()
+            dmginfo:SetAttacker(self:GetOwner())
+            dmginfo:SetInflictor(self)
+            dmginfo:SetDamage(self.Damage)
+            dmginfo:SetDamageType(DMG_ACID + DMG_GENERIC) -- poison headcrabs
+            dmginfo:SetDamagePosition(self:GetPos())
+            --util.BlastDamageInfo(dmginfo, self:GetPos(), self.Radius)
 
-                if IsValid(self:GetParent()) then
-                    dmginfo:SetDamageForce((self.StuckAngle or self:GetAngles()):Forward() * 50000)
-                    self:GetParent():TakeDamageInfo(dmginfo)
-                end
-                for _, e in pairs(ents.FindInSphere(self:GetPos(), self.Radius)) do
-                    if e == self or e:IsWorld() then continue end
-                    local t = util.TraceLine({
-                        start = self:GetPos(),
-                        endpos = e:WorldSpaceCenter(),
-                        filter = function(x) return x:GetClass() == "arccw_bo2_blundergat_dart" end,
-                    })
-                    if t.Fraction > 0.99 then
-                        dmginfo:SetDamageForce(t.Normal * 10000)
-                        e:TakeDamageInfo(dmginfo)
-                    end
-                end
-
-                EffectData():SetOrigin(self:GetPos())
-                EffectData():SetNormal(self:GetForward())
-                ParticleEffect("raygun_splash", self:GetPos(), self.StuckAngle or self:GetAngles())
-                self:EmitSound("phx/kaboom.wav")
-                self:Remove()
+            if IsValid(self:GetParent()) then
+                dmginfo:SetDamageForce((self.StuckAngle or self:GetAngles()):Forward() * 50000)
+                self:GetParent():TakeDamageInfo(dmginfo)
             end
-        else
-            self:GetPhysicsObject():SetVelocity( self:GetAngles():Forward() * 2000 )
+            for _, e in pairs(ents.FindInSphere(self:GetPos(), self.Radius)) do
+                if e == self or e:IsWorld() then continue end
+                local t = util.TraceLine({
+                    start = self:GetPos(),
+                    endpos = e:WorldSpaceCenter(),
+                    filter = function(x) return x:GetClass() == "arccw_bo2_blundergat_dart" end,
+                })
+                if t.Fraction > 0.99 then
+                    dmginfo:SetDamageForce(t.Normal * 10000)
+                    e:TakeDamageInfo(dmginfo)
+                end
+            end
+
+            EffectData():SetOrigin(self:GetPos())
+            EffectData():SetNormal(self:GetForward())
+            ParticleEffect("raygun_splash", self:GetPos(), self.StuckAngle or self:GetAngles())
+            self:EmitSound("phx/kaboom.wav")
+            self:Remove()
         end
     end
 

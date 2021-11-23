@@ -34,6 +34,7 @@ end
 
 att.SortOrder = 100
 att.Override_ShootEntity = "arccw_bo2_blundergat_dart"
+att.Override_Ammo = "xbowbolt"
 
 att.Hook_GetShootSound = function(wep, fsound)
     if fsound == wep.ShootSound or sound == wep.FirstShootSound then return "ArcCW_BO2.Acidgat_Fire" end
