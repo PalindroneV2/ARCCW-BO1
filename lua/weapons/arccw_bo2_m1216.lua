@@ -39,6 +39,9 @@ SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 1000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
+SWEP.HullSize = 1
+SWEP.BodyDamageMults = {[HITGROUP_HEAD] = 1,}
+
 SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
@@ -217,7 +220,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Ammo Type",
-        Slot = {"ammo_packpunch"},
+        Slot = {"ammo_pap_sg"},
     }, --7
     {
         PrintName = "Perk",

@@ -20,6 +20,9 @@ L["bo1.m1911.worn"] = "Not available for Modern slide and frames"
 L["bo1.g935.con.1"] = "Fire rate decreases under sustained fire"
 L["bo1.g935.con.2"] = "Imprecision increases under sustained fire"
 
+L["bo1.ksg.buck"] = "Fire 8 pellets in a large spread"
+
+
 L["bo1.perkacola.active"] = "When weapon is active:"
 L["bo1.perkacola.staminup"] = "+10% Global speed"
 L["bo1.perkacola.deadshot"] = "+100% Headshot damage"

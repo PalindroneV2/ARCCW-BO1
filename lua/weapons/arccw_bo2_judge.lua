@@ -52,8 +52,8 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 5 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 5
 
-SWEP.Recoil = 1.2
-SWEP.RecoilSide = 1.2
+SWEP.Recoil = 1.25
+SWEP.RecoilSide = 1.25
 SWEP.RecoilRise = 1
 
 SWEP.Delay = 60 / 468 -- 60 / RPM.
@@ -73,8 +73,8 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 30 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 250 -- inaccuracy added by hip firing.
+SWEP.AccuracyMOA = 25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 350 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
 SWEP.ShootWhileSprint = false
