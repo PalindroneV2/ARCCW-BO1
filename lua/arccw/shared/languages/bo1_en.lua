@@ -33,3 +33,5 @@ L["bo1.doom.rpg.pro"] = "Allows blast jumping"
 L["bo1.doom.rpg.con.1"] = "Rockets are slower"
 L["bo1.doom.rpg.con.2"] = "Rockets do less damage"
 
+L["bo1.bayonet.1"] = "Melee attack becomes a slow but powerful stab"
+L["bo1.bayonet.2"] = "Allows melee attack while sprinting"
