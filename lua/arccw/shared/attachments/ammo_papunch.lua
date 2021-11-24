@@ -2,12 +2,11 @@ att.PrintName = "Pack-A-Punched"
 att.Icon = Material("entities/acwatt_ammo_papunch.png", "mips smooth")
 att.Description = "Bullets or Shells infused with Element 115 which perform better than base weapons with no drawbacks. The magazine capacity is also altered."
 att.Desc_Pros = {
-    "+ Extended Magazine."
 }
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = {"ammo_pap", "ammo_pap_sg", "ammo_packpunch"}
+att.Slot = {"ammo_pap", "ammo_pap_sg"}
 
 att.PackAPunch = true
 att.AdminOnly = true

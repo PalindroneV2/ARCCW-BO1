@@ -2,7 +2,6 @@ att.PrintName = "Pack-A-Punched"
 att.Icon = Material("entities/acwatt_ammo_papunch.png", "mips smooth")
 att.Description = "Even more powerful bolts of electricity."
 att.Desc_Pros = {
-    "+ Extended Magazine."
 }
 att.Desc_Cons = {
 }

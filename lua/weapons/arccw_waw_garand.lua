@@ -301,7 +301,7 @@ SWEP.Animations = {
     },
     ["bash_bayo"] = {
         Source = "stab",
-        Time = 60 / 30,
+        Time = 30 / 30,
     },
     ["holster"] = {
         Source = "holster",

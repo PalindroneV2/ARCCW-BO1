@@ -2,7 +2,6 @@ att.PrintName = "Sally's Blessing"
 att.Icon = Material("entities/acwatt_ammo_papunch.png", "mips smooth")
 att.Description = "The reward for keeping your starting weapon around until the very end. The M1911 now shoots Element 115 infused Grenades."
 att.Desc_Pros = {
-    "+ Extended Magazine."
 }
 att.Desc_Cons = {
 }

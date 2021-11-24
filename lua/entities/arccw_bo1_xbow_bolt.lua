@@ -89,7 +89,7 @@ if SERVER then
         tgt:TakeDamageInfo(dmginfo)
 
         local angles = self:GetAngles()
-        if IsValid(tgt:GetPhysicsObject()) then
+        if IsValid(tgt) and IsValid(tgt:GetPhysicsObject()) then
             timer.Simple(0, function()
                 self:SetAngles(angles)
                 self:SetPos(data.HitPos)

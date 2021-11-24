@@ -20,6 +20,9 @@ L["bo1.m1911.worn"] = "Not available for Modern slide and frames"
 L["bo1.g935.con.1"] = "Fire rate decreases under sustained fire"
 L["bo1.g935.con.2"] = "Imprecision increases under sustained fire"
 
+L["bo1.ksg.buck"] = "Fire 8 pellets in a large spread"
+
+
 L["bo1.perkacola.active"] = "When weapon is active:"
 L["bo1.perkacola.staminup"] = "+10% Global speed"
 L["bo1.perkacola.deadshot"] = "+100% Headshot damage"
@@ -33,3 +36,5 @@ L["bo1.doom.rpg.pro"] = "Allows blast jumping"
 L["bo1.doom.rpg.con.1"] = "Rockets are slower"
 L["bo1.doom.rpg.con.2"] = "Rockets do less damage"
 
+L["bo1.bayonet.1"] = "Melee attack becomes a slow but powerful stab"
+L["bo1.bayonet.2"] = "Allows melee attack while sprinting"

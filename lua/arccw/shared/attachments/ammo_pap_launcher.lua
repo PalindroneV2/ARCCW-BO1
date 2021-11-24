@@ -2,7 +2,6 @@ att.PrintName = "Pack-A-Punched"
 att.Icon = Material("entities/acwatt_ammo_papunch.png", "mips smooth")
 att.Description = "High Explosive Ordinance infused with Element 115. The magazine capacity is altered."
 att.Desc_Pros = {
-    "+ Extended Magazine."
 }
 att.Desc_Cons = {
 }

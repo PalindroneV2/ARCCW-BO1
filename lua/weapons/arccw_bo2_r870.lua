@@ -30,10 +30,10 @@ SWEP.ViewModelFOV = 60
 SWEP.DefaultBodygroups = "0100000"
 SWEP.DefaultSkin = 0
 
-SWEP.Damage = 16
-SWEP.DamageMin = 3
-SWEP.Range = 75
-SWEP.RangeMin = 15
+SWEP.Damage = 15
+SWEP.DamageMin = 5
+SWEP.Range = 60
+SWEP.RangeMin = 12
 
 SWEP.HullSize = 2
 SWEP.BodyDamageMults = {[HITGROUP_HEAD] = 1,}
@@ -65,7 +65,7 @@ SWEP.Num = 8 -- number of shots per trigger pull.
 SWEP.RunawayBurst = false
 SWEP.Firemodes = {
     {
-        PrintName = "PUMP",
+        PrintName = "fcg.pump",
         Mode = 1,
     },
     {

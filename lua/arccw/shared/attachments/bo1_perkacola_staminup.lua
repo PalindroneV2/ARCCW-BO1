@@ -21,6 +21,9 @@ hook.Add("Move", "ArcCW_BO1_StaminUp", function(ply, mv)
 
     local max = ply:GetMaxSpeed()
     local s = ply.ArcCW_LastTickSpeedMult or 1
+
+    if ply:Crouching() then s = s * ply:GetCrouchedWalkSpeed() end
+
     mv:SetMaxSpeed(max * s * 1.1)
     mv:SetMaxClientSpeed(max * s * 1.1)
 end)
