@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Bloodhound"
 SWEP.Trivia_Class = "Revolver"
-SWEP.Trivia_Desc = [[
-    American revolver in .38 Special. Used by police detectives.
-]]
+SWEP.Trivia_Desc = [[American revolver chambered in .38 Special with a generous capacity. Used by police detectives.]]
 SWEP.Trivia_Manufacturer = "???"
 SWEP.Trivia_Calibre = ".38 Special"
 SWEP.Trivia_Mechanism = "SA/DA"
@@ -30,10 +28,10 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 38
-SWEP.DamageMin = 20
-SWEP.RangeMin = 10
-SWEP.Range = 70
+SWEP.Damage = 45
+SWEP.DamageMin = 12
+SWEP.RangeMin = 15
+SWEP.Range = 80
 
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
@@ -47,16 +45,16 @@ SWEP.Primary.ClipSize = 8 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 24
 SWEP.ReducedClipSize = 6
 
-SWEP.Recoil = 1.5
-SWEP.RecoilSide = 1
+SWEP.Recoil = 1
+SWEP.RecoilSide = 0.7
 SWEP.RecoilRise = 1
 
-SWEP.Delay = 60 / 300 -- 60 / RPM.
+SWEP.Delay = 60 / 400 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 1,
-        PrintName = "DACT",
+        PrintName = "fcg.dact",
     },
     {
         Mode = 0

@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "S&W Model 27"
 SWEP.Trivia_Class = "Revolver"
-SWEP.Trivia_Desc = "Magnum revolvewr with a one hell of a kick. One was carried by US General George Patton"
+SWEP.Trivia_Desc = "Magnum revolver with a one hell of a kick. One was carried by US General George Patton."
 SWEP.Trivia_Manufacturer = "Smith & Wesson"
 SWEP.Trivia_Calibre = ".357 Magnum"
 SWEP.Trivia_Mechanism = "DA"
@@ -55,12 +55,12 @@ SWEP.Recoil = 1.3
 SWEP.RecoilSide = 0.75
 SWEP.RecoilRise = 1
 
-SWEP.Delay = 60 / 180 -- 60 / RPM.
+SWEP.Delay = 60 / 240 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 1,
-        PrintName = "DACT",
+        PrintName = "fcg.dact",
     },
     {
         Mode = 0
@@ -72,7 +72,7 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 2 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 2.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 280 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 100
 

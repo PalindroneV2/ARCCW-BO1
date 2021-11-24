@@ -8,7 +8,7 @@ SWEP.PrintName = "Raging Judge"
 SWEP.Trivia_Class = "Shotgun Revolver"
 SWEP.Trivia_Desc = "5-shot Revolver chambered in .410 bore shotshell."
 SWEP.Trivia_Manufacturer = "Taurus"
-SWEP.Trivia_Calibre = ".410 bore"
+SWEP.Trivia_Calibre = ".410 Bore"
 SWEP.Trivia_Mechanism = "Double-Action"
 SWEP.Trivia_Country = "Brazil/USA"
 SWEP.Trivia_Year = 2006
@@ -61,7 +61,7 @@ SWEP.Num = 4 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 1,
-        PrintName = "DACT",
+        PrintName = "fcg.dact",
     },
     {
         Mode = 0
