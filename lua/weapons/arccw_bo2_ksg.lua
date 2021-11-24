@@ -65,7 +65,7 @@ SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.RunawayBurst = false
 SWEP.Firemodes = {
     {
-        PrintName = "PUMP",
+        PrintName = "fcg.pump",
         Mode = 1,
     },
     {
