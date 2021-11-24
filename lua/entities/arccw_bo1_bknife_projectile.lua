@@ -1,6 +1,6 @@
 ENT.Type 				= "anim"
 ENT.Base 				= "base_anim"
-ENT.PrintName 			= "Explosive Bolt (BO1)"
+ENT.PrintName 			= "Ballistic Knife (BO1)"
 ENT.Author 				= ""
 ENT.Information 		= ""
 
@@ -13,7 +13,7 @@ ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 ENT.CanPickup = true
 
 if CLIENT then
-    killicon.Add( "arccw_bo1_xbow_bolt", "arccw/weaponicons/arccw_bo1_crossbow", Color( 255, 255, 255, 255 ) )
+    killicon.Add( "arccw_bo1_ballistic_knife", "arccw/weaponicons/arccw_bo1_ballistic_knife", Color( 255, 255, 255, 255 ) )
 end
 
 if SERVER then
@@ -25,7 +25,7 @@ if SERVER then
         self.Class = self:GetClass()
 
         self:SetHealth(1)
-        self:SetModel("models/weapons/arccw/item/bo1_arrow_bolt.mdl")
+        self:SetModel("models/weapons/arccw/item/bo1_bknife.mdl")
         self:SetNoDraw( false )
 
         self:SetSolid( SOLID_VPHYSICS )
