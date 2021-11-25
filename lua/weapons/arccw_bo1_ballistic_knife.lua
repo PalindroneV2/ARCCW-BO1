@@ -49,6 +49,8 @@ SWEP.Primary.ClipSize = 1 -- DefaultClip is automatically set.
 
 SWEP.CanFireUnderwater = true
 
+SWEP.NoHideLeftHandInCustomization = false -- LEFT HAND REMAINS HIDDEN AT ALL TIMES
+
 SWEP.Recoil = 1
 SWEP.RecoilSide = 0.5
 SWEP.MaxRecoilBlowback = 2
@@ -129,14 +131,14 @@ SWEP.HoldtypeSights = "knife"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW
 
-SWEP.ActivePos = Vector(1, 3, 0.25)
+SWEP.ActivePos = Vector(0, 3, 0.25)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(19, 8, 2)
-SWEP.CustomizeAng = Angle(15, 40, 30)
+SWEP.CustomizePos = Vector(0, 6, 0.5)
+SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(0.532, -6, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -201,10 +203,8 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(-0.5, -1.1, 1.5), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 0),
-            wpos = Vector(7, 1.6, -4),
-            wang = Angle(-10, 0, 180)
+            vpos = Vector(-3.7, 0.1, 0.15), -- offset that the attachment will be relative to the bone
+            vang = Angle(-90, 0, 270),
         },
     }, --5
 }
