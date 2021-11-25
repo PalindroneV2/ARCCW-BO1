@@ -16,6 +16,8 @@ att.GivesFlags = {"pap_bknife", "papname1", "papname2", "papname3"}
 att.SortOrder = 100
 att.Mult_Damage = 2.5
 att.Mult_DamageMin = 2.5
+att.Mult_MeleeDamage = 2.5
+att.Mult_MuzzleVelocity = 1.5
 
 att.AttachSound = "weapons/arccw/pap/pap_jingle.wav"
 

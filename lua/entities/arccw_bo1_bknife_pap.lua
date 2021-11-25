@@ -3,8 +3,6 @@ ENT.PrintName 			= "PAP Ballistic Knife (BO1)"
 
 DEFINE_BASECLASS(ENT.Base)
 
-ENT.ImpactDamage = 500
-
 if CLIENT then
     killicon.Add( "arccw_bo1_ballistic_knife", "arccw/weaponicons/arccw_bo1_ballistic_knife", Color( 255, 255, 255, 255 ) )
 end
@@ -16,9 +14,5 @@ if SERVER then
         BaseClass.Initialize(self)
 
         util.SpriteTrail(self, 0, Color(255, 0, 66), true, 6, 32, 0.1, 1, "effects/laser1.vmt")
-    end
-
-    function ENT:OnRemove()
-        self:EmitSound("PAP_Effect")
     end
 end

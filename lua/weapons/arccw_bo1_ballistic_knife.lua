@@ -287,3 +287,4 @@ function SWEP:SecondaryAttack()
     return self:Bash()
 end
 SWEP.Secondary.Automatic = true
+SWEP.NoHideLeftHandInCustomization = true
