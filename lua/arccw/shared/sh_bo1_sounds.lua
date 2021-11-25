@@ -2375,6 +2375,113 @@ sound.Add( {
     }
 } )
 
+-- BALLISTIC KNIFE --
+
+sound.Add( {
+    name = "ArcCW_BO1.Ballistic_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_ballistic_knife/fire1.wav",
+        "^weapons/arccw/bo1_ballistic_knife/fire2.wav",
+        "^weapons/arccw/bo1_ballistic_knife/fire3.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Ballistic_Load",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_ballistic_knife/load.wav",
+    }
+} )
+
+-- BO1 KNIFE --
+
+sound.Add( {
+    name = "ArcCW_BO1.Knife_Slash",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_knife/slash/0.wav",
+        "^weapons/arccw/bo1_knife/slash/1.wav",
+        "^weapons/arccw/bo1_knife/slash/2.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_BO1.Knife_Stab",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_knife/stab/0.wav",
+        "^weapons/arccw/bo1_knife/stab/1.wav",
+        "^weapons/arccw/bo1_knife/stab/2.wav",
+        "^weapons/arccw/bo1_knife/stab/3.wav",
+    }
+} )
+sound.Add( {
+    name = "ArcCW_BO1.Knife_Pull",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_knife/pull/0.wav",
+        "^weapons/arccw/bo1_knife/pull/1.wav",
+        "^weapons/arccw/bo1_knife/pull/2.wav",
+        "^weapons/arccw/bo1_knife/pull/3.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_BO1.Knife_HitObject",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_knife/hit_object/0.wav",
+        --"^weapons/arccw/bo1_knife/hit_object/1.wav",
+        --"^weapons/arccw/bo1_knife/hit_object/2.wav",
+        --"^weapons/arccw/bo1_knife/hit_object/3.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_BO1.Knife_Twist",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_knife/twist/0.wav",
+        "^weapons/arccw/bo1_knife/twist/1.wav",
+        "^weapons/arccw/bo1_knife/twist/2.wav",
+        "^weapons/arccw/bo1_knife/twist/3.wav",
+        "^weapons/arccw/bo1_knife/twist/4.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ArcCW_BO1.Knife_Swing",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_knife/whoosh/0.wav",
+    }
+} )
+
 -- M202 FLASH --
 
 sound.Add( {
