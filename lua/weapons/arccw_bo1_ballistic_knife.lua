@@ -10,7 +10,7 @@ SWEP.Trivia_Manufacturer = "Unknown"
 SWEP.Trivia_Calibre = "Ballistic Knives"
 SWEP.Trivia_Mechanism = "Spring-Loaded"
 SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = "1960s"
+SWEP.Trivia_Year = "1960"
 
 SWEP.Slot = 0
 
@@ -29,15 +29,15 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
 
-SWEP.Damage = 200
-SWEP.DamageMin = 200
+SWEP.Damage = 100
+SWEP.DamageMin = 100
 
-SWEP.BlastRadius = 200
+SWEP.BlastRadius = 0
 
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = "arccw_bo1_bknife_projectile" -- entity to fire, if any
-SWEP.MuzzleVelocity = 5000 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 3000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
@@ -70,8 +70,8 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = {"weapon_crossbow"}
 SWEP.NPCWeight = 35
 
-SWEP.AccuracyMOA = 5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
+SWEP.AccuracyMOA = 50 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 150 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 100
 
 SWEP.Primary.Ammo = "XBowBolt" -- what ammo type the gun uses
@@ -88,12 +88,11 @@ SWEP.MeleeMissSound = "ArcCW_BO1.Knife_Swing"
 SWEP.MeleeHitSound = "ArcCW_BO1.Knife_HitObject"
 SWEP.MeleeHitNPCSound = "ArcCW_BO1.Knife_Slash"
 
-SWEP.Melee2 = true
-SWEP.Melee2Damage = 150
-SWEP.Melee2Range = 10
-SWEP.Melee2Time = 0.9
-SWEP.Melee2Gesture = ACT_MELEE_ATTACK1
-SWEP.Melee2AttackTime = 0.2
+SWEP.MeleeDamage = 150
+SWEP.MeleeRange = 10
+SWEP.MeleeTime = 0.9
+SWEP.MeleeGesture = ACT_MELEE_ATTACK1
+SWEP.MeleeAttackTime = 0.2
 
 SWEP.MuzzleEffect = nil --"muzzleflash_shotgun"
 SWEP.ShellModel = "models/shells/shell_12gauge.mdl"
@@ -106,7 +105,7 @@ SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 2
 
-SWEP.SpeedMult = 0.95
+SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.75
 SWEP.SightTime = 0.27
 
@@ -281,3 +280,9 @@ SWEP.Animations = {
         Time = 10 / 30
     },
 }
+
+SWEP.Hook_ShouldNotSight = function(wep) return true end
+
+function SWEP:SecondaryAttack()
+    return self:Bash()
+end

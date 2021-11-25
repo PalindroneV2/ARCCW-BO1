@@ -7,7 +7,6 @@ ENT.Information 		= ""
 ENT.Spawnable = false
 ENT.AdminSpawnable = false
 
-ENT.ImpactDamage = 150
 ENT.Ticks = 0
 ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 ENT.CanPickup = true
@@ -29,34 +28,32 @@ if SERVER then
         self:SetNoDraw( false )
 
         self:SetSolid( SOLID_VPHYSICS )
-        self:PhysicsInitBox(Vector(-3, -1, -1), Vector(3, 1, 1))
+        self:PhysicsInitBox(Vector(-2, -1, -1), Vector(28, 1, 1))
         self:SetMoveType( MOVETYPE_VPHYSICS )
         self:DrawShadow(false)
 
         local phys = self:GetPhysicsObject()
         if (phys:IsValid()) then
             phys:Wake()
-            phys:EnableGravity(false)
+            phys:EnableGravity(true)
             phys:SetBuoyancyRatio(0)
-            phys:SetDragCoefficient(0)
-            phys:SetMass(1) -- avoid collision damage
+            phys:SetDragCoefficient(5)
+            phys:SetMass(2) -- avoid collision damage
         end
 
-        util.SpriteTrail(self, 0, Color(255, 255, 255), false, 3, 1, 0.25, 2, "trails/tube.vmt")
+        util.SpriteTrail(self, 0, Color(255, 255, 255), false, 3, 1, 0.15, 2, "trails/tube.vmt")
         SafeRemoveEntityDelayed(self, 60)
     end
 
     function ENT:Think()
-
-        local effectdata = EffectData()
-        effectdata:SetOrigin( self:GetPos() )
         if self.Stuck then
             if self:GetSolid() == SOLID_VPHYSICS then return
             elseif !self.AttachToWorld and (!IsValid(self:GetParent())) or (IsValid(self:GetParent()) and self:GetParent():GetSolid() != SOLID_VPHYSICS and (self:GetParent():Health() <= 0)) then
-                self:SetTrigger(false)
-                self:SetParent()
-                self:PhysicsInit(SOLID_VPHYSICS)
-                self:PhysWake()
+                timer.Simple(0, function()
+                    self:SetParent()
+                    self:PhysicsInit(SOLID_VPHYSICS)
+                    self:PhysWake()
+                end)
             end
         end
     end
@@ -83,16 +80,16 @@ if SERVER then
         local tgt = data.HitEntity
         local dmginfo = DamageInfo()
         dmginfo:SetDamageType(DMG_NEVERGIB)
-        dmginfo:SetDamage(self.ImpactDamage)
+        dmginfo:SetDamage(self.Damage)
         dmginfo:SetAttacker(self:GetOwner())
         dmginfo:SetInflictor(self)
         tgt:TakeDamageInfo(dmginfo)
 
         local angles = self:GetAngles()
-        if IsValid(tgt:GetPhysicsObject()) then
+        if tgt:IsWorld() or (IsValid(tgt) and tgt:GetPhysicsObject():IsValid()) then
             timer.Simple(0, function()
                 self:SetAngles(angles)
-                self:SetPos(data.HitPos)
+                self:SetPos(data.HitPos - angles:Forward() * 16)
                 self:GetPhysicsObject():Sleep()
                 if tgt:IsWorld() or (IsValid(tgt)) then
                     self:SetSolid(SOLID_NONE)

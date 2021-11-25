@@ -53,7 +53,6 @@ if SERVER then
         if self.Stuck then
             if self:GetSolid() == SOLID_VPHYSICS then return
             elseif !self.AttachToWorld and (!IsValid(self:GetParent())) or (IsValid(self:GetParent()) and self:GetParent():GetSolid() != SOLID_VPHYSICS and (self:GetParent():Health() <= 0)) then
-                self:SetTrigger(false)
                 self:SetParent()
                 self:PhysicsInit(SOLID_VPHYSICS)
                 self:PhysWake()
@@ -89,18 +88,19 @@ if SERVER then
         tgt:TakeDamageInfo(dmginfo)
 
         local angles = self:GetAngles()
-        if IsValid(tgt) and IsValid(tgt:GetPhysicsObject()) then
+        if tgt:IsWorld() or (IsValid(tgt) and tgt:GetPhysicsObject():IsValid()) then
             timer.Simple(0, function()
                 self:SetAngles(angles)
                 self:SetPos(data.HitPos)
                 self:GetPhysicsObject():Sleep()
-                if tgt:IsWorld() or (IsValid(tgt)) then
+                if tgt:IsWorld() or IsValid(tgt) then
                     self:SetSolid(SOLID_NONE)
                     self:SetMoveType(MOVETYPE_NONE)
                     if !tgt:IsWorld() then
                         self:SetParent(tgt)
                         self:GetParent():DontDeleteOnRemove(self)
                     else
+                        print("attach world")
                         self.AttachToWorld = true
                     end
                 end
