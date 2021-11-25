@@ -16,7 +16,7 @@ SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 2010
 
-SWEP.Slot = 3
+SWEP.Slot = 2
 
 SWEP.UseHands = true
 
@@ -32,9 +32,11 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 45
-SWEP.DamageMin = 35 -- damage done at maximum range
-SWEP.Range = 125 -- in METRES
+SWEP.Damage = 72
+SWEP.DamageMin = 40 -- damage done at maximum range
+SWEP.RangeMin = 30
+SWEP.Range = 300 -- in METRES
+
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -50,11 +52,12 @@ SWEP.Primary.ClipSize = 20 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 50
 
 SWEP.Recoil = 0.9
-SWEP.RecoilSide = 0.8
-SWEP.RecoilRise = 0.8
-SWEP.SpeedMult = 0.95
-SWEP.SightedSpeedMult = 0.65
-SWEP.SightTime = 0.25
+SWEP.RecoilSide = 0.5
+SWEP.RecoilRise = 1
+
+SWEP.SpeedMult = 0.85
+SWEP.SightedSpeedMult = 0.5
+SWEP.SightTime = 0.35
 
 SWEP.Delay = 60 / 700 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -64,6 +67,8 @@ SWEP.Firemodes = {
     },
     {
         Mode = 2,
+        Mult_VisualRecoil = 2,
+        Mult_RecoilSide = 1.5,
     },
     {
         Mode = 0
