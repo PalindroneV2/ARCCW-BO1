@@ -89,8 +89,8 @@ SWEP.MeleeHitSound = "ArcCW_BO1.Knife_HitObject"
 SWEP.MeleeHitNPCSound = "ArcCW_BO1.Knife_Slash"
 
 SWEP.MeleeDamage = 150
-SWEP.MeleeRange = 10
-SWEP.MeleeTime = 0.9
+SWEP.MeleeRange = 32
+SWEP.MeleeTime = 0.6
 SWEP.MeleeGesture = ACT_MELEE_ATTACK1
 SWEP.MeleeAttackTime = 0.2
 
@@ -286,3 +286,4 @@ SWEP.Hook_ShouldNotSight = function(wep) return true end
 function SWEP:SecondaryAttack()
     return self:Bash()
 end
+SWEP.Secondary.Automatic = true
