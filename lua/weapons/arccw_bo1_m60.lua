@@ -131,7 +131,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(1, 0, 0.5)
+SWEP.ActivePos = Vector(0, 0, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.InBipodPos = Vector(-5, 0, -1.5)
@@ -335,6 +335,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
+        LastClip1OutTime = 110 / 35,
         SoundTable = {
             {s = "ArcCW_BO1.M60_Charge", t = 17 / 35},
             {s = "ArcCW_BO1.M60_Charge", t = 20 / 35},
@@ -357,6 +358,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
+        LastClip1OutTime = 110 / 35,
         SoundTable = {
             {s = "ArcCW_BO1.M60_Charge", t = 17 / 35},
             {s = "ArcCW_BO1.M60_Charge", t = 20 / 35},

@@ -99,26 +99,21 @@ SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 4
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
-     [1] = "j_bullet1",
-     [2] = "j_bullet2",
-     [3] = "j_bullet3",
-     [4] = "j_bullet4",
-     [5] = "j_bullet5",
-     [6] = "j_bullet6",
-     [7] = "j_bullet7",
-     [8] = "j_bullet8",
-     [9] = "j_bullet9",
-     [10] = "j_bullet10",
-     [11] = "j_bullet11",
-     [12] = "j_bullet12",
-     [13] = "j_bullet13",
-     [14] = "j_bullet14",
-     [15] = "j_bullet15",
-     [16] = "j_bullet16",
-     [17] = "j_bullet17",
-     [18] = "j_bullet18",
-     [19] = "j_bullet19",
-     [20] = "j_bullet20",
+     [1] = "tag_bullet01",
+     [2] = "tag_bullet02",
+     [3] = "tag_bullet03",
+     [4] = "tag_bullet04",
+     [5] = "tag_bullet05",
+     [6] = "tag_bullet06",
+     [7] = "tag_bullet07",
+     [8] = "tag_bullet08",
+     [9] = "tag_bullet09",
+     [10] = "tag_bullet10",
+     [11] = "tag_bullet11",
+     [12] = "tag_bullet12",
+     [13] = "tag_bullet13",
+     [14] = "tag_bullet14",
+     [15] = "tag_bullet15",
 }
 
 SWEP.ProceduralRegularFire = false
@@ -140,7 +135,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(1, 0, 0.5)
+SWEP.ActivePos = Vector(0, 0, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.InBipodPos = Vector(-6, 0, -2)
@@ -330,6 +325,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = nil,
         LHIKOut = 1,
+        LastClip1OutTime = 75 / 35,
         SoundTable = {
             {s = "ArcCW_BO2.LMG_Open", t = 25 / 35},
             {s = "ArcCW_BO2.LMG_BoxOff", t = 55 / 35},
@@ -402,6 +398,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = nil,
         LHIKOut = 1,
+        LastClip1OutTime = 75 / 35,
         SoundTable = {
             {s = "ArcCW_BO2.LMG_Open", t = 25 / 35},
             {s = "ArcCW_BO2.LMG_BoxOff", t = 55 / 35},

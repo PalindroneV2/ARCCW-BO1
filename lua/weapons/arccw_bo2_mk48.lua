@@ -315,6 +315,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = nil,
         LHIKOut = 1,
+        LastClip1OutTime = 75 / 35,
         SoundTable = {
             {s = "ArcCW_BO2.LMG_Open", t = 20 / 35},
             {s = "ArcCW_BO2.LMG_BoxOff", t = 50 / 35},
@@ -336,6 +337,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = nil,
         LHIKOut = 1,
+        LastClip1OutTime = 75 / 35,
         SoundTable = {
             {s = "ArcCW_BO2.LMG_Open", t = 20 / 35},
             {s = "ArcCW_BO2.LMG_BoxOff", t = 50 / 35},
