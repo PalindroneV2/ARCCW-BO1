@@ -100,7 +100,6 @@ if SERVER then
                         self:SetParent(tgt)
                         self:GetParent():DontDeleteOnRemove(self)
                     else
-                        print("attach world")
                         self.AttachToWorld = true
                     end
                 end
