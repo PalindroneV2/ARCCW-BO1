@@ -33,12 +33,12 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
 
-SWEP.Damage = 20
-SWEP.DamageMin = 3
+SWEP.Damage = 18
+SWEP.DamageMin = 6
 SWEP.Range = 40
 SWEP.RangeMin = 5
 
-SWEP.HullSize = 4
+SWEP.HullSize = 2
 SWEP.BodyDamageMults = {[HITGROUP_HEAD] = 1,}
 
 SWEP.Penetration = 1
@@ -67,7 +67,7 @@ SWEP.Num = 8 -- number of shots per trigger pull.
 SWEP.RunawayBurst = false
 SWEP.Firemodes = {
     {
-        PrintName = "SLAM-FIRE",
+        PrintName = "fcg.slam",
         Mode = 2,
     },
     {
@@ -248,7 +248,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 end
 
-SWEP.MeleeTime = 1
+SWEP.MeleeTime = 0.5
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     local bayo = wep:GetBuff_Override("WAW_Bayonet")
@@ -303,7 +303,7 @@ SWEP.Animations = {
         Source = {
             "bash_2",
         },
-        Time = 70 / 35,
+        Time = 35 / 35,
     },
     ["fire_iron"] = {
         Source = {

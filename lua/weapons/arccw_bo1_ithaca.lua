@@ -64,15 +64,8 @@ SWEP.Num = 8 -- number of shots per trigger pull.
 SWEP.RunawayBurst = false
 SWEP.Firemodes = {
     {
-        PrintName = "fcg.pump",
-        Mode = 1,
-    },
-    {
-        PrintName = "SLAM-FIRE",
+        PrintName = "fcg.slam",
         Mode = 2,
-        Mult_AccuracyMOA = 1.5,
-        Mult_HipDispersion = 1.5,
-        Mult_SightsDispersion = 1.5,
     },
     {
         Mode = 0
@@ -389,6 +382,7 @@ SWEP.Animations = {
         },
         Time = 30 / 35,
         ShellEjectAt = 0.3,
+        MinProgress = 22 / 35,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Back", t = 10 / 30},
             {s = "ArcCW_BO1.MK_Fwd", t = 14 / 30},
@@ -400,6 +394,7 @@ SWEP.Animations = {
         },
         Time = 20 / 25,
         ShellEjectAt = 0.3,
+        MinProgress = 22 / 35,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Back", t = 2 / 25},
             {s = "ArcCW_BO1.MK_Fwd", t = 9 / 25},
@@ -509,6 +504,7 @@ SWEP.Animations = {
         },
         Time = 30 / 35,
         ShellEjectAt = 10 / 35,
+        MinProgress = 22 / 35,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Back", t = 10 / 30},
             {s = "ArcCW_BO1.MK_Fwd", t = 14 / 30},
@@ -520,6 +516,7 @@ SWEP.Animations = {
         },
         Time = 20 / 25,
         ShellEjectAt = 5 / 35,
+        MinProgress = 22 / 35,
         SoundTable = {
             {s = "ArcCW_BO1.MK_Back", t = 2 / 25},
             {s = "ArcCW_BO1.MK_Fwd", t = 9 / 25},

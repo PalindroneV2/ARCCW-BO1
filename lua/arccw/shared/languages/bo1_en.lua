@@ -38,3 +38,6 @@ L["bo1.doom.rpg.con.2"] = "Rockets do less damage"
 
 L["bo1.bayonet.1"] = "Melee attack becomes a slow but powerful stab"
 L["bo1.bayonet.2"] = "Allows melee attack while sprinting"
+
+L["fcg.slam"] = "Slam-fire"
+L["fcg.slam.abbrev"] = "SLAM"

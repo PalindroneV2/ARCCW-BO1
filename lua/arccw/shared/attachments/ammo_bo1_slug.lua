@@ -15,6 +15,9 @@ att.Mult_Range = 2
 att.Mult_AccuracyMOA = 0.25
 att.Override_Num = 1
 
+att.Override_HullSize = 0
+att.Override_BodyDamageMults = {}
+
 att.Hook_Compatible = function(wep)
     return wep.Num > 1
 end
