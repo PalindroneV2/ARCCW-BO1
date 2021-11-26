@@ -36,7 +36,7 @@ SWEP.DamageMin = 30 -- damage done at maximum range
 SWEP.Range = 250 -- in METRES
 SWEP.RangeMin = 25
 
-SWEP.HullSize = 4
+SWEP.HullSize = 0
 
 SWEP.Penetration = 12
 SWEP.DamageType = DMG_BULLET

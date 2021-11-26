@@ -5,8 +5,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M1918A2 BAR"
 SWEP.Trivia_Class = "Light Machine Gun"
-SWEP.Trivia_Desc = [[
-    Created during and for use in World War 1 with the doctrine of walking fire in mind, the BAR, designed by the legendary John Moses Browning, served with the United States military through the end of the Great War and into World War II. It remained in service until the 70s.
+SWEP.Trivia_Desc = [[Created during and for use in World War 1 with the doctrine of walking fire in mind, the BAR, designed by the legendary John Moses Browning, served with the United States military through the end of the Great War and into World War II. It remained in service until the 70s.
+
+The A2 variant was fitted with a Springfield Armory rate reducer, allowing for a slow and controllable rate of fire.
 ]]
 SWEP.Trivia_Manufacturer = "Colt, Winchester, etc."
 SWEP.Trivia_Calibre = ".30-06 Springfield"
@@ -14,7 +15,7 @@ SWEP.Trivia_Mechanism = "Gas-Operated Rising Bolt"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1918
 
-SWEP.Slot = 2
+SWEP.Slot = 3
 
 SWEP.UseHands = true
 
@@ -29,9 +30,11 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 40
-SWEP.DamageMin = 30 -- damage done at maximum range
-SWEP.Range = 120 -- in METRES
+SWEP.Damage = 75
+SWEP.DamageMin = 42
+SWEP.Range = 250
+SWEP.RangeMin = 25
+
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -45,15 +48,23 @@ SWEP.TracerWidth = 3
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 20 -- DefaultClip is automatically set.
 
-SWEP.Recoil = 1
-SWEP.RecoilSide = 0.75
-SWEP.RecoilRise = 0.75
+SWEP.Recoil = 0.6
+SWEP.RecoilSide = 0.5
+SWEP.RecoilRise = 0.2
+SWEP.VisualRecoilMult = 0.1
 
-SWEP.Delay = 60 / 500-- 60 / RPM.
+SWEP.Delay = 60 / 400 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 2,
+        PrintName = "fcg.bar.slow",
+    },
+    {
+        Mode = 2,
+        PrintName = "fcg.bar.fast",
+        Mult_RPM = 600 / 400,
+        Mult_Recoil = 1.5,
     },
     {
         Mode = 1,
@@ -69,9 +80,10 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 1.75 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 200
+SWEP.AccuracyMOA = 4 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 600 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 100
+SWEP.SightsDispersion = 50
 
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
 SWEP.MagID = "bar" -- the magazine pool this gun draws from

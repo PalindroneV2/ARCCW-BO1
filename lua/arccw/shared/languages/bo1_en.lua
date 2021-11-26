@@ -41,3 +41,7 @@ L["bo1.bayonet.2"] = "Allows melee attack while sprinting"
 
 L["fcg.slam"] = "Slam-fire"
 L["fcg.slam.abbrev"] = "SLAM"
+L["fcg.bar.fast"] = "Fast Automatic"
+L["fcg.bar.fast.abbrev"] = "FAST"
+L["fcg.bar.slow"] = "Slow Automatic"
+L["fcg.bar.slow.abbrev"] = "SLOW"
