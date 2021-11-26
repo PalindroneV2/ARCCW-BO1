@@ -32,8 +32,8 @@ SWEP.DefaultBodygroups = "0100000000"
 
 SWEP.Damage = 110
 SWEP.DamageMin = 70
-SWEP.RangeMin = 15
-SWEP.Range = 300
+SWEP.RangeMin = 70
+SWEP.Range = 350
 SWEP.Penetration = 7
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
