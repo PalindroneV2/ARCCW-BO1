@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "SVT-40"
 SWEP.Trivia_Class = "Battle Rifle"
 SWEP.Trivia_Desc = [[
-    World War 2 era Soviet Semi-Automatic Rifle, which began use as teh SVT-38 during the Winter War. It was notable for being one of the most wide-spread semi-automatic rifles of the war, second only to the M1 Garand.
+    World War 2 era Soviet Semi-Automatic Rifle, which began use as the SVT-38 during the Winter War. It was notable for being one of the most wide-spread semi-automatic rifles of the war, second only to the M1 Garand.
     The rather extensive use of this rifle prompted the development of German produced self-loading rifles, such as the G-41(W) and the G-43.
     An select-fire version, the AVT-40, saw development to supplement the Red Army's shortage of machine guns.
 ]]
@@ -31,10 +31,10 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 88
-SWEP.DamageMin = 40 -- damage done at maximum range
-SWEP.RangeMin = 15
-SWEP.Range = 150 -- in METRES
+SWEP.Damage = 72
+SWEP.DamageMin = 38 -- damage done at maximum range
+SWEP.RangeMin = 25
+SWEP.Range = 250 -- in METRES
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -49,11 +49,11 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 10 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 20
 
-SWEP.Recoil = 1.2
-SWEP.RecoilSide = 0.8
+SWEP.Recoil = 1
+SWEP.RecoilSide = 0.6
 SWEP.RecoilRise = 0.75
 
-SWEP.Delay = 60 / 600-- 60 / RPM.
+SWEP.Delay = 60 / 400 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -71,8 +71,8 @@ SWEP.NPCWeaponType = {
 SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 1.75 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 200
+SWEP.HipDispersion = 800 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 100
 
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
 SWEP.MagID = "g43" -- the magazine pool this gun draws from
@@ -96,7 +96,7 @@ SWEP.CamAttachment = 3
 
 SWEP.SpeedMult = 0.85
 SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.3
+SWEP.SightTime = 0.4
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
