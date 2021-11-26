@@ -30,9 +30,9 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "000000"
 
-SWEP.Damage = 90
+SWEP.Damage = 100
 SWEP.DamageMin = 40 -- damage done at maximum range
-SWEP.Range = 500
+SWEP.Range = 400
 SWEP.RangeMin = 50
 
 SWEP.HullSize = 0
@@ -52,14 +52,14 @@ SWEP.Primary.ClipSize = 100 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 200
 
 SWEP.Recoil = 1.75
-SWEP.RecoilSide = 2
+SWEP.RecoilSide = 3
 SWEP.RecoilRise = 0.5
 SWEP.VisualRecoilMult = 1.5
 
-SWEP.SpeedMult = 0.75
+SWEP.SpeedMult = 0.7
 SWEP.SightedSpeedMult = 0.25
-SWEP.SightTime = 0.5
-SWEP.ShootSpeedMult = 0.5
+SWEP.SightTime = 0.75
+SWEP.ShootSpeedMult = 0.25
 
 SWEP.Delay = 60 / 500 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -76,9 +76,9 @@ SWEP.NPCWeaponType = "weapon_ar2"
 SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 10 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 2000 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 350
-SWEP.SightsDispersion = 150
+SWEP.HipDispersion = 1500 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 400
+SWEP.SightsDispersion = 200
 
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
 SWEP.MagID = "mg08" -- the magazine pool this gun draws from
@@ -115,9 +115,9 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.475, 3, 0.2),
+    Pos = Vector(-3.45, 1, 0.2),
     Ang = Angle(-0.25, 0, 0),
-    Magnification = 1.1,
+    Magnification = 2.5,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }

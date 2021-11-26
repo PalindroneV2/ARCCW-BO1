@@ -4,16 +4,32 @@ att.Description = "Built from the remains of an aircraft machine gun, an M1 Gara
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
+    "bo1.g935.con.1",
+    "bo1.g935.con.2"
 }
 att.AutoStats = true
 att.Slot = "waw_fcg_stinger"
 att.SortOrder = 100
-att.Mult_RPM = 2.25
-att.Mult_AccuracyMOA = 1.5
-att.Mult_Recoil = 1.2
+att.Mult_RPM = 3
+att.Mult_AccuracyMOA = 2
+att.Mult_RecoilSide = 1.5
 
 att.Override_Jamming = true
-att.Override_HeatLockout = true
+att.Override_HeatLockout = false
 att.Override_HeatCapacity = 300
-att.Mult_HeatDissipation = 5
-att.Mult_HeatDelayTime = 5
+att.Override_HeatDissipation = 8
+att.Override_HeatDelayTime = 4
+
+att.Hook_ModifyRPM = function(wep, delay)
+    local heat = math.Clamp(wep:GetHeat() / wep:GetMaxHeat(), 0, 1)
+    if heat > 0.5 then
+        return delay * (1 + ((heat - 0.5) / 0.5) * 3)
+    end
+end
+
+att.M_Hook_Mult_AccuracyMOA = function(wep, data)
+    local heat = math.Clamp(wep:GetHeat() / wep:GetMaxHeat(), 0, 1)
+    if heat > 0.2 then
+        data.mult = data.mult * (1 + ((heat - 0.2) / 0.8))
+    end
+end

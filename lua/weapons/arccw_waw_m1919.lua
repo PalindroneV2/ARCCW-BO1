@@ -34,6 +34,7 @@ SWEP.DamageMin = 42
 SWEP.Range = 300
 SWEP.RangeMin = 30
 
+SWEP.Penetration = 15
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 740 -- projectile or phys bullet muzzle velocity
@@ -56,7 +57,7 @@ SWEP.SightedSpeedMult = 0.25
 SWEP.SightTime = 0.5
 SWEP.VisualRecoilMult = 0
 
-SWEP.Delay = 60 / 625 -- 60 / RPM.
+SWEP.Delay = 60 / 500 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -70,7 +71,7 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_ar2"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 3 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 4 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 1100 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 350
 SWEP.SightsDispersion = 120
@@ -126,7 +127,7 @@ SWEP.CaseBones = {}
 SWEP.IronSightStruct = {
     Pos = Vector(-3.82, 6, 1),
     Ang = Angle(0.5, -2.45, 0),
-    Magnification = 1.1,
+    Magnification = 1.5,
     CrosshairInSights = false,
 }
 

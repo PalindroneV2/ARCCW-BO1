@@ -76,8 +76,8 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_ar2"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 4 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 1500 -- inaccuracy added by hip firing.
+SWEP.AccuracyMOA = 6 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 1000 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 300
 SWEP.SightsDispersion = 150
 
@@ -119,7 +119,7 @@ SWEP.CaseBones = {}
 SWEP.IronSightStruct = {
     Pos = Vector(0, -5.5, 4),
     Ang = Angle(0.3, 0, 0),
-    Magnification = 1.1,
+    Magnification = 1.5,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
