@@ -33,7 +33,7 @@ SWEP.DamageMin = 12 -- damage done at maximum range
 SWEP.Range = 50
 SWEP.RangeMin = 5
 
-SWEP.HullSize = 1
+SWEP.HullSize = 0.5
 SWEP.BodyDamageMults = {[HITGROUP_HEAD] = 1,}
 
 SWEP.Penetration = 2
@@ -74,7 +74,7 @@ SWEP.NPCWeaponType = {
 SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 350 -- inaccuracy added by hip firing.
+SWEP.HipDispersion = 250 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
 SWEP.ShootWhileSprint = false
@@ -174,8 +174,8 @@ SWEP.Attachments = {
         PrintName = "Optic",
         Slot = {"bo1_lp_optic", "bo1_reddots"},
         Bone = "tag_weapon",
-        VMScale = Vector(1.25, 1.25, 1.25),
-        WMScale = Vector(1.25, 1.25, 1.25),
+        VMScale = Vector(1.5, 1.5, 1.5),
+        WMScale = Vector(1.5, 1.5, 1.5),
         Offset = {
             vpos = Vector(6.5, -0.025, 4),
             vang = Angle(0, 0, 0),
