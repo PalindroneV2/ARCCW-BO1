@@ -28,7 +28,7 @@ if SERVER then
         self:SetNoDraw( false )
 
         self:SetSolid( SOLID_VPHYSICS )
-        self:PhysicsInitBox(Vector(-2, -1, -1), Vector(28, 1, 1))
+        self:PhysicsInitBox(Vector(-2, -2, -2), Vector(16, 2, 2))
         self:SetMoveType( MOVETYPE_VPHYSICS )
         self:DrawShadow(false)
 
@@ -36,13 +36,14 @@ if SERVER then
         if (phys:IsValid()) then
             phys:Wake()
             phys:EnableGravity(true)
-            phys:SetBuoyancyRatio(0)
+            phys:SetBuoyancyRatio(0.1)
             phys:SetDragCoefficient(5)
-            phys:SetMass(2) -- avoid collision damage
+            phys:SetMass(10) -- avoid collision damage
         end
 
         util.SpriteTrail(self, 0, Color(255, 255, 255), false, 3, 1, 0.15, 2, "trails/tube.vmt")
         SafeRemoveEntityDelayed(self, 60)
+        self:SetPhysicsAttacker(self:GetOwner(), 10)
     end
 
     function ENT:Think()
@@ -53,9 +54,20 @@ if SERVER then
                     self:SetParent()
                     self:PhysicsInit(SOLID_VPHYSICS)
                     self:PhysWake()
+                    if self.AttachTime + 0.1 - CurTime() > 0 then
+                        self:GetPhysicsObject():SetVelocityInstantaneous(self.OldVelocity * 0.15)
+                    end
+                    self:SetTrigger(true)
+                    self:UseTriggerBounds(true, 16)
                 end)
             end
+        else
+            local v = self:GetVelocity()
+            self:SetAngles(v:Angle())
+            self:GetPhysicsObject():SetVelocityInstantaneous(v)
         end
+        self:NextThink(CurTime() + 0.03)
+        return true
     end
 
     function ENT:StartTouch(ent)
@@ -77,19 +89,23 @@ if SERVER then
         if self.Stuck then return end
         self.Stuck = true
 
+        self.OldVelocity = data.OurOldVelocity
+        self.AttachTime = CurTime()
+
         local tgt = data.HitEntity
         local dmginfo = DamageInfo()
         dmginfo:SetDamageType(DMG_NEVERGIB)
         dmginfo:SetDamage(self.Damage)
         dmginfo:SetAttacker(self:GetOwner())
         dmginfo:SetInflictor(self)
+        dmginfo:SetDamageForce(self.OldVelocity * 10)
         tgt:TakeDamageInfo(dmginfo)
 
         local angles = self:GetAngles()
         if tgt:IsWorld() or (IsValid(tgt) and tgt:GetPhysicsObject():IsValid()) then
             timer.Simple(0, function()
                 self:SetAngles(angles)
-                self:SetPos(data.HitPos - angles:Forward() * 16)
+                --self:SetPos(data.HitPos - angles:Forward() * 16)
                 self:GetPhysicsObject():Sleep()
                 if tgt:IsWorld() or (IsValid(tgt)) then
                     self:SetSolid(SOLID_NONE)

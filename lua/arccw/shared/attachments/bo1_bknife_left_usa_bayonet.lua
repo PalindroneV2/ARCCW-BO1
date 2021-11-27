@@ -13,4 +13,5 @@ att.SortOrder = 100
 
 att.GivesFlags = {"usa_bayonet"}
 
-att.WAW_Bayonet = true
+att.Mult_MeleeDamage = 0.8
+att.Mult_ReloadTime = 0.8

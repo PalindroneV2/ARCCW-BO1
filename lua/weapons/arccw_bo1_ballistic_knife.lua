@@ -37,7 +37,7 @@ SWEP.BlastRadius = 0
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = "arccw_bo1_bknife_projectile" -- entity to fire, if any
-SWEP.MuzzleVelocity = 3000 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 2000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
@@ -49,7 +49,7 @@ SWEP.Primary.ClipSize = 1 -- DefaultClip is automatically set.
 
 SWEP.CanFireUnderwater = true
 
-SWEP.NoHideLeftHandInCustomization = false -- LEFT HAND REMAINS HIDDEN AT ALL TIMES
+SWEP.NoHideLeftHandInCustomization = true
 
 SWEP.Recoil = 1
 SWEP.RecoilSide = 0.5
@@ -136,8 +136,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, 3, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(0, 6, 0.5)
-SWEP.CustomizeAng = Angle(0, 0, 0)
+SWEP.CustomizePos = Vector(0, 8, -15)
+SWEP.CustomizeAng = Angle(30, 0, 0)
 
 SWEP.HolsterPos = Vector(0.532, -6, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -287,4 +287,3 @@ function SWEP:SecondaryAttack()
     return self:Bash()
 end
 SWEP.Secondary.Automatic = true
-SWEP.NoHideLeftHandInCustomization = true

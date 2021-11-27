@@ -12,3 +12,7 @@ att.Slot = {"bo1_bknife_left"}
 att.SortOrder = 100
 
 att.GivesFlags = {"ger_bayonet"}
+
+att.Mult_MeleeDamage = 0.8
+att.Mult_MoveDispersion = 0.5
+att.Mult_HipDispersion = 0.5

@@ -4,7 +4,7 @@ ENT.PrintName 			= "PAP Ballistic Knife (BO1)"
 DEFINE_BASECLASS(ENT.Base)
 
 if CLIENT then
-    killicon.Add( "arccw_bo1_ballistic_knife", "arccw/weaponicons/arccw_bo1_ballistic_knife", Color( 255, 255, 255, 255 ) )
+    killicon.Add( "arccw_bo1_bknife_pap", "arccw/weaponicons/arccw_bo1_ballistic_knife", Color( 255, 255, 255, 255 ) )
 end
 
 if SERVER then

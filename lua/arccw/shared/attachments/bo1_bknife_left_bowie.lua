@@ -13,7 +13,8 @@ att.SortOrder = 100
 
 att.GivesFlags = {"bowie_knife"}
 
-att.Override_MeleeDamage = 250
+att.Mult_MeleeDamage = 2
 att.Mult_MeleeTime = 1.25
+att.Mult_HipDispersion = 1.25
 
 att.AttachSound = "weapons/arccw/waw_bowie_knife/start.wav"
