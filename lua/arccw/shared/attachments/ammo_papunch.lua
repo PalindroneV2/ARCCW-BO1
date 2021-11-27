@@ -25,6 +25,10 @@ att.Override_PhysTracerProfile = 5
 
 att.AttachSound = "weapons/arccw/pap/pap_jingle.wav"
 
+
+att.Mult_HeatCapacity = 2.5
+att.Mult_HeatDissipation = 2.5
+
 att.Hook_FireBullets = function(wep, data)
   wep:EmitSound("PAP_Effect")
 end

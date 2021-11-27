@@ -30,7 +30,7 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "000000"
 
-SWEP.Damage = 100
+SWEP.Damage = 75
 SWEP.DamageMin = 40 -- damage done at maximum range
 SWEP.Range = 400
 SWEP.RangeMin = 50
@@ -51,8 +51,8 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 100 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 200
 
-SWEP.Recoil = 1.75
-SWEP.RecoilSide = 3
+SWEP.Recoil = 1
+SWEP.RecoilSide = 1.5
 SWEP.RecoilRise = 0.5
 SWEP.VisualRecoilMult = 1.5
 
@@ -77,7 +77,7 @@ SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 10 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 1500 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 400
+SWEP.MoveDispersion = 500
 SWEP.SightsDispersion = 200
 
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
@@ -116,8 +116,8 @@ SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
     Pos = Vector(-3.45, 1, 0.2),
-    Ang = Angle(-0.25, 0, 0),
-    Magnification = 2.5,
+    Ang = Angle(-0.25, 0.03, 0),
+    Magnification = 1.5,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -217,7 +217,7 @@ SWEP.Attachments = {
     }, --4
     {
         PrintName = "Tactical",
-        Slot = {"bo1_tacprimary"},
+        Slot = {"bo1_tacprimary", "waw_perk_cooling"},
         VMScale = Vector(0.75, 0.75, 0.75),
         Bone = "tag_weapon",
         Offset = {
@@ -362,6 +362,7 @@ SWEP.Animations = {
     },
 }
 
+/*
 SWEP.Hook_PostFireBullets = function(wep)
     local owner = wep:GetOwner()
     if owner:IsPlayer() and not wep:InBipod() then
@@ -372,3 +373,4 @@ SWEP.Hook_PostFireBullets = function(wep)
         owner:SetVelocity(dir * (owner:IsOnGround() and -50 or -5))
     end
 end
+*/

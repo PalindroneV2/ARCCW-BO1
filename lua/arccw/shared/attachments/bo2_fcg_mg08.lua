@@ -10,6 +10,7 @@ att.Desc_Cons = {
 }
 att.AutoStats = true
 att.Slot = "bo2_fcg_mg08"
+att.GivesFlags = {"enables_cooling"}
 att.SortOrder = 99
 att.IgnorePickX = true
 
@@ -23,14 +24,14 @@ att.Override_HeatDissipation = 6
 
 att.Hook_ModifyRPM = function(wep, delay)
     local heat = math.Clamp(wep:GetHeat() / wep:GetMaxHeat(), 0, 1)
-    if heat > 0.2 then
+    if heat > 0.5 then
         return delay * (1 + ((heat - 0.2) / 0.8))
     end
 end
 
 att.M_Hook_Mult_AccuracyMOA = function(wep, data)
     local heat = math.Clamp(wep:GetHeat() / wep:GetMaxHeat(), 0, 1)
-    if heat > 0.2 then
+    if heat > 0.5 then
         data.mult = data.mult * (1 + ((heat - 0.2) / 0.8))
     end
 end

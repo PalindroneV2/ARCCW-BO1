@@ -9,8 +9,9 @@ att.Desc_Cons = {
 }
 att.AutoStats = true
 att.Slot = "waw_fcg_stinger"
+att.GivesFlags = {"enables_cooling"}
 att.SortOrder = 100
-att.Mult_RPM = 3
+att.Mult_RPM = 14 / 5 -- AN/M2 ROF is 1400 RPM
 att.Mult_AccuracyMOA = 2
 att.Mult_RecoilSide = 1.5
 
@@ -22,7 +23,7 @@ att.Override_HeatDelayTime = 4
 
 att.Hook_ModifyRPM = function(wep, delay)
     local heat = math.Clamp(wep:GetHeat() / wep:GetMaxHeat(), 0, 1)
-    if heat > 0.5 then
+    if heat > 0.6 then
         return delay * (1 + ((heat - 0.5) / 0.5) * 3)
     end
 end

@@ -12,5 +12,7 @@ att.NotForNPCS = true
 att.AutoStats = true
 att.Mult_CycleTime = 0.66667
 att.Mult_RPM = 1.33334
+att.Mult_HeatCapacity = 1.25
+att.Mult_HeatDissipation = 1.25
 
 att.AttachSound = "weapons/arccw/bo1_perks/perk_tap.wav"
