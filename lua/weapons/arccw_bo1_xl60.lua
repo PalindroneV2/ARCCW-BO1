@@ -295,9 +295,10 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     vm:SetSkin(camo)
+
     if papcamo then
         return vm:SetSkin(camo + 3)
-    end 
+    end
 end
 
 SWEP.Hook_GetCapacity = function(wep, cap)

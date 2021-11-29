@@ -17,10 +17,10 @@ SWEP.Slot = 0
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_ballistic_knife.mdl"
-SWEP.MirrorVMWM = true
+SWEP.MirrorVMWM = false
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-3, 5, -7.5),
-    ang        =    Angle(5, 7, 180),
+    pos        =    Vector(-6.75, 4.25, 9),
+    ang        =    Angle(-30, 0, 90),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale = 1.1,
 }
@@ -28,6 +28,7 @@ SWEP.WorldModel = "models/weapons/arccw/c_bo1_ballistic_knife.mdl"
 SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
+SWEP.DefaultWMBodygroups = "0050000000"
 
 SWEP.Damage = 100
 SWEP.DamageMin = 100
@@ -148,7 +149,7 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 SWEP.AttachmentElements = {
     ["papname1"] = {
         NamePriority = 10,
-        NameChange = "WEAPON_BKNIFE_PAP",
+        NameChange = "The Krauss Refibrillator",
     },
     ["bowie_knife"] = {
         VMBodygroups = {
