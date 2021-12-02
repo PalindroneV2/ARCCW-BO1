@@ -9,6 +9,8 @@ att.AutoStats = true
 
 att.SortOrder = 96
 att.Slot = {"kali_stock"}
+att.Ingore = true
+att.Hidden = true
 
 /*
 att.Mult_Recoil = 0.70

@@ -13,6 +13,7 @@ att.ExcludeFlags = {
 }
 
 att.NoRandom = true
+att.BOCW_Handcannon = true
 
 att.Mult_ShootPitch = 1.25
 

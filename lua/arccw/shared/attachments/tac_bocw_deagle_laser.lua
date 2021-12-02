@@ -17,7 +17,6 @@ att.Laser = false
 att.LaserStrength = 5 / 5
 att.LaserBone = "laser"
 att.HideIfBlocked = true
-att.RequireFlags = {"cw_handcannon"}
 
 att.ColorOptionsTable = {Color(0, 255, 0)}
 

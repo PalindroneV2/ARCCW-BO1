@@ -179,6 +179,11 @@ SWEP.AttachmentElements = {
             {ind = 3, bg = 3}
         },
     },
+    ["mwc_bipod"] = {
+        VMBodygroups = {
+            {ind = 3, bg = 5},
+        },
+    },
     ["mount"] = {
         VMBodygroups = {
             {ind = 5, bg = 1}
@@ -449,12 +454,12 @@ SWEP.AttachmentElements = {
     },
     ["sniper_stock"] = {
         VMBodygroups = {
-            {ind = 4, bg = 12}
+            {ind = 4, bg = 10}
         },
     },
     ["famas_stock"] = {
         VMBodygroups = {
-            {ind = 4, bg = 13}
+            {ind = 4, bg = 11}
         },
     },
 }
@@ -510,7 +515,7 @@ SWEP.Attachments = {
     }, --4
     {
         PrintName = "Underbarrel",
-        Slot = {"ubgl", "bo1_m203", "bo1_mk"},
+        Slot = {"ubgl", "bo1_m203", "bo1_mk", "mk12_bipod"},
         Bone = "tag_weapon",
         VMScale = Vector(1, 1, 1),
         WMScale = Vector(1, 1, 1),
@@ -1271,6 +1276,10 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     if sling and altirons then vm:SetBodygroup(6,2) end
+
+    if wep:GetBuff_Override("BO1_Bipod") and wep:InBipod() then
+        vm:SetBodygroup(3, 6)
+    end
 
     local camo = 0
     if wep.Attachments[13].Installed == "cde_cosmetic_wood" then camo = 2
