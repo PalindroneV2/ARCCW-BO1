@@ -174,6 +174,7 @@ SWEP.Attachments = {
         },
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
+        ExcludeFlags = {"wolf_ee"},
     },
     { --2
         PrintName = "Muzzle",
@@ -186,6 +187,7 @@ SWEP.Attachments = {
             vpos = Vector(6.4, 0, 1.15),
             vang = Angle(0, 0, 0),
         },
+        ExcludeFlags = {"wolf_ee"},
     },
     { --3
         PrintName = "Underbarrel",
@@ -195,6 +197,7 @@ SWEP.Attachments = {
             vpos = Vector(0, 0, 0), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
+        ExcludeFlags = {"wolf_ee"},
     },
     { --4
         PrintName = "Tactical",
@@ -206,19 +209,22 @@ SWEP.Attachments = {
             wpos = Vector(8.5, 2, -2.9),
             wang = Angle(-5, -2, 177.5)
         },
+        ExcludeFlags = {"wolf_ee"},
     },
     { --5
         PrintName = "Stock",
-        Slot = {"bo1_stock"},
+        Slot = {"bo1_stock_l"},
         DefaultAttName = "No Stock",
+        ExcludeFlags = {"wolf_ee"},
     },
     { --6
         PrintName = "Ammo Type",
-        Slot = {"ammo_pap"}
+        Slot = {"ammo_pap"},
+        ExcludeFlags = {"wolf_ee"},
     },
     { --7
         PrintName = "Perk",
-        Slot = "bo1_perk"
+        Slot = {"bo1_perk", "bo1_perk_wolfpistol"},
     },
     { --8
         PrintName = "Charm",
@@ -230,6 +236,7 @@ SWEP.Attachments = {
             wpos = Vector(8.5, 2.5, -4),
             wang = Angle(-5, -2, 177.5)
         },
+        ExcludeFlags = {"wolf_ee"},
     },
 }
 
@@ -242,11 +249,19 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local destron = scope and stock and barrel
 
     if destron and !papcamo then
-        return vm:SetSkin(1)
+        vm:SetSkin(1)
     elseif destron and papcamo then
-        return vm:SetSkin(1)
+        vm:SetSkin(1)
     elseif !destron and papcamo then
-        return vm:SetSkin(2)
+        vm:SetSkin(2)
+    end
+
+    wep.ActivePos = Vector(1, 3, 0.5)
+    wep.ActiveAng = Angle(0, 0, 0)
+
+    if wep:GetBuff_Override("WOLF_EE") then
+        wep.ActivePos = Vector(-2.35, 3, 0)
+        wep.ActiveAng = Angle(-1, 0.12, 0)
     end
 end
 
