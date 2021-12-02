@@ -212,6 +212,7 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
         MergeSlots = {15,16},
+        ExcludeFlags = {"wolf_ee"},
     },
     { --2
         PrintName = "Muzzle",
@@ -223,12 +224,13 @@ SWEP.Attachments = {
             vpos = Vector(22, 0, 1.8),
             vang = Angle(0, 0, 0),
         },
-        ExcludeFlags = {"sd_nomuzz"},
+        ExcludeFlags = {"sd_nomuzz", "wolf_ee"},
     },
     { --3
         PrintName = "Barrel",
         Slot = "stg44_barrel",
         DefaultAttName = "Standard Barrel",
+        ExcludeFlags = {"wolf_ee"},
     },
     { --4
         PrintName = "Underbarrel",
@@ -241,6 +243,7 @@ SWEP.Attachments = {
             wang = Angle(172.5, 180, -2)
         },
         MergeSlots = {5,6},
+        ExcludeFlags = {"wolf_ee"},
     },
     { --5
         Hidden = true,
@@ -253,6 +256,7 @@ SWEP.Attachments = {
             wpos = Vector(14, 0.899, -3.25),
             wang = Angle(172.5, 180, 0)
         },
+        ExcludeFlags = {"wolf_ee"},
     },
     { --6
         Hidden = true,
@@ -264,6 +268,7 @@ SWEP.Attachments = {
             wpos = Vector(20.5, 0.899, -4.75),
             wang = Angle(172.5, 180, -2)
         },
+        ExcludeFlags = {"wolf_ee"},
     },
     { --7
         PrintName = "Tactical",
@@ -275,29 +280,34 @@ SWEP.Attachments = {
             wpos = Vector(19.34, 0.331, -5.6),
             wang = Angle(-7.5, 0, 88)
         },
+        ExcludeFlags = {"wolf_ee"},
     },
     { --8
         PrintName = "Stock",
         Slot = {"bo1_stock", "bo1_mp5stock"},
         DefaultAttName = "No Stock",
         Installed = "bo1_stock_heavy",
+        ExcludeFlags = {"wolf_ee"},
     },
     { --9
         PrintName = "Fire Group",
-        Slot = {"bo1_fcg"}
+        Slot = {"bo1_fcg"},
+        ExcludeFlags = {"wolf_ee"},
     },
     { --10
         PrintName = "Caliber",
         Slot = "stg44_9mm_ammo",
         DefaultAttName = "7.92mm Kurz 30rnd",
+        ExcludeFlags = {"wolf_ee"},
     },
     { --11
         PrintName = "Ammo Type",
-        Slot = {"ammo_pap"}
+        Slot = {"ammo_pap"},
+        ExcludeFlags = {"wolf_ee"},
     },
     { --12
         PrintName = "Perk",
-        Slot = "bo1_perk"
+        Slot = {"bo1_perk", "bo1_perk_wolfmg"},
     },
     { --13
         PrintName = "Charm",
@@ -310,6 +320,7 @@ SWEP.Attachments = {
             wpos = Vector(6.25, 1.9, -3),
             wang = Angle(-7.5, 0, 180)
         },
+        ExcludeFlags = {"wolf_ee"},
     },
     { --14
         PrintName = "Sound",
@@ -317,7 +328,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         DefaultAttName = "WAW Sound",
         DefaultAttIcon = Material("entities/acwatt_waw_logo.png", "smooth mips"),
-        ExcludeFlags = {"smgsound"},
+        ExcludeFlags = {"smgsound", "wolf_ee"},
     },
     {--15
         Hidden = true,
@@ -421,12 +432,21 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if papcamo then
         if bo1 then
-            return vm:SetSkin(2)
+            vm:SetSkin(2)
         end
         if dods then
-            return vm:SetSkin(3)
+            vm:SetSkin(3)
         end
-        return vm:SetSkin(1)
+        vm:SetSkin(1)
+    end
+
+    wep.ActivePos = Vector(0, -2, -1)
+    wep.ActiveAng = Angle(0, 0, 0)
+
+    if wep:GetBuff_Override("WOLF_EE") then
+        vm:SetBodygroup(3, 3)
+        wep.ActivePos = Vector (-3.05, -4, -0.75)
+        wep.ActiveAng = Angle(0, 0, 0)
     end
 end
 
@@ -474,7 +494,7 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     local sndatt = wep.Attachments[14].Installed
     local mp40 = wep.Attachments[10].Installed == "ammo_stg44_9mm"
 
-    if sndatt then return "nomech_" .. anim end
+    if sndatt or wep:GetBuff_Override("WOLF_EE") then return "nomech_" .. anim end
     if mp40 then return "mpmech_" .. anim end
 end
 

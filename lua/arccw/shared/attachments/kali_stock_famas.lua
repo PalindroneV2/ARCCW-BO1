@@ -21,7 +21,7 @@ att.Mult_MoveDispersion = 1.25
 att.Mult_SightTime = 1.25
 att.Mult_SightedSpeedMult = 0.85
 
-att.GivesFlags = {"famas_stock"}
+att.GivesFlags = {"famas_stock", "not_patriot"}
 --att.RequireFlags = {"kali_barrel_famas"}
 att.HideIfBlocked = true
 att.NoRandom = true

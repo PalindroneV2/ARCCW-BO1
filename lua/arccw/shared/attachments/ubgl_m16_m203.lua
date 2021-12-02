@@ -9,7 +9,7 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = "bo1_m203"
 att.GivesFlags = {"ubanims", "m4anims"}
-att.ExcludeFlags = {"kali_barrel_short"}
+att.ExcludeFlags = {"kali_barrel_short", "mag_patriot"}
 att.BO1_UBGL = true
 att.HideIfBlocked = true
 

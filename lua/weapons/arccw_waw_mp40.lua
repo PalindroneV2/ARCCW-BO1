@@ -182,6 +182,7 @@ SWEP.Attachments = {
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(-1.5, 0, 0),
+        ExcludeFlags = {"wolf_ee"},
     }, --1
     {
         PrintName = "Muzzle",
@@ -192,6 +193,7 @@ SWEP.Attachments = {
             vpos = Vector(14.5, -0.5, 0.8), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
+        ExcludeFlags = {"wolf_ee"},
     }, --2
     {
         PrintName = "Tactical",
@@ -203,18 +205,21 @@ SWEP.Attachments = {
             vpos = Vector(1, 0.125, 0.3), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, -90),
         },
+        ExcludeFlags = {"wolf_ee"},
     }, --3 --1
     { --4 --2
         PrintName = "Fire Group",
-        Slot = {"bo1_fcg"}
+        Slot = {"bo1_fcg"},
+        ExcludeFlags = {"wolf_ee"},
     },
     {
         PrintName = "Ammo Type",
-        Slot = {"ammo_pap"}
+        Slot = {"ammo_pap"},
+        ExcludeFlags = {"wolf_ee"},
     }, --5 --3
     {
         PrintName = "Perk",
-        Slot = {"bo1_perk"}
+        Slot = {"bo1_perk", "bo1_perk_wolfmg"}
     }, --6 --4
     {
         PrintName = "Charm",
@@ -225,22 +230,36 @@ SWEP.Attachments = {
             vpos = Vector(-2.5, -1.3, 0),
             vang = Angle(0, 0, 0),
         },
+        ExcludeFlags = {"wolf_ee"},
     }, --7
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[5].Installed == "ammo_papunch" --5
+    local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then
-        return vm:SetSkin(1)
+        vm:SetSkin(1)
+    end
+
+    wep.ActivePos = Vector(2, -4, 0)
+    wep.ActiveAng = Angle(0, 0, 0)
+
+    if wep:GetBuff_Override("WOLF_EE") then
+        wep.ActivePos = Vector(-1.75, -6, 0.1)
+        wep.ActiveAng = Angle(0, -1.1, 0)
     end
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim, data)
-    if wep:Clip1() == 0 then
-        return anim .. "_empty"
+
+    local newanim
+
+    if wep:GetBuff_Override("WOLF_EE") and anim == "fire" then
+        newanim = "wolf_fire"
     end
+
+    return newanim
 end
 
 SWEP.Animations = {
@@ -318,6 +337,11 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_WAW.MP40_Mech", t = 1 / 30},
         },
+    },
+    ["wolf_fire"] = {
+        Source = {"fire"},
+        Time = 7 / 30,
+        ShellEjectAt = 0,
     },
     ["reload"] = {
         Source = "reload",

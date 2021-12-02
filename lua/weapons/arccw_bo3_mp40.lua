@@ -188,6 +188,7 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
         MergeSlots = {9},
+        ExcludeFlags = {"wolf_ee"},
     }, --1
     {
         PrintName = "Muzzle",
@@ -199,6 +200,7 @@ SWEP.Attachments = {
             vpos = Vector(27, 0, 2.9), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
+        ExcludeFlags = {"wolf_ee"},
     }, --2
     {
         PrintName = "Tactical",
@@ -209,23 +211,27 @@ SWEP.Attachments = {
             vpos = Vector(8, 0.75, 2.125), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, -90),
         },
+        ExcludeFlags = {"wolf_ee"},
     }, --3
     { --4
         PrintName = "Fire Group",
-        Slot = {"bo1_fcg"}
+        Slot = {"bo1_fcg"},
+        ExcludeFlags = {"wolf_ee"},
     },
     {
         PrintName = "Stock",
         Slot = {"bo1_stock"},
-        DefaultAttName = "Folded Stock"
+        DefaultAttName = "Folded Stock",
+        ExcludeFlags = {"wolf_ee"},
     },
     {
         PrintName = "Ammo Type",
-        Slot = {"ammo_pap"}
+        Slot = {"ammo_pap"},
+        ExcludeFlags = {"wolf_ee"},
     }, --5
     {
         PrintName = "Perk",
-        Slot = {"bo1_perk"}
+        Slot = {"bo1_perk", "bo1_perk_wolfmg"}
     }, --6
     {
         PrintName = "Charm",
@@ -236,8 +242,10 @@ SWEP.Attachments = {
             vpos = Vector(6, -0.9, 1.75),
             vang = Angle(0, 0, 0),
         },
+        ExcludeFlags = {"wolf_ee"},
     }, --7
     {
+        Hidden = true,
         Slot = {"bo3_mauserscope"}, -- what kind of attachments can fit here, can be string or table
         VMScale = Vector(1.25, 1.25, 1.25),
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
@@ -259,7 +267,16 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")
     if papcamo then
-        return vm:SetSkin(1)
+        vm:SetSkin(1)
+    end
+
+    wep.ActivePos = Vector(0, -2, -1)
+    wep.ActiveAng = Angle(0, 0, 0)
+
+    if wep:GetBuff_Override("WOLF_EE") then
+        vm:SetBodygroup(3, 3)
+        wep.ActivePos = Vector(-3.125, -3, 0)
+        wep.ActiveAng = Angle(-2, 0.0375, 0)
     end
 end
 
@@ -272,6 +289,17 @@ SWEP.Hook_NameChange = function(wep, name)
     end
 
     return gunname
+end
+
+SWEP.Hook_TranslateAnimation = function(wep, anim, data)
+
+    local newanim
+
+    if wep:GetBuff_Override("WOLF_EE") and anim == "fire" then
+        newanim = "wolf_fire"
+    end
+
+    return newanim
 end
 
 SWEP.Animations = {
@@ -310,6 +338,11 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_WAW.MP40_Mech", t = 1 / 30},
         },
+    },
+    ["wolf_fire"] = {
+        Source = {"fire"},
+        Time = 7 / 30,
+        ShellEjectAt = 0,
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},

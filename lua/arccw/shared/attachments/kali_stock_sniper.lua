@@ -16,4 +16,4 @@ att.Mult_MoveDispersion = 1.5
 att.Mult_SightTime = 1.5
 att.Mult_SightedSpeedMult = 0.75
 
-att.GivesFlags = {"sniper_stock"}
+att.GivesFlags = {"sniper_stock", "not_patriot"}

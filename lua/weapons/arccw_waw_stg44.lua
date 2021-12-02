@@ -198,6 +198,7 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
         MergeSlots = {12,13},
+        ExcludeFlags = {"wolf_ee"},
     },
     { --2
         PrintName = "Muzzle",
@@ -209,6 +210,7 @@ SWEP.Attachments = {
             vpos = Vector(22, 0.01, 2),
             vang = Angle(0, 0, 0),
         },
+        ExcludeFlags = {"wolf_ee"},
     },
     { --3
         PrintName = "Underbarrel",
@@ -221,6 +223,7 @@ SWEP.Attachments = {
             wang = Angle(172.5, 180, -2)
         },
         MergeSlots = {4,5},
+        ExcludeFlags = {"wolf_ee"},
     },
     { --4
         Hidden = true,
@@ -255,18 +258,21 @@ SWEP.Attachments = {
             wpos = Vector(19.34, 0.331, -5.6),
             wang = Angle(-7.5, 0, 88)
         },
+        ExcludeFlags = {"wolf_ee"},
     },
     { --7
         PrintName = "Fire Group",
-        Slot = {"bo1_fcg"}
+        Slot = {"bo1_fcg"},
+        ExcludeFlags = {"wolf_ee"},
     },
     { --9
         PrintName = "Ammo Type",
-        Slot = {"ammo_pap"}
+        Slot = {"ammo_pap"},
+        ExcludeFlags = {"wolf_ee"},
     },
     { --10
         PrintName = "Perk",
-        Slot = "bo1_perk"
+        Slot = {"bo1_perk", "bo1_perk_wolfmg"}
     },
     { --11
         PrintName = "Charm",
@@ -279,6 +285,7 @@ SWEP.Attachments = {
             wpos = Vector(6.25, 1.9, -3),
             wang = Angle(-7.5, 0, 180)
         },
+        ExcludeFlags = {"wolf_ee"},
     },
     { --12
         PrintName = "Sound",
@@ -286,7 +293,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         DefaultAttName = "WAW Sound",
         DefaultAttIcon = Material("entities/acwatt_waw_logo.png", "smooth mips"),
-        ExcludeFlags = {"smgsound"},
+        ExcludeFlags = {"smgsound", "wolf_ee"},
     },
     {--13
         Hidden = true,
@@ -338,6 +345,15 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     else
         vm:SetBodygroup(0,0)
     end
+
+    wep.ActivePos = Vector(1, 0, 0)
+    wep.ActiveAng = Angle(0, 0, 0)
+
+    if wep:GetBuff_Override("WOLF_EE") then
+        vm:SetBodygroup(0,1)
+        wep.ActivePos = Vector (-1.56, -4, -0.25)
+        wep.ActiveAng = Angle(0.15, 0.01, 0)
+    end
 end
 
 SWEP.Hook_GetCapacity = function(wep, cap)
@@ -378,7 +394,7 @@ end
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     local sndatt = wep.Attachments[11].Installed
 
-    if sndatt then return "nomech_" .. anim end
+    if sndatt or wep:GetBuff_Override("WOLF_EE") then return "nomech_" .. anim end
 end
 
 SWEP.Animations = {

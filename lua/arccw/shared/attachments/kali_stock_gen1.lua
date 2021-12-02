@@ -23,7 +23,7 @@ att.Mult_SightTime = 1.2
 att.Mult_SightedSpeedMult = 0.95
 */
 
-att.GivesFlags = {"gen1_stock"}
+att.GivesFlags = {"gen1_stock", "not_patriot"}
 att.NoRandom = true
 
 att.ToggleStats = {

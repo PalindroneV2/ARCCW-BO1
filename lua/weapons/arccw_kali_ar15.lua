@@ -121,7 +121,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(1, 3, 0.5)
+SWEP.ActivePos = Vector(0, 2, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 /*
 --angled
@@ -132,7 +132,7 @@ SWEP.ActivePos = Vector(1, 3, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 */
 
-SWEP.SprintPos = Vector(0, 3, 0)
+SWEP.SprintPos = Vector(0, 2, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(15, 4, 0)
@@ -515,7 +515,7 @@ SWEP.Attachments = {
     }, --4
     {
         PrintName = "Underbarrel",
-        Slot = {"ubgl", "bo1_m203", "bo1_mk", "mk12_bipod"},
+        Slot = {"ubgl", "bo1_m203", "bo1_mk"},
         Bone = "tag_weapon",
         VMScale = Vector(1, 1, 1),
         WMScale = Vector(1, 1, 1),
@@ -526,11 +526,10 @@ SWEP.Attachments = {
             wang = Angle(170.5, -180, 0),
         },
         MergeSlots = {6, 7},
-        ExcludeFlags = {"mag_patriot"},
     }, --5
     {
         Hidden = true,
-        Slot = {"foregrip"},
+        Slot = {"foregrip", "kali_truepatriot"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(11, 0, 1.65), -- offset that the attachment will be relative to the bone
@@ -541,7 +540,7 @@ SWEP.Attachments = {
     }, --6
     {
         Hidden = true,
-        Slot = {"bipod"},
+        Slot = {"bipod","mk12_bipod"},
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(12, 0, 1.575), -- offset that the attachment will be relative to the bone
@@ -565,6 +564,7 @@ SWEP.Attachments = {
         Slot = {"kali_stock"},
         DefaultAttName = "Buffer Tube",
         RandomChance = 10,
+        ExcludeFlags = {"true_patriot"},
         --Installed = "kali_stock_gen2"
     }, --9
     {

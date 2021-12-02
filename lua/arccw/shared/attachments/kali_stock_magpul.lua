@@ -20,7 +20,7 @@ att.Mult_SightTime = 1.05
 att.Mult_SightedSpeedMult = 0.975
 */
 
-att.GivesFlags = {"magpul_stock"}
+att.GivesFlags = {"magpul_stock", "not_patriot"}
 
 att.ToggleStats = {
     {
