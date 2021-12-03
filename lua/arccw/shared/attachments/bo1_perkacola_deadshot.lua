@@ -9,7 +9,7 @@ att.NoRandom = true
 att.NotForNPCS = true
 
 att.AutoStats = true
-att.Mult_HipDispersion = 0.75
+att.Mult_HipDispersion = 0.5
 att.Mult_MoveDispersion = 0.5
 att.Mult_Recoil = 0.75
 att.Mult_Sway = 0.1
