@@ -1,4 +1,4 @@
-att.PrintName = "Farview (16x)"
+att.PrintName = "Farview (12x)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
 att.Description = "High-power scope for the L115A1 AWM."
 

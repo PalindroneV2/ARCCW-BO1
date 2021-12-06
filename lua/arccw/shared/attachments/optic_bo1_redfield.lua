@@ -1,4 +1,4 @@
-att.PrintName = "Redfield (12x)"
+att.PrintName = "Redfield (16x)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
 att.Description = "Variable zoom scope for the L115A1 AWM."
 
