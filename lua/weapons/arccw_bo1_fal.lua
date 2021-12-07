@@ -438,6 +438,13 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.FAL_Charge", t = 0.25}
         },
     },
+    ["holster"] = {
+        Source = "holster",
+        Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
     ["fire"] = {
         Source = {"fire"},
         Time = 0.5,
