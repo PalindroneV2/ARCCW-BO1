@@ -48,14 +48,15 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 150 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 300
 
-SWEP.Recoil = 1.5
+SWEP.Recoil = 1
 SWEP.RecoilSide = 1
 SWEP.RecoilRise = 0.75
 
-SWEP.SpeedMult = 0.75
+SWEP.SpeedMult = 0.5
 SWEP.SightedSpeedMult = 0.25
 SWEP.SightTime = 0.5
 SWEP.VisualRecoilMult = 0
+SWEP.ShootSpeedMult = 0.333
 
 SWEP.Delay = 60 / 500 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -174,7 +175,8 @@ SWEP.AttachmentElements = {
             Ang = Angle(-0.65, -2.45, 0),
             Magnification = 1.1,
             CrosshairInSights = false,
-        }
+        },
+        Mult_ShootSpeedMult = 1.5,
     },
     ["ubgrip"] = {
         VMBodygroups = {
@@ -250,7 +252,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then
-        return vm:SetSkin(1)
+        vm:SetSkin(1)
+    end
+
+    if wep:GetBuff_Override("BO1_Bipod") and wep:InBipod() then
+        vm:SetBodygroup(1, 2)
     end
 end
 

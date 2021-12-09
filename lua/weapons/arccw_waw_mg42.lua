@@ -50,13 +50,14 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 75 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 150
 
-SWEP.Recoil = 1.75
-SWEP.RecoilSide = 1.75
-SWEP.RecoilRise = 0.75
+SWEP.Recoil = 0.5
+SWEP.RecoilSide = 0.5
+SWEP.RecoilRise = 0.5
 
 SWEP.SpeedMult = 0.75
 SWEP.SightedSpeedMult = 0.25
 SWEP.SightTime = 0.5
+SWEP.ShootSpeedMult = 0.333
 SWEP.VisualRecoilMult = 0
 
 SWEP.Delay = 60 / 1200 -- 60 / RPM.
@@ -134,7 +135,7 @@ SWEP.ActivePos = Vector(5, -10, 3)
 --SWEP.ActivePos = Vector(5, -8, 2)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.InBipodPos = Vector(-8, 5, -2)
+SWEP.InBipodPos = Vector(0, 0, -2)
 SWEP.InBipodAng = Angle(0, 0, 0)
 
 SWEP.SprintPos = Vector(14, -10, 0)
@@ -162,12 +163,12 @@ SWEP.AttachmentElements = {
     ["mount"] = {
         VMElements = {
             {
-                Model = "models/weapons/arccw/item/bo1_ak_rail.mdl",
+                Model = "models/weapons/arccw/item/bo2_rail.mdl",
                 Bone = "tag_weapon",
-                Scale = Vector(0.375, 0.375, 0.375),
+                Scale = Vector(0.5, 0.5, 0.5),
                 Offset = {
-                    pos = Vector(0.25, 0.3, 1.3),
-                    ang = Angle(0, 90, 0),
+                    pos = Vector(8.25, 0, 1.9),
+                    ang = Angle(0, 0, 0),
                 }
             },
         },
@@ -177,7 +178,7 @@ SWEP.AttachmentElements = {
     },
     ["bo1_bipod"] = {
         VMBodygroups = {
-            {ind = 3, bg = 1},
+            {ind = 3, bg = 2},
         },
     },
 }
@@ -189,7 +190,7 @@ SWEP.Attachments = {
         Slot = "optic", -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(0, 0, 2.35), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(8.25, 0, 2.35), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(10, 1.4, -5.5),
             wang = Angle(176, 185, 0)
@@ -276,7 +277,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then
-        return vm:SetSkin(1)
+        vm:SetSkin(1)
+    end
+
+    if wep:GetBuff_Override("BO1_Bipod") and wep:InBipod() then
+        vm:SetBodygroup(3, 1)
     end
 end
 

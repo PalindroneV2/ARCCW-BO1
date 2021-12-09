@@ -137,9 +137,14 @@ SWEP.AttachmentElements = {
         NamePriority = 10,
         NameChange = "Awful Layton",
     },
+    ["xbow_bolt_impact"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 0},
+        },
+    },
     ["mount"] = {
         VMBodygroups = {
-            {ind = 2, bg = 1 },
+            {ind = 2, bg = 1},
         },
     },
 }
@@ -179,6 +184,10 @@ SWEP.Attachments = {
             vang = Angle(0, 0, 90),
         },
     }, --2
+    {
+        PrintName = "Ammo Type",
+        Slot = {"bo1_xbow_ammo"},
+    }, --3
     {
         PrintName = "Ammo Type",
         Slot = {"ammo_pap_xbow"},
@@ -233,13 +242,13 @@ SWEP.Animations = {
         Source = {
             "fire_last",
         },
-        Time = 15 / 35,
+        Time = 0.2,
     },
     ["fire_iron"] = {
         Source = {
-            "fire_ads",
+            "fire_last",
         },
-        Time = 15 / 35,
+        Time = 0.2,
     },
     ["reload"] = {
         Source = "reload",

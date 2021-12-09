@@ -6,7 +6,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = {"ammo_pap_xbow"}
+att.Slot = {"bo1_xbow_ammo"}
 
 att.Override_ShootEntity = "arccw_bo1_xbow_bolt"
 att.Mult_ReloadTime = 0.8
@@ -14,4 +14,4 @@ att.Mult_AccuracyMOA = 0.25
 att.Mult_MuzzleVelocity = 1.5
 att.Mult_HipDispersion = 0.5
 
-att.ActivateElements = {"bo1_hp"}
+att.ActivateElements = {"xbow_bolt_impact"}
