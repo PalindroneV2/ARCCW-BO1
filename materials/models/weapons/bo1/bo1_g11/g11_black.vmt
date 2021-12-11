@@ -5,17 +5,17 @@ VertexlitGeneric
 	$bumpmap	"models\weapons\bo1\bo1_g11\g11_n"
 
 	$phong                      		1
-	$phongexponent                      "20"
+//	$phongexponent                      "20"
 	$phongboost                         "0.5"
 	$phongfresnelranges         "[0.1 0.5 0.5]"
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
 
-	$detail "models/weapons/bo1/black"
-	$detailblendmode 0
-	"$detailblendfactor" "1"
-
 	$envmap 	env_cubemap
-	$envmaptint   "[0.025 0.025 0.025]"
+	$envmaptint   "[0.01 0.01 0.01]"
 	$envmapfresnel "1"
+
+	$detail	"models\weapons\bo1\black_detail"
+	$detailblendmode	0
+	$detailblendfactor	1
 }

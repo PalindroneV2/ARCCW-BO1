@@ -110,8 +110,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.34, -4, 1.25),
-    Ang = Angle(0, 0.05, 0),
+    Pos = Vector(-3.34, 0, 1.25),
+    Ang = Angle(-0.1, 0.02, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -153,7 +153,7 @@ SWEP.AttachmentElements = {
     },
     ["556_mag"] = {
         VMBodygroups = {
-            {ind = 1, bg = 2},
+            {ind = 1, bg = 3},
         },
     },
     ["light_stock"] = {
@@ -552,9 +552,15 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif wep.Attachments[14].Installed == "bo1_cosmetic_red" then camo = 16
     end
 
-    for k = camo, camo do
-        vm:SetSkin(k)
-        if papcamo then vm:SetSkin(k + 3) end
+    vm:SetSkin(camo)
+    if papcamo then
+        vm:SetSkin(camo + 2)
+        if camo == 4 then
+            vm:SetSkin(camo + 1)
+        end
+        if camo == 16 then
+            vm:SetSkin(camo + 1)
+        end
     end
 end
 

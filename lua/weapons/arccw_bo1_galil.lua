@@ -109,8 +109,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.72, -2.25, 0.39),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-2.72, 0, 0.425),
+    Ang = Angle(-0.2, 0.015, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -156,7 +156,7 @@ SWEP.AttachmentElements = {
     },
     ["bo1_bipod"] = {
         VMBodygroups = {
-            {ind = 4, bg = 3},
+            {ind = 4, bg = 0},
         },
         ExcludeFlags = {"nobip"},
     },
@@ -227,7 +227,7 @@ SWEP.Attachments = {
     }, --2
     {
         PrintName = "Underbarrel",
-        Slot = {"bo1_gp25", "bo1_mk", "bo1_bipod"},
+        Slot = {"bo1_gp25", "bo1_mk"},
         MergeSlots = {4,5,6},
     }, --3
     {
@@ -355,11 +355,19 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif wep.Attachments[12].Installed == "bo1_cosmetic_red" then camo = 8
     end
 
-    for k = camo, camo do
-        vm:SetSkin(k)
-        if papcamo then
-            return vm:SetSkin(k + 1)
-        end
+    vm:SetSkin(camo)
+    if papcamo then
+        vm:SetSkin(camo + 1)
+    end
+
+    if wep:InBipod() then
+        vm:SetBodygroup(4, 3)
+    end
+
+    if wep.Attachments[4].Installed or wep:GetBuff_Override("BO1_UBGL") or wep:GetBuff_Override("BO1_UBMK") then
+        wep.Bipod_Integral = false
+    else
+        wep.Bipod_Integral = true
     end
 end
 

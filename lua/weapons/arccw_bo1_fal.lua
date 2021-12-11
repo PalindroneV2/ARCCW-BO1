@@ -363,21 +363,25 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local papcamo = wep:GetBuff_Override("PackAPunch")
     local camo = 0
-    if wep.Attachments[13].Installed == "bo1_cosmetic_wood" then camo = 2
-    elseif  wep.Attachments[13].Installed == "bo1_cosmetic_black" then camo = 4
-    elseif wep.Attachments[13].Installed == "bo1_cosmetic_odgreen" then camo = 6
-    elseif wep.Attachments[13].Installed == "bo1_cosmetic_red" then camo = 8
-    end
-
-    for k = camo, camo do
-        vm:SetSkin(k)
-        if papcamo then
-            return vm:SetSkin(k + 1)
-        end
+    if wep.Attachments[13].Installed == "bo1_cosmetic_wood" then camo = 4
+    elseif  wep.Attachments[13].Installed == "bo1_cosmetic_black" then camo = 8
+    elseif wep.Attachments[13].Installed == "bo1_cosmetic_odgreen" then camo = 12
+    elseif wep.Attachments[13].Installed == "bo1_cosmetic_red" then camo = 16
     end
 
     local optic = wep.Attachments[1].Installed
     local osw = wep.Attachments[2].Installed == "bo1_barrel_fal_osw"
+
+    vm:SetSkin(camo)
+    if papcamo then
+        vm:SetSkin(camo + 2)
+        if camo == 4 then
+            vm:SetSkin(camo + 1)
+        end
+        if osw then
+            vm:SetSkin(camo + 3)
+        end
+    end
 
     if optic and osw then
         vm:SetBodygroup(2, 2)

@@ -6,7 +6,7 @@ VertexlitGeneric
 	$selfillum 1
 	
 	$phong                      		1
-	$phongexponent                      "20"
+//	$phongexponent                      "20"
 	$phongboost                         "5"
 	$phongfresnelranges         "[0.5 2.5 2.5]"
 	$phongalbedotint             "1"

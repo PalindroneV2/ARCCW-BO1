@@ -8,7 +8,7 @@ VertexlitGeneric
 	//$selfillumtint        "[1 1 1]"
 
 	$phong                      		1
-	$phongexponent                      "20"
+//	$phongexponent                      "20"
 	$phongboost                         "0"
 	$phongfresnelranges         "[1 1 1]"
 	$phongalbedotint             "1"

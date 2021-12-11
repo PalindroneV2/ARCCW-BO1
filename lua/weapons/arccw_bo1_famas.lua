@@ -142,6 +142,16 @@ SWEP.BarrelLength = 20
 
 SWEP.ExtraSightDist = 5
 
+SWEP.Bipod_Integral = true
+SWEP.BipodDispersion = 0.1
+SWEP.BipodRecoil = 0.05
+
+SWEP.M_Hook_Mult_SightsDispersion = function(wep, data)
+    if wep:InBipod() then
+        data.mult = 0
+    end
+end
+
 SWEP.AttachmentElements = {
     ["bo1_m203"] = {
         VMBodygroups = {
@@ -213,7 +223,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Slot = {"ubgl", "bo1_bipod"},
+        Slot = {"ubgl"},
         Bone = "tag_weapon",
         VMScale = Vector(1, 1, 1),
         WMScale = Vector(1, 1, 1),
@@ -298,7 +308,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local f1 = 0
     if wep.Attachments[1].Installed == "bo1_famas_f1" then f1 = 2 end
     local optic = wep.Attachments[2].Installed
-    local intbipod = wep:GetBuff_Override("BO1_Bipod")
+    local intbipod = wep:InBipod()
 
     for k = f1, f1 do
         vm:SetBodygroup(4,k)

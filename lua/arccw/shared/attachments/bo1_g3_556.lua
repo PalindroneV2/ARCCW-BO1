@@ -15,8 +15,8 @@ att.GivesFlags = {"556mag"}
 att.SortOrder = 98
 
 att.Override_Trivia_Calibre = "5.56x45mm NATO"
-att.Mult_Damage = 0.70
-att.Mult_DamageMin = 0.70
+att.Mult_Damage = 30 / 62
+att.Mult_DamageMin = 25 / 37
 att.Mult_Penetration = 1.1
 att.Mult_Recoil = 0.35
 att.Mult_RecoilSide = 0.35

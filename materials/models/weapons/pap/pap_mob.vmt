@@ -7,7 +7,7 @@ VertexlitGeneric
     $selfillummask "models\weapons\pap\pap_mob_s"
 	
 	$phong                      		1
-	$phongexponent                      "20"
+//	$phongexponent                      "20"
 	$phongboost                         "1"
 	$phongfresnelranges         "[0.25 .75 1.5]"
 	$phongalbedotint             "1"
