@@ -5,7 +5,7 @@
 	$blendtintbybasealpha  "1"
 	"$bumpmap" "models/weapons/bo1/bo1_m203/m203_n"
 	$phong                      		1
-	$phongexponent                      "20"
+//	$phongexponent                      "20"
 	$phongboost                         "0.5"
 	$phongfresnelranges         "[0.1 0.5 0.5]"
 	$phongalbedotint             "1"

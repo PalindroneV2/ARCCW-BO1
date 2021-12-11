@@ -2,6 +2,6 @@
 {
 	$model 1
 	"$basetexture" "models/weapons/bo3/bo3_dg2/dg2_power"
-	//"$bumpmap" "models/weapons/bo3/bo3_dg2/dg2_power_n"
+	"$bumpmap" "models/weapons/bo3/bo3_dg2/dg2_power_n"
 	$translucent 0
 }

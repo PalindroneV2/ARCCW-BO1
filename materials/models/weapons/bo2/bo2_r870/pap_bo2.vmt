@@ -5,7 +5,7 @@ VertexlitGeneric
 	$detail	"models\weapons\pap\pap_bo3"
 	
 	$phong                      		1
-	$phongboost                         "5"
+//	$phongboost                         "5"
 	$phongfresnelranges         "[0.5 2.5 2.5]"
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
