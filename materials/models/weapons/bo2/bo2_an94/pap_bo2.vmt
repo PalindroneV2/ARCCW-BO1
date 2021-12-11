@@ -6,7 +6,7 @@ VertexlitGeneric
 	"$bumptransform" "center .5 .5 scale 4 4 rotate 0 translate 0 0"
 
 	$phong                      		1
-	$phongexponent                      "20"
+//	$phongexponent                      "20"
 	$phongboost                         "0.5"
 	$phongfresnelranges         "[0 .1 0.5]"
 	$phongalbedotint             "1"
