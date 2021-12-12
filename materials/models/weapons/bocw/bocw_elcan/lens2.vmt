@@ -8,7 +8,7 @@
 
 	"$phong" "1"
 	"$phongboost" "0.2"
-	"$phongexponent" "30"
+//	"$phongexponent" "30"
 	"$phongalbedotint" "1"
 	"$normalmapalphaenvmapmask" "1"
 

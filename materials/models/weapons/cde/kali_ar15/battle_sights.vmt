@@ -7,14 +7,16 @@
 	$detail "models/weapons/bo1/gunmetal"
 	"$detailblendfactor" "1.5"
 
-	"$normalmapalphaenvmapmask" 1				
-	"$envmap" "env_cubemap"					
-	"$envmaptint" "[ .02 .02 .02 ]"					
-	"$envmapFresnel" "0.2"
-	
-	"$phong" "1"
-	"$phongboost" "1.5"						
-	"$phongfresnelranges"	"[ .2 1.2 8]"	
+	$phong                      		1
+//	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	$envmap 	env_cubemap
+	$envmaptint   "[0.01 0.01 0.01]"
+	$envmapfresnel "1"
 
 	"$PhongAlbedoTint" "1"
 }

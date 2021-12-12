@@ -4,7 +4,7 @@
 	$blendtintbybasealpha  "1"
 	"$bumpmap" "models/weapons/bocw/bocw_m1911/slide_long_n"
 	$phong "1"
-	$phongexponent	"15"
+//	$phongexponent	"15"
 	$phongboost "2.5"
 	$phongfresnelranges "[0.5 2.5 2.5]"
 	$phongalbedotint "1"

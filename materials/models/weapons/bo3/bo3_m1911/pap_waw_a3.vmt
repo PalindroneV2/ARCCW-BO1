@@ -4,7 +4,7 @@ VertexlitGeneric
 	$bumpmap	"models\weapons\pap\pap_n"
 
 	$phong "1"
-	$phongexponent	"20"
+//	$phongexponent	"20"
 	$phongboost "2.5"
 	$phongfresnelranges "[0.5 1 2]"
 	$phongalbedotint "1"
