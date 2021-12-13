@@ -1,11 +1,11 @@
 VertexlitGeneric
 {
 	$basetexture	"models\weapons\waw\waw_stg44\stg44"
-	$bumpmap	"models\weapons\waw\normalmap"
-	$phongexponenttexture "models\weapons\waw\waw_stg44\stg44_s"
+	$bumpmap	"models\weapons\waw\waw_stg44\stg44_n"
+//	$phongexponenttexture "models\weapons\waw\waw_stg44\stg44_s"
 
 	$phong                      		1
-	$phongexponent                      "20"
+//	$phongexponent                      "20"
 	$phongboost                         "0.5"
 	$phongfresnelranges         "[0.1 0.5 0.5]"
 	$phongalbedotint             "1"
