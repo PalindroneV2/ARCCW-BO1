@@ -184,7 +184,7 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0.5, 0.05, 0),
         InstalledEles = {"rail"},
-        --Installed = "optic_bo2_svu"
+        Installed = "optic_bo2_svu"
     },
     { --2
         Hidden = true,
