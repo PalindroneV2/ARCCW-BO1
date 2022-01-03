@@ -79,7 +79,7 @@ SWEP.AccuracyMOA = 50 -- accuracy in Minutes of Angle. There are 60 MOA in a deg
 SWEP.HipDispersion = 800 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 500
 
-SWEP.Primary.Ammo = "RPG_Rocket" -- what ammo type the gun uses
+SWEP.Primary.Ammo = "RPG_Round" -- what ammo type the gun uses
 
 SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound

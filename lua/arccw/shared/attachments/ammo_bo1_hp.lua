@@ -1,5 +1,5 @@
 att.PrintName = "Hollow Points"
-att.Icon = Material("entities/acwatt_ammo_bo1_hp.png", "mips smooth")
+att.Icon = Material("entities/acwatt_ammo_bo1_fmj.png", "mips smooth")
 att.Description = "Rounds that don't penetrate as much but hit much harder against unarmored personnel."
 att.Desc_Pros = {
 }

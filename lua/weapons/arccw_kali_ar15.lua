@@ -469,9 +469,8 @@ SWEP.Attachments = {
         PrintName = "Receiver",
         Slot = {"fcg_m16a2", "fcg_kali"},
         DefaultAttName = "A1 Receiver",
-        RandomChance = 3,
+        RandomChance = 10,
         FreeSlot = true,
-        --Installed = "kali_fcg_funswitch"
     }, --1
     {
         PrintName = "Optic", -- print name
@@ -510,7 +509,7 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         DefaultAttName = "M16A1 20 in. Barrel",
         Slot = {"kali_barrel"},
-        RandomChance = 5,
+        RandomChance = 10,
         --Installed = "kali_ar15_barrel_727"
     }, --4
     {

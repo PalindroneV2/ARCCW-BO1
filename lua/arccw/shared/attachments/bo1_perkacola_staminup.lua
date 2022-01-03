@@ -4,12 +4,14 @@ att.Description = "Babe, you know you want me! Let's run the extra mile!\nI'll o
 att.Desc_Pros = {
     "bo1.perkacola.active",
     "bo1.perkacola.staminup",
+    "+Full ADS Movement Speed",
 }
 att.Desc_Cons = {
 }
 att.Slot = {"bo1_perk"}
 att.NoRandom = true
 att.NotForNPCS = true
+att.Mult_SightedSpeedMult = 10
 
 att.BO1_StaminUp = true
 
@@ -24,6 +26,6 @@ hook.Add("Move", "ArcCW_BO1_StaminUp", function(ply, mv)
 
     if ply:Crouching() then s = s * ply:GetCrouchedWalkSpeed() end
 
-    mv:SetMaxSpeed(max * s * 1.1)
-    mv:SetMaxClientSpeed(max * s * 1.1)
+    mv:SetMaxSpeed(max * s * 1.15)
+    mv:SetMaxClientSpeed(max * s * 1.15)
 end)

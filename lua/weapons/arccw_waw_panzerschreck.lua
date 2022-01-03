@@ -1,43 +1,48 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
+SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "RPG-7"
+SWEP.PrintName = [[Panzerschreck]]
 SWEP.Trivia_Class = "Rocket Launcher"
-SWEP.Trivia_Desc = "A Russian portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher. The ruggedness, simplicity, low cost, and effectiveness of the RPG-7 has made it the most widely used anti-armor weapon in the world."
+SWEP.Trivia_Desc = [[
+    A german man-portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
+    
+    It was based on captured Lend-Lease Act M1 Bazookas captured from the Soviets.
+]]
 SWEP.Trivia_Manufacturer = "Bazalt"
-SWEP.Trivia_Calibre = "85x40mm RPG"
-SWEP.Trivia_Mechanism = "Rocket Propelled Grenade"
-SWEP.Trivia_Country = "USSR"
-SWEP.Trivia_Year = 1958
+SWEP.Trivia_Calibre = "88mm Rocket"
+SWEP.Trivia_Mechanism = "Recoil-less Rifle Rocket Propelled Charge"
+SWEP.Trivia_Country = "Nazi Germany"
+SWEP.Trivia_Year = 1943
 
 SWEP.Slot = 4
 
 SWEP.UseHands = true
-SWEP.NoHideLeftHandInCustomization = true
+SWEP.NoHideLeftHandInCustomization = false
 
-SWEP.ViewModel = "models/weapons/arccw/c_bo1_rpg7.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_waw_panzerschreck.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(1, 1.5, -7.25),
-    ang        =    Angle(-6, -2, 180),
+    pos        =    Vector(-14, 4.5, -7.75),
+    ang        =    Angle(-10, -2, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =  1.2
+    scale   =  0.95
 }
-SWEP.WorldModel = "models/weapons/arccw/c_bo1_rpg7.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_waw_panzerschreck.mdl"
+SWEP.MirrorWorldModel = "models/weapons/arccw/w_waw_panzerschreck.mdl"
 SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
 
-SWEP.Damage = 500
-SWEP.DamageMin = 500
+SWEP.Damage = 650
+SWEP.DamageMin = 650
 SWEP.Range = 10
 
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
-SWEP.ShootEntity = "arccw_bo1_rpgrocket" -- entity to fire, if any
-SWEP.MuzzleVelocity = 5000 -- projectile or phys bullet muzzle velocity
+SWEP.ShootEntity = "arccw_waw_panzer_rocket" -- entity to fire, if any
+SWEP.MuzzleVelocity = 3000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
@@ -69,16 +74,16 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = {"weapon_rpg"}
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 1500 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 400
+SWEP.AccuracyMOA = 50 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 800 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 500
 
 SWEP.Primary.Ammo = "RPG_Round" -- what ammo type the gun uses
 
 SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO1.RPG_Fire"
+SWEP.ShootSound = "ArcCW_WAW.Launcher_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
 
 SWEP.MuzzleEffect = "muzzleflash_shotgun"
@@ -92,7 +97,7 @@ SWEP.CaseEffectAttachment = nil -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 2
 SWEP.CamAttachment = 2
 
-SWEP.SpeedMult = 0.88
+SWEP.SpeedMult = 0.85
 SWEP.SightedSpeedMult = 0.25
 SWEP.SightTime = 0.75
 
@@ -104,9 +109,9 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(0, 3, -0),
+    Pos = Vector(-0.28, 0, 7.9),
     Ang = Angle(0, 0, 0),
-    Magnification = 1.1,
+    Magnification = 1.25,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -117,14 +122,14 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 
-SWEP.ActivePos = Vector(0, 0, 0.25)
+SWEP.ActivePos = Vector(0, 0, 7.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.SprintPos = Vector(0, 0, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(15, 5, -2)
-SWEP.CustomizeAng = Angle(15, 40, 30)
+SWEP.CustomizePos = Vector(17, 0, 7)
+SWEP.CustomizeAng = Angle(20, 40, 30)
 
 SWEP.HolsterPos = Vector(0.532, -6, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -135,7 +140,7 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 SWEP.AttachmentElements = {
     ["papname1"] = {
         NamePriority = 10,
-        NameChange = "Pulya",
+        NameChange = "Liberty Launcher",
     },
 }
 
@@ -149,7 +154,7 @@ SWEP.Attachments = {
     }, --3
     {
         PrintName = "Perk",
-        Slot = {"bo1_perk", "bo1_perk_doomrpg"},
+        Slot = {"bo1_perk"},
     }, --4
     {
         PrintName = "Charm",
@@ -157,10 +162,8 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(3, -0.75, 2.15), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 0),
-            wpos = Vector(7, 1.6, -4),
-            wang = Angle(-10, 0, 180)
+            vpos = Vector(12.25, -6.65, 7), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 90, 0),
         },
         ExcludeFlags = {"doom_ee"},
     }, --5
@@ -168,16 +171,12 @@ SWEP.Attachments = {
 
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
-    local doomshotgun = wep:GetBuff_Override("DOOM_EE")
+    --local tf2ee = wep:GetBuff_Override("TF2_EE")
 
-    local gunname = wep.PrintName
-
-    if doomshotgun then
-        gunname = "Rocket Launcher"
-    end
+    local gunname = "RPzB 54/1 \"Panzerschreck\""
 
     if pap then
-        gunname = "Rocket Propelled Grievance"
+        gunname = "Longinus"
     end
 
     return gunname
@@ -188,38 +187,25 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local papcamo = wep.Attachments[1].Installed == "ammo_pap_launcher"
 
     if papcamo then
-        vm:SetSkin(2)
+        vm:SetSkin(1)
     end
 
     if wep:Clip1() == 0 then vm:SetBodygroup(1,1) end
 
-    if wep:GetBuff_Override("DOOM_EE") then
-        vm:SetBodygroup(1,0)
-        vm:SetBodygroup(2,1)
-        wep.ActivePos = Vector(-0.5, 1, 0.25)
-        wep.ActiveAng = Angle(0, 0, 0)
+    if wep:GetState() == ArcCW.STATE_CUSTOMIZE then
+        vm:SetBodygroup(0,1)
     else
-        wep.ActivePos = Vector(0, 1, 0.25)
-        wep.ActiveAng = Angle(0, 0, 0)
+        vm:SetBodygroup(0,0)
     end
 end
 
 SWEP.Hook_ShouldNotFire = function(wep)
-    if !wep:GetBuff_Override("DOOM_EE") and (wep:GetState() != ArcCW.STATE_SIGHTS or wep:GetSightDelta() > 0) then
+    if wep:GetState() != ArcCW.STATE_SIGHTS or wep:GetSightDelta() > 0 then
         return true
     end
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-
-    if wep:GetBuff_Override("DOOM_EE") then
-        if anim == "idle" then
-            return "idle_doom"
-        end
-        if anim == "fire" then
-            return "fire_doom"
-        end
-    end
 end
 
 SWEP.Animations = {
@@ -227,33 +213,22 @@ SWEP.Animations = {
         Source = "idle",
         Time = 1 / 35,
     },
-
-    ["idle_doom"] = {
-        Source = "idle_ads",
-        Time = 1 / 35,
-    },
-    ["fire_doom"] = {
-        Source = {
-            "fire",
-        },
-        Time = 15 / 35,
-    },
     ["draw"] = {
-        Source = "draw_out",
+        Source = "draw",
         Time = 25 / 35,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
     },
     ["holster"] = {
-        Source = "holster_out",
+        Source = "holster",
         Time = 25 / 35,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
     },
     ["ready"] = {
-        Source = "draw_out",
+        Source = "draw",
         Time = 25 / 35,
         LHIK = true,
         LHIKIn = 0.2,
@@ -261,35 +236,29 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {
-            "fire_out",
+            "fire",
         },
         Time = 15 / 35,
+        SoundTable = {
+            {s = "ArcCW_WAW.Launcher_Mech", t = 0},
+            --{s = "ArcCW_WAW.Launcher_Woosh", t = 0.1},
+        },
     },
     ["idle_sight"] = {
-        Source = {"idle_ads"},
+        Source = {"idle_sights"},
         Time = 1 / 35,
     },
     ["fire_sight"] = {
         Source = {
-            "fire",
+            "fire_sights",
         },
         Time = 15 / 35,
-    },
-    ["reload"] = {
-        Source = "reload_out",
-        Time = 93 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_RPG,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
-        MinProgress = 0.1,
         SoundTable = {
-            {s = "ArcCW_BO1.RPG_Slide", t = 25 / 30},
-            {s = "ArcCW_BO1.RPG_Futz", t = 33 / 30},
-            {s = "ArcCW_BO1.RPG_Latch", t = 40 / 30},
+            {s = "ArcCW_WAW.Launcher_Mech", t = 0},
+            --{s = "ArcCW_WAW.Launcher_Woosh", t = 0.1},
         },
     },
-    ["reload_sight"] = {
+    ["reload"] = {
         Source = "reload",
         Time = 93 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_RPG,
@@ -298,21 +267,27 @@ SWEP.Animations = {
         LHIKOut = 0.2,
         MinProgress = 0.1,
         SoundTable = {
-            {s = "ArcCW_BO1.RPG_Slide", t = 25 / 30},
-            {s = "ArcCW_BO1.RPG_Futz", t = 33 / 30},
-            {s = "ArcCW_BO1.RPG_Latch", t = 40 / 30},
+            {s = "ArcCW_WAW.Launcher_Start", t = 1 / 30},
+            {s = "ArcCW_WAW.Launcher_Down", t = 10 / 30},
+            {s = "ArcCW_WAW.Launcher_Ground", t = 20 / 30},
+            {s = "ArcCW_WAW.Launcher_Tap", t = 45 / 30},
+            {s = "ArcCW_WAW.Launcher_Up", t = 66 / 30},
         },
     },
-    ["enter_sprint"] = {
-        Source = "sprint_in_out",
-        Time = 10 / 30
-    },
-    ["idle_sprint"] = {
-        Source = "sprint_loop_out",
-        Time = 30 / 30
-    },
-    ["exit_sprint"] = {
-        Source = "sprint_out_out",
-        Time = 10 / 30
+    ["reload_sight"] = {
+        Source = "reload",
+        Time = 93 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+        MinProgress = 0.1,
+        SoundTable = {
+            {s = "ArcCW_WAW.Launcher_Start", t = 1 / 30},
+            {s = "ArcCW_WAW.Launcher_Down", t = 15 / 30},
+            {s = "ArcCW_WAW.Launcher_Ground", t = 30 / 30},
+            {s = "ArcCW_WAW.Launcher_Tap", t = 45 / 30},
+            {s = "ArcCW_WAW.Launcher_Up", t = 66 / 30},
+        },
     },
 }

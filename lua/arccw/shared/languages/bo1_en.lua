@@ -24,7 +24,7 @@ L["bo1.ksg.buck"] = "Fire 8 pellets in a large spread"
 
 
 L["bo1.perkacola.active"] = "When weapon is active:"
-L["bo1.perkacola.staminup"] = "+10% Global speed"
+L["bo1.perkacola.staminup"] = "+15% Global speed"
 L["bo1.perkacola.deadshot"] = "+100% Headshot damage"
 L["bo1.perkacola.vultureaid"] = "Killing enemies drops ammo for this weapon"
 L["bo1.perkacola.juggernog"] = "Reduce damage taken by 25%"
