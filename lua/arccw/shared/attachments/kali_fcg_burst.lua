@@ -1,6 +1,7 @@
-att.PrintName = "A4 S-1-3 FCG"
+att.PrintName = "Burst S-1-3 FCG"
+att.AbbrevName = "Burst"
 att.Icon = Material("entities/acwatt_fcg_s13.png", "mips smooth")
-att.Description = "Flat top M16A4 receiver with a standard 3 round burst sear."
+att.Description = "3-round burst fire control group originally designed for the M16A2."
 att.Desc_Pros = {
     "+ Burst Fire mode allows for ammunition",
     "conservation"
@@ -13,9 +14,6 @@ att.Slot = "fcg_kali"
 att.SortOrder = 103
 att.IgnorePickX = true
 att.Free = true
-
---att.ActivateElements = {"flattop_carry"}
-att.GivesFlags = {"a4top", "flattop_carry"}
 
 att.Override_Firemodes = {
     {

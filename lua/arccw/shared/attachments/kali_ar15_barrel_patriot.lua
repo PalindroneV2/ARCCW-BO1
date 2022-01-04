@@ -1,4 +1,5 @@
 att.PrintName = "M231 11.5 in. Barrel"
+att.AbbrevName = "Patriot"
 att.Icon = Material("entities/acwatt_bo2_longbarrel.png", "mips smooth")
 att.Description = "Short 11.5 inch barrel with a round smooth handguard and no front sight. Cannot accept UBGLs."
 

@@ -1,4 +1,5 @@
 att.PrintName = "RIS 10.5 in. Barrel"
+att.AbbrevName = "RIS Commando"
 att.Icon = Material("entities/acwatt_bo2_longbarrel.png", "mips smooth")
 att.Description = "Short 11.5 inch barrel with a quad-rail RIS handguard with rail covers."
 

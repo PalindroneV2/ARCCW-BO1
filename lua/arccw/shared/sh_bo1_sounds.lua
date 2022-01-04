@@ -2482,6 +2482,18 @@ sound.Add( {
     }
 } )
 
+-- M72 LAW --
+sound.Add( {
+    name = "ArcCW_BO1.LAW_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_law/fire.wav",
+    }
+} )
+
 -- M202 FLASH --
 
 sound.Add( {

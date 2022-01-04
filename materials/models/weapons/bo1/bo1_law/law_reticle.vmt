@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/bo1/bo1_law/law_reticle"
+    "$translucent" "1"
+}

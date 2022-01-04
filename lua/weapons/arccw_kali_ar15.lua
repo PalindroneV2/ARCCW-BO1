@@ -197,13 +197,13 @@ SWEP.AttachmentElements = {
     },
     ["kali_barrel_607"] = {
         AttPosMods = {
-            [3] = {
+            [4] = {
                 vpos = Vector(14.75, 0, 2.25),
             },
-            [6] = {
+            [7] = {
                 vpos = Vector(8, 0, 1.75),
             },
-            [8] = {
+            [9] = {
                 vpos = Vector(11, 0.85, 2),
                 vang = Angle(0, 0, -90),
             },
@@ -212,10 +212,10 @@ SWEP.AttachmentElements = {
     ["kali_barrel_xm"] = {
         ExcludeFlags = {"m203_already_on"},
         AttPosMods = {
-            [3] = {
+            [4] = {
                 vpos = Vector(16.75, 0, 2.25),
             },
-            [8] = {
+            [9] = {
                 vpos = Vector(11, 0.85, 2.25),
                 vang = Angle(0, 0, -90),
             },
@@ -224,23 +224,23 @@ SWEP.AttachmentElements = {
     ["kali_barrel_xm_m203"] = {
         RequireFlags = {"m203_already_on"},
         AttPosMods = {
-            [3] = {
+            [4] = {
                 vpos = Vector(16.75, 0, 2.25),
             },
-            [6] = {
+            [7] = {
                 vpos = Vector(7.65, 0, 1.75),
             }
         },
     },
     ["kali_barrel_patriot"] = {
         AttPosMods = {
-            [3] = {
+            [4] = {
                 vpos = Vector(14.5, 0, 2.25),
             },
-            [6] = {
+            [7] = {
                 vpos = Vector(7.65, 0, 1.75),
             },
-            [8] = {
+            [9] = {
                 vpos = Vector(11, 0.85, 2.25),
                 vang = Angle(0, 0, -90),
             },
@@ -248,13 +248,13 @@ SWEP.AttachmentElements = {
     },
     ["kali_barrel_727c"] = {
         AttPosMods = {
-            [3] = {
+            [4] = {
                 vpos = Vector(14.5, 0, 2.25),
             },
-            [6] = {
+            [7] = {
                 vpos = Vector(7.65, 0, 1.75),
             },
-            [8] = {
+            [9] = {
                 vpos = Vector(11, 0.85, 2.25),
                 vang = Angle(0, 0, -90),
             },
@@ -262,10 +262,10 @@ SWEP.AttachmentElements = {
     },
     ["kali_barrel_a4"] = {
         AttPosMods = {
-            [6] = {
+            [7] = {
                 vpos = Vector(11, 0, 1.75),
             },
-            [8] = {
+            [9] = {
                 vpos = Vector(16, 0.75, 2.5),
                 vang = Angle(0, 0, -90),
             },
@@ -273,10 +273,10 @@ SWEP.AttachmentElements = {
     },
     ["kali_barrel_a2"] = {
         AttPosMods = {
-            [6] = {
+            [7] = {
                 vpos = Vector(11, 0, 1.575),
             },
-            [8] = {
+            [9] = {
                 vpos = Vector(16, 0.85, 2.25),
                 vang = Angle(0, 0, -90),
             },
@@ -284,13 +284,13 @@ SWEP.AttachmentElements = {
     },
     ["kali_barrel_727"] = {
         AttPosMods = {
-            [3] = {
+            [4] = {
                 vpos = Vector(18.5, 0, 2.25),
             },
-            [6] = {
+            [7] = {
                 vpos = Vector(7.65, 0, 1.75),
             },
-            [8] = {
+            [9] = {
                 vpos = Vector(11, 0.85, 2.25),
                 vang = Angle(0, 0, -90),
             },
@@ -298,20 +298,20 @@ SWEP.AttachmentElements = {
     },
     ["kali_barrel_famas"] = {
         AttPosMods = {
-            [2] = {
+            [3] = {
                 vpos = Vector(3.5, 0, 5.7),
                 /*SlideAmount = {
                     vmin = Vector(1.5, 0, 5.7),
                     vmax = Vector(6.5, 0, 5.7),
                 },*/
             },
-            [3] = {
+            [4] = {
                 vpos = Vector(18.5, 0, 2.25),
             },
-            [6] = {
+            [7] = {
                 vpos = Vector(9.1, 0, 1.55),
             },
-            [8] = {
+            [9] = {
                 vpos = Vector(11, 0.85, 2.65),
                 vang = Angle(0, 0, -90),
             },
@@ -319,13 +319,13 @@ SWEP.AttachmentElements = {
     },
     ["kali_barrel_ris"] = {
         AttPosMods = {
-            [3] = {
+            [4] = {
                 vpos = Vector(18.5, 0, 2.25),
             },
-            [6] = {
+            [7] = {
                 vpos = Vector(7.65, 0, 1.75),
             },
-            [8] = {
+            [9] = {
                 vpos = Vector(11, 0.75, 2.5),
                 vang = Angle(0, 0, -90),
             },
@@ -333,13 +333,13 @@ SWEP.AttachmentElements = {
     },
     ["kali_barrel_mw19"] = {
         AttPosMods = {
-            [3] = {
+            [4] = {
                 vpos = Vector(18.5, 0, 2.25),
             },
-            [6] = {
+            [7] = {
                 vpos = Vector(11, 0, 1.75),
             },
-            [8] = {
+            [9] = {
                 vpos = Vector(16, 0.75, 2.5),
                 vang = Angle(0, 0, -90),
             },
@@ -347,13 +347,13 @@ SWEP.AttachmentElements = {
     },
     ["kali_barrel_risc"] = {
         AttPosMods = {
-            [3] = {
+            [4] = {
                 vpos = Vector(14.5, 0, 2.25),
             },
-            [6] = {
+            [7] = {
                 vpos = Vector(7.65, 0, 1.75),
             },
-            [8] = {
+            [9] = {
                 vpos = Vector(11, 0.75, 2.5),
                 vang = Angle(0, 0, -90),
             },
@@ -361,7 +361,7 @@ SWEP.AttachmentElements = {
     },
     ["a4top"] = {
         AttPosMods = {
-            [2] = {
+            [3] = {
                 vpos = Vector(3.5, 0, 3.7),
                 /*SlideAmount = {
                     vmin = Vector(1.5, 0, 3.56),
@@ -466,12 +466,19 @@ SWEP.AttachmentElements = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Receiver",
-        Slot = {"fcg_m16a2", "fcg_kali"},
-        DefaultAttName = "A1 Receiver",
-        RandomChance = 10,
+        PrintName = "Upper Receiver",
+        Slot = "kali_top",
+        DefaultAttName = "A1 Upper",
+        RandomChance = 5,
         FreeSlot = true,
-    }, --1
+    },--1
+    {
+        PrintName = "Lower Receiver",
+        Slot = {"fcg_kali"},
+        DefaultAttName = "Full-Auto",
+        RandomChance = 5,
+        FreeSlot = true,
+    }, --2
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
@@ -492,8 +499,8 @@ SWEP.Attachments = {
             vmax = Vector(3.5, 0, 5.025),
         },
         */
-        MergeSlots = {16}
-    }, --2
+        MergeSlots = {17}
+    }, --3
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
@@ -504,14 +511,14 @@ SWEP.Attachments = {
             vpos = Vector(24, 0, 2.25), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
-    }, --3
+    }, --4
     {
         PrintName = "Barrel",
         DefaultAttName = "M16A1 20 in. Barrel",
         Slot = {"kali_barrel"},
         RandomChance = 10,
         --Installed = "kali_ar15_barrel_727"
-    }, --4
+    }, --5
     {
         PrintName = "Underbarrel",
         Slot = {"ubgl", "bo1_m203", "bo1_mk"},
@@ -524,8 +531,8 @@ SWEP.Attachments = {
             wpos = Vector(11, 1.25, -3.5),
             wang = Angle(170.5, -180, 0),
         },
-        MergeSlots = {6, 7},
-    }, --5
+        MergeSlots = {7, 8},
+    }, --6
     {
         Hidden = true,
         Slot = {"foregrip", "kali_truepatriot"},
@@ -536,7 +543,7 @@ SWEP.Attachments = {
             wpos = Vector(13.75, 1.15, -4.1),
             wang = Angle(170, -180, 0),
         },
-    }, --6
+    }, --7
     {
         Hidden = true,
         Slot = {"bipod","mk12_bipod"},
@@ -547,7 +554,7 @@ SWEP.Attachments = {
             wpos = Vector(15, 1.15, -4.1),
             wang = Angle(170, -180, 0),
         },
-    }, --7
+    }, --8
     {
         PrintName = "Tactical",
         Slot = "bo1_tacprimary",
@@ -557,7 +564,7 @@ SWEP.Attachments = {
             vpos = Vector(16, 0.75, 2),
             vang = Angle(0, 0, -90),
         },
-    }, --8
+    }, --9
     {
         PrintName = "Stock",
         Slot = {"kali_stock"},
@@ -565,27 +572,27 @@ SWEP.Attachments = {
         RandomChance = 10,
         ExcludeFlags = {"true_patriot"},
         --Installed = "kali_stock_gen2"
-    }, --9
+    }, --10
     {
         PrintName = "Magazine",
         Slot = {"kali_ar15_mag"},
         DefaultAttName = "Standard Magazine",
         RandomChance = 0.1,
-    }, --10
+    }, --11
     {
         PrintName = "Ammo Type",
         Slot = {"ammo_pap"},
-    }, --11
+    }, --12
     {
         PrintName = "Perk",
         Slot = {"bo1_perk"}
-    }, --12
+    }, --13
     {
         PrintName = "Cosmetic",
         Slot = {"kali_wood", "cde_cosmetic", "cde_cosmetic_tan", "kali_cosmetic"},
         DefaultAttName = "Black Finish",
         FreeSlot = true,
-    }, -- 13
+    }, -- 14
     {
         PrintName = "Charm",
         Slot = "charm",
@@ -597,33 +604,42 @@ SWEP.Attachments = {
             wpos = Vector(5.25, 1.5, -3.25),
             wang = Angle(-175, -175, 0)
         },
-    }, -- 14
+    }, -- 15
     {
         PrintName = "Sling",
         Slot = "kali_ar15_sling",
         DefaultAttName = "No Sling",
         FreeSlot = true,
-    }, --15
+    }, --16
     {
         Hidden = true,
-        Slot = "kali_carryhandle",
-        RandomChance = 2,
-    },--16
+        Slot = "mw3e_rsass_scope",
+        Bone = "j_gun", -- relevant bone any attachments will be mostly referring to
+        Offset = {
+            vpos = Vector(-0.65, 0, 0.8), -- 4.6 offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+        },
+        HideIfBlocked = true,
+        RequireFlags = {"a4top"},
+        ExcludeFlags = {"kali_barrel_famas"},
+        InstalledEles = {"mount"},
+    }, --17
 }
 
 SWEP.Hook_NameChange = function(wep, name)
-    local pap = wep.Attachments[11].Installed == "ammo_papunch"
-    local m635 = wep.Attachments[10].Installed == "ammo_kali_ar15_9mm"
-    local cmag = wep.Attachments[10].Installed == "ammo_kali_ar15_patriot"
-    local tube = wep.Attachments[5].Installed == "ubgl_m16_m203"
-    local barrel = wep.Attachments[4].Installed
-    local sear = wep.Attachments[1].Installed
-    local stocka = wep.Attachments[9].Installed
-    local wood = wep.Attachments[13].Installed == "cde_cosmetic_wood"
-    local green = wep.Attachments[13].Installed == "cde_cosmetic_od"
-    local sling = wep.Attachments[15].Installed == "kali_ar15_sling"
-    local troyirons = wep:GetBuff_Override("AltIrons")
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local smg = wep.Attachments[11].Installed == "ammo_kali_ar15_9mm"
+    local cmag = wep.Attachments[11].Installed == "ammo_kali_ar15_patriot"
+    local tube = wep.Attachments[6].Installed == "ubgl_m16_m203"
+    local barrel = wep.Attachments[5].Installed
+    local top = wep.Attachments[1].Installed
+    local lower = wep.Attachments[2].Installed
+    local stocka = wep.Attachments[10].Installed
+ --   local wood = wep.Attachments[14].Installed == "cde_cosmetic_wood"
+    local green = wep.Attachments[14].Installed == "cde_cosmetic_od"
+    local sling = wep.Attachments[16].Installed == "kali_ar15_sling"
 
+    --BARRELS
     local ris = 0
     local length = 0
     if barrel == "kali_ar15_barrel_m203" then length = 0
@@ -648,14 +664,20 @@ SWEP.Hook_NameChange = function(wep, name)
     elseif barrel == "kali_ar15_barrel_f1" then length = 7
     end
 
+    --LOWER
     local fcg = 0
-    if sear == "bo1_fcg_s13_ar15" then fcg = 1
-    elseif sear == "kali_fcg_funswitch" then fcg = 2
-    elseif sear == "kali_fcg_funswitch_2" then fcg = 3
-    elseif sear == "kali_fcg_a4" then fcg = 4
-    elseif sear == "bo1_fcg_s16" then fcg = 5
-    elseif sear == "kali_fcg_splitter" then fcg = 6
+    if lower == "kali_fcg_burst" then fcg = 1
+    elseif lower == "kali_fcg_semi" then fcg = 2
+    elseif lower == "kali_fcg_splitter" then fcg = 3
     end
+    -- UPPER
+    local upper = 0
+    if top == "kali_top_a2" then upper = 1
+    elseif top == "kali_top_a4" then upper = 2
+    elseif top == "kali_top_troy" then upper = 3
+    elseif top == "kali_top_usgi" then upper = 4
+    end
+    --STOCKS
     local stock = 0
     if stocka == "kali_stock_full" then stock = 1
     elseif stocka == "kali_stock_gen2" then stock = 2
@@ -665,345 +687,220 @@ SWEP.Hook_NameChange = function(wep, name)
     elseif stocka == "kali_stock_magpul" then stock = 6
     elseif stocka == "kali_stock_famas" then stock = 7
     end
+    --NAMING
     local truepatriot = 0
     local brand = "Colt "
     local prefix = "M"
     local model = "16"
     local alteration = "A1"
-    local desc1 = "The AR-15 is a family of rifles originally created by Arma-Lite, subsquently picked up by Colt and the standard United States infantry rifle since the 1960s. Despite its poor start, this rifle has a long carreer of excellent and reliable performance and its modularity has kept it in service for over 50 years. "
-    local desc2 = "The M16A1 entered service in 1969 after having fixed many issues with the rifle's first military configuration."
+    local desc1 = "The AR-15 is a family of rifles originally created by Arma-Lite, subsquently picked up by Colt and the standard United States infantry rifle since the 1960s. Despite its poor start, this rifle has a long carreer of excellent and reliable performance and its modularity has kept it in service for over 50 years."
+    local desc2 = "\nThe M16A1 entered service in 1969 after having fixed many issues with the rifle's first military configuration."
     wep.Trivia_Desc = desc1 .. desc2
 
-    --local carbine = "arccw/weaponicons/arccw_kali_car15"
+    if smg then
+        wep.Trivia_Class = "Submachine Gun"
+    else
+        wep.Trivia_Class = "Assault Rifle"
+    end
 
-    for k = length, length do
-        if m635 then
-            prefix = "M"
-            model = "635"
-            alteration = ""
-            wep.Trivia_Desc = "First an experimental model in 9mm for the military emerged in the M635. Eventually it found more success in the civilian market."
-            if ris == 1 then
-                wep.Trivia_Desc = "First an experimental model in 9mm for the military emerged in the M635. Eventually it found more success in the civilian market. This one has a modern quad rail RIS handguard."
-            end
-            if fcg >= 3 then
-                prefix = "9mm"
-                model = " SMG"
-                if k <= 1 then
-                    model = " Rifle"
-                end
-                wep.Trivia_Desc = "First an experimental model in 9mm for the military emerged in the M635. Eventually it found more success in the civilian market."
-                if ris == 1 then
-                    wep.Trivia_Desc = "First an experimental model in 9mm for the military emerged in the M635. Eventually it found more success in the civilian market. This one has a modern quad rail RIS handguard."
-                end
-            end
-            if tube and k == 4 and fcg == 2 then
-                brand = ""
-                prefix = "9mm"
-                model = "AR"
-                alteration = " HD"
-                wep.Trivia_Desc = "Carried by grunts and stashed in Black Mesa Armories. Althought stopping power isn't as great, it's faster firing and the grenade launcher offers the punch the primary fire lacks."
-            end
-            if k == 5  and fcg <= 2 then
-                prefix = "Patriot"
-                model = " SMG"
-                alteration = ""
-                wep.Trivia_Desc = "Carbine variant of the M16 with no front sight, made for shooting from ports in armored behicles. This one seems to have a way shorter barrel than usual and is in 9mm."
-            end
-        elseif k == 0 then
-            if fcg == 0 and wood then
-                wep.Trivia_Desc = "The Standard Rifle of the NCR Army in 2281. Due to the obvious difficulty of obtaining polymers in the wasteland, wood is used for the weapon's furniture."
-            end
-            if fcg == 1 then
-                alteration = "A2"
-                wep.Trivia_Desc = "The M16A2 entered service in the mid 1980s, along with many ergonomic overhauls the weapon became 3 round burst instead of full auto to prevent soldiers from spending all of their ammo in seconds."
-            elseif fcg == 2 then
-                alteration = "A2-E3"
-                wep.Trivia_Desc = "Navy modification of the M16A2 using A1 full-auto sears."
-                if green then
-                    prefix = "C"
-                    model = "7"
-                    alteration = ""
-                    wep.Trivia_Desc = "Canadian variant of the M16A2, standard for their military. Uses a full auto sear."
-                    if stock > 1 then
-                        alteration = "A2"
-                    end
-                end
-            elseif fcg == 3 then
-                alteration = "A3"
-                wep.Trivia_Desc = "Navy modification of the M16A4 using A1 full-auto sears."
-                if green then
-                    prefix = "C"
-                    model = "7"
-                    alteration = "A1"
-                    wep.Trivia_Desc = "Canadian variant of the M16A3, standard for their military."
-                    if stock > 1 then
-                        alteration = "A2"
-                    end
-                end
-            elseif fcg == 4 then
-                alteration = "A4"
-                wep.Trivia_Desc = "Further improvement of the M16 design leads to flat top upper receivers to accept multiple kinds of optics. Modern examples also have quad-rail handguards. The M16A4 enters service on 1997."
-            end
-        elseif k == 1 then
-            if fcg == 0 then
+    if upper == 0 then --A1
+        if fcg == 0 then
+            if length == 1 then
                 alteration = "A1-E2"
-                wep.Trivia_Desc = desc2 .. " Eventually an improved round ribbed handguard was added in testing phases. E1 modification."
-                if ris == 1 then
-                    alteration = "A1-E4"
-                    wep.Trivia_Desc = desc2 .. " This one has a modern quad rail RIS handguard, probably aftermarket or retro-fitted military surplus."
-                end
-            elseif fcg == 1 then
-                alteration = "A2"
-                wep.Trivia_Desc = "The M16A2 entered service in the mid 1980s, along with many ergonomic overhauls the weapon became 3 round burst instead of full auto to prevent soldiers from spending all of their ammo in seconds."
-            elseif fcg == 2 then
-                alteration = "A2-E3"
-                wep.Trivia_Desc = "Navy modification of the M16A2 using A1 full-auto sears."
                 if green then
                     prefix = "C"
                     model = "7"
                     alteration = ""
-                    wep.Trivia_Desc = "Canadian variant of the M16A2, standard for their military. Uses a full auto sear."
-                    if stock > 1 then
-                        alteration = "A2"
-                    end
                 end
-            elseif fcg == 3 then
-                alteration = "A3"
-                wep.Trivia_Desc = "Navy modification of the M16A4 using A1 full-auto sears."
-                if green then
-                    prefix = "C"
-                    model = "7"
-                    alteration = "A1"
-                    wep.Trivia_Desc = "Canadian variant of the M16A3, standard for their military."
-                    if stock > 1 then
-                        alteration = "A2"
-                    end
-                end
-            elseif fcg == 4 then
-                alteration = "A4"
-                wep.Trivia_Desc = "Further improvement of the M16 design leads to flat top upper receivers to accept multiple kinds of optics. Modern examples also have quad-rail handguards. The M16A4 enters service on 1997."
-            end
-        elseif k == 2 then
-            if fcg == 0 then
-                prefix = "CAR"
-                model = "-15"
-                alteration = " SMG"
-                wep.Trivia_Desc = "M16 Carbine variant firing in full auto. One of the earliest variants of the Commando family, sporting a short triangular handguard and a 1st generation collapsible stock."
-            elseif fcg == 1 then
+            elseif length == 2 then
+                model = "607"
+                alteration = "A"
+            elseif length == 3 then
                 prefix = "XM"
-                model = "4"
-                alteration = ""
-                wep.Trivia_Desc = "M16A2 Carbine variant still firing in 3 round bursts. Part of the Colt Commando family. Direct Predecessor of the M4 Carbine."
-            elseif fcg == 2 then
-                prefix = "M"
-                model = "727"
-                alteration = ""
-                wep.Trivia_Desc = "M16A2 Carbine variant firing in full auto. Part of the Colt Commando family."
-            elseif fcg == 3 then
-                prefix = "M"
-                model = "4"
-                alteration = "A1"
-                wep.Trivia_Desc = "Improvement of the M4 Carbine firing in full auto. This is the current United States Army standard rifle having mostly replaced the M16A4."
-            elseif fcg == 4 then
-                prefix = "M"
-                model = "4"
-                alteration = " Carbine"
-                wep.Trivia_Desc = "M16A2 Carbine variant derivative of the XM4 using the recent Colt M901 flat upper receiver still firing in 3 round bursts. Part of the Colt Commando family."
-            end
-        elseif k == 3 then
-            if fcg == 0 then
-                prefix = "XM"
-                model = "177"
+                model = "117"
                 alteration = "E2"
-                wep.Trivia_Desc = "M16A1 Carbine variant made for MACV-SOG. Several inches shorter than the 15 inch carbines and sporting a special flash hider slightly reduces noise. Part of the Colt Commando family."
-            elseif fcg == 1 then
-                prefix = "XM"
-                model = "4"
+            elseif length == 4 then
+                model = "653"
                 alteration = ""
-                wep.Trivia_Desc = "M16A2 Carbine variant still firing in 3 round bursts. Part of the Colt Commando family. Direct Predecessor of the M4 Carbine."
-            elseif fcg == 2 then
-                prefix = "M"
-                model = "727"
-                alteration = ""
-                wep.Trivia_Desc = "M16A2 Carbine variant firing in full auto. Part of the Colt Commando family."
                 if green then
                     prefix = "C"
                     model = "8"
-                    alteration = ""
-                    wep.Trivia_Desc = "Canadian variant of the M4A1 Carbine, standard for their military."
+                    alt = ""
                 end
-            elseif fcg == 3 then
-                prefix = "M"
-                model = "4"
-                alteration = "A1"
-                wep.Trivia_Desc = "Improvement of the M4 Carbine firing in full auto. This is the current United States Army standard rifle having mostly replaced the M16A4."
-                if sling and troyirons then
-                    prefix = ""
-                    model = "Commando"
-                    alteration = ""
-                    wep.Trivia_Desc = "Anachronism in action. This is not what an XM177E2 looked like in Vietnam."
+            elseif length == 5 then
+                model = "231"
+                alteration = " Patriot"
+                if stock == 0 and cmag then
+                    truepatriot = 1
                 end
-                if green then
-                    prefix = "C"
-                    model = "8"
-                    alteration = "A1"
-                    wep.Trivia_Desc = "Canadian variant of the M16A3, standard for their military."
-                end
-            elseif fcg == 4 then
-                prefix = "M"
-                model = "4"
-                alteration = " Carbine"
-                wep.Trivia_Desc = "M16A2 Carbine variant derivative of the XM4 using the recent Colt M901 flat upper receiver still firing in 3 round bursts. Part of the Colt Commando family."
-            end
-        elseif k == 4 then
-            if fcg == 0 then
-                prefix = "M"
-                model = "723"
-                alteration = ""
-                wep.Trivia_Desc = "M16A1 Carbine variant firing in full auto. Part of the Colt Commando family."
-                if ris == 1 then
-                    wep.Trivia_Desc = "M16A1 Carbine variant firing in full auto. Part of the Colt Commando family. This one has a modern quad rail RIS handguard, probably aftermarket or retro-fitted military surplus."
-                end
-            elseif fcg == 1 then
-                prefix = "XM"
-                model = "4"
-                alteration = ""
-                wep.Trivia_Desc = [[
-                    M16A2 Carbine variant still firing in 3 round bursts. Part of the Colt Commando family.
-                    This is the configuration that eventually enters service as the M4 Carbine until flat top uppers from the M901 are introduced as the standard for all infantry rifles.
-                ]]
-                if ris == 1 then
-                    wep.Trivia_Desc = "M16A2 Carbine variant still firing in 3 round bursts. Part of the Colt Commando family. This one has a modern quad rail RIS handguard, probably aftermarket or retro-fitted military surplus."
-                end
-            elseif fcg == 2 then
-                prefix = "M"
-                model = "727"
-                alteration = ""
-                wep.Trivia_Desc = "M16A2 Carbine variant firing in full auto. Part of the Colt Commando family."
-                if ris == 1 then
-                    wep.Trivia_Desc = "M16A2 Carbine variant firing in full auto. Part of the Colt Commando family. This one has a modern quad rail RIS handguard, probably aftermarket or retro-fitted military surplus."
-                end
-                if green then
-                    prefix = "C"
-                    model = "8"
-                    alteration = ""
-                    wep.Trivia_Desc = "Canadian variant of the M4A1 Carbine, standard for their military."
-                end
-                if tube then
-                    wep.Trivia_Desc = "The Hazardous Environment Combat Unit uses these as their standard firearm. They're equipped with an M203 grenade launcher to take on bigger threats."
-                end
-            elseif fcg == 3 then
-                prefix = "M"
-                model = "4"
-                alteration = "A1"
-                wep.Trivia_Desc = "Improvement of the M4 Carbine firing in full auto. This is the current United States Army standard rifle having mostly replaced the M16A4."
-                if green then
-                    prefix = "C"
-                    model = "8"
-                    alteration = "A1"
-                    wep.Trivia_Desc = "Canadian variant of the M16A3, standard for their military."
-                end
-            elseif fcg == 4 then
-                prefix = "M"
-                model = "4"
-                alteration = " Carbine"
-                wep.Trivia_Desc = "M16A2 Carbine variant derivative of the XM4 using the recent Colt M901 flat upper receiver still firing in 3 round bursts. Part of the Colt Commando family."
-            end
-        elseif k == 5 then
-            prefix = "M"
-            model = "231"
-            alteration = " Patriot"
-            wep.Trivia_Desc = "Carbine variant of the M16 with no front sight, made for shooting from ports in armored behicles. This one seems to have a way shorter barrel than usual."
-            if cmag and stock == 0 then
-                brand = ""
-                prefix = "The"
-                model = " Patriot"
-                alteration = ""
-                wep.Trivia_Desc = "The Patriot is a one-of-a-kind sidearm made especially for The Boss."
-                truepatriot = 1
-            end
-        elseif k == 6 then
-            if fcg == 0 then
-                prefix = "M"
+            elseif length == 6 then
                 model = "720"
                 alteration = ""
-                wep.Trivia_Desc = "M16A1 Carbine variant firing in full auto. Part of the Colt Commando family."
-                if ris == 1 then
-                    wep.Trivia_Desc = [[
-                        M16A1 Carbine variant firing in full auto. Part of the Colt Commando family.
-                        This one has a modern quad rail RIS handguard and a flip up Front Sight, probably aftermarket or retro-fitted military surplus.
-                    ]]
-                end
-            elseif fcg == 1 then
+            end
+        elseif fcg == 1 then
+            alteration = "A1-E2"
+            if length >= 2 then
                 prefix = "XM"
                 model = "4"
                 alteration = ""
-                wep.Trivia_Desc = [[
-                    M16A2 Carbine variant still firing in 3 round bursts. Part of the Colt Commando family.
-                    This is the configuration that eventually enters service as the M4 Carbine until flat top uppers from the M901 are introduced as the standard for all infantry rifles.
-                ]]
-                if ris == 1 then
-                    wep.Trivia_Desc = [[
-                        M16A2 Carbine variant still firing in 3 round bursts. Part of the Colt Commando family.
-                        This one has a modern quad rail RIS handguard and a flip up Front Sight, probably aftermarket or retro-fitted military surplus.
-                    ]]
-                end
-            elseif fcg == 2 then
-                prefix = "M"
+            end
+        elseif fcg == 2 then
+            prefix = "AR-"
+            model = "15"
+            alteration = " SP1"
+            if length == 2 then
+                prefix = "CAR-"
+                alteration = " SMG"
+            elseif length == 3 then
+                prefix = "XBRN"
+                model = "177"
+                alteration = "E2"
+            elseif length == 4 then
+                prefix = "CAR-"
+                alteration = " SP1 Carbine"
+            elseif length == 5 then
+                prefix = "CAR-"
+                alteration = " Patriot"
+            elseif length == 6 then
+                prefix = "CAR-"
+                alteration = " SBR"
+            end
+        end
+    elseif upper == 1 then --A2
+        if fcg == 0 then
+            alteration = "A2-E3"
+            if length == 2 then
+                prefix = "CAR-"
+                model = "15"
+                alteration = " SMG"
+            elseif length == 3 then
+                prefix = "XM"
+                model = "4"
+                alteration = ""
+            elseif length == 4 then
+                model = "727"
+                alteration = ""
+            elseif length == 5 then
+                model = "231"
+                alteration = " Patriot"
+            elseif length == 6 then
                 model = "733"
                 alteration = ""
-                wep.Trivia_Desc = "M16A2 Carbine variant firing in full auto. Part of the Colt Commando family."
-                if ris == 1 then
-                    wep.Trivia_Desc = [[
-                        M16A2 Carbine variant firing in full auto. Part of the Colt Commando family.
-                        This one has a modern quad rail RIS handguard and a flip up Front Sight, probably aftermarket or retro-fitted military surplus.
-                    ]]
+            end
+        elseif fcg == 1 then
+            alteration = "A2"
+            if length >= 2 then
+                prefix = "XM"
+                model = "4"
+                alteration = ""
+            end
+        elseif fcg == 2 then
+            prefix = "AR-"
+            model = "15"
+            alteration = "A2 SP3"
+            if length == 1 then
+                alteration = "A2 SP2"
+            elseif length == 2 then
+                prefix = "CAR-"
+                alteration = " SMG"
+            elseif length == 3 then
+                prefix = "CAR-"
+                alteration = "A2 Gov't Carbine"
+            elseif length == 4 then
+                prefix = "CAR-"
+                alteration = "A2 Gov't Carbine"
+            elseif length == 5 then
+                prefix = "CAR-"
+                alteration = " Patriot"
+            elseif length == 6 then
+                prefix = "CAR-"
+                alteration = " SBR"
+            end
+        end
+    elseif upper >= 2 then --A4
+        if fcg == 0 then
+            alteration = "A3"
+            if wep:GetBuff_Override("AltIrons2") and length == 1 and green then
+                prefix = "C"
+                model = "7"
+                alteration = "A1"
+                if stock == 5 then
+                    alteration = "A2"
                 end
-                if green then
+            end
+            if length == 2 then
+                model = "4"
+                alteration = "A1"
+            elseif length == 3 then
+                model = "4"
+                alteration = "A1"
+                if sling and wep:GetBuff_Override("AltIrons") then
+                    model = "Commando"
+                    alteration = ""
+                end
+            elseif length == 4 then
+                model = "4"
+                alteration = "A1"
+                if wep:GetBuff_Override("AltIrons2") and green then
                     prefix = "C"
                     model = "8"
                     alteration = ""
-                    wep.Trivia_Desc = "Canadian variant of the M4A1 Carbine, standard for their military."
+                    if stock == 5 then
+                        alteration = "A1"
+                    end
                 end
-                if tube then
-                    wep.Trivia_Desc = "The Hazardous Environment Combat Unit uses these as their standard firearm. They're equipped with an M203 grenade launcher to take on bigger threats."
-                end
-            elseif fcg == 3 then
-                prefix = "M"
+            elseif length == 5 then
+                model = "231"
+                alteration = " Patriot"
+            elseif length == 6 then
                 model = "4"
                 alteration = "A1"
-                wep.Trivia_Desc = "Improvement of the M4 Carbine firing in full auto. This is the current United States Army standard rifle having mostly replaced the M16A4."
-                if green then
-                    prefix = "C"
-                    model = "8"
-                    alteration = "A1"
-                    wep.Trivia_Desc = "Canadian variant of the M16A3, standard for their military."
+                if ris == 1 then
+                    brand = ""
+                    model = "k. 18"
+                    alteration = " Mod 1"
                 end
-            elseif fcg == 4 then
-                prefix = "M"
+            end
+        elseif fcg == 1 then
+            alteration = "A4"
+            if length >= 2 then
                 model = "4"
                 alteration = " Carbine"
-                wep.Trivia_Desc = "M16A2 Carbine variant derivative of the XM4 using the recent Colt M901 flat upper receiver still firing in 3 round bursts. Part of the Colt Commando family."
             end
-        elseif k == 7 then
-            if fcg == 1 or fcg == 3 then
-                prefix = "M"
-                model = "4"
-                alteration = "G2"
-                wep.Trivia_Desc = "M4A1 with FAMAS furniture slapped on top."
-            elseif fcg == 0 or fcg == 2 or fcg == 4 then
-                prefix = "M"
-                model = "4"
-                alteration = "F1"
-                wep.Trivia_Desc = "M4 Carbine with FAMAS furniture slapped on top."
+        elseif fcg == 2 then
+            prefix = "AR-"
+            model = "15"
+            alteration = "A4 Rifle"
+            if length == 1 then
+                alteration = "A4 Rifle"
+                if ris == 1 and wep.Attachments[17].Installed == "optic_mw3_rsass" then
+                    brand = ""
+                    prefix = "M"
+                    model = "k. 12"
+                    alteration = " SPR"
+                end
+            elseif length == 2 then
+                prefix = "CAR-"
+                alteration = " SMG"
+            elseif length == 3 then
+                prefix = "CAR-"
+                alteration = "A3 Tactical Carbine"
+            elseif length == 4 then
+                prefix = "CAR-"
+                alteration = "A3 Tactical Carbine"
+            elseif length == 5 then
+                prefix = "CAR-"
+                alteration = " Patriot"
+            elseif length == 6 then
+                prefix = "CAR-"
+                alteration = " SBR"
             end
         end
     end
 
-    if m635 then
-        wep.Trivia_Class = "Submachine Gun"
-    else
-        wep.Trivia_Class = "Assault Rifle"
+    if length == 7 then
+        model = "4"
+        alteration = "F1"
     end
 
     if !pap then
@@ -1015,13 +912,8 @@ SWEP.Hook_NameChange = function(wep, name)
     elseif pap and length <= 1 then
         if tube then
             return "Skullcrusher"
-        elseif fcg < 3 and fcg >= 0 then
+        elseif fcg == 3 then
             return "Skullsplitter"
-        elseif fcg >= 3 then
-            if fcg == 5 then
-                return "Skullsplitter"
-            end
-            return "Skullreaper"
         else return "Skullpiercer" end
     elseif truepatriot == 1 then
         return "True Patriot"
@@ -1033,9 +925,10 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local papcamo = wep:GetBuff_Override("PackAPunch")
     local tube = wep:GetBuff_Override("BO1_UBGL") --wep.Attachments[5].Installed == "ubgl_m16_m203"
     local key = wep:GetBuff_Override("BO1_UBMK") --wep.Attachments[5].Installed == "ubgl_aug_mk"
-    local ubgl = wep.Attachments[5].Installed
-    local optic = wep.Attachments[2].Installed
-    local sling = wep.Attachments[15].Installed == "kali_ar15_sling"
+    local ubgl = wep.Attachments[6].Installed
+    local optic = wep.Attachments[3].Installed or wep.Attachments[17].Installed
+    local sling = wep.Attachments[16].Installed == "kali_ar15_sling"
+    local top = wep.Attachments[1].Installed
     local troyirons = wep:GetBuff_Override("AltIrons")
     local kacirons = wep:GetBuff_Override("AltIrons2")
     local altirons = troyirons or kacirons
@@ -1045,29 +938,29 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     local barrel = 0
-    if wep.Attachments[4].Installed == "kali_ar15_barrel_m203" then
+    if wep.Attachments[5].Installed == "kali_ar15_barrel_m203" then
         barrel = 1
-    elseif wep.Attachments[4].Installed == "kali_ar15_barrel_a2" then
+    elseif wep.Attachments[5].Installed == "kali_ar15_barrel_a2" then
         barrel = 2
-    elseif wep.Attachments[4].Installed == "kali_ar15_barrel_a4" then
+    elseif wep.Attachments[5].Installed == "kali_ar15_barrel_a4" then
         barrel = 3
-    elseif wep.Attachments[4].Installed == "kali_ar15_barrel_xm" then
+    elseif wep.Attachments[5].Installed == "kali_ar15_barrel_xm" then
         barrel = 4
-    elseif wep.Attachments[4].Installed == "kali_ar15_barrel_607" then
+    elseif wep.Attachments[5].Installed == "kali_ar15_barrel_607" then
         barrel = 5
-    elseif wep.Attachments[4].Installed == "kali_ar15_barrel_patriot" then
+    elseif wep.Attachments[5].Installed == "kali_ar15_barrel_patriot" then
         barrel = 6
-    elseif wep.Attachments[4].Installed == "kali_ar15_barrel_727" then
+    elseif wep.Attachments[5].Installed == "kali_ar15_barrel_727" then
         barrel = 7
-    elseif wep.Attachments[4].Installed == "kali_ar15_barrel_727c" then
+    elseif wep.Attachments[5].Installed == "kali_ar15_barrel_727c" then
         barrel = 8
-    elseif wep.Attachments[4].Installed == "kali_ar15_barrel_ris" then
+    elseif wep.Attachments[5].Installed == "kali_ar15_barrel_ris" then
         barrel = 9
-    elseif wep.Attachments[4].Installed == "kali_ar15_barrel_mw19" then
+    elseif wep.Attachments[5].Installed == "kali_ar15_barrel_mw19" then
         barrel = 10
-    elseif wep.Attachments[4].Installed == "kali_ar15_barrel_risc" then
+    elseif wep.Attachments[5].Installed == "kali_ar15_barrel_risc" then
         barrel = 11
-    elseif wep.Attachments[4].Installed == "kali_ar15_barrel_f1" then
+    elseif wep.Attachments[5].Installed == "kali_ar15_barrel_f1" then
         barrel = 12
     end
 
@@ -1141,136 +1034,130 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(3, 4)
     end
 
-    local fcg = 0
-    if wep.Attachments[1].Installed == "bo1_fcg_s13_ar15" then
-        fcg = 1
-    elseif wep.Attachments[1].Installed == "kali_fcg_funswitch" then
-        fcg = 1
-    elseif wep.Attachments[1].Installed == "bo1_fcg_s16" then
-        fcg = 1
-    elseif wep.Attachments[1].Installed == "kali_fcg_a4" then
-        fcg = 2
-    elseif wep.Attachments[1].Installed == "kali_fcg_funswitch_2" then
-        fcg = 2
-    elseif wep.Attachments[1].Installed == "kali_fcg_splitter" then
-        fcg = 2
+    -- UPPER
+    local upper = 0
+    if top == "kali_top_a2" then
+        upper = 1
+    elseif top == "kali_top_a4" then
+        upper = 2
+    elseif top == "kali_top_troy" then
+        upper = 2
+    elseif top == "kali_top_usgi" then
+        upper = 2
     end
 
-    for k = fcg, fcg do
-        vm:SetBodygroup(0,k)
+    vm:SetBodygroup(0,upper)
+    wep.IronSightStruct = {
+        Pos = Vector(-2.765, -2, 0.25),
+        Ang = Angle(0, 0.0125, 0),
+        Magnification = 1.1,
+        CrosshairInSights = false,
+    }
+    if barrel == 11 then
         wep.IronSightStruct = {
             Pos = Vector(-2.765, -2, 0.25),
-            Ang = Angle(0, 0.0125, 0),
+            Ang = Angle(-0.05, 0.0125, 0),
             Magnification = 1.1,
             CrosshairInSights = false,
         }
+    end
+    if optic then
+        vm:SetBodygroup(5,1)
         if barrel == 12 then
-            vm:SetBodygroup(0,2)
+            vm:SetBodygroup(5,5)
+        end
+    end
+
+    if upper == 2 then
+        if barrel == 12 then
             vm:SetBodygroup(5,0)
+        else
+            vm:SetBodygroup(5,4)
             wep.IronSightStruct = {
-                Pos = Vector(-2.765, 3, -0.4),
-                Ang = Angle(0.45, 0.0125, 0),
+                Pos = Vector(-2.765, -2, 0),
+                Ang = Angle(0.55, 0.0125, 0),
                 Magnification = 1.1,
                 CrosshairInSights = false,
             }
-            if optic then
-                vm:SetBodygroup(5,4)
+            if barrel == 11 then
+                wep.IronSightStruct = {
+                    Pos = Vector(-2.765, -2, -0.035),
+                    Ang = Angle(0.95, 0.0125, 0),
+                    Magnification = 1.1,
+                    CrosshairInSights = false,
+                }
+                if optic then
+                    vm:SetBodygroup(8,0)
+                end
             end
         end
-        if barrel == 11 then
+        if troyirons then
+            vm:SetBodygroup(5,2)
             wep.IronSightStruct = {
                 Pos = Vector(-2.765, -2, 0.25),
-                Ang = Angle(-0.05, 0.0125, 0),
+                Ang = Angle(0, 0.0125, 0),
                 Magnification = 1.1,
                 CrosshairInSights = false,
             }
-        end
-        if optic then
-            vm:SetBodygroup(5,1)
-            if barrel == 12 then
-                vm:SetBodygroup(5,5)
-            end
-        end
-        if fcg == 2 then
-            if barrel == 12 then
-                vm:SetBodygroup(5,0)
-            else
-                vm:SetBodygroup(5,4)
-                wep.IronSightStruct = {
-                    Pos = Vector(-2.765, -2, 0),
-                    Ang = Angle(0.55, 0.0125, 0),
-                    Magnification = 1.1,
-                    CrosshairInSights = false,
-                }
-                if barrel == 11 then
-                    wep.IronSightStruct = {
-                        Pos = Vector(-2.765, -2, -0.035),
-                        Ang = Angle(0.95, 0.0125, 0),
-                        Magnification = 1.1,
-                        CrosshairInSights = false,
-                    }
-                    if optic then
-                        vm:SetBodygroup(8,0)
-                    end
-                end
-            end
-            if troyirons then
-                vm:SetBodygroup(5,2)
+            if barrel == 9 or barrel == 11 then
+                vm:SetBodygroup(8,2)
                 wep.IronSightStruct = {
                     Pos = Vector(-2.765, -2, 0.25),
-                    Ang = Angle(0, 0.0125, 0),
-                    Magnification = 1.1,
-                    CrosshairInSights = false,
-                }
-                if barrel == 9 or barrel == 11 then
-                    vm:SetBodygroup(8,2)
-                    wep.IronSightStruct = {
-                        Pos = Vector(-2.765, -2, 0.25),
-                        Ang = Angle(-0.05, 0.0125, 0),
-                        Magnification = 1.1,
-                        CrosshairInSights = false,
-                    }
-                    if optic then
-                        vm:SetBodygroup(8,0)
-                    end
-                end
-            end
-            if kacirons then
-                vm:SetBodygroup(5,3)
-                wep.IronSightStruct = {
-                    Pos = Vector(-2.765, -2, 0.275),
                     Ang = Angle(-0.05, 0.0125, 0),
                     Magnification = 1.1,
                     CrosshairInSights = false,
                 }
-                if barrel == 9 or barrel == 11 then
-                    vm:SetBodygroup(8,4)
-                    wep.IronSightStruct = {
-                        Pos = Vector(-2.765, -2, 0.275),
-                        Ang = Angle(-0.1, 0.0125, 0),
-                        Magnification = 1.1,
-                        CrosshairInSights = false,
-                    }
-                    if optic then
-                        vm:SetBodygroup(8,0)
-                    end
-                end
-            end
-            if optic then
-                vm:SetBodygroup(5,0)
-                if barrel == 12 then
-                    vm:SetBodygroup(5,5)
+                if optic then
+                    vm:SetBodygroup(8,0)
                 end
             end
         end
+        if kacirons then
+            vm:SetBodygroup(5,3)
+            wep.IronSightStruct = {
+                Pos = Vector(-2.765, -2, 0.275),
+                Ang = Angle(-0.05, 0.0125, 0),
+                Magnification = 1.1,
+                CrosshairInSights = false,
+            }
+            if barrel == 9 or barrel == 11 then
+                vm:SetBodygroup(8,4)
+                wep.IronSightStruct = {
+                    Pos = Vector(-2.765, -2, 0.275),
+                    Ang = Angle(-0.1, 0.0125, 0),
+                    Magnification = 1.1,
+                    CrosshairInSights = false,
+                }
+                if optic then
+                    vm:SetBodygroup(8,0)
+                end
+            end
+        end
+        if optic then
+            vm:SetBodygroup(5,0)
+            vm:SetBodygroup(8,0)
+        end
+    end
+    if barrel == 12 then
+        vm:SetBodygroup(0,2)
+        vm:SetBodygroup(5,0)
+        wep.IronSightStruct = {
+            Pos = Vector(-2.75, 3, -0.4),
+            Ang = Angle(0.45, 0.045, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
+        }
+        if optic then
+            vm:SetBodygroup(5,5)
+        end
+    end
 
-        if fcg == 2 then
-            if barrel == 3 and optic then
-                vm:SetBodygroup(7, 2)
-            end
-            if (barrel == 9 or barrel == 11) and optic then
-                vm:SetBodygroup(7,3)
-            end
+    if upper == 2 then
+        if barrel == 3 and optic then
+            vm:SetBodygroup(7, 2)
+        end
+        if (barrel == 9 or barrel == 11) and optic then
+            vm:SetBodygroup(7,3)
         end
     end
 
@@ -1281,17 +1168,15 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     local camo = 0
-    if wep.Attachments[13].Installed == "cde_cosmetic_wood" then camo = 2
-    elseif wep.Attachments[13].Installed == "cde_cosmetic_od" then camo = 4
-    elseif wep.Attachments[13].Installed == "cde_cosmetic_tan" then camo = 6
-    elseif wep.Attachments[13].Installed == "cde_cosmetic_red" then camo = 8
-    elseif wep.Attachments[13].Installed == "cde_cosmetic_blue" then camo = 10
+    if wep.Attachments[14].Installed == "cde_cosmetic_wood" then camo = 2
+    elseif wep.Attachments[14].Installed == "cde_cosmetic_od" then camo = 4
+    elseif wep.Attachments[14].Installed == "cde_cosmetic_tan" then camo = 6
+    elseif wep.Attachments[14].Installed == "cde_cosmetic_red" then camo = 8
+    elseif wep.Attachments[14].Installed == "cde_cosmetic_blue" then camo = 10
     end
 
-    for k = camo, camo do
-        vm:SetSkin(k)
-        if papcamo then vm:SetSkin(k + 1) end
-    end
+    vm:SetSkin(camo)
+    if papcamo then vm:SetSkin(camo + 1) end
 end
 
 SWEP.RejectAttachments = {
@@ -1300,15 +1185,15 @@ SWEP.RejectAttachments = {
 
 SWEP.Hook_GetCapacity = function(wep, cap)
     local pap = wep:GetBuff_Override("PackAPunch")
-    local m635 = wep.Attachments[10].Installed == "kali_ar15_mag_9mm"
-    local mag20 = wep.Attachments[10].Installed == "bo1_ar15_mag_20"
-    local mag40 = wep.Attachments[10].Installed == "bo1_ar15_mag_40"
-    local mag100 = wep.Attachments[10].Installed == "kali_ar15_patriot"
-    local patriot = wep.Attachments[4].Installed == "kali_ar15_barrel_patriot"
-    local stocka = wep.Attachments[9].Installed
-    local tube = wep.Attachments[5].Installed == "ubgl_m16_m203"
-    local barrel = wep.Attachments[4].Installed
-    local sear = wep.Attachments[1].Installed
+    local m635 = wep.Attachments[11].Installed == "kali_ar15_mag_9mm"
+    local mag20 = wep.Attachments[11].Installed == "bo1_ar15_mag_20"
+    local mag40 = wep.Attachments[11].Installed == "bo1_ar15_mag_40"
+    local mag100 = wep.Attachments[11].Installed == "kali_ar15_patriot"
+    local patriot = wep.Attachments[5].Installed == "kali_ar15_barrel_patriot"
+    local stocka = wep.Attachments[10].Installed
+    local tube = wep.Attachments[6].Installed == "ubgl_m16_m203"
+    local barrel = wep.Attachments[5].Installed
+    local lower = wep.Attachments[2].Installed
 
     local stock = 0
     if stocka == "kali_stock_full" then stock = 1
@@ -1332,18 +1217,23 @@ SWEP.Hook_GetCapacity = function(wep, cap)
     elseif barrel == "kali_ar15_barrel_risc" then length = 4
     elseif barrel == "kali_ar15_barrel_patriot" then length = 5
     end
+    -- UPPER
+    local upper = 0
+    if top == "kali_top_a2" then upper = 1
+    elseif top == "kali_top_a4" then upper = 2
+    elseif top == "kali_top_troy" then upper = 3
+    elseif top == "kali_top_usgi" then upper = 4
+    end
+    --LOWER
     local fcg = 0
-    if sear == "bo1_fcg_s13_ar15" then fcg = 1
-    elseif sear == "kali_fcg_funswitch" then fcg = 2
-    elseif sear == "kali_fcg_funswitch_2" then fcg = 3
-    elseif sear == "kali_fcg_a4" then fcg = 4
-    elseif sear == "bo1_fcg_s16" then fcg = 5
-    elseif sear == "kali_fcg_splitter" then fcg = 6
+    if lower == "kali_fcg_burst" then fcg = 1
+    elseif lower == "kali_fcg_semi" then fcg = 2
+    elseif lower == "kali_fcg_splitter" then fcg = 3
     end
 
     if pap and m635 then
         return 50
-    elseif !pap and m635 and tube and length == 4 and fcg == 2 then
+    elseif !pap and m635 and tube and length == 4 and upper == 1 and fcg == 0 then
         return 50
     elseif pap and mag20 then
         return 36
@@ -1362,7 +1252,7 @@ SWEP.Hook_GetCapacity = function(wep, cap)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    local attached = wep.Attachments[5].Installed
+    local attached = wep.Attachments[6].Installed
 
     local attthing
         if attached == "ubgl_m16_m203" then attthing = 1
@@ -1393,38 +1283,6 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
         return anim .. "_mk"
     end
 end
-
-/*
-local FNV_EE_Trigger = SWEP.FNV_EE_Trigger
-local FNV_EE_Sound = function(self, wep, sound)
-    local mag20 = wep.Attachments[11].Installed == "bo1_ar15_mag20"
-    local wood = wep.Attachments[14].Installed == "bo1_cosmetic_wood"
-    local length = 0
-        if barrel == "kali_ar15_barrel_a2" then length = 1
-        elseif barrel == "kali_ar15_barrel_a4" then length = 3
-        elseif barrel == "kali_ar15_barrel_m203" then length = 1
-        elseif barrel == "kali_ar15_barrel_xm" then length = 2
-        elseif barrel == "kali_ar15_barrel_607" then length = 2
-        elseif barrel == "kali_ar15_barrel_patriot" then length = 2
-        elseif barrel == "kali_ar15_barrel_727" then length = 2
-        elseif barrel == "kali_ar15_barrel_727c" then length = 2
-        elseif barrel == "kali_ar15_barrel_ris" then length = 2
-        elseif barrel == "kali_ar15_barrel_risc" then length = 2
-        end
-    local stock = 0
-        if stocka == "bo1_stock_heavy" then stock = 1
-        elseif stocka == "bo1_stock_medium" then stock = 2
-        elseif stocka == "bo1_stock_light" then stock = 3
-        end
-
-    FNV_EE_Trigger(self, wep, sound)
-    if mag20 and wood and stock == 1 and length == 0 then
-        EmitSound("ArcCW_BO2.FNV_EE")
-    end
-end
-*/
-
---SWEP.FNV_EE_Trigger = FNV_EE_Sound
 
 SWEP.Animations = {
     ["idle"] = {

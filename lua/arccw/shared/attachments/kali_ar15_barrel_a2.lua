@@ -1,4 +1,5 @@
 att.PrintName = "M16A2 20 in. Barrel"
+att.AbbrevName = "A2 Barrel"
 att.Icon = Material("entities/acwatt_bo2_longbarrel.png", "mips smooth")
 att.Description = "Standard 20 inch barrel with a round ribbed handguard."
 

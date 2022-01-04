@@ -1,4 +1,5 @@
 att.PrintName = "RIS 14.5 in. LP Barrel"
+att.AbbrevName = "RIS Modern"
 att.Icon = Material("entities/acwatt_bo2_longbarrel.png", "mips smooth")
 att.Description = "Standard 14.5 inch barrel with a RIS quad-rail handguard, rail covers and a flat cut down front sight."
 
@@ -19,4 +20,4 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.Slot = "kali_barrel"
-att.GivesFlags = {"kali_barrel_mw19", "kali_barrel_carbine", "notwood", "mk12_barrel"}
+att.GivesFlags = {"kali_barrel_mw19", "kali_barrel_carbine", "notwood", "mk12_barrel", "mk12_bipod_ok"}

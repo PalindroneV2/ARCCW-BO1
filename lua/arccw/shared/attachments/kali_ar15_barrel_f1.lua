@@ -1,4 +1,5 @@
 att.PrintName = "FAMAS F1 14.5 in. Barrel"
+att.AbbrevName = "FAMAS"
 att.Icon = Material("entities/acwatt_bo2_longbarrel.png", "mips smooth")
 att.Description = "Short 14.5 inch barrel that adds FAMAS furniture to the weapon. Whatever maniac created this had too much free time on their hands."
 

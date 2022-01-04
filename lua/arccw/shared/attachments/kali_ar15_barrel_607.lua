@@ -1,4 +1,5 @@
 att.PrintName = "M607a 11.5 in. Barrel"
+att.AbbrevName = "CAR-15 SMG"
 att.Icon = Material("entities/acwatt_bo2_longbarrel.png", "mips smooth")
 att.Description = "Short 11.5 inch barrel with a triangular handguard. Cannot accept UBGLs."
 
