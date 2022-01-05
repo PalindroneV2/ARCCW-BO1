@@ -15,6 +15,8 @@ att.SortOrder = 103
 att.IgnorePickX = true
 att.Free = true
 
+att.RandomWeight = 0.5
+
 att.Override_Firemodes = {
     {
         Mode = -3,

@@ -54,7 +54,7 @@ SWEP.Primary.ClipSize = 400 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 1000
 SWEP.ReducedClipSize = 200
 
-SWEP.Recoil = 1.25
+SWEP.Recoil = 0.25
 SWEP.RecoilSide = 0.75
 SWEP.RecoilRise = 0.75
 
@@ -73,8 +73,8 @@ SWEP.NPCWeaponType = "weapon_ar2"
 SWEP.NPCWeight = 1
 
 SWEP.AccuracyMOA = 3 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 300
+SWEP.HipDispersion = 750 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 600
 
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
 SWEP.MagID = "minigun" -- the magazine pool this gun draws from
@@ -99,6 +99,7 @@ SWEP.CamAttachment = 3
 SWEP.SpeedMult = 0.75
 SWEP.SightedSpeedMult = 0.75
 SWEP.SightTime = 1
+SWEP.ShootSpeedMult = 0.25
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 }
@@ -148,6 +149,14 @@ SWEP.ExtraSightDist = 5
 --SWEP.DefaultPoseParams = {["idle"] = 0.5}
 
 SWEP.AttachmentElements = {
+    ["sentrygun"] = {
+        Override_IronSightStruct = {
+            Pos = Vector(-8.25, 0, 1),
+            Ang = Angle(5, 0, 0),
+            Magnification = 1,
+            CrosshairInSights = true,
+        },
+    }
 }
 
 SWEP.Attachments = {

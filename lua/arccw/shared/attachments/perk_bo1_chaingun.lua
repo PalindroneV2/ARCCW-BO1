@@ -18,6 +18,7 @@ att.Mult_HipDispersion = 0
 att.Mult_MoveDispersion = 0
 att.Mult_Recoil = 0
 att.Mult_SpeedMult = 3
+att.Mult_ShootSpeedMult = 5
 att.Mult_SightedSpeedMult = 3
 att.Mult_AccuracyMOA = 1.75
 att.Override_CanBash = false

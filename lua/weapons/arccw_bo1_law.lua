@@ -27,7 +27,7 @@ SWEP.WorldModelOffset = {
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale   =  1.2
 }
-SWEP.WorldModel = "models/weapons/arccw/c_bo1_law.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_bo1_rpg7.mdl"
 SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
@@ -38,7 +38,7 @@ SWEP.Range = 10
 
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
-SWEP.ShootEntity = "arccw_waw_panzer_rocket" -- entity to fire, if any
+SWEP.ShootEntity = "arccw_waw_bazooka_rocket" -- entity to fire, if any
 SWEP.MuzzleVelocity = 5000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
@@ -151,7 +151,7 @@ SWEP.Attachments = {
     }, --3
     {
         PrintName = "Perk",
-        Slot = {"bo1_perk", "bo1_perk_doomrpg"},
+        Slot = {"bo1_perk"},
     }, --4
     {
         PrintName = "Charm",
@@ -207,8 +207,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.RPG_Slide", t = 25 / 30},
-            {s = "ArcCW_BO1.RPG_Futz", t = 33 / 30},
+            {s = "ArcCW_BO1.RPG_Slide", t = 15 / 30},
+            {s = "ArcCW_BO1.RPG_Futz", t = 25 / 30},
         },
     },
     ["holster"] = {
@@ -218,8 +218,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
+            {s = "ArcCW_BO1.RPG_Futz", t = 15 / 30},
             {s = "ArcCW_BO1.RPG_Slide", t = 25 / 30},
-            {s = "ArcCW_BO1.RPG_Futz", t = 33 / 30},
         },
     },
     ["ready"] = {
@@ -229,8 +229,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.RPG_Slide", t = 25 / 30},
-            {s = "ArcCW_BO1.RPG_Futz", t = 33 / 30},
+            {s = "ArcCW_BO1.RPG_Slide", t = 15 / 30},
+            {s = "ArcCW_BO1.RPG_Futz", t = 25 / 30},
         },
     },
     ["fire"] = {

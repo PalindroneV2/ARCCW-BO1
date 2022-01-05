@@ -20,11 +20,11 @@ local function drop(ent, attacker)
     local wep = IsValid(attacker) and attacker:IsPlayer() and attacker:GetActiveWeapon()
     if not IsValid(wep) or not wep.ArcCW or not wep:GetBuff_Override("BO1_VultureAid") then return end
 
-    local mult = ent:IsPlayer() and 3 or (math.Clamp(ent:GetMaxHealth() / 100, 0.1, 6))
+--    local mult = ent:IsPlayer() and 3 or (math.Clamp(ent:GetMaxHealth() / 100, 0.1, 6))
 
     local box = ents.Create("arccw_ammo_bo1_drop")
     box.AmmoType = wep.Primary.Ammo
-    box.AmmoCount = math.max(1, math.Round(math.log(wep:GetCapacity(), 2) * mult))
+    box.AmmoCount = wep:GetCapacity()
     box:SetPos(ent:WorldSpaceCenter())
     box:SetAngles(AngleRand(-360, 360))
     box:Spawn()

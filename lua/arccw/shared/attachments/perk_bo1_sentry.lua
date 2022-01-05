@@ -7,11 +7,12 @@ att.Desc_Cons = {
 }
 att.AutoStats = true
 att.Slot = {"bo1_perk_minigun"}
+att.GivesFlags = {"sentrygun"}
 
 att.NoRandom = true
 
-att.Mult_HipDispersion = 1.5
-att.Mult_MoveDispersion = 1.5
-att.Mult_Recoil = 0.1
+att.Mult_HipDispersion = 0.5
+att.Mult_MoveDispersion = 0.5
 att.Mult_SpeedMult = 0.5
 att.Mult_SightedSpeedMult = 0.5
+att.Mult_ShootSpeedMult = 0.5

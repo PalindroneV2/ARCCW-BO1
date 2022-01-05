@@ -396,78 +396,78 @@ SWEP.Hook_NameChange = function(wep, name)
     local model = "G3"
     local alt = "A4"
 
-    for k = length, length do
-        if length == 0 then -- G3
-            if stock then
-                alt = "A3"
-            end
-            if hk33 then
-                model = "HK33"
-                alt = ""
-                if pap then
-                    brand = ""
-                    model = "HK115"
-                    alt = " Perforator"
-                end
-            end
-            if pap then
-                brand = ""
-                model = "G115"
-                alt = " Perforator"
-            end
-        elseif length == 1 then -- PSG1
-            model = "PSG-1"
+    if length == 0 then -- G3
+        if stock then
+            alt = "A3"
+        end
+        if pap then
+            brand = ""
+            model = "G115"
+            alt = " Perforator"
+        end
+        if hk33 then
+            model = "HK33"
             alt = ""
-            if hk33 then
-                model = "HK33"
-                alt = ""
-                if pap then
-                    brand = ""
-                    model = "HK115"
-                    alt = " Perforator"
-                end
-            end
             if pap then
                 brand = ""
-                model = "PSG-115"
+                model = "HK115"
                 alt = " Perforator"
             end
-        elseif length == 2 then -- HK33
+        end
+    elseif length == 1 then -- PSG1
+        model = "PSG-1"
+        alt = ""
+        if hk33 then
+            model = "HK33"
+            alt = ""
+            if pap then
+                brand = ""
+                model = "HK115"
+                alt = " Perforator"
+            end
+        end
+        if pap then
+            brand = ""
+            model = "PSG-115"
+            alt = " Perforator"
+        end
+    elseif length == 2 then -- HK33
+        model = "HK31"
+        alt = "A3"
+        if stock then
+            alt = "A2"
+        end
+        if pap then
+            brand = ""
+            model = "G115"
+            alt = " Perforator"
+        end
+        if hk33 then
             model = "HK33"
             alt = "A3"
             if stock then
                 alt = "A2"
             end
-            if hk33 then
-                model = "HK33"
-                alt = ""
-                if pap then
-                    brand = ""
-                    model = "HK115"
-                    alt = " Perforator"
-                end
-            end
             if pap then
                 brand = ""
-                model = "G115"
+                model = "HK115"
                 alt = " Perforator"
             end
-        elseif length == 3 then -- HK53
-            if stock then
-                alt = "A3"
-            end
-            if hk33 then
-                model = "HK53"
-                alt = ""
-                if pap then
-                    brand = ""
-                    model = "HK115"
-                    alt = " Perforator"
-                end
-            end
+        end
+    elseif length == 3 then -- HK53
+        model = "HK51"
+        alt = ""
+        if pap then
+            brand = ""
+            model = "G115"
+            alt = " Perforator"
+        end
+        if hk33 then
+            model = "HK53"
+            alt = ""
             if pap then
                 brand = ""
-                model = "G115"
+                model = "HK115"
                 alt = " Perforator"
             end
         end
