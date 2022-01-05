@@ -3,7 +3,7 @@ AddCSLuaFile()
 ENT.Base                      = "arccw_ammo"
 ENT.PrintName                 = "Vulture Aid"
 ENT.Spawnable                 = false
-ENT.Model                     = "models/items/sniper_round_box.mdl"
+ENT.Model                     = "models/weapons/arccw/item/bo1_scavenger_pack.mdl"
 
 function ENT:Initialize()
     if engine.ActiveGamemode() == "terrortown" and ArcCW.TTTReplaceTable then
