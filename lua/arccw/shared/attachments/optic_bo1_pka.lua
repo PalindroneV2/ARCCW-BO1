@@ -20,7 +20,7 @@ att.AdditionalSights = {
     {
         Pos = Vector(0, 10, -1.375),
         Ang = Angle(0, 0, 0),
-        Magnification = 1.25,
+        Magnification = 1,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
         ZoomLevels = 1,
         ZoomSound = "weapons/arccw/fiveseven/fiveseven_slideback.wav",

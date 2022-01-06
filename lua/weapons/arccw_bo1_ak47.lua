@@ -317,7 +317,7 @@ SWEP.Attachments = {
     {
         PrintName = "Furniture",
         DefaultAttName = "Standard Bakelite",
-        Slot = {"bo1_cosmetic_ak", "bo1_cosmetic_redson"},
+        Slot = {"bo1_cosmetic_ak", "bo1_cosmetic_redson", "bo1_cosmetic_golden"},
     }, --13
     { --14
         PrintName = "Charm",
@@ -388,13 +388,12 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif wep.Attachments[13].Installed == "bo1_cosmetic_bake" then camo = 4
     elseif wep.Attachments[13].Installed == "bo1_cosmetic_odgreen" then camo = 6
     elseif wep.Attachments[13].Installed == "bo1_cosmetic_redson" then camo = 8
+    elseif wep.Attachments[13].Installed == "bo1_cosmetic_golden" then camo = 10
     end
 
-    for k = camo, camo do
-        vm:SetSkin(k)
-        if papcamo then
-            vm:SetSkin(k + 1)
-        end
+    vm:SetSkin(camo)
+    if papcamo then
+        vm:SetSkin(camo + 1)
     end
 
     local mag = wep.Attachments[9].Installed == "bo1_ak47_545"

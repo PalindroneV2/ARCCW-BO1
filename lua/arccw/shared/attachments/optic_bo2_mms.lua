@@ -24,8 +24,10 @@ att.AdditionalSights = {
         ScrollFunc = ArcCW.SCROLL_NONE,
         IgnoreExtra = false,
         Thermal = true,
+        ThermalFullColor = true,
         ThermalScopeColor = Color(255, 255, 255),
         ThermalHighlightColor = Color(255, 0, 0),
+        Contrast = 0.9, -- allows you to adjust the values for contrast and brightness when either NVScope or Thermal is enabled.
     }
 }
 

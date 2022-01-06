@@ -307,7 +307,7 @@ SWEP.Attachments = {
     {
         PrintName = "Furniture",
         DefaultAttName = "Standard Wood",
-        Slot = {"bo1_cosmetic_74u", "bo1_cosmetic_ak"},
+        Slot = {"bo1_cosmetic_74u", "bo1_cosmetic_ak", "bo1_cosmetic_golden"},
     }, --12
     {
         PrintName = "Charm",
@@ -378,14 +378,12 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     if wep.Attachments[12].Installed == "bo1_cosmetic_74u" then camo = 2
     elseif wep.Attachments[12].Installed == "bo1_cosmetic_bake" then camo = 4
     elseif wep.Attachments[12].Installed == "bo1_cosmetic_odgreen" then camo = 6
-    elseif wep.Attachments[12].Installed == "bo1_cosmetic_red" then camo = 8
+    elseif wep.Attachments[12].Installed == "bo1_cosmetic_golden" then camo = 8
     end
 
-    for k = camo, camo do
-        vm:SetSkin(k)
-        if papcamo then
-            vm:SetSkin(k + 1)
-        end
+    vm:SetSkin(camo)
+    if papcamo then
+        vm:SetSkin(camo + 1)
     end
 
     local light = wep.Attachments[7].Installed == "bo1_stock_light"

@@ -1,4 +1,4 @@
-att.PrintName = "Leupold Mk 4 HAMR (6x)"
+att.PrintName = "Leupold Mk 4 HAMR (3.5x)"
 att.Icon = Material("entities/acwatt_optic_bo2_hamr.png", "mips smooth")
 att.Description = "Black Ops 2 Hybrid Scope. Medium range combat scope for improved precision at longer ranges."
 
@@ -21,7 +21,7 @@ att.AdditionalSights = {
     {
         Pos = Vector(0, 8.5, -1.05),
         Ang = Angle(0, 0, 0),
-        Magnification = 1.5,
+        Magnification = 1,
         CrosshairInSights = false,
         IgnoreExtra = true,
         HolosightBone = "bottom",
@@ -33,7 +33,7 @@ att.AdditionalSights = {
             HolosightPiece = "models/weapons/arccw/atts/bo2_hamr_hsp.mdl",
             Colorable = true,
             HolosightBlackbox = true,
-            HolosightMagnification = 4,
+            HolosightMagnification = 3.5,
         },
     },
     {

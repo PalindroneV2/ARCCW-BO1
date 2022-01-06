@@ -904,8 +904,11 @@ SWEP.Hook_NameChange = function(wep, name)
                 if ris == 1 then
                     brand = ""
                     model = "k. 18"
-                    alteration = " Mod 1"
+                    alteration = " Mod 0"
                     desc2 = "\n\nCarbine variant of the M16A4 improvement upon the M4 Carbine by using a full-auto selector rather than burst. Improved shorter barrel for close quarters combat."
+                    if wep.Attachments[3].Installed or wep.Attachments[17].Installed or wep:GetBuff_Override("AltIrons") or wep:GetBuff_Override("AltIrons2") then
+                        alteration = " Mod 1"
+                    end
                 end
             end
         elseif fcg == 1 then

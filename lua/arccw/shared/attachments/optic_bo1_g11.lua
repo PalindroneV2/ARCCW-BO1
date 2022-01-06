@@ -1,4 +1,4 @@
-att.PrintName = "G11 Scope (1.5x)"
+att.PrintName = "G11 Scope (3.5x)"
 att.Icon = Material("entities/acwatt_optic_bo1_g11.png", "mips smooth")
 att.Description = "Medium range combat scope made specifically for the G11."
 
@@ -20,7 +20,7 @@ att.AdditionalSights = {
     {
         Pos = Vector(0.025, 9, -1.4),
         Ang = Angle(0, 0, 0),
-        Magnification = 1.25,
+        Magnification = 1.1,
         IgnoreExtra = true
     },
 }
@@ -35,6 +35,6 @@ att.Colorable = true
 
 att.HolosightBlackbox = true
 
-att.HolosightMagnification = 1.5
+att.HolosightMagnification = 3.5
 
 att.Mult_SightTime = 1.05

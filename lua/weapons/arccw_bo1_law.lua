@@ -258,8 +258,8 @@ SWEP.Animations = {
         LHIKOut = 0.2,
         MinProgress = 0.1,
         SoundTable = {
-            {s = "ArcCW_BO1.RPG_Slide", t = 25 / 30},
-            {s = "ArcCW_BO1.RPG_Futz", t = 33 / 30},
+            {s = "ArcCW_BO1.RPG_Slide", t = 0.75},
+            {s = "ArcCW_BO1.RPG_Futz", t = 1.25},
             {s = "ArcCW_BO1.RPG_Futz", t = 4.1},
             {s = "ArcCW_BO1.RPG_Slide", t = 4.5},
         },

@@ -350,6 +350,17 @@ SWEP.Attachments = {
         Slot = {"bo1_perk"}
     }, --14
     {
+        PrintName = "Sling",
+        Slot = "car15_sling",
+        FreeSlot = true,
+    }, --15
+    {
+        PrintName = "Cosmetic",
+        Slot = "bo1_cosmetic",
+        DefaultAttName = "Black Polymer",
+        FreeSlot = true,
+    }, --16
+    {
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
@@ -361,17 +372,6 @@ SWEP.Attachments = {
             wang = Angle(-175, -175, 0)
         },
     }, --15
-    {
-        PrintName = "Sling",
-        Slot = "car15_sling",
-        FreeSlot = true,
-    }, --16
-    {
-        PrintName = "Cosmetic",
-        Slot = "bo1_cosmetic",
-        DefaultAttName = "Black Polymer",
-        FreeSlot = true,
-    }, --17
 }
 
 SWEP.RejectAttachments = {
@@ -434,13 +434,13 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local iron1 = wep:GetBuff_Override("AltIrons")
     local iron2 = wep:GetBuff_Override("AltIrons2")
     local irons = iron1 or iron2
-    local Sling = wep.Attachments[16].Installed
+    local Sling = wep.Attachments[15].Installed
     local optic = wep.Attachments[2].Installed
     local camo = 0
-    if wep.Attachments[17].Installed == "bo1_cosmetic_wood" then camo = 4
-    elseif wep.Attachments[17].Installed == "bo1_cosmetic_tan" then camo = 8
-    elseif wep.Attachments[17].Installed == "bo1_cosmetic_odgreen" then camo = 12
-    elseif wep.Attachments[17].Installed == "bo1_cosmetic_red" then camo = 16
+    if wep.Attachments[16].Installed == "bo1_cosmetic_wood" then camo = 4
+    elseif wep.Attachments[16].Installed == "bo1_cosmetic_tan" then camo = 8
+    elseif wep.Attachments[16].Installed == "bo1_cosmetic_odgreen" then camo = 12
+    elseif wep.Attachments[16].Installed == "bo1_cosmetic_red" then camo = 16
     end
 
     if irons and Sling then vm:SetBodygroup(3, 2)

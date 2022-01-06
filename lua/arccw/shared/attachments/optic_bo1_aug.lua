@@ -20,19 +20,32 @@ att.AdditionalSights = {
     {
         Pos = Vector(0.025, 8, -5.675),
         Ang = Angle(0, 0, 0),
+        Magnification = 1,
+        IgnoreExtra = true,
+        HolosightBone = "holosight",
+        HolosightData = {
+            Holosight = true,
+            HolosightBlackbox = true,
+            HolosightNoFlare = true,
+            HolosightSize = 12,
+            HolosightMagnification = 1.5,
+            HolosightReticle = Material("hud/scopes/bo1_aug_crosshair.png", "mips smooth"),
+            HolosightPiece = "models/weapons/arccw/atts/bo1_swarovski_hsp.mdl",
+        }
+    },
+    {
+        Pos = Vector(0.025, 8, -6.3),
+        Ang = Angle(0.3, 0, 0),
         Magnification = 1.25,
-        IgnoreExtra = true
-    }
+        CrosshairInSights = false,
+        ScrollFunc = ArcCW.SCROLL_ZOOM,
+        IgnoreExtra = true,
+        HolosightData = {
+            Holosight = false,
+        },
+    },
 }
 
-att.Holosight = true
-att.HolosightReticle = Material("hud/scopes/bo1_aug_crosshair.png", "mips smooth")
-att.HolosightNoFlare = true
-att.HolosightSize = 12
-att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo1_swarovski_hsp.mdl"
 
-att.HolosightBlackbox = true
-
-att.HolosightMagnification = 1.5
 att.Mult_SightTime = 1.05
