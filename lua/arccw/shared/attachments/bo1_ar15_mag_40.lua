@@ -17,3 +17,5 @@ att.Override_ClipSize = 40
 att.Mult_ReloadTime = 1.15
 att.Mult_SightTime = 1.25
 att.Mult_HipDispersion = 1.25
+
+att.RandomWeight = 0.5

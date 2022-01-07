@@ -10,6 +10,8 @@ att.AutoStats = true
 att.SortOrder = 98
 att.Slot = {"kali_stock"}
 
+att.RandomWeight = 0.5
+
 /*
 att.Mult_Recoil = 0.75
 att.Mult_RecoilSide = 0.75

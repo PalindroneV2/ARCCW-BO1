@@ -24,4 +24,5 @@ att.Mult_SightedSpeedMult = 0.85
 att.GivesFlags = {"famas_stock", "not_patriot"}
 --att.RequireFlags = {"kali_barrel_famas"}
 att.HideIfBlocked = true
-att.NoRandom = true
+
+att.RandomWeight = 0.01

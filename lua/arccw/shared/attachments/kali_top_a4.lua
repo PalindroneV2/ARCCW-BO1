@@ -14,3 +14,5 @@ att.Free = true
 att.Kali_A4 = true
 
 att.GivesFlags = {"a4top", "flattop_carry"}
+
+att.RandomWeight = 0.5

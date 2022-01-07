@@ -7,6 +7,8 @@ att.SortOrder = 94
 
 att.AutoStats = true
 
+att.RandomWeight = 0.75
+
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

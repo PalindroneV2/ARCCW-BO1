@@ -9,6 +9,9 @@ att.Free = true
 att.AutoStats = true
 att.IgnorePickX = true
 
+
+att.RandomWeight = 0.2
+
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

@@ -12,6 +12,8 @@ att.Slot = {"kali_ar15_mag"}
 att.ActivateElements = {"patriot_mag"}
 att.GivesFlags = {"mag_patriot"}
 
+att.RandomWeight = 0.05
+
 att.SortOrder = 97
 att.Override_ClipSize = 100
 att.Mult_ReloadTime = 1.5

@@ -10,8 +10,7 @@ att.GivesFlags = {"bo1_3burst"}
 att.SortOrder = 101
 
 att.Mult_Recoil = 0.9
-att.Mult_SightTime = 1.05
-att.Mult_SightedSpeedMult = 1.05
+att.Mult_HipDispersion = 0.9
 
 att.Override_Firemodes = {
     {
@@ -26,8 +25,6 @@ att.Override_Firemodes = {
         Mode = 0
     }
 }
-att.Mult_Recoil = 0.85
-att.Mult_HipDispersion = 0.9
 
 att.Hook_Compatible = function(wep)
     local auto = false

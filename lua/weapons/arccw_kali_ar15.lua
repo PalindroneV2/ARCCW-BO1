@@ -469,14 +469,14 @@ SWEP.Attachments = {
         PrintName = "Upper Receiver",
         Slot = "kali_top",
         DefaultAttName = "A1 Upper",
-        RandomChance = 5,
+        RandomChance = 2.5,
         FreeSlot = true,
     },--1
     {
         PrintName = "Lower Receiver",
         Slot = {"fcg_kali"},
         DefaultAttName = "Full-Auto",
-        RandomChance = 0.5,
+        RandomChance = 1,
         FreeSlot = true,
     }, --2
     {
@@ -521,7 +521,7 @@ SWEP.Attachments = {
     }, --5
     {
         PrintName = "Underbarrel",
-        Slot = {"ubgl", "bo1_m203", "bo1_mk"},
+        Slot = {"bo1_m203", "bo1_mk"},
         Bone = "tag_weapon",
         VMScale = Vector(1, 1, 1),
         WMScale = Vector(1, 1, 1),
@@ -532,6 +532,7 @@ SWEP.Attachments = {
             wang = Angle(170.5, -180, 0),
         },
         MergeSlots = {7, 8},
+        RandomChance = 2.5,
     }, --6
     {
         Hidden = true,
@@ -577,7 +578,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         Slot = {"kali_ar15_mag"},
         DefaultAttName = "Standard Magazine",
-        RandomChance = 0.1,
+        RandomChance = 0.5,
     }, --11
     {
         PrintName = "Ammo Type",
@@ -1424,8 +1425,8 @@ SWEP.Animations = {
         Source = "draw",
         Time = 1,
         LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
+        LHIKIn = nil,
+        LHIKOut = 1,
     },
     ["holster"] = {
         Source = "holster",
@@ -1438,8 +1439,8 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 1,
         LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
+        LHIKIn = nil,
+        LHIKOut = 0.6,
     },
     ["fire"] = {
         Source = {"fire"},

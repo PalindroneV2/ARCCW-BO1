@@ -14,6 +14,8 @@ att.Desc_Cons = {
 att.Slot = "kali_barrel"
 att.GivesFlags = {"kali_barrel_607", "kali_barrel_carbine", "kali_barrel_short"}
 
+att.RandomWeight = 0.1
+
 att.Mult_Range = 0.85
 att.Mult_Recoil = 1.1
 att.Mult_RecoilSide = 1.1

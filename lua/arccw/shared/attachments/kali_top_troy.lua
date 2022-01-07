@@ -17,3 +17,5 @@ att.ActivateElements = {"kali_nocarry"}
 att.AltIrons = true
 att.HideIfBlocked = true
 att.IgnorePickX = true
+
+att.RandomWeight = 0.25

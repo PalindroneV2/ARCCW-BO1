@@ -14,3 +14,5 @@ att.Free = true
 att.Kali_A2 = true
 
 att.GivesFlags = {"a2top"}
+
+att.RandomWeight = 0.5

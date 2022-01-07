@@ -15,6 +15,8 @@ att.Mult_SightedSpeedMult = 1.1
 att.Mult_SightTime = 0.85
 att.Mult_AccuracyMOA = 1.1
 
+att.RandomWeight = 0.5
+
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

@@ -12,6 +12,8 @@ att.Slot = {"kali_ar15_mag"}
 att.ActivateElements = {"9mm_mag"}
 att.GivesFlags = {"m635"}
 
+att.RandomWeight = 0.1
+
 att.SortOrder = 98
 
 att.Override_Trivia_Calibre = "9x19mm Parabellum"

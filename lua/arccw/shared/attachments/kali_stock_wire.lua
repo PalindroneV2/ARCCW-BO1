@@ -24,7 +24,8 @@ att.Mult_SightedSpeedMult = 1.4
 */
 
 att.GivesFlags = {"wire_stock", "not_patriot"}
-att.NoRandom = true
+
+att.RandomWeight = 0.05
 
 att.ToggleStats = {
     {
