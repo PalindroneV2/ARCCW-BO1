@@ -13,3 +13,5 @@ att.Mult_HolsterTime = 0.5
 att.Mult_SightTime = 0.75
 
 att.AttachSound = "weapons/arccw/bo1_perks/perk_speed.wav"
+
+att.BO1_SpeedCola = true

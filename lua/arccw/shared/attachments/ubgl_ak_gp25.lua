@@ -72,13 +72,15 @@ att.UBGL_Reload = function(wep, ubgl)
 
     wep:SetNextSecondaryFire(CurTime() + 3)
 
+    if wep:GetBuff_Override("BO1_SpeedCola") then
+        wep:SetNextSecondaryFire(CurTime() + 1.5)
+    end
+
     wep:PlayAnimation("reload_glsetup")
 
-    /*wep:PlaySoundTable({
-        {s = "ArcCW_BO1.M203_40mmOut", t = 18 / 30},
-        {s = "ArcCW_BO1.M203_40mmIn", t = 60 / 30},
-        {s = "ArcCW_BO1.M203_Close", t = 71 / 30},
-    })*/
+    if wep:GetBuff_Override("BO1_SpeedCola") then
+        wep:PlayAnimation("reload_glsetup_soh")
+    end
 
     local reserve = Ammo(wep)
 

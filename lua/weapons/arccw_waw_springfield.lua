@@ -542,4 +542,18 @@ SWEP.Animations = {
             {s = "ArcCW_WAW.RGren_Click", t = 24 / 30},
         }
     },
+    ["reload_ubgl_soh"] = {
+        Source = "reload_glsetup",
+        Time = 64 / 60,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnimStartTime = 0.1,
+        LHIK = true,
+        LHIKIn = 0.125,
+        LHIKOut = 0.125,
+        SoundTable = {
+            {s = "ArcCW_WAW.RGren_Futz", t = 16 / 60},
+            {s = "ArcCW_WAW.RGren_Load", t = 19 / 60},
+            {s = "ArcCW_WAW.RGren_Click", t = 24 / 60},
+        }
+    },
 }

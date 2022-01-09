@@ -320,6 +320,9 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     end
 
     if attthing == 1 and wep:GetInUBGL() then
+        if wep:GetBuff_Override("BO1_SpeedCola") and (anim == "reload_glsetup") then
+            return "reload_glsetup_soh"
+        end
         return anim .. "_glsetup"
     elseif attthing == 1 then
         return anim .. "_m203"
@@ -330,9 +333,15 @@ SWEP.Hook_SelectReloadAnimation = function(wep, curanim)
     local fastmag = wep:GetBuff_Override("BO1_FastMag")
 
     if curanim == "reload" and fastmag then
+        if wep:GetBuff_Override("BO1_UBGL") then
+            return curanim .. "_m203_fast"
+        end
         return curanim .. "_fast"
     end
     if curanim == "reload_empty" and fastmag then
+        if wep:GetBuff_Override("BO1_UBGL") then
+            return curanim .. "_m203_fast"
+        end
         return curanim .. "_fast"
     end
 end

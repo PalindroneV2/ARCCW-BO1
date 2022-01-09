@@ -520,6 +520,9 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
     end
 
     if attthing == 1 and wep:GetInUBGL() then
+        if wep:GetBuff_Override("BO1_SpeedCola") and (anim == "reload_glsetup") then
+            return "reload_glsetup_soh"
+        end
         return anim .. "_glsetup"
     elseif attthing == 1 then
         return anim .. "_m203"
@@ -728,6 +731,18 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.M203_40mmOut", t = 0.175},
             {s = "ArcCW_BO1.M203_40mmIn", t = 1.5},
             {s = "ArcCW_BO1.M203_Close", t = 2.25},
+        }
+    },
+    ["reload_glsetup_soh"] = {
+        Source = "reload_glsetup",
+        Time = 3 / 2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnimStartTime = 0.1,
+        SoundTable = {
+            {s = "ArcCW_BO1.M203_Open", t = 0.125 / 2},
+            {s = "ArcCW_BO1.M203_40mmOut", t = 0.175 / 2},
+            {s = "ArcCW_BO1.M203_40mmIn", t = 1.5 / 2},
+            {s = "ArcCW_BO1.M203_Close", t = 2.25 / 2},
         }
     },
     ["enter_sprint_glsetup"] = {

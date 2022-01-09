@@ -73,7 +73,15 @@ att.UBGL_Reload = function(wep, ubgl)
 
     wep:SetNextSecondaryFire(CurTime() + 3)
 
+    if wep:GetBuff_Override("BO1_SpeedCola") then
+        wep:SetNextSecondaryFire(CurTime() + 1.5)
+    end
+
     wep:PlayAnimation("reload_glsetup")
+
+    if wep:GetBuff_Override("BO1_SpeedCola") then
+        wep:PlayAnimation("reload_glsetup_soh")
+    end
 
     /*
     wep:PlaySoundTable({

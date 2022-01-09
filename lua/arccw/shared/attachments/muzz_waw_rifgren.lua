@@ -57,7 +57,15 @@ att.UBGL_Reload = function(wep, ubgl)
 
     wep:SetNextSecondaryFire(CurTime() + 2)
 
+    if wep:GetBuff_Override("BO1_SpeedCola") then
+        wep:SetNextSecondaryFire(CurTime() + 1)
+    end
+
     wep:PlayAnimation("reload_ubgl")
+
+    if wep:GetBuff_Override("BO1_SpeedCola") then
+        wep:PlayAnimation("reload_ubgl_soh")
+    end
 
     local reserve = Ammo(wep)
 
