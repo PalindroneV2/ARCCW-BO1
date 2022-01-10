@@ -94,7 +94,7 @@ SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 1
 SWEP.CamAttachment = 3
 
-SWEP.SpeedMult = 0.85
+SWEP.SpeedMult = 0.9
 SWEP.SightedSpeedMult = 0.5
 SWEP.SightTime = 0.3
 
@@ -269,8 +269,8 @@ SWEP.Attachments = {
 }
 
 SWEP.Hook_NameChange = function(wep, name)
-    local pap = wep.Attachments[6].Installed == "ammo_papunch"
-    local snipe = wep.Attachments[9].Installed == "optic_waw_mosin"
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local snipe = wep:GetBuff_Override("WAW_Mosin_Scope")
 
     if pap and snipe then
         return "Zaitsev Zpecial"
@@ -281,11 +281,11 @@ end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[6].Installed == "ammo_papunch"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
+    local snipe = wep:GetBuff_Override("WAW_Mosin_Scope")
 
-    if papcamo then return vm:SetSkin(1) end
+    if papcamo then vm:SetSkin(1) end
 
-    local snipe = wep.Attachments[9].Installed == "optic_waw_mosin"
     if snipe then
         wep.CustomizePos = Vector(20, 0, -3)
         wep.CustomizeAng = Angle(15, 40, 25)
@@ -298,9 +298,8 @@ end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
 
-    local pap = wep.Attachments[6].Installed == "ammo_papunch"
     local snipe = 0
-    if wep.Attachments[9].Installed == "optic_waw_mosin" then snipe = 1 end
+    if wep:GetBuff_Override("WAW_Mosin_Scope") then snipe = 1 end
 
     if wep.Attachments[2].Installed == "muzz_waw_bayonet" and anim == "bash" then
         return "bash_bayo"
@@ -315,14 +314,19 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
         wep.ActiveAng = Angle(0, 0, 0)
     end
 
-    if (anim == "sgreload_start") and snipe == 1 and pap then
-        return anim .. "_pap"
-    end
-
     if wep:Clip1() == 0 then
         return anim .. "_empty"
     end
 
+end
+
+SWEP.Hook_SelectInsertAnimation = function(wep, data)
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local snipe = wep:GetBuff_Override("WAW_Mosin_Scope")
+
+    if pap and snipe then
+        return {count = 9, anim = "sgreload_insert"}
+    end
 end
 
 SWEP.Animations = {
@@ -346,7 +350,7 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 64 / 30,
+        Time = 31 / 30,
         LHIK = true,
         LHIKIn = 0.25,
         LHIKOut = 0.25,
@@ -421,7 +425,7 @@ SWEP.Animations = {
     },
     ["ready_snipe"] = {
         Source = "first_draw_snipe",
-        Time = 31 / 30,
+        Time = 45 / 30,
         LHIK = true,
         LHIKIn = 0.25,
         LHIKOut = 0.25,

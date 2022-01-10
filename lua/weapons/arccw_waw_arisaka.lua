@@ -278,7 +278,7 @@ SWEP.Attachments = {
 }
 
 SWEP.Hook_NameChange = function(wep, name)
-    local pap = wep.Attachments[6].Installed == "ammo_papunch"
+    local pap = wep:GetBuff_Override("PackAPunch")
     local snipe = wep.Attachments[9].Installed == "optic_waw_kogaku"
 
     if pap and snipe then
@@ -290,9 +290,9 @@ end
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[6].Installed == "ammo_papunch"
+    local pap = wep:GetBuff_Override("PackAPunch")
 
-    if papcamo then return vm:SetSkin(1) end
+    if pap then vm:SetSkin(1) end
 
     if wep:Clip2() == 1 then vm:SetBodygroup(3,1) end
 
@@ -301,8 +301,6 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-
-    local pap = wep.Attachments[6].Installed == "ammo_papunch"
     local snipe = 0
     if wep.Attachments[9].Installed == "optic_waw_kogaku" then snipe = 1 end
 
@@ -314,14 +312,20 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
         return anim .. "_scope"
     end
 
-    if (anim == "sgreload_start") and snipe == 1 and pap then
-        return anim .. "_pap"
-    end
-
     if wep:Clip1() == 0 then
         return anim .. "_empty"
     end
 
+end
+
+
+SWEP.Hook_SelectInsertAnimation = function(wep, data)
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local snipe = wep.Attachments[9].Installed == "optic_waw_kogaku"
+
+    if pap and snipe then
+        return {count = 9, anim = "sgreload_insert"}
+    end
 end
 
 SWEP.Animations = {

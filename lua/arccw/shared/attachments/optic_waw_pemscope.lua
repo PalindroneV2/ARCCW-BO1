@@ -28,9 +28,9 @@ att.AdditionalSights = {
 }
 
 att.Holosight = true
-att.HolosightReticle = Material("hud/scopes/bo1_acog_cross.png", "mips smooth")
+att.HolosightReticle = Material("hud/scopes/waw_telescopic.png", "mips smooth")
 att.HolosightNoFlare = true
-att.HolosightSize = 15
+att.HolosightSize = 10.5
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/waw_pemscope_hsp.mdl"
 att.Colorable = true

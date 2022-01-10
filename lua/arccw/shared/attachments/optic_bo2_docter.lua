@@ -13,12 +13,12 @@ att.AutoStats = true
 att.Slot = {"optic_lp", "bo1_reddots"}
 
 att.Model = "models/weapons/arccw/atts/bo2_docter.mdl"
-att.ModelOffset = Vector(0, 0, -0.15)
+att.ModelOffset = Vector(0, 0.02, -0.15)
 att.OffsetAng = Angle(0, 0, 0)
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 10, -0.55),
+        Pos = Vector(-0.02, 10, -0.55),
         Ang = Angle(0, 0, 0),
         Magnification = 1.1,
         ScrollFunc = ArcCW.SCROLL_NONE,

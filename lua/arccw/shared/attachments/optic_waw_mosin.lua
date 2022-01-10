@@ -15,6 +15,7 @@ att.Desc_Neutrals = {"bo.desc"}
 
 att.AutoStats = true
 att.Slot = {"waw_rus_scope"}
+att.WAW_Mosin_Scope = true
 
 att.Mult_AccuracyMOA = 0.5
 
@@ -34,7 +35,7 @@ att.AdditionalSights = {
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/waw_telescopic.png", "mips smooth")
 att.HolosightNoFlare = true
-att.HolosightSize = 12
+att.HolosightSize = 6.5
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/waw_rus_scope_hsp.mdl"
 att.Colorable = true

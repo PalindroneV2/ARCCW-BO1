@@ -16,7 +16,7 @@ att.Model = "models/weapons/arccw/atts/bo1_coltscope.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.025, 8, -1.06),
+        Pos = Vector(-0, 8, -1.06),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         IgnoreExtra = true
@@ -26,7 +26,7 @@ att.AdditionalSights = {
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/bo1_acog_cross.png", "mips smooth")
 att.HolosightNoFlare = true
-att.HolosightSize = 17.5
+att.HolosightSize = 13.5
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo1_coltscope_hsp.mdl"
 att.Colorable = true

@@ -1,5 +1,5 @@
 att.PrintName = "Slug Rounds"
-att.Icon = Material("entities/acwatt_ammo_bo1_hp.png", "mips smooth")
+att.Icon = Material("entities/acwatt_ammo_bo1_fmj.png", "mips smooth")
 att.Description = "Load one large projectile instead of pellets, allowing for more accurate shooting."
 att.Desc_Pros = {
 }

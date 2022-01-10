@@ -307,6 +307,7 @@ end
 SWEP.Hook_TranslateAnimation = function(wep, anim)
 
     local pap = wep:GetBuff_Override("PackAPunch")
+    local snipe = wep.Attachments[8].Installed == "optic_waw_unertl"
 
     if wep.Attachments[2].Installed == "muzz_waw_bayonet" and anim == "bash" then
         return "bash_bayo"
@@ -320,6 +321,15 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
         return anim .. "_empty"
     end
 
+end
+
+SWEP.Hook_SelectInsertAnimation = function(wep, data)
+    local pap = wep:GetBuff_Override("PackAPunch")
+    local snipe = wep.Attachments[8].Installed == "optic_waw_unertl"
+
+    if pap and snipe then
+        return {count = 9, anim = "sgreload_insert"}
+    end
 end
 
 SWEP.Animations = {
