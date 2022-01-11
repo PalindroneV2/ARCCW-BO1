@@ -19,7 +19,7 @@ att.GivesFlags = {"susat_norail"}
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 8, -1.8),
+        Pos = Vector(0, 8, -1.785),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
@@ -32,7 +32,7 @@ att.AdditionalSights = {
             HolosightMagnificationMin = 2,
             HolosightMagnificationMax = 4,
             HolosightNoFlare = true,
-            HolosightSize = 10,
+            HolosightSize = 9,
             HolosightBlackbox = true,
             HolosightReticle = Material("hud/scopes/bo1_susat.png", "mips smooth"),
             HolosightPiece = "models/weapons/arccw/atts/bo1_susat_hsp.mdl",

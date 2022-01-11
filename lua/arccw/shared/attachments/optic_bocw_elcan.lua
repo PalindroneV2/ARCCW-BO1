@@ -16,7 +16,7 @@ att.Model = "models/weapons/arccw/atts/bocw_elcan.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 9, -1.3),
+        Pos = Vector(0, 9, -1.315),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         IgnoreExtra = true
@@ -26,7 +26,7 @@ att.AdditionalSights = {
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/bocw_elcan_cross.png", "mips smooth")
 att.HolosightNoFlare = true
-att.HolosightSize = 12.5
+att.HolosightSize = 9.6
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bocw_elcan_hsp.mdl"
 att.Colorable = true

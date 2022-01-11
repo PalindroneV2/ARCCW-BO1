@@ -614,15 +614,12 @@ SWEP.Attachments = {
     }, --16
     {
         Hidden = true,
-        Slot = "mw3e_rsass_scope",
+        Slot = "kali_rsass_scope",
         Bone = "j_gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(-0.65, 0, 0.8), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
-        HideIfBlocked = true,
-        RequireFlags = {"a4top"},
-        ExcludeFlags = {"kali_barrel_famas"},
         InstalledEles = {"mount"},
     }, --17
 }
