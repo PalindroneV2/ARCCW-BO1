@@ -636,6 +636,7 @@ SWEP.Hook_NameChange = function(wep, name)
     local wood = wep.Attachments[14].Installed == "cde_cosmetic_wood"
     local green = wep.Attachments[14].Installed == "cde_cosmetic_od"
     local sling = wep.Attachments[16].Installed == "kali_ar15_sling"
+    local ncr = 0
 
     --BARRELS
     local ris = 0
@@ -768,6 +769,7 @@ SWEP.Hook_NameChange = function(wep, name)
                 alteration = ""
                 desc1 = ""
                 desc2 = "The standard issue rifle of the New California Republic."
+                ncr = 1
             end
             if length == 2 then
                 prefix = "CAR-"
@@ -1039,6 +1041,12 @@ SWEP.Hook_NameChange = function(wep, name)
     end
 
     wep.Trivia_Desc = desc1 .. desc2
+
+    if ncr == 1 then
+        wep.Trivia_Country = "New California Republic"
+    else
+        wep.Trivia_Country = "United States of America"
+    end
 
     return brand .. prefix .. model .. alteration
 end

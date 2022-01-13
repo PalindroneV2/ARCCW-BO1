@@ -5,16 +5,16 @@ SWEP.AdminOnly = false
 
 
 -- This one is so yall are aware.
-SWEP.PrintName = "IWI X95"
+SWEP.PrintName = "IWI MTAR-21"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = [[
     Israeli bullpup carbine in 5.56mm NATO.
 ]]
-SWEP.Trivia_Manufacturer = "SIG-Sauer"
+SWEP.Trivia_Manufacturer = "IWI"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
-SWEP.Trivia_Country = "Switzerland"
-SWEP.Trivia_Year = 1990
+SWEP.Trivia_Country = "Israel"
+SWEP.Trivia_Year = 2009
 
 SWEP.Slot = 2
 
