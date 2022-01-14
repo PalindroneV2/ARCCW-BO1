@@ -1,6 +1,6 @@
 att.PrintName = "Millimeter Scanner (HOLO)"
 att.Icon = Material("entities/acwatt_optic_bo2_mms.png", "mips smooth")
-att.Description = "Black Ops 2 Holographic Sight. Standard holographic sight. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons."
+att.Description = "Black Ops 2 Holographic Sight. Low magnification optical sight that highlights enemies in red without compromising the quality of the image projected by the small monitor."
 
 att.SortOrder = 1
 

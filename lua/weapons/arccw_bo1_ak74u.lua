@@ -226,7 +226,7 @@ SWEP.Attachments = {
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0.5, 0, 0),
-        MergeSlots = {14, 15}
+        MergeSlots = {14, 15, 16}
     }, --1
     {
         PrintName = "Muzzle",
@@ -347,6 +347,18 @@ SWEP.Attachments = {
         GivesFlags = {"cobrakai"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(1.25, 0, 0),
+    },
+    {
+        Hidden = true,
+        Slot = {"bo1_irscope_ussr"},
+        Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
+        Offset = {
+            vpos = Vector(0, 0, -0.25), -- 4.6 offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+        },
+        GivesFlags = {"cobrakai"},
+        CorrectivePos = Vector(0, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
     },
 }
 

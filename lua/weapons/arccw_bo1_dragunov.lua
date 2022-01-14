@@ -182,7 +182,7 @@ SWEP.Attachments = {
             vang = Angle(0, 0, 0),
         },
         InstalledEles = {"rail"},
-        MergeSlots = {2,11},
+        MergeSlots = {2, 11, 12},
     },
     {
         Hidden = true,
@@ -270,6 +270,18 @@ SWEP.Attachments = {
         GivesFlags = {"cobrakai"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(-1, 0, 0),
+    },
+    {
+        Hidden = true,
+        Slot = {"bo1_irscope_ussr"},
+        Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
+        Offset = {
+            vpos = Vector(0, 0, 0), -- 4.6 offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+        },
+        GivesFlags = {"cobrakai"},
+        CorrectivePos = Vector(0, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
     },
 }
 

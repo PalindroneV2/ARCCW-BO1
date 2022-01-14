@@ -1,4 +1,4 @@
-VertexlitGeneric
+"VertexlitGeneric"
 {
 	$basetexture "models/weapons/bo1/plastic"
 	$bumpmap	"models/weapons/bo1/plastic"
