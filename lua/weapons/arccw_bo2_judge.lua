@@ -164,7 +164,7 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.ExtraSightDist = 2
+SWEP.ExtraSightDist = 10
 
 SWEP.RejectAttachments = {
 }
@@ -179,8 +179,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(6.5, -0.025, 4),
             vang = Angle(0, 0, 0),
-            wpos = Vector(7.9, 2, -3.2),
-            wang = Angle(-5, -2, 177.5)
         },
         ExcludeFlags = {"python_snub"}
     },

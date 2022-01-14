@@ -172,6 +172,10 @@ SWEP.AttachmentElements = {
 
 SWEP.ExtraSightDist = 5
 
+SWEP.RejectAttachments = {
+    ["optic_bo1_longscope"] = true,
+}
+
 SWEP.Attachments = {
     { --1
         PrintName = "Optic", -- print name
@@ -184,7 +188,7 @@ SWEP.Attachments = {
         },
         MergeSlots = {2,11},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0.5, 0.05, 0),
+        CorrectiveAng = Angle(0, 0, 0),
     },
     { --2
         Hidden = true,
@@ -195,7 +199,7 @@ SWEP.Attachments = {
             vang = Angle(0, 0, 0),
         },
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0.5, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
         InstalledEles = {"l96_scope"},
         Installed = "optic_bo1_l96"
     },
@@ -282,7 +286,7 @@ SWEP.Attachments = {
         },
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0.5, 0.05, 0),
+        CorrectiveAng = Angle(0, 0, 0),
     },
 }
 

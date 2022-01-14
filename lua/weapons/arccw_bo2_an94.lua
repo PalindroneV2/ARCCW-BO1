@@ -195,7 +195,7 @@ SWEP.Attachments = {
         },
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0.5, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
         MergeSlots = {13, 14, 15}
     },
     { -- 2
@@ -294,7 +294,7 @@ SWEP.Attachments = {
         },
         GivesFlags = {"cobrakai"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(-1, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
     },
     { --14
         Hidden = true,
@@ -306,7 +306,7 @@ SWEP.Attachments = {
         },
         GivesFlags = {"cobrakai"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(2, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
     },
     {
         Hidden = true,

@@ -163,7 +163,8 @@ SWEP.Attachments = {
         },
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0.5, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
+        MergeSlots = {8}
     }, --1
     {
         PrintName = "Underbarrel",
@@ -174,7 +175,7 @@ SWEP.Attachments = {
             vang = Angle(0, 0, 0),
         },
         SlideAmount = false
-    }, --1
+    }, --2
     {
         PrintName = "Tactical",
         Slot = "bo1_steadyaim",
@@ -183,19 +184,19 @@ SWEP.Attachments = {
             vpos = Vector(02, -0.7, 0.75), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 90),
         },
-    }, --2
+    }, --3
     {
         PrintName = "Ammo Type",
         Slot = {"bo1_xbow_ammo"},
-    }, --3
+    }, --4
     {
         PrintName = "Ammo Type",
         Slot = {"ammo_pap_xbow"},
-    }, --3
+    }, --5
     {
         PrintName = "Perk",
         Slot = "bo1_perk",
-    }, --4
+    }, --6
     {
         PrintName = "Charm",
         Slot = "charm",
@@ -207,7 +208,19 @@ SWEP.Attachments = {
             wpos = Vector(7, 1.6, -4),
             wang = Angle(-10, 0, 180)
         },
-    }, --5
+    }, --7
+    {
+        Hidden = true,
+        Slot = {"bo1_longscope_xbow"},
+        Bone = "j_gun",
+        Offset = {
+            vpos = Vector(0, 0, 0), -- 4.6 offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+        },
+        InstalledEles = {"mount"},
+        CorrectivePos = Vector(0, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
+    }, --8
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)

@@ -19,7 +19,7 @@ att.OffsetAng = Angle(0, 0, 0)
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 10.5, -1.45),
+        Pos = Vector(0, 10.5, -1.425),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_NONE,

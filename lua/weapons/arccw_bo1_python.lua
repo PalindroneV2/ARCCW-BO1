@@ -162,7 +162,7 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.ExtraSightDist = 2
+SWEP.ExtraSightDist = 10
 
 SWEP.RejectAttachments = {
 }

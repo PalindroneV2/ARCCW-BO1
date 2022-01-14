@@ -16,7 +16,7 @@ att.Model = "models/weapons/arccw/atts/bo1_coltscope.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0, 8, -1.06),
+        Pos = Vector(-0, 8, -1.0325),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         IgnoreExtra = true

@@ -183,7 +183,7 @@ SWEP.Attachments = {
         },
         MergeSlots = {2},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0.5, 0.05, 0),
+        CorrectiveAng = Angle(0, 0.05, 0),
         InstalledEles = {"rail"},
         Installed = "optic_bo2_ballista"
     },
@@ -196,7 +196,7 @@ SWEP.Attachments = {
             vang = Angle(0, 0, 0),
         },
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0.5, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
         InstalledEles = {"rail"},
     },
     { --3

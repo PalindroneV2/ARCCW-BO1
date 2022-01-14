@@ -177,12 +177,12 @@ SWEP.Attachments = {
         Slot = {"optic"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(1, -0.01, 3.125), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(3, 0.025, 3.125), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
         },
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0.5, 0.5, 0)
+        CorrectiveAng = Angle(0, 0, 0)
     },
     { --2
         PrintName = "Muzzle",

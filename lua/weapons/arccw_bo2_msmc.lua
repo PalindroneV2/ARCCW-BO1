@@ -189,7 +189,7 @@ SWEP.Attachments = {
             wang = Angle(172.5, 181.75, 0)
         },
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0.5, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
     },
     { --2
         PrintName = "Muzzle",

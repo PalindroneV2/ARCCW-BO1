@@ -190,7 +190,7 @@ SWEP.Attachments = {
         MergeSlots = {6},
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0.5, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
     },
     { --2
         PrintName = "Muzzle",
@@ -253,7 +253,7 @@ SWEP.Attachments = {
             wang = Angle(175, 179, -5)
         },
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(1, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
         InstalledEles = {"aug_swarovski"},
         Installed = "optic_bo1_aug",
     },

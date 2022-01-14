@@ -23,7 +23,7 @@ att.DroppedModel = "models/weapons/arccw/atts/bo2_ballista_scope.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.01, 12, -0.175),
+        Pos = Vector(-0.01, 12, -0.125),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_ZOOM,

@@ -193,8 +193,9 @@ SWEP.Attachments = {
             vpos = Vector(3, 0, 3.05),
             vang = Angle(0, 0, 0),
         },
+        GivesFlags = {"cobrakai"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(1.2, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
         Installed = "optic_bo1_pso",
     },
     {
@@ -269,7 +270,7 @@ SWEP.Attachments = {
         },
         GivesFlags = {"cobrakai"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(-1, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
     },
     {
         Hidden = true,

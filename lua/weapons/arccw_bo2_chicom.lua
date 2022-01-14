@@ -182,7 +182,7 @@ SWEP.Attachments = {
         InstalledEles = {"mount"},
         GivesFlags = {"chicom_no_light"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0.5, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
     },
     { --2
         PrintName = "Muzzle",

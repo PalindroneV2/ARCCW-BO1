@@ -186,7 +186,7 @@ SWEP.Attachments = {
             vang = Angle(0, 0, 0),
         },
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(1.2, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
         Installed = "optic_bo1_wascope",
     },
     {

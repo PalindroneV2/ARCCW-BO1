@@ -145,7 +145,7 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.ExtraSightDist = 5
+SWEP.ExtraSightDist = 10
 
 SWEP.Attachments = {
     { --1

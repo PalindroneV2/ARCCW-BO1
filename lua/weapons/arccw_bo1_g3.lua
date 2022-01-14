@@ -268,7 +268,7 @@ SWEP.Attachments = {
         },
         InstalledEles = {"rail"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0.25, 0, 0)
+        CorrectiveAng = Angle(0, 0, 0)
     },--1
     {
         PrintName = "Barrel",

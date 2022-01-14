@@ -201,14 +201,12 @@ SWEP.Attachments = {
         Slot = {"optic", "optic_lp", "optic_sniper"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(4.75, 0, 1.85), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(4.75, 0.025, 1.85), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(4.5, 1.35, -5.4),
-            wang = Angle(171, 179, 0)
         },
         InstalledEles = {"m14_rail"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0.5, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
         MergeSlots = {13},
     },
     {

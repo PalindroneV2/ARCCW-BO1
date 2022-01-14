@@ -173,7 +173,7 @@ SWEP.Attachments = {
         },
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(-3, -0.5, 0),
+        CorrectiveAng = Angle(-4, -0.25, 0),
     }, --1
     {
         PrintName = "Muzzle",

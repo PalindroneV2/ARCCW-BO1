@@ -18,7 +18,7 @@ att.DroppedModel = "models/weapons/arccw/atts/bo1_swarovski.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0.025, 8, -5.675),
+        Pos = Vector(0.025, 8, -5.65),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         IgnoreExtra = true,

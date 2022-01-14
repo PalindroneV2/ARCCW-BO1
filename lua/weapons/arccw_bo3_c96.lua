@@ -165,8 +165,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(1.4, 0.04125, 2.37),
             vang = Angle(0, 0, 0),
-            wpos = Vector(7.238, 1.9, -2.622),
-            wang = Angle(90, 0, 0)
         },
     },
     { --3
@@ -187,8 +185,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(2.5, 0.1, -1),
             vang = Angle(0, 0, 0),
-            wpos = Vector(7.238, 1.9, -2.622),
-            wang = Angle(90, 0, 0)
         },
     },
     { --5
@@ -217,8 +213,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(6, -0.1, 1.1),
             vang = Angle(0, 0, 0),
-            wpos = Vector(8.5, 2.5, -4),
-            wang = Angle(-5, -2, 177.5)
         },
     },
 }
