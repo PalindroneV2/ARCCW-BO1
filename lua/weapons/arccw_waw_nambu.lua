@@ -125,7 +125,7 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.ExtraSightDist = 2
+SWEP.ExtraSightDist = 10
 
 SWEP.Attachments = {
     {
@@ -134,7 +134,7 @@ SWEP.Attachments = {
         Bone = "main",
         DefaultAttName = "Iron Sights",
         Offset = {
-            vpos = Vector(-2.75, 0, 1.5),
+            vpos = Vector(-2.75, -0.025, 1.5),
             vang = Angle(0, 0, 0),
         },
         CorrectiveAng = Angle(0, 0, 0),

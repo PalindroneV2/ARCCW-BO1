@@ -192,7 +192,7 @@ SWEP.Attachments = {
         },
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(2, 0, 0),
+        CorrectiveAng = Angle(2, 0.1, 0),
         MergeSlots = {10},
     }, --1
     {

@@ -181,7 +181,7 @@ SWEP.Attachments = {
         },
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(-1.5, 0, 0),
+        CorrectiveAng = Angle(-3, 0, 0),
         ExcludeFlags = {"wolf_ee"},
     }, --1
     {

@@ -192,7 +192,7 @@ SWEP.Attachments = {
             wang = Angle(171, 179, 0)
         },
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(3, 0, 0),
+        CorrectiveAng = Angle(2.5, 0, 0),
         InstalledEles = {"mount"}
     },
     { --2

@@ -54,8 +54,7 @@ SWEP.Firemodes = {
     {
         Mode = -3,
         RunawayBurst = true,
-        PostBurstDelay = 0.12,
-        Mult_RPM = 1000 / 700,
+        PostBurstDelay = 0.2,
     },
     {
         Mode = 1
@@ -277,20 +276,17 @@ SWEP.Hook_GetShootSound = function(wep, sound)
     end
 end
 
-/*
-SWEP.Hook_TranslateAnimation = function(wep, anim, data)
-    local eclip = wep:Clip1() == 0
-
-    if eclip then
-        return anim .. "_empty"
-    end
-    local fastmag = wep.Attachments[5].Installed == "bo1_mag_fast"
+SWEP.Hook_SelectReloadAnimation = function(wep, curanim)
+    local fastmag = wep:GetBuff_Override("BO1_FastMag")
 
     if fastmag then
-        return anim .. "_fast"
-    else return end
+        if curanim == "reload" then
+            return "reload_fast"
+        elseif curanim == "reload_empty" then
+            return "reload_empty_fast"
+        end
+    end
 end
-*/
 
 SWEP.Animations = {
     ["idle"] = {

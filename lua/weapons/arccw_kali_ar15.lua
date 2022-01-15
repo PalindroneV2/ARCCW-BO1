@@ -492,7 +492,7 @@ SWEP.Attachments = {
         },
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0.5, 0.05, 0),
+        CorrectiveAng = Angle(0, 0, 0),
         /* Slide Broke
         SlideAmount = {
             vmin = Vector(1.5, 0, 5.025),
