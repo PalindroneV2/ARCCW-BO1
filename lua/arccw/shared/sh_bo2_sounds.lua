@@ -879,3 +879,78 @@ sound.Add({
         "^weapons/arccw/bo2_raygunmk2/imp3.wav"
     }
 })
+
+sound.Add({
+    name = "ArcCW_BO2.Storm_Fire",
+    channel = CHAN_STATIC,
+    level = 100,
+    sound = {
+        "^weapons/arccw/bo2_storm/fire/fire1.wav",
+        "^weapons/arccw/bo2_storm/fire/fire2.wav",
+        "^weapons/arccw/bo2_storm/fire/fire3.wav",
+        "^weapons/arccw/bo2_storm/fire/fire4.wav",
+        "^weapons/arccw/bo2_storm/fire/fire5.wav",
+    }
+})
+
+sound.Add({
+    name = "ArcCW_BO2.Storm_ClipIn",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_storm/in.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO2.Storm_ClipOut",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_storm/out.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO2.Storm_Bolt",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_storm/bolt.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO2.Storm_Spring",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_storm/spring.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO2.Storm_Spin",
+    channel = CHAN_STATIC,
+    level = 70,
+    sound = "^weapons/arccw/bo2_storm/spin.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO2.Storm_Open",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_storm/open.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO2.Storm_Close",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/bo2_storm/close.wav"
+})
+
+sound.Add({
+    name = "ArcCW_BO2.Storm_Charge",
+    channel = CHAN_AUTO,
+    level = 70,
+    sound = "^weapons/arccw/bo2_storm/charge/charge.wav"
+})
+sound.Add({
+    name = "ArcCW_BO2.Storm_PowerDown",
+    channel = CHAN_AUTO,
+    level = 70,
+    sound = "^weapons/arccw/bo2_storm/charge/powerdown.wav"
+})

@@ -22,7 +22,7 @@ SWEP.ViewModel = "models/weapons/arccw/c_bo2_storm.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo2_storm.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-2, 3, -6.7),
+    pos        =    Vector(-9, 3.5, -6.7),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -35,23 +35,25 @@ SWEP.DamageMin = 40 -- damage done at maximum range
 SWEP.RangeMin = 30
 SWEP.Range = 300 -- in METRES
 
-SWEP.Penetration = 9
+SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 800 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
-SWEP.TracerCol = Color(255, 25, 25)
+SWEP.PhysTracerProfile = 1
+SWEP.TracerCol = Color(255, 0, 0)
 SWEP.TracerWidth = 3
+SWEP.HullSize = 1 -- HullSize used by FireBullets
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 45
 
-SWEP.Recoil = 0.2
-SWEP.RecoilSide = 0.2
-SWEP.RecoilRise = 0.2
+SWEP.Recoil = 0.65
+SWEP.RecoilSide = 0.25
+SWEP.RecoilRise = 0.5
 
 SWEP.SpeedMult = 0.8
 SWEP.SightedSpeedMult = 0.25
@@ -62,27 +64,48 @@ SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 1,
-        PrintName = "One Charge"
+        PrintName = "One Charge",
+        Mult_RPM = 1,
+        Override_Num = 1,
+        Mult_Penetration = 1,
+        Override_AmmoPerShot = 1,
+        Mult_Recoil = 1,
     },
     {
-        Mode = 2,
+        Mode = 1,
         PrintName = "Two Charges",
-        ActivateElements = {"mode2"},
+        Mult_RPM = (106 + 321.75) / 535,
+        Override_Num = 2,
+        Mult_Penetration = 2,
+        Override_AmmoPerShot = 2,
+        Mult_Recoil = 2,
     },
     {
-        Mode = 3,
+        Mode = 1,
         PrintName = "Three Charges",
-        ActivateElements = {"mode3"},
+        Mult_RPM = (106 + 214.5) / 535,
+        Override_Num = 3,
+        Mult_Penetration = 3,
+        Override_AmmoPerShot = 3,
+        Mult_Recoil = 3,
     },
     {
-        Mode = 4,
+        Mode = 1,
         PrintName = "Four Charges",
-        ActivateElements = {"mode4"},
+        Mult_RPM = (106 + 107.25) / 535,
+        Override_Num = 4,
+        Mult_Penetration = 4,
+        Override_AmmoPerShot = 4,
+        Mult_Recoil = 4,
     },
     {
-        Mode = 5,
+        Mode = 1,
         PrintName = "Five Charges",
-        ActivateElements = {"mode5"},
+        Mult_RPM = 106 / 535,
+        Override_Num = 5,
+        Mult_Penetration = 5,
+        Override_AmmoPerShot = 5,
+        Mult_Recoil = 5,
     },
     {
         Mode = 0
@@ -94,9 +117,9 @@ SWEP.NPCWeaponType = {
 }
 SWEP.NPCWeight = 75
 
-SWEP.AccuracyMOA = 1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 0.1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 1200 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 250
+SWEP.MoveDispersion = 500
 
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
 SWEP.MagID = "stormpsr" -- the magazine pool this gun draws from
@@ -104,9 +127,9 @@ SWEP.MagID = "stormpsr" -- the magazine pool this gun draws from
 SWEP.ShootVol = 110 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "ArcCW_BO2.DSR50_Fire"
+SWEP.ShootSound = "ArcCW_BO2.Storm_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO2.Ballista_Sil"
-SWEP.DistantShootSound = {"^weapons/arccw/bo2_generic_sniper/dist/flux_l.wav", "^weapons/arccw/bo2_generic_sniper/dist/flux_r.wav"}
+SWEP.DistantShootSound = {"^weapons/arccw/bo2_storm/fire/dist.wav"}
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -148,7 +171,7 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(1, -1, 1)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(20, 5, -2.5)
+SWEP.CustomizePos = Vector(16, 2, -2.5)
 SWEP.CustomizeAng = Angle(15, 40, 27.5)
 
 SWEP.HolsterPos = Vector(3, -3, 1)
@@ -167,7 +190,7 @@ SWEP.AttachmentElements = {
     },
     ["ammo_papunch"] = {
         NamePriority = 10,
-        NameChange = "Express Death",
+        NameChange = "Lead Hurricane",
     },
     ["mode2"] = {
         Override_Num = 2,
@@ -276,40 +299,35 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
         Time = 13 / 35,
+        SoundTable = {
+            {s = "ArcCW_BO2.Storm_Spin", t = 1 / 60},
+        },
     },
     ["fire_iron"] = {
         Source = "fire",
         Time = 13 / 35,
+        SoundTable = {
+            {s = "ArcCW_BO2.Storm_Spin", t = 1 / 60},
+        },
     },
     ["reload"] = {
         Source = "reload",
-        Time = 114 / 35,
+        Time = 4.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {33, 55},
         FrameRate = 30,
         SoundTable = {
-            {s = "ArcCW_BO2.Sniper_ClipOut", t = 0.5},
-            {s = "ArcCW_BO2.Sniper_ClipIn", t = 1.9},
+            {s = "ArcCW_BO2.Storm_Bolt", t = 0.5},
+            {s = "ArcCW_BO2.Storm_Open", t = 0.6},
+            {s = "ArcCW_BO2.Storm_Spring", t = 1.4},
+            {s = "ArcCW_BO2.Storm_ClipOut", t = 1.5},
+            {s = "ArcCW_BO2.Storm_ClipIn", t = 3.2},
+            {s = "ArcCW_BO2.Storm_Close", t = 3.85},
+            {s = "ArcCW_BO2.Storm_Spring", t = 3.85},
         },
         LHIK = true,
         LHIKIn = 0.25,
         LHIKOut = 0.5,
-    },
-    ["reload_empty"] = {
-        Source = "reload_empty",
-        Time = 142 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Checkpoints = {33, 55, 88},
-        FrameRate = 30,
-        SoundTable = {
-            {s = "ArcCW_BO2.Sniper_ClipOut", t = 0.5},
-            {s = "ArcCW_BO2.Sniper_ClipIn", t = 1.9},
-            {s = "ArcCW_BO2.Sniper_BoltBack", t = 2.9},
-            {s = "ArcCW_BO2.Sniper_BoltFwd", t = 3.1},
-        },
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 1.6,
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
