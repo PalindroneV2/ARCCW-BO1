@@ -1,0 +1,6 @@
+VertexlitGeneric
+{
+	$basetexture	"models\weapons\bo2\bo2_storm\scope\charge_used"
+	"$selfillum" "1"
+
+}
