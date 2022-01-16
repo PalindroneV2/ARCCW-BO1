@@ -61,6 +61,7 @@ SWEP.SightTime = 0.5
 
 SWEP.Delay = 60 / 535 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
+SWEP.FiremodeSound = "ArcCW_BO2.Storm_Charge"
 SWEP.Firemodes = {
     {
         Mode = 1,
@@ -214,7 +215,7 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.ExtraSightDist = 3
+SWEP.ExtraSightDist = 5
 
 SWEP.RejectAttachments = {
 }

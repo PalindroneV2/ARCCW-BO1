@@ -13,6 +13,9 @@ att.AutoStats = true
 att.IgnorePickX = true
 att.Slot = "fcg_kali"
 att.SortOrder = 106
+att.Mult_Recoil = 0.75
+att.Mult_HipDispersion = 0.85
+att.Mult_AccuracyMOA = 0.85
 
 att.RequireFlags = {"papname1"}
 att.HideIfBlocked = true
@@ -20,7 +23,7 @@ att.HideIfBlocked = true
 att.Override_Firemodes = {
     {
         Mode = -6,
-        PostBurstDelay = 0.2,
+        PostBurstDelay = 0.25,
         RunawayBurst = true,
     },
     {

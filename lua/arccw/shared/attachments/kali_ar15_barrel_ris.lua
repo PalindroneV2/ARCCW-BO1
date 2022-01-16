@@ -8,6 +8,7 @@ att.SortOrder = 91
 att.AutoStats = true
 
 att.Desc_Pros = {
+    "+ Provides better sight picture for low profile sights when combined with a flat top receiver.",
 }
 att.Desc_Cons = {
 }

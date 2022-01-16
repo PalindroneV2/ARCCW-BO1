@@ -5,6 +5,7 @@ att.Description = "Flat top M16A4 receiver with a carry handle. The OG."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
+    "- Some low profile sights might be obstructed by a barrel with a non-removable front sight."
 }
 att.AutoStats = true
 att.Slot = "kali_top"

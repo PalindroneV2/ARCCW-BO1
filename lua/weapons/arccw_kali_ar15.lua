@@ -671,8 +671,10 @@ SWEP.Hook_NameChange = function(wep, name)
     end
     -- UPPER
     local upper = 0
+    local ogm16 = 0
     if top == "kali_top_a2" then upper = 1
     elseif top == "kali_top_a4" then upper = 2
+        ogm16 = 1
     elseif top == "kali_top_troy" then upper = 3
     elseif top == "kali_top_usgi" then upper = 4
     end
@@ -693,7 +695,7 @@ SWEP.Hook_NameChange = function(wep, name)
     local model = "16"
     local alteration = "A1"
     local desc1 = "The AR-15 is a family of rifles originally created by Arma-Lite, subsquently picked up by Colt and the standard United States infantry rifle since the 1960s. Despite its poor start, this rifle has a long carreer of excellent and reliable performance and its modularity has kept it in service for over 50 years."
-    local desc2 = "\n\nThe M16A1 entered service in 1969 after having fixed many issues with the rifle's first military configuration."
+    local desc2 = "The M16A1 entered service in 1969 after having fixed many issues with the rifle's first military configuration."
 
     if m635 then
         wep.Trivia_Class = "Submachine Gun"
@@ -705,207 +707,216 @@ SWEP.Hook_NameChange = function(wep, name)
         if fcg == 0 then
             if length == 1 then
                 alteration = "A1-E2"
-                desc2 = "\n\nM16A1 sporting an A2 handguard."
+                desc2 = "M16A1 sporting an A2 handguard."
                 if green then
                     prefix = "C"
                     model = "7"
                     alteration = ""
-                    desc2 = "\n\nCanadian variant of the M16A1."
+                    desc2 = "Canadian variant of the M16A1."
                 end
             elseif length == 2 then
                 model = "607"
                 alteration = "a"
-                desc2 = "\n\nRare carbine variant of the M16A1 used in SMG roles by South Vietnamese troops."
+                desc2 = "Rare carbine variant of the M16A1 used in SMG roles by South Vietnamese troops."
+                if wood then
+                    brand = ""
+                    prefix = "Service"
+                    model = " Carbine"
+                    alteration = ""
+                    desc1 = "Custom made experimental carbine made from the standard issue rifle of the New California Republic."
+                    desc2 = ""
+                    ncr = 1
+                end
             elseif length == 3 then
                 prefix = "XM"
                 model = "117"
                 alteration = "E2"
-                desc2 = "\n\n Carbine variant of the M16A1 used by MACV-SOG. Uses a special muzzle device."
+                desc2 = " Carbine variant of the M16A1 used by MACV-SOG. Uses a special muzzle device."
             elseif length == 4 then
                 model = "653"
                 alteration = ""
-                desc2 = "\n\nCarbine variant of the M16A1 sporting a standard 14.5 inch barrel."
+                desc2 = "Carbine variant of the M16A1 sporting a standard 14.5 inch barrel."
                 if green then
                     prefix = "C"
                     model = "8"
                     alt = ""
-                    desc2 = "\n\nCarbine Variant of the Colt Canada C7."
+                    desc2 = "Carbine Variant of the Colt Canada C7."
                 end
             elseif length == 5 then
                 model = "231"
                 alteration = " Patriot"
-                desc2 = "\n\nRare carbine variant of the M16A1 used for use as a port firing weapon from inside armored vehicles. This one seems special though."
-                truepatriot = 1
+                desc2 = "Rare carbine variant of the M16A1 used for use as a port firing weapon from inside armored vehicles. This one seems special though."
                 if cmag and stock == 0 then
                     brand = ""
                     prefix = "The "
                     model = "Patriot"
                     alteration = ""
-                    desc2 = "\n\nThe Patriot is a special one of a kind sidearm made specially for The Boss."
+                    truepatriot = 1
+                    desc2 = "The Patriot is a special one of a kind sidearm made specially for The Boss."
                 end
             elseif length == 6 then
                 model = "720"
                 alteration = ""
-                desc2 = "\n\nMuch more compact Carbine variant of the M16A1."
+                desc2 = "Much more compact Carbine variant of the M16A1."
             end
         elseif fcg == 1 then
             alteration = "A1-E2"
-            desc2 = "\n\nM16A1 retrofitted with the M16A2's burst-fire selector."
+            desc2 = "M16A1 retrofitted with the M16A2's burst-fire selector."
             if length >= 2 then
                 prefix = "XM"
                 model = "4"
                 alteration = ""
-                desc2 = "\n\nExperimental carbine variant of the M16 using the burst-fire selector of the M16A2. In trials to become the US Military's new Carbine."
+                desc2 = "Experimental carbine variant of the M16 using the burst-fire selector of the M16A2. In trials to become the US Military's new Carbine."
             end
         elseif fcg == 2 then
             prefix = "AR-"
             model = "15"
             alteration = " SP1"
-            desc2 = "\n\nCivilian version of the M16 rifle."
-            if wood then
-                brand = "NCR"
-                prefix = " Service"
+            desc2 = "Civilian version of the M16 rifle."
+            if wood and length == 0 then
+                brand = ""
+                prefix = "Service"
                 model = " Rifle"
                 alteration = ""
-                desc1 = ""
-                desc2 = "The standard issue rifle of the New California Republic."
+                desc1 = "The standard issue rifle of the New California Republic."
+                desc2 = ""
                 ncr = 1
             end
             if length == 2 then
                 prefix = "CAR-"
                 alteration = " SMG"
-                desc2 = "\n\nRare carbine variant of the M16A1 used in SMG roles by South Vietnamese troops converted to semi-auto only."
+                desc2 = "Rare carbine variant of the M16A1 used in SMG roles by South Vietnamese troops converted to semi-auto only."
             elseif length == 3 then
                 prefix = "XBRN"
                 model = "177"
                 alteration = "E2"
-                desc2 = "\n\nRetro Carbine variant of the M16A1 originally used by MACV-SOG lovingly reproduced by a modern company."
+                desc2 = "Retro Carbine variant of the M16A1 originally used by MACV-SOG lovingly reproduced by a modern company."
             elseif length == 4 then
                 prefix = "CAR-"
                 alteration = " SP1 Carbine"
-                desc2 = "\n\nRetro Carbine variant of the AR-15 SP1."
+                desc2 = "Retro Carbine variant of the AR-15 SP1."
             elseif length == 5 then
                 prefix = "CAR-"
                 alteration = " Patriot"
-                desc2 = "\n\nRare carbine variant of the M16A1 originally used as a port firing weapon converted to semi-auto only."
+                desc2 = "Rare carbine variant of the M16A1 originally used as a port firing weapon converted to semi-auto only."
             elseif length == 6 then
                 prefix = "CAR-"
                 alteration = " SBR"
-                desc2 = "\n\nVery compact retro AR-15 variant."
+                desc2 = "Very compact retro AR-15 variant."
             end
         end
     elseif upper == 1 then --A2
         if fcg == 0 then
             alteration = "A2-E3"
-            desc2 = "\n\nM16A2 modified to use full-auto by the US Navy."
+            desc2 = "M16A2 modified to use full-auto by the US Navy."
             if length == 2 then
                 prefix = "CAR-"
                 model = "15"
                 alteration = " SMG"
-                desc2 = "\n\nRare carbine variant of the M16A1 used in SMG roles by South Vietnamese troops. Modified to use an A2 upper receiver."
+                desc2 = "Rare carbine variant of the M16A1 used in SMG roles by South Vietnamese troops. Modified to use an A2 upper receiver."
             elseif length == 3 then
                 prefix = "XM"
                 model = "4"
                 alteration = ""
-                desc2 = "\n\nCarbine variant of the M16A2 using the XM177E2's barrel assembly and muzzle device, retrofitted with an A2 upper receiver. In trials to become the US Military's new Carbine."
+                desc2 = "Carbine variant of the M16A2 using the XM177E2's barrel assembly and muzzle device, retrofitted with an A2 upper receiver. In trials to become the US Military's new Carbine."
             elseif length == 4 then
                 model = "727"
                 alteration = ""
-                desc2 = "\n\nCarbine variant of the M16A2 in trials to become the US Military's new Carbine."
+                desc2 = "Carbine variant of the M16A2 in trials to become the US Military's new Carbine."
             elseif length == 5 then
                 model = "231"
                 alteration = " Patriot"
-                desc2 = "\n\nCarbine variant of the M16A2 using the a cut down FPW barrel."
+                desc2 = "Carbine variant of the M16A2 using the a cut down FPW barrel."
             elseif length == 6 then
                 model = "733"
                 alteration = ""
-                desc2 = "\n\nShorter Carbine variant of the M16A2 in trials to become the US Military's new Carbine."
+                desc2 = "Shorter Carbine variant of the M16A2 in trials to become the US Military's new Carbine."
             end
         elseif fcg == 1 then
             alteration = "A2"
-            desc2 = "\n\nImproved M16 rifle using a ribbed handguard instead of a triangular one, caging around the magazine release button, new forward assist and 3-round burst instead of full-auto."
+            desc2 = "Improved M16 rifle using a ribbed handguard instead of a triangular one, caging around the magazine release button, new forward assist and 3-round burst instead of full-auto."
             if length >= 2 then
                 prefix = "XM"
                 model = "4"
                 alteration = ""
-                desc2 = "\n\nCarbine variant of the M16A2 in trials to become the US Military's new Carbine using the M16A2's burst-fire selector."
+                desc2 = "Carbine variant of the M16A2 in trials to become the US Military's new Carbine using the M16A2's burst-fire selector."
             end
         elseif fcg == 2 then
             prefix = "AR-"
             model = "15"
             alteration = "A2 SP2"
-            desc2 = "\n\nCivilian sporting variant of the M16A2."
+            desc2 = "Civilian sporting variant of the M16A2."
             if length == 2 then
                 prefix = "CAR-"
                 alteration = " SMG"
-                desc2 = "\n\nCarbine variant of the AR-15A2 SP2 using the M607a's barrel and handguard."
+                desc2 = "Carbine variant of the AR-15A2 SP2 using the M607a's barrel and handguard."
             elseif length == 3 then
                 alteration = "A2 Gov't Carbine"
-                desc2 = "\n\nCarbine variant of the AR-15A2 meant for police use using the XM177E2's barrel assembly and muzzle device."
+                desc2 = "Carbine variant of the AR-15A2 meant for police use using the XM177E2's barrel assembly and muzzle device."
             elseif length == 4 then
                 alteration = "A2 Gov't Carbine"
-                desc2 = "\n\nCarbine variant of the AR-14A2 meant for police use."
+                desc2 = "Carbine variant of the AR-14A2 meant for police use."
             elseif length == 5 then
                 prefix = "CAR-"
                 alteration = " Patriot"
-                desc2 = "\n\nCarbine variant of the AR-15A2 using a cut down FPW barrel."
+                desc2 = "Carbine variant of the AR-15A2 using a cut down FPW barrel."
             elseif length == 6 then
                 prefix = "CAR-"
                 alteration = " SBR"
-                desc2 = "\n\nShorter Carbine variant of the AR-15A2 meant for police use."
+                desc2 = "Shorter Carbine variant of the AR-15A2 meant for police use."
             end
         end
     elseif upper >= 2 then --A4
         if fcg == 0 then
             alteration = "A3"
-            desc2 = "\n\nM16A4 used by the navy that keep using the full-auto selector."
+            desc2 = "M16A4 used by the navy that keep using the full-auto selector."
             if wep:GetBuff_Override("AltIrons2") and length == 1 and green then
                 prefix = "C"
                 model = "7"
                 alteration = "A1"
-                desc2 = "\n\nCanadian variant of the M16A4."
+                desc2 = "Canadian variant of the M16A4."
                 if stock == 5 then
                     alteration = "A2"
-                    desc2 = "\n\nCanadian variant of the M16A4 using a collapsible stock."
+                    desc2 = "Canadian variant of the M16A4 using a collapsible stock."
                 end
             end
             if length == 2 then
                 model = "4"
                 alteration = "A1"
-                desc2 = "\n\nCarbine variant of the M16A4 improvement upon the M4 Carbine by using a full-auto selector rather than burst. Uses an M607a barrel assembly for some reason."
+                desc2 = "Carbine variant of the M16A4 improvement upon the M4 Carbine by using a full-auto selector rather than burst. Uses an M607a barrel assembly for some reason."
             elseif length == 3 then
                 model = "4"
                 alteration = "A1"
-                desc2 = "\n\nCarbine variant of the M16A4 improvement upon the M4 Carbine by using a full-auto selector rather than burst. For some reason it's using an XM177E2 barrel assembly and muzzle device."
+                desc2 = "Carbine variant of the M16A4 improvement upon the M4 Carbine by using a full-auto selector rather than burst. For some reason it's using an XM177E2 barrel assembly and muzzle device."
                 if sling and wep:GetBuff_Override("AltIrons") then
                     prefix = ""
                     model = "Commando"
                     alteration = ""
-                    desc2 = "\n\nThe numbers, Mason. What do they mean?."
+                    desc2 = "The numbers, Mason. What do they mean?."
                 end
             elseif length == 4 then
                 model = "4"
                 alteration = "A1"
-                desc2 = "\n\nCarbine variant of the M16A4 improvement upon the M4 Carbine by using a full-auto selector rather than burst."
+                desc2 = "Carbine variant of the M16A4 improvement upon the M4 Carbine by using a full-auto selector rather than burst."
                 if wep:GetBuff_Override("AltIrons2") and green then
                     prefix = "C"
                     model = "8"
                     alteration = "A1"
-                    desc2 = "\n\nImproved Colt Canada C8 using a flat top receiver."
+                    desc2 = "Improved Colt Canada C8 using a flat top receiver."
                 end
             elseif length == 5 then
                 model = "231"
                 alteration = " Patriot"
-                desc2 = "\n\nCarbine variant of the M16A4 improvement upon the M4 Carbine by using a full-auto selector rather than burst. Using a cut down FPW barrel."
+                desc2 = "Carbine variant of the M16A4 improvement upon the M4 Carbine by using a full-auto selector rather than burst. Using a cut down FPW barrel."
             elseif length == 6 then
                 model = "4"
                 alteration = " Commando"
-                desc2 = "\n\nCarbine variant of the M16A4 improvement upon the M4 Carbine by using a full-auto selector rather than burst sporting a much shorter barrel for helicopter crews, tank crews and other rear echelon troops."
+                desc2 = "Carbine variant of the M16A4 improvement upon the M4 Carbine by using a full-auto selector rather than burst sporting a much shorter barrel for helicopter crews, tank crews and other rear echelon troops."
                 if ris == 1 then
                     brand = ""
                     model = "k. 18"
                     alteration = " Mod 0"
-                    desc2 = "\n\nCarbine variant of the M16A4 improvement upon the M4 Carbine by using a full-auto selector rather than burst. Improved shorter barrel for close quarters combat."
+                    desc2 = "Carbine variant of the M16A4 improvement upon the M4 Carbine by using a full-auto selector rather than burst. Improved shorter barrel for close quarters combat."
                     if wep.Attachments[3].Installed or wep.Attachments[17].Installed or wep:GetBuff_Override("AltIrons") or wep:GetBuff_Override("AltIrons2") then
                         alteration = " Mod 1"
                     end
@@ -913,59 +924,62 @@ SWEP.Hook_NameChange = function(wep, name)
             end
         elseif fcg == 1 then
             alteration = "A4"
-            desc2 = "\n\nImproved M16A2 using a flat top receiver introduced by the Colt M905."
+            desc2 = "Improved M16A2 using a flat top receiver introduced by the Colt M905."
             if length == 2 then
                 model = "4"
                 alteration = " Carbine"
-                desc2 = "\n\nCarbine variant of the M16A4 retaining the burst-fire selector of it's bigger brother. For some reason equipped with the M607a's barrel assembly."
+                desc2 = "Carbine variant of the M16A4 retaining the burst-fire selector of it's bigger brother. For some reason equipped with the M607a's barrel assembly."
             elseif length == 3 then
                 model = "4"
                 alteration = " Carbine"
-                desc2 = "\n\nCarbine variant of the M16A4 retaining the burst-fire selector of it's bigger brother. Sporting the XM177E2's barrel assembly and muzzle device."
+                desc2 = "Carbine variant of the M16A4 retaining the burst-fire selector of it's bigger brother. Sporting the XM177E2's barrel assembly and muzzle device."
             elseif length == 4 then
                 model = "4"
                 alteration = " Carbine"
-                desc2 = "\n\nCarbine variant of the M16A4 retaining the burst-fire selector of it's bigger brother."
+                desc2 = "Carbine variant of the M16A4 retaining the burst-fire selector of it's bigger brother."
             elseif length == 5 then
                 model = "4"
                 alteration = " Carbine"
-                desc2 = "\n\nCarbine variant of the M16A4 retaining the burst-fire selector of it's bigger brother. Oddly it uses a cut down FPW barrel."
+                desc2 = "Carbine variant of the M16A4 retaining the burst-fire selector of it's bigger brother. Oddly it uses a cut down FPW barrel."
             elseif length == 6 then
                 model = "4"
                 alteration = " Commando"
-                desc2 = "\n\nCarbine variant of the M16A4 retaining the burst-fire selector of it's bigger brother. Shorter barrel for close quarters combat."
+                desc2 = "Carbine variant of the M16A4 retaining the burst-fire selector of it's bigger brother. Shorter barrel for close quarters combat."
+            end
+            if tube and (stock == 1) and (length <= 1) and (ogm16 == 1) then
+                desc2 = "The original iteration of the M16A4. Though you don't have Stopping Power you can still do damage."
             end
         elseif fcg == 2 then
             prefix = "AR-"
             model = "15"
             alteration = "A4 Rifle"
-            desc2 = "\n\nCivilian market version of the M16A4."
+            desc2 = "Civilian market version of the M16A4."
             if length == 1 then
-                if ris == 1 and wep.Attachments[17].Installed == "optic_mw3_rsass" then
+                if ris == 1 and wep.Attachments[17].Installed == "optic_mw3_rsass_kali" then
                     brand = ""
                     prefix = "M"
                     model = "k. 12"
                     alteration = " SPR"
-                    desc2 = "\n\nSpecial marksman variant of the M16A4 equipped with a long range sniper scope."
+                    desc2 = "Special marksman variant of the M16A4 equipped with a long range sniper scope."
                 end
             elseif length == 2 then
                 prefix = "CAR-"
                 alteration = " SMG"
-                desc2 = "\n\nCivilian AR-15 carbine with a flat top upper receiver. Flaunts an outdated M607a barrel assembly."
+                desc2 = "Civilian AR-15 carbine with a flat top upper receiver. Flaunts an outdated M607a barrel assembly."
             elseif length == 3 then
                 alteration = "A3 Tactical Carbine"
-                desc2 = "\n\nCivilian AR-15 carbine with a flat top upper receiver. The XM177E2 barrel assembly and muzzle device could have better served a retro reproduction."
+                desc2 = "Civilian AR-15 carbine with a flat top upper receiver. The XM177E2 barrel assembly and muzzle device could have better served a retro reproduction."
             elseif length == 4 then
                 alteration = "A3 Tactical Carbine"
-                desc2 = "\n\nCivilian AR-15 carbine with a flat top upper receiver."
+                desc2 = "Civilian AR-15 carbine with a flat top upper receiver."
             elseif length == 5 then
                 prefix = "CAR-"
                 alteration = " Patriot"
-                desc2 = "\n\nCivilian AR-15 carbine with a flat top upper receiver. Using a rare custom made FPW barrel."
+                desc2 = "Civilian AR-15 carbine with a flat top upper receiver. Using a rare custom made FPW barrel."
             elseif length == 6 then
                 prefix = "CAR-"
                 alteration = " SBR"
-                desc2 = "\n\nCivilian AR-15 carbine with a flat top upper receiver. The very short barrel makes it an SBR and thus illegal for a civilian to own in many states of the US."
+                desc2 = "Civilian AR-15 carbine with a flat top upper receiver. The very short barrel makes it an SBR and thus illegal for a civilian to own in many states of the US."
             end
         end
     end
@@ -974,37 +988,46 @@ SWEP.Hook_NameChange = function(wep, name)
         if upper == 0 then
             model = "635"
             alteration = ""
-            desc2 = "\n\nExperimental 9mm conversion of the AR-15."
+            desc2 = "Experimental 9mm conversion of the AR-15."
             if length >= 1 then
-                desc2 = "\n\nExperimental 9mm conversion of the AR-15 as a carbine. Effectively making it an SMG."
+                desc2 = "Experimental 9mm conversion of the AR-15 as a carbine. Effectively making it an SMG."
+            end
+            if wood and length == 2 then
+                brand = ""
+                prefix = "Service"
+                model = " SMG"
+                alteration = ""
+                desc1 = "Custom made experimental smg made from the standard issue rifle of the New California Republic."
+                desc2 = ""
+                ncr = 1
             end
         elseif upper == 1 then
             prefix = "9mm"
             model = " SMG"
             alteration = ""
-            desc2 = "\n\nExperimental 9mm conversion of the AR-15."
+            desc2 = "Experimental 9mm conversion of the AR-15."
             if length >= 1 then
-                desc2 = "\n\nExperimental 9mm conversion of the AR-15 as a carbine. Effectively making it an SMG."
+                desc2 = "Experimental 9mm conversion of the AR-15 as a carbine. Effectively making it an SMG."
             end
             if length == 4 and wep:GetBuff_Override("BO1_UBGL") then
                 brand = ""
                 model = "AR"
                 alteration = " HD"
-                desc2 = "\n\n9mm SMGs found in Black Mesa armories and in the hands of the Hazardous Environment Combat Unit."
+                desc2 = "9mm SMGs found in Black Mesa armories and in the hands of the Hazardous Environment Combat Unit."
             end
         elseif upper >= 2 then
             prefix = "9mm"
             model = " SMG"
             alteration = ""
-            desc2 = "\n\n9mm Conversion of the AR-15."
+            desc2 = "9mm Conversion of the AR-15."
             if length >= 1 then
-                desc2 = "\n\n9mm conversion of the AR-15 as a carbine. Effectively making it an SMG."
+                desc2 = "9mm conversion of the AR-15 as a carbine. Effectively making it an SMG."
             end
             if length == 4 and wep:GetBuff_Override("BO1_UBGL") then
                 brand = ""
                 model = "AR"
                 alteration = " UHD"
-                desc2 = "\n\n9mm SMGs found in Black Mesa armories and in the hands of the Hazardous Environment Combat Unit. Retrofitted with a flat top upper."
+                desc2 = "9mm SMGs found in Black Mesa armories and in the hands of the Hazardous Environment Combat Unit. Retrofitted with a flat top upper."
             end
         end
     end
@@ -1012,40 +1035,48 @@ SWEP.Hook_NameChange = function(wep, name)
     if length == 7 then
         model = "4"
         alteration = "F1"
-        desc2 = "\n\nAR-15 modified with the shell of a FAMAS receiver for some god-forsaken reason."
+        desc2 = "AR-15 modified with the shell of a FAMAS receiver for some god-forsaken reason."
     end
 
     if pap then
         brand = ""
         prefix = ""
         alteration = ""
+        desc1 = desc2
+        desc2 = "Upgraded by the power of Element 115! Tear your enemies to pieces!"
         if length > 1 then
             if fcg > 0 then
                 model = "Xeno Matter 4000"
+                if fcg == 2 then
+                    model = "Aether Reactor 115"
+                end
             else
                 model = "Predator"
             end
         elseif length <= 1 then
-            if tube then
-                model = "Skullcrusher"
-            elseif fcg == 3 then
+            if fcg == 3 then
                 model = "Skullsplitter"
             else
                 model = "Skullpiercer"
             end
+            if tube then
+                model = "Skullcrusher"
+            end
         end
         if truepatriot == 1 then
             model = "True Patriot"
-            desc2  = "\n\nIt never runs out of ammo because the internal feeding mechanism is shaped like an infinity symbol. Yes. That will totally give you unlimited ammo."
+            desc2  = "It never runs out of ammo because the internal feeding mechanism is shaped like an infinity symbol. Yes. That will totally give you unlimited ammo."
         end
     end
 
-    wep.Trivia_Desc = desc1 .. desc2
+    wep.Trivia_Desc = desc1 .. "\n\n" .. desc2
 
     if ncr == 1 then
         wep.Trivia_Country = "New California Republic"
+        wep.Trivia_Manufacturer = "Gun Runners"
     else
         wep.Trivia_Country = "United States of America"
+        wep.Trivia_Manufacturer = "Colt"
     end
 
     return brand .. prefix .. model .. alteration

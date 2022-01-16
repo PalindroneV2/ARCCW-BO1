@@ -9,7 +9,7 @@ att.Free = true
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "- No Carry Handle."
+    "- Some low profile sights might be obstructed by a barrel with a non-removable front sight."
 }
 att.Slot = "kali_top"
 att.GivesFlags = {"a4top", "flattop_carry"}

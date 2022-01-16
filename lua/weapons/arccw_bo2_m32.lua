@@ -146,7 +146,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Slot = {"bo1_reddots"},
-        Bone = "tag_weapon",
+        Bone = "j_gun",
         Offset = {
             vpos = Vector(6.5, -0.02, 4.75),
             vang = Angle(0, 0, 0),
@@ -174,7 +174,7 @@ SWEP.Attachments = {
     {
         Hidden = true,
         Slot = "bo2_m32_sight",
-        Bone = "tag_weapon",
+        Bone = "j_gun",
         Offset = {
             vpos = Vector(0, 0, 0),
             vang = Angle(0, 0, 0),
