@@ -23,7 +23,7 @@ att.DroppedModel = "models/weapons/arccw/atts/bo2_storm_scope.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 4, -5.425),
+        Pos = Vector(0, 5, -5.425),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
@@ -41,7 +41,7 @@ att.ScopeGlint = false
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/bo2_storm.png")
 att.HolosightNoFlare = true
-att.HolosightSize = 10.2
+att.HolosightSize = 8.5
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo2_storm_hsp.mdl"
 att.Colorable = false
