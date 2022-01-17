@@ -1,12 +1,8 @@
-"VertexlitGeneric"
+VertexlitGeneric
 {
-	"$basetexture" "models/weapons/bo2/bo2_m27/hk416_c"
-	$blendtintbybasealpha  "1"
-	"$bumpmap" "models/weapons/bo2/bo2_m27/hk416_n"
-
-	$detail "models/weapons/bo1/gunmetal"
-	$detailblendmode "0"
-	"$detailblendfactor" "1"
+	$basetexture	"models\weapons\bo2\bo2_raygunmk2\raygunmk2"
+	//$color2 "[0.5 0.5 0.5]"
+	$bumpmap	"models\weapons\bo2\bo2_raygunmk2\raygunmk2_n"
 
 	$phong                      		1
 //	$phongexponent                      "20"
@@ -18,5 +14,6 @@
 	$envmap 	env_cubemap
 	$envmaptint   "[0.01 0.01 0.01]"
 	$envmapfresnel "1"
+
 	"$nocull" "1"
 }
