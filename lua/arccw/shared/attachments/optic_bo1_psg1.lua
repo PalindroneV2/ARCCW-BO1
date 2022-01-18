@@ -1,4 +1,5 @@
-att.PrintName = "Hensoldt ZF 6×42 (8x)"
+att.PrintName = "Hensoldt ZF 6×42 (2-8x)"
+att.AbbrevName = "Hensoldt [BO1](8x)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
 att.Description = "German high power scope originally for the HK PSG-1. Magnification between 4x and 8x."
 

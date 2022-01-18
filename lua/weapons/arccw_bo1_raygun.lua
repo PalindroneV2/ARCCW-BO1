@@ -143,7 +143,6 @@ SWEP.AttachmentElements = {
     ["papraygun"] = {
         NamePriority = 10,
         TrueNameChange = "Porter's X2 Ray Gun",
-        NameChange = "RM-1HRG EX2",
     },
 }
 

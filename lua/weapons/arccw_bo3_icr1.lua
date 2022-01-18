@@ -202,7 +202,6 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.RejectAttachments = {
-    ["ub_bo2_foregrip"] = true,
 }
 
 SWEP.Attachments = {
@@ -212,7 +211,7 @@ SWEP.Attachments = {
         Slot = {"optic"}, -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(3.75, 0.225, 4.825), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(4.5, 0.225, 4.825), -- 4.6 offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(5.5, 1.2, -6),
             wang = Angle(172.5, 181.75, 0)

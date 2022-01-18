@@ -1,4 +1,5 @@
 att.PrintName = "Millimeter Scanner (HOLO)"
+att.AbbrevName = "MMS [BO2]"
 att.Icon = Material("entities/acwatt_optic_bo2_mms.png", "mips smooth")
 att.Description = "Black Ops 2 Holographic Sight. Low magnification optical sight that highlights enemies in red without compromising the quality of the image projected by the small monitor."
 

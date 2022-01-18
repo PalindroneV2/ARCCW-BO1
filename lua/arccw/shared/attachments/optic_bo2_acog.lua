@@ -1,4 +1,5 @@
 att.PrintName = "Trijicon ACOG 6x48 (6x)"
+att.AbbrevName = "ACOG [BO2](6x)"
 att.Icon = Material("entities/acwatt_optic_bo2_acog.png", "mips smooth")
 att.Description = "Black Ops 2 ACOG Scope. Medium range combat scope for improved precision at longer ranges."
 

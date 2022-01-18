@@ -1,4 +1,5 @@
-att.PrintName = "Colt 3x20 (3x)"
+att.PrintName = "Colt 3x20 Carry Handle Scope (3x)"
+att.AbbrevName = "Colt Scope [BO1](3x)"
 att.Icon = Material("entities/acwatt_optic_bo1_acog.png", "mips smooth")
 att.Description = "Medium range combat scope for improved precision at longer ranges."
 att.Desc_Pros = {

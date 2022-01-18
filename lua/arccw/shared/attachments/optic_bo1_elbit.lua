@@ -1,4 +1,5 @@
 att.PrintName = "Elbit Falcon (RDS)"
+att.AbbrevName = "Falcon [BO1](RDS)"
 att.Icon = Material("entities/acwatt_optic_bo1_reddot.png", "mips smooth")
 att.Description = "Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons."
 

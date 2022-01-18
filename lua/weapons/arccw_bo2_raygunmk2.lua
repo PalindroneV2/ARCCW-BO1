@@ -17,7 +17,8 @@ SWEP.Slot = 1
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo2_raygunmk2.mdl"
-SWEP.WorldModel = "models/weapons/arccw/c_bo2_raygunmk2.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_bo2_raygunmk2.mdl"
+SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_raygunmk2.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     scale = 1.1,
@@ -84,7 +85,7 @@ SWEP.ShootSound = "ArcCW_BO2.RGMK2_Fire"
 --SWEPHook_PostFireBullets = function(wep)
 --end
 
-SWEP.MuzzleEffect = "raygun_flash"
+SWEP.MuzzleEffect = "muzzleflash_3"
 SWEP.GMMuzzleEffect = false
 SWEP.ShellModel = ""
 SWEP.ShellScale = 1.5
@@ -214,6 +215,7 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 1.46,
         SoundTable = {
+            {s = "ArcCW_BO2.RGMK2_Raise", t = 1 / 30},
             {s = "ArcCW_BO1.RayGun_Obtain", t = 1 / 30},
         }
     },

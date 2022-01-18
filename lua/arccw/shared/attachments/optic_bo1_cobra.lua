@@ -1,4 +1,5 @@
 att.PrintName = "Kobra EKP-1S-03 (RDS)"
+att.AbbrevName = "Kobra [BO1](RDS)"
 att.Icon = Material("entities/acwatt_optic_bo1_reddot.png", "mips smooth")
 att.Description = "Small red dot sight with a Soviet-style mount."
 

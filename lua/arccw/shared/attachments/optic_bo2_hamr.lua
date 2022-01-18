@@ -1,4 +1,5 @@
 att.PrintName = "Leupold Mk 4 HAMR (3.5x)"
+att.AbbrevName = "HAMR [BO2](3.5x)"
 att.Icon = Material("entities/acwatt_optic_bo2_hamr.png", "mips smooth")
 att.Description = "Black Ops 2 Hybrid Scope. Medium range combat scope for improved precision at longer ranges."
 

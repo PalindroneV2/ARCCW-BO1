@@ -1,4 +1,5 @@
 att.PrintName = "Aimpoint Mark II (REFLEX)"
+att.AbbrevName = "Aimpoint [BO1]"
 att.Icon = Material("entities/acwatt_optic_bo1_reflex.png", "mips smooth")
 att.Description = "Small, tube-based optic. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons."
 
