@@ -16,6 +16,8 @@ att.SortOrder = 106
 att.Mult_Recoil = 0.75
 att.Mult_HipDispersion = 0.85
 att.Mult_AccuracyMOA = 0.85
+att.Mult_Damage = 35 / 30
+att.Mult_DamageMin = 25 / 20
 
 att.RequireFlags = {"papname1"}
 att.HideIfBlocked = true

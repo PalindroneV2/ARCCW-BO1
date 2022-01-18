@@ -12,7 +12,7 @@ att.Desc_Cons = {
 att.Slot = "bo1_g3_barrel"
 att.GivesFlags = {"hk33_barrel2"}
 
-att.Mult_Range = 0.85
+att.Mult_Range = 0.75
 att.Mult_Recoil = 1.15
 att.Mult_RecoilSide = 1.15
 att.Mult_SpeedMult = 1.05

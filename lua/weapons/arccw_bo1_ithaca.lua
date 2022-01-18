@@ -31,6 +31,7 @@ SWEP.DefaultBodygroups = "00000"
 
 SWEP.Damage = 15
 SWEP.DamageMin = 5 -- damage done at maximum range
+SWEP.RangeMin = 30
 SWEP.Range = 75 -- in METRES
 SWEP.RangeMin = 15
 

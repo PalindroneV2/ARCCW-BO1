@@ -16,7 +16,7 @@ att.SortOrder = 101
 att.Override_Firemodes = {
     {
         Mode = -3,
-        PostBurstDelay = 0.1,
+        PostBurstDelay = 0.2,
         RunawayBurst = true,
     },
     {
@@ -28,6 +28,8 @@ att.Override_Firemodes = {
 }
 att.Mult_Recoil = 0.85
 att.Mult_HipDispersion = 0.9
+att.Mult_Damage = 40 / 30
+att.Mult_DamageMin = 30 / 20
 
 att.Hook_Compatible = function(wep)
     local auto = false

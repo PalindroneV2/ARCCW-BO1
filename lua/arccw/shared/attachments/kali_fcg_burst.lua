@@ -19,6 +19,8 @@ att.RandomWeight = 0.5
 att.Mult_Recoil = 0.9
 att.Mult_HipDispersion = 0.95
 att.Mult_AccuracyMOA = 0.95
+att.Mult_Damage = 40 / 30
+att.Mult_DamageMin = 30 / 20
 
 att.Override_Firemodes = {
     {

@@ -31,6 +31,7 @@ SWEP.DefaultBodygroups = "00000020"
 
 SWEP.Damage = 30
 SWEP.DamageMin = 20 -- damage done at maximum range
+SWEP.RangeMin = 37.5
 SWEP.Range = 120 -- in METRES
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET

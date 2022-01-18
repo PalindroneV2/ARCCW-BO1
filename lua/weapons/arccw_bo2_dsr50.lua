@@ -27,7 +27,8 @@ SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_dsr50.mdl"
 SWEP.ViewModelFOV = 60
 
 SWEP.Damage = 200
-SWEP.DamageMin = 115 -- damage done at maximum range
+SWEP.DamageMin = 140 -- damage done at maximum range
+SWEP.RangeMin = 50
 SWEP.Range = 1000 -- in METRES
 SWEP.Penetration = 20
 SWEP.DamageType = DMG_BULLET

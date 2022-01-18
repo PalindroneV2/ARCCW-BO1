@@ -15,7 +15,7 @@ att.Mult_HipDispersion = 0.9
 att.Override_Firemodes = {
     {
         Mode = -3,
-        PostBurstDelay = 0.15,
+        PostBurstDelay = 0.2,
         RunawayBurst = true,
     },
     {
@@ -25,6 +25,9 @@ att.Override_Firemodes = {
         Mode = 0
     }
 }
+
+att.Mult_Damage = 40 / 30
+att.Mult_DamageMin = 30 / 20
 
 att.Hook_Compatible = function(wep)
     local auto = false

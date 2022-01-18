@@ -11,8 +11,8 @@ att.GivesFlags = {"f1_top", "famas_f1"}
 att.SortOrder = 100
 
 att.Mult_Recoil = 0.9
-att.Mult_SightTime = 1.05
-att.Mult_SightedSpeedMult = 1.05
+att.Mult_SightTime = 1.1
+att.Mult_SightedSpeedMult = 0.95
 
 att.Hook_Compatible = function(wep)
     local auto = false

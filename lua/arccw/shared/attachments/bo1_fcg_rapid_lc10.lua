@@ -16,6 +16,7 @@ att.Mult_Recoil = 0.85
 att.Mult_HipDispersion = 1.25
 att.Mult_MoveDispersion = 1.5
 att.Mult_AccuracyMOA = 1.5
+att.Mult_Range = 0.85
 
 att.Mult_SightTime = 1.25
 att.Mult_SpeedMult = 0.97

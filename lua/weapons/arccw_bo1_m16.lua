@@ -31,8 +31,9 @@ SWEP.WorldModelOffset = {
 SWEP.ViewModelFOV = 60
 
 SWEP.Damage = 30
-SWEP.DamageMin = 22 -- damage done at maximum range
-SWEP.Range = 150 -- in METRES
+SWEP.DamageMin = 20 -- damage done at maximum range
+SWEP.RangeMin = 50
+SWEP.Range = 140 -- in METRES
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any

@@ -17,6 +17,8 @@ att.Mult_Recoil = 0.85
 att.Mult_HipDispersion = 0.85
 att.Mult_AccuracyMOA = 0.9
 att.Mult_RPM = 600 / 900
+att.Mult_Damage = 40 / 30
+att.Mult_DamageMin = 30 / 20
 
 att.Override_Firemodes = {
     {

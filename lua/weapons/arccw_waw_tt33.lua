@@ -29,7 +29,7 @@ SWEP.ViewModelFOV = 60
 
 SWEP.Damage = 30
 SWEP.DamageMin = 20
-SWEP.RangeMin = 7
+SWEP.RangeMin = 10
 SWEP.Range = 120
 
 SWEP.Penetration = 5

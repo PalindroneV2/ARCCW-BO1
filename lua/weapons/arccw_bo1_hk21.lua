@@ -29,6 +29,7 @@ SWEP.ViewModelFOV = 60
 -- 50dmg within 170m
 SWEP.Damage = 65
 SWEP.DamageMin = 32 -- damage done at maximum range
+SWEP.RangeMin = 40
 SWEP.Range = 400 -- in METRES
 SWEP.RangeMin = 40
 

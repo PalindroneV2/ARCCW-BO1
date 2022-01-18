@@ -13,3 +13,4 @@ att.SortOrder = 100
 att.Mult_RPM = 1.15
 att.Mult_HipDispersion = 1.1
 att.Mult_Recoil = 1.15
+att.Mult_Range = 0.85

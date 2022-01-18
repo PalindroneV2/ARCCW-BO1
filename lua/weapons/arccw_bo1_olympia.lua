@@ -32,7 +32,7 @@ SWEP.DefaultBodygroups = "000000000"
 SWEP.Damage = 18
 SWEP.DamageMin = 6 -- damage done at maximum range
 SWEP.Range = 100 -- in METRES
-SWEP.RangeMin = 20
+SWEP.RangeMin = 35
 
 SWEP.HullSize = 2
 SWEP.BodyDamageMults = {[HITGROUP_HEAD] = 1,}

@@ -1,7 +1,7 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
-SWEP.AdminOnly = false
+SWEP.AdminOnly = true
 
 SWEP.PrintName = "Storm PSR"
 SWEP.Trivia_Class = "Anti-Materiel Precision Rifle"
