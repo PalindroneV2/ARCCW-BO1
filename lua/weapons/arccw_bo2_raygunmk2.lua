@@ -22,8 +22,8 @@ SWEP.MirrorWorldModel = "models/weapons/arccw/w_bo2_raygunmk2.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     scale = 1.1,
-    pos        =    Vector(-20, 5, -5.5),
-    ang        =    Angle(-6, -2.5, 180),
+    pos        =    Vector(-12, 6.2, -6),
+    ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
@@ -33,7 +33,7 @@ SWEP.DamageMin = 1000 -- damage done at maximum range
 SWEP.Range = 200 -- in METRES
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = "arccw_bo1_raygun_bolt"
+SWEP.ShootEntity = "arccw_bo2_rgmk2_bolt"
 SWEP.MuzzleVelocity = 10000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
@@ -85,7 +85,8 @@ SWEP.ShootSound = "ArcCW_BO2.RGMK2_Fire"
 --SWEPHook_PostFireBullets = function(wep)
 --end
 
-SWEP.MuzzleEffect = "muzzleflash_3"
+SWEP.MuzzleEffect = "rgmk2_flash"
+SWEP.ImpactEffect = "rgmk2_impact_glow"
 SWEP.GMMuzzleEffect = false
 SWEP.ShellModel = ""
 SWEP.ShellScale = 1.5
@@ -122,10 +123,10 @@ SWEP.IronSightStruct = {
 }
 
 SWEP.HoldtypeHolstered = "normal"
-SWEP.HoldtypeActive = "pistol"
-SWEP.HoldtypeSights = "revolver"
+SWEP.HoldtypeActive = "ar2"
+SWEP.HoldtypeSights = "ar2"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.ActivePos = Vector(0, 1, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
@@ -169,7 +170,7 @@ SWEP.Attachments = {
     },
     { --2
         PrintName = "Ammo Type",
-        Slot = {"ammo_raygun_pap"}
+        Slot = {"ammo_rgmk2_pap"}
     },
     { --3
         PrintName = "Perk",
@@ -188,7 +189,7 @@ SWEP.Attachments = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local papcamo = wep.Attachments[2].Installed == "ammo_pap_raygun"
+    local papcamo = wep:GetBuff_Override("PackAPunch")
 
     if papcamo then
         return vm:SetSkin(3)

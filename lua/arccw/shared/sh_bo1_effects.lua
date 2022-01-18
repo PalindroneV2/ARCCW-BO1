@@ -1,4 +1,5 @@
 game.AddParticles( "particles/bo1/raygun.pcf" )
+game.AddParticles( "particles/bo1/raygunmk2.pcf" )
 game.AddParticles( "particles/bo1/bo1_pap_muzzle.pcf" )
 
 PrecacheParticleSystem("pap_muzzle")
@@ -18,3 +19,8 @@ PrecacheParticleSystem("raygun_splash")
 PrecacheParticleSystem("raygun_splash_pap")
 PrecacheParticleSystem("raygun_flash")
 PrecacheParticleSystem("raygun_flash_pap")
+
+PrecacheParticleSystem("rgmk2_flash")
+PrecacheParticleSystem("rgmk2_pap_flash")
+PrecacheParticleSystem("rgmk2_impact_glow")
+PrecacheParticleSystem("rgmk2_pap_impact_glow")
