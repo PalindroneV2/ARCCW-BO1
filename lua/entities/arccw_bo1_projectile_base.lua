@@ -56,10 +56,10 @@ if SERVER then
 
         -- Gunships have no physics collection, periodically trace to try and blow up in their face
         if self.GunshipWorkaround and (self.GunshipCheck or 0 < CurTime()) then
-            self.GunshipCheck = CurTime() + 0.4
+            self.GunshipCheck = CurTime() + 0.33
             local tr = util.TraceLine({
                 start = self:GetPos(),
-                endpos = self:GetPos() + self:GetForward() * self:GetVelocity() * 0.8,
+                endpos = self:GetPos() + self:GetVelocity(),
                 filter = self,
                 mask = MASK_SHOT
             })
