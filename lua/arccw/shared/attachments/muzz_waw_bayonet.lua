@@ -35,6 +35,7 @@ end
 
 att.Override_ShootWhileSprint = true
 att.Override_ShootWhileSprint_SkipAS = true
+att.Override_HoldtypeSprintShoot = "shotgun"
 att.Hook_ShouldNotFire = function(wep)
     if wep:GetState() == ArcCW.STATE_SPRINT or wep:GetSprintDelta() > 0 then return true end
 end

@@ -30,13 +30,13 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
 
-SWEP.Damage = 500
-SWEP.DamageMin = 500
+SWEP.Damage = 600
+SWEP.DamageMin = 600
 SWEP.Range = 10
 
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
-SWEP.ShootEntity = "arccw_bo1_rpgrocket" -- entity to fire, if any
+SWEP.ShootEntity = "arccw_bo1_rocket_rpg" -- entity to fire, if any
 SWEP.MuzzleVelocity = 5000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 

@@ -31,12 +31,10 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
 
-SWEP.Damage = 30
-SWEP.DamageMin = 15 -- damage done at maximum range
-SWEP.Range = 350 -- in METRES
-SWEP.Penetration = 1
-SWEP.DamageType = DMG_BUCKSHOT
-SWEP.ShootEntity = "arccw_bo1_s5rocket" -- entity to fire, if any
+SWEP.Damage = 200
+SWEP.DamageMin = 200
+
+SWEP.ShootEntity = "arccw_bo1_rocket_s5" -- entity to fire, if any
 SWEP.MuzzleVelocity = 30000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
@@ -67,9 +65,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = {"weapon_shotgun", "weapon_rpg"}
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 2.5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 50 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 300 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 400
 
 SWEP.Primary.Ammo = "RPG_Rocket" -- what ammo type the gun uses
 

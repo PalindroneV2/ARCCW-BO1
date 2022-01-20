@@ -37,7 +37,7 @@ SWEP.Range = 10
 
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
-SWEP.ShootEntity = "arccw_bo1_m202rocket" -- entity to fire, if any
+SWEP.ShootEntity = "arccw_bo1_rocket_m202" -- entity to fire, if any
 SWEP.MuzzleVelocity = 3000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 

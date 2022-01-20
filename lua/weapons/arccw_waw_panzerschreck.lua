@@ -7,7 +7,7 @@ SWEP.PrintName = [[Panzerschreck]]
 SWEP.Trivia_Class = "Rocket Launcher"
 SWEP.Trivia_Desc = [[
     A german man-portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
-    
+
     It was based on captured Lend-Lease Act M1 Bazookas captured from the Soviets.
 ]]
 SWEP.Trivia_Manufacturer = "Bazalt"
@@ -41,7 +41,7 @@ SWEP.Range = 10
 
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
-SWEP.ShootEntity = "arccw_waw_panzer_rocket" -- entity to fire, if any
+SWEP.ShootEntity = "arccw_waw_rocket_panzer" -- entity to fire, if any
 SWEP.MuzzleVelocity = 3000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 

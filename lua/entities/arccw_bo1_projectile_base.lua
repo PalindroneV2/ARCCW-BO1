@@ -15,6 +15,8 @@ ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 ENT.Drag = true
 ENT.Gravity = true
 ENT.DragCoefficient = 0.25
+ENT.GunshipWorkaround = true
+local gunship = {["npc_combinegunship"] = true, ["npc_combinedropship"] = true}
 
 ENT.Damage = 150
 ENT.Radius = 300
@@ -38,8 +40,17 @@ if SERVER then
     end
 
     function ENT:Think()
-        if SERVER and self.Defused and CurTime() - self.Defused_When >= self.Defused_RemoveIn then
-            self:Remove()
+        if self.GunshipWorkaround and (self.GunshipCheck or 0 < CurTime()) then
+            self.GunshipCheck = CurTime() + 0.25
+            local tr = util.TraceLine({
+                start = self:GetPos(),
+                endpos = self:GetPos() + self:GetForward() * self:GetVelocity() * 0.5,
+                filter = self,
+                mask = MASK_SHOT
+            })
+            if IsValid(tr.Entity) and gunship[tr.Entity:GetClass()] then
+                self:Detonate()
+            end
         end
     end
 end
@@ -94,9 +105,7 @@ end
 
 function ENT:Defuse()
     self.Defused = true
-    self.Defused_RemoveIn = 5
-    self.Defused_When = CurTime()
-    --self:Remove()
+    SafeRemoveEntityDelayed(self, 5)
 end
 
 function ENT:Draw()

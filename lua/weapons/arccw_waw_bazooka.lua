@@ -7,7 +7,7 @@ SWEP.PrintName = [[M9A1 "Bazooka"]]
 SWEP.Trivia_Class = "Rocket Launcher"
 SWEP.Trivia_Desc = [[
     An american man-portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
-    
+
     It's vague resemblance to an instrument called "bazooka" created by a popular comedian earned it its nickname.
 
     This was the basis for the German Panzerschreck.
@@ -42,7 +42,7 @@ SWEP.Range = 10
 
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
-SWEP.ShootEntity = "arccw_waw_bazooka_rocket" -- entity to fire, if any
+SWEP.ShootEntity = "arccw_waw_rocket_bazooka" -- entity to fire, if any
 SWEP.MuzzleVelocity = 3000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
