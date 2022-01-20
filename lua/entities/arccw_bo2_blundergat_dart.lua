@@ -1,11 +1,10 @@
+AddCSLuaFile()
+
 ENT.Type 				= "anim"
 ENT.Base 				= "base_anim"
 ENT.PrintName 			= "Acid Gat Dart (BO2)"
-ENT.Author 				= ""
-ENT.Information 		= ""
 
 ENT.Spawnable = false
-ENT.AdminSpawnable = false
 
 ENT.Damage = 1500
 ENT.Radius = 150
@@ -17,8 +16,7 @@ if CLIENT then
 end
 
 if SERVER then
-
-    AddCSLuaFile()
+    local gunship = {["npc_combinegunship"] = true, ["npc_combinedropship"] = true}
 
     function ENT:Initialize()
 
@@ -50,7 +48,7 @@ if SERVER then
             dmginfo:SetAttacker(self:GetOwner())
             dmginfo:SetInflictor(self)
             dmginfo:SetDamage(self.Damage)
-            dmginfo:SetDamageType(DMG_ACID + DMG_GENERIC) -- poison headcrabs
+            dmginfo:SetDamageType(DMG_ACID + DMG_GENERIC + DMG_AIRBOAT + DMG_BLAST) -- why must you hard code all this valve
             dmginfo:SetDamagePosition(self:GetPos())
             --util.BlastDamageInfo(dmginfo, self:GetPos(), self.Radius)
 
@@ -76,6 +74,23 @@ if SERVER then
             ParticleEffect("raygun_splash", self:GetPos(), self.StuckAngle or self:GetAngles())
             self:EmitSound("phx/kaboom.wav")
             self:Remove()
+        elseif self.GunshipCheck or 0 < CurTime() then
+            self.GunshipCheck = CurTime() + 0.4
+            local tr = util.TraceLine({
+                start = self:GetPos(),
+                endpos = self:GetPos() + self:GetForward() * self:GetVelocity() * 0.8,
+                filter = self,
+                mask = MASK_SHOT
+            })
+            if IsValid(tr.Entity) and gunship[tr.Entity:GetClass()] then
+                self:SetPos(tr.HitPos)
+                self.Stuck = true
+                self.StuckAngle = self:GetAngles()
+                self:SetSolid(SOLID_NONE)
+                self:SetMoveType(MOVETYPE_NONE)
+                self:SetParent(tr.Entity)
+                self.DetonateTime = CurTime() + 1
+            end
         end
     end
 
