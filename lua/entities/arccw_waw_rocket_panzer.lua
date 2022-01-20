@@ -11,6 +11,7 @@ ENT.AdminSpawnable = false
 
 ENT.Model = "models/weapons/arccw/item/waw_panzer_rocket.mdl"
 
+ENT.BoxSize = Vector(8, 4, 1)
 ENT.Damage = 650
 ENT.Radius = 250
 ENT.ImpactDamage = 3000

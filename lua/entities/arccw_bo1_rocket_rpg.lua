@@ -10,7 +10,7 @@ ENT.Spawnable = false
 ENT.AdminSpawnable = false
 
 ENT.Model = "models/weapons/arccw/item/bo1_rpgrocket.mdl"
-ENT.BoxSize = Vector(8, 4, 2)
+ENT.BoxSize = Vector(8, 4, 1)
 
 ENT.Damage = 250
 ENT.Radius = 300

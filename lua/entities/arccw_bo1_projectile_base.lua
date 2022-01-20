@@ -11,7 +11,7 @@ ENT.Model = "models/weapons/arccw/item/bo1_40mm.mdl"
 ENT.Ticks = 0
 ENT.FuseTime = 0.05
 ENT.Defused = false
-ENT.BoxSize = Vector(1, 1, 1)
+ENT.BoxSize = Vector(2, 2, 2)
 ENT.SmokeTrail = true
 
 ENT.Drag = true
@@ -41,6 +41,8 @@ if SERVER then
             phys:EnableDrag(self.Drag)
             phys:SetDragCoefficient(self.DragCoefficient)
             phys:EnableGravity(self.Gravity)
+            phys:SetMass(5)
+            phys:SetBuoyancyRatio(0.4)
         end
 
         self.SpawnTime = CurTime()
@@ -51,6 +53,7 @@ if SERVER then
     end
 
     function ENT:Think()
+        if self.Defused or self:WaterLevel() > 0 then return end
 
         self:GetPhysicsObject():AddVelocity(Vector(0, 0, self.Lift) + self:GetForward() * self.Boost)
 
@@ -76,7 +79,7 @@ if SERVER then
         local effectdata = EffectData()
             effectdata:SetOrigin( self:GetPos() )
 
-        if self:WaterLevel() >= 1 then
+        if self:WaterLevel() > 0 then
             util.Effect( "WaterSurfaceExplosion", effectdata )
             --self:EmitSound("weapons/underwater_explode3.wav", 125, 100, 1, CHAN_AUTO)
         else
@@ -106,10 +109,7 @@ if SERVER then
     function ENT:PhysicsCollide(colData, physobj)
         if !self:IsValid() then return end
 
-        if self:WaterLevel() >= 0.01 then
-            self:Defuse()
-            return
-        elseif CurTime() - self.SpawnTime < self.FuseTime then
+        if CurTime() - self.SpawnTime < self.FuseTime then
             if IsValid(colData.HitEntity) then
                 local v = colData.OurOldVelocity:Length() ^ 0.5
                 local dmg = DamageInfo()
