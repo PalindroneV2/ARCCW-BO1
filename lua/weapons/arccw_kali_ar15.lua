@@ -172,28 +172,28 @@ SWEP.AttachmentElements = {
     },
     ["bo1_m203"] = {
         VMBodygroups = {
-            {ind = 3, bg = 1},
+            {ind = 4, bg = 1},
         },
     },
     ["bo1_mk"] = {
         VMBodygroups = {
-            {ind = 3, bg = 3}
+            {ind = 4, bg = 3}
         },
     },
     ["mwc_bipod"] = {
         VMBodygroups = {
-            {ind = 3, bg = 5},
+            {ind = 4, bg = 5},
         },
     },
     ["mount"] = {
         VMBodygroups = {
-            {ind = 5, bg = 1}
+            {ind = 6, bg = 1}
         },
         ExcludeFlags = {"flattop", "flattop2"},
     },
     ["kali_bo1_sling"] = {
         VMBodygroups = {
-            {ind = 6, bg = 1},
+            {ind = 7, bg = 1},
         },
     },
     ["kali_barrel_607"] = {
@@ -373,94 +373,94 @@ SWEP.AttachmentElements = {
     },
     ["full_stock"] = {
         VMBodygroups = {
-            {ind = 4, bg = 1}
+            {ind = 5, bg = 1}
         },
     },
     /*
     ["gen2_stock"] = {
         VMBodygroups = {
-            {ind = 4, bg = 2}
+            {ind = 5, bg = 2}
         },
     },
     ["gen1_stock"] = {
         VMBodygroups = {
-            {ind = 4, bg = 5}
+            {ind = 5, bg = 5}
         },
     },
     ["wire_stock"] = {
         VMBodygroups = {
-            {ind = 4, bg = 7}
+            {ind = 5, bg = 7}
         },
     },
     ["gen3_stock"] = {
         VMBodygroups = {
-            {ind = 4, bg = 9}
+            {ind = 5, bg = 9}
         },
     },
     ["magpul_stock"] = {
         VMBodygroups = {
-            {ind = 4, bg = 11}
+            {ind = 5, bg = 11}
         },
     },
     */
     ["gen2_collapsed"] = {
         VMBodygroups = {
-            {ind = 4, bg = 2}
+            {ind = 5, bg = 2}
         },
     },
     ["gen2_extended"] = {
         VMBodygroups = {
-            {ind = 4, bg = 3}
+            {ind = 5, bg = 3}
         },
     },
     ["gen1_collapsed"] = {
         VMBodygroups = {
-            {ind = 4, bg = 4}
+            {ind = 5, bg = 4}
         },
     },
     ["gen1_extended"] = {
         VMBodygroups = {
-            {ind = 4, bg = 5}
+            {ind = 5, bg = 5}
         },
     },
     ["wire_collapsed"] = {
         VMBodygroups = {
-            {ind = 4, bg = 6}
+            {ind = 5, bg = 6}
         },
     },
     ["wire_extended"] = {
         VMBodygroups = {
-            {ind = 4, bg = 7}
+            {ind = 5, bg = 7}
         },
     },
     ["gen3_collapsed"] = {
         VMBodygroups = {
-            {ind = 4, bg = 8}
+            {ind = 5, bg = 8}
         },
     },
     ["gen3_extended"] = {
         VMBodygroups = {
-            {ind = 4, bg = 9}
+            {ind = 5, bg = 9}
         },
     },
     ["magpul_collapsed"] = {
         VMBodygroups = {
-            {ind = 4, bg = 10}
+            {ind = 5, bg = 10}
         },
     },
     ["magpul_extended"] = {
         VMBodygroups = {
-            {ind = 4, bg = 11}
+            {ind = 5, bg = 11}
         },
     },
     ["sniper_stock"] = {
         VMBodygroups = {
-            {ind = 4, bg = 10}
+            {ind = 5, bg = 10}
         },
     },
     ["famas_stock"] = {
         VMBodygroups = {
-            {ind = 4, bg = 11}
+            {ind = 5, bg = 11}
         },
     },
 }
@@ -1097,104 +1097,118 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local altirons = troyirons or kacirons
 
     if ubgl != (tube or key) then
-        vm:SetBodygroup(2,2)
+        vm:SetBodygroup(2,0)
+        vm:SetBodygroup(3,1)
     end
 
     local barrel = 0
+    local handguard = 0
+    local gasblock = 0
     if wep.Attachments[5].Installed == "kali_ar15_barrel_m203" then
-        barrel = 1
+        barrel = 0
+        handguard = 1
+        gasblock = 0
     elseif wep.Attachments[5].Installed == "kali_ar15_barrel_a2" then
-        barrel = 2
+        barrel = 0
+        handguard = 2
+        gasblock = 0
     elseif wep.Attachments[5].Installed == "kali_ar15_barrel_a4" then
-        barrel = 3
+        barrel = 0
+        handguard = 3
+        gasblock = 0
     elseif wep.Attachments[5].Installed == "kali_ar15_barrel_xm" then
-        barrel = 4
+        barrel = 2
+        handguard = 4
+        gasblock = 1
     elseif wep.Attachments[5].Installed == "kali_ar15_barrel_607" then
-        barrel = 5
+        barrel = 4
+        handguard = 6
+        gasblock = 1
     elseif wep.Attachments[5].Installed == "kali_ar15_barrel_patriot" then
-        barrel = 6
+        barrel = 5
+        handguard = 7
+        gasblock = 4
     elseif wep.Attachments[5].Installed == "kali_ar15_barrel_727" then
-        barrel = 7
+        barrel = 1
+        handguard = 4
+        gasblock = 1
     elseif wep.Attachments[5].Installed == "kali_ar15_barrel_727c" then
-        barrel = 8
+        barrel = 3
+        handguard = 4
+        gasblock = 1
     elseif wep.Attachments[5].Installed == "kali_ar15_barrel_ris" then
-        barrel = 9
+        barrel = 1
+        handguard = 5
+        gasblock = 1
     elseif wep.Attachments[5].Installed == "kali_ar15_barrel_mw19" then
-        barrel = 10
+        barrel = 1
+        handguard = 3
+        gasblock = 4
     elseif wep.Attachments[5].Installed == "kali_ar15_barrel_risc" then
-        barrel = 11
+        barrel = 3
+        handguard = 5
+        gasblock = 1
     elseif wep.Attachments[5].Installed == "kali_ar15_barrel_f1" then
-        barrel = 12
+        barrel = 1
+        handguard = 8
+        gasblock = 4
     end
 
-    /*
-    for k = barrel, barrel do
-        vm:SetBodygroup(2,k)
-        if barrel <= 2 and tube then
-            vm:SetBodygroup(2,1)
+    vm:SetBodygroup(2,barrel)
+    vm:SetBodygroup(3, handguard)
+    vm:SetBodygroup(8, gasblock)
+
+    if barrel == 0 and handguard < 3 and tube then -- 20 INCH BARREL NOT RIS
+        vm:SetBodygroup(2,0)
+        vm:SetBodygroup(3,1)
+    end
+
+    if handguard == 3 then -- MW19 Barrel Front Sight
+        if barrel == 0 then
+            if kacirons then
+                vm:SetBodygroup(8,2)
+                vm:SetBodygroup(9, 3)
+            end
+            if troyirons then
+                vm:SetBodygroup(8,2)
+                vm:SetBodygroup(9, 1)
+            end
+            if optic then
+                vm:SetBodygroup(8,2)
+                vm:SetBodygroup(9, 0)
+            end
         end
-        if k == 10 then
-            vm:SetBodygroup(7, 1)
-            if tube then
-                vm:SetBodygroup(3,2)
+        if barrel == 1 then
+            vm:SetBodygroup(9, 3)
+            if troyirons then
+                vm:SetBodygroup(9, 1)
+            end
+            if optic then
+                vm:SetBodygroup(9, 0)
             end
         end
     end
-    */
 
-    vm:SetBodygroup(2,barrel)
-
-    if barrel <= 2 and tube then
-        vm:SetBodygroup(2,1)
-    end
-
-    if barrel == 11 and tube then
-        vm:SetBodygroup(3,2)
-    end
-
-    if barrel == 3 and altirons then
-        vm:SetBodygroup(7, 2)
-        if troyirons then
-            vm:SetBodygroup(8, 1)
-        end
-        if kacirons then
-            vm:SetBodygroup(8, 3)
-        end
-    end
-
-    if barrel > 3 then
-        vm:SetBodygroup(7, 1)
-        if barrel == 6 then
-            vm:SetBodygroup(7, 4)
-        end
-        if barrel == 9 and altirons then
-            vm:SetBodygroup(7, 3)
-        end
-        if barrel == 11 and altirons then
-            vm:SetBodygroup(7, 3)
-        end
-    end
-
-    if barrel == 10 then
-        vm:SetBodygroup(7, 4)
+    if barrel >= 1 and handguard == 5 and altirons then
         vm:SetBodygroup(8, 3)
-        if troyirons then
-            vm:SetBodygroup(8, 1)
-        end
-        if kacirons then
-            vm:SetBodygroup(8, 3)
-        end
-        if optic then
-            vm:SetBodygroup(8, 0)
-        end
     end
 
-    if barrel == 12 then vm:SetBodygroup(7, 4) end
+    if barrel == 3 and handguard == 5 and tube then -- 10 inch barrel with M203
+        vm:SetBodygroup(4,2)
+    end
+    if barrel == 3 and handguard == 5 and altirons then -- CARBINE RIS HANDGUARD WITH ALT IRONS
+        if troyirons then
+            vm:SetBodygroup(9, 1)
+        end
+        if kacirons then
+            vm:SetBodygroup(9, 3)
+        end
+    end
 
     ---BARREL END--
 
-    if key and barrel <= 3 then
-        vm:SetBodygroup(3, 4)
+    if key and barrel == 0 then -- MASTERKEY ON 20 INCH BARREL
+        vm:SetBodygroup(4, 4)
     end
 
     -- UPPER
@@ -1225,24 +1239,24 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         }
     end
     if optic then
-        vm:SetBodygroup(5,1)
+        vm:SetBodygroup(6,1)
         if barrel == 12 then
-            vm:SetBodygroup(5,5)
+            vm:SetBodygroup(6,5)
         end
     end
 
     if upper == 2 then
-        if barrel == 12 then
-            vm:SetBodygroup(5,0)
+        if handguard == 8 then
+            vm:SetBodygroup(6,0)
         else
-            vm:SetBodygroup(5,4)
+            vm:SetBodygroup(6,4)
             wep.IronSightStruct = {
                 Pos = Vector(-2.765, -2, 0),
                 Ang = Angle(0.55, 0.0125, 0),
                 Magnification = 1.1,
                 CrosshairInSights = false,
             }
-            if barrel == 11 then
+            if barrel == 3 and handguard == 5 then
                 wep.IronSightStruct = {
                     Pos = Vector(-2.765, -2, -0.035),
                     Ang = Angle(0.95, 0.0125, 0),
@@ -1250,20 +1264,20 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
                     CrosshairInSights = false,
                 }
                 if optic then
-                    vm:SetBodygroup(8,0)
+                    vm:SetBodygroup(9,0)
                 end
             end
         end
         if troyirons then
-            vm:SetBodygroup(5,2)
+            vm:SetBodygroup(6,2)
             wep.IronSightStruct = {
                 Pos = Vector(-2.765, -2, 0.25),
                 Ang = Angle(0, 0.0125, 0),
                 Magnification = 1.1,
                 CrosshairInSights = false,
             }
-            if barrel == 9 or barrel == 11 then
-                vm:SetBodygroup(8,2)
+            if handguard == 5 then
+                vm:SetBodygroup(9,2)
                 wep.IronSightStruct = {
                     Pos = Vector(-2.765, -2, 0.25),
                     Ang = Angle(-0.05, 0.0125, 0),
@@ -1271,20 +1285,20 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
                     CrosshairInSights = false,
                 }
                 if optic then
-                    vm:SetBodygroup(8,0)
+                    vm:SetBodygroup(9,0)
                 end
             end
         end
         if kacirons then
-            vm:SetBodygroup(5,3)
+            vm:SetBodygroup(6,3)
             wep.IronSightStruct = {
                 Pos = Vector(-2.765, -2, 0.275),
                 Ang = Angle(-0.05, 0.0125, 0),
                 Magnification = 1.1,
                 CrosshairInSights = false,
             }
-            if barrel == 9 or barrel == 11 then
-                vm:SetBodygroup(8,4)
+            if handguard == 5 then
+                vm:SetBodygroup(9,4)
                 wep.IronSightStruct = {
                     Pos = Vector(-2.765, -2, 0.275),
                     Ang = Angle(-0.1, 0.0125, 0),
@@ -1292,18 +1306,18 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
                     CrosshairInSights = false,
                 }
                 if optic then
-                    vm:SetBodygroup(8,0)
+                    vm:SetBodygroup(9,0)
                 end
             end
         end
         if optic then
-            vm:SetBodygroup(5,0)
-            vm:SetBodygroup(8,0)
+            vm:SetBodygroup(6,0)
+            vm:SetBodygroup(9,0)
         end
     end
-    if barrel == 12 then
+    if handguard == 8 then
         vm:SetBodygroup(0,2)
-        vm:SetBodygroup(5,0)
+        vm:SetBodygroup(6,0)
         wep.IronSightStruct = {
             Pos = Vector(-2.75, 3, -0.4),
             Ang = Angle(0.45, 0.045, 0),
@@ -1311,23 +1325,23 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             CrosshairInSights = false,
         }
         if optic then
-            vm:SetBodygroup(5,5)
+            vm:SetBodygroup(6,5)
         end
     end
 
     if upper == 2 then
-        if barrel == 3 and optic then
-            vm:SetBodygroup(7, 2)
+        if barrel == 0 and handguard == 3 and optic then
+            vm:SetBodygroup(8, 2)
         end
-        if (barrel == 9 or barrel == 11) and optic then
-            vm:SetBodygroup(7,3)
+        if (handguard == 5) and optic then
+            vm:SetBodygroup(8,3)
         end
     end
 
-    if sling and altirons then vm:SetBodygroup(6,2) end
+    if sling and altirons then vm:SetBodygroup(7,2) end
 
     if wep:GetBuff_Override("BO1_Bipod") and wep:InBipod() then
-        vm:SetBodygroup(3, 6)
+        vm:SetBodygroup(4, 6)
     end
 
     local camo = 0

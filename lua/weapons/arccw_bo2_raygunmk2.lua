@@ -241,4 +241,17 @@ SWEP.Animations = {
             {s = "ArcCW_BO2.RGMK2_In", t = 70 / 30},
         },
     },
+
+    ["enter_sprint"] = {
+        Source = "sprint_in",
+        Time = 10 / 30
+    },
+    ["idle_sprint"] = {
+        Source = "sprint_loop",
+        Time = 30 / 40
+    },
+    ["exit_sprint"] = {
+        Source = "sprint_out",
+        Time = 10 / 30
+    },
 }
