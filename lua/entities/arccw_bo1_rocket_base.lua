@@ -16,6 +16,7 @@ ENT.Drag = true
 ENT.Gravity = true
 ENT.DragCoefficient = 0.05
 ENT.GunshipWorkaround = true
+local gunship = {["npc_combinegunship"] = true, ["npc_combinedropship"] = true}
 
 ENT.Boost = 0
 ENT.Lift = 100
@@ -42,6 +43,18 @@ if SERVER then
 
     function ENT:Think()
         self:GetPhysicsObject():AddVelocity(Vector(0, 0, self.Lift) + self:GetForward() * self.Boost) -- gravity counterforce
+        if self.GunshipWorkaround and (self.GunshipCheck or 0 < CurTime()) then
+            self.GunshipCheck = CurTime() + 0.25
+            local tr = util.TraceLine({
+                start = self:GetPos(),
+                endpos = self:GetPos() + self:GetForward() * self:GetVelocity() * 0.5,
+                filter = self,
+                mask = MASK_SHOT
+            })
+            if IsValid(tr.Entity) and gunship[tr.Entity:GetClass()] then
+                self:Detonate()
+            end
+        end
     end
 
     function ENT:PhysicsCollide(data, physobj)
