@@ -77,18 +77,20 @@ function ENT:Detonate()
 
     util.BlastDamage(self, attacker, self:GetPos(), self.Radius, self.DamageOverride or self.Damage)
 
-    self:FireBullets({
-        Attacker = attacker,
-        Damage = 0,
-        Tracer = 0,
-        Distance = 20000,
-        Dir = self:GetVelocity(),
-        Src = self:GetPos(),
-        Callback = function(att, tr, dmg)
-            util.Decal("Scorch", tr.StartPos, tr.HitPos - (tr.HitNormal * 16), self)
-        end
-    })
-
+    if SERVER then
+        self:FireBullets({
+            Attacker = attacker,
+            Damage = 0,
+            Tracer = 0,
+            Distance = 256,
+            Dir = self.LastVelocity or self:GetVelocity(),
+            Src = self:GetPos(),
+            Callback = function(att, tr, dmg)
+                util.Decal("Scorch", tr.StartPos, tr.HitPos - (tr.HitNormal * 16), self)
+            end
+        })
+    end
+    self.Defused = true
     self:Remove()
 end
 
@@ -97,6 +99,7 @@ function ENT:PhysicsCollide(colData, collider)
         self:Defuse()
     end
     if CurTime() - self.SpawnTime >= self.FuseTime then
+        self.LastVelocity = colData.OurOldVelocity
         self:Detonate()
     else
         self:Defuse()

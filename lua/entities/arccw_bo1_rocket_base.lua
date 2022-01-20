@@ -34,9 +34,15 @@ if SERVER then
         self:PhysicsInitBox( Vector(-pb_vert,-pb_hor,-pb_hor), Vector(pb_vert,pb_hor,pb_hor) )
         self:DrawShadow(false)
 
-        if (self:GetPhysicsObject():IsValid()) then
-            self:GetPhysicsObject():Wake()
+        local phys = self:GetPhysicsObject()
+        if phys:IsValid() then
+            phys:Wake()
+            phys:EnableDrag(self.Drag)
+            phys:SetDragCoefficient(self.DragCoefficient)
+            phys:EnableGravity(self.Gravity)
         end
+
+        self.SpawnTime = CurTime()
 
         util.SpriteTrail(self, 0, Color( 255 , 255 , 255 ), false, 6, 6, 0.5, 1 / (6 + 6) * 0.5, "particle/particle_smokegrenade")
     end
@@ -57,9 +63,14 @@ if SERVER then
         end
     end
 
-    function ENT:PhysicsCollide(data, physobj)
-
+    function ENT:PhysicsCollide(colData, physobj)
         if !self:IsValid() then return end
+
+        if self:WaterLevel() >= 0.01 or CurTime() - self.SpawnTime < self.FuseTime then
+            self:Defuse()
+            return
+        end
+
         local effectdata = EffectData()
             effectdata:SetOrigin( self:GetPos() )
 
@@ -70,7 +81,7 @@ if SERVER then
         end
 
         -- simulate AP damage on vehicles, mainly simfphys
-        local tgt = data.HitEntity
+        local tgt = colData.HitEntity
         while IsValid(tgt) do
             if tgt.GetParent and IsValid(tgt:GetParent()) then
                 tgt = tgt:GetParent()
@@ -87,11 +98,12 @@ if SERVER then
             dmg:SetInflictor(self)
             dmg:SetDamageType(DMG_BLAST)
             dmg:SetDamage(self.ImpactDamage)
-            dmg:SetDamagePosition(data.HitPos)
+            dmg:SetDamagePosition(colData.HitPos)
             dmg:SetDamageForce(self:GetForward() * self.ImpactDamage)
             tgt:TakeDamageInfo(dmg)
         end
 
+        self.LastVelocity = colData.OurOldVelocity
         self:Detonate()
     end
 end
