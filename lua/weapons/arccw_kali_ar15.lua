@@ -1366,7 +1366,6 @@ SWEP.Hook_GetCapacity = function(wep, cap)
     local mag20 = wep.Attachments[11].Installed == "bo1_ar15_mag_20"
     local mag40 = wep.Attachments[11].Installed == "bo1_ar15_mag_40"
     local mag100 = wep.Attachments[11].Installed == "kali_ar15_mag_100"
-    local patriot = wep.Attachments[5].Installed == "kali_ar15_barrel_patriot"
     local stocka = wep.Attachments[10].Installed
     local tube = wep.Attachments[6].Installed == "ubgl_m16_m203"
     local barrel = wep.Attachments[5].Installed
