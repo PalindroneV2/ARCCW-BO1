@@ -1424,10 +1424,10 @@ SWEP.Hook_GetCapacity = function(wep, cap)
     if pap and mag100 then
         return 150
     end
-    if pap and mag100 and patriot and stock == 0 then
-        wep.Override_InfiniteAmmo = true
-        wep.Override_BottomlessClip = true
-    elseif !pap or !mag100 or !patriot or stock != 0 then
+    if pap and mag100 and stock == 0 and length == 5 then
+        wep.InfiniteAmmo = true
+        wep.BottomlessClip = true
+    else
         wep.Override_InfiniteAmmo = false
         wep.Override_BottomlessClip = false
     end
