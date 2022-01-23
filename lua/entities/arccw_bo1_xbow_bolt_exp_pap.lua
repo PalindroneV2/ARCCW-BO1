@@ -6,6 +6,8 @@ DEFINE_BASECLASS(ENT.Base)
 ENT.ImpactDamage = 125
 ENT.CanPickup = false
 
+ENT.Model = "models/weapons/arccw/item/bo1_arrow_xpl.mdl"
+
 if CLIENT then
     killicon.Add( "arccw_bo1_xbow_bolt_pap", "arccw/weaponicons/arccw_bo1_crossbow", Color( 255, 255, 255, 255 ) )
 end
