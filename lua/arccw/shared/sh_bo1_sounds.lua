@@ -2307,6 +2307,16 @@ sound.Add( {
         "^weapons/arccw/bo1_rpg/slide.wav",
     }
 } )
+sound.Add( {
+    name = "ArcCW_BO1.LAW_Drop",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arccw/bo1_rpg/at4_drop.wav",
+    }
+} )
 
 -- Crossbow --
 

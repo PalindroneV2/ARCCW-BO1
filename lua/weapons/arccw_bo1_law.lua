@@ -251,17 +251,17 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload_real",
-        Time = 190 / 30,
+        Time = 4.666,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_RPG,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         MinProgress = 0.1,
         SoundTable = {
-            {s = "ArcCW_BO1.RPG_Slide", t = 0.75},
-            {s = "ArcCW_BO1.RPG_Futz", t = 1.25},
-            {s = "ArcCW_BO1.RPG_Futz", t = 4.1},
-            {s = "ArcCW_BO1.RPG_Slide", t = 4.5},
+            {s = "ArcCW_BO1.LAW_Drop", t = 1},
+            {s = "ArcCW_BO1.RPG_Futz", t = 1.6},
+            {s = "ArcCW_BO1.RPG_Futz", t = 2.35},
+            {s = "ArcCW_BO1.RPG_Slide", t = 3.1},
         },
     },
     ["enter_sprint"] = {
