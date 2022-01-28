@@ -109,7 +109,7 @@ if SERVER then
     function ENT:PhysicsCollide(colData, physobj)
         if !self:IsValid() then return end
 
-        if CurTime() - self.SpawnTime < self.FuseTime then
+        if self.FuseTime > 0 and CurTime() - self.SpawnTime < self.FuseTime then
             if IsValid(colData.HitEntity) then
                 local v = colData.OurOldVelocity:Length() ^ 0.5
                 local dmg = DamageInfo()
