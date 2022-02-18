@@ -8,7 +8,7 @@ SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "A submachinegun derivative of the G3 design chambered in 9mm. Known for its use by the British SAS."
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
-SWEP.Trivia_Mechanism = "Gas-Operated"
+SWEP.Trivia_Mechanism = "Roller-Delayed Blowback"
 SWEP.Trivia_Country = "Germany"
 SWEP.Trivia_Year = 1964
 
@@ -266,10 +266,8 @@ SWEP.Attachments = {
         Slot = "optic", -- what kind of attachments can fit here, can be string or table
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(-3.5, 0, 3.35), -- 4.6 offset that the attachment will be relative to the bone
+            vpos = Vector(-3.5, 0, 3.35),
             vang = Angle(0, 0, 0),
-            wpos = Vector(5.5, 1.2, -7.5),
-            wang = Angle(172.5, 181.75, 0)
         },
         GivesFlags = {"mount", "mp5k_mount"},
         CorrectivePos = Vector(0, 0, 0),
