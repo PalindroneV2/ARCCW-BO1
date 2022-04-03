@@ -123,6 +123,7 @@ SWEP.Override_ShootWhileSprint = false
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "crossbow"
 SWEP.HoldtypeSights = "crossbow"
+SWEP.HoldtypeNPC = "ar2" -- NPCs will fire very slowly without
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
