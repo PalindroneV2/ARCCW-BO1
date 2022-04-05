@@ -836,7 +836,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
         TPAnimStartTime = 0,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Bolt", t = 5 / 30 },
+            {s = "ArcCW_BO1.MK_Back", t = 5 / 30 },
             {s = "ArcCW_BO1.MK_Fwd", t = 10 / 30 },
         }
     },
@@ -864,7 +864,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.1,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Bolt", t = 20 / 30 },
+            {s = "ArcCW_BO1.MK_Back", t = 20 / 30 },
             {s = "ArcCW_BO1.MK_Fwd", t = 25 / 30 },
         }
     },
