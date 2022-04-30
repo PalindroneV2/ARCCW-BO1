@@ -19,7 +19,7 @@ att.OffsetAng = Angle(0, 0, 0)
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 6, -4.51),
+        Pos = Vector(0, 5.5, -4.51),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_NONE,
@@ -34,7 +34,7 @@ att.AdditionalSights = {
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/bo1_thermal_ussr.png", "mips smooth")
 att.HolosightNoFlare = true
-att.HolosightSize = 6.9
+att.HolosightSize = 6
 att.HolosightBone = "holosight"
 att.HolosightBlackbox = true
 att.HolosightPiece = "models/weapons/arccw/atts/bo1_thermal_ussr_hsp.mdl"

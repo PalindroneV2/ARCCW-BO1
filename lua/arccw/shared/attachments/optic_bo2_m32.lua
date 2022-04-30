@@ -16,7 +16,7 @@ att.Model = "models/weapons/arccw/atts/bo2_m32_scope.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 2.5, -5.875),
+        Pos = Vector(0, 2, -5.875),
         Ang = Angle(0, 0, 0),
         Magnification = 1.1,
         ScrollFunc = ArcCW.SCROLL_NONE,

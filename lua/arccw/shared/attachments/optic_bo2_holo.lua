@@ -18,7 +18,7 @@ att.OffsetAng = Angle(0, 0, 0)
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.0125, 10, -1.25),
+        Pos = Vector(-0.0125, 6, -1.25),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_NONE,
@@ -28,7 +28,7 @@ att.AdditionalSights = {
 
 att.Holosight = true
 att.HolosightReticle = Material("hud/reticles/bo2_holo.png", "mips smooth")
-att.HolosightSize = 1.1
+att.HolosightSize = 1.3
 att.HolosightBone = "holosight"
 att.HolosightNoFlare = true
 

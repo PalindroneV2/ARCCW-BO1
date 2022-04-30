@@ -10,6 +10,7 @@ att.Desc_Pros = {
 }
 
 att.AutoStats = true
+att.Ignore = true -- the difference between the two is negliable
 att.Slot = {"bo1_longscope_xbow"}
 
 att.Model = "models/weapons/arccw/atts/bo1_longscope_xbow.mdl"

@@ -19,7 +19,7 @@ att.GivesFlags = {"susat_norail"}
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 8, -1.785),
+        Pos = Vector(0, 6, -1.785),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         ScrollFunc = ArcCW.SCROLL_ZOOM,

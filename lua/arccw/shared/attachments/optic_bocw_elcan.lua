@@ -16,7 +16,7 @@ att.Model = "models/weapons/arccw/atts/bocw_elcan.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 9, -1.285),
+        Pos = Vector(0, 7, -1.285),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         IgnoreExtra = true

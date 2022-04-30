@@ -19,7 +19,7 @@ att.DroppedModel = "models/weapons/arccw/atts/bo1_pso.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.02, 11, -1.28),
+        Pos = Vector(-0.02, 9.5, -1.28),
         Ang = Angle(0, 0, 0),
         Magnification = 1.5,
         ScrollFunc = ArcCW.SCROLL_ZOOM,

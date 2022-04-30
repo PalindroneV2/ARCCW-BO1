@@ -26,7 +26,7 @@ end
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0.005, 8, -3.29),
+        Pos = Vector(0.005, 6, -3.29),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         IgnoreExtra = true,

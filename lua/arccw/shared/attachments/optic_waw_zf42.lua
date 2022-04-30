@@ -22,7 +22,7 @@ att.GivesFlags = {"waw_zf42"}
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 14, -2.87),
+        Pos = Vector(0, 12, -2.87),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
