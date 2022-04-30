@@ -38,7 +38,7 @@ att.AdditionalSights = {
         },
     },
     {
-        Pos = Vector(0, 8, -2.125),
+        Pos = Vector(0, 4, -2.125),
         Ang = Angle(-0, 0, 0),
         Magnification = 1.25,
         IgnoreExtra = true,
@@ -47,7 +47,7 @@ att.AdditionalSights = {
             Holosight = true,
             HolosightReticle = Material("hud/reticles/reddot.png", "mips smooth"),
             HolosightNoFlare = true,
-            HolosightSize = 0.5,
+            HolosightSize = 0.25,
             HolosightPiece = "models/weapons/arccw/atts/bo2_hamr_hsp.mdl",
             Colorable = true,
         },

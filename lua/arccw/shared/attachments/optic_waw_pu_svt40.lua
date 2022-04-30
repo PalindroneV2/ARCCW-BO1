@@ -26,7 +26,7 @@ end
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 15, -2.715),
+        Pos = Vector(0, 13.5, -2.715),
         Ang = Angle(0, 0, 0),
         Magnification = 1.5,
         IgnoreExtra = true,
@@ -36,7 +36,7 @@ att.AdditionalSights = {
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/waw_telescopic.png", "mips smooth")
 att.HolosightNoFlare = true
-att.HolosightSize = 8
+att.HolosightSize = 7.5
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/waw_svt_scope_hsp.mdl"
 att.Colorable = true

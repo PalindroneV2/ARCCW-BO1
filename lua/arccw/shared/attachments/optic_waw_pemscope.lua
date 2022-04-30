@@ -18,7 +18,7 @@ att.GivesFlags = {"waw_pemscope"}
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 9, -3.525),
+        Pos = Vector(0, 8, -3.525),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_ZOOM,

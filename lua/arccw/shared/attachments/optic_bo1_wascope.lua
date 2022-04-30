@@ -20,7 +20,7 @@ att.DroppedModel = "models/weapons/arccw/atts/bo1_redfield.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.15, 12.5, -0.9),
+        Pos = Vector(-0.15, 10, -0.9),
         Ang = Angle(0, 0, 0),
         Magnification = 1.6,
         ScrollFunc = ArcCW.SCROLL_ZOOM,

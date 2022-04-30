@@ -18,7 +18,7 @@ att.DroppedModel = "models/weapons/arccw/atts/bo1_swarovski.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0.025, 8, -5.65),
+        Pos = Vector(0.025, 7, -5.65),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         IgnoreExtra = true,
@@ -27,7 +27,7 @@ att.AdditionalSights = {
             Holosight = true,
             HolosightBlackbox = true,
             HolosightNoFlare = true,
-            HolosightSize = 10,
+            HolosightSize = 8,
             HolosightMagnification = 1.5,
             HolosightReticle = Material("hud/scopes/bo1_aug_crosshair.png", "mips smooth"),
             HolosightPiece = "models/weapons/arccw/atts/bo1_swarovski_hsp.mdl",

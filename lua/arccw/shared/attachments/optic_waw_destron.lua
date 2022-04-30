@@ -20,7 +20,7 @@ att.OffsetAng = Angle(0, 0, 0)
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.025, 10, -0.775),
+        Pos = Vector(-0.025, 9, -0.775),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         IgnoreExtra = true
@@ -30,7 +30,7 @@ att.AdditionalSights = {
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/bo1_acog_cross.png", "mips smooth")
 att.HolosightNoFlare = true
-att.HolosightSize = 12
+att.HolosightSize = 7.5
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/waw_destron_hsp.mdl"
 att.Colorable = true
