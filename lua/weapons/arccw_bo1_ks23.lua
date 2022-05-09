@@ -276,7 +276,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 end
 
-att.Hook_TranslateAnimation = function(wep, anim)
+SWEP.Hook_TranslateAnimation = function(wep, anim)
 
     local doomshotgun = wep:GetBuff_Override("DOOM_EE")
 
