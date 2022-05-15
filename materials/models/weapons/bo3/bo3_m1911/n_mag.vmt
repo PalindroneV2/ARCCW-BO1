@@ -1,23 +1,24 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/bo3/bo3_m1911/base/mag_c"
-	$blendtintbybasealpha  "1"
-	"$bumpmap" "models/weapons/bo3/bo3_m1911/base/mag_n"
+	"$basetexture" "models/weapons/arc9/bo3/bo3_m1911/base/mag_c"
+	
+	"$bumpmap" "models/weapons/arc9/bo3/bo3_m1911/base/mag_n"
 
-	"$detail" "models/weapons/bo1/gunmetal"
+	"$detail" "models/weapons/arc9/bo1/gunmetal"
 	$detailblendmode "1"
 	$detailblendfactor 1
 	"$detailscale" "1"
-
+	
 	$phong "1"
 //	$phongexponent	"15"
 	$phongboost "2.5"
-	$phongfresnelranges "[0.5 2.5 2.5]"
+	$phongfresnelranges "[2 5 4]"
+	$phongtint "[0.25 0.25 0.75]"
 	$phongalbedotint "1"
 	$normalmapalphaenvmapmask "1"
 	
 	$envmap "env_cubemap"
-	$envmaptint "[0.5 0.5 0.75]"
-	$envmapfresnel "[1]"
+	$envmaptint "[0.75 0.75 0.99]"
+	$envmapfresnel "0.1"
 }
 

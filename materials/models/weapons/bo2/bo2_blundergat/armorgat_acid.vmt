@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/bo2/bo2_blundergat/ember"
+	"$basetexture" "models/weapons/arc9/bo2/bo2_blundergat/ember"
 	"$selfillum" "1"
-	"$selfillummask" "models/weapons/bo2/bo2_blundergat/ember"
-//	"$bumpmap" "models/weapons/bo2/bo2_blundergat/armor_n"
+	"$selfillummask" "models/weapons/arc9/bo2/bo2_blundergat/ember"
+//	"$bumpmap" "models/weapons/arc9/bo2/bo2_blundergat/armor_n"
 }
