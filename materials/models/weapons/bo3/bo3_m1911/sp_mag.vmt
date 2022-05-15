@@ -1,9 +1,9 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo3/bo3_m1911/base/mag_c"
-	"$bumpmap" "models/weapons/arc9/bo3/bo3_m1911/base/mag_n"
+	"$basetexture" "models/weapons/bo3/bo3_m1911/base/mag_c"
+	"$bumpmap" "models/weapons/bo3/bo3_m1911/base/mag_n"
 
-	"$detail" "models/weapons/arc9/bo1/blueshift"
+	"$detail" "models/weapons/bo1/blueshift"
 	$detailblendmode "1"
 	$detailblendfactor 0.15
 	"$detailscale" "1"

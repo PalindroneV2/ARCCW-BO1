@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo1/red"
-	"$bumpmap" "models/weapons/arc9/waw/normalmap"
+	"$basetexture" "models/weapons/bo1/red"
+	"$bumpmap" "models/weapons/waw/normalmap"
 
 	$color2 "[255 0 0]"
 	$selfillum 1

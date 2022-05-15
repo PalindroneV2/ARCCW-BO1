@@ -1,10 +1,10 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo2/bo2_dsr50/dsr50_scope"
+	"$basetexture" "models/weapons/bo2/bo2_dsr50/dsr50_scope"
 	
-	"$bumpmap" "models/weapons/arc9/bo2/bo2_dsr50/dsr50_scope_n"
+	"$bumpmap" "models/weapons/bo2/bo2_dsr50/dsr50_scope_n"
 
-	$detail "models/weapons/arc9/bo1/gunmetal"
+	$detail "models/weapons/bo1/gunmetal"
 	$detailblendmode "0"
 	"$detailblendfactor" "1"
 

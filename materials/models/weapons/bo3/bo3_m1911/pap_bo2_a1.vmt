@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo3/bo3_m1911/base/slide_c"
-	"$bumpmap" "models/weapons/arc9/bo3/bo3_m1911/base/slide_n"
+	"$basetexture" "models/weapons/bo3/bo3_m1911/base/slide_c"
+	"$bumpmap" "models/weapons/bo3/bo3_m1911/base/slide_n"
 	
 	$detail		"models\weapons\bo1\gold_c"
 	$envmapmask	"models\weapons\bo1\gold_s"

@@ -1,10 +1,10 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo2/bo2_chicom/chicom"
+	"$basetexture" "models/weapons/bo2/bo2_chicom/chicom"
 	
-	"$bumpmap" "models/weapons/arc9/bo2/bo2_chicom/chicom_n"
+	"$bumpmap" "models/weapons/bo2/bo2_chicom/chicom_n"
 
-	"$detail" "models/weapons/arc9/bo1/gunmetal"
+	"$detail" "models/weapons/bo1/gunmetal"
 	$detailblendmode 0
 	"$detailscale" "10"
 

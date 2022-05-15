@@ -1,9 +1,9 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo3/bo3_dg2/dg2_glass"
+	"$basetexture" "models/weapons/bo3/bo3_dg2/dg2_glass"
 	
 	$translucent 1
-	"$bumpmap" "models/weapons/arc9/bo3/bo3_dg2/dg2_glass_n"
+	"$bumpmap" "models/weapons/bo3/bo3_dg2/dg2_glass_n"
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"

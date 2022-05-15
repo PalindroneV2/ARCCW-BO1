@@ -1,8 +1,8 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo1/bo1_dragunov/svd_c"
+	"$basetexture" "models/weapons/bo1/bo1_dragunov/svd_c"
 	
-	"$bumpmap" "models/weapons/arc9/bo1/bo1_dragunov/svd_n"
+	"$bumpmap" "models/weapons/bo1/bo1_dragunov/svd_n"
 	$detail "models\weapons\bo1\bo1_ak47\ak_wood"
 	$detailblendmode		0
 	$detailblendfactor	1

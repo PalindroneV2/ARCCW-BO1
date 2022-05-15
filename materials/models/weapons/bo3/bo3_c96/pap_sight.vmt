@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo3/bo3_c96/sights"
-	"$bumpmap" "models/weapons/arc9/bo3/bo3_c96/sights_n"
+	"$basetexture" "models/weapons/bo3/bo3_c96/sights"
+	"$bumpmap" "models/weapons/bo3/bo3_c96/sights_n"
 	
 	$selfillum 1
     "$selfillummask" "models\weapons\pap\pap_bo2_crystal"

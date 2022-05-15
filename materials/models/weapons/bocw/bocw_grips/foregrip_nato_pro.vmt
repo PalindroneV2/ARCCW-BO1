@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bocw/bocw_grips/foregrip_nato_pro/c"
-	"$bumpmap" "models/weapons/arc9/bocw/bocw_grips/foregrip_nato_pro/n"
+	"$basetexture" "models/weapons/bocw/bocw_grips/foregrip_nato_pro/c"
+	"$bumpmap" "models/weapons/bocw/bocw_grips/foregrip_nato_pro/n"
 	
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"

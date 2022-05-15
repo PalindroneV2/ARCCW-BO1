@@ -1,10 +1,10 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo3/bo3_m1911/base/base_c"
-	"$bumpmap" "models/weapons/arc9/bo3/bo3_m1911/base/base_n"
-	$envmapmask "models/weapons/arc9/bo3/bo3_m1911/base/basen_c"
+	"$basetexture" "models/weapons/bo3/bo3_m1911/base/base_c"
+	"$bumpmap" "models/weapons/bo3/bo3_m1911/base/base_n"
+	$envmapmask "models/weapons/bo3/bo3_m1911/base/basen_c"
 	
-	"$detail" "models/weapons/arc9/bo3/bo3_m1911/base/basen_c"
+	"$detail" "models/weapons/bo3/bo3_m1911/base/basen_c"
 	$detailblendmode "1"
 	$detailblendfactor 0.25
 	"$detailscale" "1"

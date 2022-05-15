@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo3/bo3_kuda/ext_decal"
-	"$bumpmap" "models/weapons/arc9/waw/normalmap"
+	"$basetexture" "models/weapons/bo3/bo3_kuda/ext_decal"
+	"$bumpmap" "models/weapons/waw/normalmap"
 	"$translucent" "1"
 	
 	

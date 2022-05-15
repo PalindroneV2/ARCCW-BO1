@@ -1,8 +1,8 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo2/bo2_blundergat/armor"
+	"$basetexture" "models/weapons/bo2/bo2_blundergat/armor"
 	
-	"$bumpmap" "models/weapons/arc9/bo2/bo2_blundergat/armor_n"
+	"$bumpmap" "models/weapons/bo2/bo2_blundergat/armor_n"
 
 	
 	//"$color2" "[ .4 .4 .4 ]"

@@ -1,8 +1,8 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo3/bo3_dg2/dg2_pipe"
+	"$basetexture" "models/weapons/bo3/bo3_dg2/dg2_pipe"
 	
-	"$bumpmap" "models/weapons/arc9/bo3/bo3_dg2/dg2_pipe_n"
+	"$bumpmap" "models/weapons/bo3/bo3_dg2/dg2_pipe_n"
 	
 	$phong                      		1
 //	$phongexponent                      "20"

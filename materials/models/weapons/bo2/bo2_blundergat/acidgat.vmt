@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo2/bo2_blundergat/acid"
-	"$bumpmap" "models/weapons/arc9/bo2/bo2_blundergat/acid_n"
+	"$basetexture" "models/weapons/bo2/bo2_blundergat/acid"
+	"$bumpmap" "models/weapons/bo2/bo2_blundergat/acid_n"
 
 	
 	//"$color2" "[ .4 .4 .4 ]"
@@ -15,10 +15,10 @@
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 
-	"$detail" "models/weapons/arc9/bo2/bo2_blundergat/ember"
+	"$detail" "models/weapons/bo2/bo2_blundergat/ember"
 	$detailblendmode "4"
 	"$detailblendfactor" "1"
 	"$detailscale" "5"
 	"$selfillum" "1"
-	"$selfillummask" "models/weapons/arc9/bo2/bo2_blundergat/ember"s
+	"$selfillummask" "models/weapons/bo2/bo2_blundergat/ember"s
 }

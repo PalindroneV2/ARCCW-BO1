@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bocw/bocw_mp5/pdw_stock/stock"
-	"$bumpmap" "models/weapons/arc9/bocw/bocw_mp5/pdw_stock/stock_n"
+	"$basetexture" "models/weapons/bocw/bocw_mp5/pdw_stock/stock"
+	"$bumpmap" "models/weapons/bocw/bocw_mp5/pdw_stock/stock_n"
 	
 	
 	//"$color2" "[ .4 .4 .4 ]"

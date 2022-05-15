@@ -3,7 +3,7 @@ VertexlitGeneric
 	$basetexture	"models\weapons\bo2\bo2_rpd\rpd_c"
 	
 	$bumpmap	"models\weapons\bo2\bo2_rpd\rpd_n"
-	"$detail" "models/weapons/arc9/bo1/gold_s"
+	"$detail" "models/weapons/bo1/gold_s"
 	$detailblendmode "0"
 	$detailblendfactor 0.5
 

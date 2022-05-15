@@ -1,8 +1,8 @@
 "VertexlitGeneric"
 {
 
-	"$basetexture" "models/weapons/arc9/cde/kali_ar15/Parts_Scope_Lens_C"
-	"$bumpmap" "models/weapons/arc9/cde/kali_ar15/Parts_Scope_Lens_N"
+	"$basetexture" "models/weapons/cde/kali_ar15/Parts_Scope_Lens_C"
+	"$bumpmap" "models/weapons/cde/kali_ar15/Parts_Scope_Lens_N"
 			
 	"$nocull" 1
 	"$translucent" 1

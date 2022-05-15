@@ -1,8 +1,8 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo2/bo2_scarh/scarh_c"
-	"$bumpmap" "models/weapons/arc9/bo2/bo2_scarh/scarh_n"
-	"$phongexponenttexture" "models/weapons/arc9/bo2/bo2_scarh/scarh_s"
+	"$basetexture" "models/weapons/bo2/bo2_scarh/scarh_c"
+	"$bumpmap" "models/weapons/bo2/bo2_scarh/scarh_n"
+	"$phongexponenttexture" "models/weapons/bo2/bo2_scarh/scarh_s"
 
 	"$nocull" "1"
 	"$blendtintbybasealpha" "1"

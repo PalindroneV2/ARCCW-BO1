@@ -1,9 +1,9 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bocw/bocw_grips/speedgrip_warsaw_pro/c"
-	"$bumpmap" "models/weapons/arc9/bocw/bocw_grips/speedgrip_warsaw_pro/n"
+	"$basetexture" "models/weapons/bocw/bocw_grips/speedgrip_warsaw_pro/c"
+	"$bumpmap" "models/weapons/bocw/bocw_grips/speedgrip_warsaw_pro/n"
 
-	"$detail"	"models/weapons/arc9/bo1/gunmetal"
+	"$detail"	"models/weapons/bo1/gunmetal"
 	"$detailblendmode"	1
 	"$detailblendfactor" 0.05
 	

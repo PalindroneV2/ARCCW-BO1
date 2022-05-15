@@ -4,7 +4,7 @@
 	
 	$bumpmap	"models\weapons\bo2\bo2_optics\svu_scope_n"
 
-	$detail "models/weapons/arc9/bo1/black_detail"
+	$detail "models/weapons/bo1/black_detail"
 	$detailblendmode "4"
 	"$detailblendfactor" "1"
 	

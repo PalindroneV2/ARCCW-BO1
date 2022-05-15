@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo3/bo3_icr1/bolts/bolt_heavy"
-	"$bumpmap" "models/weapons/arc9/bo3/bo3_icr1/bolts/bolt_heavy_n"
+	"$basetexture" "models/weapons/bo3/bo3_icr1/bolts/bolt_heavy"
+	"$bumpmap" "models/weapons/bo3/bo3_icr1/bolts/bolt_heavy_n"
 	
 	
 	//"$color2" "[ .4 .4 .4 ]"

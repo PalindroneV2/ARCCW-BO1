@@ -1,8 +1,8 @@
 "VertexlitGeneric"
 {
 
-	"$basetexture" "models/weapons/arc9/cde/kali_ar15/Parts_FlashHiders_C"
-	"$bumpmap" "models/weapons/arc9/cde/kali_ar15/Parts_FlashHiders_N"
+	"$basetexture" "models/weapons/cde/kali_ar15/Parts_FlashHiders_C"
+	"$bumpmap" "models/weapons/cde/kali_ar15/Parts_FlashHiders_N"
 	"$halflambert" "1"				
 	"$nocull" 1
 

@@ -1,9 +1,9 @@
 "VertexlitGeneric"
 {
-	"$detail" "models/weapons/arc9/bo3/bo3_kuda/sights_decals"
+	"$detail" "models/weapons/bo3/bo3_kuda/sights_decals"
 	"$detailscale" "1"
 	$detailblendmode "3"
-	"$bumpmap" "models/weapons/arc9/waw/normalmap"
+	"$bumpmap" "models/weapons/waw/normalmap"
 	
 	
 	//"$color2" "[ .4 .4 .4 ]"

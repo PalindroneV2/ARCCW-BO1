@@ -1,8 +1,8 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo3/bo3_m1911/base/slide_c"
+	"$basetexture" "models/weapons/bo3/bo3_m1911/base/slide_c"
 	
-	"$bumpmap" "models/weapons/arc9/bo3/bo3_m1911/base/slide_n"
+	"$bumpmap" "models/weapons/bo3/bo3_m1911/base/slide_n"
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"

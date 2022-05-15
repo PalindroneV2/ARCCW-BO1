@@ -4,7 +4,7 @@
 	
 	$bumpmap	"models\weapons\bo2\bo2_optics\ballista_scope_n"
 
-	$detail "models/weapons/arc9/bo1/tan"
+	$detail "models/weapons/bo1/tan"
 	$detailblendmode "0"
 	"$detailblendfactor" "1"
 	

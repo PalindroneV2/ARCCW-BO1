@@ -1,8 +1,8 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo2/bo2_judge/shell"
+	"$basetexture" "models/weapons/bo2/bo2_judge/shell"
 	
-	"$bumpmap" "models/weapons/arc9/bo2/bo2_judge/shell_n"
+	"$bumpmap" "models/weapons/bo2/bo2_judge/shell_n"
 
 	
 	//"$color2" "[ .4 .4 .4 ]"

@@ -1,14 +1,14 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/cde/bocw_m93r/receiver"
-	"$bumpmap" "models/weapons/arc9/cde/bocw_m93r/receiver_n"
+	"$basetexture" "models/weapons/cde/bocw_m93r/receiver"
+	"$bumpmap" "models/weapons/cde/bocw_m93r/receiver_n"
 
-	"$detail" "models/weapons/arc9/cde/bocw_m93r/receiver_s"
+	"$detail" "models/weapons/cde/bocw_m93r/receiver_s"
 	"$detailscale" "1"
 	"$detailblendmode" "1"  
 	"$detailblendfactor" "0.15"
 
-	"$phongexponenttexture" "models/weapons/arc9/cde/bocw_m93r/exponent"
+	"$phongexponenttexture" "models/weapons/cde/bocw_m93r/exponent"
 	"$cloakPassEnabled" 		"1"
 	
 	"$color2" "[.8 .8 .8]"

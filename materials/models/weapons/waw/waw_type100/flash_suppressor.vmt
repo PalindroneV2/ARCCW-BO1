@@ -2,7 +2,7 @@ VertexlitGeneric
 {
 	$basetexture	"models\weapons\waw\waw_p38\waw_muzzle"
 	$bumpmap	"models\weapons\waw\normalmap"
-	"$detail" "models/weapons/arc9/bo1/gunmetal"
+	"$detail" "models/weapons/bo1/gunmetal"
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"

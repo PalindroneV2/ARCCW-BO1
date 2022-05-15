@@ -1,9 +1,9 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo2/bo2_stinger/stinger"
-	"$bumpmap" "models/weapons/arc9/bo2/bo2_stinger/stinger_n"
+	"$basetexture" "models/weapons/bo2/bo2_stinger/stinger"
+	"$bumpmap" "models/weapons/bo2/bo2_stinger/stinger_n"
 
-	$detail "models/weapons/arc9/bo1/gunmetal"
+	$detail "models/weapons/bo1/gunmetal"
 	$detailblendmode "0"
 	"$detailblendfactor" "1"
 

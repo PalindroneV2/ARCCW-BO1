@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bocw/bocw_grips/tape_warsaw_pro/c"
-	"$bumpmap" "models/weapons/arc9/bocw/bocw_grips/tape_warsaw_pro/n"
+	"$basetexture" "models/weapons/bocw/bocw_grips/tape_warsaw_pro/c"
+	"$bumpmap" "models/weapons/bocw/bocw_grips/tape_warsaw_pro/n"
 	
 	
 	//"$color2" "[ .4 .4 .4 ]"

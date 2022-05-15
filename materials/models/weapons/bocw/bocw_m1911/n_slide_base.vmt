@@ -1,8 +1,8 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bocw/bocw_m1911/slide_base/c"
-	"$bumpmap" "models/weapons/arc9/bocw/bocw_m1911/slide_base/n"
-	"$phongexponenttexture" "models/weapons/arc9/bocw/bocw_m1911/slide_base/m"
+	"$basetexture" "models/weapons/bocw/bocw_m1911/slide_base/c"
+	"$bumpmap" "models/weapons/bocw/bocw_m1911/slide_base/n"
+	"$phongexponenttexture" "models/weapons/bocw/bocw_m1911/slide_base/m"
 
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"

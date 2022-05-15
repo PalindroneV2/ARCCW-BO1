@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo3/bo3_dg2/base/dg2_body"
-	"$bumpmap" "models/weapons/arc9/bo3/bo3_dg2/dg2_body_n"
+	"$basetexture" "models/weapons/bo3/bo3_dg2/base/dg2_body"
+	"$bumpmap" "models/weapons/bo3/bo3_dg2/dg2_body_n"
 	$detail		"models\weapons\bo1\gold_c"
 	$envmapmask	"models\weapons\bo1\gold_s"
 	$detailblendmode		3
