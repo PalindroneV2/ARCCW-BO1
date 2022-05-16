@@ -1,14 +1,14 @@
 VertexLitGeneric
 {
-    $baseTexture "models\weapons\bo1\bo1_m16\m16a2"
-    "$bumpmap" "models/weapons/cde/kali_ar15/Parts_A2_N"						
-	"$phongexponenttexture" "models/weapons/cde/kali_ar15/Parts_A2_Exp"
+    "$basetexture" "models/weapons/cde/kali_ar15/Parts_A2_C"
+    "$bumpmap" "models/weapons/cde/kali_ar15/Parts_A2_N"
+	"$halflambert" "1"				
+	"$nocull" 1
 
-	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
-	"$phongboost" "1"
+	"$phongboost" "10"
 	"$phongalbedotint" "2"
 	"$PhongFresnelRanges" "[ 2 5 4 ]"
 	"$envmap" "env_cubemap"
