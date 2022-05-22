@@ -53,7 +53,7 @@ SWEP.RecoilSide = 2
 SWEP.MaxRecoilBlowback = 2
 
 SWEP.ShotgunReload = true
-SWEP.ManualAction = true
+SWEP.ManualAction = false
 
 SWEP.Delay = 60 / 300 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
