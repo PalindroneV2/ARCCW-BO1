@@ -1,6 +1,6 @@
 "VertexlitGeneric"
 {
-	"$basetexture""models\weapons\bocw\bocw_optics\bocw_elcan\rail_c"
+	"$basetexture" "models\weapons\bocw\bocw_optics\bocw_elcan\rail_c"
 	"$bumpmap"	"models\weapons\bocw\bocw_optics\bocw_elcan\rail_n"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"

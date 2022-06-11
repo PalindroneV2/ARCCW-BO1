@@ -1,6 +1,6 @@
 "VertexlitGeneric"
 {
-	"$basetexture""models\weapons\bocw\$black_40"
+	"$basetexture" "models\weapons\bocw\$black_40"
 	"$bumpmap"	"models\weapons\bocw\$normal"
 	"$detail" 	"models\weapons\bocw\$detail"
 
