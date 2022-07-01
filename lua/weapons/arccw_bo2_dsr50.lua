@@ -4,8 +4,8 @@ SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "DSR-50"
-SWEP.Trivia_Class = "Antimateriel Rifle"
-SWEP.Trivia_Desc = "Antimateriel sniper rifle designed in germany. Much more stable and precise than other .50 BMG rifles."
+SWEP.Trivia_Class = "Anti-Material Rifle"
+SWEP.Trivia_Desc = "Anti-material sniper rifle designed in germany. Much more stable and precise than other .50 BMG rifles."
 SWEP.Trivia_Manufacturer = "DSR-Precision"
 SWEP.Trivia_Calibre = ".50 BMG"
 SWEP.Trivia_Mechanism = "Bolt-Action"

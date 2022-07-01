@@ -4,10 +4,8 @@ SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Barrett M82"
-SWEP.Trivia_Class = "Anti-Materiel Precision Rifle"
-SWEP.Trivia_Desc = [[
-    American .50 caliber precision rifle. Very heavy, very powerful and extremely dangerous in the right hands.
-]]
+SWEP.Trivia_Class = "Anti-Material Precision Rifle"
+SWEP.Trivia_Desc = [[American .50 caliber precision rifle. Really heavy, very powerful and extremely dangerous in the right hands.]]
 SWEP.Trivia_Manufacturer = "Barrett"
 SWEP.Trivia_Calibre = ".50 BMG"
 SWEP.Trivia_Mechanism = "Recoil Operated, Rotating Bolt"
@@ -238,7 +236,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(6.5, -0.5, 1.5),
+            vpos = Vector(4.5, -0.75, 0.8),
             vang = Angle(0, 0, 0),
         },
     },--8

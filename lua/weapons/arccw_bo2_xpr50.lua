@@ -4,10 +4,8 @@ SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "XPR-50"
-SWEP.Trivia_Class = "Anti-Materiel Precision Rifle"
-SWEP.Trivia_Desc = [[
-    .50 caliber precision rifle. Very heavy, very powerful and extremely dangerous in the right hands.
-]]
+SWEP.Trivia_Class = "Anti-Material Precision Rifle"
+SWEP.Trivia_Desc = [[.50 caliber precision rifle. Really heavy, very powerful, and extremely dangerous in the right hands.]]
 SWEP.Trivia_Manufacturer = "Barrett"
 SWEP.Trivia_Calibre = ".50 BMG"
 SWEP.Trivia_Mechanism = "Recoil Operated, Rotating Bolt"
