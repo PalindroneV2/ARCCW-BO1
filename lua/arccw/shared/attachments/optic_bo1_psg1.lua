@@ -1,15 +1,17 @@
 att.PrintName = "Hensoldt ZF 6×42 (2-8x)"
 att.AbbrevName = "Hensoldt [BO1](8x)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
-att.Description = "German high power scope originally for the HK PSG-1. Magnification between 4x and 8x."
+att.Description = "German high power scope designed for the HK PSG-1. Magnification between 4x and 8x."
 
-att.SortOrder = 150
+att.SortOrder = 1000
 
 att.Desc_Pros = {
     "autostat.holosight",
     "autostat.zoom",
 }
-att.Desc_Neutrals = {"bo.desc"}
+att.Desc_Neutrals = {
+    "bo.desc",
+}
 
 att.AutoStats = true
 att.Slot = {"bo1_sniper_scope", "bo1_hendsoldt"}
@@ -24,10 +26,11 @@ att.DroppedModel = "models/weapons/arccw/atts/bo1_hensoldt.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.025, 10.5, -1.185),
+        Pos = Vector(-0.025, 9, -1.185),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
+        ZoomSound = "arccw_go/fiveseven/fiveseven_slideback.wav",
         ZoomLevels = 4,
         IgnoreExtra = true
     }
@@ -38,7 +41,7 @@ att.ScopeGlint = false
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/psg1_scope.png")
 att.HolosightNoFlare = true
-att.HolosightSize = 10
+att.HolosightSize = 13
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo1_hensoldt_hsp.mdl"
 att.Colorable = true

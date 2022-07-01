@@ -1,13 +1,15 @@
 att.PrintName = "Target Finder (HOLO)"
 att.Icon = Material("entities/acwatt_optic_bo2_rangefinder.png", "mips smooth")
-att.Description = "Black Ops 2 Holographic Sight. Standard holographic sight. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons."
+att.Description = "Black Ops 2 Holographic Sight. Low magnification optical sight that highlights enemies in red without compromising the quality of the image projected by the small monitor."
 
-att.SortOrder = 1
+att.SortOrder = 3
 
 att.Desc_Pros = {
     "autostat.holosight",
 }
-att.Desc_Neutrals = {"bo.desc"}
+att.Desc_Neutrals = {
+    "bo.desc"
+}
 
 att.AutoStats = true
 att.Slot = {"optic", "bo1_reddots"}
@@ -18,11 +20,17 @@ att.OffsetAng = Angle(0, 0, 0)
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 9, -1.215),
+        Pos = Vector(0, 5, -1.215),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_NONE,
         IgnoreExtra = false,
+        Thermal = true,
+		ThermalNoCC = true,
+        ThermalFullColor = true,
+        ThermalScopeSimple = true,
+        ThermalScopeColor = Color(255, 255, 255),
+        ThermalHighlightColor = Color(255, 0, 0),
     }
 }
 
@@ -35,6 +43,6 @@ att.HolosightPiece = "models/weapons/arccw/atts/bo2_rangefinder_hsp.mdl"
 
 att.Mult_SightTime = 1.01
 
-att.HolosightMagnification = 2
+att.HolosightMagnification = 1.01
 
 att.Colorable = true

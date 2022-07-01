@@ -7,7 +7,9 @@ att.SortOrder = 1
 att.Desc_Pros = {
     "autostat.holosight",
 }
-att.Desc_Neutrals = {"bo.desc"}
+att.Desc_Neutrals = {
+    "bo.desc"
+}
 
 att.AutoStats = true
 att.Slot = "bo2_m32_sight"

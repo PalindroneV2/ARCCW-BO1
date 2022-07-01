@@ -1,14 +1,16 @@
 att.PrintName = "Elbit Falcon (RDS)"
 att.AbbrevName = "Falcon [BO1](RDS)"
 att.Icon = Material("entities/acwatt_optic_bo1_reddot.png", "mips smooth")
-att.Description = "Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons."
+att.Description = "Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up iron sights."
 
 att.SortOrder = 1
 
 att.Desc_Pros = {
     "autostat.holosight",
 }
-att.Desc_Neutrals = {"bo.desc"}
+att.Desc_Neutrals = {
+    "bo.desc"
+}
 
 att.AutoStats = true
 att.Slot = {"optic", "bo1_reddots"}

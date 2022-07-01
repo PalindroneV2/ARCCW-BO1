@@ -1,6 +1,6 @@
 att.PrintName = "DSR Scope (12x)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
-att.Description = "German high powered scope for the DSR=50."
+att.Description = "German high powered scope for the DSR-50."
 
 att.SortOrder = 12
 
@@ -10,6 +10,10 @@ att.Desc_Pros = {
 att.Desc_Cons = {
     "- Visible glint"
 }
+att.Desc_Neutrals = {
+    "bo.desc",
+}
+
 att.AutoStats = true
 att.Slot = "bo2_dsr50_scope"
 
@@ -27,6 +31,7 @@ att.AdditionalSights = {
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
+        ZoomSound = "arccw_go/fiveseven/fiveseven_slideback.wav",
         ZoomLevels = 4,
         IgnoreExtra = true
     }

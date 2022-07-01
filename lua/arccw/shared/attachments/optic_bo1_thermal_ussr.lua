@@ -3,12 +3,14 @@ att.AbbrevName = "Infrared Scope (USSR)"
 att.Icon = Material("entities/acwatt_optic_bo1_thermal_us.png", "mips smooth")
 att.Description = "Black Ops 1 Thermal Sight. Low magnification optical sight that highlights enemies in white. Exclusive to AK platoform weapons."
 
-att.SortOrder = 5
+att.SortOrder = 50
 
 att.Desc_Pros = {
     "autostat.holosight",
 }
-att.Desc_Neutrals = {"bo.desc"}
+att.Desc_Neutrals = {
+    "bo.desc"
+}
 
 att.AutoStats = true
 att.Slot = {"bo1_irscope_ussr"}

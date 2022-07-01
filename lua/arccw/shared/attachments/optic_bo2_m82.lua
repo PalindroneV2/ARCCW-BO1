@@ -2,7 +2,7 @@ att.PrintName = "Barrett Scope (12x)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
 att.Description = "American high powered scope for the Barret M82."
 
-att.SortOrder = 12
+att.SortOrder = 1000
 
 att.Desc_Pros = {
     "+ Precision sight picture",
@@ -10,6 +10,10 @@ att.Desc_Pros = {
 att.Desc_Cons = {
     "- Visible glint"
 }
+att.Desc_Neutrals = {
+    "bo.desc",
+}
+
 att.AutoStats = true
 att.Slot = "bo2_m82scope"
 
@@ -23,10 +27,11 @@ att.DroppedModel = "models/weapons/arccw/atts/bo2_m82scope.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.025, 10, -1.4),
+        Pos = Vector(-0.025, 9, -1.4),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
+        ZoomSound = "arccw_go/fiveseven/fiveseven_slideback.wav",
         ZoomLevels = 4,
         IgnoreExtra = true
     }
@@ -37,7 +42,7 @@ att.ScopeGlint = false
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/psg1_scope.png")
 att.HolosightNoFlare = true
-att.HolosightSize = 12
+att.HolosightSize = 14
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo2_m82scope_hsp.mdl"
 att.Colorable = true

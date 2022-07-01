@@ -8,6 +8,9 @@ att.Desc_Pros = {
     "autostat.holosight",
     "autostat.zoom",
 }
+att.Desc_Neutrals = {
+    "bo.desc"
+}
 
 att.AutoStats = true
 att.Slot = "bo1_aug_sight"

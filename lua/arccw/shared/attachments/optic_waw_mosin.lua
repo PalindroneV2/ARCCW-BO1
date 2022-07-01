@@ -2,7 +2,7 @@ att.PrintName = "PU 3.5x Scope (WAW)"
 att.Icon = Material("entities/acwatt_optic_waw_mosin.png", "mips smooth")
 att.Description = "Sniper scope for the Mosin Nagant."
 
-att.SortOrder = 150
+att.SortOrder = 1000
 
 att.Desc_Pros = {
     "autostat.holosight",
@@ -11,7 +11,9 @@ att.Desc_Pros = {
 att.Desc_Cons = {
     "bo1.sgreload",
 }
-att.Desc_Neutrals = {"bo.desc"}
+att.Desc_Neutrals = {
+    "bo.desc"
+}
 
 att.AutoStats = true
 att.Slot = {"waw_rus_scope"}
@@ -35,7 +37,7 @@ att.AdditionalSights = {
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/waw_telescopic.png", "mips smooth")
 att.HolosightNoFlare = true
-att.HolosightSize = 9
+att.HolosightSize = 11
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/waw_rus_scope_hsp.mdl"
 att.Colorable = true

@@ -1,6 +1,6 @@
 att.PrintName = "4-Power NTC Kogaku Scope (WAW)"
 att.Icon = Material("entities/acwatt_optic_waw_mosin.png", "mips smooth")
-att.Description = "Sniper scope for the Arisaka Type 99. Because the scope is to the side, it is possible to use ironsights with this mounted."
+att.Description = "Sniper scope for the Arisaka Type 99. Because the scope is mounted on the side, it is possible to still use the iron sights."
 att.Desc_Pros = {
     "autostat.holosight",
     "autostat.zoom",
@@ -8,7 +8,9 @@ att.Desc_Pros = {
 att.Desc_Cons = {
     "bo1.sgreload",
 }
-att.Desc_Neutrals = {"bo.desc"}
+att.Desc_Neutrals = {
+    "bo.desc"
+}
 
 att.SortOrder = 1000
 
@@ -22,7 +24,7 @@ att.GivesFlags = {"waw_kogaku"}
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0.975, 14, -2.11),
+        Pos = Vector(0.975, 12, -2.11),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
@@ -35,7 +37,7 @@ att.KeepBaseIrons = true
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/waw_telescopic.png", "mips smooth")
 att.HolosightNoFlare = true
-att.HolosightSize = 9
+att.HolosightSize = 13
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/waw_kogaku_hsp.mdl"
 att.Colorable = true

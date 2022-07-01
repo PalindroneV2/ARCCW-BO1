@@ -1,14 +1,16 @@
 att.PrintName = "Aimpoint Mark II (REFLEX)"
 att.AbbrevName = "Aimpoint [BO1]"
 att.Icon = Material("entities/acwatt_optic_bo1_reflex.png", "mips smooth")
-att.Description = "Small, tube-based optic. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons."
+att.Description = "Small, tube-based optic. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up iron sights."
 
 att.SortOrder = 1
 
 att.Desc_Pros = {
     "autostat.holosight",
 }
-att.Desc_Neutrals = {"bo.desc"}
+att.Desc_Neutrals = {
+    "bo.desc"
+}
 
 att.AutoStats = true
 att.Slot = {"optic", "bo1_reddots", "optic_lp"}

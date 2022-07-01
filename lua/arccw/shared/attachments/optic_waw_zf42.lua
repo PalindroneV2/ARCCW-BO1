@@ -8,7 +8,9 @@ att.Desc_Pros = {
 att.Desc_Cons = {
     "bo1.sgreload",
 }
-att.Desc_Neutrals = {"bo.desc"}
+att.Desc_Neutrals = {
+    "bo.desc"
+}
 
 att.SortOrder = 1000
 
@@ -22,7 +24,7 @@ att.GivesFlags = {"waw_zf42"}
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 12, -2.87),
+        Pos = Vector(0, 10.5, -2.87),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
@@ -34,7 +36,7 @@ att.AdditionalSights = {
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/waw_telescopic.png", "mips smooth")
 att.HolosightNoFlare = true
-att.HolosightSize = 8.5
+att.HolosightSize = 13
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/waw_zf42_hsp.mdl"
 att.Colorable = true

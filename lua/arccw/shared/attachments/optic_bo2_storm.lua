@@ -1,8 +1,8 @@
 att.PrintName = "Storm PSR Scope (12x)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
-att.Description = "High powered scope for the XPR-50."
+att.Description = "High powered scope for the Storm PSR."
 
-att.SortOrder = 120
+att.SortOrder = 1000
 
 att.Desc_Pros = {
     "+ Precision sight picture",
@@ -10,6 +10,10 @@ att.Desc_Pros = {
 att.Desc_Cons = {
     "- Visible glint"
 }
+att.Desc_Neutrals = {
+    "bo.desc",
+}
+
 att.AutoStats = true
 att.Slot = "bo2_storm_scope"
 
@@ -23,15 +27,16 @@ att.DroppedModel = "models/weapons/arccw/atts/bo2_storm_scope.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 5, -5.425),
+        Pos = Vector(0, 4.5, -5.425),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
+        ZoomSound = "buttons/combine_button5.wav",
         ZoomLevels = 4,
         IgnoreExtra = true,
         Thermal = true,
         ThermalScopeColor = Color(100, 255, 255),
-        ThermalHighlightColor = Color(255, 0, 0),
+        ThermalHighlightColor = Color(255, 255, 0),
         Contrast = 0.9, -- allows you to adjust the values for contrast and brightness when either NVScope or Thermal is enabled.
     }
 }
@@ -41,7 +46,7 @@ att.ScopeGlint = false
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/bo2_storm.png")
 att.HolosightNoFlare = true
-att.HolosightSize = 8
+att.HolosightSize = 9
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo2_storm_hsp.mdl"
 att.Colorable = false

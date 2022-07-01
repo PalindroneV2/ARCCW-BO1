@@ -1,12 +1,14 @@
 att.PrintName = "PE PEM Scope (WAW)"
 att.Icon = Material("entities/acwatt_optic_waw_telescopic.png", "mips smooth")
-att.Description = "Soviet Scope that has gone through some modifications for use on the PTRS-41"
+att.Description = "Modified Soviet Scope for use on the PTRS-41."
 
 att.Desc_Pros = {
     "autostat.holosight",
     "autostat.zoom",
 }
-att.Desc_Neutrals = {"bo.desc"}
+att.Desc_Neutrals = {
+    "bo.desc"
+}
 
 att.SortOrder = 1000
 
@@ -18,7 +20,7 @@ att.GivesFlags = {"waw_pemscope"}
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 8, -3.525),
+        Pos = Vector(0, 7, -3.525),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
@@ -30,7 +32,7 @@ att.AdditionalSights = {
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/waw_telescopic.png", "mips smooth")
 att.HolosightNoFlare = true
-att.HolosightSize = 10.5
+att.HolosightSize = 12
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/waw_pemscope_hsp.mdl"
 att.Colorable = true

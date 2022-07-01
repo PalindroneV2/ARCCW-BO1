@@ -8,6 +8,9 @@ att.Desc_Pros = {
     "autostat.holosight",
     "autostat.zoom",
 }
+att.Desc_Neutrals = {
+    "bo.desc",
+}
 
 att.AutoStats = true
 att.Slot = "bo1_awm"
@@ -18,7 +21,7 @@ att.DroppedModel = "models/weapons/arccw/atts/bo1_redfield.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 6, -4.6),
+        Pos = Vector(0, 5, -4.6),
         Ang = Angle(0, 0, 0),
         Magnification = 1.6,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
@@ -30,7 +33,7 @@ att.AdditionalSights = {
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/bo1_l96.png")
 att.HolosightNoFlare = true
-att.HolosightSize = 9
+att.HolosightSize = 11
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo1_redfield_hsp.mdl"
 att.Colorable = true

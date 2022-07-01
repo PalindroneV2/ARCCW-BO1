@@ -2,11 +2,14 @@ att.PrintName = "Redfield Scope (16x)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
 att.Description = "BO1 Variable Zoom scope. Provides imroved sight picture of targets much father than any other scope."
 
-att.SortOrder = 999
+att.SortOrder = 1000
 
 att.Desc_Pros = {
     "autostat.holosight",
     "autostat.zoom",
+}
+att.Desc_Neutrals = {
+    "bo.desc",
 }
 
 att.AutoStats = true
@@ -19,10 +22,11 @@ att.DroppedModel = "models/weapons/arccw/atts/bo1_longscope_xbow.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 6, -5.2),
+        Pos = Vector(0, 4, -5.2),
         Ang = Angle(0, 0, 0),
         Magnification = 1.5,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
+        ZoomSound = "arccw_go/fiveseven/fiveseven_slideback.wav",
         ZoomLevels = 3,
         IgnoreExtra = true
     },
@@ -31,7 +35,7 @@ att.AdditionalSights = {
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/bo1_l96.png")
 att.HolosightNoFlare = true
-att.HolosightSize = 10
+att.HolosightSize = 14
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/bo1_longscope_xbow_hsp.mdl"
 att.Colorable = true

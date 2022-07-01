@@ -1,8 +1,8 @@
 att.PrintName = "ZF-4 Scope (WAW)"
 att.Icon = Material("entities/acwatt_optic_waw_telescopic.png", "mips smooth")
-att.Description = "Low Magnification Scope for several World War 2 german firearms."
+att.Description = "Low Magnification Scope for several World War 2 German firearms."
 
-att.SortOrder = 150
+att.SortOrder = 1000
 
 att.Desc_Pros = {
     "autostat.holosight",
@@ -10,6 +10,10 @@ att.Desc_Pros = {
 }
 att.Desc_Cons = {
 }
+att.Desc_Neutrals = {
+    "bo.desc"
+}
+
 att.AutoStats = true
 att.Slot = {"waw_zf4_scope"}
 
@@ -26,7 +30,7 @@ end
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0.005, 6, -3.29),
+        Pos = Vector(0, 4.5, -3.29),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         IgnoreExtra = true,
@@ -36,7 +40,7 @@ att.AdditionalSights = {
 att.Holosight = true
 att.HolosightReticle = Material("hud/scopes/waw_telescopic.png", "mips smooth")
 att.HolosightNoFlare = true
-att.HolosightSize = 7
+att.HolosightSize = 10
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/weapons/arccw/atts/waw_zf4_hsp.mdl"
 att.Colorable = true
