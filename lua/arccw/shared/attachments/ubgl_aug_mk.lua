@@ -142,7 +142,7 @@ end
 
 att.Hook_Think = function(wep)
 	--print("lol")
-	if att.NeedPump and wep:GetNextSecondaryFire() <= CurTime() and wep:Clip2() > 0 and !att.Reloading and !wep.Owner:KeyDown(IN_ATTACK) then
+	if att.NeedPump and wep:GetNextSecondaryFire() <= CurTime() and wep:Clip2() > 0 and !att.Reloading and !wep.Owner:KeyDown(IN_ATTACK) then --error
 		wep:PlayAnimation("pump_mksetup")
 		wep:SetNextSecondaryFire(CurTime() + 0.75)
 		att.NeedPump = false
