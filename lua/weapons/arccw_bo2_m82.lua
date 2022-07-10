@@ -1,6 +1,6 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
+SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Barrett M82"
@@ -47,7 +47,7 @@ SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 5 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 20
 
-SWEP.Recoil = 5
+SWEP.Recoil = 3.5
 SWEP.RecoilSide = 2
 SWEP.RecoilRise = 2
 
@@ -189,7 +189,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Offset = {
             vpos = Vector(37, 0, 2.3),
-            vang = Angle(0, 0, 90),
+            vang = Angle(0, 0, 0),
         },
         InstalledEles = {"muzzle"}
     },--2
@@ -299,8 +299,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO2.Sniper_ClipOut", t = 0.5},
             {s = "ArcCW_BO2.Sniper_ClipIn", t = 1.9},
-            {s = "ArcCW_BO2.Sniper_BoltBack", t = 2.9},
-            {s = "ArcCW_BO2.Sniper_BoltFwd", t = 3.1},
+            {s = "ArcCW_BO2.Sniper_BoltBack", t = 3},
+            {s = "ArcCW_BO2.Sniper_BoltFwd", t = 3.2},
         },
         LHIK = true,
         LHIKIn = 0.5,

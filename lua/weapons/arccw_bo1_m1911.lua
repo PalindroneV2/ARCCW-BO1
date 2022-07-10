@@ -369,7 +369,7 @@ SWEP.Animations = {
         Time = 1,
         SoundTable = {
             {s = "ArcCW_BO1.M1911_Slide_Back", t = 0.2},
-            {s = "ArcCW_BO1.M1911_Slide_Fwd", t = 0.8}
+            {s = "ArcCW_BO1.M1911_Slide_Fwd", t = 0.65} --0.8
         }
     },
     ["ready_bo2"] = {
@@ -377,7 +377,7 @@ SWEP.Animations = {
         Time = 1,
         SoundTable = {
             {s = "ArcCW_BO2.Pistol_SlideBack", t = 0.2},
-            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 0.8}
+            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 0.65} --0.8
         }
     },
     ["fire"] = {

@@ -192,7 +192,7 @@ SWEP.Attachments = {
     }, --2
     {
         PrintName = "Stock",
-        DefaultAttName = "Cut-off Stock",
+        DefaultAttName = "No Stock",
         Slot = "bo1_stock_h",
         Installed = "bo1_stock_heavy",
     },
@@ -251,8 +251,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO1.Olympia_Close", t = 12 / 40},
-            {s = "ArcCW_BO1.Olympia_Switch", t = 19 / 40},
+            {s = "ArcCW_BO1.Olympia_Close", t = 11 / 40},
+            {s = "ArcCW_BO1.Olympia_Switch", t = 16 / 40},
         },
     },
     ["fire"] = {

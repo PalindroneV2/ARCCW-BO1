@@ -336,8 +336,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.MPL_BoltBack", t = 10 / 30},
-            {s = "ArcCW_BO1.MPL_BoltFwd", t = 15 / 30},
+            {s = "ArcCW_BO1.MPL_BoltBack", t = 12 / 30},
+            {s = "ArcCW_BO1.MPL_BoltFwd", t = 18 / 30},
         },
     },
     ["ready_grip"] = {

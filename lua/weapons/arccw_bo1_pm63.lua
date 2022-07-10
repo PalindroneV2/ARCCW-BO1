@@ -282,14 +282,14 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
-        Time = 1,
+        Time = 0.5, --1
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.25,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
-        Time = 1,
+        Time = 0.5, --1
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.25,
@@ -361,24 +361,24 @@ SWEP.Animations = {
     },
     ["ready_stock"] = {
         Source = "first_draw_stock",
-        Time = 1.5,
+        Time = 1, --1.5
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
             {s = "ArcCW_BO1.PM63_Futz", t = 12 / 30},
-            {s = "ArcCW_BO1.PM63_BoltFwd", t = 18 / 30},
+            {s = "ArcCW_BO1.PM63_BoltFwd", t = 18 / 30}
         },
     },
     ["ready_stock_ext"] = {
         Source = "first_draw_stock",
-        Time = 1.5,
+        Time = 1, --1.5
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
             {s = "ArcCW_BO1.PM63_Futz", t = 12 / 30},
-            {s = "ArcCW_BO1.PM63_BoltFwd", t = 18 / 30},
+            {s = "ArcCW_BO1.PM63_BoltFwd", t = 18 / 30}
         },
     },
     ["fire"] = {
@@ -403,7 +403,7 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 90 / 35,
+        Time = 60 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Framerate = 30,
         Checkpoints = {28, 38, 69},
@@ -411,13 +411,13 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.PM63_MagOut", t = 15 / 35},
-            {s = "ArcCW_BO1.PM63_MagIn", t = 56 / 35}
+            {s = "ArcCW_BO1.PM63_MagOut", t = 14 / 35},
+            {s = "ArcCW_BO1.PM63_MagIn", t = 38 / 35}
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 120 / 35,
+        Time = 90 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Framerate = 30,
         Checkpoints = {28, 38, 69},
@@ -425,15 +425,15 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.PM63_MagOut", t = 16 / 35},
-            {s = "ArcCW_BO1.PM63_MagIn", t = 56 / 35},
-            {s = "ArcCW_BO1.PM63_BoltBack", t = 75 / 35},
-            {s = "ArcCW_BO1.PM63_BoltFwd", t = 81 / 35},
+            {s = "ArcCW_BO1.PM63_MagOut", t = 14 / 35},
+            {s = "ArcCW_BO1.PM63_MagIn", t = 38 / 35},
+            {s = "ArcCW_BO1.PM63_BoltBack", t = 55 / 35},
+            {s = "ArcCW_BO1.PM63_BoltFwd", t = 65 / 35}
         },
     },
     ["reload_ext"] = {
         Source = "reload_ext",
-        Time = 90 / 35,
+        Time = 60 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Framerate = 30,
         Checkpoints = {28, 38, 69},
@@ -441,28 +441,12 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.PM63_MagOut", t = 15 / 35},
-            {s = "ArcCW_BO1.PM63_MagIn", t = 56 / 35}
+            {s = "ArcCW_BO1.PM63_MagOut", t = 14 / 35},
+            {s = "ArcCW_BO1.PM63_MagIn", t = 38 / 35}
         },
     },
     ["reload_empty_ext"] = {
         Source = "reload_empty_ext",
-        Time = 120 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-        SoundTable = {
-            {s = "ArcCW_BO1.PM63_MagOut", t = 16 / 35},
-            {s = "ArcCW_BO1.PM63_MagIn", t = 56 / 35},
-            {s = "ArcCW_BO1.PM63_BoltBack", t = 75 / 35},
-            {s = "ArcCW_BO1.PM63_BoltFwd", t = 81 / 35},
-        },
-    },
-    ["reload_stock_ext"] = {
-        Source = "reload_ext",
         Time = 90 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Framerate = 30,
@@ -471,13 +455,15 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.PM63_MagOut", t = 15 / 35},
-            {s = "ArcCW_BO1.PM63_MagIn", t = 56 / 35}
+            {s = "ArcCW_BO1.PM63_MagOut", t = 14 / 35},
+            {s = "ArcCW_BO1.PM63_MagIn", t = 38 / 35},
+            {s = "ArcCW_BO1.PM63_BoltBack", t = 55 / 35},
+            {s = "ArcCW_BO1.PM63_BoltFwd", t = 65 / 35}
         },
     },
-    ["reload_empty_stock_ext"] = {
-        Source = "reload_empty_ext",
-        Time = 120 / 35,
+    ["reload_stock_ext"] = {
+        Source = "reload_ext",
+        Time = 60 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Framerate = 30,
         Checkpoints = {28, 38, 69},
@@ -485,10 +471,24 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO1.PM63_MagOut", t = 16 / 35},
-            {s = "ArcCW_BO1.PM63_MagIn", t = 56 / 35},
-            {s = "ArcCW_BO1.PM63_BoltBack", t = 75 / 35},
-            {s = "ArcCW_BO1.PM63_BoltFwd", t = 81 / 35},
+            {s = "ArcCW_BO1.PM63_MagOut", t = 14 / 35},
+            {s = "ArcCW_BO1.PM63_MagIn", t = 38 / 35}
+        },
+    },
+    ["reload_empty_stock_ext"] = {
+        Source = "reload_empty_ext",
+        Time = 90 / 35,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        Framerate = 30,
+        Checkpoints = {28, 38, 69},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+        SoundTable = {
+            {s = "ArcCW_BO1.PM63_MagOut", t = 14 / 35},
+            {s = "ArcCW_BO1.PM63_MagIn", t = 38 / 35},
+            {s = "ArcCW_BO1.PM63_BoltBack", t = 55 / 35},
+            {s = "ArcCW_BO1.PM63_BoltFwd", t = 65 / 35}
         },
     },
     ["enter_sprint"] = {

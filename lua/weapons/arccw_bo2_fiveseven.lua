@@ -251,7 +251,7 @@ SWEP.Animations = {
         Time = 0.5,
     },
     ["holster_empty"] = {
-        Source = "holster_empty",
+        Source = "holster",
         Time = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
@@ -261,7 +261,7 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 1,
         SoundTable = {
-            {s = "ArcCW_BO2.Pistol_SlideBack", t = 0.2},
+            {s = "ArcCW_BO2.Pistol_SlideBack", t = 0.3},
             {s = "ArcCW_BO2.Pistol_SlideFwd", t = 0.5}
         }
     },
@@ -299,7 +299,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 2,
+        Time = 1.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
         LHIKIn = 0.2,
@@ -307,7 +307,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO2.Pistol_MagOut", t = 0.25},
             {s = "ArcCW_BO2.Pistol_MagIn", t = 0.75},
-            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 1.5}
+            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 1.15}
         },
     },
     ["enter_sprint"] = {

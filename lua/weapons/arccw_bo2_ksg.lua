@@ -228,9 +228,9 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
-        Bone = "tag_weapon",
+        Bone = "j_pump",
         Offset = {
-            vpos = Vector(7, -0.65, 1.6), -- offset that the attachment will be relative to the bone
+            vpos = Vector(-11, -1, 1.3), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(7, 1.6, -4),
             wang = Angle(-10, 0, 180)
@@ -385,7 +385,7 @@ SWEP.Animations = {
         Time = 30 / 30,
         SoundTable = {
             {s = "ArcCW_BO2.Shotgun_Back", t = 8 / 30},
-            {s = "ArcCW_BO2.Shotgun_Fwd", t = 12 / 30},
+            {s = "ArcCW_BO2.Shotgun_Fwd", t = 16 / 30},
         },
     },
     ["sgreload_finish_empty"] = {
@@ -393,7 +393,7 @@ SWEP.Animations = {
         Time = 30 / 30,
         SoundTable = {
             {s = "ArcCW_BO2.Shotgun_Back", t = 8 / 30},
-            {s = "ArcCW_BO2.Shotgun_Fwd", t = 12 / 30},
+            {s = "ArcCW_BO2.Shotgun_Fwd", t = 16 / 30},
         },
     },
     ["enter_sprint"] = {
@@ -437,7 +437,7 @@ SWEP.Animations = {
         Time = 30 / 30,
         SoundTable = {
             {s = "ArcCW_BO2.Shotgun_Back", t = 8 / 30},
-            {s = "ArcCW_BO2.Shotgun_Fwd", t = 12 / 30},
+            {s = "ArcCW_BO2.Shotgun_Fwd", t = 16 / 30},
         },
     },
     ["sgreload_finish_empty_fast"] = {
@@ -445,7 +445,7 @@ SWEP.Animations = {
         Time = 30 / 30,
         SoundTable = {
             {s = "ArcCW_BO2.Shotgun_Back", t = 8 / 30},
-            {s = "ArcCW_BO2.Shotgun_Fwd", t = 12 / 30},
+            {s = "ArcCW_BO2.Shotgun_Fwd", t = 16 / 30},
         },
     },
 
@@ -509,7 +509,7 @@ SWEP.Animations = {
         Time = 30 / 30,
         SoundTable = {
             {s = "ArcCW_MW3E.KSG_Back", t = 8 / 30},
-            {s = "ArcCW_MW3E.KSG_Fwd", t = 12 / 30},
+            {s = "ArcCW_MW3E.KSG_Fwd", t = 16 / 30},
         },
     },
     ["sgreload_finish_empty_mw3"] = {
@@ -517,7 +517,7 @@ SWEP.Animations = {
         Time = 30 / 30,
         SoundTable = {
             {s = "ArcCW_MW3E.KSG_Back", t = 8 / 30},
-            {s = "ArcCW_MW3E.KSG_Fwd", t = 12 / 30},
+            {s = "ArcCW_MW3E.KSG_Fwd", t = 16 / 30},
         },
     },
     --MW3 fast
@@ -547,7 +547,7 @@ SWEP.Animations = {
         Time = 30 / 30,
         SoundTable = {
             {s = "ArcCW_MW3E.KSG_Back", t = 8 / 30},
-            {s = "ArcCW_MW3E.KSG_Fwd", t = 12 / 30},
+            {s = "ArcCW_MW3E.KSG_Fwd", t = 16 / 30},
         },
     },
     ["sgreload_finish_empty_fast_mw3"] = {
@@ -555,7 +555,7 @@ SWEP.Animations = {
         Time = 30 / 30,
         SoundTable = {
             {s = "ArcCW_MW3E.KSG_Back", t = 8 / 30},
-            {s = "ArcCW_MW3E.KSG_Fwd", t = 12 / 30},
+            {s = "ArcCW_MW3E.KSG_Fwd", t = 16 / 30},
         },
     },
 }

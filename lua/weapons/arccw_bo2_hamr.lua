@@ -293,7 +293,14 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "draw",
-        Time = 1.5,
+        --Time = 1.1, --1.5
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
+    ["holster"] = {
+        Source = "holster",
+        --Time = 1.1,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.25,

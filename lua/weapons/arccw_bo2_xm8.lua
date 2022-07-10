@@ -281,7 +281,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(4.5, -0.75, 2.5),
+            vpos = Vector(2.4, -0.5, 0.8),
             vang = Angle(0, 0, 0),
             wpos = Vector(4.8, 1.7, -2.5),
             wang = Angle(-175, -175, 0)
@@ -424,8 +424,8 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.6},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.5}
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.5},
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.55}
         },
         MinProgress = 1.6,
     },
@@ -437,10 +437,10 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.6},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.5},
-            {s = "ArcCW_BO2.AR_Back", t = 2},
-            {s = "ArcCW_BO2.AR_Fwd", t = 2.15},
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.5},
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.55},
+            {s = "ArcCW_BO2.AR_Back", t = 2.15},
+            {s = "ArcCW_BO2.AR_Fwd", t = 2.35},
         },
         MinProgress = 2.0,
     },

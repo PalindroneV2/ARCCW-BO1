@@ -285,7 +285,7 @@ SWEP.Animations = {
         Time = 1,
         SoundTable = {
             {s = "ArcCW_BO2.Pistol_SlideBack", t = 0.2},
-            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 0.8}
+            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 0.6}
         }
     },
     ["fire"] = {
@@ -317,7 +317,7 @@ SWEP.Animations = {
         LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO2.Pistol_MagOut", t = 0.25},
-            {s = "ArcCW_BO2.Pistol_MagIn", t = 1}
+            {s = "ArcCW_BO2.Pistol_MagIn", t = 0.9}
         },
     },
     ["reload_empty"] = {
@@ -329,8 +329,8 @@ SWEP.Animations = {
         LHIKOut = 0.2,
         SoundTable = {
             {s = "ArcCW_BO2.Pistol_MagOut", t = 0.25},
-            {s = "ArcCW_BO2.Pistol_MagIn", t = 1},
-            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 1.5}
+            {s = "ArcCW_BO2.Pistol_MagIn", t = 0.9},
+            {s = "ArcCW_BO2.Pistol_SlideFwd", t = 1.4}
         },
     },
     ["enter_sprint"] = {

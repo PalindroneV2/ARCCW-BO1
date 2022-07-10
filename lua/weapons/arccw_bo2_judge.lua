@@ -196,6 +196,7 @@ SWEP.Attachments = {
             vpos = Vector(4.125, 0, 0.15),
             vang = Angle(0, 0, 0),
         },
+        ExcludeFlags = {"python_snub"}
     },
     {
         PrintName = "Cylinder",
@@ -217,7 +218,6 @@ SWEP.Attachments = {
             vpos = Vector(2, -0.5, 0.25),
             vang = Angle(0, 0, 0),
         },
-        ExcludeFlags = {"python_snub"}
     },
 }
 
@@ -255,11 +255,11 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 30 / 30,
+        Time = 20 / 30, --30
     },
     ["holster"] = {
         Source = "holster",
-        Time = 24 / 30,
+        Time = 20 / 30, --24
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,

@@ -100,8 +100,8 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2, 3, -0.25),
-    Ang = Angle(4.9, -1.25, 0),
+    Pos = Vector(-2, 3, -2.375),
+    Ang = Angle(10, -1.25, 0),
     Magnification = 1.1,
     CrosshairInSights = true,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -135,6 +135,12 @@ SWEP.AttachmentElements = {
     },
 }
 
+SWEP.Hook_ShouldNotFire = function(wep)
+    if !wep:GetBuff_Override("PackAPunch") and (wep:GetState() != ArcCW.STATE_SIGHTS or wep:GetSightDelta() > 0) then
+        return true
+    end
+end
+
 SWEP.ExtraSightDist = 5
 
 SWEP.Attachments = {
@@ -143,7 +149,7 @@ SWEP.Attachments = {
         Slot = "tac",
         Bone = "tag_weapon",
         Offset = {
-            vpos = Vector(02, -0.7, 0.75), -- offset that the attachment will be relative to the bone
+            vpos = Vector(-6, -1.1, 3), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 90),
         },
     }, --2
@@ -205,15 +211,11 @@ SWEP.Animations = {
         LHIKOut = 0.2,
     },
     ["fire"] = {
-        Source = {
-            "fire",
-        },
+        Source = "fire",
         Time = 15 / 35,
     },
     ["fire_iron"] = {
-        Source = {
-            "fire",
-        },
+        Source = "fire",
         Time = 15 / 35,
     },
     ["reload"] = {

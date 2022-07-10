@@ -384,8 +384,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.7},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25}
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.8},
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.375}
         },
     },
     ["reload_empty"] = {
@@ -398,10 +398,10 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         SoundTable = {
-            {s = "ArcCW_BO2.AR_MagOut", t = 0.7},
-            {s = "ArcCW_BO2.AR_MagIn", t = 1.25},
-            {s = "ArcCW_BO2.AR_Back", t = 1.8},
-            {s = "ArcCW_BO2.AR_Fwd", t = 1.95}
+            {s = "ArcCW_BO2.AR_MagOut", t = 0.8},
+            {s = "ArcCW_BO2.AR_MagIn", t = 1.375},
+            {s = "ArcCW_BO2.AR_Back", t = 2},
+            {s = "ArcCW_BO2.AR_Fwd", t = 2.2}
         },
     },
     ["reload_fast"] = {
@@ -430,7 +430,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = "ArcCW_BO2.AR_MagOut", t = 0.3},
             {s = "ArcCW_BO2.AR_MagIn", t = 0.9},
-            {s = "ArcCW_BO2.AR_Fwd", t = 1.5}
+            {s = "ArcCW_BO2.AR_Fwd", t = 1.45}
         },
     },
     ["enter_sprint"] = {

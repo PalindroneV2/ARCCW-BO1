@@ -427,7 +427,7 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 1.5,
+        --Time = 1.5,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,

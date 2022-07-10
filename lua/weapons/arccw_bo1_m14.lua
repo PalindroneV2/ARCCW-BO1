@@ -422,8 +422,8 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.M14_BoltBack", t = 0},
-            {s = "ArcCW_BO1.M14_BoltFwd", t = 0.25}
+            {s = "ArcCW_BO1.M14_BoltBack", t = 0.2},
+            {s = "ArcCW_BO1.M14_BoltFwd", t = 0.3}
         },
     },
     ["fire"] = {
@@ -468,8 +468,8 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.M14_Futz", t = 1.5},
             {s = "ArcCW_BO1.M14_MagIn", t = 1.75},
             {s = "ArcCW_BO1.M14_Tap", t = 1.85},
-            {s = "ArcCW_BO1.M14_BoltBack", t = 2.25},
-            {s = "ArcCW_BO1.M14_BoltFwd", t = 2.4},
+            {s = "ArcCW_BO1.M14_BoltBack", t = 2.3},
+            {s = "ArcCW_BO1.M14_BoltFwd", t = 2.55},
         },
     },
     ["enter_sprint"] = {
@@ -555,8 +555,8 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.M14_Futz", t = 1.5},
             {s = "ArcCW_BO1.M14_MagIn", t = 1.75},
             {s = "ArcCW_BO1.M14_Tap", t = 1.85},
-            {s = "ArcCW_BO1.M14_BoltBack", t = 2.25},
-            {s = "ArcCW_BO1.M14_BoltFwd", t = 2.4},
+            {s = "ArcCW_BO1.M14_BoltBack", t = 2.3},
+            {s = "ArcCW_BO1.M14_BoltFwd", t = 2.55},
         },
     },
     ["enter_sprint_grip"] = {

@@ -230,7 +230,6 @@ SWEP.Attachments = {
             vpos = Vector(-3.5, -0.5, -1.25),
             vang = Angle(0, 0, 0),
         },
-        ExcludeFlags = {"python_snub"}
     },
 }
 

@@ -333,21 +333,17 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.25,
         SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 15 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 21 / 30}
+            {s = "ArcCW_BO1.MK_Back", t = 10 / 30},
+            {s = "ArcCW_BO1.MK_Fwd", t = 19 / 30}
         },
     },
     ["fire"] = {
-        Source = {
-            "fire",
-        },
+        Source = "fire",
         Time = 9 / 10,
         ShellEjectAt = 0.15,
     },
     ["fire_iron"] = {
-        Source = {
-            "fire_ads",
-        },
+        Source = "fire_ads",
         Time = 9 / 10,
         ShellEjectAt = 0.15,
     },
@@ -378,9 +374,7 @@ SWEP.Animations = {
         },
     },
     ["cycle"] = {
-        Source = {
-            "pump",
-        },
+        Source = "pump",
         Time = 30 / 35,
         ShellEjectAt = 0.3,
         MinProgress = 22 / 35,
@@ -390,9 +384,7 @@ SWEP.Animations = {
         },
     },
     ["cycle_iron"] = {
-        Source = {
-            "pump_ads",
-        },
+        Source = "pump_ads",
         Time = 20 / 25,
         ShellEjectAt = 0.3,
         MinProgress = 22 / 35,
@@ -480,29 +472,23 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
-    ["ready_grip"] = {
-        Source = "draw_grip",
-        Time = 1,
+    ["holster"] = {
+        Source = "holster_grip",
+        Time = 0.75,
         LHIK = true,
-        LHIKIn = 0,
+        LHIKIn = 0.2,
         LHIKOut = 0.25,
     },
     ["fire_grip"] = {
-        Source = {
-            "fire_grip",
-        },
+        Source = "fire_grip",
         Time = 9 / 35,
     },
     ["fire_iron_grip"] = {
-        Source = {
-            "fire_ads_grip",
-        },
+        Source = "fire_ads_grip",
         Time = 9 / 35,
     },
     ["cycle_grip"] = {
-        Source = {
-            "pump_grip",
-        },
+        Source = "pump_grip",
         Time = 30 / 35,
         ShellEjectAt = 10 / 35,
         MinProgress = 22 / 35,
@@ -512,9 +498,7 @@ SWEP.Animations = {
         },
     },
     ["cycle_iron_grip"] = {
-        Source = {
-            "pump_ads_grip",
-        },
+        Source = "pump_ads_grip",
         Time = 20 / 25,
         ShellEjectAt = 5 / 35,
         MinProgress = 22 / 35,

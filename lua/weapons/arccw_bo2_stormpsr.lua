@@ -247,9 +247,9 @@ SWEP.Attachments = {
     { --5
         PrintName = "Tactical",
         Slot = {"bo1_tacprimary"},
-        Bone = "tag_weapon",
+        Bone = "j_reload",
         Offset = {
-            vpos = Vector(17.75, 0.8, 2.7),
+            vpos = Vector(11, 0.8, 2.7),
             vang = Angle(0, 0, 240),
         },
     },
@@ -287,15 +287,15 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 1.86,
+        --Time = 1.2, --1.86
     },
     ["holster"] = {
         Source = "holster",
-        Time = 1.45,
+        --Time = 1.1, --1.45
     },
     ["ready"] = {
         Source = "draw",
-        Time = 1.86,
+        Time = 1.1, --1.86
     },
     ["fire"] = {
         Source = {"fire"},

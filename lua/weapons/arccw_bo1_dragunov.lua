@@ -318,8 +318,8 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 70 / 35,
         SoundTable = {
-            {s = "ArcCW_BO1.SVD_Back", t = 0.1},
-            {s = "ArcCW_BO1.SVD_Fwd", t = 0.75},
+            {s = "ArcCW_BO1.SVD_Back", t = 0.45},
+            {s = "ArcCW_BO1.SVD_Fwd", t = 0.85},
         },
     },
     ["fire"] = {
@@ -339,8 +339,8 @@ SWEP.Animations = {
         Checkpoints = {33, 55},
         FrameRate = 30,
         SoundTable = {
-            {s = "ArcCW_BO1.SVD_ClipOut", t = 0.2},
-            {s = "ArcCW_BO1.SVD_ClipIn", t = 1.75},
+            {s = "ArcCW_BO1.SVD_ClipOut", t = 0.45},
+            {s = "ArcCW_BO1.SVD_ClipIn", t = 2},
         },
     },
     ["reload_empty"] = {
@@ -350,10 +350,10 @@ SWEP.Animations = {
         Checkpoints = {33, 55, 88},
         FrameRate = 30,
         SoundTable = {
-            {s = "ArcCW_BO1.SVD_ClipOut", t = 0.2},
-            {s = "ArcCW_BO1.SVD_ClipIn", t = 1.75},
-            {s = "ArcCW_BO1.SVD_Back", t = 2.25},
-            {s = "ArcCW_BO1.SVD_Fwd", t = 2.5},
+            {s = "ArcCW_BO1.SVD_ClipOut", t = 0.45},
+            {s = "ArcCW_BO1.SVD_ClipIn", t = 2},
+            {s = "ArcCW_BO1.SVD_Back", t = 2.5},
+            {s = "ArcCW_BO1.SVD_Fwd", t = 2.8},
         },
     },
     ["reload_ext"] = {

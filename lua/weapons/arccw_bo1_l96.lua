@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "L115A1"
+SWEP.PrintName = "L96A1"
 SWEP.Trivia_Class = "Sniper Rifle"
 SWEP.Trivia_Desc = "A high-caliber sniper rifle designed for cold-weather police and military units. Known for once holding the record of the longest range sniper shot in history."
 SWEP.Trivia_Manufacturer = "Accuracy International"
@@ -332,10 +332,10 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 2,
         SoundTable = {
-            {s = "ArcCW_BO1.L96_BoltUp", t = 0.3},
-            {s = "ArcCW_BO1.L96_BoltBack", t = 0.5},
-            {s = "ArcCW_BO1.L96_BoltFwd", t = 1},
-            {s = "ArcCW_BO1.L96_BoltDown", t = 1.2},
+            {s = "ArcCW_BO1.L96_BoltUp", t = 0.4},
+            {s = "ArcCW_BO1.L96_BoltBack", t = 0.6},
+            {s = "ArcCW_BO1.L96_BoltFwd", t = 0.8},
+            {s = "ArcCW_BO1.L96_BoltDown", t = 1},
         },
         LHIK = true,
         LHIKIn = 0,

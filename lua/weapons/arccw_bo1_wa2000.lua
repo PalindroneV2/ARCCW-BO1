@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "WA 2000"
+SWEP.PrintName = "Walther WA 2000"
 SWEP.Trivia_Class = "Sniper Rifle"
 SWEP.Trivia_Desc = "Soviet semi-automatic sniper rifle aesthetically similar to the AK-47 built for designated marksmen. Also produced by the chinese gun manufacturer Norinco for the Chinese Army."
 SWEP.Trivia_Manufacturer = "Walther GmbH"

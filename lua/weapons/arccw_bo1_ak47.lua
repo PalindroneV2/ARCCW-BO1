@@ -496,7 +496,7 @@ SWEP.Animations = {
         LHIKIn = 1,
         LHIKOut = 1,
         SoundTable = {
-            {s = "ArcCW_BO1.AK_Charge", t = 22 / 35}
+            {s = "ArcCW_BO1.AK_Charge", t = 20 / 35}
         },
     },
     ["fire"] = {
