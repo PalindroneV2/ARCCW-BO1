@@ -189,7 +189,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Ammo Type",
-        Slot = {"ammo_pap", "ammo_1911_pap"}
+        Slot = {"ammo_pap", "ammo_1911_pap", "bo1_ammo"}
     },
     {
         PrintName = "Perk",

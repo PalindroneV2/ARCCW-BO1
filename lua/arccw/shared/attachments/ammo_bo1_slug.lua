@@ -6,7 +6,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = {"ammo_pap_sg", "ammo_pap_pumpsg"}
+att.Slot = {"ammo_pap_sg", "ammo_pap_pumpsg", "bo1_ammo"}
 
 att.Mult_Damage = 0.9
 att.Mult_DamageMin = 1.2

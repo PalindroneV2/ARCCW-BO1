@@ -1,12 +1,13 @@
 att.PrintName = "Hollow Points"
+att.AbbrevName = "HP Rounds"
 att.Icon = Material("entities/acwatt_ammo_bo1_fmj.png", "mips smooth")
-att.Description = "Rounds that don't penetrate as much but hit much harder against unarmored personnel."
+att.Description = "Expanding bullets. Rounds that don't penetrate as much but hit much harder against unarmored personnel."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = {"ammo_pap"}
+att.Slot = {"bo1_ammo"}
 
 att.Mult_Range = 0.8
 att.Mult_Penetration = 0.65

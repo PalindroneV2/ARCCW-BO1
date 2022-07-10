@@ -2,7 +2,7 @@ att.PrintName = "Destron (1.5x)"
 att.Icon = Material("entities/acwatt_optic_bo1_acog.png", "mips smooth")
 att.Description = "Custom-made, mid-range scope for the Walther P38."
 
-att.SortOrder = 1.5
+att.SortOrder = 1000
 
 att.Desc_Pros = {
     "autostat.holosight",

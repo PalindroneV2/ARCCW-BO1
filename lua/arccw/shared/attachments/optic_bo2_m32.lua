@@ -2,7 +2,7 @@ att.PrintName = "M32 Rangefinder (HOLO)"
 att.Icon = Material("entities/acwatt_optic_bo2_docter.png", "mips smooth")
 att.Description = "Small red dot sight with a Soviet-style mount."
 
-att.SortOrder = 1
+att.SortOrder = 1000
 
 att.Desc_Pros = {
     "autostat.holosight",

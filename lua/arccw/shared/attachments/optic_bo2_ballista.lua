@@ -2,7 +2,7 @@ att.PrintName = "Ballista Scope (12x)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
 att.Description = "Belgian high powered scope for the FN Ballista."
 
-att.SortOrder = 120
+att.SortOrder = 1000
 
 att.Desc_Pros = {
     "+ Precision sight picture",

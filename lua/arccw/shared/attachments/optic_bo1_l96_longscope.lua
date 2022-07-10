@@ -2,7 +2,7 @@ att.PrintName = "Redfield (16x)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
 att.Description = "Variable zoom scope for the L115A1 AWM."
 
-att.SortOrder = 999
+att.SortOrder = 1000
 
 att.Desc_Pros = {
     "autostat.holosight",

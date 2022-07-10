@@ -2,7 +2,7 @@ att.PrintName = "DSR Scope (12x)"
 att.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
 att.Description = "German high powered scope for the DSR-50."
 
-att.SortOrder = 12
+att.SortOrder = 1000
 
 att.Desc_Pros = {
     "+ Precision sight picture",
