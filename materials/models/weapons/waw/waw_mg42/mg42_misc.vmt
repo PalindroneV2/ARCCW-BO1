@@ -2,7 +2,7 @@ VertexlitGeneric
 {
 	$basetexture	"models\weapons\waw\waw_mg42\mg42_c"
 	$bumpmap	"models\weapons\waw\normalmap"
-	$phongexpontenttexture "models\weapons\waw\waw_mg42\mg42_s"
+	$phongexponenttexture "models\weapons\waw\waw_mg42\mg42_s"
 	
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
