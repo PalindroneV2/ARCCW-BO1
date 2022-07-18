@@ -17,6 +17,10 @@ SWEP.Trivia_Mechanism = "Spring-Driven"
 SWEP.Trivia_Country = "South Africa"
 SWEP.Trivia_Year = 1983
 
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
+
 SWEP.Slot = 4
 
 SWEP.UseHands = true

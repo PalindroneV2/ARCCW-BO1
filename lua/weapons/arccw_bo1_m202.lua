@@ -14,6 +14,10 @@ SWEP.Trivia_Mechanism = "Rocket Propelled Grenade"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1978
 
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
+
 SWEP.Slot = 4
 
 SWEP.UseHands = true
