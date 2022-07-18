@@ -135,7 +135,7 @@ SWEP.ActivePos = Vector(5, -10, 3)
 --SWEP.ActivePos = Vector(5, -8, 2)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.InBipodPos = Vector(0, 0, -2)
+SWEP.InBipodPos = Vector(-2.5, 0, -1)
 SWEP.InBipodAng = Angle(0, 0, 0)
 
 SWEP.SprintPos = Vector(14, -10, 0)

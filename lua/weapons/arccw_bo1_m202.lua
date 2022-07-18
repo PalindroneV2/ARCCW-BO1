@@ -2,12 +2,14 @@ SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
+SWEP.AutoSpawnable = false
 
-SWEP.PrintName = "M202A1 FLASH"
-SWEP.Trivia_Class = "Rocket Launcher"
+SWEP.PrintName = "Grim Reaper"
+SWEP.TrueName = "M202A1 FLASH"
+SWEP.Trivia_Class = "Multishot Incendiary Rocket Launcher"
 SWEP.Trivia_Desc = "An American design to replace World War II era flamethrowers that had remained the standard incendiary devices for the US Military until well into the 60s. It can carry 4 rockets."
 SWEP.Trivia_Manufacturer = "Ordnance Development Division"
-SWEP.Trivia_Calibre = "66mm Incendiary Rockets"
+SWEP.Trivia_Calibre = "M235 Incendiary TPA"
 SWEP.Trivia_Mechanism = "Rocket Propelled Grenade"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1978
@@ -31,8 +33,8 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
 
-SWEP.Damage = 200
-SWEP.DamageMin = 200
+SWEP.Damage = 150 --200
+SWEP.DamageMin = 150 --200
 SWEP.Range = 10
 
 SWEP.Penetration = 1
@@ -55,7 +57,7 @@ SWEP.MaxRecoilBlowback = 2
 SWEP.RecoilPunch = 2
 SWEP.RecoilPunchBackMax = 2
 
-SWEP.Delay = 60 / 300 -- 60 / RPM.
+SWEP.Delay = 60 / 125 -- 60 / RPM. --300
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -93,9 +95,9 @@ SWEP.CaseEffectAttachment = nil -- which attachment to put the case effect on
 SWEP.ProceduralViewBobAttachment = 2
 SWEP.CamAttachment = 2
 
-SWEP.SpeedMult = 0.84
-SWEP.SightedSpeedMult = 0.25
-SWEP.SightTime = 0.75
+SWEP.SpeedMult = 0.8
+SWEP.SightedSpeedMult = 0.4
+SWEP.SightTime = 0.65
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
@@ -169,7 +171,7 @@ SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
 
     if pap then
-        gunname = "Grim Reaper"
+        gunname = "Bowman's Rage"
     end
 
     return gunname
@@ -197,7 +199,7 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 60 / 35,
+        Time = 45 / 35, --60
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
@@ -211,7 +213,7 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "draw",
-        Time = 60 / 35,
+        Time = 45 / 35, --60
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,
@@ -240,7 +242,7 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 6.96,
+        Time = 6.85, --6.96
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_RPG,
         LHIK = true,
         LHIKIn = 0.2,
@@ -258,7 +260,7 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-        Time = 10 / 30
+        Time = 30 / 30
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
@@ -266,6 +268,6 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 10 / 30
+        Time = 30 / 30
     },
 }

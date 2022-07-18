@@ -1,6 +1,6 @@
 att.PrintName = "Sentry Turret"
 att.Icon = Material("entities/acwatt_perk_bo1_sentry.png", "mips smooth")
-att.Description = "Massive recoil reduction for minigun only."
+att.Description = "Massive spread buff for the M134 Minigun aka Death Machine."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

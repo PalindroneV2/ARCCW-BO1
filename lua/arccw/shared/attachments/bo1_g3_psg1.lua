@@ -12,6 +12,8 @@ att.Slot = {"bo1_g3_ammo"}
 att.ActivateElements = {"small_mag"}
 att.GivesFlags = {"smallmag"}
 
+att.Override_Damage = 71
+att.Override_DamageMin = 46
 att.Override_ClipSize = 10
 
 att.SortOrder = 98

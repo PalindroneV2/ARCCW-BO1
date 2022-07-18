@@ -9,7 +9,7 @@ SWEP.PrintName = "Death Machine"
 SWEP.TrueName = "M134 Minigun"
 SWEP.Trivia_Class = "Rotary Medium Machine Gun"
 SWEP.Trivia_Desc = "How you manage to carry and fire this massive machine of death is of no concern. What you know is that wherever you take this with you there will be carnage."
-SWEP.Trivia_Manufacturer = "U.S. Ordnance"
+SWEP.Trivia_Manufacturer = "General Electric"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Electrically driven rotary breech"
 SWEP.Trivia_Country = "USA"
@@ -19,7 +19,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
 end
 
-SWEP.Slot = 3
+SWEP.Slot = 4
 
 SWEP.ViewModel = "models/weapons/arccw/c_bo1_minigun.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_minigun.mdl"
@@ -174,7 +174,7 @@ SWEP.Attachments = {
     }, --2
     { --3
         PrintName = "Ammo Type",
-        Slot = {"ammo_pap", "bo1_ammo"},
+        Slot = {"ammo_pap", "bo1_ammo", "special_death_machine"},
         ExcludeFlags = {"doom_ee"},
     }, --3
     { --4
@@ -230,7 +230,7 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
-        Time = 41 / 30,
+        Time = 30 / 30, --41
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.2,

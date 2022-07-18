@@ -128,6 +128,9 @@ SWEP.SprintAng = Angle(0, 0, 0)
 SWEP.CustomizePos = Vector(20, 5, -2.5)
 SWEP.CustomizeAng = Angle(15, 40, 27.5)
 
+SWEP.InBipodPos = Vector(-5, 2, -2)
+SWEP.InBipodAng = Angle(0, 0, 0)
+
 SWEP.HolsterPos = Vector(3, -3, 1)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
 

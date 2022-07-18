@@ -134,6 +134,9 @@ SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
 SWEP.CustomizePos = Vector(13, 0, -2)
 SWEP.CustomizeAng = Angle(15, 40, 20)
 
+SWEP.InBipodPos = Vector(-5, 2, -6)
+SWEP.InBipodAng = Angle(0, 0, 0)
+
 SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
 SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 

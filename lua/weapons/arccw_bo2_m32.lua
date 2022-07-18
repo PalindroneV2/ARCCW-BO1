@@ -4,12 +4,16 @@ SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = true
 SWEP.AutoSpawnable = false
 
-SWEP.PrintName = "Milkor M32"
-SWEP.Trivia_Class = "Grenade Launcher"
-SWEP.Trivia_Desc = "Patterson fire a warning shot!"
+SWEP.PrintName = "War Machine"
+SWEP.TrueName = "Milkor M32"
+SWEP.Trivia_Class = "Revolver Grenade Launcher"
+SWEP.Trivia_Desc = [[Patterson, fire a warning shot.
+"Sir, this is an M32 Rotary Grenade Launche-"
+Ahh, potato potato. Just FIRE IT, PATTERSON.
+THUNK]]
 SWEP.Trivia_Manufacturer = "Milkor"
 SWEP.Trivia_Calibre = "40x46mm HE"
-SWEP.Trivia_Mechanism = "Spring-Loaded"
+SWEP.Trivia_Mechanism = "Spring-Driven"
 SWEP.Trivia_Country = "South Africa"
 SWEP.Trivia_Year = 1983
 
@@ -31,8 +35,8 @@ SWEP.ViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "0000000000"
 
-SWEP.Damage = 200
-SWEP.DamageMin = 200
+SWEP.Damage = 135 --200
+SWEP.DamageMin = 75 --200
 SWEP.Range = 350 -- in METRES
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
@@ -55,7 +59,7 @@ SWEP.MaxRecoilBlowback = 2
 SWEP.ShotgunReload = true
 SWEP.ManualAction = false
 
-SWEP.Delay = 60 / 300 -- 60 / RPM.
+SWEP.Delay = 60 / 240 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -70,7 +74,7 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = {"weapon_rpg"}
 SWEP.NPCWeight = 0
 
-SWEP.AccuracyMOA = 20 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 10 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
@@ -136,7 +140,7 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 SWEP.AttachmentElements = {
     ["papname1"] = {
         NamePriority = 10,
-        NameChange = "War Machine",
+        NameChange = "Dystopic Demolisher",
     },
 }
 
