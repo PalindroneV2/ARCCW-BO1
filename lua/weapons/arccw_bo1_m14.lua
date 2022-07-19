@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "M14"
-SWEP.PrintName = "M14E2"
+SWEP.TrueName = "M14E2"
 SWEP.Trivia_Class = "Battle Rifle"
 SWEP.Trivia_Desc = [[A traditional battle rifle designed by the United States for its military. Based on the M1 Garand, the M14 now uses detachable 20 round box magazines.
 It was soon replaced by the M16 rifle, which offered much better performance in full-auto and was much lighter.]]
