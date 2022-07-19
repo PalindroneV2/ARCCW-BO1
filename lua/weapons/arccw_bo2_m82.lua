@@ -1,11 +1,11 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
+SWEP.Category = "ArcCW - Black Ops" -- edit this if you like (Cold War-era weapons go in Black Ops)
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Barrett M82"
-SWEP.Trivia_Class = "Anti-Material Precision Rifle"
-SWEP.Trivia_Desc = [[American .50 caliber precision rifle. Really heavy, very powerful and extremely dangerous in the right hands.]]
+SWEP.PrintName = "Barrett M82A1"
+SWEP.Trivia_Class = "Anti-Material Sniper Rifle"
+SWEP.Trivia_Desc = [[American .50 caliber sniper rifle. Really heavy, very powerful and extremely dangerous in the right hands.]]
 SWEP.Trivia_Manufacturer = "Barrett"
 SWEP.Trivia_Calibre = ".50 BMG"
 SWEP.Trivia_Mechanism = "Recoil Operated, Rotating Bolt"

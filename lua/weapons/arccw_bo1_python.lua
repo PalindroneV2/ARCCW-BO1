@@ -3,15 +3,20 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-
-SWEP.PrintName = "Colt Python"
+SWEP.PrintName = "Python"
+SWEP.TrueName = "Colt Python .357"
 SWEP.Trivia_Class = "Revolver"
 SWEP.Trivia_Desc = "American revolver regarded as one of the finest of its kind. The bore gets tighter towards the end, aiding in accuracy."
 SWEP.Trivia_Manufacturer = "Colt"
 SWEP.Trivia_Calibre = ".357 Magnum"
-SWEP.Trivia_Mechanism = "SA/DA"
+SWEP.Trivia_Mechanism = "Single/Double Action"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1955
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
+
 SWEP.Slot = 1
 
 SWEP.UseHands = true
@@ -23,8 +28,8 @@ SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-8.5, 4, -4),
     ang        =    Angle(-10, 0, 180),
-    bone    =    "ValveBiped.Bip01_R_Hand",
-    scale = 1
+    bone       =    "ValveBiped.Bip01_R_Hand",
+    scale      = 1
 }
 SWEP.ViewModelFOV = 60
 

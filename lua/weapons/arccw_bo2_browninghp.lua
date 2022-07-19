@@ -1,8 +1,7 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
+SWEP.Category = "ArcCW - Black Ops" -- edit this if you like (Cold War-era weapons go in Black Ops)
 SWEP.AdminOnly = false
-
 
 SWEP.PrintName = "Browning HP"
 SWEP.Trivia_Class = "Pistol"

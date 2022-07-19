@@ -1,10 +1,11 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
+SWEP.Category = "ArcCW - Black Ops" -- edit this if you like (Cold War-era weapons go in Black Ops)
 SWEP.AdminOnly = true
 SWEP.AutoSpawnable = false
 
-SWEP.PrintName = "Hawk MM-1"
+SWEP.PrintName = "MM1"
+SWEP.TrueName = "Hawk MM-1"
 SWEP.Trivia_Class = "Grenade Launcher"
 SWEP.Trivia_Desc = "American revolver grenade launcher using 40mm High Explosive rounds developed from the Manville Machine Projector."
 SWEP.Trivia_Manufacturer = "Hawk Engineering Company"
@@ -12,6 +13,10 @@ SWEP.Trivia_Calibre = "40x46mm HE"
 SWEP.Trivia_Mechanism = "Spring-Loaded"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1981
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 4
 

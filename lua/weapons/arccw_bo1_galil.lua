@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "IMI Galil ARM"
+SWEP.PrintName = "Galil"
+SWEP.TrueName = "IMI Galil ARM"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "An israeli assault rifle inspired by the AK/Valmet platform firing the 5.56mm NATO round."
 SWEP.Trivia_Manufacturer = "IMI"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "Israel"
 SWEP.Trivia_Year = 1972
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 
@@ -22,7 +27,7 @@ SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-3, 3, -5.25),
     ang        =    Angle(-10, -2.5, 180),
-    bone    =    "ValveBiped.Bip01_R_Hand",
+    bone       =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
 

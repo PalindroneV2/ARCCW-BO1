@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Dragunov SVD-63"
+SWEP.PrintName = "Dragunov"
+SWEP.TrueName = "Dragunov SVD-63"
 SWEP.Trivia_Class = "Designated Marskman Rifle"
 SWEP.Trivia_Desc = "Soviet semi-automatic sniper rifle aesthetically similar to the AK-47 built for designated marksmen. Also produced by the chinese gun manufacturer Norinco for the Chinese Army."
 SWEP.Trivia_Manufacturer = "Kalashnikov Concern"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "7.62x54mmR"
 SWEP.Trivia_Mechanism = "Gas Operated, Rotating Bolt"
 SWEP.Trivia_Country = "U.S.S.R."
 SWEP.Trivia_Year = 1963
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

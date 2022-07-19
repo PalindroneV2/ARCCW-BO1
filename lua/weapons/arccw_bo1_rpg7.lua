@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "RPG-7"
+SWEP.PrintName = "RPG"
+SWEP.TrueName = "RPG-7"
 SWEP.Trivia_Class = "Rocket Launcher"
 SWEP.Trivia_Desc = "A Russian portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher. The ruggedness, simplicity, low cost, and effectiveness of the RPG-7 has made it the most widely used anti-armor weapon in the world."
 SWEP.Trivia_Manufacturer = "Bazalt"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "85x40mm RPG"
 SWEP.Trivia_Mechanism = "Rocket Propelled Grenade"
 SWEP.Trivia_Country = "USSR"
 SWEP.Trivia_Year = 1958
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 4
 
@@ -22,8 +27,8 @@ SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(1, 1.5, -7.25),
     ang        =    Angle(-6, -2, 180),
-    bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =  1.2
+    bone       =    "ValveBiped.Bip01_R_Hand",
+    scale      =  1.2
 }
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_rpg7.mdl"
 SWEP.ViewModelFOV = 60

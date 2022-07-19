@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "RPK-74"
+SWEP.PrintName = "RPK"
+SWEP.TrueName = "RPK-74"
 SWEP.Trivia_Class = "Light Machine Gun"
 SWEP.Trivia_Desc = "Heavier, sturdier version of the AK platform for use as a light machine gun."
 SWEP.Trivia_Manufacturer = "Vyatskiye Polyany"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "5.45x39mm"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "USSR"
 SWEP.Trivia_Year = 1961
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

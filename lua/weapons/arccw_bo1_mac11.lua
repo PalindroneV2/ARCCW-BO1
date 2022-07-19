@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Ingram MAC-11"
+SWEP.PrintName = "MAC11"
+SWEP.TrueName = "Ingram MAC-11"
 SWEP.Trivia_Class = "Machine Pistol"
 SWEP.Trivia_Desc = "The MAC-11 is an american subcompact submachiine gun. It is a compact variant of the earlier MAC-10."
 SWEP.Trivia_Manufacturer = "Military Armament Corporation"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = ".380 ACP"
 SWEP.Trivia_Mechanism = "Straight Blowback"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1972
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

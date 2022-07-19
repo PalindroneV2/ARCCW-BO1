@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Ithaca 37 Stakeout"
+SWEP.PrintName = "Stakeout"
+SWEP.TrueName = "Ithaca 37 Stakeout"
 SWEP.Trivia_Class = "Shotgun"
 SWEP.Trivia_Desc = "12 gauge pump-action shotgun initially designed for sporting use later adopted by the US Military and used throughout WW2, Korea and especially Vietnam. Also used by a large number of police forces across the US."
 SWEP.Trivia_Manufacturer = "Ithaca"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "12x70mm"
 SWEP.Trivia_Mechanism = "Pump-Action"
 SWEP.Trivia_Country = "Italy"
 SWEP.Trivia_Year = 1937
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

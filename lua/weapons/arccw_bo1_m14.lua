@@ -3,14 +3,20 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
+SWEP.PrintName = "M14"
 SWEP.PrintName = "M14E2"
 SWEP.Trivia_Class = "Battle Rifle"
-SWEP.Trivia_Desc = "A traditional battle rifle designed by the United States for its military. Based on the M1 Garand, the M14 now uses detachable 20 round box magazines. Was soon replaced by the M16 rifle which offered much better performance in full-auto and was much lighter."
+SWEP.Trivia_Desc = [[A traditional battle rifle designed by the United States for its military. Based on the M1 Garand, the M14 now uses detachable 20 round box magazines.
+It was soon replaced by the M16 rifle, which offered much better performance in full-auto and was much lighter.]]
 SWEP.Trivia_Manufacturer = "Springfield Armory"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1959
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

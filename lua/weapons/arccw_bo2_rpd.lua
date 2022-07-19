@@ -1,6 +1,6 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
+SWEP.Category = "ArcCW - Black Ops" -- edit this if you like (Cold War-era weapons go in Black Ops)
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "RPD"
@@ -20,8 +20,8 @@ SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-4.75, 4.25, -5.25),
     ang        =    Angle(-5, 0, 180),
-    bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   1.35
+    bone       =    "ValveBiped.Bip01_R_Hand",
+    scale       =   1.35
 }
 SWEP.ViewModelFOV = 60
 

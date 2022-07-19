@@ -4,10 +4,8 @@ SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "M72 LAW"
-SWEP.Trivia_Class = "Rocket Launcher"
-SWEP.Trivia_Desc = [[
-    American rocket launcher that shoots unguided 66mm anti-tank payloads.
-]]
+SWEP.Trivia_Class = "Anti-Tank Rocket-Propelled Grenade Launcher"
+SWEP.Trivia_Desc = [[American portable, single-shot anti-tank rocket launcher that fires unguided 66mm payloads.]]
 SWEP.Trivia_Manufacturer = "NAMMO"
 SWEP.Trivia_Calibre = "66mm"
 SWEP.Trivia_Mechanism = "Rocket Propelled Grenade"

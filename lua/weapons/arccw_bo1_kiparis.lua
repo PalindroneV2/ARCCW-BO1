@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "OTS-02 Kiparis"
+SWEP.PrintName = "Kiparis"
+SWEP.TrueName = "OTS-02 Kiparis"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "Submachine Gun designed in the 70s intended for internal security and police units, didn't see use until the 90s."
 SWEP.Trivia_Manufacturer = "KBP"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "9x18mm Makarov"
 SWEP.Trivia_Mechanism = "Blowback"
 SWEP.Trivia_Country = "Soviet Union"
 SWEP.Trivia_Year = 1972
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

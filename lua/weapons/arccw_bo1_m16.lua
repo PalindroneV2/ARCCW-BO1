@@ -3,17 +3,20 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Colt M16A1"
+SWEP.PrintName = "M16"
+SWEP.TrueName = "Colt M16A1"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = [[
-    After the failure of the M14 rifle, the United States Military finally decided to adopt a rifle using intermediate rounds.
-    The AR-15 platform was adopted as the next standard infantry rifle for the US Military and became the M16.
-]]
+SWEP.Trivia_Desc = [[After the failure of the M14 rifle, the United States Military finally decided to adopt a rifle using intermediate rounds.
+The AR-15 platform was adopted as the next standard infantry rifle for the US Military and became the M16.]]
 SWEP.Trivia_Manufacturer = "Colt"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "United States of America"
 SWEP.Trivia_Year = 1959
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

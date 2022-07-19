@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FAMAS Valorisé"
+SWEP.PrintName = "Famas"
+SWEP.TrueName = "FAMAS Valorisé"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "A french assault rifle firing the 5.56mm NATO round Using a bullpup configuration to keep it a compact size."
 SWEP.Trivia_Manufacturer = "GIAT Industries"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "France"
 SWEP.Trivia_Year = 1978
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

@@ -4,6 +4,7 @@ SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "MPL"
+SWEP.TrueName = "Walther MPL"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "A submachinegun adopted by West Germany during the 1960s."
 SWEP.Trivia_Manufacturer = "Walther GmbH"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "West Germany"
 SWEP.Trivia_Year = 1963
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

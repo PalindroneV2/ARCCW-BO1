@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Colt Commando"
+SWEP.PrintName = "Commando"
+SWEP.TrueName = "CAR-15"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "The Colt Commando is a name for a family of carbine variants of the M16 rifle which would eventually evolve into the M4. Created for spec-ops unit MACV-SOG."
 SWEP.Trivia_Manufacturer = "Colt"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "United States of America"
 SWEP.Trivia_Year = 1964
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 
@@ -22,8 +27,8 @@ SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-4.5, 3.5, -5.25),
     ang        =    Angle(-9.5, -1, 180),
-    bone    =    "ValveBiped.Bip01_R_Hand",
-    scale = 1.1,
+    bone       =    "ValveBiped.Bip01_R_Hand",
+    scale      = 1.1,
 }
 SWEP.ViewModelFOV = 60
 

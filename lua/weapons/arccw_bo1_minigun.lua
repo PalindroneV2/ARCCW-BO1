@@ -4,7 +4,6 @@ SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = true
 SWEP.AutoSpawnable = false
 
-
 SWEP.PrintName = "Death Machine"
 SWEP.TrueName = "M134 Minigun"
 SWEP.Trivia_Class = "Rotary Medium Machine Gun"
@@ -28,8 +27,8 @@ SWEP.MirrorVMWM = false
 SWEP.WorldModelOffset = {
     pos        =    Vector(8, 10, -6.75),
     ang        =    Angle(-5, 5, 180),
-    bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   0.75
+    bone       =    "ValveBiped.Bip01_R_Hand",
+    scale      =   0.75
 }
 SWEP.ViewModelFOV = 60
 

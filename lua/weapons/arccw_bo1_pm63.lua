@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "PM-63 RAK"
+SWEP.PrintName = "PM63"
+SWEP.TrueName = "PM-63 RAK"
 SWEP.Trivia_Class = "Machine Pistol"
 SWEP.Trivia_Desc = "The PM-63 is polish submachine gun chambered in the standard eastern bloc 9mm Makarov."
 SWEP.Trivia_Manufacturer = "FB Radom"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "9x18mm Makarov"
 SWEP.Trivia_Mechanism = "Straight Blowback"
 SWEP.Trivia_Country = "Poland"
 SWEP.Trivia_Year = 1965
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 1
 

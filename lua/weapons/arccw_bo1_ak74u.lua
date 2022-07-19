@@ -3,8 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "AKMu"
-SWEP.Trivia_Class = "Assault Rifle"
+SWEP.PrintName = "AK74u"
+SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "A carbine length version of the AKM. Affectionally nicknamed the Krinkov, this weapon was issued to only Soviet tank crews, special forces and support units."
 SWEP.Trivia_Manufacturer = "Izhmash"
 SWEP.Trivia_Calibre = "7.62x39mm M43" --"5.45x39mm"

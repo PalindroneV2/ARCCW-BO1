@@ -314,7 +314,7 @@ SWEP.Hook_NameChange = function(wep, name)
     local pap = wep.Attachments[10].Installed == "ammo_papunch"
 
     if pap then
-        return "HK115 Oscillator"
+        return "H115 Oscillator"
     end
 end
 

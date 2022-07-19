@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Walther WA 2000"
+SWEP.PrintName = "WA2000"
+SWEP.TrueName = "Walther WA 2000"
 SWEP.Trivia_Class = "Sniper Rifle"
 SWEP.Trivia_Desc = "Soviet semi-automatic sniper rifle aesthetically similar to the AK-47 built for designated marksmen. Also produced by the chinese gun manufacturer Norinco for the Chinese Army."
 SWEP.Trivia_Manufacturer = "Walther GmbH"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Gas Operated, Rotating Bolt"
 SWEP.Trivia_Country = "West Germany"
 SWEP.Trivia_Year = 1982
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

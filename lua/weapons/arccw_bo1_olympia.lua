@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Beretta 682"
+SWEP.PrintName = "Olympia"
+SWEP.TrueName = "Beretta 682"
 SWEP.Trivia_Class = "Shotgun"
 SWEP.Trivia_Desc = "12 gauge sporting and hunting purpose made double-barrel shotgun by Beretta that uses the Over and Under design."
 SWEP.Trivia_Manufacturer = "Beretta"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "12x70mm"
 SWEP.Trivia_Mechanism = "Double Barrel O/U, Break Action"
 SWEP.Trivia_Country = "Italy"
 SWEP.Trivia_Year = 1984
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 
@@ -21,8 +26,8 @@ SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(1.5, 4, -6),
     ang        =    Angle(-7.5, 1, 180),
-    bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   1
+    bone       =    "ValveBiped.Bip01_R_Hand",
+    scale      =   1
 }
 SWEP.WorldModel = "models/weapons/arccw/c_bo1_olympia.mdl"
 SWEP.ViewModelFOV = 60

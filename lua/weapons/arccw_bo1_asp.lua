@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-
-SWEP.PrintName = "ASP Pistol"
+SWEP.PrintName = "ASP"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "A compact american pistol with translucent parts that allow the user to see how many rounds remain in the magazine."
 SWEP.Trivia_Manufacturer = "ASP"

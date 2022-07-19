@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK G11"
+SWEP.PrintName = "G11"
+SWEP.TrueName = "HK G11"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "Experimental german assault rifle for special operations which fired caseless rounds. Research into the weapons system was dropped in 1990 in favor of the more conventional G36 rifle."
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "4.73×33mm Caseless"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "Germany"
 SWEP.Trivia_Year = 1968
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

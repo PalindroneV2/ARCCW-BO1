@@ -3,10 +3,10 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HS10"
-SWEP.Trivia_Class = "Combat Shotgun"
+SWEP.PrintName = "HS-10"
+SWEP.Trivia_Class = "Bullpup Shotgun"
 SWEP.Trivia_Desc = [[The High Standard Model 10 is a bullpup semi-automatic shotgun which was sold to law enforcement agencies.
-Due to many shortcomings in reliability and quality the weapon was swiftly abandoned by police in favor of more traditional pump shotguns.]]
+Due to many shortcomings in reliability and quality, the weapon was swiftly abandoned by police in favor of more traditional pump shotguns.]]
 SWEP.Trivia_Manufacturer = "High Standard"
 SWEP.Trivia_Calibre = "12x70mm"
 SWEP.Trivia_Mechanism = "Semi-Automatic"

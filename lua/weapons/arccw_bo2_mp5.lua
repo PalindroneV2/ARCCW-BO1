@@ -1,9 +1,10 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
+SWEP.Category = "ArcCW - Black Ops" -- edit this if you like (Cold War-era weapons go in Black Ops)
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK MP5A3"
+SWEP.PrintName = "MP5"
+SWEP.TrueName = "HK MP5A3"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "A submachinegun derivative of the G3 design chambered in 9mm. Known for its use by the British SAS."
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Roller-Delayed Blowback"
 SWEP.Trivia_Country = "Germany"
 SWEP.Trivia_Year = 1964
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

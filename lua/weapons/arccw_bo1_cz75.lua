@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-
-SWEP.PrintName = "CZ 75"
+SWEP.PrintName = "CZ75"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "A high capacity czech pistol inpsired by the Browning Hi-Power. The most common pistol in the Czech Republic, owned by civilians, law enforcement and military alike."
 SWEP.Trivia_Manufacturer = "CZUB"
@@ -22,7 +21,7 @@ SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-9, 3.075, -4.25),
     ang        =    Angle(-6, -2.5, 180),
-    bone    =    "ValveBiped.Bip01_R_Hand",
+    bone       =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
 

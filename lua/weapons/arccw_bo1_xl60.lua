@@ -3,17 +3,20 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Enfield XL64E5"
+SWEP.PrintName = "Enfield"
+SWEP.TrueName = "Enfield XL64E5"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = [[
-    Experimental Bullpup rifle of british design build around the AR-18 firing an experimental intermediate cartridge. This design would eventually become
-    the standard british rifle and adopted as the L85A1, though chambered in the more common 5.56mm NATO.
-]]
+SWEP.Trivia_Desc = [[Experimental Bullpup rifle of british design build around the AR-18 firing an experimental intermediate cartridge.
+This design would eventually become the standard british rifle and adopted as the L85A1, though chambered in the more common 5.56mm NATO.]]
 SWEP.Trivia_Manufacturer = "Enfield"
 SWEP.Trivia_Calibre = "4.85x49mm"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "United Kingdom"
 SWEP.Trivia_Year = 1964
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

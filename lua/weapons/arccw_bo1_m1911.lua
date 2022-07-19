@@ -3,15 +3,13 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-
-SWEP.PrintName = "Colt M1911A1"
+SWEP.PrintName = "M1911"
+SWEP.TrueName = "Colt M1911A1"
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = [[
-    This handgun is a staple of firearm design. It would come to influence many future semi-automatic handguns.
-    The M1911 has been in service with military forces, law enforcement agencies and civilians for over 100 years.
+SWEP.Trivia_Desc = [[This handgun is a staple of firearm design. It would come to influence many future semi-automatic handguns.
+The M1911 has been in service with military forces, law enforcement agencies and civilians for over 100 years.
 
-    The pistol that forgot to become obsolete.
-]]
+The pistol that forgot to become obsolete.]]
 SWEP.Trivia_Manufacturer = "Colt"
 SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Short Recoil"
@@ -29,7 +27,7 @@ SWEP.WorldModelOffset = {
     scale = 1.1,
     pos        =    Vector(-9.75, 3, -3.75),
     ang        =    Angle(-6, -2.5, 180),
-    bone    =    "ValveBiped.Bip01_R_Hand",
+    bone       =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
 
