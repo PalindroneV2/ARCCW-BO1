@@ -3,18 +3,20 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-
--- This one is so yall are aware.
-SWEP.PrintName = "DSA SA58 OSW"
+-- This one is so yall are aware. (?)
+SWEP.PrintName = "FAL OSW"
+SWEP.TrueName = "DSA SA58 FAL"
 SWEP.Trivia_Class = "Battle Rifle"
-SWEP.Trivia_Desc = [[
-    Modernized variant of the classic FN FAL.
-]]
+SWEP.Trivia_Desc = [[Modernized variant of the classic FN FAL.]]
 SWEP.Trivia_Manufacturer = "DSA"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 2010
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

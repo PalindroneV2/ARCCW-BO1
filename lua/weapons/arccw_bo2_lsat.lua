@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "AAI LSAT LMG"
+SWEP.PrintName = "LSAT"
+SWEP.TrueName = "AAI LSAT"
 SWEP.Trivia_Class = "Light Machine Gun"
 SWEP.Trivia_Desc = "American Belt-Fed Machine Gun designed to be extremely lightweight compared to the standard M249 SAW and uses a lightweight experimental caseless variant of 5.56mm."
 SWEP.Trivia_Manufacturer = "AAI"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "5.56x45mm LSAT"
 SWEP.Trivia_Mechanism = "Short-stroke gas piston"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 2010
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

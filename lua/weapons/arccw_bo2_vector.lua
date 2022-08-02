@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "TDI Vector"
+SWEP.PrintName = "Vector K10"
+SWEP.TrueName = "KRISS Vector"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "American SMG with a unique recoil absorption system."
 SWEP.Trivia_Manufacturer = "KRISS"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 2009
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

@@ -4,6 +4,7 @@ SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "AUG"
+SWEP.TrueName = "Steyr AUG"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "An austrian assault rifle firing the 5.56mm NATO round Using a bullpup configuration to keep it a compact size. It usually comes with a unique integrated scope."
 SWEP.Trivia_Manufacturer = "Steyr"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "Austria"
 SWEP.Trivia_Year = 1977
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

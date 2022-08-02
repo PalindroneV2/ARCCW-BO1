@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Scorpion Evo 3 A1"
+SWEP.PrintName = "Skorpion EVO"
+SWEP.TrueName = "CZ Scorpion Evo 3 A1"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "Excelent Czech SMG with a high rate of fire and reliable mechanism."
 SWEP.Trivia_Manufacturer = "CZUB"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "Czech Republic"
 SWEP.Trivia_Year = 2009
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

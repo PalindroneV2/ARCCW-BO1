@@ -4,17 +4,20 @@ SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "KSG"
+SWEP.TrueName = "Kel-Tec KSG"
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = [[
-    Unconventional 12 gauge pump-action shotgun with a bullpup design. It has two magazine tubes that hold 7 rounds each, which gives this shotgun a massive advantage in ammo count.
+SWEP.Trivia_Desc = [[Unconventional 12 gauge pump-action shotgun with a bullpup design. It has two magazine tubes that hold 7 rounds each, which gives this shotgun a massive advantage in ammo count.
 
-    Will use slugs rather than buckshot by default.
-]]
+Will use slugs rather than buckshot by default.]]
 SWEP.Trivia_Manufacturer = "Kel-Tec"
 SWEP.Trivia_Calibre = "12x70mm"
 SWEP.Trivia_Mechanism = "Pump-Action"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 2011
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

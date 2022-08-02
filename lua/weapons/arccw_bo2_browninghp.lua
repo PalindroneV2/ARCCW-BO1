@@ -4,6 +4,7 @@ SWEP.Category = "ArcCW - Black Ops" -- edit this if you like (Cold War-era weapo
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Browning HP"
+SWEP.TrueName = "Browning Hi-Power"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "Another semi-automatic pistol designed by the legendary gunsmith, John Moses Browning. This 9mm pistol innovated with the use of double stack magazines which inspired many future handguns' designs."
 SWEP.Trivia_Manufacturer = "FN Herstal"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Short Recoil"
 SWEP.Trivia_Country = "Belgium"
 SWEP.Trivia_Year = 1935
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 1
 

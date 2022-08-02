@@ -3,18 +3,20 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-
--- This one is so yall are aware.
-SWEP.PrintName = "SMI Saritch 308"
+-- This one is so yall are aware.(?)
+SWEP.PrintName = "SMR"
+SWEP.TrueName = "SMI Saritch .308"
 SWEP.Trivia_Class = "Battle Rifle"
-SWEP.Trivia_Desc = [[
-    Russian bullpup rifle in .308 Winchester and 7.62mm NATO for the civilian market.
-]]
+SWEP.Trivia_Desc = [[Russian bullpup rifle in .308 Winchester and 7.62mm NATO for the civilian market.]]
 SWEP.Trivia_Manufacturer = "DSA"
 SWEP.Trivia_Calibre = ".308 Winchester"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "Russia"
 SWEP.Trivia_Year = 2009
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

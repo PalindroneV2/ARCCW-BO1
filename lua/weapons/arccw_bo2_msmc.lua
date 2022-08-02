@@ -3,18 +3,21 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "JVPC"
+SWEP.PrintName = "MSMC"
+SWEP.TrueName = "JVPC"
 SWEP.Trivia_Class = "Personal Defense Weapon"
-SWEP.Trivia_Desc = [[
-    The Joint Venture Point Carbine is an indian PDW with a design akin to the IMI Uzi. It has been declared ready for active service in 2020.
+SWEP.Trivia_Desc = [[The Joint Venture Point Carbine (JVPC) is an indian PDW with a design akin to the IMI Uzi. It has been declared ready for active service in 2020.
 
-    It was known as the Mordern Sub Machine Carbine (MSMC) prior to 2014.
-]]
+It was known as the Mordern Sub Machine Carbine (MSMC) prior to 2014.]]
 SWEP.Trivia_Manufacturer = "Ordnance Factories Board"
 SWEP.Trivia_Calibre = "5.56x30mm MINSAS"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "India"
 SWEP.Trivia_Year = 2006
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

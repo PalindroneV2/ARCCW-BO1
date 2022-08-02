@@ -3,14 +3,19 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "OTs-03 SVU-AS"
-SWEP.Trivia_Class = "Sniper Rifle"
+SWEP.PrintName = "SVU-AS"
+SWEP.TrueName = "Dragunov OTs-03 SVU-AS"
+SWEP.Trivia_Class = "Designated Marksman Rifle"
 SWEP.Trivia_Desc = "A modern bullpup configuration of the classic Dragunov SVD."
 SWEP.Trivia_Manufacturer = "KPB Instrument Design Bureau"
 SWEP.Trivia_Calibre = "7.62×54mmR"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "Russia"
 SWEP.Trivia_Year = 1994
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

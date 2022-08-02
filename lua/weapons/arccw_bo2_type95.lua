@@ -3,18 +3,20 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-
--- This one is so yall are aware.
-SWEP.PrintName = "QBZ-95-1"
+-- This one is so yall are aware.(?)
+SWEP.PrintName = "Type 25"
+SWEP.TrueName = "QBZ-95-1"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = [[
-    Chinese bullpup rifle standard for the People's Liberation Army.
-]]
+SWEP.Trivia_Desc = [[Chinese bullpup rifle standard for the People's Liberation Army.]]
 SWEP.Trivia_Manufacturer = "Norinco"
 SWEP.Trivia_Calibre = "5.8x42mm DBP10"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "China"
 SWEP.Trivia_Year = 1995
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "New Model Army"
+SWEP.PrintName = "Remington New Model Army"
 SWEP.Trivia_Class = "Revolver"
 SWEP.Trivia_Desc = "American revolver used by the US Army during the Civil War and the times of the old West."
 SWEP.Trivia_Manufacturer = "Remington"
@@ -144,8 +144,8 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
         NamePriority = 10,
-        TrueNameChange = "Sassafras ",
-        NameChange = "Sassafras ",
+        TrueNameChange = "Sassafras",
+        NameChange = "Sassafras",
     },
 }
 

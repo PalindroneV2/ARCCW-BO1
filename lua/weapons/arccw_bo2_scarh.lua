@@ -3,20 +3,22 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-
--- This one is so yall are aware.
-SWEP.PrintName = "FN SCAR-H"
+-- This one is so yall are aware.(?)
+SWEP.PrintName = "SCAR-H"
+SWEP.TrueName = "FN SCAR-H"
 SWEP.Trivia_Class = "Battle Rifle"
-SWEP.Trivia_Desc = [[
-    The FN SCAR is a rifle based on the AR-15 platform. Designed to be a light, modular and highly customizable system, the SCAR has found favor with many special forces groups around the world.
+SWEP.Trivia_Desc = [[The FN SCAR is a rifle based on the AR-15 platform. Designed to be a light, modular and highly customizable system, the SCAR has found favor with many special forces groups around the world.
 
-    This is the H ("Heavy") variant, which fires 7.62x51mm NATO.
-]]
+This is the H ("Heavy") variant, which fires 7.62x51mm NATO.]]
 SWEP.Trivia_Manufacturer = "FN Herstal"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "Belgium"
 SWEP.Trivia_Year = 2004
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

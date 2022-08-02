@@ -3,8 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-
-SWEP.PrintName = "Raging Judge"
+SWEP.PrintName = "Executioner"
+SWEP.TrueName = "Taurus Raging Judge"
 SWEP.Trivia_Class = "Shotgun Revolver"
 SWEP.Trivia_Desc = "5-shot Revolver chambered in .410 bore shotshell."
 SWEP.Trivia_Manufacturer = "Taurus"
@@ -12,6 +12,11 @@ SWEP.Trivia_Calibre = ".410 Bore"
 SWEP.Trivia_Mechanism = "Double-Action"
 SWEP.Trivia_Country = "Brazil/USA"
 SWEP.Trivia_Year = 2006
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
+
 SWEP.Slot = 1
 
 SWEP.UseHands = true

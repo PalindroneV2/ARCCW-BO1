@@ -288,7 +288,7 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
-        Time = 1,
+        Time = 0.75,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.25,

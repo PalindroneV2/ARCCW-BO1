@@ -3,20 +3,22 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-
--- This one is so yall are aware.
-SWEP.PrintName = "FN HAMR"
+-- This one is so yall are aware. (?)
+SWEP.PrintName = "HAMR"
+SWEP.TrueName = "FN HAMR IAR"
 SWEP.Trivia_Class = "Light Machine Gun"
-SWEP.Trivia_Desc = [[
-    Heat Adaptive Modular Rifle. Proposed Light Machine Gun version of the FN SCAR-L.
+SWEP.Trivia_Desc = [[Heat Adaptive Modular Rifle. Proposed Light Machine Gun version of the FN SCAR-L.
 
-    This one however seems to have been made from the SCAR-H.
-]]
+This one however seems to have been made from the SCAR-H.]]
 SWEP.Trivia_Manufacturer = "FN Herstal"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "Belgium"
 SWEP.Trivia_Year = 2008
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

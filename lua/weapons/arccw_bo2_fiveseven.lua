@@ -3,8 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-
-SWEP.PrintName = "FN Five-SeveN"
+SWEP.PrintName = "Five-seven"
+SWEP.TrueName = "FN Five-SeveN"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "Belgian pistol designed in conjunction with the FN P90 platform using the same cartridge. It is incredibly popular with police and military, as well as civilians."
 SWEP.Trivia_Manufacturer = "FN Herstal"
@@ -12,6 +12,10 @@ SWEP.Trivia_Calibre = "5.7x28mm"
 SWEP.Trivia_Mechanism = "Delayed Blowback"
 SWEP.Trivia_Country = "Belgium"
 SWEP.Trivia_Year = 1998
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 1
 

@@ -152,7 +152,7 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
         NamePriority = 10,
-        NameChange = "Predictive Dead Wish 57k",
+        NameChange = "Predictive Death Wish 57000",
     },
     ["mount"] = {
         VMBodygroups = {

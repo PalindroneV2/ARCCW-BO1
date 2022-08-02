@@ -63,7 +63,7 @@ SWEP.Firemodes = {
         PrintName = "HYPER-BST",
         Mode = -2,
         Mult_RPM = 3,
-        RunAwayBurst = true,
+        RunawayBurst = true,
     },
     {
         Mode = 0

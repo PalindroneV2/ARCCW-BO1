@@ -3,8 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-
-SWEP.PrintName = "TDI Kard"
+SWEP.PrintName = "KAP-40"
+SWEP.TrueName = "KRISS Kard"
 SWEP.Trivia_Class = "Machine Pistol"
 SWEP.Trivia_Desc = "American Pistol that forgoes the common use of a slide and a tilting barrel, instead using a weight with a bolt actuator."
 SWEP.Trivia_Manufacturer = "KRISS"
@@ -12,6 +12,10 @@ SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Short Recoil"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 2010
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 1
 

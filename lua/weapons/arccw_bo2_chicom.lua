@@ -4,6 +4,7 @@ SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Chicom CQB"
+SWEP.TrueName = "QCW-05"
 SWEP.Trivia_Class = "Personal Defense Weapon"
 SWEP.Trivia_Desc = "A Chinese PDW that operatres in 4-round bursts."
 SWEP.Trivia_Manufacturer = "Jianshe Industry"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "5.8×21mm DAP92"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "China"
 SWEP.Trivia_Year = 2006
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

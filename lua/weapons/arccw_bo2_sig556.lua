@@ -3,20 +3,22 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-
--- This one is so yall are aware.
-SWEP.PrintName = "SIG 556"
+-- This one is so yall are aware.(?)
+SWEP.PrintName = "SWAT-556"
+SWEP.TrueName = "SIG556"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = [[
-    Import version of the SG 550 series of rifles with modifications that allow them to take STANAG magazines.
+SWEP.Trivia_Desc = [[Import version of the SG 550 series of rifles with modifications that allow them to take STANAG magazines.
 
-    Equipped with a Magpul MOE Stock and modified for military use with a 3 round burst mode.
-]]
+Equipped with a Magpul MOE Stock and modified for military use with a 3 round burst mode.]]
 SWEP.Trivia_Manufacturer = "SIG-Sauer"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "Switzerland"
 SWEP.Trivia_Year = 1990
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK MP7A1"
+SWEP.PrintName = "MP7"
+SWEP.TrueName = "HK MP7A1"
 SWEP.Trivia_Class = "Personal Defense Weapon"
 SWEP.Trivia_Desc = "A PDW created by H&K to compete with the belgian FN P90. It entered NATO trials to become a standard PDW but was rejected in favor of the P90, though the P90 was vetoed by Germany. Thus the MP7 found itself in service use by German armed forces since 2001."
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "4.6x30mm"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "Germany"
 SWEP.Trivia_Year = 2001
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

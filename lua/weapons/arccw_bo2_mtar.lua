@@ -3,18 +3,20 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-
--- This one is so yall are aware.
-SWEP.PrintName = "IWI MTAR-21"
+-- This one is so yall are aware. (?)
+SWEP.PrintName = "MTAR"
+SWEP.TrueName = "IWI Tavor X95"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = [[
-    Israeli bullpup carbine in 5.56mm NATO.
-]]
+SWEP.Trivia_Desc = [[The IWI X95 (formerly known as the Micro-Tavor, MTAR or MTAR-21) is an Israeli bullpup assault rifle designed and produced by Israel Weapon Industries (IWI) as part of the Tavor rifle family.]]
 SWEP.Trivia_Manufacturer = "IWI"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "Israel"
 SWEP.Trivia_Year = 2009
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

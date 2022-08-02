@@ -5,11 +5,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M1897 Trenchgun"
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = [[
-    American pump-action shotgun that saw extensive military use in World War 1. During World War 2 it saw reduced service and was eventually replaced by the M37 Ithaca.
+SWEP.Trivia_Desc = [[American pump-action shotgun that saw extensive military use in World War 1. During World War 2 it saw reduced service and was eventually replaced by the M37 Ithaca.
 
-    It was the first shotgun designed to be slam-fired and inspred the Ithaca design directly.
-]]
+It was the first shotgun designed to be slam-fired and inspred the Ithaca design directly.]]
 SWEP.Trivia_Manufacturer = "Winchester"
 SWEP.Trivia_Calibre = "12x70mm"
 SWEP.Trivia_Mechanism = "Pump-Action"
@@ -53,7 +51,7 @@ SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 4 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 12
+SWEP.ExtendedClipSize = 10
 
 SWEP.Recoil = 1.5
 SWEP.RecoilSide = 1.5
@@ -219,7 +217,7 @@ SWEP.Attachments = {
     }, --4
     {
         PrintName = "Ammo Type",
-        Slot = {"ammo_pap_pumpsg"},
+        Slot = {"ammo_pap_pumpsg", "special_trenchy"},
     }, --5
     {
         PrintName = "Perk",
@@ -265,14 +263,14 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 1,
+        Time = 0.75,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
     ["holster"] = {
         Source = "holster",
-        Time = 0.75,
+        Time = 0.5,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.25,

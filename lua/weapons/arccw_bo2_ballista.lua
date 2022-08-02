@@ -3,14 +3,19 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FN Ballista"
+SWEP.PrintName = "Ballista"
+SWEP.TrueName = "FN Ballista"
 SWEP.Trivia_Class = "Sniper Rifle"
 SWEP.Trivia_Desc = "A belgian high-caliber sniper rifle designed as a competitor to the Remington MSR and the AWM."
 SWEP.Trivia_Manufacturer = "FN Herstal"
 SWEP.Trivia_Calibre = ".338 Lapua"
 SWEP.Trivia_Mechanism = "Bolt-Action"
 SWEP.Trivia_Country = "Belgium"
-SWEP.Trivia_Year = 2012
+SWEP.Trivia_Year = 2013
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

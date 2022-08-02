@@ -3,14 +3,19 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "SRM 1216"
+SWEP.PrintName = "M1216"
+SWEP.TrueName = "SRM Arms Model 1216"
 SWEP.Trivia_Class = "Combat Shotgun"
 SWEP.Trivia_Desc = "12 gauge automatic combat shotgun with a detachable cylindrical magazine containing four tubes that hold 4 shells each. Manual operation is needed to switch from one tube to another."
 SWEP.Trivia_Manufacturer = "SRM Arms"
 SWEP.Trivia_Calibre = "12x70mm"
 SWEP.Trivia_Mechanism = "Delayed Blowback"
-SWEP.Trivia_Country = "Russia"
+SWEP.Trivia_Country = "USAS"
 SWEP.Trivia_Year = 2011
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 
@@ -282,7 +287,7 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
-        Time = 1,
+        Time = 0.75,
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.25,

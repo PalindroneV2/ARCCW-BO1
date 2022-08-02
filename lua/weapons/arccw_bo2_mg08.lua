@@ -24,7 +24,7 @@ SWEP.WorldModelOffset = {
     scale = 1,
     pos        =    Vector(-3.75, 4.25, -9.25),
     ang        =    Angle(-6, 0, 180),
-    bone    =    "ValveBiped.Bip01_R_Hand",
+    bone       =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60
 
@@ -163,7 +163,7 @@ SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
-        NameChange = "Magma Collider",
+        NameChange = "Magna Collider",
     },
     ["mount"] = {
         VMBodygroups = {

@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Mk 48 Mod 1"
+SWEP.PrintName = "Mk 48"
+SWEP.TrueName = "Mk 48 Mod 1"
 SWEP.Trivia_Class = "Light Machine Gun"
 SWEP.Trivia_Desc = "Belgian light machine gun. Scaled up version of the Mk 46 Mod 0 and fires the more powerful 7.62x51mm NATO. In use by US Naval Forces, USSOCOM and Indian Special Forces."
 SWEP.Trivia_Manufacturer = "FN Herstal"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Short-stroke gas piston"
 SWEP.Trivia_Country = "Belgium"
 SWEP.Trivia_Year = 2003
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 
@@ -21,8 +26,8 @@ SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-8, 4.75, -8.25),
     ang        =    Angle(-5, 0, 180),
-    bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   0.9
+    bone       =    "ValveBiped.Bip01_R_Hand",
+    scale      =   0.9
 }
 SWEP.ViewModelFOV = 60
 

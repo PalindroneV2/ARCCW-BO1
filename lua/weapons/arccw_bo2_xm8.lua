@@ -3,20 +3,22 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-
--- This one is so yall are aware.
-SWEP.PrintName = "HK XM8"
+-- This one is so yall are aware.(?)
+SWEP.PrintName = "M8A1"
+SWEP.TrueName = "HK XM8"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = [[
-    German assault rifle. Remnant of HK's OICW prototype. Tried for replacement of the US army's standard M4 carbines but the project was canceled.
+SWEP.Trivia_Desc = [[German assault rifle. Remnant of HK's OICW prototype. Tried for replacement of the US army's standard M4 carbines but the project was canceled.
 
-    In some alternate timeline the US Army may have adopted this rifle.
-]]
+In some alternate timeline the US Army may have adopted this rifle.]]
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "Germany"
 SWEP.Trivia_Year = 2002
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

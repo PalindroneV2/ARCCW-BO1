@@ -3,8 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-
 SWEP.PrintName = "B23R"
+SWEP.TrueName = "Beretta 23R"
 SWEP.Trivia_Class = "Machine Pistol"
 SWEP.Trivia_Desc = "Heavily modified italian pistol firing 9mm in 3 round bursts, based on the extensively used M93R Beretta."
 SWEP.Trivia_Manufacturer = "Beretta"
@@ -12,6 +12,10 @@ SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Short Recoil"
 SWEP.Trivia_Country = "Italy"
 SWEP.Trivia_Year = 2023
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 1
 

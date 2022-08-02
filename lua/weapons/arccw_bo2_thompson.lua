@@ -3,18 +3,21 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M1921AC Thompson"
+SWEP.PrintName = "M1927"
+SWEP.TrueName = "M1927 Thompson"
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = [[
-    Interwar American Submachine Gun in .45 ACP. The design was finalized too late for the Great War, but it found commercial success in the civilian market and infamy due to it's use by gangsters.
+SWEP.Trivia_Desc = [[Interwar American Submachine Gun in .45 ACP. The design was finalized too late for the Great War, but it found commercial success in the civilian market and infamy due to it's use by gangsters.
 
-    "Part sinner, part saint. An incredible gun that spits unbelievable tales. But the most amazing thing is that they're all true."
-]]
+"Part sinner, part saint. An incredible gun that spits unbelievable tales. But the most amazing thing is that they're all true."]]
 SWEP.Trivia_Manufacturer = "Auto-Ordnance"
 SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Blishlock"
 SWEP.Trivia_Country = "United States of America"
 SWEP.Trivia_Year = 1920
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 
