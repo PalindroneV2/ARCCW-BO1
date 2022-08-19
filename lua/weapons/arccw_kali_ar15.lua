@@ -494,13 +494,13 @@ SWEP.Attachments = {
         InstalledEles = {"mount"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
+        -- MergeSlots = {17},
         /* Slide Broke
         SlideAmount = {
             vmin = Vector(1.5, 0, 5.025),
             vmax = Vector(3.5, 0, 5.025),
         },
         */
-        MergeSlots = {17}
     }, --3
     {
         PrintName = "Muzzle",
