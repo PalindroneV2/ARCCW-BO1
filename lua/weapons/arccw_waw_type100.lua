@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Type 100/44"
+SWEP.PrintName = "Type 100"
+SWEP.TrueName = "Type 100/44"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "Japanese SMG with close resemblance to the WW1 era Bergman MP18. This is the late war model with a fire rate of 800 RPM."
 SWEP.Trivia_Manufacturer = "Nagoya Arsenal"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "8x22mm Nambu"
 SWEP.Trivia_Mechanism = "Straight Blowback"
 SWEP.Trivia_Country = "Imperial Japan"
 SWEP.Trivia_Year = 1942
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 

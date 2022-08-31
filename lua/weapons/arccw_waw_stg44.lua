@@ -5,11 +5,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "StG-44"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = [[
-    The first modern assault rifle, created with the intent to arm tank crewmen with better weapons than an SMG or a rifle. Hitler eventually dubbed the weapon the 'Sturmgewehr' as means for propaganda.
+SWEP.Trivia_Desc = [[The first modern assault rifle, created with the intent to arm tank crewmen with better weapons than an SMG or a rifle. Hitler eventually dubbed the weapon the 'Sturmgewehr' as means for propaganda.
     
-    Model from World at War.
-]]
+Model from World at War.]]
 SWEP.Trivia_Manufacturer = "C.G. Haenel"
 SWEP.Trivia_Calibre = "7.92x33mm Kurz"
 SWEP.Trivia_Mechanism = "Gas-Operated"
@@ -25,8 +23,8 @@ SWEP.WorldModel = "models/weapons/arccw/w_waw_stg44.mdl"
 SWEP.MirrorWorldModel = "models/weapons/arccw/w_waw_stg44.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-8, 3, -5.25),
-    ang        =    Angle(-6, 1, 180),
+    pos     =    Vector(-8, 3, -5.25),
+    ang     =    Angle(-6, 1, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale   =   1.025
 }

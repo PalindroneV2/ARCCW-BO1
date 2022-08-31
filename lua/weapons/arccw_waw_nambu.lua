@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Type 14 Nambu"
+SWEP.PrintName = "Nambu"
+SWEP.TrueName = "Type 14 Nambu"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "Well-known yet somewhat rare pistol made for the Imperial Japanese Army. Not often seen in combat due to the weak round it fires and its propensity to fail."
 SWEP.Trivia_Manufacturer = "Koishikawa Arsenal"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "8x22mm Nambu"
 SWEP.Trivia_Mechanism = "Short Recoil"
 SWEP.Trivia_Country = "Japan"
 SWEP.Trivia_Year = 1926
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 1
 

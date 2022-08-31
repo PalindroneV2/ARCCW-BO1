@@ -3,8 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
 SWEP.AdminOnly = false
 
-
-SWEP.PrintName = "RK5 Triton"
+SWEP.PrintName = "RK5"
+SWEP.TrueName = "RK5 Triton"
 SWEP.Trivia_Class = "Machine Pistol"
 SWEP.Trivia_Desc = "Heavily modified german pistol firing 9mm in 3 round bursts, based on the extensively used M93R Beretta and the HK USP."
 SWEP.Trivia_Manufacturer = "???"
@@ -12,6 +12,10 @@ SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Short Recoil"
 SWEP.Trivia_Country = "???"
 SWEP.Trivia_Year = 2065
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 1
 

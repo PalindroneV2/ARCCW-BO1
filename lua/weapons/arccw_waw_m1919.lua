@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Browning M1919A4"
+SWEP.PrintName = "Browning M1919"
+SWEP.TrueName = "Browning M1919A4"
 SWEP.Trivia_Class = "Light Machine Gun"
 SWEP.Trivia_Desc = "Belt-fed light machine gun in .30=06 variant of the .50 BMG M2 machine gun designed by the legendary John Browning."
 SWEP.Trivia_Manufacturer = "Buffalo Arms"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = ".30-06 Springfield"
 SWEP.Trivia_Mechanism = "Recoil-Operated"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1919
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

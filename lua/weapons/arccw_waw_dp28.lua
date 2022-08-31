@@ -3,18 +3,21 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "DP-27"
+SWEP.PrintName = "DP-28"
+SWEP.TrueName = "DP-27"
 SWEP.Trivia_Class = "Light Machine Gun"
-SWEP.Trivia_Desc = [[
-    World War 2 era Soviet Light Machine Gun. Though it had issues it had a reputation as an effective light support weapon.
+SWEP.Trivia_Desc = [[World War 2 era Soviet Light Machine Gun. Though it had issues it had a reputation as an effective light support weapon.
 
-    Nicknamed "Record Player" by soldiers due to its disc-shaped magazine that was fed from the top and rotated while firing.
-]]
+Nicknamed "Record Player" by soldiers due to its disc-shaped magazine that was fed from the top and rotated while firing.]]
 SWEP.Trivia_Manufacturer = "Tula Arms"
 SWEP.Trivia_Calibre = "7.62x54mmR"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "USSR"
 SWEP.Trivia_Year = 1928
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

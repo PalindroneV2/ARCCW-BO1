@@ -3,7 +3,6 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
 SWEP.AdminOnly = false
 
-
 SWEP.PrintName = "Bloodhound"
 SWEP.Trivia_Class = "Revolver"
 SWEP.Trivia_Desc = [[American revolver chambered in .38 Special with a generous capacity. Used by police detectives.]]

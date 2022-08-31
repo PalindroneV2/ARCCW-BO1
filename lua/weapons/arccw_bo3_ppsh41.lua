@@ -5,11 +5,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "PPSh-41 (BO3)"
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = [[
-    Russian submachine gun with an obscene rate of fire and a drum magazine. It's design is mostly lifted from the finnish Suomi KP/-31
+SWEP.Trivia_Desc = [[Russian submachine gun with an obscene rate of fire and a drum magazine. It's design is mostly lifted from the finnish Suomi KP/-31
 
-    Model from BO3.
-]]
+Model from BO3.]]
 SWEP.Trivia_Manufacturer = "Numerous"
 SWEP.Trivia_Calibre = "7.62x25mm Tokarev"
 SWEP.Trivia_Mechanism = "Straight Blowback"

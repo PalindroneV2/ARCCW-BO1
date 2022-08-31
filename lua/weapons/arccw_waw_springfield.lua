@@ -3,18 +3,21 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Springfield M1903A1"
+SWEP.PrintName = "Springfield"
+SWEP.TrueName = "Springfield M1903A1"
 SWEP.Trivia_Class = "Rifle"
-SWEP.Trivia_Desc = [[
-    American bolt action rifle rifle using that was used as the standard infantry rifle in the Great War and remained in specialized roles such as snipers during World War II.
+SWEP.Trivia_Desc = [[American bolt action rifle rifle using that was used as the standard infantry rifle in the Great War and remained in specialized roles such as snipers during World War II.
 
-    This variant specifically saw much more use by the US Marines during the second world war rather than the more modern M1903A4.
-]]
+This variant specifically saw much more use by the US Marines during the second world war rather than the more modern M1903A4.]]
 SWEP.Trivia_Manufacturer = "Springfield Armory"
 SWEP.Trivia_Calibre = ".30-06 Springfield"
 SWEP.Trivia_Mechanism = "Bolt Action"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1903
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

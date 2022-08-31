@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Mauser Kar98k"
+SWEP.PrintName = "Kar98k"
+SWEP.TrueName = "Karabiner 98 kurz"
 SWEP.Trivia_Class = "Rifle"
 SWEP.Trivia_Desc = "Carbine version of the famous Mauser rifle model of 1898 with an even shorter barrel. It served as the standard arm for German armed forces during World War II."
 SWEP.Trivia_Manufacturer = "Mauser"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "7.92x57mm Mauser"
 SWEP.Trivia_Mechanism = "Bolt Action"
 SWEP.Trivia_Country = "Nazi Germany"
 SWEP.Trivia_Year = 1935
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

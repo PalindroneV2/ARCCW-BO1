@@ -4,10 +4,8 @@ SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "PTRS-41"
-SWEP.Trivia_Class = "Antimateriel Rifle"
-SWEP.Trivia_Desc = [[
-    Russian anti-materiel rifle made for destroying armored vehicles and tanks. It's devastating anti-tank power comes at the cost of a massive 2 meter length and weight that makes it unable to be fired from the shoulder.
-]]
+SWEP.Trivia_Class = "Anti-Tank Rifle"
+SWEP.Trivia_Desc = [[Russian anti-materiel rifle made for destroying armored vehicles and tanks. It's devastating anti-tank power comes at the cost of a massive 2 meter length and weight that makes it unable to be fired from the shoulder.]]
 SWEP.Trivia_Manufacturer = "Many"
 SWEP.Trivia_Calibre = "14.5x144mm"
 SWEP.Trivia_Mechanism = "Recoil Operated, Tilting Bolt"
@@ -141,6 +139,14 @@ SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
 SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.BarrelLength = 35
+
+SWEP.Hook_BulletHit = function(wep, data)
+    local ent = data.tr.Entity
+    util.BlastDamage(wep, wep:GetOwner(), data.tr.HitPos, 18, wep:GetDamage(data.range))
+    if ent:IsValid() and ent:GetClass() == "npc_helicopter" then
+        data.dmgtype = DMG_AIRBOAT
+    end
+end
 
 SWEP.AttachmentElements = {
     ["rail"] = {

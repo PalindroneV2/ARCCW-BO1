@@ -3,17 +3,14 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-
 SWEP.PrintName = "Colt M1911A1 (WAW)"
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = [[
-    This handgun is a staple of firearm design. It would come to influence many future semi-automatic handguns.
-    The M1911 has been in service with military forces, law enforcement agencies and civilians for over 100 years.
+SWEP.Trivia_Desc = [[This handgun is a staple of firearm design. It would come to influence many future semi-automatic handguns.
+The M1911 has been in service with military forces, law enforcement agencies and civilians for over 100 years.
 
-    The pistol that forgot to become obsolete.
+The pistol that forgot to become obsolete.
 
-    (World at War Animations)
-]]
+(World at War Animations)]]
 SWEP.Trivia_Manufacturer = "Colt"
 SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Short Recoil"

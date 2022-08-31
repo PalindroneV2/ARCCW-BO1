@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M1897 Trenchgun"
+SWEP.PrintName = "M1897 Trench Gun"
 SWEP.Trivia_Class = "Shotgun"
 SWEP.Trivia_Desc = [[American pump-action shotgun that saw extensive military use in World War 1. During World War 2 it saw reduced service and was eventually replaced by the M37 Ithaca.
 

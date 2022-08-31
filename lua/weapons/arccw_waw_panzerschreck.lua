@@ -3,18 +3,21 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = [[Panzerschreck]]
+SWEP.PrintName = "Panzerschreck"
+SWEP.TrueName = "Raketenpanzerbüchse 54"
 SWEP.Trivia_Class = "Rocket Launcher"
-SWEP.Trivia_Desc = [[
-    A german man-portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
+SWEP.Trivia_Desc = [[A german man-portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
 
-    It was based on captured Lend-Lease Act M1 Bazookas captured from the Soviets.
-]]
+It was based on captured Lend-Lease Act M1 Bazookas captured from the Soviets.]]
 SWEP.Trivia_Manufacturer = "Bazalt"
 SWEP.Trivia_Calibre = "88mm Rocket"
 SWEP.Trivia_Mechanism = "Recoil-less Rifle Rocket Propelled Charge"
 SWEP.Trivia_Country = "Nazi Germany"
 SWEP.Trivia_Year = 1943
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 4
 

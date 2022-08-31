@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Mosin-Nagant M38"
+SWEP.PrintName = "Mosin-Nagant"
+SWEP.TrueName = "Mosin-Nagant M38"
 SWEP.Trivia_Class = "Rifle"
 SWEP.Trivia_Desc = "The standard soviet infantry rifle during World War 2. For some time there weren't enough issued to supply the whole army due to german intervention."
 SWEP.Trivia_Manufacturer = "Tula Arms"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "7.62x54mmR"
 SWEP.Trivia_Mechanism = "Bolt Action"
 SWEP.Trivia_Country = "Russian Empire"
 SWEP.Trivia_Year = 1891
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

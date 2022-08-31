@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Arisaka Type 99"
+SWEP.PrintName = "Arisaka"
+SWEP.TrueName = "Type 99 Arisaka"
 SWEP.Trivia_Class = "Rifle"
 SWEP.Trivia_Desc = "The standard infantry rifle of the Imperial Japanese Army and Navy during the second World War. Compared to other rifles of the time, it is relatively lightweight and fires a smaller cartridge."
 SWEP.Trivia_Manufacturer = "Nagoya Arsenal"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "7.7x58mm Arisaka"
 SWEP.Trivia_Mechanism = "Bolt Action"
 SWEP.Trivia_Country = "Imperial Japan"
 SWEP.Trivia_Year = 1939
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

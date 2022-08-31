@@ -3,16 +3,14 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "MP40 (BO3)"
+SWEP.PrintName = "MP40"
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = [[
-    "Picture this scene. Europe, World War II. A band of plucky heores captured by the germans, but they've got a cunning plan. Darkness falls and they make their escape. Nazi guards firing fruitlessly into the night and the weapon they're using...
-    ... It's the MP40."
+SWEP.Trivia_Desc = [["Picture this scene. Europe, World War II. A band of plucky heores captured by the germans, but they've got a cunning plan. Darkness falls and they make their escape. Nazi guards firing fruitlessly into the night and the weapon they're using...
+... It's the MP40."
 
-    German submachine gun in 9mm. The weight and slower rate of fire allow for a weapon with very little recoil.
+German submachine gun in 9mm. The weight and slower rate of fire allow for a weapon with very little recoil.
 
-    (Model from Black Ops 3)
-]]
+(Model from Black Ops 3)]]
 SWEP.Trivia_Manufacturer = "Erma Werke"
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Straight Blowback"

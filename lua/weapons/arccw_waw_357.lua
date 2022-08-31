@@ -3,8 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-
-SWEP.PrintName = "S&W Model 27"
+SWEP.PrintName = ".357 Magnum"
+SWEP.TrueName = "S&W Model 27"
 SWEP.Trivia_Class = "Revolver"
 SWEP.Trivia_Desc = "Magnum revolver with a one hell of a kick. One was carried by US General George Patton."
 SWEP.Trivia_Manufacturer = "Smith & Wesson"
@@ -12,6 +12,11 @@ SWEP.Trivia_Calibre = ".357 Magnum"
 SWEP.Trivia_Mechanism = "DA"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1935
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
+
 SWEP.Slot = 1
 
 SWEP.UseHands = true

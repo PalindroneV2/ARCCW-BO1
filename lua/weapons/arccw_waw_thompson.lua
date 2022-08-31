@@ -3,18 +3,21 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M1A1 Thompson"
+SWEP.PrintName = "Thompson"
+SWEP.TrueName = "M1A1 Thompson"
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = [[
-    American Submachine Gun in .45 ACP. It is a simplified design of the M1921 Thompson adopted for use in World War II.
+SWEP.Trivia_Desc = [[American Submachine Gun in .45 ACP. It is a simplified design of the M1921 Thompson adopted for use in World War II.
 
-    "Part sinner, part saint. An incredible gun that spits unbelievable tales. But the most amazing thing is that they're all true."
-]]
+"Part sinner, part saint. An incredible gun that spits unbelievable tales. But the most amazing thing is that they're all true."]]
 SWEP.Trivia_Manufacturer = "Auto-Ordnance"
 SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Straight Blowback"
 SWEP.Trivia_Country = "United States of America"
 SWEP.Trivia_Year = 1920
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 
@@ -25,8 +28,8 @@ SWEP.WorldModel = "models/weapons/arccw/c_waw_thompson.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     scale = 1.1,
-    pos        =    Vector(-13.5, 2, -6.5),
-    ang        =    Angle(-7, 0, 180),
+    pos     =    Vector(-13.5, 2, -6.5),
+    ang     =    Angle(-7, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 SWEP.ViewModelFOV = 60

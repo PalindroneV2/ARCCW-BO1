@@ -4,17 +4,20 @@ SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "SVT-40"
+SWEP.TrueName = "Tokarev SVT-40"
 SWEP.Trivia_Class = "Battle Rifle"
-SWEP.Trivia_Desc = [[
-    World War 2 era Soviet Semi-Automatic Rifle, which began use as the SVT-38 during the Winter War. It was notable for being one of the most wide-spread semi-automatic rifles of the war, second only to the M1 Garand.
-    The rather extensive use of this rifle prompted the development of German produced self-loading rifles, such as the G-41(W) and the G-43.
-    An select-fire version, the AVT-40, saw development to supplement the Red Army's shortage of machine guns.
-]]
+SWEP.Trivia_Desc = [[World War 2 era Soviet Semi-Automatic Rifle, which began use as the SVT-38 during the Winter War. It was notable for being one of the most wide-spread semi-automatic rifles of the war, second only to the M1 Garand.
+The rather extensive use of this rifle prompted the development of German produced self-loading rifles, such as the G-41(W) and the G-43.
+An select-fire version, the AVT-40, saw development to supplement the Red Army's shortage of machine guns.]]
 SWEP.Trivia_Manufacturer = "Tula Arms"
 SWEP.Trivia_Calibre = "7.62x54mmR"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "USSR"
 SWEP.Trivia_Year = 1940
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

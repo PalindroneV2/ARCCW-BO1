@@ -3,20 +3,23 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = [[M9A1 "Bazooka"]]
+SWEP.PrintName = "M91A1 Bazooka"
+SWEP.TrueName = [[M9A1 "Bazooka"]]
 SWEP.Trivia_Class = "Rocket Launcher"
-SWEP.Trivia_Desc = [[
-    An american man-portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
+SWEP.Trivia_Desc = [[An american man-portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
 
-    It's vague resemblance to an instrument called "bazooka" created by a popular comedian earned it its nickname.
+It's vague resemblance to an instrument called "bazooka" created by a popular comedian earned it its nickname.
 
-    This was the basis for the German Panzerschreck.
-]]
+This was the basis for the German Panzerschreck.]]
 SWEP.Trivia_Manufacturer = "Bazalt"
 SWEP.Trivia_Calibre = "60mm M6A3 Rocket"
 SWEP.Trivia_Mechanism = "Recoil-less Rifle Rocket Propelled Charge"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1942
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 4
 

@@ -4,15 +4,13 @@ SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "BRAAAINS..."
-SWEP.Trivia_Desc = [[
-    You've become infected with 115! Now you're nothing but a brainless puppet in search of flesh to devour.
-]]
+SWEP.Trivia_Desc = [[You've become infected with 115! Now you're nothing but a brainless puppet in search of flesh to devour.]]
 SWEP.Trivia_Class = "Melee Weapon"
-SWEP.Trivia_Manufacturer = "N/A"
+SWEP.Trivia_Manufacturer = "Apothicons"
 SWEP.Trivia_Calibre = "N/A"
 SWEP.Trivia_Mechanism = "Clawing"
 SWEP.Trivia_Country = "N/A"
-SWEP.Trivia_Year = "Any"
+SWEP.Trivia_Year = "1939+"
 
 SWEP.Slot = 0
 

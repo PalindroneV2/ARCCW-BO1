@@ -3,13 +3,11 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "StG-44 (BO3)"
+SWEP.PrintName = "StG-44"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = [[
-    The first modern assault rifle, created with the intent to arm tank crewmen with better weapons than an SMG or a rifle. Hitler eventually dubbed the weapon the 'Sturmgewehr' as means for propaganda.
+SWEP.Trivia_Desc = [[The first modern assault rifle, created with the intent to arm tank crewmen with better weapons than an SMG or a rifle. Hitler eventually dubbed the weapon the 'Sturmgewehr' as means for propaganda.
 
-    Model from Black Ops 3.
-]]
+Model from Black Ops 3.]]
 SWEP.Trivia_Manufacturer = "C.G. Haenel"
 SWEP.Trivia_Calibre = "7.92x33mm Kurz"
 SWEP.Trivia_Mechanism = "Gas-Operated"

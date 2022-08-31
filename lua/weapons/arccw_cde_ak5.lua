@@ -5,9 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Ak 5"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = [[
-    The Ak 5 is swedish a weapon based on the FN FNC. It is their current standard issue rifle.
-]]
+SWEP.Trivia_Desc = [[The Ak 5 is swedish a weapon based on the FN FNC. It is their current standard issue rifle.]]
 SWEP.Trivia_Manufacturer = "Carl Gustafs"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated"

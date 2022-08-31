@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FG 42"
+SWEP.PrintName = "FG42"
 SWEP.Trivia_Class = "Automatic Rifle"
 SWEP.Trivia_Desc = "German Fully Automatic Rifle intended for paratrooper use, as the name \"Fallschirmjaegergewehr\" (Paratrooper Rifle), suggests. Due to it's full sized rifle round and its relatively low weight, the recoil on fully automatic is quite atrocious."
 SWEP.Trivia_Manufacturer = "Rheinmetall"

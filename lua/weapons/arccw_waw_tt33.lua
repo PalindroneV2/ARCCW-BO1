@@ -3,7 +3,6 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-
 SWEP.PrintName = "Tokarev TT-33"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "A soviet pistol designed shortly before World War II, and served as the standard issue pistol for the Soviets during the war until it was replaced by the Makarov PM."

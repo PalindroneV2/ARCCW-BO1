@@ -140,6 +140,14 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.BarrelLength = 35
 
+SWEP.Hook_BulletHit = function(wep, data)
+    local ent = data.tr.Entity
+    util.BlastDamage(wep, wep:GetOwner(), data.tr.HitPos, 16, wep:GetDamage(data.range))
+    if ent:IsValid() and ent:GetClass() == "npc_helicopter" then
+        data.dmgtype = DMG_AIRBOAT
+    end
+end
+
 SWEP.AttachmentElements = {
     ["muzzle"] = {
         VMBodygroups = {

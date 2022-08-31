@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Double-Barrel Shotgun"
+SWEP.PrintName = "Double-Barreled Shotgun"
 SWEP.Trivia_Class = "Shotgun"
 SWEP.Trivia_Desc = "Dating back to the old west, still in use today, two barrels of buckshot. A classic through and through."
 SWEP.Trivia_Manufacturer = "Many"

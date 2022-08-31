@@ -3,8 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-
-SWEP.PrintName = "Mauser M712"
+SWEP.PrintName = "Mauser C96"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "One of the first successful semi-automatic pistol designs. Saw use into World War 1 and even beyond World War 2 in limited capacity. This is the version that comes with a detachable box magazine and has the capacity to fire in fully automatic."
 SWEP.Trivia_Manufacturer = "Mauser"

@@ -3,7 +3,6 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - COD Extras" -- edit this if you like
 SWEP.AdminOnly = false
 
-
 SWEP.PrintName = "MR6"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "High damage futuristic pitsol."

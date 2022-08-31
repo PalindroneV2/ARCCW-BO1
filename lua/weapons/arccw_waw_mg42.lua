@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "MG-42"
+SWEP.PrintName = "MG42"
+SWEP.TrueName = "Maschinengewehr 42"
 SWEP.Trivia_Class = "General-Purpose Machine Gun"
 SWEP.Trivia_Desc = "German general-purpose machine gun that fires 7.92mm Mauser at an obscene 1200 rounds per minute. Its firepower earned it the nickname 'Hitler's Buzzsaw'."
 SWEP.Trivia_Manufacturer = "Numerous"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "7.92x57mm Mauser"
 SWEP.Trivia_Mechanism = "Recoil-Operated"
 SWEP.Trivia_Country = "Nazi Germany"
 SWEP.Trivia_Year = 1942
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 

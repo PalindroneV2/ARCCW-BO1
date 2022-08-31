@@ -3,17 +3,21 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M1918A2 BAR"
+SWEP.PrintName = "BAR"
+SWEP.TrueName = "M1918A2 BAR"
 SWEP.Trivia_Class = "Light Machine Gun"
 SWEP.Trivia_Desc = [[Created during and for use in World War 1 with the doctrine of walking fire in mind, the BAR, designed by the legendary John Moses Browning, served with the United States military through the end of the Great War and into World War II. It remained in service until the 70s.
 
-The A2 variant was fitted with a Springfield Armory rate reducer, allowing for a slow and controllable rate of fire.
-]]
+The A2 variant was fitted with a Springfield Armory rate reducer, allowing for a slow and controllable rate of fire.]]
 SWEP.Trivia_Manufacturer = "Colt, Winchester, etc."
 SWEP.Trivia_Calibre = ".30-06 Springfield"
 SWEP.Trivia_Mechanism = "Gas-Operated Rising Bolt"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1918
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 3
 
