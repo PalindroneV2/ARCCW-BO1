@@ -80,7 +80,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 SWEP.ShootSound = "ArcCW_BO1.M203_Fire"
 SWEP.ShootSoundSilenced = "ArcCW_BO1.M16_Sil"
 
-SWEP.MuzzleEffect = "muzzleflash_shotgun"
+SWEP.MuzzleEffect = "muzzleflash_m79"
 SWEP.ShellModel = "models/shells/shell_12gauge.mdl"
 SWEP.ShellPitch = 100
 SWEP.ShellSounds = ArcCW.ShotgunShellSoundsTable
