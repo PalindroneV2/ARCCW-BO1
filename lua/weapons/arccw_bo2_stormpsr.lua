@@ -5,9 +5,7 @@ SWEP.AdminOnly = true
 
 SWEP.PrintName = "Storm PSR"
 SWEP.Trivia_Class = "Anti-Materiel Precision Rifle"
-SWEP.Trivia_Desc = [[
-    .50 caliber precision rifle. Very heavy, very powerful and extremely dangerous in the right hands.
-]]
+SWEP.Trivia_Desc = [[Multi-barrel piercing shot rifle. This one seems to be modified for a set charge count instead of the default operation mode of holding trigger to charge.]]
 SWEP.Trivia_Manufacturer = "MetalStorm"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"
 SWEP.Trivia_Mechanism = "Metal Storm"
@@ -80,6 +78,8 @@ SWEP.Firemodes = {
         Mult_Penetration = 2,
         Override_AmmoPerShot = 2,
         Mult_Recoil = 2,
+        Mult_Damage = 2,
+        Mult_DamageMin = 2,
     },
     {
         Mode = 1,
@@ -89,6 +89,8 @@ SWEP.Firemodes = {
         Mult_Penetration = 3,
         Override_AmmoPerShot = 3,
         Mult_Recoil = 3,
+        Mult_Damage = 3,
+        Mult_DamageMin = 3,
     },
     {
         Mode = 1,
@@ -98,6 +100,8 @@ SWEP.Firemodes = {
         Mult_Penetration = 4,
         Override_AmmoPerShot = 4,
         Mult_Recoil = 4,
+        Mult_Damage = 4,
+        Mult_DamageMin = 4,
     },
     {
         Mode = 1,
@@ -107,6 +111,8 @@ SWEP.Firemodes = {
         Mult_Penetration = 5,
         Override_AmmoPerShot = 5,
         Mult_Recoil = 5,
+        Mult_Damage = 5,
+        Mult_DamageMin = 5,
     },
     {
         Mode = 0
@@ -120,7 +126,7 @@ SWEP.NPCWeight = 75
 
 SWEP.AccuracyMOA = 0.1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 1200 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 500
+SWEP.MoveDispersion = 100
 
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
 SWEP.MagID = "stormpsr" -- the magazine pool this gun draws from
