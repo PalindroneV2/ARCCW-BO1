@@ -9,7 +9,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = {"special_death_machine"}
+att.Slot = {"bo1_perk_minigun"}
 
 att.Override_Damage = 80
 att.Override_DamageMin = 80
@@ -23,6 +23,7 @@ att.Mult_RecoilRise = 0.25
 att.Mult_SpeedMult = 0.55
 att.Mult_SightedSpeedMult = 0.65
 att.Mult_RPM = 0.5
+att.Mult_ReloadTime = 1.75
 
 att.Override_Jamming = true
 att.Mult_HeatCapacity = 0.65 --130 rounds = 0.325 at 0 HeatDelayTime, 0.65 at 1 HeatDelayTime
@@ -31,3 +32,5 @@ att.Mult_HeatDissipation = 15
 att.Mult_HeatDelayTime = 1
 att.Override_HeatFix = true
 att.Override_HeatLockout = true
+
+att.ExcludeFlags = {"papname1", "papname2", "papname3", "papname4"}
