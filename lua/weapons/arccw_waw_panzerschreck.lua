@@ -9,7 +9,7 @@ SWEP.Trivia_Class = "Rocket Launcher"
 SWEP.Trivia_Desc = [[A german man-portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
 
 It was based on captured Lend-Lease Act M1 Bazookas captured from the Soviets.]]
-SWEP.Trivia_Manufacturer = "Bazalt"
+SWEP.Trivia_Manufacturer = "Rheinmetall"
 SWEP.Trivia_Calibre = "88mm Rocket"
 SWEP.Trivia_Mechanism = "Recoil-less Rifle Rocket Propelled Charge"
 SWEP.Trivia_Country = "Nazi Germany"
@@ -143,7 +143,7 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 SWEP.AttachmentElements = {
     ["papname1"] = {
         NamePriority = 10,
-        NameChange = "Liberty Launcher",
+        NameChange = "Longinus",
     },
 }
 

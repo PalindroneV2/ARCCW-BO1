@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M91A1 Bazooka"
+SWEP.PrintName = "M9A1 Bazooka"
 SWEP.TrueName = [[M9A1 "Bazooka"]]
 SWEP.Trivia_Class = "Rocket Launcher"
 SWEP.Trivia_Desc = [[An american man-portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
@@ -11,7 +11,7 @@ SWEP.Trivia_Desc = [[An american man-portable, reusable, unguided, shoulder-laun
 It's vague resemblance to an instrument called "bazooka" created by a popular comedian earned it its nickname.
 
 This was the basis for the German Panzerschreck.]]
-SWEP.Trivia_Manufacturer = "Bazalt"
+SWEP.Trivia_Manufacturer = "US Army Ordnance"
 SWEP.Trivia_Calibre = "60mm M6A3 Rocket"
 SWEP.Trivia_Mechanism = "Recoil-less Rifle Rocket Propelled Charge"
 SWEP.Trivia_Country = "USA"
