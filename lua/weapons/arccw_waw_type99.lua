@@ -312,7 +312,7 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 7 / 30,
         ShellEjectAt = 0,
-         SoundTable = {
+        SoundTable = {
             {s = "ArcCW_WAW.Type99_Mech", t = 1 / 30}
         },
     },
