@@ -1,8 +1,8 @@
 "VertexLitGeneric"
 {
-	$basetexture	"models\weapons\bo2\bo2_optics\ballista_lvl"
+	$basetexture	"models/weapons/bo2/bo2_optics/ballista_lvl"
 	
-	$bumpmap	"models\weapons\waw\normalmap"
+	$bumpmap	"models/weapons/waw/normalmap"
 	
 	
 	//"$color2" "[ .4 .4 .4 ]"

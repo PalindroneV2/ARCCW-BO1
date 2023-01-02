@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\bo2\bo2_raygunmk2\raygunmk2"
+	$basetexture	"models/weapons/bo2/bo2_raygunmk2/raygunmk2"
 	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models\weapons\bo2\bo2_raygunmk2\raygunmk2_n"
+	$bumpmap	"models/weapons/bo2/bo2_raygunmk2/raygunmk2_n"
 
 	
 	//"$color2" "[ .4 .4 .4 ]"

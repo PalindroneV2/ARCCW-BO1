@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\bo2\bo2_mg08\mg08"
+	$basetexture	"models/weapons/bo2/bo2_mg08/mg08"
 	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models\weapons\bo2\bo2_mg08\mg08_n"
+	$bumpmap	"models/weapons/bo2/bo2_mg08/mg08_n"
 
 	
 	//"$color2" "[ .4 .4 .4 ]"

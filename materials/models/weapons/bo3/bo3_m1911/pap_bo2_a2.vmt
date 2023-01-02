@@ -3,8 +3,8 @@
 	"$basetexture" "models/weapons/bo3/bo3_m1911/base/base_c"
 	"$bumpmap" "models/weapons/bo3/bo3_m1911/base/base_n"
 	
-	$detail		"models\weapons\bo1\gold_c"
-	$envmapmask	"models\weapons\bo1\gold_s"
+	$detail		"models/weapons/bo1/gold_c"
+	$envmapmask	"models/weapons/bo1/gold_s"
 	$detailblendmode		3
 	$detailblendfactor 1
 	

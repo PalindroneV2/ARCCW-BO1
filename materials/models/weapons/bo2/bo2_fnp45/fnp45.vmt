@@ -3,7 +3,7 @@
 	"$basetexture" "models/weapons/bo2/bo2_fnp45/fnp45_c"
 	"$bumpmap" "models/weapons/bo2/bo2_fnp45/fnp45_n"
 
-	// $detail	"models\weapons\bo1\black_detail"
+	// $detail	"models/weapons/bo1/black_detail"
 	// $detailblendmode	0
 	// $detailblendfactor	0.2
 

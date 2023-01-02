@@ -1,8 +1,8 @@
 "VertexLitGeneric"
 {
-	$basetexture	"models\weapons\bo1\bo1_acogs\acog2_c"
+	$basetexture	"models/weapons/bo1/bo1_acogs/acog2_c"
 	
-	$bumpmap	"models\weapons\bo1\bo1_acogs\acog2_n"
+	$bumpmap	"models/weapons/bo1/bo1_acogs/acog2_n"
 	
 	
 	//"$color2" "[ .4 .4 .4 ]"

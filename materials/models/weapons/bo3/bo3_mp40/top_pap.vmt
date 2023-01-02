@@ -3,9 +3,9 @@ VertexlitGeneric
 	"$basetexture" "models/weapons/bo3/bo3_mp40/sights"
 	"$bumpmap" "models/weapons/bo3/bo3_mp40/sights_n"
 	$selfillum 1
-	"$selfillummask" "models\weapons\pap\pap_bo2_crystal"
+	"$selfillummask" "models/weapons/pap/pap_bo2_crystal"
 
-	$detail	"models\weapons\pap\pap_bo2_crystal"
+	$detail	"models/weapons/pap/pap_bo2_crystal"
 	$detailscale 1
 	$detailblendmode 2
 	$detailblendfactor 2

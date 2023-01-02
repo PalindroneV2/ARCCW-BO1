@@ -1,11 +1,11 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\bo2\bo2_mg08\mg08"
-	$bumpmap	"models\weapons\bo2\bo2_mg08\mg08_n"
+	$basetexture	"models/weapons/bo2/bo2_mg08/mg08"
+	$bumpmap	"models/weapons/bo2/bo2_mg08/mg08_n"
 	$selfillum 1
-	"$selfillummask" "models\weapons\pap\pap_bo2_crystal"
+	"$selfillummask" "models/weapons/pap/pap_bo2_crystal"
 
-	$detail	"models\weapons\pap\pap_bo2_crystal"
+	$detail	"models/weapons/pap/pap_bo2_crystal"
 	$detailscale 1
 	$detailblendmode 2
 	$detailblendfactor 2

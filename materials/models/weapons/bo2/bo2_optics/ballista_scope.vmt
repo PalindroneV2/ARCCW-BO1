@@ -1,8 +1,8 @@
 "VertexLitGeneric"
 {
-	$basetexture	"models\weapons\bo2\bo2_optics\ballista_scope"
+	$basetexture	"models/weapons/bo2/bo2_optics/ballista_scope"
 	
-	$bumpmap	"models\weapons\bo2\bo2_optics\ballista_scope_n"
+	$bumpmap	"models/weapons/bo2/bo2_optics/ballista_scope_n"
 
 	$detail "models/weapons/bo1/tan"
 	$detailblendmode "0"

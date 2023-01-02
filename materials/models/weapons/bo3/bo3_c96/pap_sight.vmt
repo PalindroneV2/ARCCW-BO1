@@ -4,10 +4,10 @@
 	"$bumpmap" "models/weapons/bo3/bo3_c96/sights_n"
 	
 	$selfillum 1
-    "$selfillummask" "models\weapons\pap\pap_bo2_crystal"
+    "$selfillummask" "models/weapons/pap/pap_bo2_crystal"
     "$selfillummaskscale" "3"
 
-	$detail	"models\weapons\pap\pap_bo2_crystal"
+	$detail	"models/weapons/pap/pap_bo2_crystal"
 	$detailscale 3
 	$detailblendmode 2
 	$detailblendfactor 2

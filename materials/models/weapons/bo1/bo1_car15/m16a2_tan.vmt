@@ -16,7 +16,7 @@ VertexLitGeneric
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 
-    $detail		"models\weapons\bo1\tan"
+    $detail		"models/weapons/bo1/tan"
 	$detailblendmode		3
 	$detailblendfactor 0.3
 }

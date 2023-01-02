@@ -1,6 +1,6 @@
 "VertexLitGeneric"
 {
-	$basetexture	"models\weapons\bo1\bo1_acogs\acog_scope_in"
+	$basetexture	"models/weapons/bo1/bo1_acogs/acog_scope_in"
 	
 	
 	
