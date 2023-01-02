@@ -1,10 +1,10 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\bo1\bo1_raygun\raygun"
+	$basetexture	"models/weapons/bo1/bo1_raygun/raygun"
 	//$color2 "[0.75 0.75 0.75]"
-	$bumpmap	"models\weapons\bo1\bo1_raygun\raygun_n"
+	$bumpmap	"models/weapons/bo1/bo1_raygun/raygun_n"
 	$selfillum 1
-	$selfillummask "models\weapons\bo1\gold_s"
+	$selfillummask "models/weapons/bo1/gold_s"
 
 	
 	//"$color2" "[ .4 .4 .4 ]"

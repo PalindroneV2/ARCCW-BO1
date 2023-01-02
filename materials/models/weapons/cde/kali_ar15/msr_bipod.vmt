@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\cde\mw3_ars\msr_bipod"
+	$basetexture	"models/weapons/cde/mw3_ars/msr_bipod"
 	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models\weapons\cde\mw3_ars\msr_bipod_n"
+	$bumpmap	"models/weapons/cde/mw3_ars/msr_bipod_n"
 
 	
 	//"$color2" "[ .4 .4 .4 ]"

@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\pap\pap_blue_burn"
-	$bumpmap	"models\weapons\pap\pap_n"
-	$detail		"models\weapons\colors\gold_c"
+	$basetexture	"models/weapons/pap/pap_blue_burn"
+	$bumpmap	"models/weapons/pap/pap_n"
+	$detail		"models/weapons/colors/gold_c"
 	$detailblendmode		3
 	$detailblendfactor 1
 	

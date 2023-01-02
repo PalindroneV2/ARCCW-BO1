@@ -16,7 +16,7 @@
 
 	$nocull 1
 
-	$detail		"models\weapons\bo1\black_detail"
+	$detail		"models/weapons/bo1/black_detail"
 	$detailblendmode 0
 	$detailblendfactor 1
 }

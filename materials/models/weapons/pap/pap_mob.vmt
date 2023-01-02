@@ -1,10 +1,10 @@
 VertexlitGeneric
 {
 	"$basetexture" "models/weapons/bo1/plastic"
-	$detail	"models\weapons\pap\pap_mob"
-	$bumpmap	"models\weapons\pap\pap_mob_n"
+	$detail	"models/weapons/pap/pap_mob"
+	$bumpmap	"models/weapons/pap/pap_mob_n"
 	$selfillum 1
-    $selfillummask "models\weapons\pap\pap_mob_s"
+    $selfillummask "models/weapons/pap/pap_mob_s"
 	
 	$phong                      		1
 //	$phongexponent                      "20"

@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\bo1\bo1_fal\fal_c"
-	$bumpmap	"models\weapons\bo1\bo1_fal\fal_n"
-	$detail	"models\weapons\bo1\black_detail"
+	$basetexture	"models/weapons/bo1/bo1_fal/fal_c"
+	$bumpmap	"models/weapons/bo1/bo1_fal/fal_n"
+	$detail	"models/weapons/bo1/black_detail"
 	$detailblendmode 4
 	$detailblendfactor 1.5
 

@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\waw\waw_mosin\waw_stripper"
-//	$bumpmap	"models\weapons\waw\waw_mosin\mosin_n"
+	$basetexture	"models/weapons/waw/waw_mosin/waw_stripper"
+//	$bumpmap	"models/weapons/waw/waw_mosin/mosin_n"
 
 	$phong                      		1
 //	$phongexponent                      "20"

@@ -1,9 +1,9 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\bo1\bo1_ithaca\ithaca_c"
+	$basetexture	"models/weapons/bo1/bo1_ithaca/ithaca_c"
 	//$color2 "[0.75 0.75 0.75]"
-	$bumpmap	"models\weapons\bo1\bo1_ithaca\ithaca_n"
-	$phongexponenttexture	"models\weapons\bo1\bo1_ithaca\ithaca_s"
+	$bumpmap	"models/weapons/bo1/bo1_ithaca/ithaca_n"
+	$phongexponenttexture	"models/weapons/bo1/bo1_ithaca/ithaca_s"
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"

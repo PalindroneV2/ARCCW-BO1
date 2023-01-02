@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\waw\waw_p38\megatron"
-	$bumpmap	"models\weapons\waw\waw_p38\p38_n"
+	$basetexture	"models/weapons/waw/waw_p38/megatron"
+	$bumpmap	"models/weapons/waw/waw_p38/p38_n"
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"

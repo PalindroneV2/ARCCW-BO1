@@ -3,7 +3,7 @@ VertexlitGeneric
 	"$basetexture" "models/weapons/bo2/bo2_mp5/mp5_col"
 	
 	"$bumpmap" "models/weapons/bo2/bo2_mp5/mp5_nml"
-	$detail		"models\weapons\bo1\od_green"
+	$detail		"models/weapons/bo1/od_green"
 	$detailblendmode		1
 	$detailblendfactor 0.15
 

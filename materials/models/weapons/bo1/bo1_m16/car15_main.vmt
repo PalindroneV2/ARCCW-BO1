@@ -1,10 +1,10 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\bo1\bo1_car15\car15_c"
+	$basetexture	"models/weapons/bo1/bo1_car15/car15_c"
 	//$color2 "[0.75 0.75 0.75]"
-	$bumpmap	"models\weapons\bo1\bo1_car15\car15_n"
-	$phongexponenttexture	"models\weapons\bo1\bo1_car15\car15_s"
-	$detail "models\weapons\bo1\black_detail"
+	$bumpmap	"models/weapons/bo1/bo1_car15/car15_n"
+	$phongexponenttexture	"models/weapons/bo1/bo1_car15/car15_s"
+	$detail "models/weapons/bo1/black_detail"
 	$detailblendmode 0
 	$detailblendfactor 1.1
 

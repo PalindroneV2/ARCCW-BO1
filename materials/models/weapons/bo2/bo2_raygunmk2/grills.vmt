@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\bo2\bo2_raygunmk2\grills"
-	$bumpmap	"models\weapons\bo2\bo2_raygunmk2\grills_n"
+	$basetexture	"models/weapons/bo2/bo2_raygunmk2/grills"
+	$bumpmap	"models/weapons/bo2/bo2_raygunmk2/grills_n"
 
 	$phong                      		1
 	$phongboost                         "0.5"

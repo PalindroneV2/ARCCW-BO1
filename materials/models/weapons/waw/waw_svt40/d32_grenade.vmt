@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\waw\waw_mosin\d32_grenade"
-	$bumpmap	"models\weapons\waw\waw_mosin\d32_grenade"
+	$basetexture	"models/weapons/waw/waw_mosin/d32_grenade"
+	$bumpmap	"models/weapons/waw/waw_mosin/d32_grenade"
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"

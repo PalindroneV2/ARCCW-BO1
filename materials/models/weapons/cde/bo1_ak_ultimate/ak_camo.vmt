@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\bo1\bo1_ak47\ak47_c"
-	$bumpmap	"models\weapons\bo1\bo1_ak47\ak47_n"
+	$basetexture	"models/weapons/bo1/bo1_ak47/ak47_c"
+	$bumpmap	"models/weapons/bo1/bo1_ak47/ak47_n"
 	$detailblendmode	3
 	$detailblendfactor 0.75
     // "$detailtexturetransform" "center 0 0 scale 1 1 rotate 0 translate 0 0"

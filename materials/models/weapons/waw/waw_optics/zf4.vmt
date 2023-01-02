@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\waw\waw_optics\zf4"
-	$bumpmap	"models\weapons\waw\normalmap"
-	$phongexponenttexture	"models\weapons\waw\waw_optics\zf4_s"
+	$basetexture	"models/weapons/waw/waw_optics/zf4"
+	$bumpmap	"models/weapons/waw/normalmap"
+	$phongexponenttexture	"models/weapons/waw/waw_optics/zf4_s"
 
 	$phong                      		1
 //	$phongexponent                      "20"

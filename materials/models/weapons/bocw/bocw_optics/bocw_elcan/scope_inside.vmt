@@ -1,8 +1,8 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models\weapons\bocw\$black_40"
-	"$bumpmap"	"models\weapons\bocw\$normal"
-	"$detail" 	"models\weapons\bocw\$detail"
+	"$basetexture" "models/weapons/bocw/$black_40"
+	"$bumpmap"	"models/weapons/bocw/$normal"
+	"$detail" 	"models/weapons/bocw/$detail"
 
 	"$detailscale" "1"        
 	"$detailblendfactor" "0.05"     

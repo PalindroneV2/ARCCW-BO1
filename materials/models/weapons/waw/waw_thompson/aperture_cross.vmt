@@ -1,6 +1,6 @@
 "VertexLitGeneric"
 {
-	$basetexture	"models\weapons\waw\waw_optics\aperture_cross"
-	$bumpmap	"models\weapons\waw\normalmap"
+	$basetexture	"models/weapons/waw/waw_optics/aperture_cross"
+	$bumpmap	"models/weapons/waw/normalmap"
     "$translucent" "1"
 }

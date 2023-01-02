@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\waw\waw_doublebarrel\ssg_c"
-	$bumpmap	"models\weapons\waw\waw_doublebarrel\ssg_n"
+	$basetexture	"models/weapons/waw/waw_doublebarrel/ssg_c"
+	$bumpmap	"models/weapons/waw/waw_doublebarrel/ssg_n"
 
 	$phong                      		1
 //	$phongexponent                      "20"

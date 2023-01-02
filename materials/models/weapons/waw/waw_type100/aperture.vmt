@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\waw\waw_optics\aperture"
-	$bumpmap	"models\weapons\waw\waw_optics\aperture_n"
+	$basetexture	"models/weapons/waw/waw_optics/aperture"
+	$bumpmap	"models/weapons/waw/waw_optics/aperture_n"
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"

@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\bo1\bo1_m14\m14_rail_c"
+	$basetexture	"models/weapons/bo1/bo1_m14/m14_rail_c"
 	
-	$bumpmap	"models\weapons\bo1\bo1_m14\m14_rail_n"
+	$bumpmap	"models/weapons/bo1/bo1_m14/m14_rail_n"
 	
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"

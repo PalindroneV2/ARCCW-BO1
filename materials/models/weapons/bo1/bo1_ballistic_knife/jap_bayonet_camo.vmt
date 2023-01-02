@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\waw\waw_type99\type99"
-	$bumpmap	"models\weapons\waw\normalmap"
+	$basetexture	"models/weapons/waw/waw_type99/type99"
+	$bumpmap	"models/weapons/waw/normalmap"
 
 	
 	//"$color2" "[ .4 .4 .4 ]"

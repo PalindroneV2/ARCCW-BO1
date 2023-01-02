@@ -4,9 +4,9 @@ VertexlitGeneric
 	"$bumpmap" "models/weapons/bo2/bo2_m27/hk416_n"
 
 	$selfillum 1
-	$selfillummask "models\weapons\pap\pap_cosmic_s"
+	$selfillummask "models/weapons/pap/pap_cosmic_s"
 
-	$detail	"models\weapons\pap\pap_cosmic"
+	$detail	"models/weapons/pap/pap_cosmic"
 	$detailscale 2
 	$detailblendmode 3
 	$detailblendfactor 1
