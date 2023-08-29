@@ -99,7 +99,7 @@ SWEP.CamAttachment = 3
 
 SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.4
+SWEP.SightTime = 0.45
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",

@@ -267,7 +267,7 @@ end
 
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep:GetBuff_Override("PackAPunch")
-    local sting = wep.Attachments[4].Installed == "waw_fcg_30cal_stinger"
+    local sting = wep.Attachments[4].Installed == "waw_m1919_stinger"
 
     if sting then
         if pap then

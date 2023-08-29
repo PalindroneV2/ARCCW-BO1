@@ -217,7 +217,7 @@ SWEP.Attachments = {
     }, --4
     {
         PrintName = "Ammo Type",
-        Slot = {"ammo_pap_pumpsg", "special_trenchy"},
+        Slot = {"ammo_pap_pumpsg", "waw_trenchgun_mag"},
     }, --5
     {
         PrintName = "Perk",

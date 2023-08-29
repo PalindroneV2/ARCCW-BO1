@@ -591,7 +591,7 @@ SWEP.Attachments = {
     }, --13
     {
         PrintName = "Cosmetic",
-        Slot = {"kali_wood", "cde_cosmetic", "cde_cosmetic_tan", "kali_cosmetic"},
+        Slot = {"kali_cosmetic"},
         DefaultAttName = "Black Finish",
         FreeSlot = true,
     }, -- 14
@@ -1345,11 +1345,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     local camo = 0
-    if wep.Attachments[14].Installed == "cde_cosmetic_wood" then camo = 2
-    elseif wep.Attachments[14].Installed == "cde_cosmetic_od" then camo = 4
-    elseif wep.Attachments[14].Installed == "cde_cosmetic_tan" then camo = 6
-    elseif wep.Attachments[14].Installed == "cde_cosmetic_red" then camo = 8
-    elseif wep.Attachments[14].Installed == "cde_cosmetic_blue" then camo = 10
+    if wep.Attachments[14].Installed == "kali_cosmetic_wood" then camo = 2
+    elseif wep.Attachments[14].Installed == "bo1_cosmetic_odgreen" then camo = 4
+    elseif wep.Attachments[14].Installed == "bo1_cosmetic_tan" then camo = 6
+    elseif wep.Attachments[14].Installed == "bo1_cosmetic_red" then camo = 8
+    elseif wep.Attachments[14].Installed == "kali_cosmetic_blue" then camo = 10
     end
 
     vm:SetSkin(camo)

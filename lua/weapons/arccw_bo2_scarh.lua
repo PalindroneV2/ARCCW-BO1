@@ -280,7 +280,7 @@ SWEP.Attachments = {
     },
     { --11
         PrintName = "Cosmetic",
-        Slot = "cde_cosmetic",
+        Slot = "bo1_cosmetic_black",
         DefaultAttName = "Tan Finish",
         FreeSlot = true,
     },
@@ -288,11 +288,6 @@ SWEP.Attachments = {
 
 SWEP.RejectAttachments = {
     ["bo1_stock_light"] = true,
-    ["cde_cosmetic_od"] = true,
-    ["cde_cosmetic_red"] = true,
-    ["cde_cosmetic_wood"] = true,
-    ["cde_cosmetic_od"] = true,
-    ["cde_cosmetic_tan"] = true,
 }
 
 SWEP.Hook_NameChange = function(wep, name)
@@ -306,7 +301,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     local papcamo = wep:GetBuff_Override("PackAPunch")
     local camo = 0
-    if wep.Attachments[11].Installed == "cde_cosmetic_black" then camo = 4 end
+    if wep.Attachments[11].Installed == "bo1_cosmetic_black" then camo = 4 end
 
     for k = camo, camo do
         vm:SetSkin(k)

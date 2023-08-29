@@ -245,7 +245,7 @@ SWEP.Attachments = {
     {
         PrintName = "Magazine",
         Slot = {"bo1_stoner_ammo"},
-        DefaultAttName = "STANAG 5.56mm 30rnd Mag"
+        DefaultAttName = "Standard Magazine"
     }, --9
     {
         PrintName = "Ammo Type",

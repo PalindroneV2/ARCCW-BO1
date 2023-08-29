@@ -235,7 +235,7 @@ SWEP.Attachments = {
     },
     { --7
         PrintName = "Fire Group",
-        Slot = {"bo1_fcg", "bo1_fcg_lc10"}
+        Slot = {"bo1_fcg", "bo1_lc10_fcg"}
     },
     { --8
         PrintName = "Ammo Type",

@@ -4,6 +4,7 @@ SWEP.Category = "ArcCW - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Uzi"
+SWEP.TrueName = "IMI Uzi"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "The Uzi is an israeli SMG chambered in 9mm designed to be compact and easy to manufacture. Made famous by it's use in Hollywood films."
 SWEP.Trivia_Manufacturer = "IMI"
@@ -160,6 +161,11 @@ SWEP.AttachmentElements = {
             {ind = 3, bg = 1},
         },
     },
+    ["uzi_ext"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 1},
+        },
+    },
     ["ammo_papunch"] = {
         --VMMaterial = "models/weapons/pap/pap_blue_burn",
         NamePriority = 10,
@@ -232,6 +238,11 @@ SWEP.Attachments = {
         Slot = {"bo1_fcg"}
     },
     { --7
+        PrintName = "Magazine",
+        Slot = {"bo1_uzi_mag"},
+        DefaultAttName = "Standard Magazine",
+    },
+    { --8
         PrintName = "Ammo Type",
         Slot = {"ammo_pap", "bo1_ammo"}
     },

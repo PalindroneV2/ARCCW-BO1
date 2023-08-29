@@ -73,9 +73,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_smg1"
 SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 4 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 250 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 80
+SWEP.MoveDispersion = 90
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
 SWEP.MagID = "ak74" -- the magazine pool this gun draws from
@@ -149,6 +149,11 @@ SWEP.AttachmentElements = {
         TrueNameChange = "The Afterburner",
         NameChange = "The Afterburner",
     },
+    ["mp40_light"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 1}
+        },
+    },
     ["mount"] = {
         VMBodygroups = {
             {ind = 2, bg = 1},
@@ -209,6 +214,11 @@ SWEP.Attachments = {
         PrintName = "Fire Group",
         Slot = {"bo1_fcg"},
         ExcludeFlags = {"wolf_ee"},
+    },
+    {
+        PrintName = "Magazine",
+        DefaultAttName = "Standard Magazine",
+        Slot = {"waw_mp40_ammo"}
     },
     {
         PrintName = "Ammo Type",

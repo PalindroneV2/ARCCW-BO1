@@ -361,7 +361,7 @@ SWEP.Attachments = {
 
 SWEP.Hook_NameChange = function(wep, name)
     local pap = wep.Attachments[11].Installed == "ammo_papunch"
-    local mp44 = wep.Attachments[10].Installed == "ammo_stg44_9mm"
+    local mp44 = wep.Attachments[10].Installed == "bo1_stg44_9mm"
 
     local length = wep.Attachments[3].Installed
     local barrel = 0
@@ -451,7 +451,7 @@ end
 
 SWEP.Hook_GetCapacity = function(wep, cap)
     local pap = wep:GetBuff_Override("PackAPunch")
-    local mp = wep.Attachments[10].Installed == "ammo_stg44_9mm"
+    local mp = wep.Attachments[10].Installed == "bo1_stg44_9mm"
 
     if pap and mp then
         return 64
@@ -461,7 +461,7 @@ end
 SWEP.Hook_GetShootSound = function(wep, sound)
     --local silshot = 2 or 3
     local silbar = wep:GetBuff_Override("Silencer")
-    local mp = wep.Attachments[10].Installed == "ammo_stg44_9mm"
+    local mp = wep.Attachments[10].Installed == "bo1_stg44_9mm"
     local sndatt = wep.Attachments[14].Installed
 
     if silbar then
@@ -477,7 +477,7 @@ SWEP.Hook_GetShootSound = function(wep, sound)
 end
 
 SWEP.Hook_GetDistantShootSound = function(wep, distancesound)
-    local mp = wep.Attachments[10].Installed == "ammo_stg44_9mm"
+    local mp = wep.Attachments[10].Installed == "bo1_stg44_9mm"
     local sndatt = wep.Attachments[14].Installed
 
     if sndatt == "stg44_bo1_sound" then
@@ -491,7 +491,7 @@ end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     local sndatt = wep.Attachments[14].Installed
-    local mp40 = wep.Attachments[10].Installed == "ammo_stg44_9mm"
+    local mp40 = wep.Attachments[10].Installed == "bo1_stg44_9mm"
 
     if sndatt or wep:GetBuff_Override("WOLF_EE") then return "nomech_" .. anim end
     if mp40 then return "mpmech_" .. anim end
